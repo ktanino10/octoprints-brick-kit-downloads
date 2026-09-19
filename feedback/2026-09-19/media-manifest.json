@@ -1,0 +1,136 @@
+{
+  "status": "USER_REPORTED_SMALL_PARTS_AND_BLOCKED_HOLES; REDESIGN_UNDECIDED",
+  "date": "2026-09-19",
+  "physical_fit": "NOT_VALIDATED",
+  "slicer_project": "NOT_PROVIDED",
+  "permission": "Contributor explicitly permitted repository publication for improvement.",
+  "media_rights": "Contributor-owned; publication permission is not a blanket CC license. See README.",
+  "files": [
+    {
+      "path": "media/photo-01.jpg",
+      "mime": "image/jpeg",
+      "bytes": 252230,
+      "sha256": "148bd6d705c811f9c77a2f6f20cfaeac2029b03e8c08ad8d1f684b836d82edc5",
+      "dimensions_px": [
+        2000,
+        1506
+      ],
+      "processing": "Orientation normalized; re-encoded JPEG without EXIF/XMP or original application metadata."
+    },
+    {
+      "path": "media/photo-02.jpg",
+      "mime": "image/jpeg",
+      "bytes": 605870,
+      "sha256": "085f9b0478f276b6b9614218662d3c9ac385f2b9491eef4e3994c723718feeed",
+      "dimensions_px": [
+        2000,
+        1506
+      ],
+      "processing": "Orientation normalized; re-encoded JPEG without EXIF/XMP or original application metadata."
+    },
+    {
+      "path": "media/photo-03.jpg",
+      "mime": "image/jpeg",
+      "bytes": 302779,
+      "sha256": "a629fa4ee4d58882a1cbc658a7df462d1218763ae218512a0836f5577b4cbb9a",
+      "dimensions_px": [
+        2000,
+        1506
+      ],
+      "processing": "Orientation normalized; re-encoded JPEG without EXIF/XMP or original application metadata."
+    },
+    {
+      "path": "media/photo-04.jpg",
+      "mime": "image/jpeg",
+      "bytes": 326495,
+      "sha256": "5574e06de3c0a24d857075d57e8610935c9a6cac781963201ad3cc0d8662d8df",
+      "dimensions_px": [
+        1506,
+        2000
+      ],
+      "processing": "Orientation normalized; re-encoded JPEG without EXIF/XMP or original application metadata."
+    },
+    {
+      "path": "media/photo-05.jpg",
+      "mime": "image/jpeg",
+      "bytes": 356984,
+      "sha256": "918e3522b9b803f630bc69839c5c0733a62a61871be7c511a1461d42b022bedb",
+      "dimensions_px": [
+        2000,
+        1506
+      ],
+      "processing": "Orientation normalized; re-encoded JPEG without EXIF/XMP or original application metadata."
+    },
+    {
+      "path": "media/photo-06.jpg",
+      "mime": "image/jpeg",
+      "bytes": 342238,
+      "sha256": "1835f9c8a46dadd7549bcda8cf1aa96ac1e1d2166478d77324dd90f89fdf3598",
+      "dimensions_px": [
+        2000,
+        1506
+      ],
+      "processing": "Orientation normalized; re-encoded JPEG without EXIF/XMP or original application metadata."
+    },
+    {
+      "path": "media/photo-07.jpg",
+      "mime": "image/jpeg",
+      "bytes": 400252,
+      "sha256": "3ae4f1a046cdfb5f9aa02d4705453d30b135f647ee8fb3345ff815ef47fae5ea",
+      "dimensions_px": [
+        1506,
+        2000
+      ],
+      "processing": "Orientation normalized; re-encoded JPEG without EXIF/XMP or original application metadata."
+    },
+    {
+      "path": "media/photo-08.jpg",
+      "mime": "image/jpeg",
+      "bytes": 461113,
+      "sha256": "ff27d697dca6bd1b9e3fc1906e88f883f51935607fd3a1e04159589042e36a8a",
+      "dimensions_px": [
+        2000,
+        1506
+      ],
+      "processing": "Orientation normalized; re-encoded JPEG without EXIF/XMP or original application metadata."
+    },
+    {
+      "path": "media/photo-09.jpg",
+      "mime": "image/jpeg",
+      "bytes": 544549,
+      "sha256": "006a3127eabf12f7dd6d9727a6c2bc861368aaf146e5dc27af68bfeb9f306bd0",
+      "dimensions_px": [
+        2000,
+        1506
+      ],
+      "processing": "Orientation normalized; re-encoded JPEG without EXIF/XMP or original application metadata."
+    },
+    {
+      "path": "media/photo-10.jpg",
+      "mime": "image/jpeg",
+      "bytes": 572991,
+      "sha256": "0811d1121ff238f8d4f8759f69b9e4e9f1cb66b2b4ecb7ecf371d9ef1cb2bfe9",
+      "dimensions_px": [
+        2000,
+        1506
+      ],
+      "processing": "Orientation normalized; re-encoded JPEG without EXIF/XMP or original application metadata."
+    },
+    {
+      "path": "media/video-01-silent.mp4",
+      "mime": "video/mp4",
+      "bytes": 12190294,
+      "sha256": "6c6bc616b2d3b2f625b051959f3b1429af624569e1c5541d0971d08acb929486",
+      "duration_seconds": 27.457611,
+      "processing": "Video stream copied without re-encoding; audio, sensor/data streams, chapters and source metadata omitted."
+    },
+    {
+      "path": "media/video-02-silent.mp4",
+      "mime": "video/mp4",
+      "bytes": 2657191,
+      "sha256": "6faa42e12fa038fbfbeb25af6e0d616574b429432b668d14eaf7bd661e216861",
+      "duration_seconds": 5.894556,
+      "processing": "Video stream copied without re-encoding; audio, sensor/data streams, chapters and source metadata omitted."
+    }
+  ]
+}
