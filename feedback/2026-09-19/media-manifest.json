@@ -131,6 +131,23 @@
       "sha256": "6faa42e12fa038fbfbeb25af6e0d616574b429432b668d14eaf7bd661e216861",
       "duration_seconds": 5.894556,
       "processing": "Video stream copied without re-encoding; audio, sensor/data streams, chapters and source metadata omitted."
+    },
+    {
+      "path": "media/trial-feedback-combined.mp4",
+      "mime": "video/mp4",
+      "bytes": 14847064,
+      "sha256": "d52239732056a9d24f7cb03a5ff225a0a4bd0b9c2d1f9f836f533fac1611714e",
+      "duration_seconds": 33.352167,
+      "dimensions_px": [
+        1280,
+        720
+      ],
+      "frames": 1001,
+      "source_order": [
+        "media/video-02-silent.mp4",
+        "media/video-01-silent.mp4"
+      ],
+      "processing": "Concatenated in reattachment order without re-encoding; silent; decoded frame sequence unchanged; original videos retained."
     }
   ]
 }

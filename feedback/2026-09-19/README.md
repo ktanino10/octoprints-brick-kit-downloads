@@ -45,11 +45,16 @@
 
 ## 動画
 
+**[1本にまとめた動画: 約33.35秒・無音版](https://raw.githubusercontent.com/ktanino10/octoprints-brick-kit-downloads/main/feedback/2026-09-19/media/trial-feedback-combined.mp4)**
+
+提供者の依頼により、再添付された順番の **動画02 → 動画01** で結合しました。
+1280×720、全1,001フレーム。再圧縮はしていません。元の2本も比較・参照用に残しています。
+
 - [動画01: 約27.46秒・無音版](https://raw.githubusercontent.com/ktanino10/octoprints-brick-kit-downloads/main/feedback/2026-09-19/media/video-01-silent.mp4)
 - [動画02: 約5.89秒・無音版](https://raw.githubusercontent.com/ktanino10/octoprints-brick-kit-downloads/main/feedback/2026-09-19/media/video-02-silent.mp4)
 
 公開用動画は映像を再圧縮せず、音声、センサーデータのトラック、位置情報・撮影日時などの付随メタデータを除いて再格納しています。
-映像の速度や順序は変更していません。音声の文字起こしや、動画からの力・寸法の測定は行っていません。
+各元動画内の映像の速度やフレーム順序は変更していません。音声の文字起こしや、動画からの力・寸法の測定は行っていません。
 写真・動画を掲載しただけで、すべての穴・条件の成否を判定したことにはなりません。
 公開用ファイルのサイズとハッシュは [media-manifest.json](media-manifest.json) に記録しています。
 
