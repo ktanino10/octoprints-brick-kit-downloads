@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "tag": "archive-2026-09-19-r2",
+  "bundles": [
+    {
+      "filename": "phase1-candidates.zip",
+      "label": "Phase1・候補9種",
+      "description": "9つのBlenderシーン、画像・Balanced動画・BOM・配置。",
+      "revision": "phase1",
+      "status": "PROTOTYPE_NOT_SLICED",
+      "file_count": 84,
+      "bytes": 43613058,
+      "sha256": "432350331becdc00d58f9fc15b94c48fbcbc3a7d824c9ef91d1833f8c06c9fb5",
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/archive-2026-09-19-r2/phase1-candidates.zip"
+    },
+    {
+      "filename": "phase1-cad.zip",
+      "label": "Phase1・旧CAD一式",
+      "description": "21基本型と6 mm嵌合クーポン5個、ネイティブCAD・STEP/STL。旧版の検討用です。",
+      "revision": "phase1",
+      "status": "PROTOTYPE_NOT_SLICED",
+      "file_count": 65,
+      "bytes": 1024001,
+      "sha256": "52c41db49bb458d1d1e673af25a48a3d2909b2e7dc7309b9ab7285643a52b52e",
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/archive-2026-09-19-r2/phase1-cad.zip"
+    },
+    {
+      "filename": "selected-r2-scenes.zip",
+      "label": "選定r2・シーンと記録",
+      "description": "選定3種のBlender、実画像・動画、個別/集計BOM、配置・組立候補。",
+      "revision": "r2-20260919",
+      "status": "PROTOTYPE_NOT_SLICED",
+      "file_count": 55,
+      "bytes": 39801332,
+      "sha256": "e614382ddfaca2f919e9bdc2e5be501675db4d0232f3203f6ea93e1729200378",
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/archive-2026-09-19-r2/selected-r2-scenes.zip"
+    },
+    {
+      "filename": "selected-r2-cad.zip",
+      "label": "選定r2・CAD一式",
+      "description": "236型、共有ライブラリー、相対リンク付き組立3体、4/8 mm各11部品の試験、左右受け台。",
+      "revision": "r2-20260919",
+      "status": "PROTOTYPE_NOT_SLICED",
+      "file_count": 558,
+      "bytes": 32942271,
+      "sha256": "fa84e32fbc57f4cb55d5271fdb39f20862d21c68bf2f7c57784fc5014303f457",
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/archive-2026-09-19-r2/selected-r2-cad.zip"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+type_id,color,hex,count
+p6-1x1,Indigo purple,#482960,678
+p6-1x1,Blue,#0A2989,262
+p6-1x1,Bright green,#BECF00,13
+p6-2x1,Indigo purple,#482960,593
+p6-2x1,Blue,#0A2989,137
+p6-2x1,Bright green,#BECF00,14
+p6-2x2,Indigo purple,#482960,256
+p6-3x1,Indigo purple,#482960,255
+p6-3x1,Blue,#0A2989,21
+p6-3x1,Bright green,#BECF00,4
+p6-3x2,Indigo purple,#482960,295
+p6-4x1,Indigo purple,#482960,222
+p6-4x1,Blue,#0A2989,9
+p6-4x2,Indigo purple,#482960,3817

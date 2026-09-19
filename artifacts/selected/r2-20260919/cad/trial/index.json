@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "revision": "r2-20260919",
+  "unique_printable_types": 14,
+  "piece_count": 22,
+  "plates": [
+    "artifacts/selected/r2-20260919/cad/trial/p4/layout.json",
+    "artifacts/selected/r2-20260919/cad/trial/p8/layout.json"
+  ],
+  "status": "GEOMETRIC_LAYOUT_ONLY",
+  "physical_fit": "UNKNOWN",
+  "retention_strength": "UNKNOWN",
+  "production_export": "BLOCKED",
+  "printing": "NOT_AUTHORIZED",
+  "printer_connection": "NOT_AUTHORIZED",
+  "slicer_run": false
+}

@@ -1,0 +1,37 @@
+{
+  "result": "PASS_NATIVE_LINK_ARRAYS",
+  "figures": {
+    "mona-fine": {
+      "file": "assemblies/mona-fine.FCStd",
+      "instance_count": 13434,
+      "native_array_count": 155,
+      "manifest": "artifacts/selected/r2-20260919/mona-fine/manifest.json",
+      "manifest_sha256": "89b28a764f6b6bd5f0ddd6faea00c864d7b3c8a4e5c41f85d02e49a28e1bf5e1",
+      "geometry_projection_sha256": "0f1c9522b9555ceb1ff8f85df3046cdb2f585a5a0dc55501fbed12aae417e801",
+      "id_map": "assemblies/mona-fine-id-map.json",
+      "file_bytes": 156066
+    },
+    "copilot-chunky": {
+      "file": "assemblies/copilot-chunky.FCStd",
+      "instance_count": 3021,
+      "native_array_count": 98,
+      "manifest": "artifacts/selected/r2-20260919/copilot-chunky/manifest.json",
+      "manifest_sha256": "668cc951909a582d3b71e960eb5a10c88c4502b9634fa377d1434b689d154f90",
+      "geometry_projection_sha256": "6b83e9bd4468c12b78942a74b506b8d9f5bcb509dc8d559666fad8b0afa371d2",
+      "id_map": "assemblies/copilot-chunky-id-map.json",
+      "file_bytes": 60901
+    },
+    "ducky-fine": {
+      "file": "assemblies/ducky-fine.FCStd",
+      "instance_count": 10311,
+      "native_array_count": 124,
+      "manifest": "artifacts/selected/r2-20260919/ducky-fine/manifest.json",
+      "manifest_sha256": "5aa1c9bc995f587b95981b87a5dca17fca7494ba8cdf586ae5ea866f0e35d796",
+      "geometry_projection_sha256": "154fb03f0d1c8c5e98d9da590538369953ba3a1b5db2572965ddcc2e17025d15",
+      "id_map": "assemblies/ducky-fine-id-map.json",
+      "file_bytes": 123403
+    }
+  },
+  "dependency_policy": "Full manifest SHA256 is captured as provenance; the ID/type/color/rigid-transform projection hash is the normative assembly dependency so later media/evidence metadata does not invalidate unchanged geometry.",
+  "limitation": "Two optional Mona temporary cradles from type-plan assembly_aids are not modeled in these figure-brick CAD assemblies. This is not a full-figure printing/strength approval."
+}

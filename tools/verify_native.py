@@ -1,0 +1,47 @@
+"""Reopen extracted, portable FreeCAD documents without recomputing or saving."""
+
+import argparse
+import json
+from pathlib import Path
+
+import FreeCAD
+
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("--root", type=Path, required=True)
+parser.add_argument("--output", type=Path, required=True)
+args = parser.parse_args()
+root = args.root.resolve()
+records = []
+for path in sorted(root.rglob("*.FCStd")):
+    before = path.read_bytes()
+    doc = FreeCAD.openDocument(str(path))
+    links = [obj for obj in doc.Objects if obj.TypeId == "App::Link"]
+    resolved = 0
+    instances = 0
+    for link in links:
+        target = link.getLinkedObject()
+        if target is None or target.Document is None:
+            raise ValueError(f"Unresolved native link: {path.name}: {link.Name}")
+        if hasattr(target, "Shape") and target.Shape.isNull():
+            raise ValueError(f"Linked native shape is empty: {path.name}: {link.Name}")
+        resolved += 1
+        instances += max(1, getattr(link, "ElementCount", 0))
+    proxy_objects = [obj.Name for obj in doc.Objects if getattr(obj, "Proxy", None)]
+    if proxy_objects:
+        raise ValueError(f"Unexpected Python proxy: {path.name}")
+    record = {
+        "path": path.relative_to(root).as_posix(),
+        "document_objects": len(doc.Objects),
+        "native_links_resolved": resolved,
+        "link_instances": instances,
+        "proxy_free": True, "opened": True, "recomputed": False, "saved": False,
+    }
+    records.append(record)
+    print("REOPEN", record, flush=True)
+    for name in list(FreeCAD.listDocuments()):
+        FreeCAD.closeDocument(name)
+    if path.read_bytes() != before:
+        raise ValueError(f"Read-only native verification changed {path.name}")
+args.output.parent.mkdir(parents=True, exist_ok=True)
+args.output.write_text(json.dumps({"freecad_version": ".".join(FreeCAD.Version()[:3]),
+                                 "documents": records}, indent=2) + "\n")

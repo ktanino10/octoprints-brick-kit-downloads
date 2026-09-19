@@ -1,0 +1,14 @@
+{
+  "candidate_id": "mona-fine",
+  "part_count": 13837,
+  "native_prototype_types": 7,
+  "instancer_objects": 18,
+  "evaluated_instances": 13837,
+  "ids_sha256": "770009be39b36016002c09b0c036073a8f3cc03c5bb8f1967cdf64c7bb415059",
+  "blender_version": "5.1.1",
+  "engine": "BLENDER_EEVEE",
+  "mode": "still",
+  "elapsed_seconds": 16.323,
+  "native_scene_reopened": true,
+  "physical_fit": "UNKNOWN"
+}

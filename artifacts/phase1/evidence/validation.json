@@ -1,0 +1,405 @@
+{
+  "schema_version": 1,
+  "stage": "validate",
+  "result": "PASS",
+  "scope": "PHASE1_GEOMETRY_AND_MEDIA",
+  "timestamp": "2026-09-19T02:56:28.078533+00:00",
+  "candidates": [
+    {
+      "candidate_id": "mona-chunky",
+      "part_count": 2325,
+      "native_bounds_mm": [
+        [
+          -107.91,
+          -91.91,
+          0.0
+        ],
+        [
+          107.91,
+          91.91,
+          183.9467
+        ]
+      ],
+      "nominal_contact_graph": {
+        "graph_components": 1,
+        "contact_edges": 5262,
+        "stud_sites": 10716,
+        "cell_count": 11154,
+        "mechanical_validation": "UNKNOWN",
+        "insertion_sweep_validation": "UNKNOWN"
+      },
+      "bom_ids_colors_counts": "PASS",
+      "overlapping_grid_cells": 0,
+      "status": {
+        "visual_selection": "PENDING",
+        "physical_fit": "UNKNOWN",
+        "production_export": "BLOCKED"
+      }
+    },
+    {
+      "candidate_id": "mona-balanced",
+      "part_count": 4838,
+      "native_bounds_mm": [
+        [
+          -104.91,
+          -86.91,
+          0.0
+        ],
+        [
+          104.91,
+          86.91,
+          181.13
+        ]
+      ],
+      "nominal_contact_graph": {
+        "graph_components": 1,
+        "contact_edges": 11645,
+        "stud_sites": 24679,
+        "cell_count": 25438,
+        "mechanical_validation": "UNKNOWN",
+        "insertion_sweep_validation": "UNKNOWN"
+      },
+      "bom_ids_colors_counts": "PASS",
+      "overlapping_grid_cells": 0,
+      "status": {
+        "visual_selection": "PENDING",
+        "physical_fit": "UNKNOWN",
+        "production_export": "BLOCKED"
+      }
+    },
+    {
+      "candidate_id": "mona-fine",
+      "part_count": 13837,
+      "native_bounds_mm": [
+        [
+          -105.91,
+          -85.91,
+          0.0
+        ],
+        [
+          105.91,
+          85.91,
+          180.7133
+        ]
+      ],
+      "nominal_contact_graph": {
+        "graph_components": 1,
+        "contact_edges": 36202,
+        "stud_sites": 80695,
+        "cell_count": 82357,
+        "mechanical_validation": "UNKNOWN",
+        "insertion_sweep_validation": "UNKNOWN"
+      },
+      "bom_ids_colors_counts": "PASS",
+      "overlapping_grid_cells": 0,
+      "status": {
+        "visual_selection": "PENDING",
+        "physical_fit": "UNKNOWN",
+        "production_export": "BLOCKED"
+      }
+    },
+    {
+      "candidate_id": "copilot-chunky",
+      "part_count": 3135,
+      "native_bounds_mm": [
+        [
+          -123.91,
+          -107.91,
+          0.0
+        ],
+        [
+          123.91,
+          107.91,
+          183.9467
+        ]
+      ],
+      "nominal_contact_graph": {
+        "graph_components": 1,
+        "contact_edges": 7466,
+        "stud_sites": 15742,
+        "cell_count": 16399,
+        "mechanical_validation": "UNKNOWN",
+        "insertion_sweep_validation": "UNKNOWN"
+      },
+      "bom_ids_colors_counts": "PASS",
+      "overlapping_grid_cells": 0,
+      "status": {
+        "visual_selection": "PENDING",
+        "physical_fit": "UNKNOWN",
+        "production_export": "BLOCKED"
+      }
+    },
+    {
+      "candidate_id": "copilot-balanced",
+      "part_count": 6576,
+      "native_bounds_mm": [
+        [
+          -122.91,
+          -104.91,
+          0.0
+        ],
+        [
+          122.91,
+          104.91,
+          181.13
+        ]
+      ],
+      "nominal_contact_graph": {
+        "graph_components": 1,
+        "contact_edges": 16650,
+        "stud_sites": 36381,
+        "cell_count": 37535,
+        "mechanical_validation": "UNKNOWN",
+        "insertion_sweep_validation": "UNKNOWN"
+      },
+      "bom_ids_colors_counts": "PASS",
+      "overlapping_grid_cells": 0,
+      "status": {
+        "visual_selection": "PENDING",
+        "physical_fit": "UNKNOWN",
+        "production_export": "BLOCKED"
+      }
+    },
+    {
+      "candidate_id": "copilot-fine",
+      "part_count": 19588,
+      "native_bounds_mm": [
+        [
+          -121.91,
+          -105.91,
+          0.0
+        ],
+        [
+          121.91,
+          105.91,
+          180.7133
+        ]
+      ],
+      "nominal_contact_graph": {
+        "graph_components": 1,
+        "contact_edges": 52924,
+        "stud_sites": 119458,
+        "cell_count": 122021,
+        "mechanical_validation": "UNKNOWN",
+        "insertion_sweep_validation": "UNKNOWN"
+      },
+      "bom_ids_colors_counts": "PASS",
+      "overlapping_grid_cells": 0,
+      "status": {
+        "visual_selection": "PENDING",
+        "physical_fit": "UNKNOWN",
+        "production_export": "BLOCKED"
+      }
+    },
+    {
+      "candidate_id": "ducky-chunky",
+      "part_count": 1767,
+      "native_bounds_mm": [
+        [
+          -75.91,
+          -107.91,
+          0.0
+        ],
+        [
+          75.91,
+          107.91,
+          183.9467
+        ]
+      ],
+      "nominal_contact_graph": {
+        "graph_components": 1,
+        "contact_edges": 4109,
+        "stud_sites": 8552,
+        "cell_count": 8982,
+        "mechanical_validation": "UNKNOWN",
+        "insertion_sweep_validation": "UNKNOWN"
+      },
+      "bom_ids_colors_counts": "PASS",
+      "overlapping_grid_cells": 0,
+      "status": {
+        "visual_selection": "PENDING",
+        "physical_fit": "UNKNOWN",
+        "production_export": "BLOCKED"
+      }
+    },
+    {
+      "candidate_id": "ducky-balanced",
+      "part_count": 3646,
+      "native_bounds_mm": [
+        [
+          -74.91,
+          -110.91,
+          0.0
+        ],
+        [
+          74.91,
+          110.91,
+          181.13
+        ]
+      ],
+      "nominal_contact_graph": {
+        "graph_components": 1,
+        "contact_edges": 9091,
+        "stud_sites": 19643,
+        "cell_count": 20386,
+        "mechanical_validation": "UNKNOWN",
+        "insertion_sweep_validation": "UNKNOWN"
+      },
+      "bom_ids_colors_counts": "PASS",
+      "overlapping_grid_cells": 0,
+      "status": {
+        "visual_selection": "PENDING",
+        "physical_fit": "UNKNOWN",
+        "production_export": "BLOCKED"
+      }
+    },
+    {
+      "candidate_id": "ducky-fine",
+      "part_count": 10662,
+      "native_bounds_mm": [
+        [
+          -73.91,
+          -105.91,
+          0.0
+        ],
+        [
+          73.91,
+          105.91,
+          180.7133
+        ]
+      ],
+      "nominal_contact_graph": {
+        "graph_components": 1,
+        "contact_edges": 28479,
+        "stud_sites": 63879,
+        "cell_count": 65505,
+        "mechanical_validation": "UNKNOWN",
+        "insertion_sweep_validation": "UNKNOWN"
+      },
+      "bom_ids_colors_counts": "PASS",
+      "overlapping_grid_cells": 0,
+      "status": {
+        "visual_selection": "PENDING",
+        "physical_fit": "UNKNOWN",
+        "production_export": "BLOCKED"
+      }
+    }
+  ],
+  "native_prototypes": {
+    "p8-1x1": {
+      "closed_manifold": true,
+      "positive_volume_mm3": 281.55336,
+      "triangles": 372
+    },
+    "p8-2x1": {
+      "closed_manifold": true,
+      "positive_volume_mm3": 569.69426,
+      "triangles": 732
+    },
+    "p8-3x1": {
+      "closed_manifold": true,
+      "positive_volume_mm3": 857.83518,
+      "triangles": 1092
+    },
+    "p8-4x1": {
+      "closed_manifold": true,
+      "positive_volume_mm3": 1145.9761,
+      "triangles": 1452
+    },
+    "p8-2x2": {
+      "closed_manifold": true,
+      "positive_volume_mm3": 1152.71524,
+      "triangles": 1452
+    },
+    "p8-3x2": {
+      "closed_manifold": true,
+      "positive_volume_mm3": 1735.73626,
+      "triangles": 2172
+    },
+    "p8-4x2": {
+      "closed_manifold": true,
+      "positive_volume_mm3": 2318.75728,
+      "triangles": 2892
+    },
+    "p6-1x1": {
+      "closed_manifold": true,
+      "positive_volume_mm3": 115.24141,
+      "triangles": 372
+    },
+    "p6-2x1": {
+      "closed_manifold": true,
+      "positive_volume_mm3": 234.12846,
+      "triangles": 732
+    },
+    "p6-3x1": {
+      "closed_manifold": true,
+      "positive_volume_mm3": 353.01552,
+      "triangles": 1092
+    },
+    "p6-4x1": {
+      "closed_manifold": true,
+      "positive_volume_mm3": 471.90258,
+      "triangles": 1452
+    },
+    "p6-2x2": {
+      "closed_manifold": true,
+      "positive_volume_mm3": 475.66095,
+      "triangles": 1452
+    },
+    "p6-3x2": {
+      "closed_manifold": true,
+      "positive_volume_mm3": 717.19345,
+      "triangles": 2172
+    },
+    "p6-4x2": {
+      "closed_manifold": true,
+      "positive_volume_mm3": 958.72595,
+      "triangles": 2892
+    },
+    "p4-1x1": {
+      "closed_manifold": true,
+      "positive_volume_mm3": 32.06277,
+      "triangles": 372
+    },
+    "p4-2x1": {
+      "closed_manifold": true,
+      "positive_volume_mm3": 65.69328,
+      "triangles": 732
+    },
+    "p4-3x1": {
+      "closed_manifold": true,
+      "positive_volume_mm3": 99.32378,
+      "triangles": 1092
+    },
+    "p4-4x1": {
+      "closed_manifold": true,
+      "positive_volume_mm3": 132.95428,
+      "triangles": 1452
+    },
+    "p4-2x2": {
+      "closed_manifold": true,
+      "positive_volume_mm3": 134.59589,
+      "triangles": 1452
+    },
+    "p4-3x2": {
+      "closed_manifold": true,
+      "positive_volume_mm3": 203.49849,
+      "triangles": 2172
+    },
+    "p4-4x2": {
+      "closed_manifold": true,
+      "positive_volume_mm3": 272.4011,
+      "triangles": 2892
+    }
+  },
+  "visual_selection": "PENDING",
+  "physical_fit": "UNKNOWN",
+  "production_export": "BLOCKED",
+  "not_validated": [
+    "Physical P1S/PLA fit and retention",
+    "Real print orientation/support/packing",
+    "Full collision-free insertion sweeps",
+    "Actual infill mass, load and impact stability",
+    "Thin appendage strength and feature-specific nozzle calibration"
+  ]
+}

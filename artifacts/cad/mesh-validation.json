@@ -1,0 +1,1043 @@
+{
+  "result": "PASS",
+  "trimesh_version": "4.12.2",
+  "numpy_version": "2.5.3",
+  "stl": {
+    "bricks/p8-1x1.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 188,
+      "triangles": 372,
+      "volume_mm3": 281.5533580341922,
+      "bounds_mm": [
+        [
+          -3.9100000858306885,
+          -3.9100000858306885,
+          0.0
+        ],
+        [
+          3.9100000858306885,
+          3.9100000858306885,
+          6.3466668128967285
+        ]
+      ],
+      "relative_volume_error": 8.399040844775385e-05
+    },
+    "bricks/p8-2x1.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 368,
+      "triangles": 732,
+      "volume_mm3": 569.6942604056877,
+      "bounds_mm": [
+        [
+          -7.909999847412109,
+          -3.9100000858306885,
+          0.0
+        ],
+        [
+          7.909999847412109,
+          3.9100000858306885,
+          6.3466668128967285
+        ]
+      ],
+      "relative_volume_error": 8.297757904363046e-05
+    },
+    "bricks/p8-3x1.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 548,
+      "triangles": 1092,
+      "volume_mm3": 857.8351814480724,
+      "bounds_mm": [
+        [
+          -11.90999984741211,
+          -3.9100000858306885,
+          0.0
+        ],
+        [
+          11.90999984741211,
+          3.9100000858306885,
+          6.3466668128967285
+        ]
+      ],
+      "relative_volume_error": 8.266692180391999e-05
+    },
+    "bricks/p8-4x1.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 728,
+      "triangles": 1452,
+      "volume_mm3": 1145.9761014741066,
+      "bounds_mm": [
+        [
+          -15.90999984741211,
+          -3.9100000858306885,
+          0.0
+        ],
+        [
+          15.90999984741211,
+          3.9100000858306885,
+          6.3466668128967285
+        ]
+      ],
+      "relative_volume_error": 8.251159919514528e-05
+    },
+    "bricks/p8-2x2.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 728,
+      "triangles": 1452,
+      "volume_mm3": 1152.7152403646573,
+      "bounds_mm": [
+        [
+          -7.909999847412109,
+          -7.909999847412109,
+          0.0
+        ],
+        [
+          7.909999847412109,
+          7.909999847412109,
+          6.3466668128967285
+        ]
+      ],
+      "relative_volume_error": 8.197614846938706e-05
+    },
+    "bricks/p8-3x2.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 1088,
+      "triangles": 2172,
+      "volume_mm3": 1735.736258081178,
+      "bounds_mm": [
+        [
+          -11.90999984741211,
+          -7.909999847412109,
+          0.0
+        ],
+        [
+          11.90999984741211,
+          7.909999847412109,
+          6.3466668128967285
+        ]
+      ],
+      "relative_volume_error": 8.166921942631689e-05
+    },
+    "bricks/p8-4x2.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 1448,
+      "triangles": 2892,
+      "volume_mm3": 2318.7572737712076,
+      "bounds_mm": [
+        [
+          -15.90999984741211,
+          -7.909999847412109,
+          0.0
+        ],
+        [
+          15.90999984741211,
+          7.909999847412109,
+          6.3466668128967285
+        ]
+      ],
+      "relative_volume_error": 8.151576296655527e-05
+    },
+    "bricks/p6-1x1.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 188,
+      "triangles": 372,
+      "volume_mm3": 115.24141247591854,
+      "bounds_mm": [
+        [
+          -2.9100000858306885,
+          -2.9100000858306885,
+          0.0
+        ],
+        [
+          2.9100000858306885,
+          2.9100000858306885,
+          4.730000019073486
+        ]
+      ],
+      "relative_volume_error": 0.00011655488162842786
+    },
+    "bricks/p6-2x1.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 368,
+      "triangles": 732,
+      "volume_mm3": 234.1284610421061,
+      "bounds_mm": [
+        [
+          -5.909999847412109,
+          -2.9100000858306885,
+          0.0
+        ],
+        [
+          5.909999847412109,
+          2.9100000858306885,
+          4.730000019073486
+        ]
+      ],
+      "relative_volume_error": 0.0001146889064307377
+    },
+    "bricks/p6-3x1.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 548,
+      "triangles": 1092,
+      "volume_mm3": 353.01551974202084,
+      "bounds_mm": [
+        [
+          -8.90999984741211,
+          -2.9100000858306885,
+          0.0
+        ],
+        [
+          8.90999984741211,
+          2.9100000858306885,
+          4.730000019073486
+        ]
+      ],
+      "relative_volume_error": 0.00011410847243720212
+    },
+    "bricks/p6-4x1.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 728,
+      "triangles": 1452,
+      "volume_mm3": 471.9025762457675,
+      "bounds_mm": [
+        [
+          -11.90999984741211,
+          -2.9100000858306885,
+          0.0
+        ],
+        [
+          11.90999984741211,
+          2.9100000858306885,
+          4.730000019073486
+        ]
+      ],
+      "relative_volume_error": 0.00011381584335645734
+    },
+    "bricks/p6-2x2.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 728,
+      "triangles": 1452,
+      "volume_mm3": 475.66094544853314,
+      "bounds_mm": [
+        [
+          -5.909999847412109,
+          -5.909999847412109,
+          0.0
+        ],
+        [
+          5.909999847412109,
+          5.909999847412109,
+          4.730000019073486
+        ]
+      ],
+      "relative_volume_error": 0.0001128516808495128
+    },
+    "bricks/p6-3x2.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 1088,
+      "triangles": 2172,
+      "volume_mm3": 717.1934504272509,
+      "bounds_mm": [
+        [
+          -8.90999984741211,
+          -5.909999847412109,
+          0.0
+        ],
+        [
+          8.90999984741211,
+          5.909999847412109,
+          4.730000019073486
+        ]
+      ],
+      "relative_volume_error": 0.00011228060597257006
+    },
+    "bricks/p6-4x2.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 1448,
+      "triangles": 2892,
+      "volume_mm3": 958.7259510042062,
+      "bounds_mm": [
+        [
+          -11.90999984741211,
+          -5.909999847412109,
+          0.0
+        ],
+        [
+          11.90999984741211,
+          5.909999847412109,
+          4.730000019073486
+        ]
+      ],
+      "relative_volume_error": 0.00011199268215356106
+    },
+    "bricks/p4-1x1.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 188,
+      "triangles": 372,
+      "volume_mm3": 32.062773810187444,
+      "bounds_mm": [
+        [
+          -1.909999966621399,
+          -1.909999966621399,
+          0.0
+        ],
+        [
+          1.909999966621399,
+          1.909999966621399,
+          3.113333225250244
+        ]
+      ],
+      "relative_volume_error": 0.00019193656998384157
+    },
+    "bricks/p4-2x1.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 368,
+      "triangles": 732,
+      "volume_mm3": 65.69327810301479,
+      "bounds_mm": [
+        [
+          -3.9100000858306885,
+          -1.909999966621399,
+          0.0
+        ],
+        [
+          3.9100000858306885,
+          1.909999966621399,
+          3.113333225250244
+        ]
+      ],
+      "relative_volume_error": 0.0001873930668148116
+    },
+    "bricks/p4-3x1.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 548,
+      "triangles": 1092,
+      "volume_mm3": 99.32377625995143,
+      "bounds_mm": [
+        [
+          -5.909999847412109,
+          -1.909999966621399,
+          0.0
+        ],
+        [
+          5.909999847412109,
+          1.909999966621399,
+          3.113333225250244
+        ]
+      ],
+      "relative_volume_error": 0.00018586459632263796
+    },
+    "bricks/p4-4x1.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 728,
+      "triangles": 1452,
+      "volume_mm3": 132.95427823652128,
+      "bounds_mm": [
+        [
+          -7.909999847412109,
+          -1.909999966621399,
+          0.0
+        ],
+        [
+          7.909999847412109,
+          1.909999966621399,
+          3.113333225250244
+        ]
+      ],
+      "relative_volume_error": 0.00018513810845321998
+    },
+    "bricks/p4-2x2.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 728,
+      "triangles": 1452,
+      "volume_mm3": 134.59588942179394,
+      "bounds_mm": [
+        [
+          -3.9100000858306885,
+          -3.9100000858306885,
+          0.0
+        ],
+        [
+          3.9100000858306885,
+          3.9100000858306885,
+          3.113333225250244
+        ]
+      ],
+      "relative_volume_error": 0.00018296277451468335
+    },
+    "bricks/p4-3x2.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 1088,
+      "triangles": 2172,
+      "volume_mm3": 203.498488172715,
+      "bounds_mm": [
+        [
+          -5.909999847412109,
+          -3.9100000858306885,
+          0.0
+        ],
+        [
+          5.909999847412109,
+          3.9100000858306885,
+          3.113333225250244
+        ]
+      ],
+      "relative_volume_error": 0.00018147082810093806
+    },
+    "bricks/p4-4x2.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 1448,
+      "triangles": 2892,
+      "volume_mm3": 272.401094761744,
+      "bounds_mm": [
+        [
+          -7.909999847412109,
+          -3.9100000858306885,
+          0.0
+        ],
+        [
+          7.909999847412109,
+          3.9100000858306885,
+          3.113333225250244
+        ]
+      ],
+      "relative_volume_error": 0.00018076242460352
+    },
+    "coupons/receiver.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 1016,
+      "triangles": 2028,
+      "volume_mm3": 939.9289633628251,
+      "bounds_mm": [
+        [
+          -11.90999984741211,
+          -5.909999847412109,
+          0.0
+        ],
+        [
+          11.90999984741211,
+          5.909999847412109,
+          3.7799999713897705
+        ]
+      ],
+      "relative_volume_error": 0.00021615181564560437
+    },
+    "coupons/male-key-01.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 188,
+      "triangles": 372,
+      "volume_mm3": 247.19492175227185,
+      "bounds_mm": [
+        [
+          -2.9100000858306885,
+          -5.909999847412109,
+          0.0
+        ],
+        [
+          2.9100000858306885,
+          5.909999847412109,
+          4.730000019073486
+        ]
+      ],
+      "relative_volume_error": 0.00016068063913965425
+    },
+    "coupons/male-key-02.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 260,
+      "triangles": 516,
+      "volume_mm3": 247.42934676913237,
+      "bounds_mm": [
+        [
+          -2.9100000858306885,
+          -5.909999847412109,
+          0.0
+        ],
+        [
+          2.9100000858306885,
+          5.909999847412109,
+          4.730000019073486
+        ]
+      ],
+      "relative_volume_error": 0.00016535422150143475
+    },
+    "coupons/male-key-03.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 332,
+      "triangles": 660,
+      "volume_mm3": 247.66377178282326,
+      "bounds_mm": [
+        [
+          -2.9100000858306885,
+          -5.909999847412109,
+          0.0
+        ],
+        [
+          2.9100000858306885,
+          5.909999847412109,
+          4.730000019073486
+        ]
+      ],
+      "relative_volume_error": 0.00017001892557566567
+    },
+    "coupons/male-key-04.stl": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 404,
+      "triangles": 804,
+      "volume_mm3": 247.89819680608858,
+      "bounds_mm": [
+        [
+          -2.9100000858306885,
+          -5.909999847412109,
+          0.0
+        ],
+        [
+          2.9100000858306885,
+          5.909999847412109,
+          4.730000019073486
+        ]
+      ],
+      "relative_volume_error": 0.0001746747252734382
+    }
+  },
+  "shared_prototypes": {
+    "p8-1x1": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 188,
+      "triangles": 372,
+      "volume_mm3": 281.5533587236279,
+      "bounds_mm": [
+        [
+          -3.91000009,
+          -3.91000009,
+          0.0
+        ],
+        [
+          3.91000009,
+          3.91000009,
+          6.34666681
+        ]
+      ],
+      "relative_volume_error": 8.399285733928785e-05
+    },
+    "p8-2x1": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 368,
+      "triangles": 732,
+      "volume_mm3": 569.6942613825162,
+      "bounds_mm": [
+        [
+          -7.90999985,
+          -3.91000009,
+          0.0
+        ],
+        [
+          7.90999985,
+          3.91000009,
+          6.34666681
+        ]
+      ],
+      "relative_volume_error": 8.297929383971336e-05
+    },
+    "p8-3x1": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 548,
+      "triangles": 1092,
+      "volume_mm3": 857.8351828167105,
+      "bounds_mm": [
+        [
+          -11.90999985,
+          -3.91000009,
+          0.0
+        ],
+        [
+          11.90999985,
+          3.91000009,
+          6.34666681
+        ]
+      ],
+      "relative_volume_error": 8.266851739158199e-05
+    },
+    "p8-4x1": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 728,
+      "triangles": 1452,
+      "volume_mm3": 1145.976103248304,
+      "bounds_mm": [
+        [
+          -15.90999985,
+          -3.91000009,
+          0.0
+        ],
+        [
+          15.90999985,
+          3.91000009,
+          6.34666681
+        ]
+      ],
+      "relative_volume_error": 8.251314752039107e-05
+    },
+    "p8-2x2": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 728,
+      "triangles": 1452,
+      "volume_mm3": 1152.715241494265,
+      "bounds_mm": [
+        [
+          -7.90999985,
+          -7.90999985,
+          0.0
+        ],
+        [
+          7.90999985,
+          7.90999985,
+          6.34666681
+        ]
+      ],
+      "relative_volume_error": 8.197712850366301e-05
+    },
+    "p8-3x2": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 1088,
+      "triangles": 2172,
+      "volume_mm3": 1735.736259575738,
+      "bounds_mm": [
+        [
+          -11.90999985,
+          -7.90999985,
+          0.0
+        ],
+        [
+          11.90999985,
+          7.90999985,
+          6.34666681
+        ]
+      ],
+      "relative_volume_error": 8.167008054904557e-05
+    },
+    "p8-4x2": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 1448,
+      "triangles": 2892,
+      "volume_mm3": 2318.7572756576883,
+      "bounds_mm": [
+        [
+          -15.90999985,
+          -7.90999985,
+          0.0
+        ],
+        [
+          15.90999985,
+          7.90999985,
+          6.34666681
+        ]
+      ],
+      "relative_volume_error": 8.151657660682154e-05
+    },
+    "p6-1x1": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 188,
+      "triangles": 372,
+      "volume_mm3": 115.24141284385975,
+      "bounds_mm": [
+        [
+          -2.91000009,
+          -2.91000009,
+          0.0
+        ],
+        [
+          2.91000009,
+          2.91000009,
+          4.73000002
+        ]
+      ],
+      "relative_volume_error": 0.00011655807478683222
+    },
+    "p6-2x1": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 368,
+      "triangles": 732,
+      "volume_mm3": 234.12846153158057,
+      "bounds_mm": [
+        [
+          -5.90999985,
+          -2.91000009,
+          0.0
+        ],
+        [
+          5.90999985,
+          2.91000009,
+          4.73000002
+        ]
+      ],
+      "relative_volume_error": 0.00011469099729399801
+    },
+    "p6-3x1": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 548,
+      "triangles": 1092,
+      "volume_mm3": 353.015520418207,
+      "bounds_mm": [
+        [
+          -8.90999985,
+          -2.91000009,
+          0.0
+        ],
+        [
+          8.90999985,
+          2.91000009,
+          4.73000002
+        ]
+      ],
+      "relative_volume_error": 0.00011411038811326435
+    },
+    "p6-4x1": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 728,
+      "triangles": 1452,
+      "volume_mm3": 471.9025771057081,
+      "bounds_mm": [
+        [
+          -11.90999985,
+          -2.91000009,
+          0.0
+        ],
+        [
+          11.90999985,
+          2.91000009,
+          4.73000002
+        ]
+      ],
+      "relative_volume_error": 0.00011381766584794839
+    },
+    "p6-2x2": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 728,
+      "triangles": 1452,
+      "volume_mm3": 475.66094592016975,
+      "bounds_mm": [
+        [
+          -5.90999985,
+          -5.90999985,
+          0.0
+        ],
+        [
+          5.90999985,
+          5.90999985,
+          4.73000002
+        ]
+      ],
+      "relative_volume_error": 0.00011285267250094044
+    },
+    "p6-3x2": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 1088,
+      "triangles": 2172,
+      "volume_mm3": 717.1934510134724,
+      "bounds_mm": [
+        [
+          -8.90999985,
+          -5.90999985,
+          0.0
+        ],
+        [
+          8.90999985,
+          5.90999985,
+          4.73000002
+        ]
+      ],
+      "relative_volume_error": 0.00011228142344710257
+    },
+    "p6-4x2": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 1448,
+      "triangles": 2892,
+      "volume_mm3": 958.7259516990217,
+      "bounds_mm": [
+        [
+          -11.90999985,
+          -5.90999985,
+          0.0
+        ],
+        [
+          11.90999985,
+          5.90999985,
+          4.73000002
+        ]
+      ],
+      "relative_volume_error": 0.00011199340696266269
+    },
+    "p4-1x1": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 188,
+      "triangles": 372,
+      "volume_mm3": 32.0627739267622,
+      "bounds_mm": [
+        [
+          -1.90999997,
+          -1.90999997,
+          0.0
+        ],
+        [
+          1.90999997,
+          1.90999997,
+          3.11333323
+        ]
+      ],
+      "relative_volume_error": 0.00019194020651047694
+    },
+    "p4-2x1": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 368,
+      "triangles": 732,
+      "volume_mm3": 65.69327829232883,
+      "bounds_mm": [
+        [
+          -3.91000009,
+          -1.90999997,
+          0.0
+        ],
+        [
+          3.91000009,
+          1.90999997,
+          3.11333323
+        ]
+      ],
+      "relative_volume_error": 0.0001873959491418553
+    },
+    "p4-3x1": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 548,
+      "triangles": 1092,
+      "volume_mm3": 99.32377648302482,
+      "bounds_mm": [
+        [
+          -5.90999985,
+          -1.90999997,
+          0.0
+        ],
+        [
+          5.90999985,
+          1.90999997,
+          3.11333323
+        ]
+      ],
+      "relative_volume_error": 0.00018586684266153064
+    },
+    "p4-4x1": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 728,
+      "triangles": 1452,
+      "volume_mm3": 132.95427851961776,
+      "bounds_mm": [
+        [
+          -7.90999985,
+          -1.90999997,
+          0.0
+        ],
+        [
+          7.90999985,
+          1.90999997,
+          3.11333323
+        ]
+      ],
+      "relative_volume_error": 0.00018514023812454816
+    },
+    "p4-2x2": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 728,
+      "triangles": 1452,
+      "volume_mm3": 134.59588970839403,
+      "bounds_mm": [
+        [
+          -3.91000009,
+          -3.91000009,
+          0.0
+        ],
+        [
+          3.91000009,
+          3.91000009,
+          3.11333323
+        ]
+      ],
+      "relative_volume_error": 0.00018296490424174472
+    },
+    "p4-3x2": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 1088,
+      "triangles": 2172,
+      "volume_mm3": 203.49848847669512,
+      "bounds_mm": [
+        [
+          -5.90999985,
+          -3.91000009,
+          0.0
+        ],
+        [
+          5.90999985,
+          3.91000009,
+          3.11333323
+        ]
+      ],
+      "relative_volume_error": 0.0001814723221429393
+    },
+    "p4-4x2": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 1448,
+      "triangles": 2892,
+      "volume_mm3": 272.4010951369625,
+      "bounds_mm": [
+        [
+          -7.90999985,
+          -3.91000009,
+          0.0
+        ],
+        [
+          7.90999985,
+          3.91000009,
+          3.11333323
+        ]
+      ],
+      "relative_volume_error": 0.00018076380230125366
+    }
+  }
+}

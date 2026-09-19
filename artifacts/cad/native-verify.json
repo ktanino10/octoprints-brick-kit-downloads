@@ -1,0 +1,649 @@
+{
+  "result": "PASS",
+  "fresh_process": true,
+  "gui_up": false,
+  "documents": {
+    "NativeLibrary.FCStd": {
+      "opened": true,
+      "forced_recompute": true,
+      "proxy_free": true,
+      "document_object_count": 543,
+      "final_solid_count": 21
+    },
+    "coupon.FCStd": {
+      "opened": true,
+      "forced_recompute": true,
+      "proxy_free": true,
+      "document_object_count": 94,
+      "final_solid_count": 5
+    }
+  },
+  "parameter_edit_checks": {
+    "p8-1x1": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    },
+    "p8-2x1": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    },
+    "p8-3x1": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    },
+    "p8-4x1": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    },
+    "p8-2x2": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    },
+    "p8-3x2": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    },
+    "p8-4x2": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    },
+    "p6-1x1": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    },
+    "p6-2x1": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    },
+    "p6-3x1": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    },
+    "p6-4x1": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    },
+    "p6-2x2": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    },
+    "p6-3x2": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    },
+    "p6-4x2": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    },
+    "p4-1x1": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    },
+    "p4-2x1": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    },
+    "p4-3x1": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    },
+    "p4-4x1": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    },
+    "p4-2x2": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    },
+    "p4-3x2": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    },
+    "p4-4x2": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    },
+    "receiver": {
+      "property": "Clearance01",
+      "delta_mm": 0.01,
+      "restored": true,
+      "result": "PASS"
+    },
+    "male-key-01": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    },
+    "male-key-02": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    },
+    "male-key-03": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    },
+    "male-key-04": {
+      "property": "Pitch",
+      "delta_mm": 0.1,
+      "restored": true,
+      "result": "PASS"
+    }
+  },
+  "step_reimports": {
+    "p8-1x1": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 281.5297122386691,
+      "bounds_mm": [
+        [
+          -3.91,
+          -3.91,
+          0.0
+        ],
+        [
+          3.91,
+          3.91,
+          6.3466666666670895
+        ]
+      ],
+      "brep_faces": 11
+    },
+    "p8-2x1": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 569.6469924773386,
+      "bounds_mm": [
+        [
+          -7.91,
+          -3.91,
+          0.0
+        ],
+        [
+          7.91,
+          3.91,
+          6.3466666666670895
+        ]
+      ],
+      "brep_faces": 16
+    },
+    "p8-3x1": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 857.7642727160079,
+      "bounds_mm": [
+        [
+          -11.91,
+          -3.91,
+          0.0
+        ],
+        [
+          11.91,
+          3.91,
+          6.3466666666670895
+        ]
+      ],
+      "brep_faces": 21
+    },
+    "p8-4x1": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 1145.8815529546803,
+      "bounds_mm": [
+        [
+          -15.91,
+          -3.91,
+          0.0
+        ],
+        [
+          15.91,
+          3.91,
+          6.3466666666670895
+        ]
+      ],
+      "brep_faces": 26
+    },
+    "p8-2x2": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 1152.6207529546775,
+      "bounds_mm": [
+        [
+          -7.91,
+          -7.91,
+          0.0
+        ],
+        [
+          7.91,
+          7.91,
+          6.3466666666670895
+        ]
+      ],
+      "brep_faces": 26
+    },
+    "p8-3x2": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 1735.5945134320173,
+      "bounds_mm": [
+        [
+          -11.91,
+          -7.91,
+          0.0
+        ],
+        [
+          11.91,
+          7.91,
+          6.3466666666670895
+        ]
+      ],
+      "brep_faces": 36
+    },
+    "p8-4x2": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2318.5682739093613,
+      "bounds_mm": [
+        [
+          -15.91,
+          -7.91,
+          0.0
+        ],
+        [
+          15.91,
+          7.91,
+          6.3466666666670895
+        ]
+      ],
+      "brep_faces": 46
+    },
+    "p6-1x1": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 115.22798209210538,
+      "bounds_mm": [
+        [
+          -2.91,
+          -2.91,
+          0.0
+        ],
+        [
+          2.91,
+          2.91,
+          4.730000000000067
+        ]
+      ],
+      "brep_faces": 11
+    },
+    "p6-2x1": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 234.1016121842108,
+      "bounds_mm": [
+        [
+          -5.91,
+          -2.91,
+          0.0
+        ],
+        [
+          5.91,
+          2.91,
+          4.730000000000068
+        ]
+      ],
+      "brep_faces": 16
+    },
+    "p6-3x1": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 352.97524227631624,
+      "bounds_mm": [
+        [
+          -8.91,
+          -2.91,
+          0.0
+        ],
+        [
+          8.91,
+          2.91,
+          4.730000000000068
+        ]
+      ],
+      "brep_faces": 21
+    },
+    "p6-4x1": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 471.84887236842184,
+      "bounds_mm": [
+        [
+          -11.91,
+          -2.91,
+          0.0
+        ],
+        [
+          11.91,
+          2.91,
+          4.730000000000068
+        ]
+      ],
+      "brep_faces": 26
+    },
+    "p6-2x2": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 475.6072723684218,
+      "bounds_mm": [
+        [
+          -5.91,
+          -5.91,
+          0.0
+        ],
+        [
+          5.91,
+          5.91,
+          4.730000000000068
+        ]
+      ],
+      "brep_faces": 26
+    },
+    "p6-3x2": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 717.1129325526324,
+      "bounds_mm": [
+        [
+          -8.91,
+          -5.91,
+          0.0
+        ],
+        [
+          8.91,
+          5.91,
+          4.730000000000068
+        ]
+      ],
+      "brep_faces": 36
+    },
+    "p6-4x2": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 958.6185927368424,
+      "bounds_mm": [
+        [
+          -11.91,
+          -5.91,
+          0.0
+        ],
+        [
+          11.91,
+          5.91,
+          4.730000000000068
+        ]
+      ],
+      "brep_faces": 46
+    },
+    "p4-1x1": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 32.056620972313524,
+      "bounds_mm": [
+        [
+          -1.91,
+          -1.91,
+          0.0
+        ],
+        [
+          1.91,
+          1.91,
+          3.113333333333045
+        ]
+      ],
+      "brep_faces": 11
+    },
+    "p4-2x1": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 65.68096994462708,
+      "bounds_mm": [
+        [
+          -3.91,
+          -1.91,
+          0.0
+        ],
+        [
+          3.91,
+          1.91,
+          3.113333333333045
+        ]
+      ],
+      "brep_faces": 16
+    },
+    "p4-3x1": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 99.30531891694068,
+      "bounds_mm": [
+        [
+          -5.91,
+          -1.91,
+          0.0
+        ],
+        [
+          5.91,
+          1.91,
+          3.113333333333045
+        ]
+      ],
+      "brep_faces": 21
+    },
+    "p4-4x1": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 132.92966788925412,
+      "bounds_mm": [
+        [
+          -7.91,
+          -1.91,
+          0.0
+        ],
+        [
+          7.91,
+          1.91,
+          3.113333333333045
+        ]
+      ],
+      "brep_faces": 26
+    },
+    "p4-2x2": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 134.5712678892541,
+      "bounds_mm": [
+        [
+          -3.91,
+          -3.91,
+          0.0
+        ],
+        [
+          3.91,
+          3.91,
+          3.113333333333045
+        ]
+      ],
+      "brep_faces": 26
+    },
+    "p4-3x2": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 203.4615658338812,
+      "bounds_mm": [
+        [
+          -5.91,
+          -3.91,
+          0.0
+        ],
+        [
+          5.91,
+          3.91,
+          3.113333333333045
+        ]
+      ],
+      "brep_faces": 36
+    },
+    "p4-4x2": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 272.3518637785086,
+      "bounds_mm": [
+        [
+          -7.91,
+          -3.91,
+          0.0
+        ],
+        [
+          7.91,
+          3.91,
+          3.113333333333045
+        ]
+      ],
+      "brep_faces": 46
+    },
+    "receiver": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 939.7258399163184,
+      "bounds_mm": [
+        [
+          -11.91,
+          -5.91,
+          0.0
+        ],
+        [
+          11.91,
+          5.91,
+          3.78
+        ]
+      ],
+      "brep_faces": 34
+    },
+    "male-key-01": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 247.23464757346136,
+      "bounds_mm": [
+        [
+          -2.91,
+          -5.91,
+          0.0
+        ],
+        [
+          2.91,
+          5.91,
+          4.730000000000067
+        ]
+      ],
+      "brep_faces": 11
+    },
+    "male-key-02": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 247.47026702248058,
+      "bounds_mm": [
+        [
+          -2.91,
+          -5.91,
+          0.0
+        ],
+        [
+          2.91,
+          5.91,
+          4.730000000000067
+        ]
+      ],
+      "brep_faces": 13
+    },
+    "male-key-03": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 247.7058864714999,
+      "bounds_mm": [
+        [
+          -2.91,
+          -5.91,
+          0.0
+        ],
+        [
+          2.91,
+          5.91,
+          4.730000000000067
+        ]
+      ],
+      "brep_faces": 15
+    },
+    "male-key-04": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 247.9415059205191,
+      "bounds_mm": [
+        [
+          -2.91,
+          -5.91,
+          0.0
+        ],
+        [
+          2.91,
+          5.91,
+          4.730000000000067
+        ]
+      ],
+      "brep_faces": 17
+    }
+  }
+}

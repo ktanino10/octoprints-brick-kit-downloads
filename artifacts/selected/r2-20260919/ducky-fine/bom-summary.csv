@@ -1,0 +1,125 @@
+type_id,color,hex,quantity,cell_count,shape,native_stl
+r2-p4-10c-06b4a7fa37f8,Yellow,#F4EE2A,1,10,"[[0,0],[0,1],[0,2],[1,0],[1,1],[1,2],[2,1],[2,2],[3,1],[3,2]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-10c-06b4a7fa37f8.stl
+r2-p4-10c-703d228b64da,Yellow,#F4EE2A,9,10,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1],[4,0],[4,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-10c-703d228b64da.stl
+r2-p4-10c-df3f1ce261d0,Yellow,#F4EE2A,1,10,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[4,0],[5,0],[6,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-10c-df3f1ce261d0.stl
+r2-p4-10c-f0568e82ff56,Yellow,#F4EE2A,3,10,"[[0,0],[0,1],[0,2],[1,0],[1,1],[1,2],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-10c-f0568e82ff56.stl
+r2-p4-11c-021340aaea91,Yellow,#F4EE2A,5,11,"[[0,0],[0,1],[0,2],[1,0],[1,1],[1,2],[2,0],[2,1],[2,2],[3,1],[3,2]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-11c-021340aaea91.stl
+r2-p4-11c-1f42297da998,Yellow,#F4EE2A,3,11,"[[0,0],[0,1],[0,2],[1,0],[1,1],[1,2],[2,0],[2,1],[2,2],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-11c-1f42297da998.stl
+r2-p4-11c-7a5c0d6cf3ca,Yellow,#F4EE2A,1,11,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1],[4,0],[5,0],[6,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-11c-7a5c0d6cf3ca.stl
+r2-p4-11c-baa5754e02dd,Pumpkin orange,#FF9016,1,11,"[[0,0],[0,1],[0,2],[1,2],[2,2],[2,3],[3,2],[3,3],[4,3],[5,3],[6,3]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-11c-baa5754e02dd.stl
+r2-p4-12c-0b51f59a601f,Pumpkin orange,#FF9016,1,12,"[[0,3],[1,1],[1,2],[1,3],[2,1],[3,0],[3,1],[4,0],[4,1],[5,0],[6,0],[7,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-12c-0b51f59a601f.stl
+r2-p4-12c-1aa056caa409,Yellow,#F4EE2A,2,12,"[[0,0],[0,1],[0,2],[1,0],[1,1],[1,2],[2,0],[2,1],[2,2],[3,0],[3,1],[3,2]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-12c-1aa056caa409.stl
+r2-p4-13c-6433f17c72d3,Yellow,#F4EE2A,1,13,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1],[4,0],[4,1],[5,0],[6,0],[7,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-13c-6433f17c72d3.stl
+r2-p4-14c-123cdbebe90c,Pumpkin orange,#FF9016,1,14,"[[0,0],[0,1],[1,0],[2,0],[2,1],[3,0],[3,1],[4,1],[5,0],[5,1],[6,0],[6,1],[7,0],[8,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-14c-123cdbebe90c.stl
+r2-p4-16c-4a708adbfba5,Yellow,#F4EE2A,1,16,"[[0,0],[0,1],[0,2],[0,3],[1,0],[1,1],[1,2],[1,3],[2,0],[2,1],[2,2],[2,3],[3,0],[3,1],[3,2],[3,3]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-16c-4a708adbfba5.stl
+r2-p4-1c-4ebe150eb1b7,Yellow,#F4EE2A,518,1,"[[0,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-1c-4ebe150eb1b7.stl
+r2-p4-1c-4ebe150eb1b7,Pumpkin orange,#FF9016,20,1,"[[0,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-1c-4ebe150eb1b7.stl
+r2-p4-1c-4ebe150eb1b7,Black,#000000,54,1,"[[0,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-1c-4ebe150eb1b7.stl
+r2-p4-1c-c084a429390d,Yellow,#F4EE2A,215,1,"[[0,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-1c-c084a429390d.stl
+r2-p4-1c-c084a429390d,Pumpkin orange,#FF9016,19,1,"[[0,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-1c-c084a429390d.stl
+r2-p4-1c-c084a429390d,Black,#000000,1,1,"[[0,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-1c-c084a429390d.stl
+r2-p4-21c-b29382998e05,Pumpkin orange,#FF9016,1,21,"[[0,0],[1,0],[1,1],[1,2],[1,3],[2,1],[2,2],[2,3],[2,4],[2,5],[3,1],[3,2],[3,3],[3,4],[3,5],[4,2],[4,3],[4,4],[5,2],[5,3],[5,4]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-21c-b29382998e05.stl
+r2-p4-22c-9a3a1818555a,Pumpkin orange,#FF9016,1,22,"[[0,0],[0,1],[0,2],[1,2],[1,3],[1,4],[2,4],[2,5],[2,6],[3,6],[4,6],[5,6],[6,3],[6,4],[6,5],[6,6],[7,2],[7,3],[7,4],[8,0],[8,1],[8,2]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-22c-9a3a1818555a.stl
+r2-p4-2c-32e56c90317c,Yellow,#F4EE2A,74,2,"[[0,0],[1,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-2c-32e56c90317c.stl
+r2-p4-2c-32e56c90317c,Pumpkin orange,#FF9016,13,2,"[[0,0],[1,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-2c-32e56c90317c.stl
+r2-p4-2c-714146ac709f,Yellow,#F4EE2A,122,2,"[[0,0],[1,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-2c-714146ac709f.stl
+r2-p4-2c-714146ac709f,Pumpkin orange,#FF9016,2,2,"[[0,0],[1,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-2c-714146ac709f.stl
+r2-p4-2c-714146ac709f,Black,#000000,1,2,"[[0,0],[1,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-2c-714146ac709f.stl
+r2-p4-2c-88381088bd9d,Yellow,#F4EE2A,568,2,"[[0,0],[1,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-2c-88381088bd9d.stl
+r2-p4-2c-88381088bd9d,Pumpkin orange,#FF9016,10,2,"[[0,0],[1,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-2c-88381088bd9d.stl
+r2-p4-2c-88381088bd9d,Black,#000000,23,2,"[[0,0],[1,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-2c-88381088bd9d.stl
+r2-p4-3c-451dc73cc597,Yellow,#F4EE2A,9,3,"[[0,0],[1,0],[2,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-3c-451dc73cc597.stl
+r2-p4-3c-78d7ab46d04b,Yellow,#F4EE2A,56,3,"[[0,0],[1,0],[2,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-3c-78d7ab46d04b.stl
+r2-p4-3c-78d7ab46d04b,Pumpkin orange,#FF9016,5,3,"[[0,0],[1,0],[2,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-3c-78d7ab46d04b.stl
+r2-p4-3c-a044fbe9bc1c,Yellow,#F4EE2A,55,3,"[[0,0],[0,1],[1,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-3c-a044fbe9bc1c.stl
+r2-p4-3c-a044fbe9bc1c,Pumpkin orange,#FF9016,3,3,"[[0,0],[0,1],[1,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-3c-a044fbe9bc1c.stl
+r2-p4-3c-b982b6d67e98,Yellow,#F4EE2A,304,3,"[[0,0],[1,0],[2,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-3c-b982b6d67e98.stl
+r2-p4-3c-b982b6d67e98,Pumpkin orange,#FF9016,7,3,"[[0,0],[1,0],[2,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-3c-b982b6d67e98.stl
+r2-p4-3c-b982b6d67e98,Black,#000000,3,3,"[[0,0],[1,0],[2,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-3c-b982b6d67e98.stl
+r2-p4-3c-fbc4680fb176,Yellow,#F4EE2A,26,3,"[[0,0],[1,0],[2,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-3c-fbc4680fb176.stl
+r2-p4-3c-fbc4680fb176,Pumpkin orange,#FF9016,1,3,"[[0,0],[1,0],[2,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-3c-fbc4680fb176.stl
+r2-p4-4c-04555eeff664,Yellow,#F4EE2A,43,4,"[[0,0],[0,1],[1,0],[1,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-04555eeff664.stl
+r2-p4-4c-04db57b9cf0a,Yellow,#F4EE2A,6,4,"[[0,0],[0,1],[1,0],[1,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-04db57b9cf0a.stl
+r2-p4-4c-13acf6b7a311,Yellow,#F4EE2A,2,4,"[[0,0],[1,0],[2,0],[3,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-13acf6b7a311.stl
+r2-p4-4c-197fa86c129b,Yellow,#F4EE2A,2,4,"[[0,0],[1,0],[2,0],[3,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-197fa86c129b.stl
+r2-p4-4c-31180a58c329,Yellow,#F4EE2A,1,4,"[[0,0],[1,0],[2,0],[3,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-31180a58c329.stl
+r2-p4-4c-369ccea62973,Yellow,#F4EE2A,12,4,"[[0,0],[0,1],[1,0],[2,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-369ccea62973.stl
+r2-p4-4c-369ccea62973,Pumpkin orange,#FF9016,2,4,"[[0,0],[0,1],[1,0],[2,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-369ccea62973.stl
+r2-p4-4c-62ef5999f1d8,Yellow,#F4EE2A,45,4,"[[0,0],[1,0],[2,0],[3,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-62ef5999f1d8.stl
+r2-p4-4c-62ef5999f1d8,Pumpkin orange,#FF9016,1,4,"[[0,0],[1,0],[2,0],[3,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-62ef5999f1d8.stl
+r2-p4-4c-8c97b90214e4,Yellow,#F4EE2A,3,4,"[[0,0],[1,0],[2,0],[3,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-8c97b90214e4.stl
+r2-p4-4c-9180de851882,Yellow,#F4EE2A,315,4,"[[0,0],[0,1],[1,0],[1,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-9180de851882.stl
+r2-p4-4c-9d4172d57fff,Yellow,#F4EE2A,9,4,"[[0,0],[1,0],[2,0],[3,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-9d4172d57fff.stl
+r2-p4-4c-b02791f0c425,Yellow,#F4EE2A,246,4,"[[0,0],[1,0],[2,0],[3,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-b02791f0c425.stl
+r2-p4-4c-b15f07feab23,Yellow,#F4EE2A,32,4,"[[0,0],[0,1],[1,0],[1,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-b15f07feab23.stl
+r2-p4-4c-b3266ba16d8e,Yellow,#F4EE2A,7,4,"[[0,0],[0,1],[1,1],[2,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-b3266ba16d8e.stl
+r2-p4-4c-b3266ba16d8e,Pumpkin orange,#FF9016,2,4,"[[0,0],[0,1],[1,1],[2,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-b3266ba16d8e.stl
+r2-p4-4c-f012ba403668,Yellow,#F4EE2A,15,4,"[[0,0],[1,0],[2,0],[3,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-f012ba403668.stl
+r2-p4-4c-f012ba403668,Pumpkin orange,#FF9016,3,4,"[[0,0],[1,0],[2,0],[3,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-f012ba403668.stl
+r2-p4-4c-f2646be4f76b,Yellow,#F4EE2A,4,4,"[[0,0],[0,1],[1,0],[1,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-f2646be4f76b.stl
+r2-p4-4c-f2646be4f76b,Pumpkin orange,#FF9016,2,4,"[[0,0],[0,1],[1,0],[1,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-f2646be4f76b.stl
+r2-p4-5c-01aded46037d,Yellow,#F4EE2A,5,5,"[[0,0],[0,1],[1,1],[2,1],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-5c-01aded46037d.stl
+r2-p4-5c-0f146160a929,Yellow,#F4EE2A,4,5,"[[0,0],[0,1],[1,0],[2,0],[3,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-5c-0f146160a929.stl
+r2-p4-5c-564708634a4a,Yellow,#F4EE2A,4,5,"[[0,0],[1,0],[2,0],[3,0],[4,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-5c-564708634a4a.stl
+r2-p4-5c-88f68dc9ab4e,Yellow,#F4EE2A,20,5,"[[0,0],[0,1],[1,0],[1,1],[2,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-5c-88f68dc9ab4e.stl
+r2-p4-5c-a44a3889eef4,Yellow,#F4EE2A,21,5,"[[0,0],[0,1],[1,0],[1,1],[2,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-5c-a44a3889eef4.stl
+r2-p4-6c-0c2af621b6a6,Yellow,#F4EE2A,5,6,"[[0,0],[0,1],[1,0],[1,1],[2,1],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-0c2af621b6a6.stl
+r2-p4-6c-17666b24a421,Yellow,#F4EE2A,28,6,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-17666b24a421.stl
+r2-p4-6c-1a08cd2e3808,Yellow,#F4EE2A,5,6,"[[0,0],[0,1],[0,2],[1,0],[1,1],[2,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-1a08cd2e3808.stl
+r2-p4-6c-1f64aaa0e8b1,Yellow,#F4EE2A,1,6,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-1f64aaa0e8b1.stl
+r2-p4-6c-451263ebf740,Yellow,#F4EE2A,26,6,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-451263ebf740.stl
+r2-p4-6c-75ddfa996915,Yellow,#F4EE2A,4,6,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-75ddfa996915.stl
+r2-p4-6c-7b734626068d,Yellow,#F4EE2A,327,6,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-7b734626068d.stl
+r2-p4-6c-810977bf0853,Pumpkin orange,#FF9016,1,6,"[[0,0],[1,0],[1,1],[2,0],[2,1],[3,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-810977bf0853.stl
+r2-p4-6c-96d9bf699cfe,Yellow,#F4EE2A,2,6,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-96d9bf699cfe.stl
+r2-p4-6c-acdf64d7341c,Yellow,#F4EE2A,1,6,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-acdf64d7341c.stl
+r2-p4-6c-b3c029a19d6b,Yellow,#F4EE2A,1,6,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-b3c029a19d6b.stl
+r2-p4-6c-c4d06ae6ad9b,Yellow,#F4EE2A,3,6,"[[0,0],[0,1],[1,0],[1,1],[2,0],[3,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-c4d06ae6ad9b.stl
+r2-p4-6c-d1a46aa0281f,Yellow,#F4EE2A,25,6,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-d1a46aa0281f.stl
+r2-p4-6c-e4572ff09aea,Yellow,#F4EE2A,4,6,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-e4572ff09aea.stl
+r2-p4-6c-e4572ff09aea,Pumpkin orange,#FF9016,4,6,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-e4572ff09aea.stl
+r2-p4-6c-ee2b30aa949e,Yellow,#F4EE2A,1,6,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-ee2b30aa949e.stl
+r2-p4-6c-eef9b6d6a443,Yellow,#F4EE2A,5,6,"[[0,0],[1,0],[2,0],[3,0],[4,0],[5,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-eef9b6d6a443.stl
+r2-p4-6c-f4370264b9c3,Yellow,#F4EE2A,1,6,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-f4370264b9c3.stl
+r2-p4-7c-568180a93cb7,Yellow,#F4EE2A,1,7,"[[0,0],[0,1],[0,2],[1,0],[1,1],[1,2],[2,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-568180a93cb7.stl
+r2-p4-7c-626511f53153,Yellow,#F4EE2A,18,7,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-626511f53153.stl
+r2-p4-7c-755c0164e79f,Yellow,#F4EE2A,1,7,"[[0,0],[0,1],[0,2],[1,1],[1,2],[2,2],[3,2]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-755c0164e79f.stl
+r2-p4-7c-8761b4a005e0,Yellow,#F4EE2A,3,7,"[[0,0],[0,1],[1,0],[1,1],[2,0],[3,0],[4,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-8761b4a005e0.stl
+r2-p4-7c-8ea643f6a651,Yellow,#F4EE2A,16,7,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-8ea643f6a651.stl
+r2-p4-7c-ba15d2e5d5b7,Yellow,#F4EE2A,1,7,"[[0,0],[1,0],[1,1],[2,0],[3,0],[4,0],[5,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-ba15d2e5d5b7.stl
+r2-p4-7c-bcfc797dca10,Yellow,#F4EE2A,1,7,"[[0,0],[0,1],[1,1],[2,1],[3,1],[4,1],[5,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-bcfc797dca10.stl
+r2-p4-7c-c2b59e8f631f,Yellow,#F4EE2A,2,7,"[[0,0],[0,1],[1,0],[1,1],[2,1],[3,1],[4,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-c2b59e8f631f.stl
+r2-p4-8c-00ac0d8b7718,Yellow,#F4EE2A,3,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-00ac0d8b7718.stl
+r2-p4-8c-186a9f84f098,Yellow,#F4EE2A,6692,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-186a9f84f098.stl
+r2-p4-8c-19025d71a671,Yellow,#F4EE2A,1,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-19025d71a671.stl
+r2-p4-8c-34e67117d5ae,Yellow,#F4EE2A,1,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-34e67117d5ae.stl
+r2-p4-8c-3f8e863fcd29,Yellow,#F4EE2A,1,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[4,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-3f8e863fcd29.stl
+r2-p4-8c-40b14f7aecf8,Yellow,#F4EE2A,1,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-40b14f7aecf8.stl
+r2-p4-8c-42985608ed37,Yellow,#F4EE2A,1,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-42985608ed37.stl
+r2-p4-8c-43aaf840d311,Yellow,#F4EE2A,1,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-43aaf840d311.stl
+r2-p4-8c-448a0059b24e,Yellow,#F4EE2A,1,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-448a0059b24e.stl
+r2-p4-8c-4a2a4beab3d1,Yellow,#F4EE2A,7,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-4a2a4beab3d1.stl
+r2-p4-8c-59bf9b543de2,Yellow,#F4EE2A,3,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-59bf9b543de2.stl
+r2-p4-8c-63e5a91ed811,Yellow,#F4EE2A,1,8,"[[0,0],[1,0],[2,0],[2,1],[3,1],[4,1],[5,1],[6,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-63e5a91ed811.stl
+r2-p4-8c-7182b0f5249d,Yellow,#F4EE2A,23,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-7182b0f5249d.stl
+r2-p4-8c-71b1cabb21f1,Yellow,#F4EE2A,3,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-71b1cabb21f1.stl
+r2-p4-8c-8a9c9abd0046,Yellow,#F4EE2A,1,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-8a9c9abd0046.stl
+r2-p4-8c-94630c6a9620,Yellow,#F4EE2A,2,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-94630c6a9620.stl
+r2-p4-8c-99a216810560,Yellow,#F4EE2A,2,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-99a216810560.stl
+r2-p4-8c-9e4597dbd2a1,Yellow,#F4EE2A,1,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-9e4597dbd2a1.stl
+r2-p4-8c-b7b0695b93ed,Yellow,#F4EE2A,6,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-b7b0695b93ed.stl
+r2-p4-8c-d844888ce4b9,Yellow,#F4EE2A,1,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-d844888ce4b9.stl
+r2-p4-8c-db7507a63af1,Yellow,#F4EE2A,21,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-db7507a63af1.stl
+r2-p4-8c-db962d10ff4f,Yellow,#F4EE2A,1,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-db962d10ff4f.stl
+r2-p4-8c-e27e13d92242,Yellow,#F4EE2A,1,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-e27e13d92242.stl
+r2-p4-8c-e50b3bba33b2,Yellow,#F4EE2A,45,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-e50b3bba33b2.stl
+r2-p4-8c-edf55bd5d8ff,Yellow,#F4EE2A,4,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-edf55bd5d8ff.stl
+r2-p4-8c-eedb1346666c,Yellow,#F4EE2A,39,8,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-eedb1346666c.stl
+r2-p4-9c-04db7e61faa4,Yellow,#F4EE2A,3,9,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1],[4,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-04db7e61faa4.stl
+r2-p4-9c-41ba1050707a,Pumpkin orange,#FF9016,1,9,"[[0,0],[1,0],[1,1],[2,0],[2,1],[3,0],[4,0],[5,0],[6,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-41ba1050707a.stl
+r2-p4-9c-687f1e2c6151,Yellow,#F4EE2A,3,9,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1],[4,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-687f1e2c6151.stl
+r2-p4-9c-a91387e26c85,Yellow,#F4EE2A,1,9,"[[0,0],[0,1],[0,2],[1,0],[1,1],[1,2],[2,0],[2,1],[3,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-a91387e26c85.stl
+r2-p4-9c-aa965b60ca20,Yellow,#F4EE2A,2,9,"[[0,0],[0,1],[0,2],[1,0],[1,1],[2,0],[2,1],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-aa965b60ca20.stl
+r2-p4-9c-bd62b951898e,Pumpkin orange,#FF9016,1,9,"[[0,0],[0,1],[1,0],[2,0],[3,0],[3,1],[4,0],[5,0],[6,0]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-bd62b951898e.stl
+r2-p4-9c-caa59f319205,Yellow,#F4EE2A,2,9,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[2,2],[3,0],[3,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-caa59f319205.stl
+r2-p4-9c-e4192a78ea21,Yellow,#F4EE2A,1,9,"[[0,0],[0,1],[1,0],[1,1],[2,0],[2,1],[3,1],[4,1],[5,1]]",artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-e4192a78ea21.stl

@@ -1,0 +1,14 @@
+{
+  "candidate_id": "ducky-chunky",
+  "part_count": 1767,
+  "native_prototype_types": 7,
+  "instancer_objects": 14,
+  "evaluated_instances": 1767,
+  "ids_sha256": "0a3f1852ceb07a2cb9a0916e80426e8ee20715afbd98bd2a026174ad9c164ea7",
+  "blender_version": "5.1.1",
+  "engine": "BLENDER_EEVEE",
+  "mode": "still",
+  "elapsed_seconds": 54.782,
+  "native_scene_reopened": true,
+  "physical_fit": "UNKNOWN"
+}

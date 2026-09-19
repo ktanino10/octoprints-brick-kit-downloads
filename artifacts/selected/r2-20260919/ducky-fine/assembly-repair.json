@@ -1,0 +1,3417 @@
+{
+  "status": "RESOLVED_NOMINALLY",
+  "before_part_count": 10662,
+  "after_part_count": 10311,
+  "unsupported_before": 357,
+  "unsupported_after": 0,
+  "unanchored_by_bottom_up_before": 789,
+  "unanchored_by_bottom_up_after": 0,
+  "unresolved_group_keys": [],
+  "occupied_cells_changed": 0,
+  "boundary_colors_changed": 0,
+  "hidden_recolored_cells": 11,
+  "changed_groups": 301,
+  "maximum_group_cells": 22,
+  "operations": [
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 1,
+      "baseline_ids": [
+        "DUC-F-00049",
+        "DUC-F-00052"
+      ],
+      "cell_count": 8
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 1,
+      "baseline_ids": [
+        "DUC-F-00051",
+        "DUC-F-00053"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 1,
+      "baseline_ids": [
+        "DUC-F-00049",
+        "DUC-F-00052",
+        "DUC-F-00054"
+      ],
+      "cell_count": 9
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 1,
+      "baseline_ids": [
+        "DUC-F-00055",
+        "DUC-F-00064"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 1,
+      "baseline_ids": [
+        "DUC-F-00056",
+        "DUC-F-00065"
+      ],
+      "cell_count": 11
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 1,
+      "baseline_ids": [
+        "DUC-F-00055",
+        "DUC-F-00064",
+        "DUC-F-00066"
+      ],
+      "cell_count": 8
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 1,
+      "baseline_ids": [
+        "DUC-F-00067",
+        "DUC-F-00068"
+      ],
+      "cell_count": 16
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 1,
+      "baseline_ids": [
+        "DUC-F-00076",
+        "DUC-F-00077"
+      ],
+      "cell_count": 11
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 1,
+      "baseline_ids": [
+        "DUC-F-00078",
+        "DUC-F-00079"
+      ],
+      "cell_count": 11
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 1,
+      "baseline_ids": [
+        "DUC-F-00087",
+        "DUC-F-00088"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 1,
+      "baseline_ids": [
+        "DUC-F-00089",
+        "DUC-F-00090"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 1,
+      "baseline_ids": [
+        "DUC-F-00095",
+        "DUC-F-00096"
+      ],
+      "cell_count": 10
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 1,
+      "baseline_ids": [
+        "DUC-F-00089",
+        "DUC-F-00090",
+        "DUC-F-00097"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 1,
+      "baseline_ids": [
+        "DUC-F-00094",
+        "DUC-F-00098"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 2,
+      "baseline_ids": [
+        "DUC-F-00102",
+        "DUC-F-00107"
+      ],
+      "cell_count": 9
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 2,
+      "baseline_ids": [
+        "DUC-F-00099",
+        "DUC-F-00103"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 2,
+      "baseline_ids": [
+        "DUC-F-00101",
+        "DUC-F-00104"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 2,
+      "baseline_ids": [
+        "DUC-F-00101",
+        "DUC-F-00104",
+        "DUC-F-00105"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 2,
+      "baseline_ids": [
+        "DUC-F-00115",
+        "DUC-F-00116"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 2,
+      "baseline_ids": [
+        "DUC-F-00114",
+        "DUC-F-00117"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 2,
+      "baseline_ids": [
+        "DUC-F-00118",
+        "DUC-F-00129"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 2,
+      "baseline_ids": [
+        "DUC-F-00118",
+        "DUC-F-00129",
+        "DUC-F-00130"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 2,
+      "baseline_ids": [
+        "DUC-F-00131",
+        "DUC-F-00132"
+      ],
+      "cell_count": 11
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 2,
+      "baseline_ids": [
+        "DUC-F-00142",
+        "DUC-F-00153"
+      ],
+      "cell_count": 12
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 2,
+      "baseline_ids": [
+        "DUC-F-00142",
+        "DUC-F-00153",
+        "DUC-F-00154"
+      ],
+      "cell_count": 13
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 2,
+      "baseline_ids": [
+        "DUC-F-00143",
+        "DUC-F-00155"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 2,
+      "baseline_ids": [
+        "DUC-F-00156",
+        "DUC-F-00157"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 2,
+      "baseline_ids": [
+        "DUC-F-00165",
+        "DUC-F-00166"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 2,
+      "baseline_ids": [
+        "DUC-F-00156",
+        "DUC-F-00157",
+        "DUC-F-00167"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 2,
+      "baseline_ids": [
+        "DUC-F-00158",
+        "DUC-F-00168"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 2,
+      "baseline_ids": [
+        "DUC-F-00164",
+        "DUC-F-00169"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 2,
+      "baseline_ids": [
+        "DUC-F-00160",
+        "DUC-F-00170"
+      ],
+      "cell_count": 10
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 2,
+      "baseline_ids": [
+        "DUC-F-00161",
+        "DUC-F-00171"
+      ],
+      "cell_count": 10
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 2,
+      "baseline_ids": [
+        "DUC-F-00162",
+        "DUC-F-00172"
+      ],
+      "cell_count": 10
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 3,
+      "baseline_ids": [
+        "DUC-F-00173",
+        "DUC-F-00174"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 3,
+      "baseline_ids": [
+        "DUC-F-00176",
+        "DUC-F-00181"
+      ],
+      "cell_count": 10
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 3,
+      "baseline_ids": [
+        "DUC-F-00173",
+        "DUC-F-00174",
+        "DUC-F-00177"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 3,
+      "baseline_ids": [
+        "DUC-F-00175",
+        "DUC-F-00178"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 3,
+      "baseline_ids": [
+        "DUC-F-00175",
+        "DUC-F-00178",
+        "DUC-F-00179"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 3,
+      "baseline_ids": [
+        "DUC-F-00189",
+        "DUC-F-00191"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 3,
+      "baseline_ids": [
+        "DUC-F-00190",
+        "DUC-F-00192"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 3,
+      "baseline_ids": [
+        "DUC-F-00189",
+        "DUC-F-00191",
+        "DUC-F-00193"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 3,
+      "baseline_ids": [
+        "DUC-F-00194",
+        "DUC-F-00205"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 3,
+      "baseline_ids": [
+        "DUC-F-00206",
+        "DUC-F-00218"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 3,
+      "baseline_ids": [
+        "DUC-F-00207",
+        "DUC-F-00219"
+      ],
+      "cell_count": 11
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 3,
+      "baseline_ids": [
+        "DUC-F-00206",
+        "DUC-F-00218",
+        "DUC-F-00220"
+      ],
+      "cell_count": 10
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 3,
+      "baseline_ids": [
+        "DUC-F-00221",
+        "DUC-F-00222"
+      ],
+      "cell_count": 10
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 3,
+      "baseline_ids": [
+        "DUC-F-00233",
+        "DUC-F-00234"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 3,
+      "baseline_ids": [
+        "DUC-F-00245",
+        "DUC-F-00246"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 3,
+      "baseline_ids": [
+        "DUC-F-00235",
+        "DUC-F-00247"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 3,
+      "baseline_ids": [
+        "DUC-F-00245",
+        "DUC-F-00246",
+        "DUC-F-00248"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 3,
+      "baseline_ids": [
+        "DUC-F-00249",
+        "DUC-F-00250"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 3,
+      "baseline_ids": [
+        "DUC-F-00256",
+        "DUC-F-00257"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 3,
+      "baseline_ids": [
+        "DUC-F-00249",
+        "DUC-F-00250",
+        "DUC-F-00258"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 3,
+      "baseline_ids": [
+        "DUC-F-00251",
+        "DUC-F-00259"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 4,
+      "baseline_ids": [
+        "DUC-F-00266",
+        "DUC-F-00267"
+      ],
+      "cell_count": 2
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 4,
+      "baseline_ids": [
+        "DUC-F-00265",
+        "DUC-F-00268"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 4,
+      "baseline_ids": [
+        "DUC-F-00280",
+        "DUC-F-00282"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 4,
+      "baseline_ids": [
+        "DUC-F-00281",
+        "DUC-F-00283"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 4,
+      "baseline_ids": [
+        "DUC-F-00284",
+        "DUC-F-00296"
+      ],
+      "cell_count": 11
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 4,
+      "baseline_ids": [
+        "DUC-F-00295",
+        "DUC-F-00297"
+      ],
+      "cell_count": 10
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 4,
+      "baseline_ids": [
+        "DUC-F-00310",
+        "DUC-F-00311"
+      ],
+      "cell_count": 12
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 4,
+      "baseline_ids": [
+        "DUC-F-00324",
+        "DUC-F-00325"
+      ],
+      "cell_count": 11
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 4,
+      "baseline_ids": [
+        "DUC-F-00312",
+        "DUC-F-00326"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 4,
+      "baseline_ids": [
+        "DUC-F-00338",
+        "DUC-F-00339"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 4,
+      "baseline_ids": [
+        "DUC-F-00327",
+        "DUC-F-00340"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 4,
+      "baseline_ids": [
+        "DUC-F-00341",
+        "DUC-F-00342"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 4,
+      "baseline_ids": [
+        "DUC-F-00349",
+        "DUC-F-00350"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 4,
+      "baseline_ids": [
+        "DUC-F-00341",
+        "DUC-F-00342",
+        "DUC-F-00351"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 4,
+      "baseline_ids": [
+        "DUC-F-00343",
+        "DUC-F-00352"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 4,
+      "baseline_ids": [
+        "DUC-F-00345",
+        "DUC-F-00353"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 5,
+      "baseline_ids": [
+        "DUC-F-00361",
+        "DUC-F-00364"
+      ],
+      "cell_count": 9
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 5,
+      "baseline_ids": [
+        "DUC-F-00356",
+        "DUC-F-00362"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 5,
+      "baseline_ids": [
+        "DUC-F-00360",
+        "DUC-F-00363"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 5,
+      "baseline_ids": [
+        "DUC-F-00375",
+        "DUC-F-00377"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 5,
+      "baseline_ids": [
+        "DUC-F-00376",
+        "DUC-F-00378"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 5,
+      "baseline_ids": [
+        "DUC-F-00391",
+        "DUC-F-00393"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 5,
+      "baseline_ids": [
+        "DUC-F-00392",
+        "DUC-F-00394"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 5,
+      "baseline_ids": [
+        "DUC-F-00391",
+        "DUC-F-00393",
+        "DUC-F-00395"
+      ],
+      "cell_count": 8
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 5,
+      "baseline_ids": [
+        "DUC-F-00409",
+        "DUC-F-00423"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 5,
+      "baseline_ids": [
+        "DUC-F-00436",
+        "DUC-F-00437"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 5,
+      "baseline_ids": [
+        "DUC-F-00438",
+        "DUC-F-00439"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 5,
+      "baseline_ids": [
+        "DUC-F-00449",
+        "DUC-F-00450"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 5,
+      "baseline_ids": [
+        "DUC-F-00438",
+        "DUC-F-00439",
+        "DUC-F-00451"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 5,
+      "baseline_ids": [
+        "DUC-F-00448",
+        "DUC-F-00452"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 5,
+      "baseline_ids": [
+        "DUC-F-00453",
+        "DUC-F-00454"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 6,
+      "baseline_ids": [
+        "DUC-F-00464",
+        "DUC-F-00468"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 6,
+      "baseline_ids": [
+        "DUC-F-00483",
+        "DUC-F-00485"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 6,
+      "baseline_ids": [
+        "DUC-F-00500",
+        "DUC-F-00516"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 6,
+      "baseline_ids": [
+        "DUC-F-00486",
+        "DUC-F-00501"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 6,
+      "baseline_ids": [
+        "DUC-F-00500",
+        "DUC-F-00516",
+        "DUC-F-00517"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 6,
+      "baseline_ids": [
+        "DUC-F-00532",
+        "DUC-F-00547"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 6,
+      "baseline_ids": [
+        "DUC-F-00549",
+        "DUC-F-00550"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 6,
+      "baseline_ids": [
+        "DUC-F-00549",
+        "DUC-F-00550",
+        "DUC-F-00561"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 6,
+      "baseline_ids": [
+        "DUC-F-00560",
+        "DUC-F-00562"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 6,
+      "baseline_ids": [
+        "DUC-F-00551",
+        "DUC-F-00563"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 6,
+      "baseline_ids": [
+        "DUC-F-00565",
+        "DUC-F-00566"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 6,
+      "baseline_ids": [
+        "DUC-F-00565",
+        "DUC-F-00566",
+        "DUC-F-00572"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 6,
+      "baseline_ids": [
+        "DUC-F-00570",
+        "DUC-F-00573"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 7,
+      "baseline_ids": [
+        "DUC-F-00582",
+        "DUC-F-00583"
+      ],
+      "cell_count": 2
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 7,
+      "baseline_ids": [
+        "DUC-F-00597",
+        "DUC-F-00599"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 7,
+      "baseline_ids": [
+        "DUC-F-00598",
+        "DUC-F-00600"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 7,
+      "baseline_ids": [
+        "DUC-F-00615",
+        "DUC-F-00616"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 7,
+      "baseline_ids": [
+        "DUC-F-00662",
+        "DUC-F-00676"
+      ],
+      "cell_count": 2
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 7,
+      "baseline_ids": [
+        "DUC-F-00663",
+        "DUC-F-00677"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 7,
+      "baseline_ids": [
+        "DUC-F-00688",
+        "DUC-F-00689"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 7,
+      "baseline_ids": [
+        "DUC-F-00680",
+        "DUC-F-00690"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 7,
+      "baseline_ids": [
+        "DUC-F-00688",
+        "DUC-F-00689",
+        "DUC-F-00691"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 7,
+      "baseline_ids": [
+        "DUC-F-00682",
+        "DUC-F-00692"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 8,
+      "baseline_ids": [
+        "DUC-F-00701",
+        "DUC-F-00702"
+      ],
+      "cell_count": 2
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 8,
+      "baseline_ids": [
+        "DUC-F-00703",
+        "DUC-F-00704"
+      ],
+      "cell_count": 2
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 8,
+      "baseline_ids": [
+        "DUC-F-00718",
+        "DUC-F-00720"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 8,
+      "baseline_ids": [
+        "DUC-F-00719",
+        "DUC-F-00721"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 8,
+      "baseline_ids": [
+        "DUC-F-00737",
+        "DUC-F-00754"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 8,
+      "baseline_ids": [
+        "DUC-F-00736",
+        "DUC-F-00738"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 8,
+      "baseline_ids": [
+        "DUC-F-00737",
+        "DUC-F-00754",
+        "DUC-F-00755"
+      ],
+      "cell_count": 9
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 8,
+      "baseline_ids": [
+        "DUC-F-00739",
+        "DUC-F-00756"
+      ],
+      "cell_count": 10
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 8,
+      "baseline_ids": [
+        "DUC-F-00757",
+        "DUC-F-00758"
+      ],
+      "cell_count": 11
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 8,
+      "baseline_ids": [
+        "DUC-F-00804",
+        "DUC-F-00805"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 8,
+      "baseline_ids": [
+        "DUC-F-00791",
+        "DUC-F-00806"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 8,
+      "baseline_ids": [
+        "DUC-F-00803",
+        "DUC-F-00807"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 8,
+      "baseline_ids": [
+        "DUC-F-00808",
+        "DUC-F-00809"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 8,
+      "baseline_ids": [
+        "DUC-F-00818",
+        "DUC-F-00819"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 8,
+      "baseline_ids": [
+        "DUC-F-00808",
+        "DUC-F-00809",
+        "DUC-F-00820"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 8,
+      "baseline_ids": [
+        "DUC-F-00810",
+        "DUC-F-00821"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 8,
+      "baseline_ids": [
+        "DUC-F-00817",
+        "DUC-F-00822"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 9,
+      "baseline_ids": [
+        "DUC-F-00828",
+        "DUC-F-00832"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 9,
+      "baseline_ids": [
+        "DUC-F-00831",
+        "DUC-F-00833"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 9,
+      "baseline_ids": [
+        "DUC-F-00932",
+        "DUC-F-00945"
+      ],
+      "cell_count": 2
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 9,
+      "baseline_ids": [
+        "DUC-F-00933",
+        "DUC-F-00946"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 9,
+      "baseline_ids": [
+        "DUC-F-00944",
+        "DUC-F-00947"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 9,
+      "baseline_ids": [
+        "DUC-F-00949",
+        "DUC-F-00950"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 9,
+      "baseline_ids": [
+        "DUC-F-00949",
+        "DUC-F-00950",
+        "DUC-F-00957"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 10,
+      "baseline_ids": [
+        "DUC-F-01004",
+        "DUC-F-01005"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 10,
+      "baseline_ids": [
+        "DUC-F-01003",
+        "DUC-F-01006"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 10,
+      "baseline_ids": [
+        "DUC-F-01023",
+        "DUC-F-01024"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 10,
+      "baseline_ids": [
+        "DUC-F-01007",
+        "DUC-F-01025"
+      ],
+      "cell_count": 9
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 10,
+      "baseline_ids": [
+        "DUC-F-01026",
+        "DUC-F-01027"
+      ],
+      "cell_count": 12
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 10,
+      "baseline_ids": [
+        "DUC-F-01060",
+        "DUC-F-01061"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 10,
+      "baseline_ids": [
+        "DUC-F-01077",
+        "DUC-F-01078"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 10,
+      "baseline_ids": [
+        "DUC-F-01080",
+        "DUC-F-01093"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 10,
+      "baseline_ids": [
+        "DUC-F-01081",
+        "DUC-F-01094"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 10,
+      "baseline_ids": [
+        "DUC-F-01091",
+        "DUC-F-01095"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 10,
+      "baseline_ids": [
+        "DUC-F-01097",
+        "DUC-F-01098"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 10,
+      "baseline_ids": [
+        "DUC-F-01102",
+        "DUC-F-01103"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 10,
+      "baseline_ids": [
+        "DUC-F-01099",
+        "DUC-F-01104"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 10,
+      "baseline_ids": [
+        "DUC-F-01101",
+        "DUC-F-01105"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 11,
+      "baseline_ids": [
+        "DUC-F-01111",
+        "DUC-F-01115"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 11,
+      "baseline_ids": [
+        "DUC-F-01114",
+        "DUC-F-01116"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 11,
+      "baseline_ids": [
+        "DUC-F-01164",
+        "DUC-F-01166"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 11,
+      "baseline_ids": [
+        "DUC-F-01163",
+        "DUC-F-01165"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 11,
+      "baseline_ids": [
+        "DUC-F-01218",
+        "DUC-F-01232"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 11,
+      "baseline_ids": [
+        "DUC-F-01230",
+        "DUC-F-01233"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 11,
+      "baseline_ids": [
+        "DUC-F-01234",
+        "DUC-F-01235"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 11,
+      "baseline_ids": [
+        "DUC-F-01243",
+        "DUC-F-01246"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 11,
+      "baseline_ids": [
+        "DUC-F-01242",
+        "DUC-F-01247"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 12,
+      "baseline_ids": [
+        "DUC-F-01310",
+        "DUC-F-01312"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 12,
+      "baseline_ids": [
+        "DUC-F-01348",
+        "DUC-F-01349"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 12,
+      "baseline_ids": [
+        "DUC-F-01348",
+        "DUC-F-01349",
+        "DUC-F-01367"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 12,
+      "baseline_ids": [
+        "DUC-F-01366",
+        "DUC-F-01368"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 12,
+      "baseline_ids": [
+        "DUC-F-01370",
+        "DUC-F-01385"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 12,
+      "baseline_ids": [
+        "DUC-F-01389",
+        "DUC-F-01397"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 12,
+      "baseline_ids": [
+        "DUC-F-01394",
+        "DUC-F-01398"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 13,
+      "baseline_ids": [
+        "DUC-F-01408",
+        "DUC-F-01409"
+      ],
+      "cell_count": 2
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 13,
+      "baseline_ids": [
+        "DUC-F-01438",
+        "DUC-F-01440"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 13,
+      "baseline_ids": [
+        "DUC-F-01439",
+        "DUC-F-01441"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 13,
+      "baseline_ids": [
+        "DUC-F-01511",
+        "DUC-F-01512"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 13,
+      "baseline_ids": [
+        "DUC-F-01527",
+        "DUC-F-01528"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 13,
+      "baseline_ids": [
+        "DUC-F-01541",
+        "DUC-F-01542"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 13,
+      "baseline_ids": [
+        "DUC-F-01530",
+        "DUC-F-01543"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 13,
+      "baseline_ids": [
+        "DUC-F-01541",
+        "DUC-F-01542",
+        "DUC-F-01544"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 13,
+      "baseline_ids": [
+        "DUC-F-01546",
+        "DUC-F-01547"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 14,
+      "baseline_ids": [
+        "DUC-F-01574",
+        "DUC-F-01576"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 14,
+      "baseline_ids": [
+        "DUC-F-01597",
+        "DUC-F-01616"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 14,
+      "baseline_ids": [
+        "DUC-F-01654",
+        "DUC-F-01655"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 14,
+      "baseline_ids": [
+        "DUC-F-01654",
+        "DUC-F-01655",
+        "DUC-F-01674"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 14,
+      "baseline_ids": [
+        "DUC-F-01675",
+        "DUC-F-01692"
+      ],
+      "cell_count": 2
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 14,
+      "baseline_ids": [
+        "DUC-F-01676",
+        "DUC-F-01693"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 14,
+      "baseline_ids": [
+        "DUC-F-01677",
+        "DUC-F-01695"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 14,
+      "baseline_ids": [
+        "DUC-F-01701",
+        "DUC-F-01709"
+      ],
+      "cell_count": 9
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 14,
+      "baseline_ids": [
+        "DUC-F-01702",
+        "DUC-F-01710"
+      ],
+      "cell_count": 10
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 15,
+      "baseline_ids": [
+        "DUC-F-01750",
+        "DUC-F-01752"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 15,
+      "baseline_ids": [
+        "DUC-F-01751",
+        "DUC-F-01753"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 15,
+      "baseline_ids": [
+        "DUC-F-01843",
+        "DUC-F-01857"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 15,
+      "baseline_ids": [
+        "DUC-F-01855",
+        "DUC-F-01858"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 15,
+      "baseline_ids": [
+        "DUC-F-01859",
+        "DUC-F-01869"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 15,
+      "baseline_ids": [
+        "DUC-F-01860",
+        "DUC-F-01870"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 15,
+      "baseline_ids": [
+        "DUC-F-01861",
+        "DUC-F-01871"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 16,
+      "baseline_ids": [
+        "DUC-F-01907",
+        "DUC-F-01909"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 16,
+      "baseline_ids": [
+        "DUC-F-01928",
+        "DUC-F-01930"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 16,
+      "baseline_ids": [
+        "DUC-F-01950",
+        "DUC-F-01951"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 16,
+      "baseline_ids": [
+        "DUC-F-01971",
+        "DUC-F-01972"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 17,
+      "baseline_ids": [
+        "DUC-F-02043",
+        "DUC-F-02044"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 17,
+      "baseline_ids": [
+        "DUC-F-02057",
+        "DUC-F-02059"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 17,
+      "baseline_ids": [
+        "DUC-F-02058",
+        "DUC-F-02060"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 17,
+      "baseline_ids": [
+        "DUC-F-02196",
+        "DUC-F-02200"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 17,
+      "baseline_ids": [
+        "DUC-F-02206",
+        "DUC-F-02207"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 17,
+      "baseline_ids": [
+        "DUC-F-02202",
+        "DUC-F-02208"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 18,
+      "baseline_ids": [
+        "DUC-F-02286",
+        "DUC-F-02287"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 19,
+      "baseline_ids": [
+        "DUC-F-02383",
+        "DUC-F-02384"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 19,
+      "baseline_ids": [
+        "DUC-F-02526",
+        "DUC-F-02540"
+      ],
+      "cell_count": 2
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 19,
+      "baseline_ids": [
+        "DUC-F-02539",
+        "DUC-F-02542"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 19,
+      "baseline_ids": [
+        "DUC-F-02528",
+        "DUC-F-02543"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 19,
+      "baseline_ids": [
+        "DUC-F-02547",
+        "DUC-F-02555"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 20,
+      "baseline_ids": [
+        "DUC-F-02632",
+        "DUC-F-02654"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 20,
+      "baseline_ids": [
+        "DUC-F-02696",
+        "DUC-F-02697"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 20,
+      "baseline_ids": [
+        "DUC-F-02731",
+        "DUC-F-02732"
+      ],
+      "cell_count": 2
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 20,
+      "baseline_ids": [
+        "DUC-F-02729",
+        "DUC-F-02736"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 21,
+      "baseline_ids": [
+        "DUC-F-02874",
+        "DUC-F-02875"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 21,
+      "baseline_ids": [
+        "DUC-F-02876",
+        "DUC-F-02877"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 21,
+      "baseline_ids": [
+        "DUC-F-02904",
+        "DUC-F-02907"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 21,
+      "baseline_ids": [
+        "DUC-F-02909",
+        "DUC-F-02910"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 22,
+      "baseline_ids": [
+        "DUC-F-02945",
+        "DUC-F-02947"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 22,
+      "baseline_ids": [
+        "DUC-F-03073",
+        "DUC-F-03076"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 22,
+      "baseline_ids": [
+        "DUC-F-03091",
+        "DUC-F-03092"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 22,
+      "baseline_ids": [
+        "DUC-F-03102",
+        "DUC-F-03103"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 22,
+      "baseline_ids": [
+        "DUC-F-03099",
+        "DUC-F-03104"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 22,
+      "baseline_ids": [
+        "DUC-F-03101",
+        "DUC-F-03105"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 23,
+      "baseline_ids": [
+        "DUC-F-03263",
+        "DUC-F-03266"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 23,
+      "baseline_ids": [
+        "DUC-F-03268",
+        "DUC-F-03281"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 23,
+      "baseline_ids": [
+        "DUC-F-03278",
+        "DUC-F-03282"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 23,
+      "baseline_ids": [
+        "DUC-F-03283",
+        "DUC-F-03291"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 23,
+      "baseline_ids": [
+        "DUC-F-03284",
+        "DUC-F-03292"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 23,
+      "baseline_ids": [
+        "DUC-F-03285",
+        "DUC-F-03293"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 24,
+      "baseline_ids": [
+        "DUC-F-03302",
+        "DUC-F-03303"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 24,
+      "baseline_ids": [
+        "DUC-F-03316",
+        "DUC-F-03318"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 24,
+      "baseline_ids": [
+        "DUC-F-03361",
+        "DUC-F-03362"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 24,
+      "baseline_ids": [
+        "DUC-F-03449",
+        "DUC-F-03450"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 24,
+      "baseline_ids": [
+        "DUC-F-03476",
+        "DUC-F-03484"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 25,
+      "baseline_ids": [
+        "DUC-F-03632",
+        "DUC-F-03649"
+      ],
+      "cell_count": 2
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 25,
+      "baseline_ids": [
+        "DUC-F-03633",
+        "DUC-F-03650"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 25,
+      "baseline_ids": [
+        "DUC-F-03648",
+        "DUC-F-03651"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 25,
+      "baseline_ids": [
+        "DUC-F-03654",
+        "DUC-F-03664"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 25,
+      "baseline_ids": [
+        "DUC-F-03661",
+        "DUC-F-03665"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 25,
+      "baseline_ids": [
+        "DUC-F-03670",
+        "DUC-F-03671"
+      ],
+      "cell_count": 2
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 26,
+      "baseline_ids": [
+        "DUC-F-03709",
+        "DUC-F-03712"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 26,
+      "baseline_ids": [
+        "DUC-F-03778",
+        "DUC-F-03779"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 26,
+      "baseline_ids": [
+        "DUC-F-03778",
+        "DUC-F-03779",
+        "DUC-F-03801"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 26,
+      "baseline_ids": [
+        "DUC-F-03822",
+        "DUC-F-03842"
+      ],
+      "cell_count": 11
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 26,
+      "baseline_ids": [
+        "DUC-F-03855",
+        "DUC-F-03858"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 27,
+      "baseline_ids": [
+        "DUC-F-04016",
+        "DUC-F-04019"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 27,
+      "baseline_ids": [
+        "DUC-F-04020",
+        "DUC-F-04021"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 27,
+      "baseline_ids": [
+        "DUC-F-04032",
+        "DUC-F-04036"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 27,
+      "baseline_ids": [
+        "DUC-F-04023",
+        "DUC-F-04037"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 27,
+      "baseline_ids": [
+        "DUC-F-04044",
+        "DUC-F-04045"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 27,
+      "baseline_ids": [
+        "DUC-F-04038",
+        "DUC-F-04046"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 28,
+      "baseline_ids": [
+        "DUC-F-04077",
+        "DUC-F-04080"
+      ],
+      "cell_count": 9
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 28,
+      "baseline_ids": [
+        "DUC-F-04212",
+        "DUC-F-04215"
+      ],
+      "cell_count": 9
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 29,
+      "baseline_ids": [
+        "DUC-F-04387",
+        "DUC-F-04403"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 29,
+      "baseline_ids": [
+        "DUC-F-04420",
+        "DUC-F-04421"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 30,
+      "baseline_ids": [
+        "DUC-F-04495",
+        "DUC-F-04496"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 30,
+      "baseline_ids": [
+        "DUC-F-04495",
+        "DUC-F-04496",
+        "DUC-F-04518"
+      ],
+      "cell_count": 11
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 30,
+      "baseline_ids": [
+        "DUC-F-04495",
+        "DUC-F-04496",
+        "DUC-F-04518",
+        "DUC-F-04520"
+      ],
+      "cell_count": 15
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 30,
+      "baseline_ids": [
+        "DUC-F-04495",
+        "DUC-F-04496",
+        "DUC-F-04518",
+        "DUC-F-04520",
+        "DUC-F-04521"
+      ],
+      "cell_count": 17
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 30,
+      "baseline_ids": [
+        "DUC-F-04495",
+        "DUC-F-04496",
+        "DUC-F-04518",
+        "DUC-F-04520",
+        "DUC-F-04521",
+        "DUC-F-04522"
+      ],
+      "cell_count": 21
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 30,
+      "baseline_ids": [
+        "DUC-F-04523",
+        "DUC-F-04546"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 30,
+      "baseline_ids": [
+        "DUC-F-04603",
+        "DUC-F-04605"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "hidden_anchor",
+      "layer": 31,
+      "grid": [
+        -2,
+        -19,
+        31
+      ],
+      "from_color": "c0",
+      "to_color": "c1",
+      "donor_fragment_count": 1,
+      "baseline_ids": [
+        "DUC-F-04616",
+        "DUC-F-04625"
+      ]
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 31,
+      "baseline_ids": [
+        "DUC-F-04616",
+        "DUC-F-04617",
+        "DUC-F-04625"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 31,
+      "baseline_ids": [
+        "DUC-F-04616",
+        "DUC-F-04617",
+        "DUC-F-04618",
+        "DUC-F-04625"
+      ],
+      "cell_count": 8
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 31,
+      "baseline_ids": [
+        "DUC-F-04616",
+        "DUC-F-04617",
+        "DUC-F-04618",
+        "DUC-F-04621",
+        "DUC-F-04625"
+      ],
+      "cell_count": 10
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 31,
+      "baseline_ids": [
+        "DUC-F-04616",
+        "DUC-F-04617",
+        "DUC-F-04618",
+        "DUC-F-04621",
+        "DUC-F-04622",
+        "DUC-F-04625"
+      ],
+      "cell_count": 11
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 31,
+      "baseline_ids": [
+        "DUC-F-04616",
+        "DUC-F-04617",
+        "DUC-F-04618",
+        "DUC-F-04621",
+        "DUC-F-04622",
+        "DUC-F-04623",
+        "DUC-F-04625"
+      ],
+      "cell_count": 12
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 31,
+      "baseline_ids": [
+        "DUC-F-04616",
+        "DUC-F-04617",
+        "DUC-F-04618",
+        "DUC-F-04621",
+        "DUC-F-04622",
+        "DUC-F-04623",
+        "DUC-F-04624",
+        "DUC-F-04625"
+      ],
+      "cell_count": 14
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 31,
+      "baseline_ids": [
+        "DUC-F-04616",
+        "DUC-F-04617",
+        "DUC-F-04618",
+        "DUC-F-04621",
+        "DUC-F-04622",
+        "DUC-F-04623",
+        "DUC-F-04624",
+        "DUC-F-04625",
+        "DUC-F-04628"
+      ],
+      "cell_count": 16
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 31,
+      "baseline_ids": [
+        "DUC-F-04616",
+        "DUC-F-04617",
+        "DUC-F-04618",
+        "DUC-F-04621",
+        "DUC-F-04622",
+        "DUC-F-04623",
+        "DUC-F-04624",
+        "DUC-F-04625",
+        "DUC-F-04628",
+        "DUC-F-04629"
+      ],
+      "cell_count": 19
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 31,
+      "baseline_ids": [
+        "DUC-F-04616",
+        "DUC-F-04617",
+        "DUC-F-04618",
+        "DUC-F-04621",
+        "DUC-F-04622",
+        "DUC-F-04623",
+        "DUC-F-04624",
+        "DUC-F-04625",
+        "DUC-F-04628",
+        "DUC-F-04629",
+        "DUC-F-04630"
+      ],
+      "cell_count": 22
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 31,
+      "baseline_ids": [
+        "DUC-F-04779",
+        "DUC-F-04796"
+      ],
+      "cell_count": 9
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 31,
+      "baseline_ids": [
+        "DUC-F-04780",
+        "DUC-F-04797"
+      ],
+      "cell_count": 9
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 31,
+      "baseline_ids": [
+        "DUC-F-04791",
+        "DUC-F-04809"
+      ],
+      "cell_count": 10
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 32,
+      "baseline_ids": [
+        "DUC-F-04841",
+        "DUC-F-04843"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 32,
+      "baseline_ids": [
+        "DUC-F-04885",
+        "DUC-F-04886"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 32,
+      "baseline_ids": [
+        "DUC-F-04888",
+        "DUC-F-04889"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 32,
+      "baseline_ids": [
+        "DUC-F-04913",
+        "DUC-F-04914"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "hidden_anchor",
+      "layer": 32,
+      "grid": [
+        -1,
+        -22,
+        32
+      ],
+      "from_color": "c0",
+      "to_color": "c1",
+      "donor_fragment_count": 0,
+      "baseline_ids": [
+        "DUC-F-04918",
+        "DUC-F-04919"
+      ]
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 32,
+      "baseline_ids": [
+        "DUC-F-04918",
+        "DUC-F-04919",
+        "DUC-F-04920"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "hidden_anchor",
+      "layer": 32,
+      "grid": [
+        2,
+        -21,
+        32
+      ],
+      "from_color": "c0",
+      "to_color": "c1",
+      "donor_fragment_count": 0,
+      "baseline_ids": [
+        "DUC-F-04947",
+        "DUC-F-04948"
+      ]
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 32,
+      "baseline_ids": [
+        "DUC-F-04949",
+        "DUC-F-04950"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 32,
+      "baseline_ids": [
+        "DUC-F-04974",
+        "DUC-F-04975"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 33,
+      "baseline_ids": [
+        "DUC-F-05028",
+        "DUC-F-05029"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "hidden_anchor",
+      "layer": 33,
+      "grid": [
+        3,
+        -21,
+        33
+      ],
+      "from_color": "c0",
+      "to_color": "c1",
+      "donor_fragment_count": 0,
+      "baseline_ids": [
+        "DUC-F-05034",
+        "DUC-F-05038"
+      ]
+    },
+    {
+      "kind": "hidden_anchor",
+      "layer": 33,
+      "grid": [
+        -3,
+        -21,
+        33
+      ],
+      "from_color": "c0",
+      "to_color": "c1",
+      "donor_fragment_count": 0,
+      "baseline_ids": [
+        "DUC-F-05036",
+        "DUC-F-05037"
+      ]
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 33,
+      "baseline_ids": [
+        "DUC-F-05034",
+        "DUC-F-05038",
+        "DUC-F-05039"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 33,
+      "baseline_ids": [
+        "DUC-F-05035",
+        "DUC-F-05036",
+        "DUC-F-05037",
+        "DUC-F-05040"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 33,
+      "baseline_ids": [
+        "DUC-F-05034",
+        "DUC-F-05038",
+        "DUC-F-05039",
+        "DUC-F-05046"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 33,
+      "baseline_ids": [
+        "DUC-F-05035",
+        "DUC-F-05036",
+        "DUC-F-05037",
+        "DUC-F-05040",
+        "DUC-F-05047"
+      ],
+      "cell_count": 9
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 33,
+      "baseline_ids": [
+        "DUC-F-05034",
+        "DUC-F-05038",
+        "DUC-F-05039",
+        "DUC-F-05046",
+        "DUC-F-05048"
+      ],
+      "cell_count": 10
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 33,
+      "baseline_ids": [
+        "DUC-F-05035",
+        "DUC-F-05036",
+        "DUC-F-05037",
+        "DUC-F-05040",
+        "DUC-F-05047",
+        "DUC-F-05051"
+      ],
+      "cell_count": 11
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 33,
+      "baseline_ids": [
+        "DUC-F-05034",
+        "DUC-F-05038",
+        "DUC-F-05039",
+        "DUC-F-05046",
+        "DUC-F-05048",
+        "DUC-F-05058"
+      ],
+      "cell_count": 12
+    },
+    {
+      "kind": "hidden_anchor",
+      "layer": 34,
+      "grid": [
+        -6,
+        -17,
+        34
+      ],
+      "from_color": "c0",
+      "to_color": "c1",
+      "donor_fragment_count": 1,
+      "baseline_ids": [
+        "DUC-F-05290",
+        "DUC-F-05295"
+      ]
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 34,
+      "baseline_ids": [
+        "DUC-F-05290",
+        "DUC-F-05291",
+        "DUC-F-05295"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 34,
+      "baseline_ids": [
+        "DUC-F-05293",
+        "DUC-F-05294"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 34,
+      "baseline_ids": [
+        "DUC-F-05299",
+        "DUC-F-05300"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 34,
+      "baseline_ids": [
+        "DUC-F-05298",
+        "DUC-F-05325"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 34,
+      "baseline_ids": [
+        "DUC-F-05329",
+        "DUC-F-05355",
+        "DUC-F-05356"
+      ],
+      "cell_count": 9
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 34,
+      "baseline_ids": [
+        "DUC-F-05383",
+        "DUC-F-05384"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 34,
+      "baseline_ids": [
+        "DUC-F-05386",
+        "DUC-F-05387"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "hidden_anchor",
+      "layer": 34,
+      "grid": [
+        6,
+        -17,
+        34
+      ],
+      "from_color": "c0",
+      "to_color": "c1",
+      "donor_fragment_count": 1,
+      "baseline_ids": [
+        "DUC-F-05360",
+        "DUC-F-05388"
+      ]
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 34,
+      "baseline_ids": [
+        "DUC-F-05360",
+        "DUC-F-05388",
+        "DUC-F-05389"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 34,
+      "baseline_ids": [
+        "DUC-F-05411",
+        "DUC-F-05429"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 34,
+      "baseline_ids": [
+        "DUC-F-05430",
+        "DUC-F-05431"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "hidden_anchor",
+      "layer": 35,
+      "grid": [
+        -4,
+        -24,
+        35
+      ],
+      "from_color": "c0",
+      "to_color": "c1",
+      "donor_fragment_count": 1,
+      "baseline_ids": [
+        "DUC-F-05447",
+        "DUC-F-05453"
+      ]
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 35,
+      "baseline_ids": [
+        "DUC-F-05447",
+        "DUC-F-05448",
+        "DUC-F-05453"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 35,
+      "baseline_ids": [
+        "DUC-F-05447",
+        "DUC-F-05448",
+        "DUC-F-05449",
+        "DUC-F-05453"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 35,
+      "baseline_ids": [
+        "DUC-F-05447",
+        "DUC-F-05448",
+        "DUC-F-05449",
+        "DUC-F-05450",
+        "DUC-F-05453",
+        "DUC-F-05456"
+      ],
+      "cell_count": 11
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 35,
+      "baseline_ids": [
+        "DUC-F-05447",
+        "DUC-F-05448",
+        "DUC-F-05449",
+        "DUC-F-05450",
+        "DUC-F-05451",
+        "DUC-F-05453",
+        "DUC-F-05456"
+      ],
+      "cell_count": 13
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 35,
+      "baseline_ids": [
+        "DUC-F-05447",
+        "DUC-F-05448",
+        "DUC-F-05449",
+        "DUC-F-05450",
+        "DUC-F-05451",
+        "DUC-F-05453",
+        "DUC-F-05455",
+        "DUC-F-05456"
+      ],
+      "cell_count": 14
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 35,
+      "baseline_ids": [
+        "DUC-F-05484",
+        "DUC-F-05485"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "hidden_anchor",
+      "layer": 36,
+      "grid": [
+        -3,
+        -25,
+        36
+      ],
+      "from_color": "c0",
+      "to_color": "c1",
+      "donor_fragment_count": 0,
+      "baseline_ids": [
+        "DUC-F-05744",
+        "DUC-F-05745"
+      ]
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 36,
+      "baseline_ids": [
+        "DUC-F-05744",
+        "DUC-F-05745",
+        "DUC-F-05748"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 36,
+      "baseline_ids": [
+        "DUC-F-05744",
+        "DUC-F-05745",
+        "DUC-F-05748",
+        "DUC-F-05776"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 36,
+      "baseline_ids": [
+        "DUC-F-05744",
+        "DUC-F-05745",
+        "DUC-F-05748",
+        "DUC-F-05776",
+        "DUC-F-05778"
+      ],
+      "cell_count": 9
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 37,
+      "baseline_ids": [
+        "DUC-F-05963",
+        "DUC-F-05965"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 37,
+      "baseline_ids": [
+        "DUC-F-05962",
+        "DUC-F-05964"
+      ],
+      "cell_count": 9
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 38,
+      "baseline_ids": [
+        "DUC-F-06061",
+        "DUC-F-06062"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 38,
+      "baseline_ids": [
+        "DUC-F-06061",
+        "DUC-F-06062",
+        "DUC-F-06063"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "hidden_anchor",
+      "layer": 39,
+      "grid": [
+        -8,
+        -15,
+        39
+      ],
+      "from_color": "c0",
+      "to_color": "c2",
+      "donor_fragment_count": 1,
+      "baseline_ids": [
+        "DUC-F-06266",
+        "DUC-F-06273"
+      ]
+    },
+    {
+      "kind": "hidden_anchor",
+      "layer": 39,
+      "grid": [
+        8,
+        -15,
+        39
+      ],
+      "from_color": "c0",
+      "to_color": "c2",
+      "donor_fragment_count": 1,
+      "baseline_ids": [
+        "DUC-F-06270",
+        "DUC-F-06281"
+      ]
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 39,
+      "baseline_ids": [
+        "DUC-F-06271",
+        "DUC-F-06272"
+      ],
+      "cell_count": 2
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 39,
+      "baseline_ids": [
+        "DUC-F-06328",
+        "DUC-F-06345"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 39,
+      "baseline_ids": [
+        "DUC-F-06361",
+        "DUC-F-06362"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 39,
+      "baseline_ids": [
+        "DUC-F-06379",
+        "DUC-F-06380"
+      ],
+      "cell_count": 2
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 40,
+      "baseline_ids": [
+        "DUC-F-06437",
+        "DUC-F-06438"
+      ],
+      "cell_count": 2
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 40,
+      "baseline_ids": [
+        "DUC-F-06568",
+        "DUC-F-06569"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 40,
+      "baseline_ids": [
+        "DUC-F-06578",
+        "DUC-F-06579"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 40,
+      "baseline_ids": [
+        "DUC-F-06582",
+        "DUC-F-06583"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 41,
+      "baseline_ids": [
+        "DUC-F-06733",
+        "DUC-F-06734"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 42,
+      "baseline_ids": [
+        "DUC-F-06753",
+        "DUC-F-06754"
+      ],
+      "cell_count": 2
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 42,
+      "baseline_ids": [
+        "DUC-F-06772",
+        "DUC-F-06775"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 42,
+      "baseline_ids": [
+        "DUC-F-06882",
+        "DUC-F-06890"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 42,
+      "baseline_ids": [
+        "DUC-F-06888",
+        "DUC-F-06891"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 43,
+      "baseline_ids": [
+        "DUC-F-06892",
+        "DUC-F-06893"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 43,
+      "baseline_ids": [
+        "DUC-F-06906",
+        "DUC-F-06907"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 43,
+      "baseline_ids": [
+        "DUC-F-06914",
+        "DUC-F-06915"
+      ],
+      "cell_count": 2
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 43,
+      "baseline_ids": [
+        "DUC-F-06974",
+        "DUC-F-06992"
+      ],
+      "cell_count": 6
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 43,
+      "baseline_ids": [
+        "DUC-F-07032",
+        "DUC-F-07041"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 44,
+      "baseline_ids": [
+        "DUC-F-07085",
+        "DUC-F-07086"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 44,
+      "baseline_ids": [
+        "DUC-F-07183",
+        "DUC-F-07186"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 45,
+      "baseline_ids": [
+        "DUC-F-07223",
+        "DUC-F-07225"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 45,
+      "baseline_ids": [
+        "DUC-F-07224",
+        "DUC-F-07226"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 45,
+      "baseline_ids": [
+        "DUC-F-07300",
+        "DUC-F-07316"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 45,
+      "baseline_ids": [
+        "DUC-F-07317",
+        "DUC-F-07330"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 45,
+      "baseline_ids": [
+        "DUC-F-07321",
+        "DUC-F-07333"
+      ],
+      "cell_count": 9
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 45,
+      "baseline_ids": [
+        "DUC-F-07322",
+        "DUC-F-07334"
+      ],
+      "cell_count": 10
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 45,
+      "baseline_ids": [
+        "DUC-F-07323",
+        "DUC-F-07335"
+      ],
+      "cell_count": 10
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 45,
+      "baseline_ids": [
+        "DUC-F-07324",
+        "DUC-F-07336"
+      ],
+      "cell_count": 10
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 46,
+      "baseline_ids": [
+        "DUC-F-07394",
+        "DUC-F-07396"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 47,
+      "baseline_ids": [
+        "DUC-F-07593",
+        "DUC-F-07594"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 47,
+      "baseline_ids": [
+        "DUC-F-07610",
+        "DUC-F-07611"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 47,
+      "baseline_ids": [
+        "DUC-F-07614",
+        "DUC-F-07629"
+      ],
+      "cell_count": 7
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 48,
+      "baseline_ids": [
+        "DUC-F-07639",
+        "DUC-F-07640"
+      ],
+      "cell_count": 3
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 48,
+      "baseline_ids": [
+        "DUC-F-07695",
+        "DUC-F-07712"
+      ],
+      "cell_count": 5
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 48,
+      "baseline_ids": [
+        "DUC-F-07762",
+        "DUC-F-07763"
+      ],
+      "cell_count": 4
+    },
+    {
+      "kind": "bounded_same_color_group",
+      "layer": 48,
+      "baseline_ids": [
+        "DUC-F-07785",
+        "DUC-F-07793"
+      ],
+      "cell_count": 3
+    }
+  ],
+  "physical_fit": "UNKNOWN",
+  "retention_strength": "UNKNOWN",
+  "limits": {
+    "maximum_cells": 32,
+    "maximum_span_cells": 12,
+    "maximum_same_color_search_states": 96
+  }
+}

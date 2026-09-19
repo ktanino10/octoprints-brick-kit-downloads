@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="description" content="Octoprints公開組立ビューア。選定3案と候補9案の履歴、部品ID、BOM、分解・層・手順。初回試作で課題あり、全数印刷は保留。">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; media-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; worker-src 'none'">
+    <title>Octoprints — Brick study / 外観比較スタジオ</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/mark.svg">
+    <link rel="stylesheet" href="./assets/studio.css">
+    <script type="module" src="./assets/studio.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#studio">スタジオへ移動</a>
+    <header class="site-header">
+      <a class="wordmark" href="#studio" aria-label="Octoprints Brick study スタジオ">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 10 16 4l11 6v12l-11 6-11-6Z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m5 10 11 6 11-6M16 16v12" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="16" cy="9" r="2" fill="currentColor"/></svg>
+        <span>Octoprints <span class="wordmark-divider">/</span> <span class="wordmark-sub">Brick study</span></span>
+      </a>
+      <nav class="header-nav" aria-label="ページ内移動">
+        <a href="../">公開アーカイブ</a>
+        <a href="../downloads.html">ダウンロード</a>
+        <a href="#comparison">外観比較</a>
+        <a href="#data">部品・データ</a>
+      </nav>
+      <span class="local-label"><span class="local-dot" aria-hidden="true"></span>PUBLIC ARCHIVE</span>
+    </header>
+
+    <div class="phase-banner" role="note" aria-label="このモデルの検証範囲">
+      <span class="phase-label" id="phase-label">PHASE 2</span>
+      <strong id="visual-gate">外観基準は選択済み</strong><span class="banner-divider" aria-hidden="true"></span>
+      <span id="assembly-gate">接合部・組立は試作</span>
+      <span id="physical-gate">実機嵌合・保持力未確認</span><span class="banner-divider" aria-hidden="true"></span>
+      <strong id="production-gate">全数印刷は保留</strong>
+      <a href="../feedback.html">初回印刷の課題と写真 <span aria-hidden="true">↗</span></a>
+    </div>
+
+    <main>
+      <section id="studio" class="studio-section" aria-labelledby="page-title">
+        <div class="section-intro">
+          <div>
+            <p class="eyebrow">CUSTOM BRICKS · CONCEPT COMPARISON</p>
+            <h1 id="page-title">かたちと、組み立てを。</h1>
+            <p class="intro-copy">Mona・Copilot・Ducky <span aria-hidden="true">/</span> 約180 mmの外観を、ひとつのブリックから。</p>
+          </div>
+          <a class="freshness freshness-unknown" id="freshness" href="#evidence">
+            <span class="status-symbol" aria-hidden="true">?</span>
+            <span><strong id="freshness-label">最新性は不明</strong><small id="freshness-time">検証状態を確認中</small></span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <nav class="revision-nav" aria-label="表示する版">
+          <a id="selected-mode-link" href="./?mode=selected">選択済み3案・接合部試作</a>
+          <a id="history-mode-link" href="./?mode=phase1#comparison">Phase1・9案の履歴</a>
+          <a id="phase1-gallery-link" href="../artifacts/phase1/gallery.html" target="_blank" rel="noopener">保存されたPhase1画像一覧 ↗</a>
+        </nav>
+        <section id="revision-notice" class="revision-notice" aria-label="外観選択と表示データの範囲">
+          <div class="revision-title"><strong id="revision-title">選択記録と公開版を確認中</strong><span id="revision-id" class="mono">—</span></div>
+          <p id="revision-detail">外観の選択は、接合部・組立・製造の承認ではありません。</p>
+          <ul id="selection-summary" class="selection-summary" aria-label="ユーザーが選択した外観基準"></ul>
+        </section>
+        <div id="catalog-error" class="error-banner" role="alert" hidden></div>
+
+        <div class="workbench">
+          <div class="candidate-toolbar">
+            <div class="character-switch" role="group" aria-label="キャラクター">
+              <button type="button" data-character="mona" aria-pressed="true"><span class="character-dot mona-dot" aria-hidden="true"></span>Mona</button>
+              <button type="button" data-character="copilot" aria-pressed="false"><span class="character-dot copilot-dot" aria-hidden="true"></span>Copilot</button>
+              <button type="button" data-character="ducky" aria-pressed="false"><span class="character-dot ducky-dot" aria-hidden="true"></span>Ducky</button>
+            </div>
+            <div class="style-switch" role="group" aria-label="ブリックの細かさ">
+              <button type="button" data-style="chunky" aria-pressed="false">ざっくり<span data-pitch="chunky">—</span></button>
+              <button type="button" data-style="balanced" aria-pressed="true">バランス<span data-pitch="balanced">—</span></button>
+              <button type="button" data-style="fine" aria-pressed="false">こまかく<span data-pitch="fine">—</span></button>
+            </div>
+          </div>
+
+          <div class="variant-context" id="variant-context" role="note" hidden></div>
+          <div class="stage-column">
+            <div class="stage-heading">
+              <div><p id="candidate-kicker" class="eyebrow">ASSEMBLY STUDY</p><h2 id="candidate-title">モデルを読み込み中</h2></div>
+              <span id="candidate-id" class="mono subdued">—</span>
+            </div>
+            <div class="viewport" id="viewport" aria-label="ブリック組立の3D表示">
+              <div id="canvas-host" class="canvas-host"></div>
+              <div class="view-toolbar" role="group" aria-label="視点の切り替え">
+                <button type="button" data-view="perspective" aria-pressed="true" disabled>斜め</button>
+                <button type="button" data-view="front" aria-pressed="false" disabled>正面</button>
+                <button type="button" data-view="side" aria-pressed="false" disabled>側面</button>
+                <button type="button" data-view="top" aria-pressed="false" disabled>上面</button>
+                <span class="toolbar-divider" aria-hidden="true"></span>
+                <button type="button" id="reset-view" aria-label="視点を初期位置に戻す" disabled><span aria-hidden="true">↺</span> リセット</button>
+              </div>
+              <div class="stage-message" id="stage-message" role="status">
+                <span class="empty-geometry" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="m12 22 20-11 20 11v23L32 56 12 45ZM12 22l20 11 20-11M32 33v23" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="4 4"/></svg></span>
+                <strong id="stage-message-title">形状データを読み込み中</strong>
+                <p id="stage-message-copy">実際の部品メッシュと配置を確認しています。</p>
+                <button type="button" class="button secondary compact" id="retry-model" hidden>再読み込み</button>
+              </div>
+              <div id="empty-progress" class="empty-progress" role="status" hidden>表示範囲に部品がありません。層または手順を進めてください。</div>
+              <div class="height-callout" id="height-callout" hidden><span class="dimension-line" aria-hidden="true"></span><span><strong id="height-value">—</strong><small>完成時の高さ / mm</small></span></div>
+              <div class="viewport-footer">
+                <p class="orbit-hint"><span aria-hidden="true">↔</span> ドラッグで回転 <span class="hint-extra">· 右ドラッグで移動 · スクロールで拡大</span></p>
+                <span class="axis-label mono">Z↑ <span aria-hidden="true">·</span> mm</span>
+              </div>
+            </div>
+            <div class="stage-stats" aria-label="完成モデルの指標">
+              <div><span>ブリック</span><strong id="metric-parts">—<small>個</small></strong></div>
+              <div><span>高さ</span><strong id="metric-height">—<small>mm</small></strong></div>
+              <div><span>幅 × 奥行</span><strong id="metric-footprint" class="footprint">—<small>mm</small></strong></div>
+              <div><span>組立目安 <span class="estimate-label">推定</span></span><strong id="metric-time">—<small>時間</small></strong></div>
+            </div>
+            <p id="baseline-comparison" class="baseline-comparison" hidden></p>
+          </div>
+
+          <aside class="assembly-panel" aria-labelledby="assembly-title">
+            <div class="panel-title"><h2 id="assembly-title">組立候補をたどる</h2><span class="small-label">VIEW ONLY</span></div>
+            <p class="assembly-caution">接触グラフ由来の順序候補です。<strong>承認済みの組立説明書ではありません。</strong></p>
+            <div class="visible-summary"><strong id="visible-count">—</strong><span> / <span id="total-count">—</span> 個を表示</span><span id="visible-percent" class="percent">—</span></div>
+            <div class="progress-track" aria-hidden="true"><span id="visible-track"></span></div>
+
+            <div class="control-block">
+              <div class="control-label"><label for="explode">ブリックを離す</label><output for="explode" id="explode-value">0%</output></div>
+              <input type="range" id="explode" min="0" max="100" value="0" step="1" aria-describedby="explode-help" disabled>
+              <div class="range-captions"><span>完成形</span><span>分解表示</span></div>
+              <p class="control-help" id="explode-help">表示だけを動かします。配置データは変わりません。</p>
+            </div>
+            <div class="control-block">
+              <div class="control-label"><label for="layers">積層の進行</label><output for="layers" id="layer-value">— / — 層</output></div>
+              <input type="range" id="layers" min="0" max="1" value="1" step="1" disabled>
+              <div class="range-captions"><span>底から</span><span>最上段まで</span></div>
+            </div>
+            <div class="control-block step-block">
+              <div class="control-label"><label for="steps">順序候補</label><output for="steps" id="step-value">— / —</output></div>
+              <div class="step-control"><button type="button" id="previous-step" aria-label="順序候補を1つ戻す" disabled>−</button><input type="range" id="steps" min="0" max="1" value="1" step="1" aria-describedby="step-help" disabled><button type="button" id="next-step" aria-label="順序候補を1つ進める" disabled>＋</button></div>
+              <p class="control-help" id="step-help">層と順序候補の共通範囲を表示。差込経路・工具アクセスは未検証です。</p>
+            </div>
+            <button type="button" id="show-complete" class="button secondary full-width" disabled>完成形をすべて表示 <span aria-hidden="true">↗</span></button>
+            <p class="attachment-summary" id="attachment-summary" hidden></p>
+            <div id="assembly-setup" class="assembly-setup" role="note" hidden></div>
+
+            <section class="part-inspector" aria-labelledby="selected-title">
+              <div class="panel-title"><h3 id="selected-title">選択したブリック</h3><button type="button" class="text-button" id="clear-selection" hidden>解除</button></div>
+              <div id="part-details"><p class="selection-empty">3Dのブリックをクリック。<br>または下の部品一覧から選択できます。</p><a class="inline-link" href="#parts-title">部品IDで探す <span aria-hidden="true">↓</span></a></div>
+              <button type="button" class="button secondary compact full-width" id="focus-part" hidden>選択部品に寄る</button>
+            </section>
+          </aside>
+        </div>
+        <p class="studio-footnote"><span class="precision-dot" aria-hidden="true"></span> ネイティブCAD由来の部品形状を表示。底面ソケットを含む実メッシュを、個別IDで配置しています。<span class="desktop-only">外観検討用・印刷用データではありません。</span></p>
+      </section>
+
+      <section id="comparison" class="comparison-section" aria-labelledby="comparison-title">
+        <div class="section-heading">
+          <div><p class="eyebrow" id="comparison-kicker">SELECTED VISUAL BASELINES</p><h2 id="comparison-title">選択済みの外観基準。</h2><p id="comparison-copy">表示する版を確認中です。外観の選択と、接合部の実機検証は別です。</p></div>
+          <div id="contact-sheet-link" class="contact-sheet-link"></div>
+        </div>
+        <div class="gallery-columns" aria-hidden="true"><span>キャラクター</span><span>ざっくり <small>Chunky</small></span><span>バランス <small>Balanced</small></span><span>こまかく <small>Fine</small></span></div>
+        <div id="gallery" class="comparison-gallery"><p class="section-empty">比較カタログを読み込み中です。</p></div>
+        <div class="selection-note"><span class="note-mark" aria-hidden="true">↗</span><p><strong id="selection-note-title">外観基準の選択は、製造承認ではありません。</strong><span id="selection-note-copy">表示切替のみ。CAD生成・プリンター接続・送信・承認操作は行いません。</span></p></div>
+      </section>
+
+      <section id="fit-trials" class="trial-section" aria-labelledby="trial-title" hidden>
+        <div class="section-heading"><div><p class="eyebrow">HISTORICAL TRIALS · NOT_SLICED</p><h2 id="trial-title">試験片も、記録として残す。</h2><p id="trial-summary">試験片の記録を確認中です。本体一式を出力する段階ではありません。</p></div></div>
+        <p class="trial-safety">外観基準の選択は製造リリースではありません。壁厚を満たすことや0.2 mmノズルの使用だけで、PLAの細い軸の強度・嵌合・保持力は証明できません。プリンター接続・スライス・印刷送信は行いません。</p>
+        <div id="trial-sets" class="trial-grid"></div>
+      </section>
+
+      <section id="data" class="data-section" aria-labelledby="data-title">
+        <div class="section-heading"><div><p class="eyebrow">EVERY BRICK HAS AN ID</p><h2 id="data-title">部品と、根拠をひらく。</h2><p>表示中の案の構成表・個別部品・検証範囲。数値は配置マニフェストから集計しています。</p></div><span class="data-candidate mono" id="data-candidate">—</span></div>
+        <div class="data-grid">
+          <section class="data-card parts-card" aria-labelledby="parts-title">
+            <div class="card-heading"><h3 id="parts-title">部品を探す</h3><span id="part-list-count" class="small-label">—</span></div>
+            <label class="search-label" for="part-search">部品ID・型番・色名で検索</label>
+            <div class="search-box"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4 4"/></svg><input type="search" id="part-search" placeholder="例：MON-B-00001" autocomplete="off" spellcheck="false" disabled></div>
+            <label class="checkbox-label"><input type="checkbox" id="only-visible" disabled> 現在表示中の部品だけ</label>
+            <label class="checkbox-label"><input type="checkbox" id="only-underside" disabled> 下側からの後付け候補だけ</label>
+            <div id="support-filter-control" hidden><label class="search-label" for="support-filter">支持・保持区分で絞り込む</label><select id="support-filter" disabled><option value="">すべての区分</option value="SEATED_NOMINAL">公称着座・保持力未確認</option><option value="RETENTION_REQUIRED">保持対策が必要</option><option value="CRADLE_AND_RETENTION_REQUIRED">受け台と保持対策が必要</option></select></div>
+            <p class="search-status" id="search-status" role="status">モデルを読み込むと部品を検索できます。</p>
+            <ol class="part-list" id="part-list" aria-label="検索結果"></ol>
+            <div class="pagination"><button type="button" id="parts-prev" class="text-button" disabled>← 前へ</button><span id="parts-page" class="mono">—</span><button type="button" id="parts-next" class="text-button" disabled>次へ →</button></div>
+          </section>
+
+          <section class="data-card bom-card" aria-labelledby="bom-title">
+            <div class="card-heading"><h3 id="bom-title">ブリックの構成</h3><span id="bom-summary" class="small-label">—</span></div>
+            <div class="bom-tabs" role="group" aria-label="構成表の分類"><button type="button" data-bom="colors" aria-pressed="true">色別</button><button type="button" data-bom="types" aria-pressed="false">型別</button><button type="button" data-bom="combined" aria-pressed="false">色 × 型</button></div>
+            <div id="bom-table" class="bom-scroll"><p class="section-empty">モデルの読み込み後に構成を表示します。</p></div>
+            <p class="card-footnote">完成形の総数です。層・手順・分解表示では変わりません。</p>
+          </section>
+
+          <div class="evidence-column">
+            <section class="data-card downloads-card" aria-labelledby="downloads-title"><div class="card-heading"><h3 id="downloads-title">検討用データ</h3><span class="small-label">READ ONLY</span></div><p class="card-lead" id="downloads-scope">元のファイルをそのまま取得します。製造用の出力ではありません。</p><div id="downloads"><p class="section-empty">カタログを読み込むと取得先を表示します。</p></div><div id="video-preview"></div></section>
+            <section id="evidence" class="data-card evidence-card" aria-labelledby="evidence-title">
+              <div class="card-heading"><h3 id="evidence-title">検証範囲</h3><button type="button" class="text-button" id="refresh-status">再確認 ↻</button></div>
+              <dl class="evidence-facts"><div><dt>外観基準の選択</dt><dd id="visual-selection-status">選択記録を確認中</dd></div><div><dt>実機嵌合・保持力</dt><dd>未確認 / UNKNOWN</dd></div><div><dt>公称の純上下経路</dt><dd id="insertion-status">未検証 / UNKNOWN</dd></div><div><dt>量産用エクスポート</dt><dd class="blocked">ブロック中</dd></div><div><dt>この版の最新性</dt><dd id="evidence-status">不明</dd></div></dl>
+              <p id="evidence-detail" class="evidence-detail">検証状態を取得中です。</p>
+              <div id="current-dimensions" class="current-dimensions" hidden></div>
+              <div id="graph-info" class="graph-note">幾何接触グラフは、実機の嵌合・強度・保持力を保証しません。</div>
+              <details class="warnings" id="model-warnings" hidden><summary>この案の注意事項 <span id="warning-count"></span></summary><ul id="warning-list"></ul></details>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><p><strong>Octoprints / Brick study</strong><span id="footer-scope">公開アーカイブ・接合部試作</span></p><p><a href="../downloads.html">CAD一式・全配布カタログ</a> · 市販ブリック互換性は保証しません。<a href="../ATTRIBUTION.md">出典</a> · <a href="./assets/THIRD_PARTY_LICENSES.txt">ライセンス</a></p></footer>
+    <div class="sr-only" id="announcer" role="status" aria-live="polite" aria-atomic="true"></div>
+    <noscript><div class="noscript-notice">外観基準・接合部試作・Phase1履歴の表示にはJavaScriptが必要です。実機嵌合・保持力は未確認、量産出力はできません。</div></noscript>
+  </body>
+</html>

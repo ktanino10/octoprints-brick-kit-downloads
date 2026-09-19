@@ -1,0 +1,1101 @@
+{
+  "schema_version": 1,
+  "result": "PASS",
+  "freecad_version": [
+    "1",
+    "1",
+    "3",
+    "20260725 (Git shallow)",
+    "Unknown",
+    "2026/07/25 04:52:02",
+    "grafted,grafted",
+    "145529fe741292ff0b3977a01195bf0247425794"
+  ],
+  "python_version": "3.11.14 | packaged by conda-forge | (main, Oct 13 2025, 14:29:50) [Clang 19.1.7 ]",
+  "opencascade_version": "7.8.1",
+  "gui_up": false,
+  "library": {
+    "file": "NativeLibrary.FCStd",
+    "final_solid_count": 21,
+    "document_object_count": 543,
+    "types": {
+      "p8-1x1": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 281.5297122386711,
+        "bounds_mm": [
+          [
+            -3.91,
+            -3.91,
+            0.0
+          ],
+          [
+            3.91,
+            3.91,
+            6.346666666666667
+          ]
+        ],
+        "brep_faces": 11,
+        "step": "bricks/p8-1x1.step",
+        "stl": "bricks/p8-1x1.stl",
+        "mesh_vertices": 188,
+        "mesh_faces": 372,
+        "mesh_volume_mm3": 281.55335872362747,
+        "parameters": "Parameters_p8_1x1",
+        "final": "Parameters_p8_1x1_Final",
+        "check": {
+          "valid": true,
+          "solid_count": 1,
+          "volume_mm3": 281.5297122386711,
+          "bounds_mm": [
+            [
+              -3.91,
+              -3.91,
+              0.0
+            ],
+            [
+              3.91,
+              3.91,
+              6.346666666666667
+            ]
+          ],
+          "brep_faces": 11,
+          "analytic_volume_mm3": 281.52971223867115,
+          "grid_cells_checked": 1
+        }
+      },
+      "p8-2x1": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 569.6469924773425,
+        "bounds_mm": [
+          [
+            -7.91,
+            -3.91,
+            0.0
+          ],
+          [
+            7.91,
+            3.91,
+            6.346666666666667
+          ]
+        ],
+        "brep_faces": 16,
+        "step": "bricks/p8-2x1.step",
+        "stl": "bricks/p8-2x1.stl",
+        "mesh_vertices": 368,
+        "mesh_faces": 732,
+        "mesh_volume_mm3": 569.694261382516,
+        "parameters": "Parameters_p8_2x1",
+        "final": "Parameters_p8_2x1_Final",
+        "check": {
+          "valid": true,
+          "solid_count": 1,
+          "volume_mm3": 569.6469924773425,
+          "bounds_mm": [
+            [
+              -7.91,
+              -3.91,
+              0.0
+            ],
+            [
+              7.91,
+              3.91,
+              6.346666666666667
+            ]
+          ],
+          "brep_faces": 16,
+          "analytic_volume_mm3": 569.6469924773422,
+          "grid_cells_checked": 2
+        }
+      },
+      "p8-3x1": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 857.7642727160136,
+        "bounds_mm": [
+          [
+            -11.91,
+            -3.91,
+            0.0
+          ],
+          [
+            11.91,
+            3.91,
+            6.346666666666667
+          ]
+        ],
+        "brep_faces": 21,
+        "step": "bricks/p8-3x1.step",
+        "stl": "bricks/p8-3x1.stl",
+        "mesh_vertices": 548,
+        "mesh_faces": 1092,
+        "mesh_volume_mm3": 857.8351828167102,
+        "parameters": "Parameters_p8_3x1",
+        "final": "Parameters_p8_3x1_Final",
+        "check": {
+          "valid": true,
+          "solid_count": 1,
+          "volume_mm3": 857.7642727160136,
+          "bounds_mm": [
+            [
+              -11.91,
+              -3.91,
+              0.0
+            ],
+            [
+              11.91,
+              3.91,
+              6.346666666666667
+            ]
+          ],
+          "brep_faces": 21,
+          "analytic_volume_mm3": 857.7642727160134,
+          "grid_cells_checked": 3
+        }
+      },
+      "p8-4x1": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 1145.8815529546841,
+        "bounds_mm": [
+          [
+            -15.91,
+            -3.91,
+            0.0
+          ],
+          [
+            15.91,
+            3.91,
+            6.346666666666667
+          ]
+        ],
+        "brep_faces": 26,
+        "step": "bricks/p8-4x1.step",
+        "stl": "bricks/p8-4x1.stl",
+        "mesh_vertices": 728,
+        "mesh_faces": 1452,
+        "mesh_volume_mm3": 1145.9761032483025,
+        "parameters": "Parameters_p8_4x1",
+        "final": "Parameters_p8_4x1_Final",
+        "check": {
+          "valid": true,
+          "solid_count": 1,
+          "volume_mm3": 1145.8815529546841,
+          "bounds_mm": [
+            [
+              -15.91,
+              -3.91,
+              0.0
+            ],
+            [
+              15.91,
+              3.91,
+              6.346666666666667
+            ]
+          ],
+          "brep_faces": 26,
+          "analytic_volume_mm3": 1145.8815529546844,
+          "grid_cells_checked": 4
+        }
+      },
+      "p8-2x2": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 1152.6207529546841,
+        "bounds_mm": [
+          [
+            -7.91,
+            -7.91,
+            0.0
+          ],
+          [
+            7.91,
+            7.91,
+            6.346666666666667
+          ]
+        ],
+        "brep_faces": 26,
+        "step": "bricks/p8-2x2.step",
+        "stl": "bricks/p8-2x2.stl",
+        "mesh_vertices": 728,
+        "mesh_faces": 1452,
+        "mesh_volume_mm3": 1152.7152414942723,
+        "parameters": "Parameters_p8_2x2",
+        "final": "Parameters_p8_2x2_Final",
+        "check": {
+          "valid": true,
+          "solid_count": 1,
+          "volume_mm3": 1152.6207529546841,
+          "bounds_mm": [
+            [
+              -7.91,
+              -7.91,
+              0.0
+            ],
+            [
+              7.91,
+              7.91,
+              6.346666666666667
+            ]
+          ],
+          "brep_faces": 26,
+          "analytic_volume_mm3": 1152.6207529546846,
+          "grid_cells_checked": 4
+        }
+      },
+      "p8-3x2": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 1735.5945134320255,
+        "bounds_mm": [
+          [
+            -11.91,
+            -7.91,
+            0.0
+          ],
+          [
+            11.91,
+            7.91,
+            6.346666666666667
+          ]
+        ],
+        "brep_faces": 36,
+        "step": "bricks/p8-3x2.step",
+        "stl": "bricks/p8-3x2.stl",
+        "mesh_vertices": 1088,
+        "mesh_faces": 2172,
+        "mesh_volume_mm3": 1735.7362595757377,
+        "parameters": "Parameters_p8_3x2",
+        "final": "Parameters_p8_3x2_Final",
+        "check": {
+          "valid": true,
+          "solid_count": 1,
+          "volume_mm3": 1735.5945134320255,
+          "bounds_mm": [
+            [
+              -11.91,
+              -7.91,
+              0.0
+            ],
+            [
+              11.91,
+              7.91,
+              6.346666666666667
+            ]
+          ],
+          "brep_faces": 36,
+          "analytic_volume_mm3": 1735.5945134320266,
+          "grid_cells_checked": 6
+        }
+      },
+      "p8-4x2": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 2318.56827390937,
+        "bounds_mm": [
+          [
+            -15.91,
+            -7.91,
+            0.0
+          ],
+          [
+            15.91,
+            7.91,
+            6.346666666666667
+          ]
+        ],
+        "brep_faces": 46,
+        "step": "bricks/p8-4x2.step",
+        "stl": "bricks/p8-4x2.stl",
+        "mesh_vertices": 1448,
+        "mesh_faces": 2892,
+        "mesh_volume_mm3": 2318.7572756576824,
+        "parameters": "Parameters_p8_4x2",
+        "final": "Parameters_p8_4x2_Final",
+        "check": {
+          "valid": true,
+          "solid_count": 1,
+          "volume_mm3": 2318.56827390937,
+          "bounds_mm": [
+            [
+              -15.91,
+              -7.91,
+              0.0
+            ],
+            [
+              15.91,
+              7.91,
+              6.346666666666667
+            ]
+          ],
+          "brep_faces": 46,
+          "analytic_volume_mm3": 2318.568273909369,
+          "grid_cells_checked": 8
+        }
+      },
+      "p6-1x1": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 115.22798209210552,
+        "bounds_mm": [
+          [
+            -2.91,
+            -2.91,
+            0.0
+          ],
+          [
+            2.91,
+            2.91,
+            4.73
+          ]
+        ],
+        "brep_faces": 11,
+        "step": "bricks/p6-1x1.step",
+        "stl": "bricks/p6-1x1.stl",
+        "mesh_vertices": 188,
+        "mesh_faces": 372,
+        "mesh_volume_mm3": 115.24141284385958,
+        "parameters": "Parameters_p6_1x1",
+        "final": "Parameters_p6_1x1_Final",
+        "check": {
+          "valid": true,
+          "solid_count": 1,
+          "volume_mm3": 115.22798209210552,
+          "bounds_mm": [
+            [
+              -2.91,
+              -2.91,
+              0.0
+            ],
+            [
+              2.91,
+              2.91,
+              4.73
+            ]
+          ],
+          "brep_faces": 11,
+          "analytic_volume_mm3": 115.22798209210553,
+          "grid_cells_checked": 1
+        }
+      },
+      "p6-2x1": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 234.101612184211,
+        "bounds_mm": [
+          [
+            -5.91,
+            -2.91,
+            0.0
+          ],
+          [
+            5.91,
+            2.91,
+            4.73
+          ]
+        ],
+        "brep_faces": 16,
+        "step": "bricks/p6-2x1.step",
+        "stl": "bricks/p6-2x1.stl",
+        "mesh_vertices": 368,
+        "mesh_faces": 732,
+        "mesh_volume_mm3": 234.1284615315806,
+        "parameters": "Parameters_p6_2x1",
+        "final": "Parameters_p6_2x1_Final",
+        "check": {
+          "valid": true,
+          "solid_count": 1,
+          "volume_mm3": 234.101612184211,
+          "bounds_mm": [
+            [
+              -5.91,
+              -2.91,
+              0.0
+            ],
+            [
+              5.91,
+              2.91,
+              4.73
+            ]
+          ],
+          "brep_faces": 16,
+          "analytic_volume_mm3": 234.101612184211,
+          "grid_cells_checked": 2
+        }
+      },
+      "p6-3x1": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 352.9752422763165,
+        "bounds_mm": [
+          [
+            -8.91,
+            -2.91,
+            0.0
+          ],
+          [
+            8.91,
+            2.91,
+            4.73
+          ]
+        ],
+        "brep_faces": 21,
+        "step": "bricks/p6-3x1.step",
+        "stl": "bricks/p6-3x1.stl",
+        "mesh_vertices": 548,
+        "mesh_faces": 1092,
+        "mesh_volume_mm3": 353.01552041820565,
+        "parameters": "Parameters_p6_3x1",
+        "final": "Parameters_p6_3x1_Final",
+        "check": {
+          "valid": true,
+          "solid_count": 1,
+          "volume_mm3": 352.9752422763165,
+          "bounds_mm": [
+            [
+              -8.91,
+              -2.91,
+              0.0
+            ],
+            [
+              8.91,
+              2.91,
+              4.73
+            ]
+          ],
+          "brep_faces": 21,
+          "analytic_volume_mm3": 352.9752422763165,
+          "grid_cells_checked": 3
+        }
+      },
+      "p6-4x1": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 471.8488723684221,
+        "bounds_mm": [
+          [
+            -11.91,
+            -2.91,
+            0.0
+          ],
+          [
+            11.91,
+            2.91,
+            4.73
+          ]
+        ],
+        "brep_faces": 26,
+        "step": "bricks/p6-4x1.step",
+        "stl": "bricks/p6-4x1.stl",
+        "mesh_vertices": 728,
+        "mesh_faces": 1452,
+        "mesh_volume_mm3": 471.90257710570563,
+        "parameters": "Parameters_p6_4x1",
+        "final": "Parameters_p6_4x1_Final",
+        "check": {
+          "valid": true,
+          "solid_count": 1,
+          "volume_mm3": 471.8488723684221,
+          "bounds_mm": [
+            [
+              -11.91,
+              -2.91,
+              0.0
+            ],
+            [
+              11.91,
+              2.91,
+              4.73
+            ]
+          ],
+          "brep_faces": 26,
+          "analytic_volume_mm3": 471.8488723684221,
+          "grid_cells_checked": 4
+        }
+      },
+      "p6-2x2": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 475.6072723684221,
+        "bounds_mm": [
+          [
+            -5.91,
+            -5.91,
+            0.0
+          ],
+          [
+            5.91,
+            5.91,
+            4.73
+          ]
+        ],
+        "brep_faces": 26,
+        "step": "bricks/p6-2x2.step",
+        "stl": "bricks/p6-2x2.stl",
+        "mesh_vertices": 728,
+        "mesh_faces": 1452,
+        "mesh_volume_mm3": 475.6609459201716,
+        "parameters": "Parameters_p6_2x2",
+        "final": "Parameters_p6_2x2_Final",
+        "check": {
+          "valid": true,
+          "solid_count": 1,
+          "volume_mm3": 475.6072723684221,
+          "bounds_mm": [
+            [
+              -5.91,
+              -5.91,
+              0.0
+            ],
+            [
+              5.91,
+              5.91,
+              4.73
+            ]
+          ],
+          "brep_faces": 26,
+          "analytic_volume_mm3": 475.60727236842206,
+          "grid_cells_checked": 4
+        }
+      },
+      "p6-3x2": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 717.1129325526331,
+        "bounds_mm": [
+          [
+            -8.91,
+            -5.91,
+            0.0
+          ],
+          [
+            8.91,
+            5.91,
+            4.73
+          ]
+        ],
+        "brep_faces": 36,
+        "step": "bricks/p6-3x2.step",
+        "stl": "bricks/p6-3x2.stl",
+        "mesh_vertices": 1088,
+        "mesh_faces": 2172,
+        "mesh_volume_mm3": 717.193451013477,
+        "parameters": "Parameters_p6_3x2",
+        "final": "Parameters_p6_3x2_Final",
+        "check": {
+          "valid": true,
+          "solid_count": 1,
+          "volume_mm3": 717.1129325526331,
+          "bounds_mm": [
+            [
+              -8.91,
+              -5.91,
+              0.0
+            ],
+            [
+              8.91,
+              5.91,
+              4.73
+            ]
+          ],
+          "brep_faces": 36,
+          "analytic_volume_mm3": 717.1129325526331,
+          "grid_cells_checked": 6
+        }
+      },
+      "p6-4x2": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 958.6185927368433,
+        "bounds_mm": [
+          [
+            -11.91,
+            -5.91,
+            0.0
+          ],
+          [
+            11.91,
+            5.91,
+            4.73
+          ]
+        ],
+        "brep_faces": 46,
+        "step": "bricks/p6-4x2.step",
+        "stl": "bricks/p6-4x2.stl",
+        "mesh_vertices": 1448,
+        "mesh_faces": 2892,
+        "mesh_volume_mm3": 958.7259516990254,
+        "parameters": "Parameters_p6_4x2",
+        "final": "Parameters_p6_4x2_Final",
+        "check": {
+          "valid": true,
+          "solid_count": 1,
+          "volume_mm3": 958.6185927368433,
+          "bounds_mm": [
+            [
+              -11.91,
+              -5.91,
+              0.0
+            ],
+            [
+              11.91,
+              5.91,
+              4.73
+            ]
+          ],
+          "brep_faces": 46,
+          "analytic_volume_mm3": 958.6185927368442,
+          "grid_cells_checked": 8
+        }
+      },
+      "p4-1x1": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 32.05662097231274,
+        "bounds_mm": [
+          [
+            -1.91,
+            -1.91,
+            0.0
+          ],
+          [
+            1.91,
+            1.91,
+            3.1133333333333333
+          ]
+        ],
+        "brep_faces": 11,
+        "step": "bricks/p4-1x1.step",
+        "stl": "bricks/p4-1x1.stl",
+        "mesh_vertices": 188,
+        "mesh_faces": 372,
+        "mesh_volume_mm3": 32.06277392676237,
+        "parameters": "Parameters_p4_1x1",
+        "final": "Parameters_p4_1x1_Final",
+        "check": {
+          "valid": true,
+          "solid_count": 1,
+          "volume_mm3": 32.05662097231274,
+          "bounds_mm": [
+            [
+              -1.91,
+              -1.91,
+              0.0
+            ],
+            [
+              1.91,
+              1.91,
+              3.1133333333333333
+            ]
+          ],
+          "brep_faces": 11,
+          "analytic_volume_mm3": 32.05662097231274,
+          "grid_cells_checked": 1
+        }
+      },
+      "p4-2x1": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 65.6809699446255,
+        "bounds_mm": [
+          [
+            -3.91,
+            -1.91,
+            0.0
+          ],
+          [
+            3.91,
+            1.91,
+            3.1133333333333333
+          ]
+        ],
+        "brep_faces": 16,
+        "step": "bricks/p4-2x1.step",
+        "stl": "bricks/p4-2x1.stl",
+        "mesh_vertices": 368,
+        "mesh_faces": 732,
+        "mesh_volume_mm3": 65.69327829232897,
+        "parameters": "Parameters_p4_2x1",
+        "final": "Parameters_p4_2x1_Final",
+        "check": {
+          "valid": true,
+          "solid_count": 1,
+          "volume_mm3": 65.6809699446255,
+          "bounds_mm": [
+            [
+              -3.91,
+              -1.91,
+              0.0
+            ],
+            [
+              3.91,
+              1.91,
+              3.1133333333333333
+            ]
+          ],
+          "brep_faces": 16,
+          "analytic_volume_mm3": 65.68096994462549,
+          "grid_cells_checked": 2
+        }
+      },
+      "p4-3x1": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 99.30531891693823,
+        "bounds_mm": [
+          [
+            -5.91,
+            -1.91,
+            0.0
+          ],
+          [
+            5.91,
+            1.91,
+            3.1133333333333333
+          ]
+        ],
+        "brep_faces": 21,
+        "step": "bricks/p4-3x1.step",
+        "stl": "bricks/p4-3x1.stl",
+        "mesh_vertices": 548,
+        "mesh_faces": 1092,
+        "mesh_volume_mm3": 99.32377648302379,
+        "parameters": "Parameters_p4_3x1",
+        "final": "Parameters_p4_3x1_Final",
+        "check": {
+          "valid": true,
+          "solid_count": 1,
+          "volume_mm3": 99.30531891693823,
+          "bounds_mm": [
+            [
+              -5.91,
+              -1.91,
+              0.0
+            ],
+            [
+              5.91,
+              1.91,
+              3.1133333333333333
+            ]
+          ],
+          "brep_faces": 21,
+          "analytic_volume_mm3": 99.30531891693822,
+          "grid_cells_checked": 3
+        }
+      },
+      "p4-4x1": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 132.92966788925094,
+        "bounds_mm": [
+          [
+            -7.91,
+            -1.91,
+            0.0
+          ],
+          [
+            7.91,
+            1.91,
+            3.1133333333333333
+          ]
+        ],
+        "brep_faces": 26,
+        "step": "bricks/p4-4x1.step",
+        "stl": "bricks/p4-4x1.stl",
+        "mesh_vertices": 728,
+        "mesh_faces": 1452,
+        "mesh_volume_mm3": 132.95427851961782,
+        "parameters": "Parameters_p4_4x1",
+        "final": "Parameters_p4_4x1_Final",
+        "check": {
+          "valid": true,
+          "solid_count": 1,
+          "volume_mm3": 132.92966788925094,
+          "bounds_mm": [
+            [
+              -7.91,
+              -1.91,
+              0.0
+            ],
+            [
+              7.91,
+              1.91,
+              3.1133333333333333
+            ]
+          ],
+          "brep_faces": 26,
+          "analytic_volume_mm3": 132.92966788925096,
+          "grid_cells_checked": 4
+        }
+      },
+      "p4-2x2": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 134.57126788925098,
+        "bounds_mm": [
+          [
+            -3.91,
+            -3.91,
+            0.0
+          ],
+          [
+            3.91,
+            3.91,
+            3.1133333333333333
+          ]
+        ],
+        "brep_faces": 26,
+        "step": "bricks/p4-2x2.step",
+        "stl": "bricks/p4-2x2.stl",
+        "mesh_vertices": 728,
+        "mesh_faces": 1452,
+        "mesh_volume_mm3": 134.5958897083934,
+        "parameters": "Parameters_p4_2x2",
+        "final": "Parameters_p4_2x2_Final",
+        "check": {
+          "valid": true,
+          "solid_count": 1,
+          "volume_mm3": 134.57126788925098,
+          "bounds_mm": [
+            [
+              -3.91,
+              -3.91,
+              0.0
+            ],
+            [
+              3.91,
+              3.91,
+              3.1133333333333333
+            ]
+          ],
+          "brep_faces": 26,
+          "analytic_volume_mm3": 134.57126788925098,
+          "grid_cells_checked": 4
+        }
+      },
+      "p4-3x2": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 203.46156583387642,
+        "bounds_mm": [
+          [
+            -5.91,
+            -3.91,
+            0.0
+          ],
+          [
+            5.91,
+            3.91,
+            3.1133333333333333
+          ]
+        ],
+        "brep_faces": 36,
+        "step": "bricks/p4-3x2.step",
+        "stl": "bricks/p4-3x2.stl",
+        "mesh_vertices": 1088,
+        "mesh_faces": 2172,
+        "mesh_volume_mm3": 203.4984884766951,
+        "parameters": "Parameters_p4_3x2",
+        "final": "Parameters_p4_3x2_Final",
+        "check": {
+          "valid": true,
+          "solid_count": 1,
+          "volume_mm3": 203.46156583387642,
+          "bounds_mm": [
+            [
+              -5.91,
+              -3.91,
+              0.0
+            ],
+            [
+              5.91,
+              3.91,
+              3.1133333333333333
+            ]
+          ],
+          "brep_faces": 36,
+          "analytic_volume_mm3": 203.46156583387645,
+          "grid_cells_checked": 6
+        }
+      },
+      "p4-4x2": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 272.3518637785021,
+        "bounds_mm": [
+          [
+            -7.91,
+            -3.91,
+            0.0
+          ],
+          [
+            7.91,
+            3.91,
+            3.1133333333333333
+          ]
+        ],
+        "brep_faces": 46,
+        "step": "bricks/p4-4x2.step",
+        "stl": "bricks/p4-4x2.stl",
+        "mesh_vertices": 1448,
+        "mesh_faces": 2892,
+        "mesh_volume_mm3": 272.4010951369615,
+        "parameters": "Parameters_p4_4x2",
+        "final": "Parameters_p4_4x2_Final",
+        "check": {
+          "valid": true,
+          "solid_count": 1,
+          "volume_mm3": 272.3518637785021,
+          "bounds_mm": [
+            [
+              -7.91,
+              -3.91,
+              0.0
+            ],
+            [
+              7.91,
+              3.91,
+              3.1133333333333333
+            ]
+          ],
+          "brep_faces": 46,
+          "analytic_volume_mm3": 272.3518637785019,
+          "grid_cells_checked": 8
+        }
+      }
+    }
+  },
+  "coupon": {
+    "file": "coupon.FCStd",
+    "final_solid_count": 5,
+    "document_object_count": 94,
+    "parts": {
+      "receiver": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 939.7258399163181,
+        "bounds_mm": [
+          [
+            -11.91,
+            -5.91,
+            0.0
+          ],
+          [
+            11.91,
+            5.91,
+            3.78
+          ]
+        ],
+        "brep_faces": 34,
+        "step": "coupons/receiver.step",
+        "stl": "coupons/receiver.stl",
+        "mesh_vertices": 1016,
+        "mesh_faces": 2028,
+        "mesh_volume_mm3": 939.9289642142627,
+        "parameters": "CouponReceiver",
+        "final": "CouponReceiver_Final"
+      },
+      "male-key-01": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 247.23464757346142,
+        "bounds_mm": [
+          [
+            -2.91,
+            -5.91,
+            0.0
+          ],
+          [
+            2.91,
+            5.91,
+            4.73
+          ]
+        ],
+        "brep_faces": 11,
+        "step": "coupons/male-key-01.step",
+        "stl": "coupons/male-key-01.stl",
+        "mesh_vertices": 188,
+        "mesh_faces": 372,
+        "mesh_volume_mm3": 247.19492224744553,
+        "parameters": "CouponKey01",
+        "final": "CouponKey01_Final"
+      },
+      "male-key-02": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 247.4702670224806,
+        "bounds_mm": [
+          [
+            -2.91,
+            -5.91,
+            0.0
+          ],
+          [
+            2.91,
+            5.91,
+            4.73
+          ]
+        ],
+        "brep_faces": 13,
+        "step": "coupons/male-key-02.step",
+        "stl": "coupons/male-key-02.stl",
+        "mesh_vertices": 260,
+        "mesh_faces": 516,
+        "mesh_volume_mm3": 247.42934726193394,
+        "parameters": "CouponKey02",
+        "final": "CouponKey02_Final"
+      },
+      "male-key-03": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 247.70588647149992,
+        "bounds_mm": [
+          [
+            -2.91,
+            -5.91,
+            0.0
+          ],
+          [
+            2.91,
+            5.91,
+            4.73
+          ]
+        ],
+        "brep_faces": 15,
+        "step": "coupons/male-key-03.step",
+        "stl": "coupons/male-key-03.stl",
+        "mesh_vertices": 332,
+        "mesh_faces": 660,
+        "mesh_volume_mm3": 247.66377227323218,
+        "parameters": "CouponKey03",
+        "final": "CouponKey03_Final"
+      },
+      "male-key-04": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 247.94150592051912,
+        "bounds_mm": [
+          [
+            -2.91,
+            -5.91,
+            0.0
+          ],
+          [
+            2.91,
+            5.91,
+            4.73
+          ]
+        ],
+        "brep_faces": 17,
+        "step": "coupons/male-key-04.step",
+        "stl": "coupons/male-key-04.stl",
+        "mesh_vertices": 404,
+        "mesh_faces": 804,
+        "mesh_volume_mm3": 247.89819729416797,
+        "parameters": "CouponKey04",
+        "final": "CouponKey04_Final"
+      }
+    }
+  }
+}

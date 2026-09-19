@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mona・Copilot・Duckyのブリック試作公開アーカイブ。候補9種、選定3種、組立ビューア、Blender・FreeCAD・BOMと初回印刷の改善記録。">
+  <meta name="theme-color" content="#152f46">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Octoprints — かたちも、試した記録も。</title>
+  <link rel="icon" href="viewer/assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+  <script type="module" src="assets/site.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">本文へ</a>
+  <header class="header wrap">
+    <a class="brand" href="./">octoprints<span>BRICK STUDY / PUBLIC ARCHIVE</span></a>
+    <nav aria-label="メイン"><a href="#candidates">候補9種</a><a href="viewer/">組立ビューア</a><a href="downloads.html">ダウンロード</a><a href="feedback.html">実物の記録</a><a href="history.html">設計の経緯</a></nav>
+  </header>
+  <div class="status-strip"><div class="wrap"><strong>試作・初回印刷で課題あり／改善検討中</strong><span>全数印刷は保留</span><a href="feedback.html">報告を読む →</a></div></div>
+  <main id="main">
+    <section class="hero wrap">
+      <div class="hero-title">
+        <p class="eyebrow">Mona / Copilot / Ducky · approximately 180 mm</p>
+        <h1>かたちも、<br>試した記録も。</h1>
+        <p class="hero-copy">小さなブリックを、ひとつずつ組み立てる。<br>9つの候補から選んだ3つのかたちと、<br class="wide-only">うまくいかなかった試作まで、ここに残します。</p>
+        <div class="actions"><a class="button primary" href="viewer/">選定3種を3Dで見る <span>↗</span></a><a class="text-link" href="downloads.html">制作データを探す →</a></div>
+        <p class="quiet">P1S / PLAを想定した非商用の検討資料。製造用キットではありません。</p>
+      </div>
+      <div class="specimen-strip" aria-label="選定r2の実生成画像">
+        <article class="specimen mona">
+          <div class="specimen-top"><span>MONA</span><span>r2 / 4 mm</span></div>
+          <a class="image-link" href="artifacts/selected/r2-20260919/mona-fine/preview.png" data-lightbox data-caption="Mona Fine · r2-20260919 · 13,434部品 / 180.71 mm。外観基準のみ選択済み。">
+            <img src="assets/thumbs/selected-mona-fine.webp" width="640" height="640" alt="Mona Fine 4 mm、選定r2の実生成レンダー" fetchpriority="high"><span class="zoom-hint">画像を拡大 ＋</span>
+          </a>
+          <h2>Mona <small>Fine / C</small></h2><p><strong>13,434</strong> 部品 <span>180.71 mm</span></p>
+          <a class="specimen-link" href="viewer/?candidate=mona-fine">組立候補・部品IDを見る ↗</a>
+        </article>
+        <article class="specimen copilot">
+          <div class="specimen-top"><span>COPILOT</span><span>r2 / 8 mm</span></div>
+          <a class="image-link" href="artifacts/selected/r2-20260919/copilot-chunky/preview.png" data-lightbox data-caption="Copilot Chunky · r2-20260919 · 3,021部品 / 183.95 mm。外観基準のみ選択済み。">
+            <img src="assets/thumbs/selected-copilot-chunky.webp" width="640" height="640" alt="Copilot Chunky 8 mm、選定r2の実生成レンダー"><span class="zoom-hint">画像を拡大 ＋</span>
+          </a>
+          <h2>Copilot <small>Chunky / A</small></h2><p><strong>3,021</strong> 部品 <span>183.95 mm</span></p>
+          <a class="specimen-link" href="viewer/?candidate=copilot-chunky">組立候補・部品IDを見る ↗</a>
+        </article>
+        <article class="specimen ducky">
+          <div class="specimen-top"><span>DUCKY</span><span>r2 / 4 mm</span></div>
+          <a class="image-link" href="artifacts/selected/r2-20260919/ducky-fine/preview.png" data-lightbox data-caption="Ducky Fine · r2-20260919 · 10,311部品 / 180.71 mm。外観基準のみ選択済み。">
+            <img src="assets/thumbs/selected-ducky-fine.webp" width="640" height="640" alt="Ducky Fine 4 mm、選定r2の実生成レンダー"><span class="zoom-hint">画像を拡大 ＋</span>
+          </a>
+          <h2>Ducky <small>Fine / C</small></h2><p><strong>10,311</strong> 部品 <span>180.71 mm</span></p>
+          <a class="specimen-link" href="viewer/?candidate=ducky-fine">組立候補・部品IDを見る ↗</a>
+        </article>
+      </div>
+      <p class="specimen-caption">選定後の接合部試作 <span class="mono">r2-20260919</span>。合計26,766個の個別IDが236種類のネイティブ形状を共有しています。分割の組み替えで継ぎ目は変化しており、Phase1と画素単位で同一ではありません。</p>
+    </section>
+
+    <section class="wrap section" id="selected-media">
+      <div class="section-heading"><div><p class="eyebrow">SELECTED / r2-20260919</p><h2>一周して見る。<br class="mobile-only">一部品まで見る。</h2></div><p>完成形・分解・積層・順序候補を切り替え、部品をクリック。<br>このビューアは閲覧専用です。CAD実行やプリンター接続はしません。</p></div>
+      <div class="viewer-callout"><div class="layer-mark" aria-hidden="true"><span></span><span></span><span></span></div><div><h3>組立ビューアを開く</h3><p>回転 / 視点 / 部品ID / 色・型別BOM / 3案切替</p></div><a class="button primary" href="viewer/">操作して見る ↗</a></div>
+      <details class="media-disclosure"><summary>選定r2のターンテーブル動画を見る <span>3本・実生成・無音</span></summary><div id="selected-videos" class="video-grid"></div></details>
+    </section>
+
+    <section class="candidate-section" id="candidates">
+      <div class="wrap section">
+        <div class="section-heading"><div><p class="eyebrow">PHASE 1 / CANDIDATE MATRIX</p><h2>9つの候補を、<br>同じ目線で。</h2></div><div><p>粗さの比較に使った当時の画像と部品数。<br>現在のr2・物理嵌合の検証結果とは区別しています。</p><a class="text-link" href="artifacts/phase1/contact-sheet.jpg">9案の比較シートを開く ↗</a></div></div>
+        <div class="matrix-labels" aria-hidden="true"><span>A / Chunky <b>8 mm</b><small>層高4.8 mm</small></span><span>B / Balanced <b>6 mm</b><small>層高3.6 mm</small></span><span>C / Fine <b>4 mm</b><small>層高2.4 mm</small></span></div>
+        <div id="candidate-matrix" aria-live="polite"><p class="loading">候補の記録を読み込んでいます。</p></div>
+        <div id="media-error" class="error" role="alert" hidden></div>
+        <p class="quiet">細かいほど組み立てやすい、精度が高い、という意味ではありません。高さはいずれも設計上の値です。</p>
+        <details class="media-disclosure"><summary>Phase1のBalanced動画を見る <span>6 mm・履歴の3本</span></summary><p>この3本は選定Fine / Chunkyやr2の動画ではありません。</p><div id="history-videos" class="video-grid"></div></details>
+      </div>
+    </section>
+
+    <section class="wrap section" id="downloads">
+      <div class="section-heading"><div><p class="eyebrow">FILES / NATIVE + EXCHANGE</p><h2>画像だけでなく、<br>制作データごと。</h2></div><p>Blender、FreeCAD、STEP / STL / 3MF、配置とBOM。<br>版とピッチを分け、個別ファイルのサイズ・SHA-256を公開しています。</p></div>
+      <div class="download-teasers">
+        <a class="download-tile" href="downloads.html?group=selected"><span class="file-label">r2 / SELECTED</span><h3>選定3種の制作物</h3><p>3つのBlenderシーン、236型のCAD、組立ID・BOM・動画。</p><span>ファイルを探す →</span></a>
+        <a class="download-tile" href="downloads.html?group=trial"><span class="file-label">4 mm + 8 mm / NOT_SLICED</span><h3>試験片と補助具</h3><p>各11部品の形状データ。保持力・耐久性・スライス条件は未確定。</p><span>履歴を確認する →</span></a>
+        <a class="download-tile" href="downloads.html?group=phase1"><span class="file-label">PHASE 1 / HISTORICAL</span><h3>候補9種と旧CAD</h3><p>9つのシーン、21基本型、歴史的な6 mm嵌合クーポン5個。</p><span>旧版を探す →</span></a>
+      </div>
+      <p class="note"><strong>FreeCADはZIPを展開してから。</strong>組立FCStdは同じパッケージ内の部品ライブラリーを相対参照します。フォルダー構成を変えずに開いてください。すべて試作・<strong>NOT_SLICED</strong>です。</p>
+      <p class="legacy-links">従来の4 mm・11部品は変更せず保存：<a href="p4-trial-11-parts.3mf" download>形状3MF</a> / <a href="p4-trial-11-parts.stl" download>STL</a> <span>両方を同じプレートに重ねて読み込まないでください。</span></p>
+    </section>
+
+    <section class="feedback-section" id="feedback"><div class="wrap section feedback-feature">
+      <a href="feedback.html" class="feedback-photo"><img src="feedback/2026-09-19/media/photo-01.jpg" width="2000" height="1506" alt="提供された初回試作の実物写真。印刷プレート上の小型試験片" loading="lazy"><span>実物フィードバック / 2026-09-19</span></a>
+      <div><p class="eyebrow">PHYSICAL TRIAL / ISSUES REPORTED</p><h2>試してわかった、<br>次に直すこと。</h2><blockquote>「小さくて作りにくい」<br>「穴がプラスチックで埋まっている」</blockquote><p>細かさだけでは、組み立てやすさにつながりませんでした。穴詰まりは<strong>超音波洗浄の前から</strong>起きていた、という追加報告も記録しています。原因はまだ特定していません。</p><p>0.2 mmノズル装着は事前に確認。実際のプロファイル・層高・材料銘柄や、条件別の保持力は未確定です。</p><a class="button secondary" href="feedback.html">写真10枚・動画・報告を読む →</a></div>
+    </div></section>
+
+    <section class="wrap section" id="history">
+      <div class="section-heading"><div><p class="eyebrow">DESIGN HISTORY / OPEN QUESTIONS</p><h2>次は、「持ちやすさ」から。</h2></div><a class="text-link" href="history.html">変更と検証範囲を読む →</a></div>
+      <div class="history-grid"><p class="large-copy">外観の細かさと、<br>手に持つ一部品の大きさを、<br><strong>別々に考える。</strong></p><div><p>LEGOのstud-and-tubeの原理を参考に、およそ8 mmピッチの2×2・2×4・1×2など、手でつかめる共通ブロックを中心にする方向を話し合っています。細部はプレート等で補う考え方です。</p><p><strong>新しい設計案は未採用です。</strong>約180 mmの外観の厳密な維持、市販LEGO互換、FDMでの成形・保持力は、まだ保証できません。この公開のために新しいCADや印刷データは生成していません。</p></div></div>
+    </section>
+  </main>
+  <footer class="footer wrap"><div><a class="brand" href="./">octoprints<span>制作物と、改善の記録を公開。</span></a><p>原型：martinwoodward/octoprints contributors · <a href="ATTRIBUTION.md">出典・改変の明示</a><br>モデル：<a href="LICENSE">CC BY-NC 4.0</a> / 写真・実物動画：提供者に権利が帰属。掲載許可は一律のCC許諾ではありません。</p></div><div><a href="https://github.com/ktanino10/octoprints-brick-kit-downloads">GitHubリポジトリ ↗</a><a href="archive/inventory.json">機械可読の全ファイル目録 ↗</a><p>GitHub / LEGOの推奨・協賛・認証や互換性を示すものではありません。<br>解析・広告・トラッキングなし。</p></div></footer>
+  <dialog id="image-dialog" aria-label="制作物の拡大画像"><button class="dialog-close" type="button" aria-label="拡大画像を閉じる">閉じる ×</button><img alt=""><p></p><a class="text-link" download>元の画像を取得 ↓</a></dialog>
+  <noscript><p class="wrap note">候補一覧の展開にはJavaScriptが必要です。<a href="artifacts/phase1/gallery.html">候補9種の静的ギャラリー</a>と<a href="artifacts/selected/r2-20260919/gallery.html">選定3種の静的ギャラリー</a>も利用できます。</p></noscript>
+</body>
+</html>

@@ -1,0 +1,387 @@
+{
+  "schema_version": 1,
+  "stage": "SELECTED_PROTOTYPE",
+  "revision": "r2-20260919",
+  "selection_url": "/design/selected-designs.json",
+  "source_history_url": "/artifacts/phase1/gallery.html",
+  "prototypes_url": "/artifacts/selected/r2-20260919/cad/prototypes.json",
+  "contact_sheet_url": "/artifacts/selected/r2-20260919/comparison.jpg",
+  "evidence_url": "/artifacts/selected/r2-20260919/evidence/geometry.json",
+  "trial_sets": [
+    {
+      "pitch_mm": 4,
+      "piece_count": 11,
+      "nozzle_recommendation_mm": 0.2,
+      "nozzle_status": "DESIGN_ASSUMPTION_NOT_SLICER_VERIFIED",
+      "material": "PLA",
+      "instructions_url": "/artifacts/selected/r2-20260919/TRIAL-GUIDE.md",
+      "native_url": "/artifacts/selected/r2-20260919/cad/trial/p4/Trial-p4.FCStd",
+      "layout_url": "/artifacts/selected/r2-20260919/cad/trial/p4/layout.json",
+      "plate_url": "/artifacts/selected/r2-20260919/cad/trial/p4/plate.3mf",
+      "plate_stl_url": "/artifacts/selected/r2-20260919/cad/trial/p4/plate.stl",
+      "plate_step_url": "/artifacts/selected/r2-20260919/cad/trial/p4/plate.step",
+      "clearance_definition": "Socket straight-bore diameter minus male straight-stem diameter; NOT radial clearance",
+      "clearances_mm": [
+        -0.05,
+        0.0,
+        0.1,
+        0.2
+      ],
+      "parts": [
+        {
+          "label": "trial-p4-receiver-01",
+          "quantity": 1,
+          "url": "/artifacts/selected/r2-20260919/cad/trial/p4/parts/trial-p4-receiver-01.stl"
+        },
+        {
+          "label": "trial-p4-receiver-02",
+          "quantity": 1,
+          "url": "/artifacts/selected/r2-20260919/cad/trial/p4/parts/trial-p4-receiver-02.stl"
+        },
+        {
+          "label": "trial-p4-receiver-03",
+          "quantity": 1,
+          "url": "/artifacts/selected/r2-20260919/cad/trial/p4/parts/trial-p4-receiver-03.stl"
+        },
+        {
+          "label": "trial-p4-receiver-04",
+          "quantity": 1,
+          "url": "/artifacts/selected/r2-20260919/cad/trial/p4/parts/trial-p4-receiver-04.stl"
+        },
+        {
+          "label": "trial-p4-male-grip",
+          "quantity": 4,
+          "url": "/artifacts/selected/r2-20260919/cad/trial/p4/parts/trial-p4-male-grip.stl"
+        },
+        {
+          "label": "trial-p4-bridge-lower",
+          "quantity": 2,
+          "url": "/artifacts/selected/r2-20260919/cad/trial/p4/parts/trial-p4-bridge-lower.stl"
+        },
+        {
+          "label": "trial-p4-bridge-upper",
+          "quantity": 1,
+          "url": "/artifacts/selected/r2-20260919/cad/trial/p4/parts/trial-p4-bridge-upper.stl"
+        }
+      ],
+      "bounds_mm": [
+        [
+          10.0,
+          10.0,
+          0.0
+        ],
+        [
+          148.02,
+          17.82,
+          3.1133333333333333
+        ]
+      ],
+      "slicer_run": false,
+      "print_time": "UNKNOWN",
+      "material_mass": "UNKNOWN",
+      "physical_fit": "UNKNOWN"
+    },
+    {
+      "pitch_mm": 8,
+      "piece_count": 11,
+      "nozzle_recommendation_mm": 0.4,
+      "nozzle_status": "DESIGN_ASSUMPTION_NOT_SLICER_VERIFIED",
+      "material": "PLA",
+      "instructions_url": "/artifacts/selected/r2-20260919/TRIAL-GUIDE.md",
+      "native_url": "/artifacts/selected/r2-20260919/cad/trial/p8/Trial-p8.FCStd",
+      "layout_url": "/artifacts/selected/r2-20260919/cad/trial/p8/layout.json",
+      "plate_url": "/artifacts/selected/r2-20260919/cad/trial/p8/plate.3mf",
+      "plate_stl_url": "/artifacts/selected/r2-20260919/cad/trial/p8/plate.stl",
+      "plate_step_url": "/artifacts/selected/r2-20260919/cad/trial/p8/plate.step",
+      "clearance_definition": "Socket straight-bore diameter minus male straight-stem diameter; NOT radial clearance",
+      "clearances_mm": [
+        -0.05,
+        0.0,
+        0.1,
+        0.2
+      ],
+      "parts": [
+        {
+          "label": "trial-p8-receiver-01",
+          "quantity": 1,
+          "url": "/artifacts/selected/r2-20260919/cad/trial/p8/parts/trial-p8-receiver-01.stl"
+        },
+        {
+          "label": "trial-p8-receiver-02",
+          "quantity": 1,
+          "url": "/artifacts/selected/r2-20260919/cad/trial/p8/parts/trial-p8-receiver-02.stl"
+        },
+        {
+          "label": "trial-p8-receiver-03",
+          "quantity": 1,
+          "url": "/artifacts/selected/r2-20260919/cad/trial/p8/parts/trial-p8-receiver-03.stl"
+        },
+        {
+          "label": "trial-p8-receiver-04",
+          "quantity": 1,
+          "url": "/artifacts/selected/r2-20260919/cad/trial/p8/parts/trial-p8-receiver-04.stl"
+        },
+        {
+          "label": "trial-p8-male-grip",
+          "quantity": 4,
+          "url": "/artifacts/selected/r2-20260919/cad/trial/p8/parts/trial-p8-male-grip.stl"
+        },
+        {
+          "label": "trial-p8-bridge-lower",
+          "quantity": 2,
+          "url": "/artifacts/selected/r2-20260919/cad/trial/p8/parts/trial-p8-bridge-lower.stl"
+        },
+        {
+          "label": "trial-p8-bridge-upper",
+          "quantity": 1,
+          "url": "/artifacts/selected/r2-20260919/cad/trial/p8/parts/trial-p8-bridge-upper.stl"
+        }
+      ],
+      "bounds_mm": [
+        [
+          10.0,
+          10.0,
+          0.0
+        ],
+        [
+          228.56,
+          37.64,
+          6.466666666666667
+        ]
+      ],
+      "slicer_run": false,
+      "print_time": "UNKNOWN",
+      "material_mass": "UNKNOWN",
+      "physical_fit": "UNKNOWN"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "mona-fine",
+      "character": "mona",
+      "style": "fine",
+      "label": "選択済み基準 / 接合部試作",
+      "pitch_mm": 4.0,
+      "layer_mm": 2.4,
+      "manifest_url": "/artifacts/selected/r2-20260919/mona-fine/manifest.json",
+      "render_url": "/artifacts/selected/r2-20260919/mona-fine/preview.png",
+      "blend_url": "/artifacts/selected/r2-20260919/mona-fine/scene.blend",
+      "video_url": "/artifacts/selected/r2-20260919/mona-fine/turntable.mp4",
+      "bom_url": "/artifacts/selected/r2-20260919/mona-fine/bom.csv",
+      "summary_bom_url": "/artifacts/selected/r2-20260919/mona-fine/bom-summary.csv",
+      "assembly_steps_url": "/artifacts/selected/r2-20260919/mona-fine/assembly-steps.csv",
+      "native_assembly_url": "/artifacts/selected/r2-20260919/cad/assemblies/mona-fine.FCStd",
+      "metrics": {
+        "part_count": 13434,
+        "cell_count": 82357,
+        "single_cell_parts": 1495,
+        "unique_types": 124,
+        "sku_count": 155,
+        "color_count": 4,
+        "layer_count": 75,
+        "height_mm": 180.71,
+        "width_mm": 211.82,
+        "depth_mm": 171.82,
+        "bounds_mm": [
+          [
+            -105.91,
+            -85.91,
+            0.0
+          ],
+          [
+            105.91,
+            85.91,
+            180.7133
+          ]
+        ],
+        "nominal_min_wall_mm": 1.21,
+        "nominal_roof_mm": 1.48,
+        "approx_build_hours": [
+          30.2,
+          60.5
+        ],
+        "build_effort_method": "Estimate only: 8-16 seconds per part plus 18-48 minutes sorting.",
+        "color_part_counts": {
+          "c0": 12234,
+          "c3": 1029,
+          "c2": 109,
+          "c1": 62
+        },
+        "baseline_part_count": 13837,
+        "part_count_delta": -403,
+        "wall_measurement_status": "PASS_NATIVE_BREP_SECTIONS",
+        "micro_stud_diameter_mm": 1.1,
+        "cad_geometry": "PROTOTYPE_NOT_FIT_VALIDATED",
+        "measured_min_wall_mm": 1.21,
+        "measured_min_roof_mm": 1.48
+      },
+      "status": {
+        "visual_selection": "BASELINE_APPROVED",
+        "physical_fit": "UNKNOWN",
+        "production_export": "BLOCKED"
+      },
+      "warnings": [
+        "外観基準のみ選択済み。接合部・組立は試作であり、実機嵌合・保持力・製造リリースは未承認です。",
+        "名目挿入経路は占有セルと鉛直方向で検査。手・工具・変形・印刷誤差を含む組立保証ではありません。",
+        "隠れた着座パッドで面の接触を用意していますが、正のクリアランスだけでは抜け止めを保証しません。",
+        "最初は選択ピッチの小型試験セットのみ。全体の部品を印刷しないでください。印刷時間・質量・スライス結果は未確認です。",
+        "4 mmの新設計は公称穴入口側壁1.21 mm・屋根1.48 mm。1.10 mmの短いPLAスタッドの破断・緩みは別問題で、0.2 mmノズルも強度を保証しません。",
+        "Monaのひげ先端7部品は先に置いた仮支持台へ上から載せ、後から上側の部品を取り付けます。保持力を実測するまで支持台を外さないでください。",
+        "部品単体の自重投影による片持ち条件 304 個、丸スタッド1本の条件 1693 個。上層からの荷重・衝撃・保持力は未検証です。"
+      ]
+    },
+    {
+      "id": "copilot-chunky",
+      "character": "copilot",
+      "style": "chunky",
+      "label": "選択済み基準 / 接合部試作",
+      "pitch_mm": 8.0,
+      "layer_mm": 4.8,
+      "manifest_url": "/artifacts/selected/r2-20260919/copilot-chunky/manifest.json",
+      "render_url": "/artifacts/selected/r2-20260919/copilot-chunky/preview.png",
+      "blend_url": "/artifacts/selected/r2-20260919/copilot-chunky/scene.blend",
+      "video_url": "/artifacts/selected/r2-20260919/copilot-chunky/turntable.mp4",
+      "bom_url": "/artifacts/selected/r2-20260919/copilot-chunky/bom.csv",
+      "summary_bom_url": "/artifacts/selected/r2-20260919/copilot-chunky/bom-summary.csv",
+      "assembly_steps_url": "/artifacts/selected/r2-20260919/copilot-chunky/assembly-steps.csv",
+      "native_assembly_url": "/artifacts/selected/r2-20260919/cad/assemblies/copilot-chunky.FCStd",
+      "metrics": {
+        "part_count": 3021,
+        "cell_count": 16399,
+        "single_cell_parts": 466,
+        "unique_types": 85,
+        "sku_count": 98,
+        "color_count": 3,
+        "layer_count": 38,
+        "height_mm": 183.95,
+        "width_mm": 247.82,
+        "depth_mm": 215.82,
+        "bounds_mm": [
+          [
+            -123.91,
+            -107.91,
+            0.0
+          ],
+          [
+            123.91,
+            107.91,
+            183.9467
+          ]
+        ],
+        "nominal_min_wall_mm": 1.843333,
+        "nominal_roof_mm": 2.813333,
+        "approx_build_hours": [
+          7.0,
+          14.2
+        ],
+        "build_effort_method": "Estimate only: 8-16 seconds per part plus 18-48 minutes sorting.",
+        "color_part_counts": {
+          "c0": 2764,
+          "c1": 234,
+          "c2": 23
+        },
+        "baseline_part_count": 3135,
+        "part_count_delta": -114,
+        "wall_measurement_status": "PASS_NATIVE_BREP_SECTIONS",
+        "micro_stud_diameter_mm": 3.7333333333333334,
+        "cad_geometry": "PROTOTYPE_NOT_FIT_VALIDATED",
+        "measured_min_wall_mm": 1.843333,
+        "measured_min_roof_mm": 2.813333
+      },
+      "status": {
+        "visual_selection": "BASELINE_APPROVED",
+        "physical_fit": "UNKNOWN",
+        "production_export": "BLOCKED"
+      },
+      "warnings": [
+        "外観基準のみ選択済み。接合部・組立は試作であり、実機嵌合・保持力・製造リリースは未承認です。",
+        "名目挿入経路は占有セルと鉛直方向で検査。手・工具・変形・印刷誤差を含む組立保証ではありません。",
+        "隠れた着座パッドで面の接触を用意していますが、正のクリアランスだけでは抜け止めを保証しません。",
+        "最初は選択ピッチの小型試験セットのみ。全体の部品を印刷しないでください。印刷時間・質量・スライス結果は未確認です。",
+        "部品単体の自重投影による片持ち条件 87 個、丸スタッド1本の条件 515 個。上層からの荷重・衝撃・保持力は未検証です。"
+      ]
+    },
+    {
+      "id": "ducky-fine",
+      "character": "ducky",
+      "style": "fine",
+      "label": "選択済み基準 / 接合部試作",
+      "pitch_mm": 4.0,
+      "layer_mm": 2.4,
+      "manifest_url": "/artifacts/selected/r2-20260919/ducky-fine/manifest.json",
+      "render_url": "/artifacts/selected/r2-20260919/ducky-fine/preview.png",
+      "blend_url": "/artifacts/selected/r2-20260919/ducky-fine/scene.blend",
+      "video_url": "/artifacts/selected/r2-20260919/ducky-fine/turntable.mp4",
+      "bom_url": "/artifacts/selected/r2-20260919/ducky-fine/bom.csv",
+      "summary_bom_url": "/artifacts/selected/r2-20260919/ducky-fine/bom-summary.csv",
+      "assembly_steps_url": "/artifacts/selected/r2-20260919/ducky-fine/assembly-steps.csv",
+      "native_assembly_url": "/artifacts/selected/r2-20260919/cad/assemblies/ducky-fine.FCStd",
+      "metrics": {
+        "part_count": 10311,
+        "cell_count": 65505,
+        "single_cell_parts": 827,
+        "unique_types": 104,
+        "sku_count": 124,
+        "color_count": 3,
+        "layer_count": 75,
+        "height_mm": 180.71,
+        "width_mm": 147.82,
+        "depth_mm": 211.82,
+        "bounds_mm": [
+          [
+            -73.91,
+            -105.91,
+            0.0
+          ],
+          [
+            73.91,
+            105.91,
+            180.7133
+          ]
+        ],
+        "nominal_min_wall_mm": 1.21,
+        "nominal_roof_mm": 1.48,
+        "approx_build_hours": [
+          23.2,
+          46.6
+        ],
+        "build_effort_method": "Estimate only: 8-16 seconds per part plus 18-48 minutes sorting.",
+        "color_part_counts": {
+          "c0": 10127,
+          "c1": 102,
+          "c2": 82
+        },
+        "baseline_part_count": 10662,
+        "part_count_delta": -351,
+        "wall_measurement_status": "PASS_NATIVE_BREP_SECTIONS",
+        "micro_stud_diameter_mm": 1.1,
+        "cad_geometry": "PROTOTYPE_NOT_FIT_VALIDATED",
+        "measured_min_wall_mm": 1.21,
+        "measured_min_roof_mm": 1.48
+      },
+      "status": {
+        "visual_selection": "BASELINE_APPROVED",
+        "physical_fit": "UNKNOWN",
+        "production_export": "BLOCKED"
+      },
+      "warnings": [
+        "外観基準のみ選択済み。接合部・組立は試作であり、実機嵌合・保持力・製造リリースは未承認です。",
+        "名目挿入経路は占有セルと鉛直方向で検査。手・工具・変形・印刷誤差を含む組立保証ではありません。",
+        "隠れた着座パッドで面の接触を用意していますが、正のクリアランスだけでは抜け止めを保証しません。",
+        "最初は選択ピッチの小型試験セットのみ。全体の部品を印刷しないでください。印刷時間・質量・スライス結果は未確認です。",
+        "4 mmの新設計は公称穴入口側壁1.21 mm・屋根1.48 mm。1.10 mmの短いPLAスタッドの破断・緩みは別問題で、0.2 mmノズルも強度を保証しません。",
+        "部品単体の自重投影による片持ち条件 287 個、丸スタッド1本の条件 1042 個。上層からの荷重・衝撃・保持力は未検証です。"
+      ]
+    }
+  ],
+  "native_cad": {
+    "fcstd_url": "/artifacts/selected/r2-20260919/cad/libraries/Selected-p4.FCStd",
+    "coupon_fcstd_url": "/artifacts/selected/r2-20260919/cad/trial/p4/Trial-p4.FCStd",
+    "step_url": "/artifacts/selected/r2-20260919/cad/trial/p4/plate.step",
+    "coupon_stl_urls": [
+      "/artifacts/selected/r2-20260919/cad/trial/p4/plate.stl",
+      "/artifacts/selected/r2-20260919/cad/trial/p8/plate.stl"
+    ],
+    "evidence_url": "/artifacts/selected/r2-20260919/cad/evidence.json"
+  }
+}

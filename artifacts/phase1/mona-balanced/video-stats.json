@@ -1,0 +1,14 @@
+{
+  "candidate_id": "mona-balanced",
+  "part_count": 4838,
+  "native_prototype_types": 7,
+  "instancer_objects": 17,
+  "evaluated_instances": 4838,
+  "ids_sha256": "cd7a101c4ee95e8b127ad45499f641746f3a8278a0a0026e64961d8069d051da",
+  "blender_version": "5.1.1",
+  "engine": "BLENDER_EEVEE",
+  "mode": "video",
+  "elapsed_seconds": 133.018,
+  "native_scene_reopened": true,
+  "physical_fit": "UNKNOWN"
+}

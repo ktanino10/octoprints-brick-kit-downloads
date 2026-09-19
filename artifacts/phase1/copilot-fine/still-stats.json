@@ -1,0 +1,14 @@
+{
+  "candidate_id": "copilot-fine",
+  "part_count": 19588,
+  "native_prototype_types": 7,
+  "instancer_objects": 15,
+  "evaluated_instances": 19588,
+  "ids_sha256": "c796446c9490eea7e2119647832ff784403db374a6129238476b3b40e677dd37",
+  "blender_version": "5.1.1",
+  "engine": "BLENDER_EEVEE",
+  "mode": "still",
+  "elapsed_seconds": 19.993,
+  "native_scene_reopened": true,
+  "physical_fit": "UNKNOWN"
+}

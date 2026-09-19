@@ -1,4 +1,41 @@
-# 4 mm接合部の小型試験セット
+# Octoprints — 制作物と、改善の公開アーカイブ
+
+**[公開サイト / GitHub Pages](https://ktanino10.github.io/octoprints-brick-kit-downloads/)** ·
+**[組立ビューア](https://ktanino10.github.io/octoprints-brick-kit-downloads/viewer/)** ·
+**[全ダウンロード](https://ktanino10.github.io/octoprints-brick-kit-downloads/downloads.html)** ·
+**[版付きZIP配布](https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/tag/archive-2026-09-19-r2)**
+
+Mona・Copilot・Duckyを約180 mmの独立ブリックで組み立てる、非商用の試作記録です。
+**試作・初回印刷で課題あり／改善検討中。全数印刷は保留しています。**
+実際に部品は印刷されましたが、扱いにくさと穴詰まりが報告されています。
+物理嵌合・保持力・全体組立の合格を意味しません。配布する形状はすべて **NOT_SLICED** です。
+
+| 区分 | 保存した制作物 |
+|---|---|
+| Phase1候補 | 3キャラクター×3段階、画像9枚・Blender 9シーン・Balanced動画3本・個別/集計BOM・配置 |
+| 選定r2 | Mona Fine 4 mm / Copilot Chunky 8 mm / Ducky Fine 4 mm。画像3枚・Blender 3シーン・動画3本・BOM・組立候補・部品ID |
+| ネイティブCAD | r2は26,766個の個別IDが236種類の形状を共有。FreeCAD共有ライブラリー2冊・組立3体・型別STEP/STL。旧版は21基本型と6 mmクーポン5個 |
+| 試験・補助具 | 4 mm・8 mm各11部品の3MF/STL/STEP・FreeCAD・配置・記録CSV、Monaの左右ひげ受け台。従来の4 mm配布2ファイルは変更なし |
+| 実物フィードバック | メタデータ除去済み写真10枚、無音動画2本と正順に結合した1本、課題と改善検討の記録 |
+
+選定r2の部品数は **Mona 13,434 / Copilot 3,021 / Ducky 10,311**。
+外観基準の選定と、製造承認は別です。組み替えで継ぎ目は変わり、Phase1との画素単位の一致は主張しません。
+
+- [候補9種の静的画像一覧](artifacts/phase1/gallery.html) / [選定r2の画像・動画](artifacts/selected/r2-20260919/gallery.html)
+- [実物の写真・動画・報告](feedback/2026-09-19/README.md) / [読みやすい公開ページ](https://ktanino10.github.io/octoprints-brick-kit-downloads/feedback.html)
+- [設計の経緯と未解決の条件](https://ktanino10.github.io/octoprints-brick-kit-downloads/history.html)
+- [全ファイル目録・サイズ・SHA-256](archive/inventory.json) / [ハッシュ一覧](archive/SHA256SUMS.txt)
+- [公開用のメタデータ整理・ネイティブ形状保存記録](archive/portability.json)
+
+FreeCADの組立は、ZIPを全展開し `cad/assemblies/` と `cad/libraries/` の相対配置を保って開きます。
+26,766個の別々のSTLを配布しているのではありません。Blenderは12シーン、FreeCADは計11文書を保存しています。
+ビューアは完成形・分解・層・順序候補・部品ID・BOM・視点・動画に対応し、ブラウザーからCAD実行・スライス・プリンター操作はしません。
+
+制作元のリポジトリや履歴、実行環境、会話・内部ログは含めていません。
+制作物のローカルパス等を整理した場合は、元のハッシュと公開用ハッシュを区別しています。
+現在の配布物との照合には公開目録を使い、当時の数値検証記録を物理合格と読み替えないでください。
+
+## 従来の4 mm接合部・小型試験セット
 
 > **2026-09-19 実物フィードバック: 改良検討中**
 >
@@ -7,7 +44,7 @@
 > [写真・動画と改良検討の記録](feedback/2026-09-19/README.md) を確認してください。
 > これらの写真・動画の権利については、同記録の「写真・動画の権利」を参照してください。
 
-**NOT_SLICED — 未スライス・現物未検証の試験片です。**
+**NOT_SLICED — 未スライス・嵌合合格未確認の試験片です。初回試作では課題が報告されています。**
 
 Bambu Lab P1S、0.2 mmノズル、PLAを想定した接合部の比較用データです。
 プリンター設定入りのBambu Studioプロジェクト、G-code、印刷準備済みデータではありません。

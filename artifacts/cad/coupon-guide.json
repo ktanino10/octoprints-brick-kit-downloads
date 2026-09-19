@@ -1,0 +1,186 @@
+{
+  "clearances_mm": [
+    0.1,
+    0.2,
+    0.3,
+    0.4
+  ],
+  "receiver_body_mm": [
+    23.82,
+    11.82,
+    3.48
+  ],
+  "male_key_body_mm": [
+    5.82,
+    11.82,
+    3.48
+  ],
+  "stud_diameter_mm": 2.8,
+  "stud_height_mm": 1.25,
+  "socket_depth_mm": 1.45,
+  "minimum_wall_mm": 1.3100000000000003,
+  "floor_below_socket_mm": 2.0300000000000002,
+  "label_dot_diameter_mm": 1.0,
+  "label_dot_height_mm": 0.3,
+  "stations": [
+    {
+      "dot_count": 1,
+      "diametral_clearance_mm": 0.1,
+      "socket_diameter_mm": 2.9,
+      "socket_center_xy_mm": [
+        -9.0,
+        3.0
+      ],
+      "key_id": "male-key-01",
+      "wall_mm": 1.4600000000000002
+    },
+    {
+      "dot_count": 2,
+      "diametral_clearance_mm": 0.2,
+      "socket_diameter_mm": 3.0,
+      "socket_center_xy_mm": [
+        -3.0,
+        3.0
+      ],
+      "key_id": "male-key-02",
+      "wall_mm": 1.4100000000000001
+    },
+    {
+      "dot_count": 3,
+      "diametral_clearance_mm": 0.3,
+      "socket_diameter_mm": 3.0999999999999996,
+      "socket_center_xy_mm": [
+        3.0,
+        3.0
+      ],
+      "key_id": "male-key-03",
+      "wall_mm": 1.3600000000000003
+    },
+    {
+      "dot_count": 4,
+      "diametral_clearance_mm": 0.4,
+      "socket_diameter_mm": 3.1999999999999997,
+      "socket_center_xy_mm": [
+        9.0,
+        3.0
+      ],
+      "key_id": "male-key-04",
+      "wall_mm": 1.3100000000000003
+    }
+  ],
+  "insertion_checks": [
+    {
+      "key_id": "male-key-01",
+      "samples": [
+        {
+          "insertion_fraction": 0,
+          "intersection_mm3": 0.0
+        },
+        {
+          "insertion_fraction": 0.25,
+          "intersection_mm3": 0.0
+        },
+        {
+          "insertion_fraction": 0.5,
+          "intersection_mm3": 0.0
+        },
+        {
+          "insertion_fraction": 0.75,
+          "intersection_mm3": 0.0
+        },
+        {
+          "insertion_fraction": 1,
+          "intersection_mm3": 0.0
+        }
+      ],
+      "status": "NOMINAL_NO_INTERFERENCE"
+    },
+    {
+      "key_id": "male-key-02",
+      "samples": [
+        {
+          "insertion_fraction": 0,
+          "intersection_mm3": 0.0
+        },
+        {
+          "insertion_fraction": 0.25,
+          "intersection_mm3": 0.0
+        },
+        {
+          "insertion_fraction": 0.5,
+          "intersection_mm3": 0.0
+        },
+        {
+          "insertion_fraction": 0.75,
+          "intersection_mm3": 0.0
+        },
+        {
+          "insertion_fraction": 1,
+          "intersection_mm3": 0.0
+        }
+      ],
+      "status": "NOMINAL_NO_INTERFERENCE"
+    },
+    {
+      "key_id": "male-key-03",
+      "samples": [
+        {
+          "insertion_fraction": 0,
+          "intersection_mm3": 0.0
+        },
+        {
+          "insertion_fraction": 0.25,
+          "intersection_mm3": 0.0
+        },
+        {
+          "insertion_fraction": 0.5,
+          "intersection_mm3": 0.0
+        },
+        {
+          "insertion_fraction": 0.75,
+          "intersection_mm3": 0.0
+        },
+        {
+          "insertion_fraction": 1,
+          "intersection_mm3": 0.0
+        }
+      ],
+      "status": "NOMINAL_NO_INTERFERENCE"
+    },
+    {
+      "key_id": "male-key-04",
+      "samples": [
+        {
+          "insertion_fraction": 0,
+          "intersection_mm3": 0.0
+        },
+        {
+          "insertion_fraction": 0.25,
+          "intersection_mm3": 0.0
+        },
+        {
+          "insertion_fraction": 0.5,
+          "intersection_mm3": 0.0
+        },
+        {
+          "insertion_fraction": 0.75,
+          "intersection_mm3": 0.0
+        },
+        {
+          "insertion_fraction": 1,
+          "intersection_mm3": 0.0
+        }
+      ],
+      "status": "NOMINAL_NO_INTERFERENCE"
+    }
+  ],
+  "instructions": [
+    "Print the receiver and each male key as separate parts; all supplied STL bases are at z=0.",
+    "Receiver wells and all male studs face upward for printing. Do not fuse keys to the receiver.",
+    "One through four raised dots identify 0.1, 0.2, 0.3, 0.4 mm DIAMETRAL clearance respectively.",
+    "All four male studs have the same reference diameter; only the receiver wells vary.",
+    "After printing, invert a key 180 degrees about X, align its stud to the matching well, and hold its extended grip outside the strip.",
+    "For the nominal seated transform use x=the well x, y=reference pitch, z=twice the body height.",
+    "Do not force a tight key. Record fit and measured dimensions; these coupons have not been printed or calibrated."
+  ]
+}

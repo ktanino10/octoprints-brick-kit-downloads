@@ -1,0 +1,35 @@
+{
+  "result": "PASS",
+  "figures": {
+    "mona-fine": {
+      "file": "assemblies/mona-fine.FCStd",
+      "fresh_reopen": true,
+      "forced_recompute": true,
+      "native_link_arrays": 155,
+      "native_solids_checked": 13434,
+      "all_instance_ids_preserved": true,
+      "all_rigid_transforms_and_native_centers_checked": true,
+      "geometry_projection_sha256": "0f1c9522b9555ceb1ff8f85df3046cdb2f585a5a0dc55501fbed12aae417e801"
+    },
+    "copilot-chunky": {
+      "file": "assemblies/copilot-chunky.FCStd",
+      "fresh_reopen": true,
+      "forced_recompute": true,
+      "native_link_arrays": 98,
+      "native_solids_checked": 3021,
+      "all_instance_ids_preserved": true,
+      "all_rigid_transforms_and_native_centers_checked": true,
+      "geometry_projection_sha256": "6b83e9bd4468c12b78942a74b506b8d9f5bcb509dc8d559666fad8b0afa371d2"
+    },
+    "ducky-fine": {
+      "file": "assemblies/ducky-fine.FCStd",
+      "fresh_reopen": true,
+      "forced_recompute": true,
+      "native_link_arrays": 124,
+      "native_solids_checked": 10311,
+      "all_instance_ids_preserved": true,
+      "all_rigid_transforms_and_native_centers_checked": true,
+      "geometry_projection_sha256": "154fb03f0d1c8c5e98d9da590538369953ba3a1b5db2572965ddcc2e17025d15"
+    }
+  }
+}

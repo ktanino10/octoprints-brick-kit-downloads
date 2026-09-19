@@ -1,0 +1,14 @@
+{
+  "candidate_id": "mona-chunky",
+  "part_count": 2325,
+  "native_prototype_types": 7,
+  "instancer_objects": 15,
+  "evaluated_instances": 2325,
+  "ids_sha256": "a10bd9cae354b138eb1d30651c2f1de246f903361276eb491c9f58e2a967f592",
+  "blender_version": "5.1.1",
+  "engine": "BLENDER_EEVEE",
+  "mode": "still",
+  "elapsed_seconds": 7.748,
+  "native_scene_reopened": true,
+  "physical_fit": "UNKNOWN"
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": 2,
+  "revision": "r2-20260919",
+  "result": "PASS",
+  "started_at": "2026-09-19T07:31:28.433916+00:00",
+  "finished_at": "2026-09-19T07:39:56.272399+00:00",
+  "units": "mm",
+  "origin": "body-bottom-center",
+  "status": {
+    "native_generation": "PASSED",
+    "native_reopen": "PASSED",
+    "native_section_measurements": "PASSED",
+    "nominal_seating": "PASSED_GEOMETRY_ONLY",
+    "mesh_validation": "PASSED",
+    "digital_geometry": "PROTOTYPE",
+    "physical_fit": "UNKNOWN",
+    "retention_strength": "UNKNOWN",
+    "production_export": "BLOCKED"
+  },
+  "counts": {
+    "figure_prototypes": 236,
+    "separate_trial_types": 14,
+    "trial_pieces": 22,
+    "watertight_individual_stl_files": 250,
+    "trial_plate_stl_files": 2,
+    "generic_3mf_plates": 2,
+    "native_figure_assemblies": 3,
+    "native_figure_instances": 26766,
+    "shared_prototype_triangles": 820636
+  },
+  "measured_1x1_reference": {
+    "4": {
+      "sidewall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "bearing_area_mm2": 4.618141200776995,
+      "peg_study": {
+        "stud_diameter_mm": 1.1,
+        "tip_diameter_mm": 0.9800000000000001,
+        "root_diameter_mm": 1.26,
+        "neck_area_mm2": 0.9503317777109126,
+        "root_area_mm2": 1.246898124209789,
+        "stud_height_mm": 0.6,
+        "root_height_mm": 0.1,
+        "strength": "UNKNOWN",
+        "retention": "UNKNOWN"
+      }
+    },
+    "8": {
+      "sidewall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "bearing_area_mm2": 18.751817483427075,
+      "peg_study": {
+        "stud_diameter_mm": 3.7333333333333334,
+        "tip_diameter_mm": 3.3333333333333335,
+        "root_diameter_mm": 4.013333333333334,
+        "neck_area_mm2": 10.946705068508436,
+        "root_area_mm2": 12.650286044795063,
+        "stud_height_mm": 1.6666666666666667,
+        "root_height_mm": 0.2,
+        "strength": "UNKNOWN",
+        "retention": "UNKNOWN"
+      }
+    }
+  },
+  "trial_index": "artifacts/selected/r2-20260919/cad/trial/index.json",
+  "assembly_index": "artifacts/selected/r2-20260919/cad/assemblies/index.json",
+  "limitations": [
+    "All settings are design assumptions. No physical coupon, friction/retention, peg strength, fatigue, or full-figure assembly was tested.",
+    "The 1.1 mm p4 neck and 0.98 mm tip may break or loosen. A 0.2 mm nozzle does not repair wall geometry or prove strength.",
+    "The -0.05 mm diametral coupon intentionally intersects; it is not rigidly seatable without deformation.",
+    "The socket-wall/roof >=1.2 mm constraint is measured on actual native cavity sections; it is not a minimum cosmetic feature or stem diameter claim.",
+    "Appearance caps on exposed cells are cosmetic and are not represented as tested fit connectors.",
+    "The two optional Mona temporary cradles in type-plan assembly_aids are not modeled in the figure-brick native CAD assemblies.",
+    "Assembly CAD uses shared native external prototype links and ID-mapped arrays. Editing prototype dimensions requires revalidating/regenerating assembly placement assumptions.",
+    "P1S 256x256 mm bed and 10 mm margin are assumptions only. No manufacturer profile, slicing, G-code, printer connection, or printing was performed.",
+    "Trial layer height, supports, print time and material mass remain UNKNOWN. No full-figure print plates were packed.",
+    "Round single-cell joints do not establish rotational retention. Multi-stud seating is a nominal geometric result only."
+  ],
+  "archive_scope": "Historical native geometry checks, not physical fit, retention, or production approval.",
+  "public_copy_note": "Execution receipts, machine paths and runtime details excluded; use archive/inventory.json for public hashes."
+}

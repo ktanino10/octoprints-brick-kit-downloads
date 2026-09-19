@@ -1,0 +1,50 @@
+{
+  "result": "PASS",
+  "trimesh_version": "4.12.2",
+  "aids": {
+    "mona-left-whisker-cradle": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 51,
+      "triangles": 98,
+      "volume_mm3": 3327.4926330718467,
+      "bounds_mm": [
+        [
+          -15.90999984741211,
+          -7.909999847412109,
+          0.0
+        ],
+        [
+          15.90999984741211,
+          7.909999847412109,
+          36.0
+        ]
+      ],
+      "relative_volume_error": 5.016634552212906e-08
+    },
+    "mona-right-whisker-cradle": {
+      "watertight": true,
+      "winding_consistent": true,
+      "positive_volume": true,
+      "connected_components": 1,
+      "vertices": 60,
+      "triangles": 116,
+      "volume_mm3": 4096.324919978684,
+      "bounds_mm": [
+        [
+          -17.90999984741211,
+          -7.909999847412109,
+          0.0
+        ],
+        [
+          17.90999984741211,
+          7.909999847412109,
+          38.400001525878906
+        ]
+      ],
+      "relative_volume_error": 9.770054099078607e-09
+    }
+  }
+}

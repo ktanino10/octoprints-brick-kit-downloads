@@ -1,0 +1,14 @@
+{
+  "candidate_id": "copilot-balanced",
+  "part_count": 6576,
+  "native_prototype_types": 7,
+  "instancer_objects": 14,
+  "evaluated_instances": 6576,
+  "ids_sha256": "e7597b7bfc67b5a40acc533940e536b00e12c5cbb16f40b7d68c3977c7c3647b",
+  "blender_version": "5.1.1",
+  "engine": "BLENDER_EEVEE",
+  "mode": "still",
+  "elapsed_seconds": 10.081,
+  "native_scene_reopened": true,
+  "physical_fit": "UNKNOWN"
+}

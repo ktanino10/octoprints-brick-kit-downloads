@@ -1,0 +1,14 @@
+{
+  "candidate_id": "copilot-chunky",
+  "part_count": 3135,
+  "native_prototype_types": 7,
+  "instancer_objects": 14,
+  "evaluated_instances": 3135,
+  "ids_sha256": "987f9f1093f097e8ab5186cc9526c9f032bb47d7ff946057de926c46642e1584",
+  "blender_version": "5.1.1",
+  "engine": "BLENDER_EEVEE",
+  "mode": "still",
+  "elapsed_seconds": 7.838,
+  "native_scene_reopened": true,
+  "physical_fit": "UNKNOWN"
+}

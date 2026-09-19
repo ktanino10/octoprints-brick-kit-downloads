@@ -1,0 +1,509 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-19",
+  "scope": "Public-copy portability and data integrity, not physical fit, retention or manufacturing approval.",
+  "source_revision": "88be7521001fc09843aa125309329f6345adf468",
+  "source_files_checked_unchanged": 741,
+  "blender": [
+    {
+      "path": "artifacts/phase1/copilot-balanced/scene.blend",
+      "objects": 33,
+      "meshes": 29,
+      "geometry_sha256_before": "034b5521ac28379fbed942044dc1e406e43de5e253e698bfd6841ef95f482e08",
+      "geometry_sha256_after": "034b5521ac28379fbed942044dc1e406e43de5e253e698bfd6841ef95f482e08",
+      "geometry_unchanged": true,
+      "native_reopened": true,
+      "change": "Blender File Browser directory and render output made relative; no remeshing."
+    },
+    {
+      "path": "artifacts/phase1/copilot-chunky/scene.blend",
+      "objects": 33,
+      "meshes": 29,
+      "geometry_sha256_before": "dbc673c25b7334f3eb903215d5d710a21f0ee1c859eaec49a35bacc4768374b3",
+      "geometry_sha256_after": "dbc673c25b7334f3eb903215d5d710a21f0ee1c859eaec49a35bacc4768374b3",
+      "geometry_unchanged": true,
+      "native_reopened": true,
+      "change": "Blender File Browser directory and render output made relative; no remeshing."
+    },
+    {
+      "path": "artifacts/phase1/copilot-fine/scene.blend",
+      "objects": 35,
+      "meshes": 31,
+      "geometry_sha256_before": "2359b290b7ff4e3045f004b305ebb5db131a996cef929f22f254e4df40d40518",
+      "geometry_sha256_after": "2359b290b7ff4e3045f004b305ebb5db131a996cef929f22f254e4df40d40518",
+      "geometry_unchanged": true,
+      "native_reopened": true,
+      "change": "Blender File Browser directory and render output made relative; no remeshing."
+    },
+    {
+      "path": "artifacts/phase1/ducky-balanced/scene.blend",
+      "objects": 35,
+      "meshes": 31,
+      "geometry_sha256_before": "3484b22c0bc2f542a94e332650c7a7b7521c6b0e7ed444c2e12d94bd028e4203",
+      "geometry_sha256_after": "3484b22c0bc2f542a94e332650c7a7b7521c6b0e7ed444c2e12d94bd028e4203",
+      "geometry_unchanged": true,
+      "native_reopened": true,
+      "change": "Blender File Browser directory and render output made relative; no remeshing."
+    },
+    {
+      "path": "artifacts/phase1/ducky-chunky/scene.blend",
+      "objects": 33,
+      "meshes": 29,
+      "geometry_sha256_before": "f85de597e10babaa8ecf8793934f781fc195ccd761a1199cefac761227f93c3e",
+      "geometry_sha256_after": "f85de597e10babaa8ecf8793934f781fc195ccd761a1199cefac761227f93c3e",
+      "geometry_unchanged": true,
+      "native_reopened": true,
+      "change": "Blender File Browser directory and render output made relative; no remeshing."
+    },
+    {
+      "path": "artifacts/phase1/ducky-fine/scene.blend",
+      "objects": 37,
+      "meshes": 33,
+      "geometry_sha256_before": "4aca9ad4dd1db15abe54b734c9aca1bbe9a54a6af675d46668145ea2f2142623",
+      "geometry_sha256_after": "4aca9ad4dd1db15abe54b734c9aca1bbe9a54a6af675d46668145ea2f2142623",
+      "geometry_unchanged": true,
+      "native_reopened": true,
+      "change": "Blender File Browser directory and render output made relative; no remeshing."
+    },
+    {
+      "path": "artifacts/phase1/mona-balanced/scene.blend",
+      "objects": 39,
+      "meshes": 35,
+      "geometry_sha256_before": "e11d9725e2969a399ad8fb5ea84f507efdd31c93a882964908a33b562b5fec35",
+      "geometry_sha256_after": "e11d9725e2969a399ad8fb5ea84f507efdd31c93a882964908a33b562b5fec35",
+      "geometry_unchanged": true,
+      "native_reopened": true,
+      "change": "Blender File Browser directory and render output made relative; no remeshing."
+    },
+    {
+      "path": "artifacts/phase1/mona-chunky/scene.blend",
+      "objects": 35,
+      "meshes": 31,
+      "geometry_sha256_before": "09acea522f07240df37cc21d60300aaea8c33b17c83c139e2731a319d28b83e9",
+      "geometry_sha256_after": "09acea522f07240df37cc21d60300aaea8c33b17c83c139e2731a319d28b83e9",
+      "geometry_unchanged": true,
+      "native_reopened": true,
+      "change": "Blender File Browser directory and render output made relative; no remeshing."
+    },
+    {
+      "path": "artifacts/phase1/mona-fine/scene.blend",
+      "objects": 41,
+      "meshes": 37,
+      "geometry_sha256_before": "884f2b5efa0bedd60516a567a1c5db8a12f57b2097d98815d71459b7090f6cf2",
+      "geometry_sha256_after": "884f2b5efa0bedd60516a567a1c5db8a12f57b2097d98815d71459b7090f6cf2",
+      "geometry_unchanged": true,
+      "native_reopened": true,
+      "change": "Blender File Browser directory and render output made relative; no remeshing."
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/copilot-chunky/scene.blend",
+      "objects": 201,
+      "meshes": 197,
+      "geometry_sha256_before": "473f5047109bc6fbe7bee67d1e6beee2bac43d9b074fa30e23907e35c9131a69",
+      "geometry_sha256_after": "473f5047109bc6fbe7bee67d1e6beee2bac43d9b074fa30e23907e35c9131a69",
+      "geometry_unchanged": true,
+      "native_reopened": true,
+      "change": "Blender File Browser directory and render output made relative; no remeshing."
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/ducky-fine/scene.blend",
+      "objects": 253,
+      "meshes": 249,
+      "geometry_sha256_before": "7ce3846d96740423c2fc2c3dc8abafdf73693d303643130243b742b3c0b2aaf7",
+      "geometry_sha256_after": "7ce3846d96740423c2fc2c3dc8abafdf73693d303643130243b742b3c0b2aaf7",
+      "geometry_unchanged": true,
+      "native_reopened": true,
+      "change": "Blender File Browser directory and render output made relative; no remeshing."
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/mona-fine/scene.blend",
+      "objects": 315,
+      "meshes": 311,
+      "geometry_sha256_before": "596d0bb65050b56c40d9b73f009068d03f73a79894c390da61db62673d2952ae",
+      "geometry_sha256_after": "596d0bb65050b56c40d9b73f009068d03f73a79894c390da61db62673d2952ae",
+      "geometry_unchanged": true,
+      "native_reopened": true,
+      "change": "Blender File Browser directory and render output made relative; no remeshing."
+    }
+  ],
+  "freecad_shape_streams": [
+    {
+      "path": "artifacts/cad/NativeLibrary.FCStd",
+      "source_sha256": "beea4e98b8bc246924cfe024ae9f742d5d207d412cde4e21c4097b37fcd7a0ba",
+      "public_sha256": "04825dbbea2863ca155d98028b89c4b2dba7d2ae3d4f08d630c578c1234785ea",
+      "unchanged_shape_and_gui_members": 393,
+      "document_changes": [
+        "document license properties only"
+      ],
+      "relative_native_links_preserved": true
+    },
+    {
+      "path": "artifacts/cad/coupon.FCStd",
+      "source_sha256": "06af47b6d54a6ed350729eabf9b00e4447231686033a47d87d824474698e1b2c",
+      "public_sha256": "6c91dfe2f5842c4944fe5f8d669c372ff6df00759e1285e9cb229bac7953e6b8",
+      "unchanged_shape_and_gui_members": 52,
+      "document_changes": [
+        "document license properties only"
+      ],
+      "relative_native_links_preserved": true
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/aids/Cradles.FCStd",
+      "source_sha256": "62dbf9f8dc5fcbd11eec0a939628208b0dfeeabe31d087894eb4ea1fe3313e65",
+      "public_sha256": "2baafaf8ec3ea19a22431fd1d52a713674e00ab8c96548e2f927fcf687457808",
+      "unchanged_shape_and_gui_members": 199,
+      "document_changes": [
+        "document license properties only"
+      ],
+      "relative_native_links_preserved": true
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/assemblies/copilot-chunky.FCStd",
+      "source_sha256": "96aed0ab7bc30f47aff0a00a7829c5c5a5573f87fdec4eece98a4f9f67302b83",
+      "public_sha256": "8812089a3d6b59a66242aef83a2c6a42ed48d596a264cdda45f47a680d8bc692",
+      "unchanged_shape_and_gui_members": 196,
+      "document_changes": [
+        "document license properties only"
+      ],
+      "relative_native_links_preserved": true
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/assemblies/ducky-fine.FCStd",
+      "source_sha256": "8b17c25f978b6aa73a8f6acaa01cc4cd307546e93f80ef958843fa23efec8811",
+      "public_sha256": "ff013810d95c81e4dd55b576c77777009f5dc813ec0379e7f1c419cbda0b0646",
+      "unchanged_shape_and_gui_members": 248,
+      "document_changes": [
+        "document license properties only"
+      ],
+      "relative_native_links_preserved": true
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/assemblies/mona-fine.FCStd",
+      "source_sha256": "c83819a051052d2b8e2e328f98bbaf68014d0582bfcb9affa704a42084697ada",
+      "public_sha256": "27e28ce5d855b74c1744085a7e75459c9bb5350f88e371738956e04bbd2a503f",
+      "unchanged_shape_and_gui_members": 310,
+      "document_changes": [
+        "document license properties only"
+      ],
+      "relative_native_links_preserved": true
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/libraries/Selected-p4.FCStd",
+      "source_sha256": "f5ead579d053785c0c03d61bde7069ea03195f812ea10c32bdac2745ce3f7703",
+      "public_sha256": "7183da86d7a94e9fbb0422465eb7a8b6613ebb1278e86ced0a1080ef5e6a8d5b",
+      "unchanged_shape_and_gui_members": 12645,
+      "document_changes": [
+        "document license properties only"
+      ],
+      "relative_native_links_preserved": true
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/libraries/Selected-p8.FCStd",
+      "source_sha256": "d176c74ed4ccffff93dcc7f34aa945b9602f28cf888ed38697c4b68c7e22d043",
+      "public_sha256": "b4987c549ab1fad0bdbe3bdae18bcba2e2fd454833ccd5ea5955031bdfb80d27",
+      "unchanged_shape_and_gui_members": 5805,
+      "document_changes": [
+        "document license properties only"
+      ],
+      "relative_native_links_preserved": true
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/proof/JointProof.FCStd",
+      "source_sha256": "b0936308732b362d59e9f8ed6c59e8828a04287f195f82484dda7cf33def9e34",
+      "public_sha256": "4af620fe76a154395ef912908cf84b9076b008d9dc831a1d03e848b648883b42",
+      "unchanged_shape_and_gui_members": 114,
+      "document_changes": [
+        "document license properties only"
+      ],
+      "relative_native_links_preserved": true
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p4/Trial-p4.FCStd",
+      "source_sha256": "686498538eaa40e5471131dd9f69e17894a2cf8e3d47538362df07fb9fddc4cd",
+      "public_sha256": "3053db675452f4b9c5d5394eb0ef98f7bd98ff24360bbcb1fdc06801ccc77d71",
+      "unchanged_shape_and_gui_members": 142,
+      "document_changes": [
+        "document license properties only"
+      ],
+      "relative_native_links_preserved": true
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p8/Trial-p8.FCStd",
+      "source_sha256": "992d8aaf6adfa9a3714afec60f3d88293bb40dfeff536a3d7faf307c79e45d89",
+      "public_sha256": "5dbedaaf8855b3b4f7dfa98c4d242cb14a129fdea113675dcacd79551d441065",
+      "unchanged_shape_and_gui_members": 142,
+      "document_changes": [
+        "document license properties only"
+      ],
+      "relative_native_links_preserved": true
+    }
+  ],
+  "freecad_relocated_reopen": {
+    "freecad_version": "1.1.3",
+    "documents": [
+      {
+        "path": "artifacts/cad/NativeLibrary.FCStd",
+        "document_objects": 543,
+        "native_links_resolved": 0,
+        "link_instances": 0,
+        "proxy_free": true,
+        "opened": true,
+        "recomputed": false,
+        "saved": false
+      },
+      {
+        "path": "artifacts/cad/coupon.FCStd",
+        "document_objects": 94,
+        "native_links_resolved": 0,
+        "link_instances": 0,
+        "proxy_free": true,
+        "opened": true,
+        "recomputed": false,
+        "saved": false
+      },
+      {
+        "path": "artifacts/selected/r2-20260919/cad/aids/Cradles.FCStd",
+        "document_objects": 213,
+        "native_links_resolved": 2,
+        "link_instances": 2,
+        "proxy_free": true,
+        "opened": true,
+        "recomputed": false,
+        "saved": false
+      },
+      {
+        "path": "artifacts/selected/r2-20260919/cad/assemblies/copilot-chunky.FCStd",
+        "document_objects": 98,
+        "native_links_resolved": 98,
+        "link_instances": 3021,
+        "proxy_free": true,
+        "opened": true,
+        "recomputed": false,
+        "saved": false
+      },
+      {
+        "path": "artifacts/selected/r2-20260919/cad/assemblies/ducky-fine.FCStd",
+        "document_objects": 124,
+        "native_links_resolved": 124,
+        "link_instances": 10311,
+        "proxy_free": true,
+        "opened": true,
+        "recomputed": false,
+        "saved": false
+      },
+      {
+        "path": "artifacts/selected/r2-20260919/cad/assemblies/mona-fine.FCStd",
+        "document_objects": 155,
+        "native_links_resolved": 155,
+        "link_instances": 13434,
+        "proxy_free": true,
+        "opened": true,
+        "recomputed": false,
+        "saved": false
+      },
+      {
+        "path": "artifacts/selected/r2-20260919/cad/libraries/Selected-p4.FCStd",
+        "document_objects": 12377,
+        "native_links_resolved": 0,
+        "link_instances": 0,
+        "proxy_free": true,
+        "opened": true,
+        "recomputed": false,
+        "saved": false
+      },
+      {
+        "path": "artifacts/selected/r2-20260919/cad/libraries/Selected-p8.FCStd",
+        "document_objects": 5779,
+        "native_links_resolved": 0,
+        "link_instances": 0,
+        "proxy_free": true,
+        "opened": true,
+        "recomputed": false,
+        "saved": false
+      },
+      {
+        "path": "artifacts/selected/r2-20260919/cad/proof/JointProof.FCStd",
+        "document_objects": 184,
+        "native_links_resolved": 0,
+        "link_instances": 0,
+        "proxy_free": true,
+        "opened": true,
+        "recomputed": false,
+        "saved": false
+      },
+      {
+        "path": "artifacts/selected/r2-20260919/cad/trial/p4/Trial-p4.FCStd",
+        "document_objects": 171,
+        "native_links_resolved": 14,
+        "link_instances": 14,
+        "proxy_free": true,
+        "opened": true,
+        "recomputed": false,
+        "saved": false
+      },
+      {
+        "path": "artifacts/selected/r2-20260919/cad/trial/p8/Trial-p8.FCStd",
+        "document_objects": 171,
+        "native_links_resolved": 14,
+        "link_instances": 14,
+        "proxy_free": true,
+        "opened": true,
+        "recomputed": false,
+        "saved": false
+      }
+    ]
+  },
+  "rendered_images": [
+    {
+      "path": "artifacts/phase1/copilot-balanced/preview.png",
+      "compressed_pixels_sha256": "7d16122f4c950848250ecdaacb78322a59625050ab7b7a932262c2e0cff684d0",
+      "pixel_stream_byte_identical": true,
+      "exif_and_text_metadata_removed": true
+    },
+    {
+      "path": "artifacts/phase1/copilot-chunky/preview.png",
+      "compressed_pixels_sha256": "034a3200a9cce460a7036e61616a63283ec899bc15aa3759b81117765271df3b",
+      "pixel_stream_byte_identical": true,
+      "exif_and_text_metadata_removed": true
+    },
+    {
+      "path": "artifacts/phase1/copilot-fine/preview.png",
+      "compressed_pixels_sha256": "1399b687502a0c300d54b4ce45a1a7fe186fc24eb8782ec1f1b2a001846ab06a",
+      "pixel_stream_byte_identical": true,
+      "exif_and_text_metadata_removed": true
+    },
+    {
+      "path": "artifacts/phase1/ducky-balanced/preview.png",
+      "compressed_pixels_sha256": "1c982f15a1687e2ecc4b1da386dfc26a51467c6cc20a5cc1bce8895ac1255dbf",
+      "pixel_stream_byte_identical": true,
+      "exif_and_text_metadata_removed": true
+    },
+    {
+      "path": "artifacts/phase1/ducky-chunky/preview.png",
+      "compressed_pixels_sha256": "84d093960827581b024d1a2825fdbb80337887530e91d26ba944cf78a3b07e44",
+      "pixel_stream_byte_identical": true,
+      "exif_and_text_metadata_removed": true
+    },
+    {
+      "path": "artifacts/phase1/ducky-fine/preview.png",
+      "compressed_pixels_sha256": "fc3f32d604848f3645c33ba8cb54f520850f7c80559047270ff88ba76fe659a2",
+      "pixel_stream_byte_identical": true,
+      "exif_and_text_metadata_removed": true
+    },
+    {
+      "path": "artifacts/phase1/mona-balanced/preview.png",
+      "compressed_pixels_sha256": "daa6f0d1a185696869bb2305e920851600d439da29722a4c753dc09ba7f5858e",
+      "pixel_stream_byte_identical": true,
+      "exif_and_text_metadata_removed": true
+    },
+    {
+      "path": "artifacts/phase1/mona-chunky/preview.png",
+      "compressed_pixels_sha256": "dd1bd372472a4176bcee9bbdf0e31805e101bcc4b0ebd99af3390c76eec10571",
+      "pixel_stream_byte_identical": true,
+      "exif_and_text_metadata_removed": true
+    },
+    {
+      "path": "artifacts/phase1/mona-fine/preview.png",
+      "compressed_pixels_sha256": "6c41a2ecdcfef107f91a3cdffcfa9434b5eb127964a191a374722d5272b550a2",
+      "pixel_stream_byte_identical": true,
+      "exif_and_text_metadata_removed": true
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/copilot-chunky/preview.png",
+      "compressed_pixels_sha256": "8a927fc92879b795cf51710c0b061a74843b809b45b575e9e7c012285c6a466d",
+      "pixel_stream_byte_identical": true,
+      "exif_and_text_metadata_removed": true
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/ducky-fine/preview.png",
+      "compressed_pixels_sha256": "b0ce528f0c00f9a59ac60b7d26f3fa9ea6fba25067a045f349a5f5c606c77fec",
+      "pixel_stream_byte_identical": true,
+      "exif_and_text_metadata_removed": true
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/mona-fine/preview.png",
+      "compressed_pixels_sha256": "5b99de3a16e9e3dd07a74bdcf4fd9ea27db3dab14ac2258783ba706593381a14",
+      "pixel_stream_byte_identical": true,
+      "exif_and_text_metadata_removed": true
+    }
+  ],
+  "data_geometry": [
+    {
+      "path": "artifacts/cad/prototypes.json",
+      "geometry_and_ids_unchanged": true
+    },
+    {
+      "path": "artifacts/phase1/copilot-balanced/manifest.json",
+      "geometry_and_ids_unchanged": true
+    },
+    {
+      "path": "artifacts/phase1/copilot-chunky/manifest.json",
+      "geometry_and_ids_unchanged": true
+    },
+    {
+      "path": "artifacts/phase1/copilot-fine/manifest.json",
+      "geometry_and_ids_unchanged": true
+    },
+    {
+      "path": "artifacts/phase1/ducky-balanced/manifest.json",
+      "geometry_and_ids_unchanged": true
+    },
+    {
+      "path": "artifacts/phase1/ducky-chunky/manifest.json",
+      "geometry_and_ids_unchanged": true
+    },
+    {
+      "path": "artifacts/phase1/ducky-fine/manifest.json",
+      "geometry_and_ids_unchanged": true
+    },
+    {
+      "path": "artifacts/phase1/mona-balanced/manifest.json",
+      "geometry_and_ids_unchanged": true
+    },
+    {
+      "path": "artifacts/phase1/mona-chunky/manifest.json",
+      "geometry_and_ids_unchanged": true
+    },
+    {
+      "path": "artifacts/phase1/mona-fine/manifest.json",
+      "geometry_and_ids_unchanged": true
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/aids/prototypes.json",
+      "geometry_and_ids_unchanged": true
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/prototypes.json",
+      "geometry_and_ids_unchanged": true
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p4/prototypes.json",
+      "geometry_and_ids_unchanged": true
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p8/prototypes.json",
+      "geometry_and_ids_unchanged": true
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/copilot-chunky/manifest.json",
+      "geometry_and_ids_unchanged": true
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/ducky-fine/manifest.json",
+      "geometry_and_ids_unchanged": true
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/mona-fine/manifest.json",
+      "geometry_and_ids_unchanged": true
+    }
+  ],
+  "excluded": [
+    "production repository/history",
+    "execution harnesses and runtime environments",
+    "internal conversations and command logs",
+    "machine paths and file-browser history",
+    "original personal photo/video attachments, EXIF, audio and sensor tracks",
+    "temporary render frames, caches and autosave backups"
+  ],
+  "manufacturing": "PROTOTYPE_NOT_SLICED_PHYSICAL_ISSUES_REPORTED_PRODUCTION_BLOCKED"
+}

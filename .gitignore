@@ -1,0 +1,8 @@
+.archive-work/
+.venv/
+_site/
+__pycache__/
+.DS_Store
+viewer/node_modules/
+viewer/verification/
+*.blend1

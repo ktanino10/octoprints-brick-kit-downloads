@@ -1,0 +1,3053 @@
+{
+  "result": "PASS_GEOMETRIC_LAYOUT_ONLY",
+  "file": "trial/p4/Trial-p4.FCStd",
+  "pitch_mm": 4,
+  "document_object_count": 171,
+  "unique_printable_types": 7,
+  "piece_count": 11,
+  "parts": {
+    "trial-p4-receiver-01": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 101.64626630987696,
+      "bounds_mm": [
+        [
+          -5.91,
+          -1.91,
+          0.0
+        ],
+        [
+          5.91,
+          1.91,
+          2.28
+        ]
+      ],
+      "brep_faces": 13,
+      "step": "trial/p4/parts/trial-p4-receiver-01.step",
+      "stl": "trial/p4/parts/trial-p4-receiver-01.stl",
+      "mesh_vertices": 94,
+      "mesh_faces": 184,
+      "mesh_volume_mm3": 101.65335699280284,
+      "quantity": 1,
+      "parameters": "Parameters_c0c18b7fb60e",
+      "final": "Parameters_c0c18b7fb60e_Final",
+      "spec": {
+        "pitch_mm": 4,
+        "layer_mm": 2.4,
+        "cells": [
+          3,
+          1
+        ],
+        "footprint_cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "mating_cells": []
+      },
+      "options": {
+        "clearance": -0.05,
+        "socket_cells": [
+          [
+            2,
+            0
+          ]
+        ],
+        "appearance_cells": [],
+        "label_notches": 1
+      },
+      "measurement": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 101.64626630987696,
+        "bounds_mm": [
+          [
+            -5.91,
+            -1.91,
+            0.0
+          ],
+          [
+            5.91,
+            1.91,
+            2.28
+          ]
+        ],
+        "brep_faces": 13,
+        "analytic_volume_mm3": 101.64626630987698,
+        "center_of_mass_mm": [
+          -0.0035399505909555215,
+          0.009308753133296979,
+          1.145459965613606
+        ],
+        "swept_body_area_mm2": 44.9024,
+        "occupied_cell_column_violation_mm3": 0.0,
+        "cavity_measurements": {
+          "result": "PASS_NATIVE_BREP_MEASUREMENT",
+          "socket_count": 1,
+          "method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof",
+          "nearest_inner_pair_proof": "All cavity wires are measured equal-radius circles at verified grid centers; nearest center pair minimizes inner-wire distance",
+          "epsilon_mm": 1e-06,
+          "numerical_tolerance_mm": 2e-06,
+          "sections": [
+            {
+              "label": "mouth_exact",
+              "z_mm": 0.0,
+              "cavity_radius_mm": 0.7,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 1,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.21
+              ],
+              "nearest_inner_pair_indices": null,
+              "minimum_inner_to_inner_mm": null,
+              "minimum_material_ligament_mm": 1.21,
+              "analytic_cell_envelope_mm": 1.21,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  4.7,
+                  -1.7145055188062944e-16,
+                  0.0
+                ],
+                [
+                  5.91,
+                  -2.220446049250313e-16,
+                  0.0
+                ]
+              ]
+            },
+            {
+              "label": "mouth_epsilon",
+              "z_mm": 1e-06,
+              "cavity_radius_mm": 0.6999985416666665,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 1,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.2100014583333332
+              ],
+              "nearest_inner_pair_indices": null,
+              "minimum_inner_to_inner_mm": null,
+              "minimum_material_ligament_mm": 1.2100014583333332,
+              "analytic_cell_envelope_mm": 1.2100014583333334,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  4.699998541666667,
+                  -1.714501946919797e-16,
+                  1e-06
+                ],
+                [
+                  5.91,
+                  0.0,
+                  1e-06
+                ]
+              ]
+            },
+            {
+              "label": "entry_middle",
+              "z_mm": 0.06,
+              "cavity_radius_mm": 0.6125,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 1,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.2974999999999999
+              ],
+              "nearest_inner_pair_indices": null,
+              "minimum_inner_to_inner_mm": null,
+              "minimum_material_ligament_mm": 1.2974999999999999,
+              "analytic_cell_envelope_mm": 1.2974999999999999,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  4.6125,
+                  -1.5001923289555077e-16,
+                  0.06
+                ],
+                [
+                  5.91,
+                  0.0,
+                  0.06
+                ]
+              ]
+            },
+            {
+              "label": "straight_after_entry",
+              "z_mm": 0.120001,
+              "cavity_radius_mm": 0.525,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 1,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.3849999999999998
+              ],
+              "nearest_inner_pair_indices": null,
+              "minimum_inner_to_inner_mm": null,
+              "minimum_material_ligament_mm": 1.3849999999999998,
+              "analytic_cell_envelope_mm": 1.3849999999999998,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  4.525,
+                  -1.285879139104721e-16,
+                  0.120001
+                ],
+                [
+                  5.91,
+                  0.0,
+                  0.120001
+                ]
+              ]
+            },
+            {
+              "label": "straight_middle",
+              "z_mm": 0.46,
+              "cavity_radius_mm": 0.525,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 1,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.3849999999999998
+              ],
+              "nearest_inner_pair_indices": null,
+              "minimum_inner_to_inner_mm": null,
+              "minimum_material_ligament_mm": 1.3849999999999998,
+              "analytic_cell_envelope_mm": 1.3849999999999998,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  4.525,
+                  -1.285879139104721e-16,
+                  0.46
+                ],
+                [
+                  5.91,
+                  0.0,
+                  0.46
+                ]
+              ]
+            },
+            {
+              "label": "below_roof",
+              "z_mm": 0.799999,
+              "cavity_radius_mm": 0.525,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 1,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.3849999999999998
+              ],
+              "nearest_inner_pair_indices": null,
+              "minimum_inner_to_inner_mm": null,
+              "minimum_material_ligament_mm": 1.3849999999999998,
+              "analytic_cell_envelope_mm": 1.3849999999999998,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  4.525,
+                  -1.285879139104721e-16,
+                  0.799999
+                ],
+                [
+                  5.91,
+                  0.0,
+                  0.799999
+                ]
+              ]
+            }
+          ],
+          "minimum_sidewall_mm": 1.21,
+          "exact_mouth_analytic_bound_mm": 1.21,
+          "roof_section": {
+            "z_mm": 0.8000010000000001,
+            "faces": 1,
+            "wires": 1
+          },
+          "roof_measurements": [
+            {
+              "xy_mm": [
+                4.0,
+                0.0
+              ],
+              "endpoints_z_mm": [
+                0.8,
+                2.28
+              ],
+              "thickness_mm": 1.4799999999999998
+            }
+          ],
+          "minimum_roof_mm": 1.4799999999999998
+        },
+        "peg_study": {
+          "stud_diameter_mm": 1.1,
+          "tip_diameter_mm": 0.9800000000000001,
+          "root_diameter_mm": 1.26,
+          "neck_area_mm2": 0.9503317777109126,
+          "root_area_mm2": 1.246898124209789,
+          "stud_height_mm": 0.6,
+          "root_height_mm": 0.1,
+          "strength": "UNKNOWN",
+          "retention": "UNKNOWN"
+        }
+      }
+    },
+    "trial-p4-receiver-02": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 101.01327737717253,
+      "bounds_mm": [
+        [
+          -5.91,
+          -1.91,
+          0.0
+        ],
+        [
+          5.91,
+          1.91,
+          2.28
+        ]
+      ],
+      "brep_faces": 17,
+      "step": "trial/p4/parts/trial-p4-receiver-02.step",
+      "stl": "trial/p4/parts/trial-p4-receiver-02.stl",
+      "mesh_vertices": 102,
+      "mesh_faces": 200,
+      "mesh_volume_mm3": 101.02097943696448,
+      "quantity": 1,
+      "parameters": "Parameters_ce074a62f0ce",
+      "final": "Parameters_ce074a62f0ce_Final",
+      "spec": {
+        "pitch_mm": 4,
+        "layer_mm": 2.4,
+        "cells": [
+          3,
+          1
+        ],
+        "footprint_cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "mating_cells": []
+      },
+      "options": {
+        "clearance": 0.0,
+        "socket_cells": [
+          [
+            2,
+            0
+          ]
+        ],
+        "appearance_cells": [],
+        "label_notches": 2
+      },
+      "measurement": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 101.01327737717253,
+        "bounds_mm": [
+          [
+            -5.91,
+            -1.91,
+            0.0
+          ],
+          [
+            5.91,
+            1.91,
+            2.28
+          ]
+        ],
+        "brep_faces": 17,
+        "analytic_volume_mm3": 101.01327737717249,
+        "center_of_mass_mm": [
+          0.013693462330948734,
+          0.01873417088462507,
+          1.1459392866268776
+        ],
+        "swept_body_area_mm2": 44.6524,
+        "occupied_cell_column_violation_mm3": 0.0,
+        "cavity_measurements": {
+          "result": "PASS_NATIVE_BREP_MEASUREMENT",
+          "socket_count": 1,
+          "method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof",
+          "nearest_inner_pair_proof": "All cavity wires are measured equal-radius circles at verified grid centers; nearest center pair minimizes inner-wire distance",
+          "epsilon_mm": 1e-06,
+          "numerical_tolerance_mm": 2e-06,
+          "sections": [
+            {
+              "label": "mouth_exact",
+              "z_mm": 0.0,
+              "cavity_radius_mm": 0.7,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 1,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.21
+              ],
+              "nearest_inner_pair_indices": null,
+              "minimum_inner_to_inner_mm": null,
+              "minimum_material_ligament_mm": 1.21,
+              "analytic_cell_envelope_mm": 1.21,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  4.7,
+                  -1.7145055188062944e-16,
+                  0.0
+                ],
+                [
+                  5.91,
+                  -2.220446049250313e-16,
+                  0.0
+                ]
+              ]
+            },
+            {
+              "label": "mouth_epsilon",
+              "z_mm": 1e-06,
+              "cavity_radius_mm": 0.6999987499999999,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 1,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.21000125
+              ],
+              "nearest_inner_pair_indices": null,
+              "minimum_inner_to_inner_mm": null,
+              "minimum_material_ligament_mm": 1.21000125,
+              "analytic_cell_envelope_mm": 1.21000125,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  4.69999875,
+                  -1.7145024571892965e-16,
+                  1e-06
+                ],
+                [
+                  5.91,
+                  0.0,
+                  1e-06
+                ]
+              ]
+            },
+            {
+              "label": "entry_middle",
+              "z_mm": 0.06,
+              "cavity_radius_mm": 0.625,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 1,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.2850000000000001
+              ],
+              "nearest_inner_pair_indices": null,
+              "minimum_inner_to_inner_mm": null,
+              "minimum_material_ligament_mm": 1.2850000000000001,
+              "analytic_cell_envelope_mm": 1.285,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  4.625,
+                  -1.5308084989341916e-16,
+                  0.05999999999999999
+                ],
+                [
+                  5.91,
+                  0.0,
+                  0.06
+                ]
+              ]
+            },
+            {
+              "label": "straight_after_entry",
+              "z_mm": 0.120001,
+              "cavity_radius_mm": 0.55,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 1,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.3599999999999999
+              ],
+              "nearest_inner_pair_indices": null,
+              "minimum_inner_to_inner_mm": null,
+              "minimum_material_ligament_mm": 1.3599999999999999,
+              "analytic_cell_envelope_mm": 1.3599999999999999,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  4.55,
+                  -1.3471114790620887e-16,
+                  0.120001
+                ],
+                [
+                  5.91,
+                  0.0,
+                  0.120001
+                ]
+              ]
+            },
+            {
+              "label": "straight_middle",
+              "z_mm": 0.46,
+              "cavity_radius_mm": 0.55,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 1,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.3599999999999999
+              ],
+              "nearest_inner_pair_indices": null,
+              "minimum_inner_to_inner_mm": null,
+              "minimum_material_ligament_mm": 1.3599999999999999,
+              "analytic_cell_envelope_mm": 1.3599999999999999,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  4.55,
+                  -1.3471114790620887e-16,
+                  0.46
+                ],
+                [
+                  5.91,
+                  0.0,
+                  0.46
+                ]
+              ]
+            },
+            {
+              "label": "below_roof",
+              "z_mm": 0.799999,
+              "cavity_radius_mm": 0.55,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 1,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.3599999999999999
+              ],
+              "nearest_inner_pair_indices": null,
+              "minimum_inner_to_inner_mm": null,
+              "minimum_material_ligament_mm": 1.3599999999999999,
+              "analytic_cell_envelope_mm": 1.3599999999999999,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  4.55,
+                  -1.3471114790620887e-16,
+                  0.799999
+                ],
+                [
+                  5.91,
+                  0.0,
+                  0.799999
+                ]
+              ]
+            }
+          ],
+          "minimum_sidewall_mm": 1.21,
+          "exact_mouth_analytic_bound_mm": 1.21,
+          "roof_section": {
+            "z_mm": 0.8000010000000001,
+            "faces": 1,
+            "wires": 1
+          },
+          "roof_measurements": [
+            {
+              "xy_mm": [
+                4.0,
+                0.0
+              ],
+              "endpoints_z_mm": [
+                0.8,
+                2.28
+              ],
+              "thickness_mm": 1.4799999999999998
+            }
+          ],
+          "minimum_roof_mm": 1.4799999999999998
+        },
+        "peg_study": {
+          "stud_diameter_mm": 1.1,
+          "tip_diameter_mm": 0.9800000000000001,
+          "root_diameter_mm": 1.26,
+          "neck_area_mm2": 0.9503317777109126,
+          "root_area_mm2": 1.246898124209789,
+          "stud_height_mm": 0.6,
+          "root_height_mm": 0.1,
+          "strength": "UNKNOWN",
+          "retention": "UNKNOWN"
+        }
+      }
+    },
+    "trial-p4-receiver-03": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 100.30881721159888,
+      "bounds_mm": [
+        [
+          -5.91,
+          -1.91,
+          0.0
+        ],
+        [
+          5.91,
+          1.91,
+          2.28
+        ]
+      ],
+      "brep_faces": 21,
+      "step": "trial/p4/parts/trial-p4-receiver-03.step",
+      "stl": "trial/p4/parts/trial-p4-receiver-03.stl",
+      "mesh_vertices": 110,
+      "mesh_faces": 216,
+      "mesh_volume_mm3": 100.31782416087577,
+      "quantity": 1,
+      "parameters": "Parameters_d4b5e699a3c8",
+      "final": "Parameters_d4b5e699a3c8_Final",
+      "spec": {
+        "pitch_mm": 4,
+        "layer_mm": 2.4,
+        "cells": [
+          3,
+          1
+        ],
+        "footprint_cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "mating_cells": []
+      },
+      "options": {
+        "clearance": 0.1,
+        "socket_cells": [
+          [
+            2,
+            0
+          ]
+        ],
+        "appearance_cells": [],
+        "label_notches": 3
+      },
+      "measurement": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 100.30881721159888,
+        "bounds_mm": [
+          [
+            -5.91,
+            -1.91,
+            0.0
+          ],
+          [
+            5.91,
+            1.91,
+            2.28
+          ]
+        ],
+        "brep_faces": 21,
+        "analytic_volume_mm3": 100.30881721159885,
+        "center_of_mass_mm": [
+          0.02263391105097073,
+          0.028298609024688705,
+          1.1469367033390478
+        ],
+        "swept_body_area_mm2": 44.4024,
+        "occupied_cell_column_violation_mm3": 0.0,
+        "cavity_measurements": {
+          "result": "PASS_NATIVE_BREP_MEASUREMENT",
+          "socket_count": 1,
+          "method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof",
+          "nearest_inner_pair_proof": "All cavity wires are measured equal-radius circles at verified grid centers; nearest center pair minimizes inner-wire distance",
+          "epsilon_mm": 1e-06,
+          "numerical_tolerance_mm": 2e-06,
+          "sections": [
+            {
+              "label": "mouth_exact",
+              "z_mm": 0.0,
+              "cavity_radius_mm": 0.7,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 1,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.21
+              ],
+              "nearest_inner_pair_indices": null,
+              "minimum_inner_to_inner_mm": null,
+              "minimum_material_ligament_mm": 1.21,
+              "analytic_cell_envelope_mm": 1.21,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  4.7,
+                  -1.7145055188062944e-16,
+                  0.0
+                ],
+                [
+                  5.91,
+                  -2.220446049250313e-16,
+                  0.0
+                ]
+              ]
+            },
+            {
+              "label": "mouth_epsilon",
+              "z_mm": 1e-06,
+              "cavity_radius_mm": 0.6999991666666666,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 1,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.210000833333333
+              ],
+              "nearest_inner_pair_indices": null,
+              "minimum_inner_to_inner_mm": null,
+              "minimum_material_ligament_mm": 1.210000833333333,
+              "analytic_cell_envelope_mm": 1.2100008333333334,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  4.699999166666667,
+                  -1.7145034777282958e-16,
+                  1e-06
+                ],
+                [
+                  5.91,
+                  0.0,
+                  1e-06
+                ]
+              ]
+            },
+            {
+              "label": "entry_middle",
+              "z_mm": 0.06,
+              "cavity_radius_mm": 0.65,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 1,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.2599999999999998
+              ],
+              "nearest_inner_pair_indices": null,
+              "minimum_inner_to_inner_mm": null,
+              "minimum_material_ligament_mm": 1.2599999999999998,
+              "analytic_cell_envelope_mm": 1.2599999999999998,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  4.65,
+                  -1.5920408388915593e-16,
+                  0.06
+                ],
+                [
+                  5.91,
+                  0.0,
+                  0.06
+                ]
+              ]
+            },
+            {
+              "label": "straight_after_entry",
+              "z_mm": 0.120001,
+              "cavity_radius_mm": 0.6000000000000001,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 1,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.3099999999999998
+              ],
+              "nearest_inner_pair_indices": null,
+              "minimum_inner_to_inner_mm": null,
+              "minimum_material_ligament_mm": 1.3099999999999998,
+              "analytic_cell_envelope_mm": 1.3099999999999998,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  4.6,
+                  -1.469576158976824e-16,
+                  0.120001
+                ],
+                [
+                  5.91,
+                  0.0,
+                  0.120001
+                ]
+              ]
+            },
+            {
+              "label": "straight_middle",
+              "z_mm": 0.46,
+              "cavity_radius_mm": 0.6000000000000001,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 1,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.3099999999999998
+              ],
+              "nearest_inner_pair_indices": null,
+              "minimum_inner_to_inner_mm": null,
+              "minimum_material_ligament_mm": 1.3099999999999998,
+              "analytic_cell_envelope_mm": 1.3099999999999998,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  4.6,
+                  -1.469576158976824e-16,
+                  0.46
+                ],
+                [
+                  5.91,
+                  0.0,
+                  0.46
+                ]
+              ]
+            },
+            {
+              "label": "below_roof",
+              "z_mm": 0.799999,
+              "cavity_radius_mm": 0.6000000000000001,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 1,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.3099999999999998
+              ],
+              "nearest_inner_pair_indices": null,
+              "minimum_inner_to_inner_mm": null,
+              "minimum_material_ligament_mm": 1.3099999999999998,
+              "analytic_cell_envelope_mm": 1.3099999999999998,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  4.6,
+                  -1.469576158976824e-16,
+                  0.799999
+                ],
+                [
+                  5.91,
+                  0.0,
+                  0.799999
+                ]
+              ]
+            }
+          ],
+          "minimum_sidewall_mm": 1.21,
+          "exact_mouth_analytic_bound_mm": 1.21,
+          "roof_section": {
+            "z_mm": 0.8000010000000001,
+            "faces": 1,
+            "wires": 1
+          },
+          "roof_measurements": [
+            {
+              "xy_mm": [
+                4.0,
+                0.0
+              ],
+              "endpoints_z_mm": [
+                0.8,
+                2.28
+              ],
+              "thickness_mm": 1.4799999999999998
+            }
+          ],
+          "minimum_roof_mm": 1.4799999999999998
+        },
+        "peg_study": {
+          "stud_diameter_mm": 1.1,
+          "tip_diameter_mm": 0.9800000000000001,
+          "root_diameter_mm": 1.26,
+          "neck_area_mm2": 0.9503317777109126,
+          "root_area_mm2": 1.246898124209789,
+          "stud_height_mm": 0.6,
+          "root_height_mm": 0.1,
+          "strength": "UNKNOWN",
+          "retention": "UNKNOWN"
+        }
+      }
+    },
+    "trial-p4-receiver-04": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 99.59304731247227,
+      "bounds_mm": [
+        [
+          -5.91,
+          -1.91,
+          0.0
+        ],
+        [
+          5.91,
+          1.91,
+          2.28
+        ]
+      ],
+      "brep_faces": 25,
+      "step": "trial/p4/parts/trial-p4-receiver-04.step",
+      "stl": "trial/p4/parts/trial-p4-receiver-04.stl",
+      "mesh_vertices": 118,
+      "mesh_faces": 232,
+      "mesh_volume_mm3": 99.60346897436021,
+      "quantity": 1,
+      "parameters": "Parameters_3aaf07d608e2",
+      "final": "Parameters_3aaf07d608e2_Final",
+      "spec": {
+        "pitch_mm": 4,
+        "layer_mm": 2.4,
+        "cells": [
+          3,
+          1
+        ],
+        "footprint_cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "mating_cells": []
+      },
+      "options": {
+        "clearance": 0.2,
+        "socket_cells": [
+          [
+            2,
+            0
+          ]
+        ],
+        "appearance_cells": [],
+        "label_notches": 4
+      },
+      "measurement": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 99.59304731247227,
+        "bounds_mm": [
+          [
+            -5.91,
+            -1.91,
+            0.0
+          ],
+          [
+            5.91,
+            1.91,
+            2.28
+          ]
+        ],
+        "brep_faces": 25,
+        "analytic_volume_mm3": 99.59304731247228,
+        "center_of_mass_mm": [
+          0.025526894883663182,
+          0.0380026528169705,
+          1.1480286859912583
+        ],
+        "swept_body_area_mm2": 44.1524,
+        "occupied_cell_column_violation_mm3": 0.0,
+        "cavity_measurements": {
+          "result": "PASS_NATIVE_BREP_MEASUREMENT",
+          "socket_count": 1,
+          "method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof",
+          "nearest_inner_pair_proof": "All cavity wires are measured equal-radius circles at verified grid centers; nearest center pair minimizes inner-wire distance",
+          "epsilon_mm": 1e-06,
+          "numerical_tolerance_mm": 2e-06,
+          "sections": [
+            {
+              "label": "mouth_exact",
+              "z_mm": 0.0,
+              "cavity_radius_mm": 0.7,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 1,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.21
+              ],
+              "nearest_inner_pair_indices": null,
+              "minimum_inner_to_inner_mm": null,
+              "minimum_material_ligament_mm": 1.21,
+              "analytic_cell_envelope_mm": 1.21,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  4.7,
+                  -1.7145055188062944e-16,
+                  0.0
+                ],
+                [
+                  5.91,
+                  -2.220446049250313e-16,
+                  0.0
+                ]
+              ]
+            },
+            {
+              "label": "mouth_epsilon",
+              "z_mm": 1e-06,
+              "cavity_radius_mm": 0.6999995833333332,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 1,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.2100004166666665
+              ],
+              "nearest_inner_pair_indices": null,
+              "minimum_inner_to_inner_mm": null,
+              "minimum_material_ligament_mm": 1.2100004166666665,
+              "analytic_cell_envelope_mm": 1.2100004166666667,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  4.699999583333334,
+                  -1.714504498267295e-16,
+                  1e-06
+                ],
+                [
+                  5.91,
+                  0.0,
+                  1e-06
+                ]
+              ]
+            },
+            {
+              "label": "entry_middle",
+              "z_mm": 0.06,
+              "cavity_radius_mm": 0.675,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 1,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.2349999999999999
+              ],
+              "nearest_inner_pair_indices": null,
+              "minimum_inner_to_inner_mm": null,
+              "minimum_material_ligament_mm": 1.2349999999999999,
+              "analytic_cell_envelope_mm": 1.2349999999999999,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  4.675,
+                  -1.6532731788489269e-16,
+                  0.06
+                ],
+                [
+                  5.91,
+                  0.0,
+                  0.06
+                ]
+              ]
+            },
+            {
+              "label": "straight_after_entry",
+              "z_mm": 0.120001,
+              "cavity_radius_mm": 0.65,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 1,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.2599999999999998
+              ],
+              "nearest_inner_pair_indices": null,
+              "minimum_inner_to_inner_mm": null,
+              "minimum_material_ligament_mm": 1.2599999999999998,
+              "analytic_cell_envelope_mm": 1.2599999999999998,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  4.65,
+                  -1.5920408388915593e-16,
+                  0.120001
+                ],
+                [
+                  5.91,
+                  0.0,
+                  0.120001
+                ]
+              ]
+            },
+            {
+              "label": "straight_middle",
+              "z_mm": 0.46,
+              "cavity_radius_mm": 0.65,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 1,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.2599999999999998
+              ],
+              "nearest_inner_pair_indices": null,
+              "minimum_inner_to_inner_mm": null,
+              "minimum_material_ligament_mm": 1.2599999999999998,
+              "analytic_cell_envelope_mm": 1.2599999999999998,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  4.65,
+                  -1.5920408388915593e-16,
+                  0.46
+                ],
+                [
+                  5.91,
+                  0.0,
+                  0.46
+                ]
+              ]
+            },
+            {
+              "label": "below_roof",
+              "z_mm": 0.799999,
+              "cavity_radius_mm": 0.65,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 1,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.2599999999999998
+              ],
+              "nearest_inner_pair_indices": null,
+              "minimum_inner_to_inner_mm": null,
+              "minimum_material_ligament_mm": 1.2599999999999998,
+              "analytic_cell_envelope_mm": 1.2599999999999998,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  4.65,
+                  -1.5920408388915593e-16,
+                  0.799999
+                ],
+                [
+                  5.91,
+                  0.0,
+                  0.799999
+                ]
+              ]
+            }
+          ],
+          "minimum_sidewall_mm": 1.21,
+          "exact_mouth_analytic_bound_mm": 1.21,
+          "roof_section": {
+            "z_mm": 0.8000010000000001,
+            "faces": 1,
+            "wires": 1
+          },
+          "roof_measurements": [
+            {
+              "xy_mm": [
+                4.0,
+                0.0
+              ],
+              "endpoints_z_mm": [
+                0.8,
+                2.28
+              ],
+              "thickness_mm": 1.4799999999999998
+            }
+          ],
+          "minimum_roof_mm": 1.4799999999999998
+        },
+        "peg_study": {
+          "stud_diameter_mm": 1.1,
+          "tip_diameter_mm": 0.9800000000000001,
+          "root_diameter_mm": 1.26,
+          "neck_area_mm2": 0.9503317777109126,
+          "root_area_mm2": 1.246898124209789,
+          "stud_height_mm": 0.6,
+          "root_height_mm": 0.1,
+          "strength": "UNKNOWN",
+          "retention": "UNKNOWN"
+        }
+      }
+    },
+    "trial-p4-male-grip": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 104.261076608221,
+      "bounds_mm": [
+        [
+          -5.91,
+          -1.91,
+          0.0
+        ],
+        [
+          5.91,
+          1.91,
+          3.0
+        ]
+      ],
+      "brep_faces": 12,
+      "step": "trial/p4/parts/trial-p4-male-grip.step",
+      "stl": "trial/p4/parts/trial-p4-male-grip.stl",
+      "mesh_vertices": 164,
+      "mesh_faces": 324,
+      "mesh_volume_mm3": 104.24832322886652,
+      "quantity": 4,
+      "parameters": "Parameters_284bdb6efa57",
+      "final": "Parameters_284bdb6efa57_TopFeatures",
+      "spec": {
+        "pitch_mm": 4,
+        "layer_mm": 2.4,
+        "cells": [
+          3,
+          1
+        ],
+        "footprint_cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "mating_cells": [
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "options": {
+        "socket_cells": [],
+        "appearance_cells": []
+      },
+      "measurement": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 104.261076608221,
+        "bounds_mm": [
+          [
+            -5.91,
+            -1.91,
+            0.0
+          ],
+          [
+            5.91,
+            1.91,
+            3.0
+          ]
+        ],
+        "brep_faces": 12,
+        "analytic_volume_mm3": 104.261076608221,
+        "center_of_mass_mm": [
+          0.05039674060367132,
+          -4.099593189310545e-17,
+          1.1570407494563804
+        ],
+        "swept_body_area_mm2": 45.1524,
+        "occupied_cell_column_violation_mm3": 0.0,
+        "cavity_measurements": {
+          "result": "NOT_APPLICABLE_NO_CAVITY",
+          "socket_count": 0
+        },
+        "peg_study": {
+          "stud_diameter_mm": 1.1,
+          "tip_diameter_mm": 0.9800000000000001,
+          "root_diameter_mm": 1.26,
+          "neck_area_mm2": 0.9503317777109126,
+          "root_area_mm2": 1.246898124209789,
+          "stud_height_mm": 0.6,
+          "root_height_mm": 0.1,
+          "strength": "UNKNOWN",
+          "retention": "UNKNOWN"
+        }
+      }
+    },
+    "trial-p4-bridge-lower": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 68.87897163963974,
+      "bounds_mm": [
+        [
+          -3.91,
+          -1.91,
+          0.0
+        ],
+        [
+          3.91,
+          1.91,
+          3.0
+        ]
+      ],
+      "brep_faces": 24,
+      "step": "trial/p4/parts/trial-p4-bridge-lower.step",
+      "stl": "trial/p4/parts/trial-p4-bridge-lower.stl",
+      "mesh_vertices": 476,
+      "mesh_faces": 948,
+      "mesh_volume_mm3": 68.87150078539817,
+      "quantity": 2,
+      "parameters": "Parameters_b09d07a6862e",
+      "final": "Parameters_b09d07a6862e_Final",
+      "spec": {
+        "pitch_mm": 4,
+        "layer_mm": 2.4,
+        "cells": [
+          2,
+          1
+        ],
+        "footprint_cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "mating_cells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "options": {},
+      "measurement": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 68.87897163963974,
+        "bounds_mm": [
+          [
+            -3.91,
+            -1.91,
+            0.0
+          ],
+          [
+            3.91,
+            1.91,
+            3.0
+          ]
+        ],
+        "brep_faces": 24,
+        "analytic_volume_mm3": 68.87897163963974,
+        "center_of_mass_mm": [
+          -2.4338876253187257e-16,
+          4.133808293140968e-17,
+          1.2117925756719037
+        ],
+        "swept_body_area_mm2": 29.8724,
+        "occupied_cell_column_violation_mm3": 0.0,
+        "cavity_measurements": {
+          "result": "PASS_NATIVE_BREP_MEASUREMENT",
+          "socket_count": 2,
+          "method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof",
+          "nearest_inner_pair_proof": "All cavity wires are measured equal-radius circles at verified grid centers; nearest center pair minimizes inner-wire distance",
+          "epsilon_mm": 1e-06,
+          "numerical_tolerance_mm": 2e-06,
+          "sections": [
+            {
+              "label": "mouth_exact",
+              "z_mm": 0.0,
+              "cavity_radius_mm": 0.7,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 2,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.21,
+                1.21
+              ],
+              "nearest_inner_pair_indices": [
+                0,
+                1
+              ],
+              "minimum_inner_to_inner_mm": 2.6,
+              "minimum_material_ligament_mm": 1.21,
+              "analytic_cell_envelope_mm": 1.21,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  -2.0,
+                  0.7,
+                  0.0
+                ],
+                [
+                  -2.0,
+                  1.91,
+                  0.0
+                ]
+              ]
+            },
+            {
+              "label": "mouth_epsilon",
+              "z_mm": 1e-06,
+              "cavity_radius_mm": 0.6999991666666666,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 2,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.2100008333333334,
+                1.2100008333333334
+              ],
+              "nearest_inner_pair_indices": [
+                0,
+                1
+              ],
+              "minimum_inner_to_inner_mm": 2.6000016666666665,
+              "minimum_material_ligament_mm": 1.2100008333333334,
+              "analytic_cell_envelope_mm": 1.2100008333333334,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  -2.0,
+                  -0.6999991666666666,
+                  1e-06
+                ],
+                [
+                  -2.0,
+                  -1.91,
+                  1e-06
+                ]
+              ]
+            },
+            {
+              "label": "entry_middle",
+              "z_mm": 0.06,
+              "cavity_radius_mm": 0.65,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 2,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.2599999999999998,
+                1.2599999999999998
+              ],
+              "nearest_inner_pair_indices": [
+                0,
+                1
+              ],
+              "minimum_inner_to_inner_mm": 2.7,
+              "minimum_material_ligament_mm": 1.2599999999999998,
+              "analytic_cell_envelope_mm": 1.2599999999999998,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  -2.0,
+                  -0.65,
+                  0.06
+                ],
+                [
+                  -2.0,
+                  -1.91,
+                  0.06
+                ]
+              ]
+            },
+            {
+              "label": "straight_after_entry",
+              "z_mm": 0.120001,
+              "cavity_radius_mm": 0.6000000000000001,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 2,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.3099999999999998,
+                1.3099999999999998
+              ],
+              "nearest_inner_pair_indices": [
+                0,
+                1
+              ],
+              "minimum_inner_to_inner_mm": 2.8,
+              "minimum_material_ligament_mm": 1.3099999999999998,
+              "analytic_cell_envelope_mm": 1.3099999999999998,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  -2.0,
+                  -0.6000000000000001,
+                  0.120001
+                ],
+                [
+                  -2.0,
+                  -1.91,
+                  0.120001
+                ]
+              ]
+            },
+            {
+              "label": "straight_middle",
+              "z_mm": 0.46,
+              "cavity_radius_mm": 0.6000000000000001,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 2,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.3099999999999998,
+                1.3099999999999998
+              ],
+              "nearest_inner_pair_indices": [
+                0,
+                1
+              ],
+              "minimum_inner_to_inner_mm": 2.8,
+              "minimum_material_ligament_mm": 1.3099999999999998,
+              "analytic_cell_envelope_mm": 1.3099999999999998,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  -2.0,
+                  -0.6000000000000001,
+                  0.46
+                ],
+                [
+                  -2.0,
+                  -1.91,
+                  0.46
+                ]
+              ]
+            },
+            {
+              "label": "below_roof",
+              "z_mm": 0.799999,
+              "cavity_radius_mm": 0.6000000000000001,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 2,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.3099999999999998,
+                1.3099999999999998
+              ],
+              "nearest_inner_pair_indices": [
+                0,
+                1
+              ],
+              "minimum_inner_to_inner_mm": 2.8,
+              "minimum_material_ligament_mm": 1.3099999999999998,
+              "analytic_cell_envelope_mm": 1.3099999999999998,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  -2.0,
+                  -0.6000000000000001,
+                  0.799999
+                ],
+                [
+                  -2.0,
+                  -1.91,
+                  0.799999
+                ]
+              ]
+            }
+          ],
+          "minimum_sidewall_mm": 1.21,
+          "exact_mouth_analytic_bound_mm": 1.21,
+          "roof_section": {
+            "z_mm": 0.8000010000000001,
+            "faces": 1,
+            "wires": 1
+          },
+          "roof_measurements": [
+            {
+              "xy_mm": [
+                -2.0,
+                0.0
+              ],
+              "endpoints_z_mm": [
+                0.8,
+                2.28
+              ],
+              "thickness_mm": 1.4799999999999998
+            },
+            {
+              "xy_mm": [
+                2.0,
+                0.0
+              ],
+              "endpoints_z_mm": [
+                0.8,
+                2.28
+              ],
+              "thickness_mm": 1.4799999999999998
+            }
+          ],
+          "minimum_roof_mm": 1.4799999999999998
+        },
+        "peg_study": {
+          "stud_diameter_mm": 1.1,
+          "tip_diameter_mm": 0.9800000000000001,
+          "root_diameter_mm": 1.26,
+          "neck_area_mm2": 0.9503317777109126,
+          "root_area_mm2": 1.246898124209789,
+          "stud_height_mm": 0.6,
+          "root_height_mm": 0.1,
+          "strength": "UNKNOWN",
+          "retention": "UNKNOWN"
+        }
+      }
+    },
+    "trial-p4-bridge-upper": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 144.72200973462316,
+      "bounds_mm": [
+        [
+          -3.91,
+          -3.91,
+          0.0
+        ],
+        [
+          3.91,
+          3.91,
+          3.1133333333333333
+        ]
+      ],
+      "brep_faces": 30,
+      "step": "trial/p4/parts/trial-p4-bridge-upper.step",
+      "stl": "trial/p4/parts/trial-p4-bridge-upper.stl",
+      "mesh_vertices": 632,
+      "mesh_faces": 1260,
+      "mesh_volume_mm3": 144.67063045435958,
+      "quantity": 1,
+      "parameters": "Parameters_3d2cd7e62829",
+      "final": "Parameters_3d2cd7e62829_Final",
+      "spec": {
+        "pitch_mm": 4,
+        "layer_mm": 2.4,
+        "cells": [
+          2,
+          2
+        ],
+        "footprint_cells": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "mating_cells": []
+      },
+      "options": {},
+      "measurement": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 144.72200973462316,
+        "bounds_mm": [
+          [
+            -3.91,
+            -3.91,
+            0.0
+          ],
+          [
+            3.91,
+            3.91,
+            3.1133333333333333
+          ]
+        ],
+        "brep_faces": 30,
+        "analytic_volume_mm3": 144.72200973462324,
+        "center_of_mass_mm": [
+          -5.216564212516547e-17,
+          -2.7617104654499366e-17,
+          1.2558371502063261
+        ],
+        "swept_body_area_mm2": 61.1524,
+        "occupied_cell_column_violation_mm3": 0.0,
+        "cavity_measurements": {
+          "result": "PASS_NATIVE_BREP_MEASUREMENT",
+          "socket_count": 4,
+          "method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof",
+          "nearest_inner_pair_proof": "All cavity wires are measured equal-radius circles at verified grid centers; nearest center pair minimizes inner-wire distance",
+          "epsilon_mm": 1e-06,
+          "numerical_tolerance_mm": 2e-06,
+          "sections": [
+            {
+              "label": "mouth_exact",
+              "z_mm": 0.0,
+              "cavity_radius_mm": 0.7,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 4,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.21,
+                1.21,
+                1.21,
+                1.21
+              ],
+              "nearest_inner_pair_indices": [
+                0,
+                1
+              ],
+              "minimum_inner_to_inner_mm": 2.6,
+              "minimum_material_ligament_mm": 1.21,
+              "analytic_cell_envelope_mm": 1.21,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  -2.7,
+                  -2.0,
+                  0.0
+                ],
+                [
+                  -3.91,
+                  -2.0,
+                  0.0
+                ]
+              ]
+            },
+            {
+              "label": "mouth_epsilon",
+              "z_mm": 1e-06,
+              "cavity_radius_mm": 0.6999991666666666,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 4,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.2100008333333334,
+                1.2100008333333334,
+                1.2100008333333334,
+                1.2100008333333334
+              ],
+              "nearest_inner_pair_indices": [
+                0,
+                1
+              ],
+              "minimum_inner_to_inner_mm": 2.6000016666666665,
+              "minimum_material_ligament_mm": 1.2100008333333334,
+              "analytic_cell_envelope_mm": 1.2100008333333334,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  -2.0,
+                  -2.6999991666666667,
+                  1e-06
+                ],
+                [
+                  -2.0,
+                  -3.91,
+                  1e-06
+                ]
+              ]
+            },
+            {
+              "label": "entry_middle",
+              "z_mm": 0.06,
+              "cavity_radius_mm": 0.65,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 4,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.2600000000000002,
+                1.2600000000000002,
+                1.2599999999999998,
+                1.2599999999999998
+              ],
+              "nearest_inner_pair_indices": [
+                0,
+                1
+              ],
+              "minimum_inner_to_inner_mm": 2.7,
+              "minimum_material_ligament_mm": 1.2599999999999998,
+              "analytic_cell_envelope_mm": 1.2599999999999998,
+              "limiting_socket_index": 2,
+              "native_nearest_point_pair_mm": [
+                [
+                  2.6500000000000004,
+                  -2.0,
+                  0.06
+                ],
+                [
+                  3.91,
+                  -2.0,
+                  0.06
+                ]
+              ]
+            },
+            {
+              "label": "straight_after_entry",
+              "z_mm": 0.120001,
+              "cavity_radius_mm": 0.6000000000000001,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 4,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.31,
+                1.31,
+                1.31,
+                1.31
+              ],
+              "nearest_inner_pair_indices": [
+                0,
+                1
+              ],
+              "minimum_inner_to_inner_mm": 2.8,
+              "minimum_material_ligament_mm": 1.31,
+              "analytic_cell_envelope_mm": 1.3099999999999998,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  -2.0,
+                  -2.6,
+                  0.120001
+                ],
+                [
+                  -2.0,
+                  -3.91,
+                  0.120001
+                ]
+              ]
+            },
+            {
+              "label": "straight_middle",
+              "z_mm": 0.46,
+              "cavity_radius_mm": 0.6000000000000001,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 4,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.31,
+                1.31,
+                1.31,
+                1.31
+              ],
+              "nearest_inner_pair_indices": [
+                0,
+                1
+              ],
+              "minimum_inner_to_inner_mm": 2.8,
+              "minimum_material_ligament_mm": 1.31,
+              "analytic_cell_envelope_mm": 1.3099999999999998,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  -2.0,
+                  -2.6,
+                  0.46
+                ],
+                [
+                  -2.0,
+                  -3.91,
+                  0.46
+                ]
+              ]
+            },
+            {
+              "label": "below_roof",
+              "z_mm": 0.799999,
+              "cavity_radius_mm": 0.6000000000000001,
+              "outer_wire_count": 1,
+              "additional_footprint_void_wires": 0,
+              "identified_socket_wires": 4,
+              "inner_to_outer_or_footprint_void_mm": [
+                1.31,
+                1.31,
+                1.31,
+                1.31
+              ],
+              "nearest_inner_pair_indices": [
+                0,
+                1
+              ],
+              "minimum_inner_to_inner_mm": 2.8,
+              "minimum_material_ligament_mm": 1.31,
+              "analytic_cell_envelope_mm": 1.3099999999999998,
+              "limiting_socket_index": 0,
+              "native_nearest_point_pair_mm": [
+                [
+                  -2.0,
+                  -2.6,
+                  0.799999
+                ],
+                [
+                  -2.0,
+                  -3.91,
+                  0.799999
+                ]
+              ]
+            }
+          ],
+          "minimum_sidewall_mm": 1.21,
+          "exact_mouth_analytic_bound_mm": 1.21,
+          "roof_section": {
+            "z_mm": 0.8000010000000001,
+            "faces": 1,
+            "wires": 1
+          },
+          "roof_measurements": [
+            {
+              "xy_mm": [
+                -2.0,
+                -2.0
+              ],
+              "endpoints_z_mm": [
+                0.8,
+                2.28
+              ],
+              "thickness_mm": 1.4799999999999998
+            },
+            {
+              "xy_mm": [
+                -2.0,
+                2.0
+              ],
+              "endpoints_z_mm": [
+                0.8,
+                2.28
+              ],
+              "thickness_mm": 1.4799999999999998
+            },
+            {
+              "xy_mm": [
+                2.0,
+                -2.0
+              ],
+              "endpoints_z_mm": [
+                0.8,
+                2.28
+              ],
+              "thickness_mm": 1.4799999999999998
+            },
+            {
+              "xy_mm": [
+                2.0,
+                2.0
+              ],
+              "endpoints_z_mm": [
+                0.8,
+                2.28
+              ],
+              "thickness_mm": 1.4799999999999998
+            }
+          ],
+          "minimum_roof_mm": 1.4799999999999998
+        },
+        "peg_study": {
+          "stud_diameter_mm": 1.1,
+          "tip_diameter_mm": 0.9800000000000001,
+          "root_diameter_mm": 1.26,
+          "neck_area_mm2": 0.9503317777109126,
+          "root_area_mm2": 1.246898124209789,
+          "stud_height_mm": 0.6,
+          "root_height_mm": 0.1,
+          "strength": "UNKNOWN",
+          "retention": "UNKNOWN"
+        }
+      }
+    }
+  },
+  "instances": [
+    {
+      "id": "p4-T01",
+      "type_id": "trial-p4-receiver-01",
+      "position_mm": [
+        15.91,
+        11.91,
+        0
+      ],
+      "rotation_z_deg": 0,
+      "placed_bounds_mm": [
+        [
+          10.0,
+          10.0,
+          0
+        ],
+        [
+          21.82,
+          13.82,
+          2.28
+        ]
+      ],
+      "native_link": "Print_p4_T01"
+    },
+    {
+      "id": "p4-T02",
+      "type_id": "trial-p4-receiver-02",
+      "position_mm": [
+        29.73,
+        11.91,
+        0
+      ],
+      "rotation_z_deg": 0,
+      "placed_bounds_mm": [
+        [
+          23.82,
+          10.0,
+          0
+        ],
+        [
+          35.64,
+          13.82,
+          2.28
+        ]
+      ],
+      "native_link": "Print_p4_T02"
+    },
+    {
+      "id": "p4-T03",
+      "type_id": "trial-p4-receiver-03",
+      "position_mm": [
+        43.55,
+        11.91,
+        0
+      ],
+      "rotation_z_deg": 0,
+      "placed_bounds_mm": [
+        [
+          37.64,
+          10.0,
+          0
+        ],
+        [
+          49.46,
+          13.82,
+          2.28
+        ]
+      ],
+      "native_link": "Print_p4_T03"
+    },
+    {
+      "id": "p4-T04",
+      "type_id": "trial-p4-receiver-04",
+      "position_mm": [
+        57.37,
+        11.91,
+        0
+      ],
+      "rotation_z_deg": 0,
+      "placed_bounds_mm": [
+        [
+          51.46,
+          10.0,
+          0
+        ],
+        [
+          63.28,
+          13.82,
+          2.28
+        ]
+      ],
+      "native_link": "Print_p4_T04"
+    },
+    {
+      "id": "p4-T05",
+      "type_id": "trial-p4-male-grip",
+      "position_mm": [
+        71.19,
+        11.91,
+        0
+      ],
+      "rotation_z_deg": 0,
+      "placed_bounds_mm": [
+        [
+          65.28,
+          10.0,
+          0
+        ],
+        [
+          77.1,
+          13.82,
+          3.0
+        ]
+      ],
+      "native_link": "Print_p4_T05"
+    },
+    {
+      "id": "p4-T06",
+      "type_id": "trial-p4-male-grip",
+      "position_mm": [
+        85.01,
+        11.91,
+        0
+      ],
+      "rotation_z_deg": 0,
+      "placed_bounds_mm": [
+        [
+          79.1,
+          10.0,
+          0
+        ],
+        [
+          90.91999999999999,
+          13.82,
+          3.0
+        ]
+      ],
+      "native_link": "Print_p4_T06"
+    },
+    {
+      "id": "p4-T07",
+      "type_id": "trial-p4-male-grip",
+      "position_mm": [
+        98.83,
+        11.91,
+        0
+      ],
+      "rotation_z_deg": 0,
+      "placed_bounds_mm": [
+        [
+          92.91999999999999,
+          10.0,
+          0
+        ],
+        [
+          104.73999999999998,
+          13.82,
+          3.0
+        ]
+      ],
+      "native_link": "Print_p4_T07"
+    },
+    {
+      "id": "p4-T08",
+      "type_id": "trial-p4-male-grip",
+      "position_mm": [
+        112.65,
+        11.91,
+        0
+      ],
+      "rotation_z_deg": 0,
+      "placed_bounds_mm": [
+        [
+          106.73999999999998,
+          10.0,
+          0
+        ],
+        [
+          118.55999999999997,
+          13.82,
+          3.0
+        ]
+      ],
+      "native_link": "Print_p4_T08"
+    },
+    {
+      "id": "p4-T09",
+      "type_id": "trial-p4-bridge-lower",
+      "position_mm": [
+        124.47,
+        11.91,
+        0
+      ],
+      "rotation_z_deg": 0,
+      "placed_bounds_mm": [
+        [
+          120.55999999999997,
+          10.0,
+          0
+        ],
+        [
+          128.37999999999997,
+          13.82,
+          3.0
+        ]
+      ],
+      "native_link": "Print_p4_T09"
+    },
+    {
+      "id": "p4-T10",
+      "type_id": "trial-p4-bridge-lower",
+      "position_mm": [
+        134.29,
+        11.91,
+        0
+      ],
+      "rotation_z_deg": 0,
+      "placed_bounds_mm": [
+        [
+          130.37999999999997,
+          10.0,
+          0
+        ],
+        [
+          138.19999999999996,
+          13.82,
+          3.0
+        ]
+      ],
+      "native_link": "Print_p4_T10"
+    },
+    {
+      "id": "p4-T11",
+      "type_id": "trial-p4-bridge-upper",
+      "position_mm": [
+        144.11,
+        13.91,
+        0
+      ],
+      "rotation_z_deg": 0,
+      "placed_bounds_mm": [
+        [
+          140.19999999999996,
+          10.0,
+          0
+        ],
+        [
+          148.01999999999995,
+          17.82,
+          3.1133333333333333
+        ]
+      ],
+      "native_link": "Print_p4_T11"
+    }
+  ],
+  "fit_pairs": [
+    {
+      "pair_id": "p4-fit-1",
+      "full_height_notches": 1,
+      "diametral_clearance_mm": -0.05,
+      "receiver_type_id": "trial-p4-receiver-01",
+      "male_type_id": "trial-p4-male-grip",
+      "receiver_instance_id": "p4-T01",
+      "male_instance_id": "p4-T05",
+      "nominal_check": {
+        "result": "EXPECTED_INTERFERENCE_NOT_RIGIDLY_SEATABLE",
+        "diametral_clearance_mm": -0.05,
+        "native_pad_to_bottom_common_area_mm2": [
+          4.618141200776995
+        ],
+        "total_bearing_area_mm2": 4.618141200776995,
+        "final_layer_separation_mm": 2.4,
+        "native_insertion_samples": [
+          {
+            "upper_bottom_z_mm": 3.2,
+            "lift_mm": 0.8,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 3.1,
+            "lift_mm": 0.7000000000000001,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 3.0,
+            "lift_mm": 0.6000000000000001,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 3.0,
+            "lift_mm": 0.6,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 2.9,
+            "lift_mm": 0.5,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 2.8,
+            "lift_mm": 0.4,
+            "overlap_mm3": 0.0008003751086118529
+          },
+          {
+            "upper_bottom_z_mm": 2.7,
+            "lift_mm": 0.30000000000000004,
+            "overlap_mm3": 0.009229051751795725
+          },
+          {
+            "upper_bottom_z_mm": 2.6,
+            "lift_mm": 0.2,
+            "overlap_mm3": 0.017672082008318213
+          },
+          {
+            "upper_bottom_z_mm": 2.5,
+            "lift_mm": 0.1,
+            "overlap_mm3": 0.0261151122648407
+          },
+          {
+            "upper_bottom_z_mm": 2.4,
+            "lift_mm": 0.0,
+            "overlap_mm3": 0.03455814252136319
+          }
+        ],
+        "continuous_radial_envelope": {
+          "method": "Exact piecewise-affine radial envelope extrema over 0 <= socket_z <= male_z <= stem_height",
+          "lift_range_mm": [
+            0,
+            0.8
+          ],
+          "separated_lift_range_mm": [
+            0.6,
+            0.8
+          ],
+          "critical_points": [
+            {
+              "male_z_mm": 0,
+              "socket_z_mm": 0,
+              "lift_mm": 0,
+              "radial_clearance_mm": 0.06999999999999995
+            },
+            {
+              "male_z_mm": 0.1,
+              "socket_z_mm": 0,
+              "lift_mm": 0.1,
+              "radial_clearance_mm": 0.1499999999999999
+            },
+            {
+              "male_z_mm": 0.1,
+              "socket_z_mm": 0.1,
+              "lift_mm": 0.0,
+              "radial_clearance_mm": 0.004166666666666652
+            },
+            {
+              "male_z_mm": 0.12,
+              "socket_z_mm": 0.12,
+              "lift_mm": 0.0,
+              "radial_clearance_mm": -0.025000000000000022
+            },
+            {
+              "male_z_mm": 0.5,
+              "socket_z_mm": 0,
+              "lift_mm": 0.5,
+              "radial_clearance_mm": 0.1499999999999999
+            },
+            {
+              "male_z_mm": 0.5,
+              "socket_z_mm": 0.12,
+              "lift_mm": 0.38,
+              "radial_clearance_mm": -0.025000000000000022
+            },
+            {
+              "male_z_mm": 0.5,
+              "socket_z_mm": 0.5,
+              "lift_mm": 0.0,
+              "radial_clearance_mm": -0.025000000000000022
+            },
+            {
+              "male_z_mm": 0.6,
+              "socket_z_mm": 0,
+              "lift_mm": 0.6,
+              "radial_clearance_mm": 0.2099999999999999
+            },
+            {
+              "male_z_mm": 0.6,
+              "socket_z_mm": 0.12,
+              "lift_mm": 0.48,
+              "radial_clearance_mm": 0.034999999999999976
+            },
+            {
+              "male_z_mm": 0.6,
+              "socket_z_mm": 0.6,
+              "lift_mm": 0.0,
+              "radial_clearance_mm": 0.034999999999999976
+            }
+          ],
+          "minimum_radial_clearance_mm": -0.025000000000000022,
+          "result": "EXPECTED_INTERFERENCE"
+        },
+        "physical_fit": "UNKNOWN",
+        "retention_strength": "UNKNOWN"
+      }
+    },
+    {
+      "pair_id": "p4-fit-2",
+      "full_height_notches": 2,
+      "diametral_clearance_mm": 0.0,
+      "receiver_type_id": "trial-p4-receiver-02",
+      "male_type_id": "trial-p4-male-grip",
+      "receiver_instance_id": "p4-T02",
+      "male_instance_id": "p4-T06",
+      "nominal_check": {
+        "result": "PASS_NOMINAL_SEATING",
+        "diametral_clearance_mm": 0.0,
+        "native_pad_to_bottom_common_area_mm2": [
+          4.618141200776995
+        ],
+        "total_bearing_area_mm2": 4.618141200776995,
+        "final_layer_separation_mm": 2.4,
+        "native_insertion_samples": [
+          {
+            "upper_bottom_z_mm": 3.2,
+            "lift_mm": 0.8,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 3.1,
+            "lift_mm": 0.7000000000000001,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 3.0,
+            "lift_mm": 0.6000000000000001,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 3.0,
+            "lift_mm": 0.6,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 2.9,
+            "lift_mm": 0.5,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 2.8,
+            "lift_mm": 0.4,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 2.7,
+            "lift_mm": 0.30000000000000004,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 2.6,
+            "lift_mm": 0.2,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 2.5,
+            "lift_mm": 0.1,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 2.4,
+            "lift_mm": 0.0,
+            "overlap_mm3": 0.0
+          }
+        ],
+        "continuous_radial_envelope": {
+          "method": "Exact piecewise-affine radial envelope extrema over 0 <= socket_z <= male_z <= stem_height",
+          "lift_range_mm": [
+            0,
+            0.8
+          ],
+          "separated_lift_range_mm": [
+            0.6,
+            0.8
+          ],
+          "critical_points": [
+            {
+              "male_z_mm": 0,
+              "socket_z_mm": 0,
+              "lift_mm": 0,
+              "radial_clearance_mm": 0.06999999999999995
+            },
+            {
+              "male_z_mm": 0.1,
+              "socket_z_mm": 0,
+              "lift_mm": 0.1,
+              "radial_clearance_mm": 0.1499999999999999
+            },
+            {
+              "male_z_mm": 0.1,
+              "socket_z_mm": 0.1,
+              "lift_mm": 0.0,
+              "radial_clearance_mm": 0.02499999999999991
+            },
+            {
+              "male_z_mm": 0.12,
+              "socket_z_mm": 0.12,
+              "lift_mm": 0.0,
+              "radial_clearance_mm": 0.0
+            },
+            {
+              "male_z_mm": 0.5,
+              "socket_z_mm": 0,
+              "lift_mm": 0.5,
+              "radial_clearance_mm": 0.1499999999999999
+            },
+            {
+              "male_z_mm": 0.5,
+              "socket_z_mm": 0.12,
+              "lift_mm": 0.38,
+              "radial_clearance_mm": 0.0
+            },
+            {
+              "male_z_mm": 0.5,
+              "socket_z_mm": 0.5,
+              "lift_mm": 0.0,
+              "radial_clearance_mm": 0.0
+            },
+            {
+              "male_z_mm": 0.6,
+              "socket_z_mm": 0,
+              "lift_mm": 0.6,
+              "radial_clearance_mm": 0.2099999999999999
+            },
+            {
+              "male_z_mm": 0.6,
+              "socket_z_mm": 0.12,
+              "lift_mm": 0.48,
+              "radial_clearance_mm": 0.06
+            },
+            {
+              "male_z_mm": 0.6,
+              "socket_z_mm": 0.6,
+              "lift_mm": 0.0,
+              "radial_clearance_mm": 0.06
+            }
+          ],
+          "minimum_radial_clearance_mm": 0.0,
+          "result": "NO_RADIAL_INTERFERENCE"
+        },
+        "physical_fit": "UNKNOWN",
+        "retention_strength": "UNKNOWN"
+      }
+    },
+    {
+      "pair_id": "p4-fit-3",
+      "full_height_notches": 3,
+      "diametral_clearance_mm": 0.1,
+      "receiver_type_id": "trial-p4-receiver-03",
+      "male_type_id": "trial-p4-male-grip",
+      "receiver_instance_id": "p4-T03",
+      "male_instance_id": "p4-T07",
+      "nominal_check": {
+        "result": "PASS_NOMINAL_SEATING",
+        "diametral_clearance_mm": 0.1,
+        "native_pad_to_bottom_common_area_mm2": [
+          4.618141200776995
+        ],
+        "total_bearing_area_mm2": 4.618141200776995,
+        "final_layer_separation_mm": 2.4,
+        "native_insertion_samples": [
+          {
+            "upper_bottom_z_mm": 3.2,
+            "lift_mm": 0.8,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 3.1,
+            "lift_mm": 0.7000000000000001,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 3.0,
+            "lift_mm": 0.6000000000000001,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 3.0,
+            "lift_mm": 0.6,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 2.9,
+            "lift_mm": 0.5,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 2.8,
+            "lift_mm": 0.4,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 2.7,
+            "lift_mm": 0.30000000000000004,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 2.6,
+            "lift_mm": 0.2,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 2.5,
+            "lift_mm": 0.1,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 2.4,
+            "lift_mm": 0.0,
+            "overlap_mm3": 0.0
+          }
+        ],
+        "continuous_radial_envelope": {
+          "method": "Exact piecewise-affine radial envelope extrema over 0 <= socket_z <= male_z <= stem_height",
+          "lift_range_mm": [
+            0,
+            0.8
+          ],
+          "separated_lift_range_mm": [
+            0.6,
+            0.8
+          ],
+          "critical_points": [
+            {
+              "male_z_mm": 0,
+              "socket_z_mm": 0,
+              "lift_mm": 0,
+              "radial_clearance_mm": 0.06999999999999995
+            },
+            {
+              "male_z_mm": 0.1,
+              "socket_z_mm": 0,
+              "lift_mm": 0.1,
+              "radial_clearance_mm": 0.1499999999999999
+            },
+            {
+              "male_z_mm": 0.1,
+              "socket_z_mm": 0.1,
+              "lift_mm": 0.0,
+              "radial_clearance_mm": 0.06666666666666665
+            },
+            {
+              "male_z_mm": 0.12,
+              "socket_z_mm": 0.12,
+              "lift_mm": 0.0,
+              "radial_clearance_mm": 0.050000000000000044
+            },
+            {
+              "male_z_mm": 0.5,
+              "socket_z_mm": 0,
+              "lift_mm": 0.5,
+              "radial_clearance_mm": 0.1499999999999999
+            },
+            {
+              "male_z_mm": 0.5,
+              "socket_z_mm": 0.12,
+              "lift_mm": 0.38,
+              "radial_clearance_mm": 0.050000000000000044
+            },
+            {
+              "male_z_mm": 0.5,
+              "socket_z_mm": 0.5,
+              "lift_mm": 0.0,
+              "radial_clearance_mm": 0.050000000000000044
+            },
+            {
+              "male_z_mm": 0.6,
+              "socket_z_mm": 0,
+              "lift_mm": 0.6,
+              "radial_clearance_mm": 0.2099999999999999
+            },
+            {
+              "male_z_mm": 0.6,
+              "socket_z_mm": 0.12,
+              "lift_mm": 0.48,
+              "radial_clearance_mm": 0.11000000000000004
+            },
+            {
+              "male_z_mm": 0.6,
+              "socket_z_mm": 0.6,
+              "lift_mm": 0.0,
+              "radial_clearance_mm": 0.11000000000000004
+            }
+          ],
+          "minimum_radial_clearance_mm": 0.050000000000000044,
+          "result": "NO_RADIAL_INTERFERENCE"
+        },
+        "physical_fit": "UNKNOWN",
+        "retention_strength": "UNKNOWN"
+      }
+    },
+    {
+      "pair_id": "p4-fit-4",
+      "full_height_notches": 4,
+      "diametral_clearance_mm": 0.2,
+      "receiver_type_id": "trial-p4-receiver-04",
+      "male_type_id": "trial-p4-male-grip",
+      "receiver_instance_id": "p4-T04",
+      "male_instance_id": "p4-T08",
+      "nominal_check": {
+        "result": "PASS_NOMINAL_SEATING",
+        "diametral_clearance_mm": 0.2,
+        "native_pad_to_bottom_common_area_mm2": [
+          4.618141200776995
+        ],
+        "total_bearing_area_mm2": 4.618141200776995,
+        "final_layer_separation_mm": 2.4,
+        "native_insertion_samples": [
+          {
+            "upper_bottom_z_mm": 3.2,
+            "lift_mm": 0.8,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 3.1,
+            "lift_mm": 0.7000000000000001,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 3.0,
+            "lift_mm": 0.6000000000000001,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 3.0,
+            "lift_mm": 0.6,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 2.9,
+            "lift_mm": 0.5,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 2.8,
+            "lift_mm": 0.4,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 2.7,
+            "lift_mm": 0.30000000000000004,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 2.6,
+            "lift_mm": 0.2,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 2.5,
+            "lift_mm": 0.1,
+            "overlap_mm3": 0.0
+          },
+          {
+            "upper_bottom_z_mm": 2.4,
+            "lift_mm": 0.0,
+            "overlap_mm3": 0.0
+          }
+        ],
+        "continuous_radial_envelope": {
+          "method": "Exact piecewise-affine radial envelope extrema over 0 <= socket_z <= male_z <= stem_height",
+          "lift_range_mm": [
+            0,
+            0.8
+          ],
+          "separated_lift_range_mm": [
+            0.6,
+            0.8
+          ],
+          "critical_points": [
+            {
+              "male_z_mm": 0,
+              "socket_z_mm": 0,
+              "lift_mm": 0,
+              "radial_clearance_mm": 0.06999999999999995
+            },
+            {
+              "male_z_mm": 0.1,
+              "socket_z_mm": 0,
+              "lift_mm": 0.1,
+              "radial_clearance_mm": 0.1499999999999999
+            },
+            {
+              "male_z_mm": 0.1,
+              "socket_z_mm": 0.1,
+              "lift_mm": 0.0,
+              "radial_clearance_mm": 0.10833333333333328
+            },
+            {
+              "male_z_mm": 0.12,
+              "socket_z_mm": 0.12,
+              "lift_mm": 0.0,
+              "radial_clearance_mm": 0.09999999999999998
+            },
+            {
+              "male_z_mm": 0.5,
+              "socket_z_mm": 0,
+              "lift_mm": 0.5,
+              "radial_clearance_mm": 0.1499999999999999
+            },
+            {
+              "male_z_mm": 0.5,
+              "socket_z_mm": 0.12,
+              "lift_mm": 0.38,
+              "radial_clearance_mm": 0.09999999999999998
+            },
+            {
+              "male_z_mm": 0.5,
+              "socket_z_mm": 0.5,
+              "lift_mm": 0.0,
+              "radial_clearance_mm": 0.09999999999999998
+            },
+            {
+              "male_z_mm": 0.6,
+              "socket_z_mm": 0,
+              "lift_mm": 0.6,
+              "radial_clearance_mm": 0.2099999999999999
+            },
+            {
+              "male_z_mm": 0.6,
+              "socket_z_mm": 0.12,
+              "lift_mm": 0.48,
+              "radial_clearance_mm": 0.15999999999999998
+            },
+            {
+              "male_z_mm": 0.6,
+              "socket_z_mm": 0.6,
+              "lift_mm": 0.0,
+              "radial_clearance_mm": 0.15999999999999998
+            }
+          ],
+          "minimum_radial_clearance_mm": 0.06999999999999995,
+          "result": "NO_RADIAL_INTERFERENCE"
+        },
+        "physical_fit": "UNKNOWN",
+        "retention_strength": "UNKNOWN"
+      }
+    }
+  ],
+  "plate": {
+    "stl": "trial/p4/plate.stl",
+    "step": "trial/p4/plate.step",
+    "three_mf": "trial/p4/plate.3mf",
+    "native_solid_count": 11,
+    "volume_mm3": 1102.0856676579058,
+    "mesh_faces": 5284,
+    "mesh_vertices": 2664,
+    "bounds_mm": [
+      [
+        10.0,
+        10.0,
+        0.0
+      ],
+      [
+        148.02,
+        17.82,
+        3.1133333333333333
+      ]
+    ],
+    "envelope_mm": [
+      256.0,
+      256.0
+    ],
+    "edge_margin_mm": 10.0,
+    "spacing_mm": 2.0,
+    "z0_verified": true
+  },
+  "staggered_bridge": {
+    "instances": [
+      {
+        "type_id": "trial-p4-bridge-lower",
+        "native_link": "BridgeLower1",
+        "position_mm": [
+          0,
+          -2.0,
+          0
+        ]
+      },
+      {
+        "type_id": "trial-p4-bridge-lower",
+        "native_link": "BridgeLower2",
+        "position_mm": [
+          0,
+          2.0,
+          0
+        ]
+      },
+      {
+        "type_id": "trial-p4-bridge-upper",
+        "native_link": "BridgeUpper",
+        "position_mm": [
+          0,
+          0,
+          2.4
+        ]
+      }
+    ],
+    "nominal_check": {
+      "result": "PASS_NOMINAL_SEATING",
+      "diametral_clearance_mm": 0.1,
+      "native_pad_to_bottom_common_area_mm2": [
+        4.618141200776995,
+        4.618141200776995,
+        4.618141200776995,
+        4.618141200776995
+      ],
+      "total_bearing_area_mm2": 18.47256480310798,
+      "final_layer_separation_mm": 2.4,
+      "native_insertion_samples": [
+        {
+          "upper_bottom_z_mm": 3.2,
+          "lift_mm": 0.8,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 3.1,
+          "lift_mm": 0.7000000000000001,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 3.0,
+          "lift_mm": 0.6000000000000001,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 3.0,
+          "lift_mm": 0.6,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 2.9,
+          "lift_mm": 0.5,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 2.8,
+          "lift_mm": 0.4,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 2.7,
+          "lift_mm": 0.30000000000000004,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 2.6,
+          "lift_mm": 0.2,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 2.5,
+          "lift_mm": 0.1,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 2.4,
+          "lift_mm": 0.0,
+          "overlap_mm3": 0.0
+        }
+      ],
+      "continuous_radial_envelope": {
+        "method": "Exact piecewise-affine radial envelope extrema over 0 <= socket_z <= male_z <= stem_height",
+        "lift_range_mm": [
+          0,
+          0.8
+        ],
+        "separated_lift_range_mm": [
+          0.6,
+          0.8
+        ],
+        "critical_points": [
+          {
+            "male_z_mm": 0,
+            "socket_z_mm": 0,
+            "lift_mm": 0,
+            "radial_clearance_mm": 0.06999999999999995
+          },
+          {
+            "male_z_mm": 0.1,
+            "socket_z_mm": 0,
+            "lift_mm": 0.1,
+            "radial_clearance_mm": 0.1499999999999999
+          },
+          {
+            "male_z_mm": 0.1,
+            "socket_z_mm": 0.1,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.06666666666666665
+          },
+          {
+            "male_z_mm": 0.12,
+            "socket_z_mm": 0.12,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.050000000000000044
+          },
+          {
+            "male_z_mm": 0.5,
+            "socket_z_mm": 0,
+            "lift_mm": 0.5,
+            "radial_clearance_mm": 0.1499999999999999
+          },
+          {
+            "male_z_mm": 0.5,
+            "socket_z_mm": 0.12,
+            "lift_mm": 0.38,
+            "radial_clearance_mm": 0.050000000000000044
+          },
+          {
+            "male_z_mm": 0.5,
+            "socket_z_mm": 0.5,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.050000000000000044
+          },
+          {
+            "male_z_mm": 0.6,
+            "socket_z_mm": 0,
+            "lift_mm": 0.6,
+            "radial_clearance_mm": 0.2099999999999999
+          },
+          {
+            "male_z_mm": 0.6,
+            "socket_z_mm": 0.12,
+            "lift_mm": 0.48,
+            "radial_clearance_mm": 0.11000000000000004
+          },
+          {
+            "male_z_mm": 0.6,
+            "socket_z_mm": 0.6,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.11000000000000004
+          }
+        ],
+        "minimum_radial_clearance_mm": 0.050000000000000044,
+        "result": "NO_RADIAL_INTERFERENCE"
+      },
+      "physical_fit": "UNKNOWN",
+      "retention_strength": "UNKNOWN"
+    },
+    "step": "trial/p4/staggered-bridge.step"
+  },
+  "print_assumptions": {
+    "printer": "Bambu Lab P1S",
+    "material": "PLA",
+    "envelope_mm": [
+      256.0,
+      256.0
+    ],
+    "edge_margin_mm": 10.0,
+    "manufacturer_profile_loaded": false,
+    "slicer_run": false,
+    "layer_height_mm": null,
+    "print_time": "UNKNOWN",
+    "material_mass": "UNKNOWN",
+    "status": "GEOMETRIC_LAYOUT_ONLY",
+    "nozzle_mm": 0.2,
+    "nozzle_status": "DESIGN_ASSUMPTION_NOT_SLICER_VERIFIED",
+    "optional_control_nozzle_mm": 0.4
+  },
+  "instructions": [
+    "Use the supplied plate 3MF/STL/STEP or the seven part files with the listed quantities. The native document retains construction features and a bridge demonstration; do not export every document object as a print plate.",
+    "Print every female receiver with socket DOWN and body bottom at z=0, to test actual elephant-foot and roof conditions.",
+    "Print the one common male grip type four times, with its pad and stem UP. Keep all keys separate from receivers.",
+    "One/two/three/four full-height side notches mean -0.05/0/+0.10/+0.20 mm DIAMETRAL bore clearance.",
+    "The negative-clearance receiver intentionally interferes; do not describe it as collision-free or force it onto an untested peg.",
+    "For testing hold the male grip upright and lower the matching receiver along -Z onto its pad.",
+    "Place two lower 2x1 bridge bricks in adjacent rows; seat the upper 2x2 cap across their seam.",
+    "A 0.2 mm p4 nozzle recommendation is only a design assumption, NOT a wall-thickness fix or slicer-validated profile.",
+    "No layer height, support strategy, mass, time, strength, retention, or physical fit has been established."
+  ]
+}

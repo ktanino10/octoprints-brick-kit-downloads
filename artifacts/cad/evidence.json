@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "units": "mm",
+  "result": "PASS",
+  "started_at": "2026-09-19T01:15:13.213998+00:00",
+  "finished_at": "2026-09-19T01:16:00.299504+00:00",
+  "status": {
+    "native_generation": "PASSED",
+    "native_reopen": "PASSED",
+    "mesh_validation": "PASSED",
+    "physical_fit": "UNKNOWN",
+    "production_export": "BLOCKED"
+  },
+  "origin": "body-bottom-center",
+  "up": "+Z",
+  "counts": {
+    "library_final_solids": 21,
+    "coupon_separate_solids": 5,
+    "watertight_stl_files": 26,
+    "shared_native_prototypes": 21
+  },
+  "reference_minima_mm": {
+    "wall": 1.2,
+    "roof": 1.2
+  },
+  "minimum_material_by_pitch": {
+    "p8": {
+      "wall_mm": 1.9433333333333336,
+      "roof_mm": 2.8133333333333335,
+      "meets_reference_wall_minimum": true,
+      "meets_reference_roof_minimum": true
+    },
+    "p6": {
+      "wall_mm": 1.4100000000000001,
+      "roof_mm": 2.0300000000000002,
+      "meets_reference_wall_minimum": true,
+      "meets_reference_roof_minimum": true
+    },
+    "p4": {
+      "wall_mm": 0.8766666666666667,
+      "roof_mm": 1.2466666666666666,
+      "meets_reference_wall_minimum": false,
+      "meets_reference_roof_minimum": true
+    }
+  },
+  "coupon_guide": "artifacts/cad/coupon-guide.json",
+  "native_reopen_report": "artifacts/cad/native-verify.json",
+  "mesh_validation_report": "artifacts/cad/mesh-validation.json",
+  "editing": [
+    "NativeLibrary.FCStd contains 21 named archetypes, not thousands of assembly instances.",
+    "Each Parameters_* node has editable dimensions; boxes, cylinders, cones and native booleans use expressions.",
+    "Footprint cell counts are read-only topology choices; select another archetype to change the grid.",
+    "Select the named Final object when exporting. Construction features are retained intentionally.",
+    "Archetypes share their local body-bottom-center origin and are not spatially laid out in the native library.",
+    "All files were reopened in a separate headless process, forcibly recomputed, dimension-edited, and restored.",
+    "FCStd files require no Python proxy module when reopened."
+  ],
+  "limitations": [
+    "Uncalibrated PLA / P1S / 0.4 mm nozzle assumptions; no coupons or kit parts have been physically printed.",
+    "Physical fit is UNKNOWN. Production export remains BLOCKED; these native/STL files are prototype studies, not a print-ready kit.",
+    "Pitch-4 lateral wall is 0.876667 mm, BELOW the 1.2 mm reference minimum; it is not silently enlarged or passed.",
+    "Coupon minimum wall is 1.31 mm and material below the open wells is 2.03 mm.",
+    "A single round-stud 1x1 brick has UNPROVEN rotational constraint; multi-stud patterns constrain rotation nominally only.",
+    "The five-position coupon insertion check is idealized BRep interference testing, not a physical fit calibration.",
+    "No commercial-brick compatibility, logos, or branding is claimed. No slicer, G-code, or printer communication was used."
+  ],
+  "archive_scope": "Historical native geometry checks, not physical fit, retention, or production approval.",
+  "public_copy_note": "Execution receipts, machine paths and runtime details excluded; use archive/inventory.json for public hashes."
+}

@@ -1,0 +1,16 @@
+type_id,color,hex,count
+p6-1x1,Yellow,#F4EE2A,429
+p6-1x1,Pumpkin orange,#FF9016,35
+p6-1x1,Black,#000000,36
+p6-2x1,Yellow,#F4EE2A,378
+p6-2x1,Pumpkin orange,#FF9016,19
+p6-2x1,Black,#000000,6
+p6-2x2,Yellow,#F4EE2A,191
+p6-2x2,Pumpkin orange,#FF9016,2
+p6-3x1,Yellow,#F4EE2A,184
+p6-3x1,Pumpkin orange,#FF9016,8
+p6-3x2,Yellow,#F4EE2A,220
+p6-3x2,Pumpkin orange,#FF9016,2
+p6-4x1,Yellow,#F4EE2A,166
+p6-4x1,Pumpkin orange,#FF9016,6
+p6-4x2,Yellow,#F4EE2A,1964

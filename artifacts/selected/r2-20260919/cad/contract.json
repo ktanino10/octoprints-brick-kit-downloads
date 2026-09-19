@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "revision": "r2-20260919",
+  "root": "artifacts/selected/r2-20260919/cad",
+  "readiness": "VERIFIED_NATIVE_PROTOTYPES_AND_TRIALS",
+  "prototypes": "artifacts/selected/r2-20260919/cad/prototypes.json",
+  "prototype_schema_version": 1,
+  "prototype_count": 236,
+  "origin": "body-bottom-center",
+  "origin_detail": "Bounding-box body-bottom center, not center of mass",
+  "units": "mm",
+  "up": "+Z",
+  "native_libraries": [
+    "artifacts/selected/r2-20260919/cad/libraries/Selected-p4.FCStd",
+    "artifacts/selected/r2-20260919/cad/libraries/Selected-p8.FCStd"
+  ],
+  "brick_exports": "artifacts/selected/r2-20260919/cad/bricks/<exact-type-id>.{step,stl}",
+  "trial_index": "artifacts/selected/r2-20260919/cad/trial/index.json",
+  "trial_layouts": [
+    "artifacts/selected/r2-20260919/cad/trial/p4/layout.json",
+    "artifacts/selected/r2-20260919/cad/trial/p8/layout.json"
+  ],
+  "trial_native": [
+    "artifacts/selected/r2-20260919/cad/trial/p4/Trial-p4.FCStd",
+    "artifacts/selected/r2-20260919/cad/trial/p8/Trial-p8.FCStd"
+  ],
+  "trial_plates": [
+    "artifacts/selected/r2-20260919/cad/trial/p4/plate.{3mf,step,stl}",
+    "artifacts/selected/r2-20260919/cad/trial/p8/plate.{3mf,step,stl}"
+  ],
+  "assembly_index": "artifacts/selected/r2-20260919/cad/assemblies/index.json",
+  "native_assemblies": [
+    "artifacts/selected/r2-20260919/cad/assemblies/mona-fine.FCStd",
+    "artifacts/selected/r2-20260919/cad/assemblies/copilot-chunky.FCStd",
+    "artifacts/selected/r2-20260919/cad/assemblies/ducky-fine.FCStd"
+  ],
+  "joint_proof": "artifacts/selected/r2-20260919/cad/proof/joint-proof.json",
+  "evidence": "artifacts/selected/r2-20260919/cad/evidence.json",
+  "complete_marker": "artifacts/selected/r2-20260919/cad/COMPLETE.json",
+  "surface_policy": "Use the supplied native mesh only. Mating cells have hidden bearing pads plus selected stems; exposed cells have unchanged appearance caps and no pads. Caps are not fit connectors.",
+  "statuses": {
+    "physical_fit": "UNKNOWN",
+    "retention_strength": "UNKNOWN",
+    "production_export": "BLOCKED"
+  }
+}

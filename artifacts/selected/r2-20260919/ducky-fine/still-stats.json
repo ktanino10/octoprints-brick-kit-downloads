@@ -1,0 +1,14 @@
+{
+  "candidate_id": "ducky-fine",
+  "part_count": 10311,
+  "native_prototype_types": 104,
+  "instancer_objects": 124,
+  "evaluated_instances": 10311,
+  "ids_sha256": "1f98e59191c2ad9935e55f7a33760bb713773d2258370cdc6d1ad9365975dd8c",
+  "blender_version": "5.1.1",
+  "engine": "BLENDER_EEVEE",
+  "mode": "still",
+  "elapsed_seconds": 9.915,
+  "native_scene_reopened": true,
+  "physical_fit": "UNKNOWN"
+}

@@ -1,0 +1,10 @@
+# Public checksums must survive checkouts without line-ending conversion.
+/artifacts/** -text
+/design/** -text
+/feedback/** -text
+/assets/thumbs/** -text
+/archive/*.json -text
+/archive/SHA256SUMS.txt -text
+/viewer/assets/** -text
+/p4-trial-11-parts.3mf -text
+/p4-trial-11-parts.stl -text

@@ -1,0 +1,2306 @@
+{
+  "state": "COMPLETE_NOMINAL_GEOMETRY",
+  "timestamp": "2026-09-19T08:13:17.817423+00:00",
+  "candidates": [
+    {
+      "candidate_id": "mona-fine",
+      "part_count": 13434,
+      "contact_graph": {
+        "graph_components": 1,
+        "contact_edges": 35912,
+        "stud_sites": 80695,
+        "cell_count": 82357,
+        "mechanical_validation": "UNKNOWN",
+        "insertion_sweep_validation": "UNKNOWN"
+      },
+      "ordered_columns": {
+        "status": "PASS_CONSERVATIVE_VERTICAL",
+        "checked_parts": 13434,
+        "trapped_insertions": 0,
+        "fixture_supported_parts": 7,
+        "mating_sites_encountered": 80695,
+        "retention_strength": "UNKNOWN",
+        "scope": "Ordered occupied-cell columns + declared cradle contacts; native geometry/profile and printed performance are separate gates"
+      },
+      "exterior": {
+        "occupied_cells": 82357,
+        "occupied_cell_changes": 0,
+        "boundary_cells": 8627,
+        "boundary_color_changes": 0,
+        "palette_changed": false,
+        "changed_group_boundary_segments": 647,
+        "potentially_visible_changed_seam_segments": 121,
+        "scope": "Exact voxel envelope/palette preserved; grouping seams can move. Not a claim of pixel-identical continuous exterior geometry."
+      },
+      "wall_mm": 1.2099999999999995,
+      "roof_mm": 1.4799999999999998,
+      "support_risk_counts": {
+        "ground": 31,
+        "self_weight_cantilever": 304,
+        "single_stud": 1693,
+        "cradle_retention_required": 7
+      }
+    },
+    {
+      "candidate_id": "copilot-chunky",
+      "part_count": 3021,
+      "contact_graph": {
+        "graph_components": 1,
+        "contact_edges": 7386,
+        "stud_sites": 15742,
+        "cell_count": 16399,
+        "mechanical_validation": "UNKNOWN",
+        "insertion_sweep_validation": "UNKNOWN"
+      },
+      "ordered_columns": {
+        "status": "PASS_CONSERVATIVE_VERTICAL",
+        "checked_parts": 3021,
+        "trapped_insertions": 0,
+        "fixture_supported_parts": 0,
+        "mating_sites_encountered": 15742,
+        "retention_strength": "UNKNOWN",
+        "scope": "Ordered occupied-cell columns + declared cradle contacts; native geometry/profile and printed performance are separate gates"
+      },
+      "exterior": {
+        "occupied_cells": 16399,
+        "occupied_cell_changes": 0,
+        "boundary_cells": 2851,
+        "boundary_color_changes": 0,
+        "palette_changed": false,
+        "changed_group_boundary_segments": 164,
+        "potentially_visible_changed_seam_segments": 22,
+        "scope": "Exact voxel envelope/palette preserved; grouping seams can move. Not a claim of pixel-identical continuous exterior geometry."
+      },
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "support_risk_counts": {
+        "ground": 38,
+        "self_weight_cantilever": 87,
+        "single_stud": 515
+      }
+    },
+    {
+      "candidate_id": "ducky-fine",
+      "part_count": 10311,
+      "contact_graph": {
+        "graph_components": 1,
+        "contact_edges": 28265,
+        "stud_sites": 63879,
+        "cell_count": 65505,
+        "mechanical_validation": "UNKNOWN",
+        "insertion_sweep_validation": "UNKNOWN"
+      },
+      "ordered_columns": {
+        "status": "PASS_CONSERVATIVE_VERTICAL",
+        "checked_parts": 10311,
+        "trapped_insertions": 0,
+        "fixture_supported_parts": 0,
+        "mating_sites_encountered": 63879,
+        "retention_strength": "UNKNOWN",
+        "scope": "Ordered occupied-cell columns + declared cradle contacts; native geometry/profile and printed performance are separate gates"
+      },
+      "exterior": {
+        "occupied_cells": 65505,
+        "occupied_cell_changes": 0,
+        "boundary_cells": 7805,
+        "boundary_color_changes": 0,
+        "palette_changed": false,
+        "changed_group_boundary_segments": 440,
+        "potentially_visible_changed_seam_segments": 104,
+        "scope": "Exact voxel envelope/palette preserved; grouping seams can move. Not a claim of pixel-identical continuous exterior geometry."
+      },
+      "wall_mm": 1.2099999999999995,
+      "roof_mm": 1.4799999999999998,
+      "support_risk_counts": {
+        "ground": 43,
+        "self_weight_cantilever": 287,
+        "single_stud": 1042
+      }
+    }
+  ],
+  "native_types": {
+    "r2-p4-4c-b02791f0c425": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 139.32567127927953,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-186a9f84f098": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 285.1438705585596,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-3c-b982b6d67e98": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 104.10232145945953,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-6c-7b734626068d": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 213.055570918919,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-2c-88381088bd9d": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 68.87897163963974,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-1c-4ebe150eb1b7": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 33.655621819819864,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-20c-2a26b65c37d6": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 722.5984683963952,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-17c-7addd63c6480": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 612.0036189369368,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-16c-a5831f166142": {
+      "wall_mm": 1.2099999999999995,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 575.1386691171191,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-13c-6b7950654930": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 464.54381965765884,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-10c-06b4a7fa37f8": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 357.23217019819873,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-14c-443e3b6c2c29": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 501.4087694774793,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-14c-37b32b6e254d": {
+      "wall_mm": 1.2099999999999995,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 501.4087694774792,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-13c-412272d3fa2c": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 464.54381965765884,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-17c-5fc4a6bda602": {
+      "wall_mm": 1.2099999999999995,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 610.3620189369377,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-16c-61bd7c40319c": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 575.1386691171191,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-9c-8008113072c1": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 320.36722037837905,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-ea6b22f0e894": {
+      "wall_mm": 1.2099999999999995,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 283.5022705585592,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-15c-c98bfb65cf4a": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 533.3489192972986,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-16c-4a708adbfba5": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 576.7802691171179,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-13c-c48f51e4895a": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 466.18541965765894,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-14c-eca17b34912e": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 503.05036947747885,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-12c-643e89839393": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 429.3204698378391,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-10c-703d228b64da": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 357.2321701981997,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-12c-a2f28e04cb09": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 429.32046983783977,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-11c-1acae6a2bfb1": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 392.4555200180195,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-12c-1aa056caa409": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 430.96206983783975,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-7c-626511f53153": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 248.2789207387393,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-9c-a91387e26c85": {
+      "wall_mm": 1.2099999999999995,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 320.367220378379,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-7c-568180a93cb7": {
+      "wall_mm": 1.2099999999999995,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 248.2789207387392,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-6ed180176bb5": {
+      "wall_mm": 1.2099999999999995,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 283.5022705585592,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-3f8e863fcd29": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 283.5022705585595,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-9c-aa965b60ca20": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 320.36722037837916,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-5c-a44a3889eef4": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 176.19062109909942,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-10c-72da87c37623": {
+      "wall_mm": 1.2099999999999995,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 357.23217019819873,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-11c-021340aaea91": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 394.097120018019,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-9c-687f1e2c6151": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 320.3672203783791,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-6c-1a08cd2e3808": {
+      "wall_mm": 1.2099999999999995,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 211.41397091891906,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-6c-c4d06ae6ad9b": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 211.41397091891918,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-7c-c2b59e8f631f": {
+      "wall_mm": 1.2099999999999995,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 246.6373207387392,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-15c-32d1fb4a9a30": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 539.9153192972998,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-7c-8ea643f6a651": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 248.27892073873926,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-6c-0c2af621b6a6": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 211.41397091891912,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-3c-a044fbe9bc1c": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 104.10232145945959,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-11c-8268c36e4eda": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 392.455520018019,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-9c-372b34c13ea7": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 320.36722037837916,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-3a35d0f7049f": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 285.1438705585594,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-9c-2c6c8a203360": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 318.7256203783792,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-4c-9180de851882": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 140.96727127927954,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-7c-f8326032ee44": {
+      "wall_mm": 1.2099999999999995,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 246.637320738739,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-4c-b3266ba16d8e": {
+      "wall_mm": 1.2099999999999995,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 139.3256712792795,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-5c-0f146160a929": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 174.54902109909943,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-9c-04db7e61faa4": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 320.36722037837916,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-12c-be23a754b8df": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 427.6788698378394,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-5c-88f68dc9ab4e": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 176.19062109909945,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-5c-564708634a4a": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 174.54902109909915,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-14c-0ecd24c23207": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 493.2007694774793,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-5c-48205c9d8815": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 174.54902109909918,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-5c-01aded46037d": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 174.54902109909943,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-10c-7acf782cb06b": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 350.66577019819874,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-5c-1196d146aac8": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 174.54902109909918,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-4c-369ccea62973": {
+      "wall_mm": 1.2099999999999995,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 139.32567127927948,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-9c-90b4aebaa3c9": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 317.08402037837914,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-9c-7f58e6b78bd0": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 317.08402037837914,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-10c-f0568e82ff56": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 357.23217019819884,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-4c-50a5212aa1ce": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 139.32567127927942,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-6c-eef9b6d6a443": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 209.772370918919,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-7c-8761b4a005e0": {
+      "wall_mm": 1.2099999999999995,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 246.63732073873928,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-9c-37dc0172b5e6": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 315.44242037837915,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-6c-812450d3681b": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 209.7723709189191,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-7c-65e5d24ed0e7": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 244.9957207387388,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-17c-938aca248f1d": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 606.3759035507757,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-2c-32e56c90317c": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 70.75634086731162,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-2c-714146ac709f": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 69.81765625347568,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-3c-78d7ab46d04b": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 105.0410060732955,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-17c-c82a078a6b4c": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 606.3759035507752,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-3c-fbc4680fb176": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 106.9183753009674,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-71b1cabb21f1": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 287.959924400067,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-6c-451263ebf740": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 213.9942555327552,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-4c-31180a58c329": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 140.26435589311544,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-3c-451dc73cc597": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 105.97969068713148,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-1c-c084a429390d": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 34.594306433655795,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-4c-b15f07feab23": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 142.84464050695127,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-17c-3e650122b59f": {
+      "wall_mm": 1.2099999999999995,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 608.720418936938,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-11c-1f42297da998": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 394.097120018019,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-6c-909b63df1963": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 211.41397091891912,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-4c-04555eeff664": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 141.90595589311545,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-e50b3bba33b2": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 286.08255517239576,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-7c-221fc02caa9c": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 248.27892073873923,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-4c-f2646be4f76b": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 144.72200973462316,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-4c-9d4172d57fff": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 141.20304050695125,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-4c-62ef5999f1d8": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 140.26435589311544,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-4c-13acf6b7a311": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 141.20304050695125,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-eedb1346666c": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 286.08255517239576,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-6c-d1a46aa0281f": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 213.9942555327552,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-b7b0695b93ed": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 288.89860901390307,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-6c-17666b24a421": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 214.93294014659114,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-7182b0f5249d": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 287.02123978623126,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-4c-f012ba403668": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 143.08040973462315,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-6c-75ddfa996915": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 215.8716247604268,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-4a2a4beab3d1": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 287.02123978623126,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-edf55bd5d8ff": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 287.02123978623126,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-4c-8c97b90214e4": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 142.14172512078727,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-6c-810977bf0853": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 211.4139709189191,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-6c-f4370264b9c3": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 214.93294014659116,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-9e4597dbd2a1": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 287.95992440006705,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-59bf9b543de2": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 287.959924400067,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-db7507a63af1": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 292.6533474692468,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-3eebab327568": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 289.8372936277389,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-687bf7522bc2": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 287.959924400067,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-00ac0d8b7718": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 290.7759782415749,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-d844888ce4b9": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 290.7759782415749,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-40b14f7aecf8": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 291.71466285541095,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-6c-e4572ff09aea": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 218.6876786019345,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-8a9c9abd0046": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 288.89860901390307,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-43aaf840d311": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 289.8372936277389,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-74c524aa993e": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 290.7759782415749,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-db962d10ff4f": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 287.95992440006705,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-6c-08aec08e18e5": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 216.8103093742627,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-ecbfaa38d5d9": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 288.898609013903,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-6c-1f64aaa0e8b1": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 216.8103093742627,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-4c-04db57b9cf0a": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 143.78332512078725,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-6c-b3c029a19d6b": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 215.87162476042684,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-6c-ba1fb148fe5e": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 216.8103093742627,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-13c-6433f17c72d3": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 462.9022196576588,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-7c-755c0164e79f": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 246.63732073873896,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-10c-df3f1ce261d0": {
+      "wall_mm": 1.2099999999999995,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 353.9489701981989,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-63e5a91ed811": {
+      "wall_mm": 1.2099999999999995,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 280.2190705585592,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-7c-bcfc797dca10": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 244.9957207387392,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-9c-e4192a78ea21": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 318.7256203783791,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-7c-ba15d2e5d5b7": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 244.99572073873898,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-11c-7a5c0d6cf3ca": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 390.813920018019,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-9c-caa59f319205": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 320.3672203783791,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-21c-b29382998e05": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 754.5386182162158,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-22c-9a3a1818555a": {
+      "wall_mm": 1.2099999999999995,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 774.9875680360359,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-11c-baa5754e02dd": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 387.53072001801917,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-12c-0b51f59a601f": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 422.75406983783904,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-9c-41ba1050707a": {
+      "wall_mm": 1.2099999999999995,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 317.0840203783791,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-14c-123cdbebe90c": {
+      "wall_mm": 1.2099999999999995,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 494.84236947747894,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-9c-bd62b951898e": {
+      "wall_mm": 1.2099999999999997,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 315.4424203783786,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-e27e13d92242": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 287.0212397862312,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-448a0059b24e": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 287.02123978623126,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-42985608ed37": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 287.95992440006705,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-4c-197fa86c129b": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 142.14172512078727,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-19025d71a671": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 287.959924400067,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-6c-96d9bf699cfe": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 214.93294014659116,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-6c-acdf64d7341c": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 215.87162476042684,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-34e67117d5ae": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 287.95992440006694,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-6c-ee2b30aa949e": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 217.74899398809885,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-99a216810560": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 289.837293627739,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p4-8c-94630c6a9620": {
+      "wall_mm": 1.21,
+      "roof_mm": 1.4799999999999998,
+      "closed_manifold": true,
+      "volume_mm3": 288.89860901390307,
+      "measurement_file": "cad/native-library-p4.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-6c-f8970603e784": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1765.2084433657803,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-3c-59ad165cac4b": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 872.5712376828884,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-2c-021c6b8baa17": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 579.5183024552585,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-4c-4f58144d0208": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1172.3633729105181,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-1c-8edfce4433a6": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 286.4653672276295,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-8c-4a40eb007127": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2358.0535138210375,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-4c-3aff0bc679b6": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1165.6241729105184,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-12c-41587ecb2a41": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 3530.265254731552,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-13c-6b069823e62a": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 3843.5357899591872,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-13c-728c595f23a4": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 3836.796589959194,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-12c-dcfe5d5c1131": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 3537.004454731557,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-7c-e08acc44fe96": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2058.261378593408,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-14c-3eff1c3ba5c1": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 4143.327925186819,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-11c-544eb592288c": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 3243.9515195039235,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-10c-ee2bdff04dc6": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2937.420184276303,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-13c-2ca80037114e": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 3843.535789959189,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-16c-ef2592b64abc": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 4742.9121956420495,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-11c-ff71fb7c033f": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 3243.9515195039203,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-12c-841f31294d1f": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 3543.743654731557,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-10c-63a4682badf1": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2950.8985842762977,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-9c-678c5c2d2e15": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2651.106449048668,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-9c-18bfcea1c94d": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2651.1064490486697,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-4c-46c7296bf727": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1165.6241729105186,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-6c-3be38319008d": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1758.4692433657776,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-5c-62d52ff397c6": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1458.6771081381494,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-4c-5385f7231395": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1165.6241729105186,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-10c-699c9ac84be5": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2950.898584276296,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-3c-1728e99c897f": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 872.5712376828876,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-10c-b57265b20383": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2937.420184276303,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-11c-1f3f7b12808d": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 3250.6907195039216,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-5c-b8c082635630": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1465.4163081381491,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-7c-15d5e1d693b5": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2058.261378593408,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-12c-36204488a233": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 3550.4828547315574,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-6c-dc49398962cc": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1758.4692433657779,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-9c-9bfcb20dc416": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2651.106449048668,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-5c-97316fdcfbfe": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1458.6771081381492,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-2c-3b51464980fc": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 575.4896078120993,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-5c-22c06d7fe6b5": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1465.4163081381491,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-8c-a54e60e92e96": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2358.0535138210385,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-4c-602179f6eb4a": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1168.334678267359,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-4c-f8f418feaec9": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1164.305983624199,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-1c-7b7dfaafbc42": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 282.4366725844701,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-4c-2727acf77d5c": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1161.595478267359,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-7c-b423a80ccb63": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2051.522178593409,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-3c-feff351293f6": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 868.542543039729,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-6c-b4fd5c8c9159": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1758.4692433657779,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-6c-1946c5fa9765": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1761.1797487226183,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-11c-5ade05e470ee": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 3250.690719503921,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-8c-8658e0826e12": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2354.024819177874,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-8c-f0e45b42caae": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2354.0248191778737,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-6c-2ae7f801c407": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1761.1797487226183,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-2c-025a1b2bb4d6": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 571.4609131689399,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-6c-8052a0112cca": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1753.1223594362996,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-4c-eeade5d52975": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1149.50939433788,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-8c-2acfe6ad20d6": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2341.938735248399,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-6c-a15e7d54488a": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1757.1510540794607,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-7c-8690e21868de": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2058.261378593408,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-8c-a71fc00cb615": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2349.9961245347185,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-3c-d28cebcb7f33": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 868.5425430397289,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-5c-01c405c399d4": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1461.3876134949878,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-8c-fb96fd69c1c5": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2349.9961245347185,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-8c-c8392e3e35e8": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2349.9961245347185,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-3c-322c5467219a": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 864.5138483965695,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-8c-1ff9361f726d": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2354.0248191778737,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-3c-8d14a764af36": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 860.48515375341,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-6c-00c81f76dc8c": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1757.1510540794604,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-8c-ce45285ea511": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2345.9674298915593,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-8c-38394a3bc31e": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2354.024819177874,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-8c-b7dbf4533996": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2345.9674298915593,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-6c-2c086760427d": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1753.1223594363003,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-4c-6c76e7385090": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1160.2772889810403,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-8c-ac64c788c893": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2345.9674298915593,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-8c-17f43b37588b": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2345.9674298915597,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-8c-f24dc95ce20f": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2349.9961245347185,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-8c-ec0482d27ec1": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2345.9674298915593,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-6c-200986d28492": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1753.122359436301,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-4c-575c381b3856": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1153.5380889810403,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-8c-29f265f34af2": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2345.9674298915597,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-4c-d3eec39baf32": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1156.2485943378801,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-8c-f0260d4138f5": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2325.823956675763,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-3c-51effe7d1195": {
+      "wall_mm": 1.8433333333333333,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 864.5138483965694,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-8c-3dfa11e0c502": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 2349.9961245347185,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-6c-15b185443efe": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1741.03627550682,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-6c-0ad3ce6eeddd": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1749.0936647931403,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    },
+    "r2-p8-6c-0edfbb84107f": {
+      "wall_mm": 1.8433333333333337,
+      "roof_mm": 2.813333333333333,
+      "closed_manifold": true,
+      "volume_mm3": 1745.0649701499797,
+      "measurement_file": "cad/native-library-p8.json",
+      "measurement_method": "TopoShape.common(horizontal native plane), classify actual circular inner wires, distToShape to outer/void wires and nearest equal-radius inner pair; native vertical-line intersections for roof"
+    }
+  },
+  "default_joint_profiles": {
+    "4": {
+      "result": "PASS_NOMINAL_SEATING",
+      "diametral_clearance_mm": 0.1,
+      "native_pad_to_bottom_common_area_mm2": [
+        4.618141200776995
+      ],
+      "total_bearing_area_mm2": 4.618141200776995,
+      "final_layer_separation_mm": 2.4,
+      "native_insertion_samples": [
+        {
+          "upper_bottom_z_mm": 3.2,
+          "lift_mm": 0.8,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 3.1,
+          "lift_mm": 0.7000000000000001,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 3.0,
+          "lift_mm": 0.6000000000000001,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 3.0,
+          "lift_mm": 0.6,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 2.9,
+          "lift_mm": 0.5,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 2.8,
+          "lift_mm": 0.4,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 2.7,
+          "lift_mm": 0.30000000000000004,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 2.6,
+          "lift_mm": 0.2,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 2.5,
+          "lift_mm": 0.1,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 2.4,
+          "lift_mm": 0.0,
+          "overlap_mm3": 0.0
+        }
+      ],
+      "continuous_radial_envelope": {
+        "method": "Exact piecewise-affine radial envelope extrema over 0 <= socket_z <= male_z <= stem_height",
+        "lift_range_mm": [
+          0,
+          0.8
+        ],
+        "separated_lift_range_mm": [
+          0.6,
+          0.8
+        ],
+        "critical_points": [
+          {
+            "male_z_mm": 0,
+            "socket_z_mm": 0,
+            "lift_mm": 0,
+            "radial_clearance_mm": 0.06999999999999995
+          },
+          {
+            "male_z_mm": 0.1,
+            "socket_z_mm": 0,
+            "lift_mm": 0.1,
+            "radial_clearance_mm": 0.1499999999999999
+          },
+          {
+            "male_z_mm": 0.1,
+            "socket_z_mm": 0.1,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.06666666666666665
+          },
+          {
+            "male_z_mm": 0.12,
+            "socket_z_mm": 0.12,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.050000000000000044
+          },
+          {
+            "male_z_mm": 0.5,
+            "socket_z_mm": 0,
+            "lift_mm": 0.5,
+            "radial_clearance_mm": 0.1499999999999999
+          },
+          {
+            "male_z_mm": 0.5,
+            "socket_z_mm": 0.12,
+            "lift_mm": 0.38,
+            "radial_clearance_mm": 0.050000000000000044
+          },
+          {
+            "male_z_mm": 0.5,
+            "socket_z_mm": 0.5,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.050000000000000044
+          },
+          {
+            "male_z_mm": 0.6,
+            "socket_z_mm": 0,
+            "lift_mm": 0.6,
+            "radial_clearance_mm": 0.2099999999999999
+          },
+          {
+            "male_z_mm": 0.6,
+            "socket_z_mm": 0.12,
+            "lift_mm": 0.48,
+            "radial_clearance_mm": 0.11000000000000004
+          },
+          {
+            "male_z_mm": 0.6,
+            "socket_z_mm": 0.6,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.11000000000000004
+          }
+        ],
+        "minimum_radial_clearance_mm": 0.050000000000000044,
+        "result": "NO_RADIAL_INTERFERENCE"
+      },
+      "physical_fit": "UNKNOWN",
+      "retention_strength": "UNKNOWN",
+      "upper_final": "Parameters_4164256638c6_Final",
+      "upper_parameters": "Parameters_4164256638c6"
+    },
+    "8": {
+      "result": "PASS_NOMINAL_SEATING",
+      "diametral_clearance_mm": 0.1,
+      "native_pad_to_bottom_common_area_mm2": [
+        18.751817483427075
+      ],
+      "total_bearing_area_mm2": 18.751817483427075,
+      "final_layer_separation_mm": 4.8,
+      "native_insertion_samples": [
+        {
+          "upper_bottom_z_mm": 6.666666666666666,
+          "lift_mm": 1.8666666666666667,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 6.466666666666667,
+          "lift_mm": 1.6666666666666667,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 6.433333333333334,
+          "lift_mm": 1.6333333333333333,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 6.266666666666667,
+          "lift_mm": 1.4666666666666668,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 6.199999999999999,
+          "lift_mm": 1.4,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.966666666666667,
+          "lift_mm": 1.1666666666666667,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.733333333333333,
+          "lift_mm": 0.9333333333333333,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.5,
+          "lift_mm": 0.7,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.266666666666667,
+          "lift_mm": 0.4666666666666667,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.033333333333333,
+          "lift_mm": 0.23333333333333334,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.0,
+          "lift_mm": 0.2,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 4.8,
+          "lift_mm": 0.0,
+          "overlap_mm3": 0.0
+        }
+      ],
+      "continuous_radial_envelope": {
+        "method": "Exact piecewise-affine radial envelope extrema over 0 <= socket_z <= male_z <= stem_height",
+        "lift_range_mm": [
+          0,
+          1.8666666666666667
+        ],
+        "separated_lift_range_mm": [
+          1.6666666666666667,
+          1.8666666666666667
+        ],
+        "critical_points": [
+          {
+            "male_z_mm": 0,
+            "socket_z_mm": 0,
+            "lift_mm": 0,
+            "radial_clearance_mm": 0.06000000000000005
+          },
+          {
+            "male_z_mm": 0.2,
+            "socket_z_mm": 0,
+            "lift_mm": 0.2,
+            "radial_clearance_mm": 0.20000000000000018
+          },
+          {
+            "male_z_mm": 0.2,
+            "socket_z_mm": 0.2,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.08000000000000007
+          },
+          {
+            "male_z_mm": 0.25,
+            "socket_z_mm": 0.25,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.050000000000000044
+          },
+          {
+            "male_z_mm": 1.4666666666666668,
+            "socket_z_mm": 0,
+            "lift_mm": 1.4666666666666668,
+            "radial_clearance_mm": 0.20000000000000018
+          },
+          {
+            "male_z_mm": 1.4666666666666668,
+            "socket_z_mm": 0.25,
+            "lift_mm": 1.2166666666666668,
+            "radial_clearance_mm": 0.050000000000000044
+          },
+          {
+            "male_z_mm": 1.4666666666666668,
+            "socket_z_mm": 1.4666666666666668,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.050000000000000044
+          },
+          {
+            "male_z_mm": 1.6666666666666667,
+            "socket_z_mm": 0,
+            "lift_mm": 1.6666666666666667,
+            "radial_clearance_mm": 0.40000000000000013
+          },
+          {
+            "male_z_mm": 1.6666666666666667,
+            "socket_z_mm": 0.25,
+            "lift_mm": 1.4166666666666667,
+            "radial_clearance_mm": 0.25
+          },
+          {
+            "male_z_mm": 1.6666666666666667,
+            "socket_z_mm": 1.6666666666666667,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.25
+          }
+        ],
+        "minimum_radial_clearance_mm": 0.050000000000000044,
+        "result": "NO_RADIAL_INTERFERENCE"
+      },
+      "physical_fit": "UNKNOWN",
+      "retention_strength": "UNKNOWN",
+      "upper_final": "Parameters_f12367c33252_Final",
+      "upper_parameters": "Parameters_f12367c33252"
+    }
+  },
+  "physical_fit": "UNKNOWN",
+  "retention_strength": "UNKNOWN",
+  "production_export": "BLOCKED"
+}

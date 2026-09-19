@@ -1,0 +1,48 @@
+<!doctype html><html lang="ja"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>選択案 / 接合部試作</title>
+<style>body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;background:#e6edf4;color:#153248;max-width:1540px;padding:30px;margin:auto;line-height:1.7}
+h1{font-size:clamp(28px,4vw,50px)}.flag{padding:16px;border-left:5px solid #78609a;background:#ddd5e9}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}article{padding:20px;background:#fff;border-radius:12px}img,video{width:100%;height:auto;display:block}a{color:#28549a}
+.trials{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:24px}footer{margin-top:36px;border-top:1px solid #b4c6d6}
+@media(max-width:800px){body{padding:15px}.grid,.trials{grid-template-columns:1fr}}</style>
+<h1>選択した外観を、組める部品へ。</h1><p class="flag">外観基準のみ承認済み / 接合部・組立はPROTOTYPE /
+初回試作で小ささ・穴詰まりの課題あり / 全数印刷は保留。<a href="../../../feedback.html">実物の記録</a></p><p>MonaとDuckyは細部を優先した4 mm、Copilotはブロック感と組立性を優先した8 mmです。
+占有セル・表面色は維持し、少数の継ぎ目と隠れた接続を変更しました。ピクセル一致や組立の物理保証ではありません。</p>
+<p><a href="../../../">公開アーカイブ</a> · <a href="../../../viewer/">選定案の組立ビュー</a> · <a href="comparison.jpg">比較画像</a> ·
+<a href="../../phase1/gallery.html">Phase1の9案（履歴）</a></p><div class="grid"><article><h2>MONA / 4 mm</h2>
+<a href="mona-fine/preview.png"><img width="1200" height="1200" src="mona-fine/preview.png" alt="選択案の実CADブロック組立"></a>
+<p><strong>13,837 → 13,434 部品</strong> / 180.71 mm</p>
+<p>実CAD穴壁 1.210 mm・屋根 1.480 mm。保持力は未確認。</p>
+<p><a href="mona-fine/scene.blend">Blender</a> · <a href="mona-fine/bom.csv">個別BOM</a> ·
+<a href="mona-fine/bom-summary.csv">型別数量</a> · <a href="mona-fine/assembly-steps.csv">組立候補順</a></p>
+<video controls preload="none" playsinline src="mona-fine/turntable.mp4" poster="mona-fine/preview.png"></video></article><article><h2>COPILOT / 8 mm</h2>
+<a href="copilot-chunky/preview.png"><img width="1200" height="1200" src="copilot-chunky/preview.png" alt="選択案の実CADブロック組立"></a>
+<p><strong>3,135 → 3,021 部品</strong> / 183.95 mm</p>
+<p>実CAD穴壁 1.843 mm・屋根 2.813 mm。保持力は未確認。</p>
+<p><a href="copilot-chunky/scene.blend">Blender</a> · <a href="copilot-chunky/bom.csv">個別BOM</a> ·
+<a href="copilot-chunky/bom-summary.csv">型別数量</a> · <a href="copilot-chunky/assembly-steps.csv">組立候補順</a></p>
+<video controls preload="none" playsinline src="copilot-chunky/turntable.mp4" poster="copilot-chunky/preview.png"></video></article><article><h2>DUCKY / 4 mm</h2>
+<a href="ducky-fine/preview.png"><img width="1200" height="1200" src="ducky-fine/preview.png" alt="選択案の実CADブロック組立"></a>
+<p><strong>10,662 → 10,311 部品</strong> / 180.71 mm</p>
+<p>実CAD穴壁 1.210 mm・屋根 1.480 mm。保持力は未確認。</p>
+<p><a href="ducky-fine/scene.blend">Blender</a> · <a href="ducky-fine/bom.csv">個別BOM</a> ·
+<a href="ducky-fine/bom-summary.csv">型別数量</a> · <a href="ducky-fine/assembly-steps.csv">組立候補順</a></p>
+<video controls preload="none" playsinline src="ducky-fine/turntable.mp4" poster="ducky-fine/preview.png"></video></article></div>
+<h2>接合部試験片の記録 / NOT_SLICED</h2><p>初回4 mm試作に課題があったため改善検討中です。全体の数千～1万部品を印刷しないでください。各familyは4条件の受け4個＋共通雄キー4個＋段違い結合3個です。
+4 mmの入口壁1.21 mm・屋根1.48 mmは実CADの測定値ですが、1.10 mm軸の破断・摩耗・保持力は別途UNKNOWNです。</p>
+<p><a href="TRIAL-GUIDE.md">具体的な試験方法・最少記録項目</a> · <a href="fit-results-blank.csv">記録CSV</a> ·
+<a href="cad/proof/joint-proof.json">公称干渉・着座面の証跡</a></p>
+<div class="trials"><article><h2>4 mm 接合部 / 小型試験セット</h2>
+<p>11部品 / 7種類。PLA・ノズル 0.2 mmは未スライスの試行仮定。</p>
+<p><a href="cad/trial/p4/plate.3mf">配置3MF</a> · <a href="cad/trial/p4/plate.stl">配置STL</a> ·
+<a href="cad/trial/p4/plate.step">STEP</a> · <a href="cad/trial/p4/Trial-p4.FCStd">FreeCAD</a></p>
+<p>ノッチ1/2/3/4 → 直径差 −0.05 / 0 / +0.10 / +0.20 mm。−0.05は意図的な公称干渉です。</p></article><article><h2>8 mm 接合部 / 小型試験セット</h2>
+<p>11部品 / 7種類。PLA・ノズル 0.4 mmは未スライスの試行仮定。</p>
+<p><a href="cad/trial/p8/plate.3mf">配置3MF</a> · <a href="cad/trial/p8/plate.stl">配置STL</a> ·
+<a href="cad/trial/p8/plate.step">STEP</a> · <a href="cad/trial/p8/Trial-p8.FCStd">FreeCAD</a></p>
+<p>ノッチ1/2/3/4 → 直径差 −0.05 / 0 / +0.10 / +0.20 mm。−0.05は意図的な公称干渉です。</p></article></div>
+<p>Monaの7つのひげ先端は、組立開始前に置く専用支持台へ上から載せます。保持力確認前に支持台を外さないでください。
+<a href="cad/aids/Cradles.FCStd">支持台CAD</a>（初回の接合部だけの試験には不要）</p>
+<p>型ごとのSTL/STEP、必要数、各個体IDの対応を収録しています。同じ形を数万ファイルへ複製していません。
+P1Sの配置は公称256×256 mmを仮定した幾何配置だけで、メーカーprofile・スライサー・印刷時間・質量・支持材は未検証です。</p>
+<footer><p>原型：martinwoodward/octoprints / revision981a85f0bec9d1a9c280fd5719d0d797852229c4 /
+CC BY-NC4.0。非商用の独立改変で、GitHub・LEGOの推奨/互換性を主張しません。</p></footer></html>

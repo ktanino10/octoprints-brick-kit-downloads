@@ -1,0 +1,19 @@
+type_id,color,hex,count
+p4-1x1,Purple,#5E43B7,1076
+p4-1x1,Jade white,#FFFFFF,47
+p4-1x1,Black,#000000,58
+p4-1x1,Hot pink,#F5547C,585
+p4-2x1,Purple,#5E43B7,1009
+p4-2x1,Jade white,#FFFFFF,14
+p4-2x1,Black,#000000,40
+p4-2x1,Hot pink,#F5547C,405
+p4-2x2,Purple,#5E43B7,467
+p4-3x1,Purple,#5E43B7,427
+p4-3x1,Jade white,#FFFFFF,1
+p4-3x1,Black,#000000,7
+p4-3x1,Hot pink,#F5547C,40
+p4-3x2,Purple,#5E43B7,499
+p4-4x1,Purple,#5E43B7,421
+p4-4x1,Black,#000000,8
+p4-4x1,Hot pink,#F5547C,53
+p4-4x2,Purple,#5E43B7,8680

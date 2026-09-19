@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "updated": "2026-09-19",
+  "archived_revisions": ["phase1", "r2-20260919"],
+  "selected_revision": "r2-20260919",
+  "feedback": "SMALL_PARTS_AND_BLOCKED_HOLES_BEFORE_CLEANING",
+  "physical_fit": "NOT_VALIDATED",
+  "retention_strength": "NOT_VALIDATED",
+  "full_assembly": "NOT_VALIDATED",
+  "production_export": "BLOCKED",
+  "print_data": "NOT_SLICED",
+  "redesign_decision": "UNDER_DISCUSSION_NOT_APPROVED",
+  "feedback_record": "feedback/2026-09-19/README.md"
+}

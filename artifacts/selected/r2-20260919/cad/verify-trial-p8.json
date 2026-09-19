@@ -1,0 +1,706 @@
+{
+  "result": "PASS",
+  "fresh_process": true,
+  "proxy_free": true,
+  "file": "trial/p8/Trial-p8.FCStd",
+  "piece_count": 11,
+  "parameter_edits": {
+    "trial-p8-receiver-01": {
+      "recomputed": true,
+      "edited_property": "Layer",
+      "delta_mm": 0.01,
+      "volume_delta_mm3": 1.8527239999998528,
+      "restored": true,
+      "result": "PASS"
+    },
+    "trial-p8-receiver-02": {
+      "recomputed": true,
+      "edited_property": "Layer",
+      "delta_mm": 0.01,
+      "volume_delta_mm3": 1.8427239999999756,
+      "restored": true,
+      "result": "PASS"
+    },
+    "trial-p8-receiver-03": {
+      "recomputed": true,
+      "edited_property": "Layer",
+      "delta_mm": 0.01,
+      "volume_delta_mm3": 1.8327239999996436,
+      "restored": true,
+      "result": "PASS"
+    },
+    "trial-p8-receiver-04": {
+      "recomputed": true,
+      "edited_property": "Layer",
+      "delta_mm": 0.01,
+      "volume_delta_mm3": 1.8227240000002212,
+      "restored": true,
+      "result": "PASS"
+    },
+    "trial-p8-male-grip": {
+      "recomputed": true,
+      "edited_property": "Layer",
+      "delta_mm": 0.01,
+      "volume_delta_mm3": 1.8627239999999574,
+      "restored": true,
+      "result": "PASS"
+    },
+    "trial-p8-bridge-lower": {
+      "recomputed": true,
+      "edited_property": "Layer",
+      "delta_mm": 0.01,
+      "volume_delta_mm3": 1.2371240000002217,
+      "restored": true,
+      "result": "PASS"
+    },
+    "trial-p8-bridge-upper": {
+      "recomputed": true,
+      "edited_property": "Layer",
+      "delta_mm": 0.01,
+      "volume_delta_mm3": 2.5027239999992617,
+      "restored": true,
+      "result": "PASS"
+    }
+  },
+  "step_reimports": {
+    "trial-p8-receiver-01": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 846.8459496428067
+    },
+    "trial-p8-receiver-02": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 841.657295248928
+    },
+    "trial-p8-receiver-03": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 835.9399588080045
+    },
+    "trial-p8-receiver-04": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 830.1959188295231
+    },
+    "trial-p8-male-grip": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 893.8018404196251
+    },
+    "trial-p8-bridge-lower": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 579.51830245526
+    },
+    "trial-p8-bridge-upper": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 1156.248594337881
+    },
+    "plate": {
+      "valid": true,
+      "solid_count": 11,
+      "volume_mm3": 9245.131683456095
+    },
+    "staggered_bridge": {
+      "valid": true,
+      "solid_count": 3,
+      "volume_mm3": 2315.2851992483993
+    }
+  },
+  "reopened_seating_checks": [
+    {
+      "result": "EXPECTED_INTERFERENCE_NOT_RIGIDLY_SEATABLE",
+      "diametral_clearance_mm": -0.05,
+      "native_pad_to_bottom_common_area_mm2": [
+        18.751817483427075
+      ],
+      "total_bearing_area_mm2": 18.751817483427075,
+      "final_layer_separation_mm": 4.8,
+      "native_insertion_samples": [
+        {
+          "upper_bottom_z_mm": 6.666666666666666,
+          "lift_mm": 1.8666666666666667,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 6.466666666666667,
+          "lift_mm": 1.6666666666666667,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 6.433333333333334,
+          "lift_mm": 1.6333333333333333,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 6.266666666666667,
+          "lift_mm": 1.4666666666666668,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 6.199999999999999,
+          "lift_mm": 1.4,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.966666666666667,
+          "lift_mm": 1.1666666666666667,
+          "overlap_mm3": 0.022249311860320975
+        },
+        {
+          "upper_bottom_z_mm": 5.733333333333333,
+          "lift_mm": 0.9333333333333333,
+          "overlap_mm3": 0.09020806960985084
+        },
+        {
+          "upper_bottom_z_mm": 5.5,
+          "lift_mm": 0.7,
+          "overlap_mm3": 0.1581668273593797
+        },
+        {
+          "upper_bottom_z_mm": 5.266666666666667,
+          "lift_mm": 0.4666666666666667,
+          "overlap_mm3": 0.22612558510890945
+        },
+        {
+          "upper_bottom_z_mm": 5.033333333333333,
+          "lift_mm": 0.23333333333333334,
+          "overlap_mm3": 0.2940843428584392
+        },
+        {
+          "upper_bottom_z_mm": 5.0,
+          "lift_mm": 0.2,
+          "overlap_mm3": 0.3037927368226576
+        },
+        {
+          "upper_bottom_z_mm": 4.8,
+          "lift_mm": 0.0,
+          "overlap_mm3": 0.3620431006079716
+        }
+      ],
+      "continuous_radial_envelope": {
+        "method": "Exact piecewise-affine radial envelope extrema over 0 <= socket_z <= male_z <= stem_height",
+        "lift_range_mm": [
+          0,
+          1.8666666666666667
+        ],
+        "separated_lift_range_mm": [
+          1.6666666666666667,
+          1.8666666666666667
+        ],
+        "critical_points": [
+          {
+            "male_z_mm": 0,
+            "socket_z_mm": 0,
+            "lift_mm": 0,
+            "radial_clearance_mm": 0.06000000000000005
+          },
+          {
+            "male_z_mm": 0.2,
+            "socket_z_mm": 0,
+            "lift_mm": 0.2,
+            "radial_clearance_mm": 0.20000000000000018
+          },
+          {
+            "male_z_mm": 0.2,
+            "socket_z_mm": 0.2,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.02000000000000024
+          },
+          {
+            "male_z_mm": 0.25,
+            "socket_z_mm": 0.25,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": -0.02499999999999991
+          },
+          {
+            "male_z_mm": 1.4666666666666668,
+            "socket_z_mm": 0,
+            "lift_mm": 1.4666666666666668,
+            "radial_clearance_mm": 0.20000000000000018
+          },
+          {
+            "male_z_mm": 1.4666666666666668,
+            "socket_z_mm": 0.25,
+            "lift_mm": 1.2166666666666668,
+            "radial_clearance_mm": -0.02499999999999991
+          },
+          {
+            "male_z_mm": 1.4666666666666668,
+            "socket_z_mm": 1.4666666666666668,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": -0.02499999999999991
+          },
+          {
+            "male_z_mm": 1.6666666666666667,
+            "socket_z_mm": 0,
+            "lift_mm": 1.6666666666666667,
+            "radial_clearance_mm": 0.40000000000000013
+          },
+          {
+            "male_z_mm": 1.6666666666666667,
+            "socket_z_mm": 0.25,
+            "lift_mm": 1.4166666666666667,
+            "radial_clearance_mm": 0.17500000000000004
+          },
+          {
+            "male_z_mm": 1.6666666666666667,
+            "socket_z_mm": 1.6666666666666667,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.17500000000000004
+          }
+        ],
+        "minimum_radial_clearance_mm": -0.02499999999999991,
+        "result": "EXPECTED_INTERFERENCE"
+      },
+      "physical_fit": "UNKNOWN",
+      "retention_strength": "UNKNOWN"
+    },
+    {
+      "result": "PASS_NOMINAL_SEATING",
+      "diametral_clearance_mm": 0.0,
+      "native_pad_to_bottom_common_area_mm2": [
+        18.751817483427075
+      ],
+      "total_bearing_area_mm2": 18.751817483427075,
+      "final_layer_separation_mm": 4.8,
+      "native_insertion_samples": [
+        {
+          "upper_bottom_z_mm": 6.666666666666666,
+          "lift_mm": 1.8666666666666667,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 6.466666666666667,
+          "lift_mm": 1.6666666666666667,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 6.433333333333334,
+          "lift_mm": 1.6333333333333333,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 6.266666666666667,
+          "lift_mm": 1.4666666666666668,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 6.199999999999999,
+          "lift_mm": 1.4,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.966666666666667,
+          "lift_mm": 1.1666666666666667,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.733333333333333,
+          "lift_mm": 0.9333333333333333,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.5,
+          "lift_mm": 0.7,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.266666666666667,
+          "lift_mm": 0.4666666666666667,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.033333333333333,
+          "lift_mm": 0.23333333333333334,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.0,
+          "lift_mm": 0.2,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 4.8,
+          "lift_mm": 0.0,
+          "overlap_mm3": 0.0
+        }
+      ],
+      "continuous_radial_envelope": {
+        "method": "Exact piecewise-affine radial envelope extrema over 0 <= socket_z <= male_z <= stem_height",
+        "lift_range_mm": [
+          0,
+          1.8666666666666667
+        ],
+        "separated_lift_range_mm": [
+          1.6666666666666667,
+          1.8666666666666667
+        ],
+        "critical_points": [
+          {
+            "male_z_mm": 0,
+            "socket_z_mm": 0,
+            "lift_mm": 0,
+            "radial_clearance_mm": 0.06000000000000005
+          },
+          {
+            "male_z_mm": 0.2,
+            "socket_z_mm": 0,
+            "lift_mm": 0.2,
+            "radial_clearance_mm": 0.20000000000000018
+          },
+          {
+            "male_z_mm": 0.2,
+            "socket_z_mm": 0.2,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.040000000000000036
+          },
+          {
+            "male_z_mm": 0.25,
+            "socket_z_mm": 0.25,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.0
+          },
+          {
+            "male_z_mm": 1.4666666666666668,
+            "socket_z_mm": 0,
+            "lift_mm": 1.4666666666666668,
+            "radial_clearance_mm": 0.20000000000000018
+          },
+          {
+            "male_z_mm": 1.4666666666666668,
+            "socket_z_mm": 0.25,
+            "lift_mm": 1.2166666666666668,
+            "radial_clearance_mm": 0.0
+          },
+          {
+            "male_z_mm": 1.4666666666666668,
+            "socket_z_mm": 1.4666666666666668,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.0
+          },
+          {
+            "male_z_mm": 1.6666666666666667,
+            "socket_z_mm": 0,
+            "lift_mm": 1.6666666666666667,
+            "radial_clearance_mm": 0.40000000000000013
+          },
+          {
+            "male_z_mm": 1.6666666666666667,
+            "socket_z_mm": 0.25,
+            "lift_mm": 1.4166666666666667,
+            "radial_clearance_mm": 0.19999999999999996
+          },
+          {
+            "male_z_mm": 1.6666666666666667,
+            "socket_z_mm": 1.6666666666666667,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.19999999999999996
+          }
+        ],
+        "minimum_radial_clearance_mm": 0.0,
+        "result": "NO_RADIAL_INTERFERENCE"
+      },
+      "physical_fit": "UNKNOWN",
+      "retention_strength": "UNKNOWN"
+    },
+    {
+      "result": "PASS_NOMINAL_SEATING",
+      "diametral_clearance_mm": 0.1,
+      "native_pad_to_bottom_common_area_mm2": [
+        18.751817483427075
+      ],
+      "total_bearing_area_mm2": 18.751817483427075,
+      "final_layer_separation_mm": 4.8,
+      "native_insertion_samples": [
+        {
+          "upper_bottom_z_mm": 6.666666666666666,
+          "lift_mm": 1.8666666666666667,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 6.466666666666667,
+          "lift_mm": 1.6666666666666667,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 6.433333333333334,
+          "lift_mm": 1.6333333333333333,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 6.266666666666667,
+          "lift_mm": 1.4666666666666668,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 6.199999999999999,
+          "lift_mm": 1.4,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.966666666666667,
+          "lift_mm": 1.1666666666666667,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.733333333333333,
+          "lift_mm": 0.9333333333333333,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.5,
+          "lift_mm": 0.7,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.266666666666667,
+          "lift_mm": 0.4666666666666667,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.033333333333333,
+          "lift_mm": 0.23333333333333334,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.0,
+          "lift_mm": 0.2,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 4.8,
+          "lift_mm": 0.0,
+          "overlap_mm3": 0.0
+        }
+      ],
+      "continuous_radial_envelope": {
+        "method": "Exact piecewise-affine radial envelope extrema over 0 <= socket_z <= male_z <= stem_height",
+        "lift_range_mm": [
+          0,
+          1.8666666666666667
+        ],
+        "separated_lift_range_mm": [
+          1.6666666666666667,
+          1.8666666666666667
+        ],
+        "critical_points": [
+          {
+            "male_z_mm": 0,
+            "socket_z_mm": 0,
+            "lift_mm": 0,
+            "radial_clearance_mm": 0.06000000000000005
+          },
+          {
+            "male_z_mm": 0.2,
+            "socket_z_mm": 0,
+            "lift_mm": 0.2,
+            "radial_clearance_mm": 0.20000000000000018
+          },
+          {
+            "male_z_mm": 0.2,
+            "socket_z_mm": 0.2,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.08000000000000007
+          },
+          {
+            "male_z_mm": 0.25,
+            "socket_z_mm": 0.25,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.050000000000000044
+          },
+          {
+            "male_z_mm": 1.4666666666666668,
+            "socket_z_mm": 0,
+            "lift_mm": 1.4666666666666668,
+            "radial_clearance_mm": 0.20000000000000018
+          },
+          {
+            "male_z_mm": 1.4666666666666668,
+            "socket_z_mm": 0.25,
+            "lift_mm": 1.2166666666666668,
+            "radial_clearance_mm": 0.050000000000000044
+          },
+          {
+            "male_z_mm": 1.4666666666666668,
+            "socket_z_mm": 1.4666666666666668,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.050000000000000044
+          },
+          {
+            "male_z_mm": 1.6666666666666667,
+            "socket_z_mm": 0,
+            "lift_mm": 1.6666666666666667,
+            "radial_clearance_mm": 0.40000000000000013
+          },
+          {
+            "male_z_mm": 1.6666666666666667,
+            "socket_z_mm": 0.25,
+            "lift_mm": 1.4166666666666667,
+            "radial_clearance_mm": 0.25
+          },
+          {
+            "male_z_mm": 1.6666666666666667,
+            "socket_z_mm": 1.6666666666666667,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.25
+          }
+        ],
+        "minimum_radial_clearance_mm": 0.050000000000000044,
+        "result": "NO_RADIAL_INTERFERENCE"
+      },
+      "physical_fit": "UNKNOWN",
+      "retention_strength": "UNKNOWN"
+    },
+    {
+      "result": "PASS_NOMINAL_SEATING",
+      "diametral_clearance_mm": 0.2,
+      "native_pad_to_bottom_common_area_mm2": [
+        18.751817483427075
+      ],
+      "total_bearing_area_mm2": 18.751817483427075,
+      "final_layer_separation_mm": 4.8,
+      "native_insertion_samples": [
+        {
+          "upper_bottom_z_mm": 6.666666666666666,
+          "lift_mm": 1.8666666666666667,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 6.466666666666667,
+          "lift_mm": 1.6666666666666667,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 6.433333333333334,
+          "lift_mm": 1.6333333333333333,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 6.266666666666667,
+          "lift_mm": 1.4666666666666668,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 6.199999999999999,
+          "lift_mm": 1.4,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.966666666666667,
+          "lift_mm": 1.1666666666666667,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.733333333333333,
+          "lift_mm": 0.9333333333333333,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.5,
+          "lift_mm": 0.7,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.266666666666667,
+          "lift_mm": 0.4666666666666667,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.033333333333333,
+          "lift_mm": 0.23333333333333334,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 5.0,
+          "lift_mm": 0.2,
+          "overlap_mm3": 0.0
+        },
+        {
+          "upper_bottom_z_mm": 4.8,
+          "lift_mm": 0.0,
+          "overlap_mm3": 0.0
+        }
+      ],
+      "continuous_radial_envelope": {
+        "method": "Exact piecewise-affine radial envelope extrema over 0 <= socket_z <= male_z <= stem_height",
+        "lift_range_mm": [
+          0,
+          1.8666666666666667
+        ],
+        "separated_lift_range_mm": [
+          1.6666666666666667,
+          1.8666666666666667
+        ],
+        "critical_points": [
+          {
+            "male_z_mm": 0,
+            "socket_z_mm": 0,
+            "lift_mm": 0,
+            "radial_clearance_mm": 0.06000000000000005
+          },
+          {
+            "male_z_mm": 0.2,
+            "socket_z_mm": 0,
+            "lift_mm": 0.2,
+            "radial_clearance_mm": 0.20000000000000018
+          },
+          {
+            "male_z_mm": 0.2,
+            "socket_z_mm": 0.2,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.1200000000000001
+          },
+          {
+            "male_z_mm": 0.25,
+            "socket_z_mm": 0.25,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.10000000000000009
+          },
+          {
+            "male_z_mm": 1.4666666666666668,
+            "socket_z_mm": 0,
+            "lift_mm": 1.4666666666666668,
+            "radial_clearance_mm": 0.20000000000000018
+          },
+          {
+            "male_z_mm": 1.4666666666666668,
+            "socket_z_mm": 0.25,
+            "lift_mm": 1.2166666666666668,
+            "radial_clearance_mm": 0.10000000000000009
+          },
+          {
+            "male_z_mm": 1.4666666666666668,
+            "socket_z_mm": 1.4666666666666668,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.10000000000000009
+          },
+          {
+            "male_z_mm": 1.6666666666666667,
+            "socket_z_mm": 0,
+            "lift_mm": 1.6666666666666667,
+            "radial_clearance_mm": 0.40000000000000013
+          },
+          {
+            "male_z_mm": 1.6666666666666667,
+            "socket_z_mm": 0.25,
+            "lift_mm": 1.4166666666666667,
+            "radial_clearance_mm": 0.30000000000000004
+          },
+          {
+            "male_z_mm": 1.6666666666666667,
+            "socket_z_mm": 1.6666666666666667,
+            "lift_mm": 0.0,
+            "radial_clearance_mm": 0.30000000000000004
+          }
+        ],
+        "minimum_radial_clearance_mm": 0.06000000000000005,
+        "result": "NO_RADIAL_INTERFERENCE"
+      },
+      "physical_fit": "UNKNOWN",
+      "retention_strength": "UNKNOWN"
+    }
+  ]
+}
