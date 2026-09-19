@@ -135,8 +135,8 @@
     {
       "path": "media/trial-feedback-combined.mp4",
       "mime": "video/mp4",
-      "bytes": 14847064,
-      "sha256": "d52239732056a9d24f7cb03a5ff225a0a4bd0b9c2d1f9f836f533fac1611714e",
+      "bytes": 14847020,
+      "sha256": "e44c57632d5c7760d6e4618a61eb008257f1f1dc4bee8a12cb3831cd7e9092e6",
       "duration_seconds": 33.352167,
       "dimensions_px": [
         1280,
@@ -144,10 +144,10 @@
       ],
       "frames": 1001,
       "source_order": [
-        "media/video-02-silent.mp4",
-        "media/video-01-silent.mp4"
+        "media/video-01-silent.mp4",
+        "media/video-02-silent.mp4"
       ],
-      "processing": "Concatenated in reattachment order without re-encoding; silent; decoded frame sequence unchanged; original videos retained."
+      "processing": "Corrected to video 01 then video 02 per contributor request; no re-encoding; silent; full decoded frame sequence preserved; original videos retained."
     }
   ]
 }

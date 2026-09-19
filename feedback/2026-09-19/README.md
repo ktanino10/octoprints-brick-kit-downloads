@@ -47,7 +47,7 @@
 
 **[1本にまとめた動画: 約33.35秒・無音版](https://raw.githubusercontent.com/ktanino10/octoprints-brick-kit-downloads/main/feedback/2026-09-19/media/trial-feedback-combined.mp4)**
 
-提供者の依頼により、再添付された順番の **動画02 → 動画01** で結合しました。
+提供者の訂正に合わせ、**動画01 → 動画02** の順番で結合しました。
 1280×720、全1,001フレーム。再圧縮はしていません。元の2本も比較・参照用に残しています。
 
 - [動画01: 約27.46秒・無音版](https://raw.githubusercontent.com/ktanino10/octoprints-brick-kit-downloads/main/feedback/2026-09-19/media/video-01-silent.mp4)
