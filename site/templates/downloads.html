@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Octoprintsの全制作物を版・形式・ピッチで検索。Blender、FreeCAD、STEP、STL、3MF、BOMとSHA-256。"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'"><title>ダウンロードカタログ — Octoprints</title><link rel="icon" href="viewer/assets/mark.svg"><link rel="stylesheet" href="assets/site.css"><script type="module" src="assets/downloads.js"></script></head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<header class="header wrap"><a class="brand" href="./">octoprints<span>BRICK STUDY / PUBLIC ARCHIVE</span></a><nav aria-label="メイン"><a href="./#candidates">候補9種</a><a href="viewer/">組立ビューア</a><a href="downloads.html" aria-current="page">ダウンロード</a><a href="feedback.html">実物の記録</a><a href="history.html">設計の経緯</a></nav></header>
+<div class="status-strip"><div class="wrap"><strong>試作・初回印刷で課題あり／改善検討中</strong><span>全数印刷は保留</span><a href="feedback.html">報告を読む →</a></div></div>
+<main id="main" class="wrap content-page">
+  <div class="page-heading"><p class="eyebrow">DOWNLOAD CATALOG / SHA-256</p><h1>制作データを、<br>版ごと持ち帰る。</h1><p>個別ファイルも、参照先を含むZIPも、認証なしで取得できます。CADの相対フォルダー構成とライセンスを保ったまま保存してください。</p></div>
+  <div class="note"><strong>すべて試作・NOT_SLICED。</strong>形状データであり、P1Sの設定済みプロジェクト・G-code・印刷準備済みファイルではありません。4 mmの初回試作で扱いにくさと穴詰まりが報告されています。大量印刷は始めないでください。</div>
+  <p>版付きZIP・JSON・CSVは当時の原記録を保持しています。モデルのID・数値・状態コードは翻訳していません。英語の手順書は別資料として公開しています。</p>
+  <p><a href="README.md">別PCでの準備</a> / <a href="artifacts/selected/r2-20260919/TRIAL-GUIDE.md">試験記録ガイド</a></p>
+  <section aria-labelledby="bundle-title"><h2 id="bundle-title">一式で取得</h2><p>FreeCADは<strong>「選定r2・CAD一式」ZIPを全て展開</strong>し、<span class="mono">cad/assemblies/</span>のFCStdを開きます。隣の<span class="mono">cad/libraries/</span>を移動・改名しないでください。</p><div class="download-bundles" id="bundles"><p class="loading">配布パッケージを読み込んでいます。</p></div></section>
+  <p class="legacy-links">以前から公開している4 mm・11部品はバイト単位で変更なし：<a href="p4-trial-11-parts.3mf" download>形状3MF</a> / <a href="p4-trial-11-parts.stl" download>STL</a>。<span>この2つは代替形式です。同じプレートへ両方を重ねて読み込まないでください。8 mm・歴史的6 mmの成功を示すものでもありません。</span></p>
+  <section aria-labelledby="files-title"><h2 id="files-title">個別ファイルを探す</h2><div class="filters"><label>ファイル名・キャラクター・ピッチ<input id="file-search" type="search" placeholder="例：mona / p4 / bom / .FCStd" autocomplete="off"></label><label>版・グループ<select id="group-filter"><option value="">すべて</option><option value="selected">選定r2の制作物・CAD</option><option value="trial">4 mm / 8 mm試験片・補助具</option><option value="phase1">Phase1候補9種・旧CAD</option><option value="feedback">実物フィードバック</option><option value="design">設計記録</option></select></label><label>ファイル形式<select id="format-filter"><option value="">すべて</option></select></label></div>
+  <p id="file-count" class="inventory-summary" role="status">ファイル目録を確認中です。</p>
+  <div id="download-error" class="error" role="alert" hidden></div>
+  <div class="table-scroll"><table class="inventory-table"><thead><tr><th scope="col">ファイル / 版</th><th scope="col">形式</th><th scope="col">サイズ</th><th scope="col">照合</th></tr></thead><tbody id="file-list"></tbody></table></div>
+  <div class="pagination"><button id="previous-page" type="button" disabled>← 前へ</button><span id="page-count"></span><button id="next-page" type="button" disabled>次へ →</button></div>
+  <p class="quiet">モバイルで全ハッシュを調べる場合も、<a href="archive/inventory.json">全ファイル目録 JSON</a>を利用できます。目録は各公開ファイルの正確なバイト数・SHA-256・直接URL・元ファイルとの関係を記録しています。ネイティブやメタデータの公開用整理は<a href="history.html#portability">整理方針</a>を参照してください。</p></section>
+  <noscript><p class="note">検索にはJavaScriptが必要です。<a href="https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/tag/archive-2026-09-19-r2">GitHub Releaseの一括配布</a>、<a href="archive/inventory.json">全ファイル目録</a>、<a href="artifacts/selected/r2-20260919/gallery.html">静的ギャラリー</a>からも取得できます。</p></noscript>
+</main>
+<footer class="footer wrap"><div><a class="brand" href="./">octoprints<span>制作物と、改善の記録を公開。</span></a><p>モデルは<a href="LICENSE">CC BY-NC 4.0</a>。<a href="ATTRIBUTION.md">出典・改変・第三者の権利</a>を維持してください。<br>実物写真・動画の権利は提供者に帰属し、一律のCC許諾ではありません。</p></div><div><a href="https://github.com/ktanino10/octoprints-brick-kit-downloads">GitHubリポジトリ ↗</a><a href="archive/inventory.json">全ファイル目録 JSON ↗</a><a href="archive/SHA256SUMS.txt">SHA-256一覧 ↗</a></div></footer>
+</body></html>

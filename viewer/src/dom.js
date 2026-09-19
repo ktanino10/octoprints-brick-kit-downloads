@@ -1,6 +1,8 @@
+import { numberLocale } from '../../assets/i18n.js';
+
 export const $ = (selector, root = document) => root.querySelector(selector);
 export const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
-export const number = (value, digits = 1) => new Intl.NumberFormat('ja-JP', { maximumFractionDigits: digits }).format(value);
+export const number = (value, digits = 1) => new Intl.NumberFormat(numberLocale(), { maximumFractionDigits: digits }).format(value);
 
 export function element(tag, className, content) {
   const node = document.createElement(tag);

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="4 mm接合部の初回実物フィードバック。小ささと穴詰まり、写真10枚、無音動画、洗浄前からの課題と未確定の条件。"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'"><title>初回試作の実物フィードバック — Octoprints</title><link rel="icon" href="viewer/assets/mark.svg"><link rel="stylesheet" href="assets/site.css"><script type="module" src="assets/site.js"></script></head>
+<body>
+<a class="skip" href="#main">本文へ</a><header class="header wrap"><a class="brand" href="./">octoprints<span>BRICK STUDY / PUBLIC ARCHIVE</span></a><nav aria-label="メイン"><a href="./#candidates">候補9種</a><a href="viewer/">組立ビューア</a><a href="downloads.html">ダウンロード</a><a href="feedback.html" aria-current="page">実物の記録</a><a href="history.html">設計の経緯</a></nav></header>
+<div class="status-strip"><div class="wrap"><strong>試作・初回印刷で課題あり／改善検討中</strong><span>全数印刷は保留</span></div></div>
+<main id="main" class="wrap content-page">
+  <div class="page-heading"><p class="eyebrow">PHYSICAL FEEDBACK / 2026-09-19</p><h1>小さかった。<br>穴が、埋まっていた。</h1><p>提供者の公開許可を得た、4 mm接合部の初回試作の記録です。成功例や製造承認ではなく、次の設計を考えるために残しています。</p></div>
+  <div class="prose"><blockquote>小さくて作りにくいですね。そして、穴がプラスチックで埋まっていたり、します</blockquote>
+    <div class="evidence-callout"><strong>現行の小型接合部を、そのまま全体模型へ展開しません。</strong><br>扱いにくさと成形上の穴詰まりを別の課題として扱います。原因・保持力・繰り返し耐久性は、まだ確定していません。</div>
+    <h2>確認できたこと／まだ分からないこと</h2>
+    <div class="table-scroll"><table><thead><tr><th scope="col">項目</th><th scope="col">現在の記録</th></tr></thead><tbody>
+      <tr><th scope="row">対象</th><td>4 mm用、7種類・11部品の小型試験片。実際にスライスした入力のハッシュは未照合。</td></tr>
+      <tr><th scope="row">機材・材料</th><td>Bambu Lab P1S、事前に0.2 mmノズル装着との申告。材料はPLAを想定。実際の材料銘柄・プレート・処理プロファイル・層高・サポート設定は未提供。</td></tr>
+      <tr><th scope="row">扱いやすさ</th><td>「小さくて作りにくい」との実使用の報告。最適な部品寸法や組立時間は未確定。</td></tr>
+      <tr><th scope="row">穴詰まり</th><td>一部の穴が樹脂で埋まるとの報告。<strong>超音波洗浄前から発生</strong>していたと追加確認。形状・初層・サポート・スライスなど、主因は未特定。</td></tr>
+      <tr><th scope="row">嵌合・保持力</th><td>ノッチ条件別の着座、がた、抜け、5回着脱後の亀裂・緩みは、数値や条件別の結果として未確定。</td></tr>
+      <tr><th scope="row">他の版への適用</th><td>歴史的6 mmと8 mmの実物成功を示す記録ではありません。全体組立・強度の合格でもありません。</td></tr>
+    </tbody></table></div>
+    <p>元の形状データは<strong>NOT_SLICED</strong>のままです。小穴を一つずつ削ることや無理な押し込みを、完成キットの前提にはしません。</p>
+  </div>
+  <section id="photos"><h2>写真10枚</h2><p class="quiet">公開済みのメタデータ除去済みJPEGです。写真番号は、ノッチ番号や試験条件を意味しません。タップで拡大できます。</p><div id="photo-grid" class="photo-grid"></div><noscript><p><a href="feedback/2026-09-19/README.md">写真一覧を含む原記録</a>を参照してください。</p></noscript></section>
+  <section id="video"><h2>動画01 → 動画02、一本の記録に。</h2><p class="quiet">約33.35秒 / 1280 × 720 / 1,001フレーム / 無音。訂正済みの順番を保ち、再圧縮せず結合した公開ファイルです。</p>
+    <video class="wide-video" controls preload="none" playsinline poster="feedback/2026-09-19/media/photo-01.jpg" aria-label="初回試作の結合動画。動画01から動画02の順、約33.35秒、無音"><source src="feedback/2026-09-19/media/trial-feedback-combined.mp4" type="video/mp4">再生できない場合は下のMP4取得リンクを利用してください。</video>
+    <p class="legacy-links"><a href="feedback/2026-09-19/media/trial-feedback-combined.mp4" download>結合MP4を取得 ↓</a> / <a href="feedback/2026-09-19/media-manifest.json">寸法・処理・SHA-256の記録</a></p>
+    <details class="media-disclosure"><summary>元の2本も見る <span>公開用の無音版を保持</span></summary><div class="video-grid feedback-subvideos">
+      <figure class="video-card"><video controls preload="none" playsinline data-video-url="feedback/2026-09-19/media/video-01-silent.mp4" aria-label="実物フィードバック動画01、無音"></video><h3>動画01 / 約27.46秒</h3><a href="feedback/2026-09-19/media/video-01-silent.mp4" download>動画01を取得 ↓</a></figure>
+      <figure class="video-card"><video controls preload="none" playsinline data-video-url="feedback/2026-09-19/media/video-02-silent.mp4" aria-label="実物フィードバック動画02、無音"></video><h3>動画02 / 約5.89秒</h3><a href="feedback/2026-09-19/media/video-02-silent.mp4" download>動画02を取得 ↓</a></figure>
+    </div></details>
+  </section>
+  <div class="prose">
+    <h2>「3Dプリント後の超音波洗浄」</h2>
+    <p><a class="button secondary" href="https://youtu.be/rHhXFxvFU-E" target="_blank" rel="noopener noreferrer">提供者のYouTube動画を開く ↗</a></p>
+    <p>このリンクは<strong>印刷後の超音波洗浄</strong>の映像です。印刷工程や嵌合の合格を示しません。穴詰まりは洗浄の前から発生していたため、最初の穴詰まりを洗浄のせいにしたり、洗浄で直ると判断したりしません。洗浄液・温度・時間、洗浄後の変化も未記録です。</p>
+    <p class="quiet">埋め込み・自動再生は行いません。リンクを開くまではYouTubeへ接続しません。</p>
+    <h2>次の方向は、まだ話し合いの途中。</h2><p>手でつかめる共通ブロックと、丸い突起・開いた下面の壁や筒で保持する考え方を検討しています。新しい形状の採用・製造は未決定です。<a href="history.html#next">設計原理の参考と未解決の条件</a>を区別して残しています。</p>
+    <h2>公開処理と写真・動画の権利</h2><p>写真は向き補正後、EXIF等を除いた公開JPEG。動画は映像を再圧縮せず、音声・センサートラック・位置情報・撮影日時等を除いて再格納したものです。このアーカイブでは、すでに公開済みのファイルを変更せず使用しています。</p><p><strong>写真・実物動画の著作権は提供者に帰属します。</strong>改善記録への掲載許可であり、モデルのCC BY-NC 4.0が自動的に適用される意味ではありません。二次利用は別途権利者の許諾に従ってください。</p><p><a href="feedback/2026-09-19/README.md">公開済みの原記録（Markdown）</a> / <a href="feedback/2026-09-19/media-manifest.json">媒体の照合記録</a></p>
+  </div>
+</main>
+<footer class="footer wrap"><div><a class="brand" href="./">octoprints<span>制作物と、改善の記録を公開。</span></a><p>試作・初回印刷で課題あり。全数印刷は保留。<br><a href="ATTRIBUTION.md">出典・権利・変更内容</a></p></div><div><a href="downloads.html">ダウンロードカタログ →</a><a href="https://github.com/ktanino10/octoprints-brick-kit-downloads">公開リポジトリ ↗</a></div></footer>
+<dialog id="image-dialog" aria-label="実物写真の拡大"><button class="dialog-close" type="button" aria-label="拡大画像を閉じる">閉じる ×</button><img alt=""><p></p><a class="text-link" download>公開画像を取得 ↓</a></dialog>
+</body></html>

@@ -52,6 +52,7 @@ export class PartsInspector {
     this.manifest = manifest;
     this.index = index;
     this.progress = progress;
+    $('#part-search').placeholder = `例：${manifest.parts[0].id}`;
     $('#part-search').disabled = false;
     $('#only-visible').disabled = false;
     $('#only-underside').disabled = false;

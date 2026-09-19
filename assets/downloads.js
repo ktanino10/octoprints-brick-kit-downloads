@@ -1,4 +1,5 @@
 import { readJSON } from './site.js';
+import { assetURL, setLanguageContext } from './i18n.js';
 
 const $ = (selector) => document.querySelector(selector);
 const labels = { selected: '選定 r2-20260919', phase1: 'Phase1 / 履歴', trial: '4 mm・8 mm 試験 / NOT_SLICED', feedback: '実物フィードバック', design: '設計記録', viewer: '公開ビューア', site: '公開サイト・権利表示' };
@@ -23,7 +24,7 @@ function render() {
   page = Math.min(page, pages - 1);
   $('#file-count').replaceChildren(document.createTextNode(`${filtered.length.toLocaleString('ja-JP')} / ${files.length.toLocaleString('ja-JP')} ファイル · ${bytes(filtered.reduce((sum, file) => sum + file.bytes, 0))}`));
   const inventory = create('a', '全ファイル目録 JSON ↓');
-  inventory.href = 'archive/inventory.json';
+  inventory.href = assetURL('archive/inventory.json');
   inventory.download = '';
   $('#file-count').append(inventory);
   $('#file-list').replaceChildren();
@@ -31,8 +32,9 @@ function render() {
     const row = create('tr');
     const name = create('td');
     const link = create('a', file.path, 'path');
-    link.href = file.path;
+    link.href = assetURL(file.path);
     link.download = '';
+    link.setAttribute('data-i18n-ignore', '');
     name.append(link, create('span', labels[file.group], 'group-note'));
     const checksum = create('td');
     const detail = create('details');
@@ -91,6 +93,21 @@ try {
   }
   const initialGroup = new URLSearchParams(location.search).get('group');
   if (Object.hasOwn(labels, initialGroup ?? '')) $('#group-filter').value = initialGroup;
+  const params = new URLSearchParams(location.search);
+  $('#file-search').value = params.get('q') ?? '';
+  const initialFormat = params.get('format');
+  if (files.some((file) => file.format === initialFormat)) $('#format-filter').value = initialFormat;
+  const initialPage = Number(params.get('page') ?? 1);
+  if (Number.isSafeInteger(initialPage) && initialPage > 0) page = initialPage - 1;
+  setLanguageContext((url) => {
+    for (const [name, selector] of [['q', '#file-search'], ['group', '#group-filter'], ['format', '#format-filter']]) {
+      const value = $(selector).value;
+      if (value) url.searchParams.set(name, value);
+      else url.searchParams.delete(name);
+    }
+    url.searchParams.set('page', String(page + 1));
+    return url;
+  });
   for (const selector of ['#file-search', '#group-filter', '#format-filter']) {
     $(selector).addEventListener('input', () => { page = 0; render(); });
   }

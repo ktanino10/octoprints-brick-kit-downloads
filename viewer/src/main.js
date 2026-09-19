@@ -1,4 +1,5 @@
 import './studio.css';
+import { setLanguageContext } from '../../assets/i18n.js';
 import {
   CHARACTERS, STYLES, DataError, artifactPath, isPartVisible, makeIndex,
   validateManifest, validatePrototypes,
@@ -12,6 +13,7 @@ import { BrickStudio } from './studio.js';
 import { resolveViewContext, validateManifestChoice } from './revisions.js';
 import { renderViewContext } from './revision-ui.js';
 import { renderTrials } from './trials.js';
+import { readViewState, writeViewState } from './view-state.js';
 
 let catalog = null;
 let candidate = null;
@@ -28,6 +30,7 @@ let progress = { explosion: 0, layers: 0, steps: 0 };
 let viewContext = null;
 const requestedMode = new URLSearchParams(window.location.search).get('mode') === 'phase1' ? 'phase1' : 'selected';
 const requestedRevision = new URLSearchParams(window.location.search).get('revision');
+let requestedView = new URLSearchParams(window.location.search).get('view');
 const inspector = new PartsInspector(selectPart);
 const poller = new ArchiveStatus();
 if (requestedMode === 'phase1') renderViewContext({ kind: 'phase1', revision: 'phase1', selection: null });
@@ -138,7 +141,8 @@ async function selectCandidate(id, scroll = false) {
     $('#height-callout').hidden = false;
     enableControls(true, true);
     renderProgress(progress, index, manifest.parts.length, manifest.parts.length);
-    announce(`${CHARACTERS[next.character].name}、${STYLES[next.style].name}。${manifest.parts.length}個のブリックを表示。進行を完成形に戻しました。`);
+    if (requestedView) restoreSharedView(id);
+    else announce(`${CHARACTERS[next.character].name}、${STYLES[next.style].name}。${manifest.parts.length}個のブリックを表示。進行を完成形に戻しました。`);
   } catch (error) {
     if (generation !== selectionGeneration || request.signal.aborted) return;
     studioAvailable = false;
@@ -149,6 +153,44 @@ async function selectCandidate(id, scroll = false) {
     announce(`${title}。${error.message}`);
   } finally {
     if (generation === selectionGeneration) $('#viewport').setAttribute('aria-busy', 'false');
+  }
+}
+
+function restoreSharedView(id) {
+  try {
+    const restored = readViewState(requestedView, {
+      candidate: id, layers: index.layers.length, steps: index.steps.length,
+      parts: index.partsById,
+      supportClasses: new Set(manifest.parts.map((part) => part.support_class).filter(Boolean)),
+    });
+    progress = { ...restored.progress };
+    $('#part-search').value = restored.query;
+    $('#only-visible').checked = restored.visibleOnly;
+    $('#only-underside').checked = restored.undersideOnly;
+    $('#support-filter').value = restored.support;
+    inspector.bomMode = restored.bom;
+    inspector.page = restored.page;
+    updateProgress();
+    inspector.renderList();
+    inspector.renderBOM();
+    setPressed($$('[data-bom]'), (button) => button.dataset.bom === restored.bom);
+    selectPart(restored.part);
+    studio.camera.position.fromArray(restored.camera.slice(0, 3));
+    studio.controls.target.fromArray(restored.camera.slice(3));
+    studio.currentView = null;
+    studio.onViewChange(null);
+    studio.controls.update();
+    studio.requestRender();
+    announce('共有URLの部品選択・進行・視点を復元しました。');
+  } catch (error) {
+    catalogError(error.message, () => {
+      const url = new URL(location.href);
+      url.searchParams.delete('view');
+      history.replaceState(null, '', url);
+      $('#catalog-error').hidden = true;
+    });
+  } finally {
+    requestedView = null;
   }
 }
 
@@ -284,6 +326,22 @@ window.addEventListener('pagehide', () => {
 });
 window.addEventListener('pageshow', (event) => {
   if (event.persisted) window.location.reload();
+});
+
+setLanguageContext((url) => {
+  if (!candidate) return url;
+  url.searchParams.set('candidate', candidate.id);
+  if (!studioAvailable || !studio || !index) return url;
+  return writeViewState(url, {
+    candidate: candidate.id, part: inspector.selectedId, progress: { ...progress },
+    camera: [...studio.camera.position.toArray(), ...studio.controls.target.toArray()],
+    query: $('#part-search').value, visibleOnly: $('#only-visible').checked,
+    undersideOnly: $('#only-underside').checked, support: $('#support-filter').value,
+    bom: inspector.bomMode, page: inspector.page,
+  });
+});
+document.addEventListener('archive-language-will-change', () => {
+  if (studio) studio.currentView = null;
 });
 
 loadCatalog();

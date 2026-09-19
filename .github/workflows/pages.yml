@@ -31,12 +31,19 @@ jobs:
         run: |
           node --check assets/site.js
           node --check assets/downloads.js
+          node --check assets/i18n.js
+      - name: Build both languages from shared templates
+        run: |
+          node viewer/scripts/extract-i18n.mjs
+          python3 tools/localize_pages.py build
       - name: Verify actual candidate data and viewer contracts
         run: npm test --prefix viewer
       - name: Rebuild the self-contained viewer
         run: npm run build --prefix viewer
       - name: Verify public hashes, coverage, privacy and links
-        run: python3 tools/validate_archive.py
+        run: |
+          python3 tools/validate_archive.py
+          python3 tools/validate_bilingual.py
       - name: Stage only the audited public payload
         run: python3 tools/build_site.py
       - name: Upload Pages artifact

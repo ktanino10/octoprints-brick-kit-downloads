@@ -1,0 +1,13 @@
+.language-switch{display:flex;justify-content:flex-end;gap:6px;max-width:1320px;padding:8px 20px;margin:0 auto;font:600 12px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.language-switch a{padding:7px 13px;border:1px solid #cad5e3;border-radius:4px;color:#152f46;background:#fff;text-decoration:none}
+.language-switch a[aria-current="page"]{color:#fff;background:#152f46;border-color:#152f46}
+.language-switch a:focus-visible{outline:3px solid #126bcc;outline-offset:3px}
+.translation-error{padding:16px;margin:16px;background:#fff0bb;color:#6a281f;border:1px solid #a34a2a}
+html[lang="en"] :where(h1,h2,h3,h4,p,li,dt,dd,th,td,a,summary,button,small){overflow-wrap:anywhere}
+html[lang="en"] .hero h1{font-size:clamp(35px,4vw,56px)}
+html[lang="en"] .specimen-link{line-height:1.6;min-height:55px}
+html[lang="en"] .phase-banner,html[lang="en"] .status-strip .wrap{flex-wrap:wrap}
+html[lang="en"] .header-nav{flex-wrap:wrap}
+html[lang="en"] .control-label{gap:10px;align-items:start}
+html[lang="en"] .bom-tabs button{white-space:normal}
+@media(max-width:700px){.language-switch{padding:8px 18px}html[lang="en"] .header nav{gap:10px 15px}html[lang="en"] .hero h1{font-size:34px}html[lang="en"] .specimen h2{font-size:15px}html[lang="en"] .specimen-link{font-size:9px}html[lang="en"] .candidate-info h4 span{float:none}html[lang="en"] .site-header{flex-wrap:wrap}html[lang="en"] .phase-banner a{white-space:normal}}

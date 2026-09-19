@@ -18,7 +18,7 @@ await build({
   logLevel: 'info',
 });
 
-const dependencies = ['three', 'esbuild', 'playwright', 'playwright-core'];
+const dependencies = ['three', 'esbuild', 'playwright', 'playwright-core', '@babel/parser'];
 const licenses = await Promise.all(dependencies.map(async (name) => {
   const base = path.join(root, 'node_modules', name);
   const pkg = JSON.parse(await readFile(path.join(base, 'package.json'), 'utf8'));

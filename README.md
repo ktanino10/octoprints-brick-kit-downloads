@@ -1,9 +1,21 @@
 # Octoprints — 制作物と、改善の公開アーカイブ
 
-**[公開サイト / GitHub Pages](https://ktanino10.github.io/octoprints-brick-kit-downloads/)** ·
-**[組立ビューア](https://ktanino10.github.io/octoprints-brick-kit-downloads/viewer/)** ·
-**[全ダウンロード](https://ktanino10.github.io/octoprints-brick-kit-downloads/downloads.html)** ·
+[日本語](README.md) / [English](README.en.md)
+
+**[公開サイト / 日本語](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/)** ·
+**[組立ビューア](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/viewer/)** ·
+**[全ダウンロード](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/downloads.html)** ·
+**[実物フィードバック](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/feedback.html)** ·
+**[設計の経緯](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/history.html)** ·
 **[版付きZIP配布](https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/tag/archive-2026-09-19-r2)**
+
+[公開リポジトリ](https://github.com/ktanino10/octoprints-brick-kit-downloads) ·
+[English site](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/)。
+従来のルートURL（[トップ](https://ktanino10.github.io/octoprints-brick-kit-downloads/)・
+[ビューア](https://ktanino10.github.io/octoprints-brick-kit-downloads/viewer/)・
+[ダウンロード](https://ktanino10.github.io/octoprints-brick-kit-downloads/downloads.html)・
+[フィードバック](https://ktanino10.github.io/octoprints-brick-kit-downloads/feedback.html)・
+[経緯](https://ktanino10.github.io/octoprints-brick-kit-downloads/history.html)）も引き続き利用できます。
 
 Mona・Copilot・Duckyを約180 mmの独立ブリックで組み立てる、非商用の試作記録です。
 **試作・初回印刷で課題あり／改善検討中。全数印刷は保留しています。**
@@ -22,10 +34,14 @@ Mona・Copilot・Duckyを約180 mmの独立ブリックで組み立てる、非�
 外観基準の選定と、製造承認は別です。組み替えで継ぎ目は変わり、Phase1との画素単位の一致は主張しません。
 
 - [候補9種の静的画像一覧](artifacts/phase1/gallery.html) / [選定r2の画像・動画](artifacts/selected/r2-20260919/gallery.html)
-- [実物の写真・動画・報告](feedback/2026-09-19/README.md) / [読みやすい公開ページ](https://ktanino10.github.io/octoprints-brick-kit-downloads/feedback.html)
-- [設計の経緯と未解決の条件](https://ktanino10.github.io/octoprints-brick-kit-downloads/history.html)
+- [実物の写真・動画・報告](feedback/2026-09-19/README.md) / [読みやすい公開ページ](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/feedback.html)
+- [設計の経緯と未解決の条件](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/history.html)
 - [全ファイル目録・サイズ・SHA-256](archive/inventory.json) / [ハッシュ一覧](archive/SHA256SUMS.txt)
 - [公開用のメタデータ整理・ネイティブ形状保存記録](archive/portability.json)
+- [ZIPと公開アーカイブの英語案内](docs/ARCHIVE.en.md) / [r2試験ガイドの英語版](docs/TRIAL-GUIDE.en.md)
+
+既存の4つのZIP（`archive-2026-09-19-r2`）は不変のアーカイブです。
+同梱の原文書はそのまま残し、英語の案内はZIP外の別文書として提供します。
 
 FreeCADの組立は、ZIPを全展開し `cad/assemblies/` と `cad/libraries/` の相対配置を保って開きます。
 26,766個の別々のSTLを配布しているのではありません。Blenderは12シーン、FreeCADは計11文書を保存しています。
@@ -35,7 +51,19 @@ FreeCADの組立は、ZIPを全展開し `cad/assemblies/` と `cad/libraries/` 
 制作物のローカルパス等を整理した場合は、元のハッシュと公開用ハッシュを区別しています。
 現在の配布物との照合には公開目録を使い、当時の数値検証記録を物理合格と読み替えないでください。
 
+選定r2の4 mm接合部では、穴入口側の壁厚を旧0.877 mmから1.21 mmへ見直しました。
+軸径1.10 mm・先端径0.98 mm・高さ0.60 mmはCAD上の寸法であり、強度・保持力は未検証です。
+
+## 希望する出力（要確認・未採用）
+
+希望は、**部品をばらばらに印刷して後で組み立てる方式**と、**「最初から全て印刷する」別案**の2パターンです。
+後者が「組立状態の模型を一体で印刷する」意味か、「独立した部品を同じプレート上で一括印刷する」意味かは未確認です。
+一体型が選ばれたとは扱いません。この希望に対応する新しい印刷用ファイルの提供・承認、再設計、スライス、印刷は行っていません。
+**全数印刷は引き続き保留**です。既存の試験記録と、今後の希望を区別してください。
+
 ## 従来の4 mm接合部・小型試験セット
+
+以下は過去の試験準備・観察手順を保存したもので、現在の再印刷指示ではありません。
 
 > **2026-09-19 実物フィードバック: 改良検討中**
 >
@@ -93,6 +121,7 @@ GitHubのファイル画面からダウンロードし、拡張子が `.3mf` ま
 このパック自体では、プロファイル適合、レイヤープレビュー、印刷時間・PLA量、支持材を検証していません。
 形状の存在や配置の確認は、スライス合格でも物理的な製造保証でもありません。
 プリンター接続やPrint/Sendを自動実行する機能はありません。
+この準備では、プリンターへの接続や **Send/Printを実行しないでください**。
 
 ## 現物を試す際の最少記録
 

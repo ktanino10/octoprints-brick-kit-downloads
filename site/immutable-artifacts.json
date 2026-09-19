@@ -1,0 +1,3810 @@
+{
+  "baseline_commit": "bba6ce0ddd3bc46e13cf34840bfe69e176f111f7",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 19346,
+      "sha256": "3711f963c05d0be80d53e5923308a6dee31b203da23435c9cfb7c7b6e4dd5e19"
+    },
+    {
+      "path": "archive/bundles.json",
+      "bytes": 2287,
+      "sha256": "2998134fc581100cc4e68b0a6ef447b5503c93fdc1304cd11af9612ff8b77de5"
+    },
+    {
+      "path": "archive/portability.json",
+      "bytes": 19922,
+      "sha256": "3435bc216fa24410c589478f9e5c5a65a841a5100fb114096b2d9880d8b6bb73"
+    },
+    {
+      "path": "archive/source-inventory.json",
+      "bytes": 146411,
+      "sha256": "565d37c11f963686b2ab2e320fc57c92b2d8ae908b342197675a2a4a97f8c536"
+    },
+    {
+      "path": "archive/status.json",
+      "bytes": 491,
+      "sha256": "40ce85fc90025a45ca0aeebeafebf85b13b3b347486a3de670e8ee2f2870915b"
+    },
+    {
+      "path": "artifacts/cad/NativeLibrary.FCStd",
+      "bytes": 419760,
+      "sha256": "04825dbbea2863ca155d98028b89c4b2dba7d2ae3d4f08d630c578c1234785ea"
+    },
+    {
+      "path": "artifacts/cad/bricks/p4-1x1.step",
+      "bytes": 11743,
+      "sha256": "a3521dc850dc99c17e60585f3c085edf69c3012d506b8a76921e64566f3bcc5e"
+    },
+    {
+      "path": "artifacts/cad/bricks/p4-1x1.stl",
+      "bytes": 18684,
+      "sha256": "0b8a227e7fd354759fd9ce23fa0477d0ecd099780e151f74b7d172618db05371"
+    },
+    {
+      "path": "artifacts/cad/bricks/p4-2x1.step",
+      "bytes": 16512,
+      "sha256": "4110414993fbf52792da601b58dd6428d2c2f079fc53355eb3f9eefbaa5ecd8f"
+    },
+    {
+      "path": "artifacts/cad/bricks/p4-2x1.stl",
+      "bytes": 36684,
+      "sha256": "48b71824c289c18114196fe543ab279e33a030e7c106f2d53aa0f0d4ce103bf5"
+    },
+    {
+      "path": "artifacts/cad/bricks/p4-2x2.step",
+      "bytes": 25449,
+      "sha256": "7164ec46aaab160cce6ec66ed5cecbe0020ab75716f9331b7e8574ad43490b6e"
+    },
+    {
+      "path": "artifacts/cad/bricks/p4-2x2.stl",
+      "bytes": 72684,
+      "sha256": "9f1f620b97af1a246c49e8b565df84dde65c4407448bec7c778a6a8e503602f2"
+    },
+    {
+      "path": "artifacts/cad/bricks/p4-3x1.step",
+      "bytes": 21263,
+      "sha256": "bc121bc4bb1468086f1f8ea3b0f6d1c2c735f7bfc5fab801709e5ed2fa9ea7a8"
+    },
+    {
+      "path": "artifacts/cad/bricks/p4-3x1.stl",
+      "bytes": 54684,
+      "sha256": "8ce5d88bea9b8864fb3aa419dd8e26dba420f45c4ada92838a344f98c13d1d3b"
+    },
+    {
+      "path": "artifacts/cad/bricks/p4-3x2.step",
+      "bytes": 34657,
+      "sha256": "e3b1803d43ec21877a38d1853c799615af0ba8e84e227e743a241e336a1103d2"
+    },
+    {
+      "path": "artifacts/cad/bricks/p4-3x2.stl",
+      "bytes": 108684,
+      "sha256": "2b8fb0e6b8915e11ea5b119326a25f784fa5e21260a0192d0557b58c5691002a"
+    },
+    {
+      "path": "artifacts/cad/bricks/p4-4x1.step",
+      "bytes": 26037,
+      "sha256": "35d3fcf26bbc37328ef270cf9928f23d72ef43ca63b727208c041774f35fdac8"
+    },
+    {
+      "path": "artifacts/cad/bricks/p4-4x1.stl",
+      "bytes": 72684,
+      "sha256": "734c8fe532e7b32e298b0eca1a112f83de251562cd6724d40b14cc4e446aed6b"
+    },
+    {
+      "path": "artifacts/cad/bricks/p4-4x2.step",
+      "bytes": 44092,
+      "sha256": "a1804f37ee6d12e0b40728fea2bb94d159dad27aae3687a2fb21d2980cdec726"
+    },
+    {
+      "path": "artifacts/cad/bricks/p4-4x2.stl",
+      "bytes": 144684,
+      "sha256": "6188fb29ab9bed542d0da58baa9bda1fbac60a92bd6b69dd42084830249cf20b"
+    },
+    {
+      "path": "artifacts/cad/bricks/p6-1x1.step",
+      "bytes": 11447,
+      "sha256": "a2f943187584180fa6044c1bf9e151dcd90e0a24a1486e8dfdb03615726c7e2b"
+    },
+    {
+      "path": "artifacts/cad/bricks/p6-1x1.stl",
+      "bytes": 18684,
+      "sha256": "78e812496dd7a135545836112bd3fe33a72b1a85f1caf2cd1de945ad66ca7142"
+    },
+    {
+      "path": "artifacts/cad/bricks/p6-2x1.step",
+      "bytes": 15922,
+      "sha256": "95cf882eb5431160235cba612d0ffcce355ac6de3e4594868c4bd1ba579bf55c"
+    },
+    {
+      "path": "artifacts/cad/bricks/p6-2x1.stl",
+      "bytes": 36684,
+      "sha256": "04b7250e034b6791977d65a504575d7e6db4417bc1007165b7e13c9b0efda164"
+    },
+    {
+      "path": "artifacts/cad/bricks/p6-2x2.step",
+      "bytes": 24353,
+      "sha256": "936f8639e486921df1907bc0d320d96dd0cccc8cf046ccc9fc8ec8cdd8021477"
+    },
+    {
+      "path": "artifacts/cad/bricks/p6-2x2.stl",
+      "bytes": 72684,
+      "sha256": "512b0da229c8f94e5c41e1e4b6c2eb80704f6fb24d29880d4a8d03432a0fa7a0"
+    },
+    {
+      "path": "artifacts/cad/bricks/p6-3x1.step",
+      "bytes": 20381,
+      "sha256": "174905308138c198fc15c39bae6a3459a1a47c580cc0ac184bb5819df30c3876"
+    },
+    {
+      "path": "artifacts/cad/bricks/p6-3x1.stl",
+      "bytes": 54684,
+      "sha256": "ffb959942fe9cafd5f14da47b20093172dba1fdfd262266780631ff5d76196d9"
+    },
+    {
+      "path": "artifacts/cad/bricks/p6-3x2.step",
+      "bytes": 33013,
+      "sha256": "b57135f46c69542d77d40546e6a0358fce6d2e958e84a5f020b22341bd4c7601"
+    },
+    {
+      "path": "artifacts/cad/bricks/p6-3x2.stl",
+      "bytes": 108684,
+      "sha256": "17dfbf7920bd16c1e2550b9d7e10b1ce128ffc9c466e02b1dcf762cbafce9420"
+    },
+    {
+      "path": "artifacts/cad/bricks/p6-4x1.step",
+      "bytes": 24895,
+      "sha256": "fff0ff512fb08e65820d2a89c42bfe28516789c4c56a6950695a5f459137ef8d"
+    },
+    {
+      "path": "artifacts/cad/bricks/p6-4x1.stl",
+      "bytes": 72684,
+      "sha256": "ee705f28b5235f85c117782faeff713e872bae42d0592d132f5efcc5d3d984d8"
+    },
+    {
+      "path": "artifacts/cad/bricks/p6-4x2.step",
+      "bytes": 41942,
+      "sha256": "6edac5a9ccbee33a02afe13cbab9a9e19ea74868a555e1c63b24bd3fe33b976b"
+    },
+    {
+      "path": "artifacts/cad/bricks/p6-4x2.stl",
+      "bytes": 144684,
+      "sha256": "36fd8c39b7fd86e2859a81c386df8bde3cab87b5ad0052c72884c69b28474dea"
+    },
+    {
+      "path": "artifacts/cad/bricks/p8-1x1.step",
+      "bytes": 11741,
+      "sha256": "117a38403d3f2c6eb5a2c822a19e52cb59bcfb61508cec0dcc1eeb928370b351"
+    },
+    {
+      "path": "artifacts/cad/bricks/p8-1x1.stl",
+      "bytes": 18684,
+      "sha256": "7a2dd3df8d024e399a743f55ac829b5c5716655982f6ae67e5cf4c1ea8b43491"
+    },
+    {
+      "path": "artifacts/cad/bricks/p8-2x1.step",
+      "bytes": 16510,
+      "sha256": "6d22e964c499d3c90ecff6de3becdba0838ac977e56ab6f84e44da0d179da86d"
+    },
+    {
+      "path": "artifacts/cad/bricks/p8-2x1.stl",
+      "bytes": 36684,
+      "sha256": "6d4dd609b84a936909289449664d4dc457919acca1bdc8e806b20ffdb798ef00"
+    },
+    {
+      "path": "artifacts/cad/bricks/p8-2x2.step",
+      "bytes": 25447,
+      "sha256": "0e645ceacedbf828ef9d6aa55298cd3056fa351fe940c763b59a9ce8c9f6c21d"
+    },
+    {
+      "path": "artifacts/cad/bricks/p8-2x2.stl",
+      "bytes": 72684,
+      "sha256": "bd848c34b83b4b617598254d43ed0090d5d60dc4cffd0872fd4434f0a64b43ee"
+    },
+    {
+      "path": "artifacts/cad/bricks/p8-3x1.step",
+      "bytes": 21287,
+      "sha256": "743331b5ee31e5e2fbdea45d216fa7184e04729adad7ee51205b3199dd7c8e43"
+    },
+    {
+      "path": "artifacts/cad/bricks/p8-3x1.stl",
+      "bytes": 54684,
+      "sha256": "a4bab33ad6d7940898dad1ea1984ed4124780dbadaf0c9247b68d8a959f5a97e"
+    },
+    {
+      "path": "artifacts/cad/bricks/p8-3x2.step",
+      "bytes": 34681,
+      "sha256": "cd5c7ee1c8ae55f696902eb65ddbe255f0413c42a4e5ef77903bfc3d09a5c265"
+    },
+    {
+      "path": "artifacts/cad/bricks/p8-3x2.stl",
+      "bytes": 108684,
+      "sha256": "44698ba7168f5ddaf89d4d8cd76c30b7e2c037303c1cf4ab5a8b6e4c4e62dbc1"
+    },
+    {
+      "path": "artifacts/cad/bricks/p8-4x1.step",
+      "bytes": 26089,
+      "sha256": "6f011025cd0c5eeb8a49d8b4644c02fed67b1ae84ca6069756c9a1553b22efd0"
+    },
+    {
+      "path": "artifacts/cad/bricks/p8-4x1.stl",
+      "bytes": 72684,
+      "sha256": "ae405ffc54b5e62c4cf00b97a9767dc1a6302270db93418d5c865b158717313e"
+    },
+    {
+      "path": "artifacts/cad/bricks/p8-4x2.step",
+      "bytes": 44172,
+      "sha256": "bab1b88200c513871e795ee695495980ae67056f9cb28569a487f55b554e52ae"
+    },
+    {
+      "path": "artifacts/cad/bricks/p8-4x2.stl",
+      "bytes": 144684,
+      "sha256": "6b84edefe7768b69047ad827da86a20ef2d5e913fe3237dd437c82f9b37f2009"
+    },
+    {
+      "path": "artifacts/cad/coupon-guide.json",
+      "bytes": 4502,
+      "sha256": "f9adc2ddc50a1946ec5dbed06297b8b90e9154c75045b4c332b5193741282c97"
+    },
+    {
+      "path": "artifacts/cad/coupon.FCStd",
+      "bytes": 56695,
+      "sha256": "6c91dfe2f5842c4944fe5f8d669c372ff6df00759e1285e9cb229bac7953e6b8"
+    },
+    {
+      "path": "artifacts/cad/coupons/male-key-01.step",
+      "bytes": 11328,
+      "sha256": "47cfb3747532e352d487c44d36a882890c4b1289b774a43d7ddc2ba3a819b52b"
+    },
+    {
+      "path": "artifacts/cad/coupons/male-key-01.stl",
+      "bytes": 18684,
+      "sha256": "0874b0d6e8f2a5cb3b522fd1db58c418580c9d52debeb39509afb9108f2898e1"
+    },
+    {
+      "path": "artifacts/cad/coupons/male-key-02.step",
+      "bytes": 13029,
+      "sha256": "8f3620a702565fd7481533e890a0a266846f8c3d019548205399e6fb583a1181"
+    },
+    {
+      "path": "artifacts/cad/coupons/male-key-02.stl",
+      "bytes": 25884,
+      "sha256": "6a2abeaa19af7f768d318c430895fa152546f75c03c555393a7476209dac5237"
+    },
+    {
+      "path": "artifacts/cad/coupons/male-key-03.step",
+      "bytes": 14681,
+      "sha256": "6f5cf7114d32ecbfd17ba57121d0e870304184e3a99146c93a56f92de74947bc"
+    },
+    {
+      "path": "artifacts/cad/coupons/male-key-03.stl",
+      "bytes": 33084,
+      "sha256": "aeae6222f15cb6e85dfeca6191685fe152b693f7e2d2ad5b81b780c8dca7842a"
+    },
+    {
+      "path": "artifacts/cad/coupons/male-key-04.step",
+      "bytes": 16402,
+      "sha256": "3ec226eff568dcec1ad20ee6c89d1781a8fabb5f48d92b676a133f9462dc01f0"
+    },
+    {
+      "path": "artifacts/cad/coupons/male-key-04.stl",
+      "bytes": 40284,
+      "sha256": "bc4e9bafc375a626a6e20ccf099fba804d29d203940498d12f7997d25f80227a"
+    },
+    {
+      "path": "artifacts/cad/coupons/receiver.step",
+      "bytes": 30536,
+      "sha256": "e13d7f603a2d8f09a2e1723f1b04051228fb11946b475b7a57911f09b6a8ecbb"
+    },
+    {
+      "path": "artifacts/cad/coupons/receiver.stl",
+      "bytes": 101484,
+      "sha256": "e7b923d895309fbb38fe0cc5c187d6fe49aae0afc90d4d0e21d3800bea9cedfa"
+    },
+    {
+      "path": "artifacts/cad/evidence.json",
+      "bytes": 3205,
+      "sha256": "0958cef70d10ede92eb39747b8a5ec7e8329aea3c4b5f29d3f71cdf70ee977b5"
+    },
+    {
+      "path": "artifacts/cad/mesh-validation.json",
+      "bytes": 24141,
+      "sha256": "9409c3955af208bd93093a8ac6056443ac67d2f7a2bbc8845365de102d850adb"
+    },
+    {
+      "path": "artifacts/cad/native-build.json",
+      "bytes": 26176,
+      "sha256": "62f6cd452f1105e7928616dc87281f2314919844491b0f8de8688c2b369d7847"
+    },
+    {
+      "path": "artifacts/cad/native-verify.json",
+      "bytes": 11726,
+      "sha256": "59a1ea117ce5b4de4067f1ae354b4598117fe1adfef6a88b38cb14a00a35367c"
+    },
+    {
+      "path": "artifacts/cad/prototypes.json",
+      "bytes": 940052,
+      "sha256": "6b100a0e9904ffcaaae86cb8f84561365cb3607a6a8ea26cec14d8b7c455d3e1"
+    },
+    {
+      "path": "artifacts/phase1/catalog.json",
+      "bytes": 16018,
+      "sha256": "4ca49373da6ac02400fa53321fcb993eadd1db5aa5bebe5204db7c3c99bcb951"
+    },
+    {
+      "path": "artifacts/phase1/contact-sheet.jpg",
+      "bytes": 1000203,
+      "sha256": "076c649cb6fbc6f79955f769e3356b59d0ec110c9fa35c63ddc88097a2051e99"
+    },
+    {
+      "path": "artifacts/phase1/copilot-balanced/bom-summary.csv",
+      "bytes": 456,
+      "sha256": "d373a14478e1cdc6f9734b4e4916660a6e301496d4735f03be7b11b05a938df3"
+    },
+    {
+      "path": "artifacts/phase1/copilot-balanced/bom.csv",
+      "bytes": 615885,
+      "sha256": "daffad44a154d5642d6da805b3a3dac7aa370d4624a8c55e361b669c581b37a2"
+    },
+    {
+      "path": "artifacts/phase1/copilot-balanced/manifest.json",
+      "bytes": 2000919,
+      "sha256": "1427debb698776813392dd8c2cc197a6f7670bc2c0845e83fc9d3b644488331a"
+    },
+    {
+      "path": "artifacts/phase1/copilot-balanced/preview.png",
+      "bytes": 1619432,
+      "sha256": "70260ec38d0b9229fb80098dbe7c68cddd423e4f7e9542b4d5bc0d9814dbd1e9"
+    },
+    {
+      "path": "artifacts/phase1/copilot-balanced/render-evidence.json",
+      "bytes": 1540,
+      "sha256": "319aec421b53c7deed78474c3175d277db345aefe548afa0658758469502d8e8"
+    },
+    {
+      "path": "artifacts/phase1/copilot-balanced/scene.blend",
+      "bytes": 2476382,
+      "sha256": "bd5952db577a98d327debed80ee1f00116a8a86cc5ef3f0eb9e38dbd3b5957ab"
+    },
+    {
+      "path": "artifacts/phase1/copilot-balanced/still-stats.json",
+      "bytes": 405,
+      "sha256": "d7fdeb29a89c76b69f7c66b16d72dadf7dab98da11ca9bc7880168170c01bbd3"
+    },
+    {
+      "path": "artifacts/phase1/copilot-balanced/turntable.mp4",
+      "bytes": 2255131,
+      "sha256": "92756d620561c2bc05ada05f41b843972f3ad06b5093c88dc80c0ff2fa2511ff"
+    },
+    {
+      "path": "artifacts/phase1/copilot-balanced/video-evidence.json",
+      "bytes": 1695,
+      "sha256": "20d808da0cd3f29835702ee3609d838c7a3f0956969cd216d79eff4619c6db7f"
+    },
+    {
+      "path": "artifacts/phase1/copilot-balanced/video-stats.json",
+      "bytes": 406,
+      "sha256": "384e01b923a77d7e328fe20d0d29963de87df971fd70106e716bca66a44c0b30"
+    },
+    {
+      "path": "artifacts/phase1/copilot-chunky/bom-summary.csv",
+      "bytes": 453,
+      "sha256": "e86336f355f531117180247f578372af7acbd81c9e22ebd002cd1d8ffb0ce3d9"
+    },
+    {
+      "path": "artifacts/phase1/copilot-chunky/bom.csv",
+      "bytes": 292731,
+      "sha256": "d773fc7d089f3075e2ecf299dd07128d8d244f396284cd6a56b80f0fb66835d0"
+    },
+    {
+      "path": "artifacts/phase1/copilot-chunky/manifest.json",
+      "bytes": 941948,
+      "sha256": "6b423a1eb25a8bd6fca88240a12b1443767c78785864b8247787d7028bccde67"
+    },
+    {
+      "path": "artifacts/phase1/copilot-chunky/preview.png",
+      "bytes": 1557078,
+      "sha256": "cb8b54482907baa205044517b7d317415d11cd5121b78c3757a46a91f138f2dd"
+    },
+    {
+      "path": "artifacts/phase1/copilot-chunky/render-evidence.json",
+      "bytes": 1524,
+      "sha256": "1ddb6b5e1f8c5e16e8539f2b89b94332db82cb9b9b59af95b813dc64238921a4"
+    },
+    {
+      "path": "artifacts/phase1/copilot-chunky/scene.blend",
+      "bytes": 1322881,
+      "sha256": "bd20450d49e02155cbeeb39e8550f0663385ac088ce4965723e29c0c14e3cd9e"
+    },
+    {
+      "path": "artifacts/phase1/copilot-chunky/still-stats.json",
+      "bytes": 402,
+      "sha256": "e1d8b66309c919224991551af952613d032e7e0af2b882c8bc7ee02004ed0a79"
+    },
+    {
+      "path": "artifacts/phase1/copilot-comparison.jpg",
+      "bytes": 379861,
+      "sha256": "7f9e4ad6f6f18e9a9adc3545691498c470b7e831532dc4b39de6204d9486e16e"
+    },
+    {
+      "path": "artifacts/phase1/copilot-fine/bom-summary.csv",
+      "bytes": 491,
+      "sha256": "9d598c9f99a4171932c6e295ed30ac30a85d1ba87249eba7f865bb2c10a58b82"
+    },
+    {
+      "path": "artifacts/phase1/copilot-fine/bom.csv",
+      "bytes": 1851689,
+      "sha256": "955117fb3b38194506ad6dc48902bf570ee2802da5d7d331bda0803f4621d9b8"
+    },
+    {
+      "path": "artifacts/phase1/copilot-fine/manifest.json",
+      "bytes": 6068505,
+      "sha256": "b91e81042041acb09b3328378699757defd3f4a85a80fbeba1bcc61a568cda4b"
+    },
+    {
+      "path": "artifacts/phase1/copilot-fine/preview.png",
+      "bytes": 1718044,
+      "sha256": "aef5b115b4dd1020e55d1796e0818ae68b987c95e5d8590e9009f728ce5db03d"
+    },
+    {
+      "path": "artifacts/phase1/copilot-fine/render-evidence.json",
+      "bytes": 1514,
+      "sha256": "8a0ee7067d77b044ac7d49606e013e226824b837c11edc6a8413dce6dc8c5d2e"
+    },
+    {
+      "path": "artifacts/phase1/copilot-fine/scene.blend",
+      "bytes": 6917706,
+      "sha256": "c0952e199c22c9116edde2e55b9442f3d65294031b89f2c5174545b4f827de3e"
+    },
+    {
+      "path": "artifacts/phase1/copilot-fine/still-stats.json",
+      "bytes": 403,
+      "sha256": "84e06b8a11954e9b2ec04b0f4617a3468d58c486410689f55ead36861c52af7b"
+    },
+    {
+      "path": "artifacts/phase1/ducky-balanced/bom-summary.csv",
+      "bytes": 464,
+      "sha256": "d763231e5831cddb76a3cc5691c98466ab598d0451436358602a9c1eaa81ad85"
+    },
+    {
+      "path": "artifacts/phase1/ducky-balanced/bom.csv",
+      "bytes": 317584,
+      "sha256": "614574bf3ac6a82248a5127acc9abaf6e1fbc25b15ff536676828fb5d3b2b1bc"
+    },
+    {
+      "path": "artifacts/phase1/ducky-balanced/manifest.json",
+      "bytes": 1106400,
+      "sha256": "5357c1b9e97595f18d17807b8525e6ba44e1f207ae5b6fe546da91b24fd86d00"
+    },
+    {
+      "path": "artifacts/phase1/ducky-balanced/preview.png",
+      "bytes": 1468975,
+      "sha256": "412048aa3808f103626d4752395568afd6937c99191e6698173d0f0011583063"
+    },
+    {
+      "path": "artifacts/phase1/ducky-balanced/render-evidence.json",
+      "bytes": 1526,
+      "sha256": "eb02bd4ee2cd20156b987f49d2a7b6f6837ba85bfa4e60d943d247d93e0e1a6a"
+    },
+    {
+      "path": "artifacts/phase1/ducky-balanced/scene.blend",
+      "bytes": 1510199,
+      "sha256": "5a92ffb7b39f8c5de05b73b7e562a6ad62c4e5fed176fa7a1be2a272a3c844eb"
+    },
+    {
+      "path": "artifacts/phase1/ducky-balanced/still-stats.json",
+      "bytes": 403,
+      "sha256": "b70a54bda6a93c42ea7dbaab8a01ababc44180c5603a6c887170ab97cf3d166d"
+    },
+    {
+      "path": "artifacts/phase1/ducky-balanced/turntable.mp4",
+      "bytes": 1357602,
+      "sha256": "ba1fe3987217f4f1fb443f55fe36ad3db77ea83bada935f15bd2ffcc8dd110b7"
+    },
+    {
+      "path": "artifacts/phase1/ducky-balanced/video-evidence.json",
+      "bytes": 1678,
+      "sha256": "8b7e1728853febe2fddff61d849f91abedc1788ec6fe5e85c25d4c9c864ee703"
+    },
+    {
+      "path": "artifacts/phase1/ducky-balanced/video-stats.json",
+      "bytes": 403,
+      "sha256": "f8beb70d9e39083bbdc84409c2923fb5db4e0cc98cfdac374f305a680492dcfd"
+    },
+    {
+      "path": "artifacts/phase1/ducky-chunky/bom-summary.csv",
+      "bytes": 428,
+      "sha256": "37fe172041d83be0f5e9747b2cbd64f4f19acbd10a90dca77973b1c068013ff9"
+    },
+    {
+      "path": "artifacts/phase1/ducky-chunky/bom.csv",
+      "bytes": 153373,
+      "sha256": "247e6e20f720a7a182432ff8c7aa1298d2d88962678987dec933e08732e9e7a7"
+    },
+    {
+      "path": "artifacts/phase1/ducky-chunky/manifest.json",
+      "bytes": 529732,
+      "sha256": "c13e2595e03564afd89654766e20f3890123877fb721a3df23b8954e8cb2a859"
+    },
+    {
+      "path": "artifacts/phase1/ducky-chunky/preview.png",
+      "bytes": 1450950,
+      "sha256": "f7f92444c77e430e1b59af17084dd786a01f031c9592c7b2fd740be0c750cc59"
+    },
+    {
+      "path": "artifacts/phase1/ducky-chunky/render-evidence.json",
+      "bytes": 1510,
+      "sha256": "14c3cfcd2e691005b6096921a983545f8e36038b18287535855517f11036d17c"
+    },
+    {
+      "path": "artifacts/phase1/ducky-chunky/scene.blend",
+      "bytes": 874161,
+      "sha256": "8d1ae154976b5695747aa0cd7d28b24dcaa79755d4956a9942b229658e7dd351"
+    },
+    {
+      "path": "artifacts/phase1/ducky-chunky/still-stats.json",
+      "bytes": 401,
+      "sha256": "077f6c90b67b63c9361cbc6c9baf4e6f6a57768e492896babc213e1915aa8b78"
+    },
+    {
+      "path": "artifacts/phase1/ducky-comparison.jpg",
+      "bytes": 281203,
+      "sha256": "12cdd2ecd7730b9830bf5d13dd791d40e27b126d166ee008f71d41b5f4894b51"
+    },
+    {
+      "path": "artifacts/phase1/ducky-fine/bom-summary.csv",
+      "bytes": 490,
+      "sha256": "20104881cd04e54c70c8b2d563796a1ac860794d42a6bcc42ea880db35d71bef"
+    },
+    {
+      "path": "artifacts/phase1/ducky-fine/bom.csv",
+      "bytes": 932805,
+      "sha256": "aa65ec399db53b39300985a3a3551640c2208f93458651e0566610e80cb6e92b"
+    },
+    {
+      "path": "artifacts/phase1/ducky-fine/manifest.json",
+      "bytes": 3288992,
+      "sha256": "26cb0bb838be8a5f141a23d94cb61233cd0d727c9b98135876a37d7239d7e62a"
+    },
+    {
+      "path": "artifacts/phase1/ducky-fine/preview.png",
+      "bytes": 1535798,
+      "sha256": "fb49175b153755e42aec4167d7c288732c81e31366007bddbd78e68585ab862e"
+    },
+    {
+      "path": "artifacts/phase1/ducky-fine/render-evidence.json",
+      "bytes": 1500,
+      "sha256": "4b366c5bf740113ae844db40ec4dbbbe9fdc23d9e5b702e79d2d83e80ef72185"
+    },
+    {
+      "path": "artifacts/phase1/ducky-fine/scene.blend",
+      "bytes": 3884777,
+      "sha256": "f4bd066d3b9dd356a8e23e363f35ee31dcb7e9961e0452f797e00d08af93fa7f"
+    },
+    {
+      "path": "artifacts/phase1/ducky-fine/still-stats.json",
+      "bytes": 401,
+      "sha256": "56c2707cac2ec3fcdb442f19c31a31b602d30780f942226ddbe504d74492d97c"
+    },
+    {
+      "path": "artifacts/phase1/evidence/validation.json",
+      "bytes": 9613,
+      "sha256": "ab8ae5d08f4d6fad1f3d08e8278c6e75b8fae812042699f1422a7a3736c7f4d5"
+    },
+    {
+      "path": "artifacts/phase1/mona-balanced/bom-summary.csv",
+      "bytes": 486,
+      "sha256": "9ad4fbcde629d483c0d2d4dc7f638cc91700bba04448c888e90193ed15927ee9"
+    },
+    {
+      "path": "artifacts/phase1/mona-balanced/bom.csv",
+      "bytes": 422374,
+      "sha256": "b92cb167a26a3345f36177e7c8918d4b519d38ff0cbcd4b1cc72c2f15a62c611"
+    },
+    {
+      "path": "artifacts/phase1/mona-balanced/manifest.json",
+      "bytes": 1453774,
+      "sha256": "73dbcdefffeaa191342ea471fe3489a8a2c2e7180e6e154a41d58ae192e2be70"
+    },
+    {
+      "path": "artifacts/phase1/mona-balanced/preview.png",
+      "bytes": 1563397,
+      "sha256": "9355767f33f254c6b10f80bdf602323b5534160988f0d7a4d6673bdc7a6c6eeb"
+    },
+    {
+      "path": "artifacts/phase1/mona-balanced/render-evidence.json",
+      "bytes": 1517,
+      "sha256": "47bd65ba5dfec21fe34af20624f511096ae627585d415b953f4a2d1b0d17b72d"
+    },
+    {
+      "path": "artifacts/phase1/mona-balanced/scene.blend",
+      "bytes": 1885058,
+      "sha256": "5dac815e1397e8e2eb960a7a0c77bc4ef3787ef0f54d22e046bf226cf2f5012d"
+    },
+    {
+      "path": "artifacts/phase1/mona-balanced/still-stats.json",
+      "bytes": 400,
+      "sha256": "01486edb9d445b1b6932f8a4a85ce6f1b0fcabe7baba68a890a5475f32f42f01"
+    },
+    {
+      "path": "artifacts/phase1/mona-balanced/turntable.mp4",
+      "bytes": 1982759,
+      "sha256": "5384148c45d5360e5e80ef92b40e4d090a8a69698e46bef460c99500e9392d39"
+    },
+    {
+      "path": "artifacts/phase1/mona-balanced/video-evidence.json",
+      "bytes": 1671,
+      "sha256": "7eccee48db16adc7d9a49203fe86f690f23d64efa0a2d552c7013eddf7f61d02"
+    },
+    {
+      "path": "artifacts/phase1/mona-balanced/video-stats.json",
+      "bytes": 403,
+      "sha256": "d199628711df30158f8995339fe99d5e2c965b921c25c720234f56e7aaf9dfce"
+    },
+    {
+      "path": "artifacts/phase1/mona-chunky/bom-summary.csv",
+      "bytes": 429,
+      "sha256": "8d783ea5956b8bf2af75b86e4eb22f461346e5251e0617bf9ec81e13dad24175"
+    },
+    {
+      "path": "artifacts/phase1/mona-chunky/bom.csv",
+      "bytes": 202437,
+      "sha256": "92720dd872b878335a18032eef23293c0ff87b2460701de8b16a70756adfb415"
+    },
+    {
+      "path": "artifacts/phase1/mona-chunky/manifest.json",
+      "bytes": 691435,
+      "sha256": "0e65ff34fc97ac835a173c160b5541182f0913b31b1a745974449c2e25e4d14b"
+    },
+    {
+      "path": "artifacts/phase1/mona-chunky/preview.png",
+      "bytes": 1510212,
+      "sha256": "a447814aaffacc10236fded52e20e02ad8aec77a594b3dd837b9dca3a89f6c9b"
+    },
+    {
+      "path": "artifacts/phase1/mona-chunky/render-evidence.json",
+      "bytes": 1503,
+      "sha256": "a2bcd833e3b7fd62f48af9484c78a64278942166fc9efc68108c26ad277a7f21"
+    },
+    {
+      "path": "artifacts/phase1/mona-chunky/scene.blend",
+      "bytes": 1051378,
+      "sha256": "dd48db3d1ee91f060b4a3ae196b4f8096e44e18c56f4dd68ad7401faf07285a0"
+    },
+    {
+      "path": "artifacts/phase1/mona-chunky/still-stats.json",
+      "bytes": 399,
+      "sha256": "cb5fa41b4b7bec062ba7f6ce03cd29c905f32db85074a125056e9103f7cc2687"
+    },
+    {
+      "path": "artifacts/phase1/mona-comparison.jpg",
+      "bytes": 372356,
+      "sha256": "a55b531952145d0156344f3e4ca651820db8af44dc89ad75a0e349ddf4896a12"
+    },
+    {
+      "path": "artifacts/phase1/mona-fine/bom-summary.csv",
+      "bytes": 518,
+      "sha256": "c6fac180b141633bd66a1167ea361888791deffe9121d61799de24b038821d03"
+    },
+    {
+      "path": "artifacts/phase1/mona-fine/bom.csv",
+      "bytes": 1215298,
+      "sha256": "3d3ca01d8f0fa3fcaf58abb25cd09ce239e089d379d18c32f2c95337ef078aaa"
+    },
+    {
+      "path": "artifacts/phase1/mona-fine/manifest.json",
+      "bytes": 4246648,
+      "sha256": "93fd37f62bfaa588a016f1c748a97912d41e72f7719a094734ccbb12277ce552"
+    },
+    {
+      "path": "artifacts/phase1/mona-fine/preview.png",
+      "bytes": 1636751,
+      "sha256": "0b0a5296b35aaaf11117ac01167c2d82fb49c3f4bfe01d2d0b81812cad0bfdc7"
+    },
+    {
+      "path": "artifacts/phase1/mona-fine/render-evidence.json",
+      "bytes": 1493,
+      "sha256": "7ba17e95c5aaf25b0c88ec6654491e74a9518f7235ccb96e4bbe7fca9a7c1115"
+    },
+    {
+      "path": "artifacts/phase1/mona-fine/scene.blend",
+      "bytes": 4921650,
+      "sha256": "2bc646503c34efcf4b45d91f44277071c388e15031c9e4aad43808c246ca4bdb"
+    },
+    {
+      "path": "artifacts/phase1/mona-fine/still-stats.json",
+      "bytes": 400,
+      "sha256": "a87b0c5b1667981c6cd2a0ccc10be2ad4e9098349f19c2c57983efc51a9812c0"
+    },
+    {
+      "path": "artifacts/phase1/review-data.zip",
+      "bytes": 16251194,
+      "sha256": "c83fa5a5949a0f8f227da015771b3a0b83ba2fa4372453e858c8f1d2441c8cb9"
+    },
+    {
+      "path": "artifacts/selected/current.json",
+      "bytes": 212,
+      "sha256": "bb1a0f08cca22f24a9828f4595ced82fdd32bd6dec31e218c28e363c68f11e1b"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/TRIAL-GUIDE.md",
+      "bytes": 4282,
+      "sha256": "8d1a6f33572fc9559848c3adc288a2443853c3ee602214419dddbe429652770c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/aids/COMPLETE.json",
+      "bytes": 532,
+      "sha256": "536b6d2a28b0737e16bee9e57853dd704736cc79aa795dc2826f7bbaac56cdaa"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/aids/Cradles.FCStd",
+      "bytes": 230858,
+      "sha256": "2baafaf8ec3ea19a22431fd1d52a713674e00ab8c96548e2f927fcf687457808"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/aids/contract.json",
+      "bytes": 3719,
+      "sha256": "38f0683b55696f130db8387209b40d41c96dd3de1c1c228ad108c04aadfdad24"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/aids/evidence.json",
+      "bytes": 3888,
+      "sha256": "e3e247e827d296a2cdb5f94519371b3c6fd5ff5b171da8e12c69c68607a4f42a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/aids/mesh-validation.json",
+      "bytes": 1127,
+      "sha256": "d8c89071810b6ae95acb4191e5c6fcee151ec6022e405ea31b5fda7f7d790584"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/aids/native-build.json",
+      "bytes": 17430,
+      "sha256": "9dd7893d754f1ef185f033215b4de4f3bdb1019dcfff58e80729bc1b74cf0fc0"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/aids/native-verify.json",
+      "bytes": 7213,
+      "sha256": "b0fa97ad43a47a702ffde06bf8a0b5a9adfece0bc10a8fb8a01717a8d30196d4"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/aids/parts/mona-left-whisker-cradle.step",
+      "bytes": 35925,
+      "sha256": "d82d801c731e6c2f1be5162d4c0c68c6b54f225809fd337e1246ab5103c62d2d"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/aids/parts/mona-left-whisker-cradle.stl",
+      "bytes": 4984,
+      "sha256": "fcd5d480e90481c3e7dccf6abddb18421a641e842f38c6155a90328c41f416d1"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/aids/parts/mona-right-whisker-cradle.step",
+      "bytes": 40987,
+      "sha256": "adad05ba1f155b345f0d1f04783f6f645b52953e4ef033cafaa0e687190608e2"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/aids/parts/mona-right-whisker-cradle.stl",
+      "bytes": 5884,
+      "sha256": "a040872c5644cb4efdba0b12bdf817eea7a9ada1eef464d0d1a80a179dbc827f"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/aids/prototypes.json",
+      "bytes": 7486,
+      "sha256": "c605df4215fd11468a5daf3bf38f39dd5836ad61ad832913b1f42b7cd0dc99a2"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/aids/state.json",
+      "bytes": 351,
+      "sha256": "7ff025640d250d1eef25f32e82a1003fb0313ad3ec3540c038495aba46472e67"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/assemblies/copilot-chunky-id-map.json",
+      "bytes": 321777,
+      "sha256": "f0e02ddcb61b4eb63e62b9ee9e06bfce6e87500acf3da94955e71d0684385d4e"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/assemblies/copilot-chunky.FCStd",
+      "bytes": 61986,
+      "sha256": "8812089a3d6b59a66242aef83a2c6a42ed48d596a264cdda45f47a680d8bc692"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/assemblies/ducky-fine-id-map.json",
+      "bytes": 1073725,
+      "sha256": "110c54e2a3845494326186fcdcf02b043c6d51fe009da1e712c3d4cb356f88ab"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/assemblies/ducky-fine.FCStd",
+      "bytes": 125076,
+      "sha256": "ff013810d95c81e4dd55b576c77777009f5dc813ec0379e7f1c419cbda0b0646"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/assemblies/index.json",
+      "bytes": 1966,
+      "sha256": "cd5e24194c64eca8cacb96316246ca092df9f2ae047e93537b101d430cfcdc67"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/assemblies/mona-fine-id-map.json",
+      "bytes": 1397937,
+      "sha256": "e392a0def50403626487414532c4d7a060212d7cc038415343752f126b872c05"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/assemblies/mona-fine.FCStd",
+      "bytes": 158363,
+      "sha256": "27e28ce5d855b74c1744085a7e75459c9bb5350f88e371738956e04bbd2a503f"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-10c-06b4a7fa37f8.step",
+      "bytes": 93428,
+      "sha256": "fbffdf77a0453cb5b9818e3909821d796c5e099c37b7c547ddfafb990379e8fb"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-10c-06b4a7fa37f8.stl",
+      "bytes": 235084,
+      "sha256": "359f0e1a6508f4724425324c0a5eee4eb93b43f176991b6b39c07cb539b3e3fd"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-10c-703d228b64da.step",
+      "bytes": 89746,
+      "sha256": "0e19ebf0d4ee3b7693b2d5cf5669ad7dcd0046bed537a290991ef2600e6b599e"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-10c-703d228b64da.stl",
+      "bytes": 234684,
+      "sha256": "18a435afc3f7149ba4d732c486ac226164ce1c223ead7e098d909ac1fadf725b"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-10c-72da87c37623.step",
+      "bytes": 93192,
+      "sha256": "4d5a86b28e58128dee248068aace083b251ad0a03665c4ca177e56e8abd4708c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-10c-72da87c37623.stl",
+      "bytes": 235084,
+      "sha256": "92f21a0d6d157bb1b240cc87507c6d1671add759080081c619ce976c4f648df0"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-10c-7acf782cb06b.step",
+      "bytes": 92807,
+      "sha256": "eeb42de1e4972e520dc77e4c864548b7e34d9c1e39d9f83847840b232859de2a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-10c-7acf782cb06b.stl",
+      "bytes": 235084,
+      "sha256": "1b1bd25bd5011c795c35a1dc8be831f2f155b0963b20bd9ca2b61b139cdcbce7"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-10c-df3f1ce261d0.step",
+      "bytes": 92682,
+      "sha256": "ff228853193c5f4c735336a6cf25022e9cc5469141b50ef83642f2cd0cbb53e0"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-10c-df3f1ce261d0.stl",
+      "bytes": 235084,
+      "sha256": "199f0d746b85a8ba7c0d40ef40b43e1d3cabd675d7520ec479819a01652aa915"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-10c-f0568e82ff56.step",
+      "bytes": 93466,
+      "sha256": "57fe960471b6a567348dd977b5fbee3b1d8226ab741a428bf5a0112269c378b1"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-10c-f0568e82ff56.stl",
+      "bytes": 235084,
+      "sha256": "d25f626f85c55040b227064fde5981d3110d2771bcf9136a71e148125234c06e"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-11c-021340aaea91.step",
+      "bytes": 101859,
+      "sha256": "963832a692509c2505ad2922c2eea2dcc084618402c20a7601054a09dc6558df"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-11c-021340aaea91.stl",
+      "bytes": 258484,
+      "sha256": "be12ddd92270e26ff36da50f4b4fb3f0c85ac4993d3b3d24242286707fa4bac3"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-11c-1acae6a2bfb1.step",
+      "bytes": 104657,
+      "sha256": "cb4ed6957146b2824a0396370243599365c789d932472e5f2b15e8fe7915e618"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-11c-1acae6a2bfb1.stl",
+      "bytes": 258884,
+      "sha256": "774b04ffa8fbf592a5ee3db1980f9ce76823f89880218f5f38d390c43a4f3de0"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-11c-1f42297da998.step",
+      "bytes": 101864,
+      "sha256": "63c5fb839cd71573a74327a70776502d5e2547c63302b91094c57867abb5a332"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-11c-1f42297da998.stl",
+      "bytes": 258484,
+      "sha256": "d8663cee841e235cbbecad2489749b73db6079a568028ca0d9f58b89e3ae2ced"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-11c-7a5c0d6cf3ca.step",
+      "bytes": 101099,
+      "sha256": "6f678ca16192ae925be45613f450e0a43720db3075f5d3431c06b3387603da5f"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-11c-7a5c0d6cf3ca.stl",
+      "bytes": 258484,
+      "sha256": "39b0c1e5e722f98e417615bb17a0c41ecfd43564bd6875c192795ea9df10e6ea"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-11c-8268c36e4eda.step",
+      "bytes": 101011,
+      "sha256": "35b773711ebe0bb998a1908256c194deda60880e0fe806a7aef69b430c58665a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-11c-8268c36e4eda.stl",
+      "bytes": 258484,
+      "sha256": "31c6f0d1e2c3260f13f37af2ee54faba4b75d7244b27add18f13c80db4ea6d7a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-11c-baa5754e02dd.step",
+      "bytes": 106123,
+      "sha256": "5c78906e223b4c947101a3e2d456d42e146b87263f2b978e1e1648cfb9bacf33"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-11c-baa5754e02dd.stl",
+      "bytes": 259284,
+      "sha256": "ebb53e6f8d98d2a315aac3aee50f15a3f3641e76e8615509b6d3e10c8e57f859"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-12c-0b51f59a601f.step",
+      "bytes": 117465,
+      "sha256": "bef0dd9a6c9b6e8397c8804dd0c28dfc9e6f9c507a9092ef5d02038d1d6396dc"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-12c-0b51f59a601f.stl",
+      "bytes": 283084,
+      "sha256": "811c48c5f91b88bbd7cd3646f32a70069ca41ee38dcc6bfc8d0e7d96562fae8a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-12c-1aa056caa409.step",
+      "bytes": 107650,
+      "sha256": "667a1fff4040ad37f309bafdf24fb5124b304e136f39e6775b04b13c2028dd0d"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-12c-1aa056caa409.stl",
+      "bytes": 281484,
+      "sha256": "e6ff3b1b45e6da93d7820502e78818131bce11f2b6babc206b0df9c9eff8ad21"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-12c-643e89839393.step",
+      "bytes": 112050,
+      "sha256": "4b2f07178a8a759f11e30572fc5e5bc93e0c6a89adf77574eb0f2be3ca631f6e"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-12c-643e89839393.stl",
+      "bytes": 282284,
+      "sha256": "271943185833bff79b5ee01a08d551d5d6600dba52331f6563400f51073c4135"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-12c-a2f28e04cb09.step",
+      "bytes": 106824,
+      "sha256": "4f443a27bcc5d0ea4f93d6c27883e3290229f34f02cc4208363e2c567aa9a15e"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-12c-a2f28e04cb09.stl",
+      "bytes": 281484,
+      "sha256": "a50e88995262dbb7bf4ee34747eefcc3f47b2e532d19d58262e0f9632300b3b3"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-12c-be23a754b8df.step",
+      "bytes": 109471,
+      "sha256": "e790d3f03975716ace159f1432b7493826a12116726197d652a4949ff30cd0f3"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-12c-be23a754b8df.stl",
+      "bytes": 281884,
+      "sha256": "849244b054759784d89d27aa19b2fce238d909bd2e1e947f60e799457c871731"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-13c-412272d3fa2c.step",
+      "bytes": 117951,
+      "sha256": "e3da02edeeccc59101131369acbb8c76481b58c55909901fa84af47c612eae38"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-13c-412272d3fa2c.stl",
+      "bytes": 305284,
+      "sha256": "1688a1f50e6378ea7ed04dc3b0ee7c8300967191ce5700912874e285fbabccda"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-13c-6433f17c72d3.step",
+      "bytes": 118138,
+      "sha256": "a7c82061fafe60a46b73f2f5a86831175b0edf3b5772bfb325e42a58fd5dbf3a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-13c-6433f17c72d3.stl",
+      "bytes": 305284,
+      "sha256": "c8bee80fae9ee3d0795978542872c8d57a4326ca29920488175c2ca40d97a84f"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-13c-6b7950654930.step",
+      "bytes": 117930,
+      "sha256": "b8df0f627806eded3159904c1cd2eab7d72530c3a4e4475443060fa49ab294e3"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-13c-6b7950654930.stl",
+      "bytes": 305284,
+      "sha256": "66c93daf834cee27a2acd3b20a85842e4421b7b9f2b281ba18672f77c87e4cf4"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-13c-c48f51e4895a.step",
+      "bytes": 117874,
+      "sha256": "c4d153d32f089e5f6c4a672768de196f2e402b24e52f0aa2e6abc10d9f37e24b"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-13c-c48f51e4895a.stl",
+      "bytes": 305284,
+      "sha256": "0990baf8633553d27202cc3ce8d36ac18388e0cfb9e641167cbba07eb36868a9"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-14c-0ecd24c23207.step",
+      "bytes": 129360,
+      "sha256": "bf83176fdc5659691544c4e2f9812664b80981410291831c1ab7d89a38d40736"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-14c-0ecd24c23207.stl",
+      "bytes": 329084,
+      "sha256": "0d36cdd5311fdaf6e369e5f23d44f2bfdbbde64189f7b1a2413879d1dc9aeae9"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-14c-123cdbebe90c.step",
+      "bytes": 136974,
+      "sha256": "049cf3ba6910c023cdb48f0b5bdc4496f522bc23cf66ff3324ca1860b7d98485"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-14c-123cdbebe90c.stl",
+      "bytes": 330284,
+      "sha256": "1bbd80176b3bb0d7927a822404f7b74eaaef027a23664a92e32a9cdff8b1f98c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-14c-37b32b6e254d.step",
+      "bytes": 130297,
+      "sha256": "0fa604fefcf7d9ec81612eb6422edeeae266b4208842870e4bbea2c8c00dee97"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-14c-37b32b6e254d.stl",
+      "bytes": 329084,
+      "sha256": "a24dcf40edd068d53d2d10bd70420d049c90048955c5b06d3a02eef96e99ce91"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-14c-443e3b6c2c29.step",
+      "bytes": 123740,
+      "sha256": "721bfd61a3e8520eae24da12567d15b8b122bc0d00435627608aaa50dc957907"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-14c-443e3b6c2c29.stl",
+      "bytes": 328284,
+      "sha256": "903219eea19a6dd2639e0fec619c86bc91b8c6746cbf42e2b85263416f2be4b6"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-14c-eca17b34912e.step",
+      "bytes": 126294,
+      "sha256": "868b63839fe0e921eefcb1ef5de94195f92f39842e0b25197264e3f4f568b0dc"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-14c-eca17b34912e.stl",
+      "bytes": 328684,
+      "sha256": "285af4fa31b867a81264ee1160d26cb33d46e00c66636b9c1e5acc218af4a9ea"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-15c-32d1fb4a9a30.step",
+      "bytes": 134746,
+      "sha256": "8a4937dda634c7279a9c744ef23b71afee3082aac15e680346d834b83b7eed9f"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-15c-32d1fb4a9a30.stl",
+      "bytes": 352084,
+      "sha256": "2e48f96432497529df9315b17f254eaf953eb88d1e8c99bb7677ee48f508ef0d"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-15c-c98bfb65cf4a.step",
+      "bytes": 142742,
+      "sha256": "a37604abc0cc845705c88ec94bd5a93eb0ba13af448f6c5b90584a7e1004157e"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-15c-c98bfb65cf4a.stl",
+      "bytes": 353284,
+      "sha256": "eb92c826b46ad6de25970a3ed2ab3ba1fb9109943ae7d58e57dc0887c30af47b"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-16c-4a708adbfba5.step",
+      "bytes": 140535,
+      "sha256": "757eec5aec3d3c73a9bc86b6d6737743526d73afa798c93d925340910ff00ad2"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-16c-4a708adbfba5.stl",
+      "bytes": 375084,
+      "sha256": "4152e703b621ff1a464ae1d7a19a3424b4af573d817ad27d9859d095ee2cdc7a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-16c-61bd7c40319c.step",
+      "bytes": 145810,
+      "sha256": "f2f1ac68f81ac09f035cceefcbffd2f740bcdcf9b664dd94e120c7bd3c33c931"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-16c-61bd7c40319c.stl",
+      "bytes": 375884,
+      "sha256": "d61674e396f56efad9e0480801787652da28811bb8c697cfaea0e80b13f76c74"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-16c-a5831f166142.step",
+      "bytes": 145868,
+      "sha256": "8597851c8dcedcaf9183529e04fbc4ae2e3d05bd16f1a5e32b7ff803f0aec14c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-16c-a5831f166142.stl",
+      "bytes": 375884,
+      "sha256": "e77d9550b2bcabf2699a7ad008a7c726c5b8cf3c1c8f61ef88f6b604640ffa6f"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-17c-3e650122b59f.step",
+      "bytes": 158681,
+      "sha256": "1df81b8e40c7030eb31877a1be7aeda47755117c8e8818ec3260fd582edf3db9"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-17c-3e650122b59f.stl",
+      "bytes": 399684,
+      "sha256": "f876a91c29b1ad162bbe7e18412fb16eb29a7853ca062c02123a0b17d59b0c34"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-17c-5fc4a6bda602.step",
+      "bytes": 157540,
+      "sha256": "a6d1def851d034de870a912101d3bedb3845bea627efc098460494f1eceffedb"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-17c-5fc4a6bda602.stl",
+      "bytes": 399684,
+      "sha256": "a49fb4b7dbc024e1053a36d41160383ee7d16989dd2fdaf79e2433c21d1d4000"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-17c-7addd63c6480.step",
+      "bytes": 154198,
+      "sha256": "5422b289963e0a5019fd7fef8ef350f09559030f8dbae0b9e6eaf39c48b2c340"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-17c-7addd63c6480.stl",
+      "bytes": 399284,
+      "sha256": "e71b3866096f9762a778f01528af27120cd269a2d717972422db4576790d61c1"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-17c-938aca248f1d.step",
+      "bytes": 154621,
+      "sha256": "993841c7470e6c10ba25607623516c9eecf1ec2b009b5a1df15e915c3ef1701a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-17c-938aca248f1d.stl",
+      "bytes": 391884,
+      "sha256": "a4a04eb2301e3678ec0bcfe3b91a2511693340bc7d1cdeaf405da0c0ad98d1b2"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-17c-c82a078a6b4c.step",
+      "bytes": 162259,
+      "sha256": "d54c29ad8e9130905457708e52e375bf7e9ce92f446995189894cee0c204603b"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-17c-c82a078a6b4c.stl",
+      "bytes": 393084,
+      "sha256": "73d8205c0d219ac41743db718d7155a0032be3db7a73726230207bf77d8633d6"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-1c-4ebe150eb1b7.step",
+      "bytes": 15213,
+      "sha256": "718186a94e842fec649e83a9e8b1aded063433b79b723044a3b45036b3acec18"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-1c-4ebe150eb1b7.stl",
+      "bytes": 24084,
+      "sha256": "37d6bbaea2dc25dd2bcd78003d9e4d4ee6c32fde312bc21e16e0149803780c29"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-1c-c084a429390d.step",
+      "bytes": 12670,
+      "sha256": "2635bcb8f08176d74482ad8941a7e8dde5105665df5393fc2f16525dcb59d893"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-1c-c084a429390d.stl",
+      "bytes": 16284,
+      "sha256": "8a8582355780bf88d798f21917c330049945227b803bb1c1b5f17c788e95f026"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-20c-2a26b65c37d6.step",
+      "bytes": 174308,
+      "sha256": "2fdcf8bdf19cbd45ccc2ab8a3baccaa354c3117096c81234762ee9c537eef1fa"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-20c-2a26b65c37d6.stl",
+      "bytes": 468684,
+      "sha256": "278bdfa4e21020ae0fefe3edf3dd7594f83cb8c6fdbed8e987a18c580a24c923"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-21c-b29382998e05.step",
+      "bytes": 196129,
+      "sha256": "333c91796432f0f4806c9ef042bf8e9d1c58c246248bb942bfb7abb1464e0a44"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-21c-b29382998e05.stl",
+      "bytes": 494084,
+      "sha256": "21bc867003f8f1446abfa6c14583238193d5c729855b7f075bb41301401a381b"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-22c-9a3a1818555a.step",
+      "bytes": 218672,
+      "sha256": "fb6a0f469285f84e7f96704cf6896f006702ed6204ab18b73816cbc9aa9ce312"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-22c-9a3a1818555a.stl",
+      "bytes": 519484,
+      "sha256": "bb24b117b765d44cc3cde8a14c0c4f13357af915283f7b4ec10cc94ab066e667"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-2c-32e56c90317c.step",
+      "bytes": 18370,
+      "sha256": "f2cc2a7fdf186ca7167e7bf8c54829ef25915e87d8a29d0fb1e08a06909c2fd3"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-2c-32e56c90317c.stl",
+      "bytes": 31884,
+      "sha256": "80067d15e0c5581dde1d9397d440b135c33a59909e2c804b3864e165abbecda8"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-2c-714146ac709f.step",
+      "bytes": 20926,
+      "sha256": "fe0569a1fc4c908c58bdea40ed57e8bdd399839a9f6071fc3ca4fcba0aa1a1cd"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-2c-714146ac709f.stl",
+      "bytes": 39684,
+      "sha256": "8b9d9975ab008a038c77f10542f6eb942d51adb3f7434491a10039ceb121a767"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-2c-88381088bd9d.step",
+      "bytes": 23474,
+      "sha256": "3af313b3ba0f8dc8b8a07c2672922cb803e3d7f82ee023dd6253bd53462bcf6e"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-2c-88381088bd9d.stl",
+      "bytes": 47484,
+      "sha256": "b170f1392aa1164fda72ef150d2aad75de443baf61bcbbc18b987eb73c0b9def"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-3c-451dc73cc597.step",
+      "bytes": 26609,
+      "sha256": "7522aee521413b2e7f08aa0c06235bffe6d7cd64eff6f083685ebfa57382f204"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-3c-451dc73cc597.stl",
+      "bytes": 55284,
+      "sha256": "c56469a3db79d2c92abc2e502f51e8e291d711c675ab5eaf27f9375f68b1922b"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-3c-78d7ab46d04b.step",
+      "bytes": 29154,
+      "sha256": "d43bff2afc0827a5cf01fc98efc4875cd977c70a7004ec540f15c0eb883c4b9c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-3c-78d7ab46d04b.stl",
+      "bytes": 63084,
+      "sha256": "d370cc81617b21e0bdbd90153c0117c5ef6ed4d091eed63a7cdbb556d6d0d803"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-3c-a044fbe9bc1c.step",
+      "bytes": 33588,
+      "sha256": "bb779dfc0164584ee33eb7830b289db634272abc99d150df3ad64d9297b09321"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-3c-a044fbe9bc1c.stl",
+      "bytes": 71284,
+      "sha256": "d4140ab311d3ded858c232653e3a9cc1f5a9a3630ada80a0e90ff50e7ed72596"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-3c-b982b6d67e98.step",
+      "bytes": 31697,
+      "sha256": "8d582c2bb390fd7590758e9c1f90557b657853a9c3de203655f115d301d1896d"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-3c-b982b6d67e98.stl",
+      "bytes": 70884,
+      "sha256": "88efddfb725b108da95aa1e098ec94a551119d19881d4bd268a0e8f1bc247bfa"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-3c-fbc4680fb176.step",
+      "bytes": 24053,
+      "sha256": "c0cc2aeb2992ba4a19fc6cedb16f2dd11da5448b882a96fc312a02f134e42800"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-3c-fbc4680fb176.stl",
+      "bytes": 47484,
+      "sha256": "08a68d78dd8f7371ab9282da849d04c76f9a0fd5a2e964ca87ac65d494fecfc8"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-04555eeff664.step",
+      "bytes": 36531,
+      "sha256": "e9c1a1737bb6eb3be615f79f7b15ba1260ff34c5f405f3041f6a59cb29370ab5"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-04555eeff664.stl",
+      "bytes": 86484,
+      "sha256": "c8821cd062812116c836bdfbec705888f27bfc531f42e584cf6277d8bbf304aa"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-04db57b9cf0a.step",
+      "bytes": 31556,
+      "sha256": "7902b51851c496c782e2105faba304af1893b24faeb98118c1dbbc3d144fe5f2"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-04db57b9cf0a.stl",
+      "bytes": 70884,
+      "sha256": "00e0a3996411d822e3eb8079c42691da23ed5760b7e659891a59fdfdd63691e0"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-13acf6b7a311.step",
+      "bytes": 34854,
+      "sha256": "951120d8e39884e3150540a9f8926922f73d0dc12146fe47feab255caf713960"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-13acf6b7a311.stl",
+      "bytes": 78684,
+      "sha256": "a693a5edaed917ceaacc34ee8d5918f1a8a6a5c8cb8a79d932f1db83f3559240"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-197fa86c129b.step",
+      "bytes": 32311,
+      "sha256": "4e9697a641e92309b0045897c8c9478f9fda1b04cde2db756a7a398c37d3841b"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-197fa86c129b.stl",
+      "bytes": 70884,
+      "sha256": "f1c5a1c05b01e324f39a17a2628b01c838d5486b17d839352d154390e61372f1"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-31180a58c329.step",
+      "bytes": 37415,
+      "sha256": "7df284f5f5638b568f80b7765e18597496637e53fde227611183f76f5cc915b7"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-31180a58c329.stl",
+      "bytes": 86484,
+      "sha256": "7062735d2eec9c1ef16391456cf34181cc6c099ad223142f0a9a729f4d1e5623"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-369ccea62973.step",
+      "bytes": 41739,
+      "sha256": "749336580820d0115f817f2995fb29a96ed61d61ef8b74ab04834196ac9ba561"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-369ccea62973.stl",
+      "bytes": 94684,
+      "sha256": "a8e2ce87194bfa18fb2a02b4e4ddb80a0c0ab48160e5b5368e4fe255e662a040"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-50a5212aa1ce.step",
+      "bytes": 44236,
+      "sha256": "3df2ec1f9236c800b62fa2e5f43348fdc5306f170eb79d34cd55c5df022fc29e"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-50a5212aa1ce.stl",
+      "bytes": 95084,
+      "sha256": "aad57c970e76c912c57b58d4b828512b470a03252053be05fc59e0a816b27458"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-62ef5999f1d8.step",
+      "bytes": 37415,
+      "sha256": "f4accb9356a1f50c4b83f74393d35d5a21c280680a3b0b98e922e01af16e20e8"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-62ef5999f1d8.stl",
+      "bytes": 86484,
+      "sha256": "7a76930728cac17f1ce5d6e489de29744e781d3d0d0592ea641e66b53dd518e4"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-8c97b90214e4.step",
+      "bytes": 32311,
+      "sha256": "61fd75ee043aa1ac5028898739349b3db6dd40088a7946a82fe06a7f85f1a648"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-8c97b90214e4.stl",
+      "bytes": 70884,
+      "sha256": "b6e1e7436477f68a749efe8eefce96e09d03f48faadeb30bbcf73436eb0b28f1"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-9180de851882.step",
+      "bytes": 39026,
+      "sha256": "c02a34566b58c28d1f3c2332d8fedb362678ba9ddc88e4b035ab44211fcaa0f5"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-9180de851882.stl",
+      "bytes": 94284,
+      "sha256": "97ff48fd20eae10bf7fcce00f0bfe9ba411f43d3c6acbeec4815e69632a8c3ee"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-9d4172d57fff.step",
+      "bytes": 34865,
+      "sha256": "5277cb8f44a54950ab93597029e2ff170b082da70a499b99c0822aac98fce325"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-9d4172d57fff.stl",
+      "bytes": 78684,
+      "sha256": "f19761ab15d9e7ace86fdd30f2e9ce4313b1cd67696235fd1894db5dca5f6b09"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-b02791f0c425.step",
+      "bytes": 39978,
+      "sha256": "db93bad05855f8992fa09f30d16880de62c0fa9a8c2a3a5386da0c61f019aa89"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-b02791f0c425.stl",
+      "bytes": 94284,
+      "sha256": "77b233acc48f5e38a6561e2d4968cd0d87b8389e43565835a51d8b3a0526a3e5"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-b15f07feab23.step",
+      "bytes": 34040,
+      "sha256": "33df843f5a75dea300ca9087c7356ea0b9289744ee0b6209936e89bb7ee390dc"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-b15f07feab23.stl",
+      "bytes": 78684,
+      "sha256": "67e1a84d21333e886ab78c5672c2648a2886ca4d7d36df1ce5066592f3a33e88"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-b3266ba16d8e.step",
+      "bytes": 41665,
+      "sha256": "5e7c250cdb9c371c95d59aeaa9fcadb177cc5237fb0def74e8f8f0cd5469e56f"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-b3266ba16d8e.stl",
+      "bytes": 94684,
+      "sha256": "397e9314e6b6c124865b5775545b94981371019a7307f4aa8a38fb62f2c78d68"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-f012ba403668.step",
+      "bytes": 29753,
+      "sha256": "895a17b2c846af61899a31ba790cfb52cbcabf17236956e1d5280b8f4e254b07"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-f012ba403668.stl",
+      "bytes": 63084,
+      "sha256": "30af5138fee4afcd56e7ef744cfad6dcd568662ebe95f5c527ccaf384b3b928c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-f2646be4f76b.step",
+      "bytes": 29057,
+      "sha256": "fcb3860749e4830c878d175a518344eddd478275fad0a86eb47d074127815f81"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-4c-f2646be4f76b.stl",
+      "bytes": 63084,
+      "sha256": "75b2d251ee10b5c5226b1e3331bdc66545aaf53cf8faf073e47f950a7a159b34"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-5c-01aded46037d.step",
+      "bytes": 50122,
+      "sha256": "e873ec630a1df627858e7b0104b274404f118f826f4a535e3a43387ae79f2a30"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-5c-01aded46037d.stl",
+      "bytes": 118084,
+      "sha256": "a08587be979a065499006ee9e10950d3465dfe3471d41d217b30884966ad547e"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-5c-0f146160a929.step",
+      "bytes": 50213,
+      "sha256": "c6558e9cb945d384cda0c1b998c8f0174d637ce9a999ffd307f49b2210299b91"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-5c-0f146160a929.stl",
+      "bytes": 118084,
+      "sha256": "34ff2dbb3f1de094c90674b1a8b49e5a9a7963472fe295ec033ea3d428c6740a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-5c-1196d146aac8.step",
+      "bytes": 52759,
+      "sha256": "fb7f56462b374b4ca1cb184c7d5dbbe785dc85014980c6b6d3a9ea15f4db37df"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-5c-1196d146aac8.stl",
+      "bytes": 118484,
+      "sha256": "fab7ed45785987be8fecdee8560f407041d39f1e204ee848865328fae30b53f6"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-5c-48205c9d8815.step",
+      "bytes": 52780,
+      "sha256": "64cc5154cd4cb6c96409f7ce843d9c8c51efb0477cac5e4284bcb9c7d0d5d668"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-5c-48205c9d8815.stl",
+      "bytes": 118484,
+      "sha256": "1e46e748131b8f9bd7c7f35d81c1beda76d1cd7e449ebac65610f96ad3d93d54"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-5c-564708634a4a.step",
+      "bytes": 48657,
+      "sha256": "c957b3db3874542c1df7c237980d119eae71774ea658c0b0bee012c9af49fa09"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-5c-564708634a4a.stl",
+      "bytes": 117684,
+      "sha256": "23104dff0d7243821c46c101f0fc3a42e620e95d72a4c2429b0d1b7ead6d18f9"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-5c-88f68dc9ab4e.step",
+      "bytes": 50149,
+      "sha256": "750738f156ba32cc852a769e80623212662a02081662a8c3a384c50679f24dcf"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-5c-88f68dc9ab4e.stl",
+      "bytes": 118084,
+      "sha256": "7015f576ce23c1c7b188b71c0ebd50df5ca63d31e78f94cf3cfa9874eab9c00e"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-5c-a44a3889eef4.step",
+      "bytes": 50112,
+      "sha256": "8758042cd89d195f11df1359f9084ab1ffb1208b2aebba8e154961efc232f62f"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-5c-a44a3889eef4.stl",
+      "bytes": 118084,
+      "sha256": "23a7d1418647f6551d08a1fcb90a427863c2a2d4064f37d921c8a0b981c74878"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-08aec08e18e5.step",
+      "bytes": 45356,
+      "sha256": "416616905ed3fa6ba81b295d18f0d6a974aa1ee214dd0b08fc5cba0b751153d5"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-08aec08e18e5.stl",
+      "bytes": 109884,
+      "sha256": "fd19d62fdc315b498f5ca64e693252f71de02be393c3da52d8fb659880bffc3d"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-0c2af621b6a6.step",
+      "bytes": 58638,
+      "sha256": "9b1eb8d620aec6138b1d4f5773acdab013b817121dc6de926ce3a358c57e6ed9"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-0c2af621b6a6.stl",
+      "bytes": 141484,
+      "sha256": "c8ba3197d057329b26ea411b3731c663f3040b243111089fb1d2f7812afbb26e"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-17666b24a421.step",
+      "bytes": 50635,
+      "sha256": "763e1663c141de32807622b89c993f57815227eabed32d0a53879e4a0d3b7438"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-17666b24a421.stl",
+      "bytes": 125484,
+      "sha256": "1bcc71397aaa2cbafeb57b1e244c34df28f1d056a0374b5941051265f8949d7c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-1a08cd2e3808.step",
+      "bytes": 61685,
+      "sha256": "51b2ff7094c8afe2c8e56a1e721353d032695dc58cdc69928f6cb96adc009685"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-1a08cd2e3808.stl",
+      "bytes": 141884,
+      "sha256": "60de745402f20170233c59106e874ec521a1381d1bb3ff9f316b345f37744b80"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-1f64aaa0e8b1.step",
+      "bytes": 45378,
+      "sha256": "6353b35a227cb34f35ba5ec879795316857a315ec8cc733baf30cd9323eb3230"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-1f64aaa0e8b1.stl",
+      "bytes": 109884,
+      "sha256": "31a0a6209d1e3ebfb86e152e6055cfb76c4fe512b84cb2907eb6980d00e28748"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-451263ebf740.step",
+      "bytes": 53259,
+      "sha256": "219b08843762bcf60496ff1fbfb8a361a66b11c9685b130bf32cc7ff65301139"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-451263ebf740.stl",
+      "bytes": 133284,
+      "sha256": "9fcfc59d4ef9d21880d5d6f079e343382d18e6c3cf171550ec92a0535a54a8f3"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-75ddfa996915.step",
+      "bytes": 48013,
+      "sha256": "0011cee2ca212f690b558565d05764abe072bbdf39e78dad3f576735559f712d"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-75ddfa996915.stl",
+      "bytes": 117684,
+      "sha256": "0ab16c3572012615fe7d992b77c6f31e84f6a4da32433deec8579f4a3e7660e4"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-7b734626068d.step",
+      "bytes": 55898,
+      "sha256": "a8e326fed26fa4439d5b2fb6672c492e40a7d21b1ec5a3d6c6738192a0a7e2f7"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-7b734626068d.stl",
+      "bytes": 141084,
+      "sha256": "5111b847ba96e116784b3f023d6641ae6838549a8a80f36cadcdde7d61f342ec"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-810977bf0853.step",
+      "bytes": 61253,
+      "sha256": "0197aa3d32cb9f33029748a0797513a8532d171b01a8abc58e71a923c9af74f2"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-810977bf0853.stl",
+      "bytes": 141884,
+      "sha256": "e19de6b6ad1a8af5a95c6f7ac0bf47a729f2e2fda23d7e4cb53cbfaa9b4352c1"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-812450d3681b.step",
+      "bytes": 58548,
+      "sha256": "2a39bd4ea173439ed04e6a5760e64b3a7c84888ab6bd7f65ae35979087a33f61"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-812450d3681b.stl",
+      "bytes": 141484,
+      "sha256": "65feb4523d63931b2587105af3dfdb754a2afb1b010e9906f84203d54c12a4d3"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-909b63df1963.step",
+      "bytes": 61210,
+      "sha256": "7bebcf1edc77fa173337421c71660cc0b29f83db1bb6c69ce0c1489ef4c97dec"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-909b63df1963.stl",
+      "bytes": 141884,
+      "sha256": "7773547954591ad930892e4fd990efa57dcae01a2056d06b28c9dcd816ce7810"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-96d9bf699cfe.step",
+      "bytes": 50648,
+      "sha256": "11b7e232aca57de4252579dd8f0913d5a19ae31d5c4a68ef703ca439c183ae94"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-96d9bf699cfe.stl",
+      "bytes": 125484,
+      "sha256": "96af1a8d69751db7a8c447dabaefd9b22d36ba4557728af70d9bcf7f7455bb84"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-acdf64d7341c.step",
+      "bytes": 48013,
+      "sha256": "5e5e07333870b723481aafc19c70812e8b627218618d4f4cd410a4b45350f331"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-acdf64d7341c.stl",
+      "bytes": 117684,
+      "sha256": "b7bcae9976658b3d6a81ec07c73b9fd0c02218dd1b6ee02dd66ae1da6dc4704a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-b3c029a19d6b.step",
+      "bytes": 48002,
+      "sha256": "903ed89df1161ebf8d9f35f92fe3b9d5aeea1bdbbce2014a80367dbfa9bc4c9a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-b3c029a19d6b.stl",
+      "bytes": 117684,
+      "sha256": "a478f41cf29fc097a834ad33d54a4046f08461984ceb948407041e0c9bc809fb"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-ba1fb148fe5e.step",
+      "bytes": 45378,
+      "sha256": "974f82cd45a5aa1c6ae69baa8a77254e39b162098b577b17f3a43d9ad01ce733"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-ba1fb148fe5e.stl",
+      "bytes": 109884,
+      "sha256": "ae4acb031ff891ebec8623c8988f3f9e677dcdb31a40ca4f13dd0ac18947f77b"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-c4d06ae6ad9b.step",
+      "bytes": 58692,
+      "sha256": "d5916f6ff36f94a7e203fdddd745ede78f4a1001211f1ab10ceee89713b8dcd3"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-c4d06ae6ad9b.stl",
+      "bytes": 141484,
+      "sha256": "649c6510bf77395ff1dfaf59dd459456cf2077498e0cb496cce70986d8329b25"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-d1a46aa0281f.step",
+      "bytes": 53270,
+      "sha256": "1d2532de136a8d7e16bb4207bdd9667ada4ebb7f79238748782a913ab25c4dc0"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-d1a46aa0281f.stl",
+      "bytes": 133284,
+      "sha256": "ce53ae0af7590ac6c414899a599ab1e8a79cb2e9245d4a2a1a795db9a80ec54a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-e4572ff09aea.step",
+      "bytes": 40092,
+      "sha256": "65c89cf8915ee7ce6fa571b14bce917f17e68f3985d6d8d2c9a1b7a4c5833252"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-e4572ff09aea.stl",
+      "bytes": 94284,
+      "sha256": "80e238abd3cc436a2a55ae395fa765afa3be494d9a79cd27c67687b1fdc92716"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-ee2b30aa949e.step",
+      "bytes": 42738,
+      "sha256": "22618567518ac698f2088fcdf351e9286937677c3be0481a42855a0e3ea9dc26"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-ee2b30aa949e.stl",
+      "bytes": 102084,
+      "sha256": "29d2c159f4a9c2594c3ddc39cc82f8e79043ed4637be734c021cd94b4b5a44cd"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-eef9b6d6a443.step",
+      "bytes": 57441,
+      "sha256": "32879066af5deee639fa94270e2008660c8b900d4e139d2d793294028fa78d47"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-eef9b6d6a443.stl",
+      "bytes": 141084,
+      "sha256": "f9a7287edcd7753c22ac23e7353ca09964e8d6f21ffb8bf6308ae4b0212e2c31"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-f4370264b9c3.step",
+      "bytes": 50626,
+      "sha256": "de21254142ef736885a93f6071194bf3706d30ecb243afab560d33000bb97291"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-6c-f4370264b9c3.stl",
+      "bytes": 125484,
+      "sha256": "e43e7e43d07f6c0fccc2eeb55c2cc4c8f643844cf0b20378922e41559aa1cb07"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-221fc02caa9c.step",
+      "bytes": 67491,
+      "sha256": "1b9c6c89a8a87c9be3bf6cdc0be7daebd848ce91c0dee779dca9fbfd9eecb0d7"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-221fc02caa9c.stl",
+      "bytes": 164884,
+      "sha256": "aab9fc5276f5a956b777057ae83abad0598bd2bf3a3a7ef93db3845bb24013ce"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-568180a93cb7.step",
+      "bytes": 67533,
+      "sha256": "7970a22cb404ac7584b653c1ddad55f9a9c4054b85dc61e5b4ed4ca5f526ee63"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-568180a93cb7.stl",
+      "bytes": 164884,
+      "sha256": "d902fa7af6465c617dcba18d9aea4ff112099098beaf4b6e8caf22cf86f393cb"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-626511f53153.step",
+      "bytes": 67077,
+      "sha256": "1c71f230220e0b2e2dd876b90bd11db396915040f13e47382eec3a20b4372d51"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-626511f53153.stl",
+      "bytes": 164884,
+      "sha256": "1288eb7b7c5a384d1761fa5cc2a89c07459f84311424f9680035c40dbb1a4c73"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-65e5d24ed0e7.step",
+      "bytes": 66143,
+      "sha256": "500e47302b12969667ea7e1709ba966ce9e7e74dded1eabe9873207f1db5dd59"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-65e5d24ed0e7.stl",
+      "bytes": 164484,
+      "sha256": "9f553239768bd27bd37b74847e4e7bbdd6cbb5af45e6d394ca9a35d1305f5efb"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-755c0164e79f.step",
+      "bytes": 70148,
+      "sha256": "05ec5839c830b75cdf75166b3bd49f6ce00f9003b90a669c836d8885a54eb7b3"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-755c0164e79f.stl",
+      "bytes": 165284,
+      "sha256": "a6fcc37c7d73e1a415fc1e6d93815ecd8bfb6f3cfab0a3ae9be48d5db386a2e6"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-8761b4a005e0.step",
+      "bytes": 67156,
+      "sha256": "9013dffff5adbf820602acfb036ac9981a9ca90a1b6ee5d49299edfb054d5119"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-8761b4a005e0.stl",
+      "bytes": 164884,
+      "sha256": "37c4d92499d69c2ec421f6e828f931daf48a9e0b1656beba4e1b4e11e4314ff8"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-8ea643f6a651.step",
+      "bytes": 67098,
+      "sha256": "40b6f77645be06099dc56174279be0f32de791b56a11890280d766664d3a01da"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-8ea643f6a651.stl",
+      "bytes": 164884,
+      "sha256": "ab882bb4710f7a44782e595358c2192747427becffaef4b7221483e44f9bbd73"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-ba15d2e5d5b7.step",
+      "bytes": 69855,
+      "sha256": "abeaa5a309847196fdb40270620f9b6110c7d264108606e1bfa5d34d1e414937"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-ba15d2e5d5b7.stl",
+      "bytes": 165284,
+      "sha256": "d38e7c3836cbc1aa905bc74ea49481d103c455e35e176984a48afbeca41ce130"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-bcfc797dca10.step",
+      "bytes": 67110,
+      "sha256": "4f1cc2ff3fc2ac7ed3db51420aabfbf2df5de64d8d2e1fe2385196e4edb37a77"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-bcfc797dca10.stl",
+      "bytes": 164884,
+      "sha256": "7d154b3f9904d9bf5605eebef2756547ca2ab0a399190d3a2582ff8eb416c65c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-c2b59e8f631f.step",
+      "bytes": 67053,
+      "sha256": "4f4e9879558deee2b82e1a420e45b3263e85f49616eba0926538c91f33cc6968"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-c2b59e8f631f.stl",
+      "bytes": 164884,
+      "sha256": "996e8726255881840cd4854b7a8a36af8562451562f12c1c13d304750e71b01c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-f8326032ee44.step",
+      "bytes": 70229,
+      "sha256": "da0647e3de6f8dd1433004a0ec52ae705f51a42ee9a1a3cbd827a6cb79b7d287"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-7c-f8326032ee44.stl",
+      "bytes": 165284,
+      "sha256": "513032e0225df4fceb1c1e3979ab57752d36fbb38811ccd2f672c035b5efe39c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-00ac0d8b7718.step",
+      "bytes": 57031,
+      "sha256": "49240b717a747b0e38c091eff3c1570821127bdbb27e277e2498164be2669a55"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-00ac0d8b7718.stl",
+      "bytes": 141084,
+      "sha256": "16a39d5f0322a687d2150a751b0497052cc3ae57c73e162eb4eb90147f4faf99"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-186a9f84f098.step",
+      "bytes": 72857,
+      "sha256": "9289aba9340637f8868baa59ff13a6cbc370c715ff556fc1114a4cf2b5542ece"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-186a9f84f098.stl",
+      "bytes": 187884,
+      "sha256": "417b954ad37ced2c3e1b4f0f2c9808b69a28f179b98a6efb3dc50796f778ba99"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-19025d71a671.step",
+      "bytes": 64948,
+      "sha256": "afeb94890eb767d9a2e7b761e855ff492fa3d16b65fc33adbe544206e3d327e8"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-19025d71a671.stl",
+      "bytes": 164484,
+      "sha256": "f22956d978112cd6ea316376a03e7a02537e07178df9af7724d1db7db41796bf"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-34e67117d5ae.step",
+      "bytes": 64926,
+      "sha256": "d1c7af9f82e17ac718c513330e924645ca81dd43b22bed07b5634f23a00eb2b7"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-34e67117d5ae.stl",
+      "bytes": 164484,
+      "sha256": "f597f0903cbb1e1b5b3958a70e7d6c34a7db0127788e38b29a8c8715c54d5fc6"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-3a35d0f7049f.step",
+      "bytes": 76200,
+      "sha256": "7a08555a5567c23a252e0b30db499f139ea8827d9a5e751b1c4d2400a7dfcd1e"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-3a35d0f7049f.stl",
+      "bytes": 188284,
+      "sha256": "eb46f76bfe85d70b6632b41a316c648f695270e8db29f72c30bb78be853b24ad"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-3eebab327568.step",
+      "bytes": 59660,
+      "sha256": "4e907ab897887d917f9e3318051090e526f1ee615dfe7dc8e12e47db06beaafe"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-3eebab327568.stl",
+      "bytes": 148884,
+      "sha256": "ea3f6427c3e3a58f90b20b461f349c5cc67436264a9f2deae129868199add61e"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-3f8e863fcd29.step",
+      "bytes": 75568,
+      "sha256": "7d543bac6f10b706453da0b6097518868828103e66aa5f1b7e8228d9d5d70c5a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-3f8e863fcd29.stl",
+      "bytes": 188284,
+      "sha256": "27408d9434eda17dec932adfa6577c942a3a49fb7f441c3659dae32548836ea8"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-40b14f7aecf8.step",
+      "bytes": 54375,
+      "sha256": "1aa0e948c7c5a0411eb96bc7d8741baa3700b335a924948f35a28cc84f3ef40d"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-40b14f7aecf8.stl",
+      "bytes": 133284,
+      "sha256": "dda163a3fd5dd829e65a417847552419a9bb26ad6805bfb0fafd1567407408d2"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-42985608ed37.step",
+      "bytes": 64948,
+      "sha256": "ab35cde408e79fb9fcd06620a4ee5c0c702edc80238e1bf75b0ff7bd1c88eab3"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-42985608ed37.stl",
+      "bytes": 164484,
+      "sha256": "92a5706c465d14a8219c5231f5f030ef8eddc453a3487e7fb220d05759e238c7"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-43aaf840d311.step",
+      "bytes": 59682,
+      "sha256": "a46b741c2a1fbbe7406a7bcb6f6000f8928ce355610581efe4e1d4303b9fb837"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-43aaf840d311.stl",
+      "bytes": 148884,
+      "sha256": "466bd94ab10e26e4c3918e6d28fe67e7556f8ed1d0e6f2edcd40346e7a4b79a1"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-448a0059b24e.step",
+      "bytes": 67592,
+      "sha256": "50abe47b27081898f2f3678887c2f515749f85f5e02d87bc404937a340b6ec1f"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-448a0059b24e.stl",
+      "bytes": 172284,
+      "sha256": "c0e99e2e5da1e613b6fa7188e9c708367d17f8abc74aea26ab8d72ee65eef40e"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-4a2a4beab3d1.step",
+      "bytes": 67603,
+      "sha256": "32f6986a0ff601891273d7983237a91edb1b5dc2135a6c3cd5e02af1f2eb5f2a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-4a2a4beab3d1.stl",
+      "bytes": 172284,
+      "sha256": "c927894caca4d7b1e765b16a4b351ce6c275afae919a365595075c24bb0cc22b"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-59bf9b543de2.step",
+      "bytes": 64948,
+      "sha256": "5b1a55895e42886e5e9c67631ffa1276acab44865ac8df4b8fb76b81fb098d38"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-59bf9b543de2.stl",
+      "bytes": 164484,
+      "sha256": "15f6e32215a0f4059792ba806b314f68e4848648b7842f3f05d93154c897f150"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-63e5a91ed811.step",
+      "bytes": 78184,
+      "sha256": "0258c4cdcbf5c46568b1376a44c7c0041fa709a36e6541a200e1bcc9cf073363"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-63e5a91ed811.stl",
+      "bytes": 188684,
+      "sha256": "65bd466fb28aaef7e6a61284490e1093560e10a666b22a8801ce64be0df871df"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-687bf7522bc2.step",
+      "bytes": 64937,
+      "sha256": "aae65e9a2e87812f0124249ec22771371b6261dd1df4c079168e19d90b6ea17c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-687bf7522bc2.stl",
+      "bytes": 164484,
+      "sha256": "b28ecd71cd2c4efa4d80db00c60965c0b87027dce4b7647271926666fa070d29"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-6ed180176bb5.step",
+      "bytes": 78871,
+      "sha256": "b56a628f3dd8a069a5c3359908f3c0bbe88a6966f0254c9597a7b26df2243623"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-6ed180176bb5.stl",
+      "bytes": 188684,
+      "sha256": "55a06887c913e672581b20b0574890a3848272ed6f85e962eee1f888a353dbc7"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-7182b0f5249d.step",
+      "bytes": 67590,
+      "sha256": "cf3a329bc1e357b263097014bb2e7f1bfc58a99f8b715993c2f3e931cde8958e"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-7182b0f5249d.stl",
+      "bytes": 172284,
+      "sha256": "e1de8af705fc94495e6959683cb8f3a1f5ddb097d512a8690f07305d7a5aeb84"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-71b1cabb21f1.step",
+      "bytes": 64957,
+      "sha256": "0d8a8cadc571b20f3450f20abe5af153f2e1d4ab15c889cc5128aca1553db092"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-71b1cabb21f1.stl",
+      "bytes": 164484,
+      "sha256": "bd508dc657ef39f7396daa636bf30d30f09ffeeefeda21f00cbf5972d8565c6f"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-74c524aa993e.step",
+      "bytes": 57031,
+      "sha256": "7d2532de4f341624925470de9c1ae011fb98a8b70ddc59e1a67da0cbf9b060ce"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-74c524aa993e.stl",
+      "bytes": 141084,
+      "sha256": "a93ea9b920281590918a9a484a20c80562c4714c900216b5f1ef6a865c37996b"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-8a9c9abd0046.step",
+      "bytes": 62300,
+      "sha256": "d45eb4142962d9965ef0ada853ecfe851ca546365757b5a93be1c47ed6bb879d"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-8a9c9abd0046.stl",
+      "bytes": 156684,
+      "sha256": "4b12354d655e91b6013f634809f90f3fdb46f0f8da9c72a38186db543a6eebe4"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-94630c6a9620.step",
+      "bytes": 62322,
+      "sha256": "ffba673386dc2d7ac6d5457842496fd1e59ff17d13a3297800a96dae6784aa13"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-94630c6a9620.stl",
+      "bytes": 156684,
+      "sha256": "0075ed3407627645fa08c12d20d7fe22b1132a9ba7b858bb954fd37c0ade2325"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-99a216810560.step",
+      "bytes": 59671,
+      "sha256": "110809b2bf10bbbd3b23442e197354bc51e004a93c9a75182a198bf81e352b2e"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-99a216810560.stl",
+      "bytes": 148884,
+      "sha256": "2416aa7086778bf3848b47339153c65aba69f4b08a28f47741949d8bed18eea0"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-9e4597dbd2a1.step",
+      "bytes": 64959,
+      "sha256": "00563e92226e88ca962ba1bf0ecd941c5e137603368312d5c80507372ab4f023"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-9e4597dbd2a1.stl",
+      "bytes": 164484,
+      "sha256": "441dc30849c3362841bbe0f9f2663f2e81384d7cfdc21d8d51b14925f1f8c12f"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-b7b0695b93ed.step",
+      "bytes": 62320,
+      "sha256": "df01a36a8495810228624dc638fc0323ac06d6c680431861ef56ea9d82f8fda6"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-b7b0695b93ed.stl",
+      "bytes": 156684,
+      "sha256": "f15095d2cd8986250f12d38a42a9b960addc46033606a0f64efe250187b8e750"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-d844888ce4b9.step",
+      "bytes": 57042,
+      "sha256": "d8dd98b0cad2f326d483b36478338810c0e0e84251d6bbcac3350ee72f35ba78"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-d844888ce4b9.stl",
+      "bytes": 141084,
+      "sha256": "90ddc7c4d9a5a33c48975dc1c702fdefcfe2ab84caae16b4c598f74aedcb3a43"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-db7507a63af1.step",
+      "bytes": 51736,
+      "sha256": "7e128a047aec9cf586fffeb66e551f1ec4e1ad9c8bcfa3a9a64f64d8e81c9e47"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-db7507a63af1.stl",
+      "bytes": 125484,
+      "sha256": "786903bb3c280900024cfd8748ecebcc7af6d131bbb83e6bbf9617b298d9f373"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-db962d10ff4f.step",
+      "bytes": 64959,
+      "sha256": "794d5691ca3051ff9e47f0bd1df833217184452770cb18b771017f2b98d3eb68"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-db962d10ff4f.stl",
+      "bytes": 164484,
+      "sha256": "7126b0b076d1f0686e15f28bfbe83c3cea5b90038b804def89f24de71f474b01"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-e27e13d92242.step",
+      "bytes": 67592,
+      "sha256": "9f794c2edfb18535ada1570bda61581ec358ff13a5639be2b0ad52899524c735"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-e27e13d92242.stl",
+      "bytes": 172284,
+      "sha256": "9d14374a033d54bb880836f95d957dba81aa0a7308c7186614a17c4b23e86de1"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-e50b3bba33b2.step",
+      "bytes": 70219,
+      "sha256": "50d267618ee6e4bf51e8a2f185692b86e0f4146c6b1db2c08e9f7721140dcaab"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-e50b3bba33b2.stl",
+      "bytes": 180084,
+      "sha256": "9107e45ba070f05d56b4832db035919fb44439d5adc622bb7658c0ca8b65ee28"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-ea6b22f0e894.step",
+      "bytes": 78887,
+      "sha256": "46592dc65b758e737e44c0116b0ec2a70ef17d83b9b01e1daf8e1aae5f9085dd"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-ea6b22f0e894.stl",
+      "bytes": 188684,
+      "sha256": "35ec599bcbc233b3db69670f9c5cc47e39b503a7328bfdbec45af92a00a9856d"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-ecbfaa38d5d9.step",
+      "bytes": 62322,
+      "sha256": "f14d9a5a9c3e31529e684521848e9c9feb3613f959e7290a5feed1ff7b5fcca9"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-ecbfaa38d5d9.stl",
+      "bytes": 156684,
+      "sha256": "878bb823cc6088074322bda58e544f6b1ddb1d9b5e61171d04e833ebb9bd79bd"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-edf55bd5d8ff.step",
+      "bytes": 67581,
+      "sha256": "ea8a9f17ff863f51ada71f663b4844bc6d6f1be10758a5154a5efa577edf8da6"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-edf55bd5d8ff.stl",
+      "bytes": 172284,
+      "sha256": "00291591636b269f10289e3e05fffe9d1c32245148027d80be138805d70bfde1"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-eedb1346666c.step",
+      "bytes": 70230,
+      "sha256": "b8a30420972f112c3236e74340b07b7e36236007753c5df0faefe0cb4240c00a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-8c-eedb1346666c.stl",
+      "bytes": 180084,
+      "sha256": "ef6b57ae6050d53a3d1d0344fcf1071adf658942dc0c49244d87b9aeb420125c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-04db7e61faa4.step",
+      "bytes": 84001,
+      "sha256": "e3eb4a2fd44cdf685e8d626b54697153bf386966d3e22cbd1fcc83f384867b10"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-04db7e61faa4.stl",
+      "bytes": 211684,
+      "sha256": "17a772d50feb4789bc15642b7ccdaa31e2be9eaa71a62c19a79471aad01d79a1"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-2c6c8a203360.step",
+      "bytes": 84220,
+      "sha256": "c0f948f0b487c7127a53e9306d71e3d2f9123446d166924dce8b9820d8477612"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-2c6c8a203360.stl",
+      "bytes": 211684,
+      "sha256": "34fc146f8097d9fd04b85915730b8624103a710a09dcfb20810d89c4f30bcc89"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-372b34c13ea7.step",
+      "bytes": 84907,
+      "sha256": "b98c982df3e97d50d608843766f673a67e957345bc8fa763a9002762bfaa0e52"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-372b34c13ea7.stl",
+      "bytes": 211684,
+      "sha256": "a728a0edb0a4a139ebdd2fdf3120a5baecae61eae9021047c5efadd6cdc1c26c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-37dc0172b5e6.step",
+      "bytes": 84328,
+      "sha256": "0b9be53163925db451573b1cf64a1e234fc565a18d55e813b385afc82ec4fe04"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-37dc0172b5e6.stl",
+      "bytes": 211684,
+      "sha256": "115289ff606a932a7c690c48840bc063bca2a6e64830d6081d09b139c0103008"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-41ba1050707a.step",
+      "bytes": 86786,
+      "sha256": "3b13b2c32b692983588d55b2718927e9dd837443d25084ca0fdcf9b93c53e2a5"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-41ba1050707a.stl",
+      "bytes": 212084,
+      "sha256": "4c0e90a48f29a3744d56bf909f22b1a76373609f3bf0ac2b00ebc41c55b6f30a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-687f1e2c6151.step",
+      "bytes": 83964,
+      "sha256": "41bf707df4d79766d7668f80ef7c881d886168564571e80850da6ff2f1aaa2d7"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-687f1e2c6151.stl",
+      "bytes": 211684,
+      "sha256": "8b44899640120ec48a0af6434d739803a8183707d26d821fce1481325b2868f0"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-7f58e6b78bd0.step",
+      "bytes": 84217,
+      "sha256": "a7ac066f2be47168b11a642f9d2379d62030d9d61f3b8c4d55767c791741eaa3"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-7f58e6b78bd0.stl",
+      "bytes": 211684,
+      "sha256": "1e9b61d3ce222a980f5b959e2cbf511a2295a1e287889bcd54cee0bd9b026a51"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-8008113072c1.step",
+      "bytes": 87321,
+      "sha256": "0ff8c9d3c5a456e7cf706d4ec36d9a3334559865183c6534321d2c8344bca566"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-8008113072c1.stl",
+      "bytes": 212084,
+      "sha256": "3a272c1bc620d7af349b7e1f3991af679df7cbe237327a0d34aa7bd858480cf0"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-90b4aebaa3c9.step",
+      "bytes": 84064,
+      "sha256": "4e0d0ecd89fe2d59f2dee239cf88146366fa0287aa22533c7819b096b5f365b2"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-90b4aebaa3c9.stl",
+      "bytes": 211684,
+      "sha256": "aad497ec92336ef28e110b3e33815e33e38613aeb5f9698cb2bbc961d8749deb"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-a91387e26c85.step",
+      "bytes": 87367,
+      "sha256": "cbb62940fd7d454dee822642b0f9ba46a09f43762429794c187aa024c32dabdb"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-a91387e26c85.stl",
+      "bytes": 212084,
+      "sha256": "5aacd617d559e7bb1f644e2fac7edfef28c5b2ec6389311d99375565d6ee38ec"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-aa965b60ca20.step",
+      "bytes": 84982,
+      "sha256": "76654ad202c04554548f2ed3f0ec7d32ee44f9aaae3c7f87839bc6022194ba32"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-aa965b60ca20.stl",
+      "bytes": 211684,
+      "sha256": "e3c80d5136abcfd369e0d955167bfd0c36481db377d22a39410221ff41020f93"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-bd62b951898e.step",
+      "bytes": 89396,
+      "sha256": "47486d0a657953004e3cdc45ed108fdd7a4a38a5f60240f9a25ed8709b99c6bd"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-bd62b951898e.stl",
+      "bytes": 212484,
+      "sha256": "0780287e64b0a5e99dbe438a9446043d8647a686f6d6b660e2a961a221b210c0"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-caa59f319205.step",
+      "bytes": 87526,
+      "sha256": "6d49533c9c36a5973ab29636ee2a9537953c3b8d47a01dec482625f35eb02f98"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-caa59f319205.stl",
+      "bytes": 212084,
+      "sha256": "5d59513c314c054d2af70d3d0f8d7c46e162f2718cb8e34928f73ffdea147ebc"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-e4192a78ea21.step",
+      "bytes": 84120,
+      "sha256": "8c715245beeba1c10e578707a715800aa5cdec1b7bc1249b31d3a03be0ed77a6"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p4-9c-e4192a78ea21.stl",
+      "bytes": 211684,
+      "sha256": "2f7847aff7f82db00163b4181b8e8882cbc1305e34c3486220c71cf75c47339e"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-10c-63a4682badf1.step",
+      "bytes": 93484,
+      "sha256": "22f1b037e737360c089a4add90f9e1d394ce162720a5b034090cce2c17f83505"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-10c-63a4682badf1.stl",
+      "bytes": 234684,
+      "sha256": "50174581116c940e82f5852a5c90f4fd617d940c3ba315da73671c58f569e06f"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-10c-699c9ac84be5.step",
+      "bytes": 97297,
+      "sha256": "89dce28e1d5d30beb8452e3b4793ec4b95619088dddc628f124a39ac8e7be5e1"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-10c-699c9ac84be5.stl",
+      "bytes": 235084,
+      "sha256": "7932507cd09f1d52177700c6d38c513d8e450fb3b02eb1452ec5aef5e7c3fc8d"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-10c-b57265b20383.step",
+      "bytes": 99618,
+      "sha256": "1bb310ca7b5ef161e918f389014709c235fec6f6564119e53f6d6778a91ed8d5"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-10c-b57265b20383.stl",
+      "bytes": 235484,
+      "sha256": "14aa14ac6700e7dce94a6c4327d0ef641e3b477ca4a21537c05a46132af5ad0f"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-10c-ee2bdff04dc6.step",
+      "bytes": 99784,
+      "sha256": "0b80cdaedd9670bbc4d5525966052d74037c0f0f2bddcac09aed9eb0946b19f0"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-10c-ee2bdff04dc6.stl",
+      "bytes": 235484,
+      "sha256": "2f99dc7180bdc97bd23a30e60b711cbf990abd4f80127db0e3b43b5b661c5ef3"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-11c-1f3f7b12808d.step",
+      "bytes": 106055,
+      "sha256": "06ccd4f92fe3ca357f95aa3eabedf544265c1e5cca21817342aa4c94230344b7"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-11c-1f3f7b12808d.stl",
+      "bytes": 258484,
+      "sha256": "fbac074f886a9a9bac26251ffd4c67ac24752ba50e49c0481286f2fadf94a621"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-11c-544eb592288c.step",
+      "bytes": 108703,
+      "sha256": "d12e7ecf4eda62349c104ad58396537eaf29394a8b31706bf34211e60976b688"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-11c-544eb592288c.stl",
+      "bytes": 258884,
+      "sha256": "20f0f806c3598a01b2627427af1c4a298e8600729e6033ea88d9bef9432276f1"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-11c-5ade05e470ee.step",
+      "bytes": 106050,
+      "sha256": "b551703e6702238775d5bb6d2eb29585663860e26b8d654eb35dd57e3d9269b3"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-11c-5ade05e470ee.stl",
+      "bytes": 258484,
+      "sha256": "7c4ec8997a47999cf3135d38471f4eba36f729c5e96479c02f5dad68673665bc"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-11c-ff71fb7c033f.step",
+      "bytes": 105117,
+      "sha256": "27348f08d846443d7260e99fca7b90fa0473fb8a3cc0323485ad27719c189be0"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-11c-ff71fb7c033f.stl",
+      "bytes": 258484,
+      "sha256": "fe01f4fce1bfce725c72822c62d7a1bed8a5a118d9091f8c30e5e0c7a5c02aef"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-12c-36204488a233.step",
+      "bytes": 112243,
+      "sha256": "12ec36a2670c8375610e8d074bd9793234b75b05250721c8d23bd4edc126950d"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-12c-36204488a233.stl",
+      "bytes": 281484,
+      "sha256": "c6c044f7cc2635183be5e11cf92686ee5844fc104a9c400e6f05579ae4809482"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-12c-41587ecb2a41.step",
+      "bytes": 117454,
+      "sha256": "7073feeb18b8ad5fbf7a59cb071f061f75f2a3e85fbb3260108fce72527f1ac6"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-12c-41587ecb2a41.stl",
+      "bytes": 282284,
+      "sha256": "eae1597ded8772695474925c63fe270c927a417614066d2b8833c2a276914390"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-12c-841f31294d1f.step",
+      "bytes": 111240,
+      "sha256": "08d4b59b16dd81b89b94bc08aaf47ce010b4af11872fc2866cda5d314936bdc3"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-12c-841f31294d1f.stl",
+      "bytes": 281484,
+      "sha256": "c799fc16016e3c784406882726976454681b1927995b9c37c46a12aa6c581b4e"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-12c-dcfe5d5c1131.step",
+      "bytes": 113856,
+      "sha256": "0c70066e6d64cc87fa1017698888689d424d453e04c61b1794e3677fe68b5992"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-12c-dcfe5d5c1131.stl",
+      "bytes": 281884,
+      "sha256": "ff9c234a224e6980dec8903b94372f24cfc900bae6f17dd138cdbf86911f7178"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-13c-2ca80037114e.step",
+      "bytes": 122875,
+      "sha256": "c3a1c5dc900c2e0ad877d7949f5689c5b6bba6b8abdb44c3225981c25efdc4d1"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-13c-2ca80037114e.stl",
+      "bytes": 305284,
+      "sha256": "6fc9aeee4bb826fc896dc814a94a65d86d76e4f5af79160cae986001224e9cf2"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-13c-6b069823e62a.step",
+      "bytes": 123970,
+      "sha256": "0bb74e9e086e0b6a649662996187c82221689ff6a79c8082ffcd2e422e1e3d6c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-13c-6b069823e62a.stl",
+      "bytes": 305284,
+      "sha256": "4b25a09424f4e186c1a35046e0530f28fbb1b3b79d026018db35a62f358f0feb"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-13c-728c595f23a4.step",
+      "bytes": 127936,
+      "sha256": "6f362437a2b735d275539e12f1047300c813a770114e46feb4d1fb9e9a024864"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-13c-728c595f23a4.stl",
+      "bytes": 306084,
+      "sha256": "6ea49ddfe1392780647abcc1ba59c282a322eb818111e5801cc4f6a1d0477893"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-14c-3eff1c3ba5c1.step",
+      "bytes": 131765,
+      "sha256": "bc4d3d9d9659116a90d73d52d143e4f37addba6e7dbd0be7433381c97535876c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-14c-3eff1c3ba5c1.stl",
+      "bytes": 328684,
+      "sha256": "0b6ad5d383fb8db78f1228bc94b65219723f49f7e5ff69315c3a414091e49cac"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-16c-ef2592b64abc.step",
+      "bytes": 146799,
+      "sha256": "bd62bbe9e05f061734273da8795727d290dc40c61a03de8d7111111638e3dd58"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-16c-ef2592b64abc.stl",
+      "bytes": 375084,
+      "sha256": "b102daa2f5bef49e52b0239536d1ae1987a277bf594ac21778f7228cdd9370d8"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-1c-7b7dfaafbc42.step",
+      "bytes": 12818,
+      "sha256": "9f20c74c0ca56d736ac6632c88af94876585cd798d1d793e5f44f9b2f1a0991e"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-1c-7b7dfaafbc42.stl",
+      "bytes": 16284,
+      "sha256": "c5577fef09530c0374412dce5812e9e865aee32b05236d51dbb6b47147082f22"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-1c-8edfce4433a6.step",
+      "bytes": 15592,
+      "sha256": "0b54b919f5decdbbff5b8e33d2c825d402dd5ba1e5d0db8ba690150be83f10dc"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-1c-8edfce4433a6.stl",
+      "bytes": 24084,
+      "sha256": "09d6b69954d358b9f7e9493408daeefc899fe422de9484c37fcfe344a2b74954"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-2c-021c6b8baa17.step",
+      "bytes": 24232,
+      "sha256": "fa748707e516957c0624ac6315d8583fa8d4c531616e3cdd7d4a34fcacefedd9"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-2c-021c6b8baa17.stl",
+      "bytes": 47484,
+      "sha256": "a1e9650a456004f0fcb9dde99d7f7493898d5dda75d6d9a447cb8c8060b389fd"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-2c-025a1b2bb4d6.step",
+      "bytes": 18666,
+      "sha256": "b1e7cdc8f4794fea3f4c097d90bcfb4bd3a8f5a19e7af0cd1a7d8b14448c8f83"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-2c-025a1b2bb4d6.stl",
+      "bytes": 31884,
+      "sha256": "4193d83bd6443760eb072cfd3d35e7c1ddfdf0ec0033500d5bfd8d995a4c4103"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-2c-3b51464980fc.step",
+      "bytes": 21453,
+      "sha256": "8ab3f66cb5a8bb41020f238738302a345bb44d23992c70d07eb0e882e72c3514"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-2c-3b51464980fc.stl",
+      "bytes": 39684,
+      "sha256": "ed3ae35dfbeb4647a86e4086957f7db9e6fcbb9221b13505c18d0c887cb959d0"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-3c-1728e99c897f.step",
+      "bytes": 34665,
+      "sha256": "a71c25b28cef8cc0d85d7876c2e890dfd68094f4630af81df3a14c6f6ad95ec3"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-3c-1728e99c897f.stl",
+      "bytes": 71284,
+      "sha256": "0eb19225a1618ce521251412573370c0f32ee2767542a1cc5aadb797387c0149"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-3c-322c5467219a.step",
+      "bytes": 27301,
+      "sha256": "f6139341dd617e95c5a70d32d4216bb9a656f768c39019582e007cfdf960b1a7"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-3c-322c5467219a.stl",
+      "bytes": 55284,
+      "sha256": "aada6472cb9e3bc3fbfe3870059fdb0de5d07313ad92081f286248a16c0a00f1"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-3c-51effe7d1195.step",
+      "bytes": 27312,
+      "sha256": "51c5dde8e5f11747b7c1528b37cd2ff4d0662ec2bea4c0ed495975b87506a89c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-3c-51effe7d1195.stl",
+      "bytes": 55284,
+      "sha256": "1f87c92615380db9f329b1e83ab874d3a503b0cf1bae493a76c14c85421f1017"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-3c-59ad165cac4b.step",
+      "bytes": 32867,
+      "sha256": "eea64937c2ded6eca52c786637fb5bc10119ab75e94ff6c51c6f4f109aecbde0"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-3c-59ad165cac4b.stl",
+      "bytes": 70884,
+      "sha256": "97899fb60ba3f62b5f91ada90849fd6ff1afdda2d08ad0139d903f8de6df5dcf"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-3c-8d14a764af36.step",
+      "bytes": 24525,
+      "sha256": "72682eb1f10cace11ae59364d98b4cd85adda1704aadc10d375be1b42690bf69"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-3c-8d14a764af36.stl",
+      "bytes": 47484,
+      "sha256": "511177a9ce712110247ff0206ceefe8319efe0b50a45dfa68edc0a10d76aebda"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-3c-d28cebcb7f33.step",
+      "bytes": 31963,
+      "sha256": "06371b4f20ea9a71c2fafdba3b6d538ce496c30a7eeedc48772a1f3c86e52c54"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-3c-d28cebcb7f33.stl",
+      "bytes": 63484,
+      "sha256": "cd98312fe0d7fc4fc6ee8c4cf56de1ba5f80949f770b686b6ed1ef7776eb6db8"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-3c-feff351293f6.step",
+      "bytes": 30088,
+      "sha256": "5be394157d599add39a603fce1c295f5bb39fa6ac6fc0622372db82c92220a32"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-3c-feff351293f6.stl",
+      "bytes": 63084,
+      "sha256": "5887a472c762b541bd252f1f1e0e8a2b2c68a92a39d88ffbabb1496b9880486d"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-4c-2727acf77d5c.step",
+      "bytes": 38766,
+      "sha256": "77d0fd299cb239fb3109e64b644490b7179917495f070370cc6d000bbc5f3e53"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-4c-2727acf77d5c.stl",
+      "bytes": 86484,
+      "sha256": "42d5cd418e134bb6d6150357d686426539dc8279618909966388bdb505c4d983"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-4c-3aff0bc679b6.step",
+      "bytes": 41571,
+      "sha256": "544dc81fdf38678236694a42d5b7d4a4cdf30a595ace16db926d3a790d40ffdf"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-4c-3aff0bc679b6.stl",
+      "bytes": 94284,
+      "sha256": "696713903fde188d9b52d75496fc543f28ffdb2febc937b8def184696fbb7009"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-4c-46c7296bf727.step",
+      "bytes": 43134,
+      "sha256": "e8cd60b472089d799264eccc8cb7ac65708a8df0698870793fa8a684ed82ef91"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-4c-46c7296bf727.stl",
+      "bytes": 94684,
+      "sha256": "b59987e208d2d9e837ef8f98a4d067e295b54cff41c7ff539cbcf792e2b54836"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-4c-4f58144d0208.step",
+      "bytes": 40460,
+      "sha256": "c5ca43461db37b01f6ce96dd16a5d1df66e3734172fb80ea8eac92025adabfee"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-4c-4f58144d0208.stl",
+      "bytes": 94284,
+      "sha256": "2d507079519da6cab6a2108562b53221b1e6709abf4cdf7cca124e0628ba18d3"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-4c-5385f7231395.step",
+      "bytes": 43192,
+      "sha256": "6d89f09ce56693264fb528c78ba91fa64acb4c918e2f4a3a74d50d6631e92395"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-4c-5385f7231395.stl",
+      "bytes": 94684,
+      "sha256": "d0bb3dcec8adb05b883075247c4e1df1bbf28818322fb9c6067e521bc3d0785c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-4c-575c381b3856.step",
+      "bytes": 33198,
+      "sha256": "1d3ccd34ccb917f745a906d0473077d72cec09d642315f67a0862449a3284dcd"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-4c-575c381b3856.stl",
+      "bytes": 70884,
+      "sha256": "04ec06403ea06effd69be1067ce179f302c3b5cbf4368307c37f215c97534214"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-4c-602179f6eb4a.step",
+      "bytes": 37751,
+      "sha256": "674cfc6041d1a51984223e7d70e3cd121bea6689c1b53984d30e93e300da7084"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-4c-602179f6eb4a.stl",
+      "bytes": 86484,
+      "sha256": "894b0145792f8886d3fdfb254d4ce6e3de5d897dfe9acd81a9be55123348e998"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-4c-6c76e7385090.step",
+      "bytes": 32342,
+      "sha256": "18c96225f3f9da0537b8e88de644b6ad70650d9aa52144e18c32a0763d126911"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-4c-6c76e7385090.stl",
+      "bytes": 70884,
+      "sha256": "c754e80bf6364ba5ffdfff71d7b2a713ad41cfc9d5835c30f432c50f4c3e2338"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-4c-d3eec39baf32.step",
+      "bytes": 29629,
+      "sha256": "930985e28d5a3ad877d47421d1f48dbf8744513e961cda372c4fe63bd3b200f8"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-4c-d3eec39baf32.stl",
+      "bytes": 63084,
+      "sha256": "fd8352cf79a9d3a4ea97b545e6ebfd16e4d64ed3b1dbdc1440690317ce2d1cb6"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-4c-eeade5d52975.step",
+      "bytes": 30405,
+      "sha256": "418301bfc112b47ceb0123f4d0b5d0a883833751896a3fe6cefca5bacf2452fd"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-4c-eeade5d52975.stl",
+      "bytes": 63084,
+      "sha256": "18d6dc7d38b8f8b7f45e25fc0cdd9eb69beff44c2c77e24458105e9fbbde79f4"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-4c-f8f418feaec9.step",
+      "bytes": 35044,
+      "sha256": "68ba1313fe3ff0638cb58baa24eaeb742b4d9d3e1454cdd24ad8b143e4fe6edf"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-4c-f8f418feaec9.stl",
+      "bytes": 78684,
+      "sha256": "843efb9ffa6eabd3189374ab8b5e2456047f876668e07c2f2843428e33996b33"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-5c-01c405c399d4.step",
+      "bytes": 49107,
+      "sha256": "3424a8745b850698bd34da1b0e15cd7191e16c09138374c4e1cfb8e62ec74a48"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-5c-01c405c399d4.stl",
+      "bytes": 110284,
+      "sha256": "e9a6bb3fd4d27100b2c7d7ce02cd35c0c9f16c091ba5f49ec89feb6508449d3d"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-5c-22c06d7fe6b5.step",
+      "bytes": 51938,
+      "sha256": "c6f91cbd02fe39527706ea991fcc8f7e28c8fea04b4d0d3091e5dbb427d29da8"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-5c-22c06d7fe6b5.stl",
+      "bytes": 118084,
+      "sha256": "ccb34e4639216a6c8557e509ad89a27dfcc690a573335dc321bcbd86dc6829ef"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-5c-62d52ff397c6.step",
+      "bytes": 52008,
+      "sha256": "a112954b035bf0c9f92c96d46f7fec5bebf21de9ee8439531965855fce45bba8"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-5c-62d52ff397c6.stl",
+      "bytes": 118084,
+      "sha256": "5f02748e4e1c61289bbdb680d13e68c98efb4e3d8b53a6f2cf1e0fd67630ae43"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-5c-97316fdcfbfe.step",
+      "bytes": 52099,
+      "sha256": "57f49fa4e22d5b7a4a9bb1c90d058f6b4086908ee661a863ecb0b8700415f201"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-5c-97316fdcfbfe.stl",
+      "bytes": 118084,
+      "sha256": "50ea216883f6e64f033051709e8e72636ab942e878f835a452af8fba20f35164"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-5c-b8c082635630.step",
+      "bytes": 51959,
+      "sha256": "881946c0715611747371caca67bb8d8bdea24124ded7bd3661f0ed1125380d60"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-5c-b8c082635630.stl",
+      "bytes": 118084,
+      "sha256": "e7e8a8c4d9a95a7f2f6261df584cfbcc472e9924222b4f42b15ebbff72829b3e"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-00c81f76dc8c.step",
+      "bytes": 52403,
+      "sha256": "37ed40d1b31047b28f7d28c1929ad3fcd0ee5fe8f8fefa40ef603560440a7348"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-00c81f76dc8c.stl",
+      "bytes": 125484,
+      "sha256": "34b00d883c2a1c60662852e0240dea27f60817fdbfac831479e43a78bc712270"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-0ad3ce6eeddd.step",
+      "bytes": 46696,
+      "sha256": "a637eb30d3bc755c498b2b4213fcc09131ce5564388afe7258a4914b71fe9606"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-0ad3ce6eeddd.stl",
+      "bytes": 109884,
+      "sha256": "287188f3ab34557542111619bcdc92e1f97245d1ae02cf34b75623a62b923392"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-0edfbb84107f.step",
+      "bytes": 43840,
+      "sha256": "fcd413e5665e0ee33039268de01bbf22a904038d886329674c4d016e15e63a27"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-0edfbb84107f.stl",
+      "bytes": 102084,
+      "sha256": "c95b49b5647c72c0edeb85683738b38005db1e13628a250008b91f9272a29a1e"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-15b185443efe.step",
+      "bytes": 40978,
+      "sha256": "6ed052697b30d406439824492265178a5551b86989b6d8c0f55b08ff819285dc"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-15b185443efe.stl",
+      "bytes": 94284,
+      "sha256": "22bff8c12d932836ea6958a97413d209c5f5f2d5e7299596c99f2ab9f89ff314"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-1946c5fa9765.step",
+      "bytes": 55232,
+      "sha256": "5ae1e9e9ff9666e4a35b8d110f5608e71f9edffcef9d16c61c5e778e33c4b6a5"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-1946c5fa9765.stl",
+      "bytes": 133284,
+      "sha256": "5560c9beb18d5e49d1d86107df6ae5606ebc314519703bb51c304e59d0f14995"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-200986d28492.step",
+      "bytes": 49536,
+      "sha256": "6006f35666a31e4f0010f0eb713a9d022f10b00f249cd17ed691f00dc829f8be"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-200986d28492.stl",
+      "bytes": 117684,
+      "sha256": "32c22739b81cb7912974e59b5563ae0875df1bf66b8ff99653704791f286ea43"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-2ae7f801c407.step",
+      "bytes": 55243,
+      "sha256": "abf75eefe9142488bb700566c4e25f529c05e745ab65e19b9f7c80ec3fc7a38d"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-2ae7f801c407.stl",
+      "bytes": 133284,
+      "sha256": "dc482b7f148e6043d9d497c7da7cc5ff7deb844b8928bda7857ac69e27f1e4b0"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-2c086760427d.step",
+      "bytes": 49547,
+      "sha256": "a280666325b830d890ad1a2df46364d005bb6f511154581828e66da119e35881"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-2c086760427d.stl",
+      "bytes": 117684,
+      "sha256": "12a562487f8db550483c2ca90c22c969b6e783132d7c00edf97ae8be8e95890a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-3be38319008d.step",
+      "bytes": 60881,
+      "sha256": "6d31ac30319a6c4865fde996d9f7e3601dd747d795fa7206d07b6b816af4e2e0"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-3be38319008d.stl",
+      "bytes": 141484,
+      "sha256": "f0a8fc4819a578d3ba9f194551fc72e30f2b9458b273180e5b235d59cb35c035"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-8052a0112cca.step",
+      "bytes": 49552,
+      "sha256": "0fcd64efec5bcc69e78faf7177f896938eea5f7b3f4ee6072dd4109387fd92cc"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-8052a0112cca.stl",
+      "bytes": 117684,
+      "sha256": "b8ff37496d1bd0f909daa6ad82d049467814d0c4a15077af1ae61c8d6337ee6b"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-a15e7d54488a.step",
+      "bytes": 52387,
+      "sha256": "02f487bee126888cbde31c6ab7aaed339e861e53757b06cbecfb7560849ca1f3"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-a15e7d54488a.stl",
+      "bytes": 125484,
+      "sha256": "2eca33e7da3f24a435dcc87756740c30aedb69f496412518724a02e52401d613"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-b4fd5c8c9159.step",
+      "bytes": 63459,
+      "sha256": "82f57d4ac7d1c83225100d82fa61a644d8674813fe7c5be2b8efd46d3c8b8010"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-b4fd5c8c9159.stl",
+      "bytes": 141884,
+      "sha256": "287ba6dc46b7fc3180924081918948ce091411948a0fb419890c112d0a3dab09"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-dc49398962cc.step",
+      "bytes": 63915,
+      "sha256": "874f3b27f1388620f8703f41de0a51f09fe5850b67759ec11049dd9a421a7b9b"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-dc49398962cc.stl",
+      "bytes": 141884,
+      "sha256": "b65b0e7773a0be6dcb45e52f3ef75e21b9202d378768f6dd5b8695c3bd31f6bf"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-f8970603e784.step",
+      "bytes": 58092,
+      "sha256": "d80cce81d852628f309a1769c5491fcb1af7186904a277514fe81d08787f2c3c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-6c-f8970603e784.stl",
+      "bytes": 141084,
+      "sha256": "d964d4dbb0eb01c0838e220d08cecbcbcaae0689daed9fae0246b9ac7e870d2b"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-7c-15d5e1d693b5.step",
+      "bytes": 69701,
+      "sha256": "e537ec67bbdecf21a495e1cb2f77f3b0e7e81aaa1c0e05ab10b1338538f3791a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-7c-15d5e1d693b5.stl",
+      "bytes": 164884,
+      "sha256": "b90f137de91e6d0bc8554ba1284211c964c5d8cbbd67a5ccd472663d9853babc"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-7c-8690e21868de.step",
+      "bytes": 70092,
+      "sha256": "24b0dd6b35d77439a6c932b546e345349cf55a2647d3a06aa69d4be894324f1b"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-7c-8690e21868de.stl",
+      "bytes": 164884,
+      "sha256": "639ba0bccc04501dc0823ce31d7d75bc7fe3a3f559896d41d0c4ac081718b531"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-7c-b423a80ccb63.step",
+      "bytes": 72265,
+      "sha256": "134b51ead533574968526dd4bcb0eb4b53d11accf8ad0ef2027b58e67d1313a8"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-7c-b423a80ccb63.stl",
+      "bytes": 165284,
+      "sha256": "493e5b17f4f49f69cd7f567b1feb55d02d53932550085fee0b457a5b61d40d40"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-7c-e08acc44fe96.step",
+      "bytes": 69680,
+      "sha256": "a46b5a844535afb0eb33f93894e81bf324c536ffafad956beff1ef2e0d59f795"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-7c-e08acc44fe96.stl",
+      "bytes": 164884,
+      "sha256": "0f82a0e4c1a3db5ae14669927d838b2052a4af4bd529225dd35f817a4787efdf"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-17f43b37588b.step",
+      "bytes": 67287,
+      "sha256": "56935c6804ca7dc4cac4440a44b5dc5bcd21dbdffb2c9bdd29b48d94676f1b7b"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-17f43b37588b.stl",
+      "bytes": 164484,
+      "sha256": "2c3ecae7a9e299fb3b90335676bae7eab660c4b2b0e231c3bfe474a030aa3367"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-1ff9361f726d.step",
+      "bytes": 73014,
+      "sha256": "365b5b2680bfb9af677efe487a8ccf302cdca82eb56aa9e8c98e195404f7dee4"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-1ff9361f726d.stl",
+      "bytes": 180084,
+      "sha256": "67ceec7c48a397fe25f9fdc126c9fb6b4f1e56a0e0de031f148ad6e802df8508"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-29f265f34af2.step",
+      "bytes": 67259,
+      "sha256": "4c078fe4695aa56efae4d8edc42c7a632b036b5d64da707d92a21eaf30265a13"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-29f265f34af2.stl",
+      "bytes": 164484,
+      "sha256": "4379b9e0ffbfc1c1fc15aebe2acac9f906b12828d3394934855a0f4e70bad7a1"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-2acfe6ad20d6.step",
+      "bytes": 64439,
+      "sha256": "98648b8c95154deb6ae92875d2045f7472ac5a2281936e84e5b2d3d09333057c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-2acfe6ad20d6.stl",
+      "bytes": 156684,
+      "sha256": "b5bb797071e88e53aab13c84b7bfbb2eac2d2c498ad902e1284a2d9af7503c77"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-38394a3bc31e.step",
+      "bytes": 73003,
+      "sha256": "56260e791d49b7a37108640e9d4bb0ccdaab506fb489757a2792fc5db514728d"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-38394a3bc31e.stl",
+      "bytes": 180084,
+      "sha256": "995f99b807786cc7ddf8cea04e3d84e9a11ff3068198bb45069c070d3cdf484b"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-3dfa11e0c502.step",
+      "bytes": 70130,
+      "sha256": "b3b0791e3d3f7a8fe55f6bb90185383e44b06d720e506b1615cab382bbea38cf"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-3dfa11e0c502.stl",
+      "bytes": 172284,
+      "sha256": "bffe92b0254944cb7877d31d99c6d29a9a4cb747bf9f2a3792ca9b4ed7a0e85a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-4a40eb007127.step",
+      "bytes": 75857,
+      "sha256": "cda838fcff63a1e77db7e7d65c5b7522375cdd4ef11f2d5a841f0b961a038903"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-4a40eb007127.stl",
+      "bytes": 187884,
+      "sha256": "33597414598c3f43fafdb2669c19bd6a8bd4b0392223b7d5768e9031115b54aa"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-8658e0826e12.step",
+      "bytes": 73003,
+      "sha256": "e55367ca9e66a306ba03583293414d6832341f761fc46b4b34e34ce00478b07c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-8658e0826e12.stl",
+      "bytes": 180084,
+      "sha256": "ae115adc66b3a8de47545ffd59ebd9ec20d7fb2fe25f082e9622f777111bf0e0"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-a54e60e92e96.step",
+      "bytes": 79171,
+      "sha256": "8d310f2996ab0314c482a964900bab3245ce97aa03060dc9a3ba2ff5fa3a5571"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-a54e60e92e96.stl",
+      "bytes": 188284,
+      "sha256": "e86b11f0a795d1f007f3175d1c097794d5d6300929be297a67639170f45c846d"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-a71fc00cb615.step",
+      "bytes": 70136,
+      "sha256": "2b09c14c58f924e3deb7a4ee2fce0b2baa389089e4bf22535c0a3737ddd4dc64"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-a71fc00cb615.stl",
+      "bytes": 172284,
+      "sha256": "1ac0a4c432d355f9d4e7a96323b805cd33a795b4c15f8f8667106481ce298753"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-ac64c788c893.step",
+      "bytes": 67287,
+      "sha256": "5931bca7d5d63f3275512443b512a6dd8fe22fdef708dbcc70d022f8adeac03c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-ac64c788c893.stl",
+      "bytes": 164484,
+      "sha256": "901c777667ff292348f7f50dc92ee2f9590209094a0ef049b562be6b1d760f13"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-b7dbf4533996.step",
+      "bytes": 67276,
+      "sha256": "3f50dd42a5ece17cd0eb02f9ab2fde7fe8e001c40ac75263ad860c6a1d8ec2b5"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-b7dbf4533996.stl",
+      "bytes": 164484,
+      "sha256": "5f98f2608d18cf37ae56de2e82fca48bd6aba043347af3a9365782d22a69f14c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-c8392e3e35e8.step",
+      "bytes": 70136,
+      "sha256": "5879ac0949791163be9e323f264b48b0876dfe131c1e20dfef6acf4c820af3c9"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-c8392e3e35e8.stl",
+      "bytes": 172284,
+      "sha256": "43556150492a2a2020ff0f1b189ab1b4ba83e9bffefb64013d218e3c1dd5063c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-ce45285ea511.step",
+      "bytes": 67265,
+      "sha256": "99d37b75f9d5bcbb2c5226d8051e784f810ee970fa2aa830449d10dc31d57012"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-ce45285ea511.stl",
+      "bytes": 164484,
+      "sha256": "51f379e59e6b578efe581f7ea8254822548edd1896636a1c103992250646500d"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-ec0482d27ec1.step",
+      "bytes": 67298,
+      "sha256": "1fe453542f755c13724104f8b2d1e5d8a6dd173701a34ee773ebfdbe558c7dbf"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-ec0482d27ec1.stl",
+      "bytes": 164484,
+      "sha256": "8faca8c2b77494d5dee7fdced64e57278b1d3f4b400c6bcdbb0f592bb4a24c60"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-f0260d4138f5.step",
+      "bytes": 52972,
+      "sha256": "bb6ace1e54adedffc1d07f8acdb10e11fce52c759e18279219c31e60c89ab26f"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-f0260d4138f5.stl",
+      "bytes": 125484,
+      "sha256": "4fc6cddaebf20faff8c70a1470a3c390b220e9abe3695d2757c59f969ac345a2"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-f0e45b42caae.step",
+      "bytes": 72992,
+      "sha256": "0b12ca9a746d0c95ca8503a5a3d424b20d28416637422f20011a3dc45a9f0aba"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-f0e45b42caae.stl",
+      "bytes": 180084,
+      "sha256": "9ca0d22de57fbdafd96c3167c5be422f9fb81f697c7caa713315ae6ddf838dcf"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-f24dc95ce20f.step",
+      "bytes": 70147,
+      "sha256": "bca25e5bf1a507d2790d697a32a29eabb5b96c6160eac2f122ce1392bf57a134"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-f24dc95ce20f.stl",
+      "bytes": 172284,
+      "sha256": "7bcd4611e1fcab301f6eca515bb70162b5a02df5441d72e49346864ab61c0ae1"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-fb96fd69c1c5.step",
+      "bytes": 70158,
+      "sha256": "8efd19aeade273f36e2f059ec6e5501f7d1fda5a9be1b99c6597a95c78190916"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-8c-fb96fd69c1c5.stl",
+      "bytes": 172284,
+      "sha256": "45990099f5001d3c20e81e9c231a694eea3b1bb20c20d224328b8781400a2521"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-9c-18bfcea1c94d.step",
+      "bytes": 90741,
+      "sha256": "dac701f428f6515a4a67e3496043333e411dcce5b5870cf70535e2c7a944abea"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-9c-18bfcea1c94d.stl",
+      "bytes": 212084,
+      "sha256": "9c693cd0313f7d80dbf23d7d5f404b6991f7a61e1636a406f03a876c1949b98a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-9c-678c5c2d2e15.step",
+      "bytes": 87318,
+      "sha256": "e2f2deb9b9cba9fd0aabcf4f86932f1e5743ba6fc651ea8610e98bb8f487022e"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-9c-678c5c2d2e15.stl",
+      "bytes": 211684,
+      "sha256": "046f3e4e86a176d7e688df22abee327305131c6c8ef82986eb686f0aa60c6789"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-9c-9bfcb20dc416.step",
+      "bytes": 87355,
+      "sha256": "2f0e4a2f35ac1ce580be832dcda492ee51aa584b5eece8ea1ee46a2ee3292615"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/bricks/r2-p8-9c-9bfcb20dc416.stl",
+      "bytes": 211684,
+      "sha256": "cb0fe6f98a1eeb12031a4aa32be6733df59d7fa54906f2c764f81f91a043db87"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/contract.json",
+      "bytes": 2100,
+      "sha256": "0b3662fda1b0d75bfc49f623152b7b27316e411b1ebaf2c44c1f399e15cee87f"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/evidence.json",
+      "bytes": 3741,
+      "sha256": "216db9db1c2c240cfc2030ab84fa8f4bb043dcfef3e353fac02c6ee8de6809df"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/libraries/Selected-p4.FCStd",
+      "bytes": 13438192,
+      "sha256": "7183da86d7a94e9fbb0422465eb7a8b6613ebb1278e86ced0a1080ef5e6a8d5b"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/libraries/Selected-p8.FCStd",
+      "bytes": 6164083,
+      "sha256": "b4987c549ab1fad0bdbe3bdae18bcba2e2fd454833ccd5ea5955031bdfb80d27"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/mesh-validation.json",
+      "bytes": 301452,
+      "sha256": "a7fd4444609e3c931cd0dd6653c2ea64e192ca1db568282b0d9a96b15c4a0ba6"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/native-library-p4.json",
+      "bytes": 1812201,
+      "sha256": "00f7703fe10059a18ca993928133ce41b8fcffe06636675f3841d13b87dbe235"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/native-library-p8.json",
+      "bytes": 1024104,
+      "sha256": "c8e4e535371a0b188ecc65ef1167ff400784012bd0edb0b1276cfc81340889b5"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/proof/JointProof.FCStd",
+      "bytes": 127928,
+      "sha256": "4af620fe76a154395ef912908cf84b9076b008d9dc831a1d03e848b648883b42"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/proof/joint-proof.json",
+      "bytes": 54381,
+      "sha256": "67095ca18c3559bb20c099209944abc7e2bdce9f064a76075e0c6c509a8a1518"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/prototypes.json",
+      "bytes": 26090860,
+      "sha256": "e84143ee6180b721e48cc6627656dbeb16ed406dff52c815d09e009cfaaa4887"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/index.json",
+      "bytes": 484,
+      "sha256": "978b556ab6987aa05876667d797a51ca0e695d02a15737812decd644ba853eaa"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p4/Trial-p4.FCStd",
+      "bytes": 139761,
+      "sha256": "3053db675452f4b9c5d5394eb0ef98f7bd98ff24360bbcb1fdc06801ccc77d71"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p4/layout.json",
+      "bytes": 86830,
+      "sha256": "4a8dc584832f8a0478024d89dbb5d0cb68072b0d8ae382069061125cc9036a24"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p4/parts/trial-p4-bridge-lower.step",
+      "bytes": 23474,
+      "sha256": "de97fe689a9c7439fc66ab4468aa26355a84341934274bd3b6fec3e392b87564"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p4/parts/trial-p4-bridge-lower.stl",
+      "bytes": 47484,
+      "sha256": "b170f1392aa1164fda72ef150d2aad75de443baf61bcbbc18b987eb73c0b9def"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p4/parts/trial-p4-bridge-upper.step",
+      "bytes": 29055,
+      "sha256": "2058f93ff4a79cd14b3f5bb44b5b7c63e93aba82228be998de84fc19058a5dd3"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p4/parts/trial-p4-bridge-upper.stl",
+      "bytes": 63084,
+      "sha256": "75b2d251ee10b5c5226b1e3331bdc66545aaf53cf8faf073e47f950a7a159b34"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p4/parts/trial-p4-male-grip.step",
+      "bytes": 12477,
+      "sha256": "f40c57e7947cbc1720aa4c5c8e8850c914fe16fb8318d4a94b57d84ed7b070fe"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p4/parts/trial-p4-male-grip.stl",
+      "bytes": 16284,
+      "sha256": "f20f65e46610318cbda813ac07b1162fb72d48d630326e28eafe6f21204d67cc"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p4/parts/trial-p4-receiver-01.step",
+      "bytes": 14630,
+      "sha256": "bc453f0e7cae0626d5a3f67a7ac4e5f01f1f15b6c161ee358f1549e344078ea6"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p4/parts/trial-p4-receiver-01.stl",
+      "bytes": 9284,
+      "sha256": "ea439692c74702e9252af08cede643684ee9194c19216b8a29662d56b0824f3a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p4/parts/trial-p4-receiver-02.step",
+      "bytes": 19526,
+      "sha256": "730ee2314a676940f2a7e0ff88a29d14941f1ef9f54f63c26424c82d35f11dbd"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p4/parts/trial-p4-receiver-02.stl",
+      "bytes": 10084,
+      "sha256": "8044fdda9307dd7c37e75274345e2de9ca87aa5531f7860acdffc0dd8af5bf09"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p4/parts/trial-p4-receiver-03.step",
+      "bytes": 24412,
+      "sha256": "5ab6980583864004584835d23f4de8ccaa9a19f279d56cf04f39cf4b3971a295"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p4/parts/trial-p4-receiver-03.stl",
+      "bytes": 10884,
+      "sha256": "065d8c8386cf38173618f999e16bec0df52e364b7be374ab958e741a72588ab3"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p4/parts/trial-p4-receiver-04.step",
+      "bytes": 29313,
+      "sha256": "3adf43b9976dfb33c09d56cfc576142961658a7bfd23035a9b7fe484b7c9a068"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p4/parts/trial-p4-receiver-04.stl",
+      "bytes": 11684,
+      "sha256": "5f32933037a5c3f63ccabcda62ae5a29331853cbcf0bbcd15b343b2e6716f6a3"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p4/plate.3mf",
+      "bytes": 28661,
+      "sha256": "ce054bdae89885e9dfc0fe8dfdf5871f1b573ba1fdc25f09f24fe503ee11c69f"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p4/plate.step",
+      "bytes": 207580,
+      "sha256": "20dbd579f6427016d2a52267279bb8842a6e74944c36698098866a1b4a02a34f"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p4/plate.stl",
+      "bytes": 264284,
+      "sha256": "76fbc0193ab8956fa484dd2d36585993daf1375f5e528bfc080f40849fbbdadb"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p4/prototypes.json",
+      "bytes": 104338,
+      "sha256": "2bce4615ec48d52dcb62437a8cd3bf10fece3ecbdd204866fcb46dd29df4980c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p4/staggered-bridge.step",
+      "bytes": 74047,
+      "sha256": "19afd1939c6e2e3e9e114150e6b02f89e13ba8194d38e657b76dea24aaff0009"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p8/Trial-p8.FCStd",
+      "bytes": 140243,
+      "sha256": "5dbedaaf8855b3b4f7dfa98c4d242cb14a129fdea113675dcacd79551d441065"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p8/layout.json",
+      "bytes": 93209,
+      "sha256": "1c9129e8c28de79200f1725da032bdbec10b4823f16d554dedffd7fa9f208da9"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p8/parts/trial-p8-bridge-lower.step",
+      "bytes": 24232,
+      "sha256": "a318142d7a3331d76025bc3afc6dc5076269d57738af6ba11f9a8e323ca32757"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p8/parts/trial-p8-bridge-lower.stl",
+      "bytes": 47484,
+      "sha256": "a1e9650a456004f0fcb9dde99d7f7493898d5dda75d6d9a447cb8c8060b389fd"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p8/parts/trial-p8-bridge-upper.step",
+      "bytes": 29627,
+      "sha256": "fb4c0aa6d2f389183aacb7a46b77643af85f434f077d7b46d3a2702ee4c448b6"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p8/parts/trial-p8-bridge-upper.stl",
+      "bytes": 63084,
+      "sha256": "fd8352cf79a9d3a4ea97b545e6ebfd16e4d64ed3b1dbdc1440690317ce2d1cb6"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p8/parts/trial-p8-male-grip.step",
+      "bytes": 12739,
+      "sha256": "795715ceea8886cea920c7f4ca284a4cc3b61724b1f9137b68762168d57fc98d"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p8/parts/trial-p8-male-grip.stl",
+      "bytes": 16284,
+      "sha256": "ccedfccf33c8f633cf2476657ad4472606e9782fc0ea6c398b6276744c3c5b36"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p8/parts/trial-p8-receiver-01.step",
+      "bytes": 14776,
+      "sha256": "41137df49f7796f6b569011e05be8568f61ad9d15c344340d139b12554325dd0"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p8/parts/trial-p8-receiver-01.stl",
+      "bytes": 9284,
+      "sha256": "a470e4c70e0e31cd6d15fdad5bea4588802204152449895e3187edfb70667687"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p8/parts/trial-p8-receiver-02.step",
+      "bytes": 19660,
+      "sha256": "672b0d2dbb43e0a7b61adad7ec6b28edb4efe488312141c4bf5f2a7fecbe3e94"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p8/parts/trial-p8-receiver-02.stl",
+      "bytes": 10084,
+      "sha256": "eb3452acd9365cfd376769517b32b8d0eff8f37e8dde0ea231bc1a0b6e233ed2"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p8/parts/trial-p8-receiver-03.step",
+      "bytes": 24534,
+      "sha256": "4f04993f5f58519bdb6455571aeab8b02ae38997d5a3e6deade85b872574686d"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p8/parts/trial-p8-receiver-03.stl",
+      "bytes": 10884,
+      "sha256": "b87be09549488be2c67e19d307d599e1b2ee4ca1692f75dc5962071c1913106a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p8/parts/trial-p8-receiver-04.step",
+      "bytes": 29413,
+      "sha256": "f6e00e4091472197a39de93fdb72d8931f2e64831e5f3b6ee7efd0e96f036f57"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p8/parts/trial-p8-receiver-04.stl",
+      "bytes": 11684,
+      "sha256": "6ccb5f7d69f38098eef9b1a9a8015c18b4cc994596fdf1c69e2ca73719433518"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p8/plate.3mf",
+      "bytes": 28800,
+      "sha256": "e6f5c069819dd751fc8c718a9375efb16a44c3f4febee0ad1aa14d9ad742d70a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p8/plate.step",
+      "bytes": 210879,
+      "sha256": "e9d3049447eb02b283b241bfd1d8d4e5a47177b97d312903806f320d8b843f97"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p8/plate.stl",
+      "bytes": 264284,
+      "sha256": "758af0ee7c57862f2d428bf13cbdd06437f0ec8b302deec80a9d5a8f92a955dc"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p8/prototypes.json",
+      "bytes": 105512,
+      "sha256": "6ec7fbc2256b6fe2fd77a497a746b9cfb2385218b2a6c42953e48a04751edb2f"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/trial/p8/staggered-bridge.step",
+      "bytes": 76083,
+      "sha256": "b502051954ca695218dc67e0f90d9ba2d892fc1b2b8fd7a1ea76221f393dc279"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/verify-assemblies.json",
+      "bytes": 1279,
+      "sha256": "3a1ebe624c09b8420087bfbd029c5169c0c70dc5b7da35db3ac86d4afd7005f0"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/verify-joint-proof.json",
+      "bytes": 50386,
+      "sha256": "2cee10ccb0778edd7f4cccda4a4b33d3a563839c7c97256d8b8eff34173022da"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/verify-library-p4.json",
+      "bytes": 51066,
+      "sha256": "1f2d91b4c3aeccb12bdd7f4753f742290a20c2712a73c083b6b614c615274812"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/verify-library-p8.json",
+      "bytes": 28812,
+      "sha256": "516951b07855b30fa2a83a54947a607f562dc05704198f2d8e14de7752387e77"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/verify-trial-p4.json",
+      "bytes": 17530,
+      "sha256": "01747d97439e8f0bb214386e6af6aef1c43e5447d8ab222d2ee4e655213cd3bb"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/cad/verify-trial-p8.json",
+      "bytes": 20148,
+      "sha256": "0f1f1c547e82ad0b5e4dd468d958813c62e3092e9e42a2d46f5dcb4745bf4ba0"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/catalog.json",
+      "bytes": 15659,
+      "sha256": "59a5a92f0ed8dacac938c23f6824ff10b7712dd1a91799f258c615aed9d78dbd"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/comparison-review.jpg",
+      "bytes": 185870,
+      "sha256": "74ea0f3ce3e5462b083e9f3c9b12a4a1689ffb10e72f3b2aeb43efb164e487e0"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/comparison.jpg",
+      "bytes": 413341,
+      "sha256": "558d251ad71309efd58c2a765431e71ae2e7418bb9dd273ff4bc36561b9cdc21"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/copilot-chunky/assembly-repair.json",
+      "bytes": 20981,
+      "sha256": "5f58f147f9cccf14993b555ba5b3d81dd5d8b092ada59d21bce5dae21ef794c0"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/copilot-chunky/assembly-steps.csv",
+      "bytes": 348949,
+      "sha256": "e85c07340d1c6404e20df8d7f5b69008d8fa097393e8bb113345714c6a1533c4"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/copilot-chunky/bom-summary.csv",
+      "bytes": 15633,
+      "sha256": "9ffff4c428fe8e991de0d0c83648f78bc5f7f182401c702b13df201b942e7072"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/copilot-chunky/bom.csv",
+      "bytes": 429703,
+      "sha256": "f93607af387736b359b9943065bf90406e68ad680ed6cf6303764e207a6542e5"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/copilot-chunky/manifest.json",
+      "bytes": 2075820,
+      "sha256": "6cead119a0e8166268f728969f50d4623b6076486a3f0c04d0bd602171b508d3"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/copilot-chunky/preview.png",
+      "bytes": 1556920,
+      "sha256": "2df8da2109fecdef5c7e33a1de88680f8c782d23f21b214673a802c4965ef486"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/copilot-chunky/render-evidence.json",
+      "bytes": 1619,
+      "sha256": "7d7fc0f1af18f68aeaddace85739055f7ae3e5d9dc0e6ac92ac9b7e05a22a64b"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/copilot-chunky/scene.blend",
+      "bytes": 5367390,
+      "sha256": "ef05bfcca2ee52ff60fea7dcf33882f983071999ae1c93e37fef969ef2503d1f"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/copilot-chunky/still-stats.json",
+      "bytes": 403,
+      "sha256": "a9984285bb842cd40c0c7e6b1bcc263989836ac85e0033f96a912351e7cc7ba4"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/copilot-chunky/turntable.mp4",
+      "bytes": 1984952,
+      "sha256": "d8db2309992014a1c53e1f0818b3392e5ad9411b427e2607777c81753a6df312"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/copilot-chunky/video-evidence.json",
+      "bytes": 1786,
+      "sha256": "8524f80491a7166d6c474c720a7b9becd7aa556573d96292bc552e963b4b1ef3"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/copilot-chunky/video-probe.json",
+      "bytes": 1635,
+      "sha256": "dd5be471ebd8e42390570d1a67367e7abb03131d89782c318c61d940802ca9bc"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/copilot-chunky/video-stats.json",
+      "bytes": 404,
+      "sha256": "753286087f057b26fb70fbd08fdb3170b2ce952b810cb604aee077d800064cfd"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/ducky-fine/assembly-repair.json",
+      "bytes": 66317,
+      "sha256": "c02155a312c018f79c1edda57d4d206dc43dacb2c2b68a2ab689c538d1c76bcf"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/ducky-fine/assembly-steps.csv",
+      "bytes": 1195330,
+      "sha256": "0a1b3bdb94fc3492c18161d037581a4f84dab94159cf9f6f58a2400d7dc5b255"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/ducky-fine/bom-summary.csv",
+      "bytes": 19231,
+      "sha256": "ea6dfc01e8428287924f6399647ff8b1ecac040f363ac1aad18987cb58fb58c2"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/ducky-fine/bom.csv",
+      "bytes": 1405860,
+      "sha256": "74b197e918f01b5d87b8fd87a54050c28de3350999a1bda5e680669ba6ca1d23"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/ducky-fine/manifest.json",
+      "bytes": 6905466,
+      "sha256": "33756000f879a3d4b092e8bd8a3da0815370bd2d3ea37a6a5ee8d704fcc22f5a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/ducky-fine/preview.png",
+      "bytes": 1535465,
+      "sha256": "65c0c6498f7f7cdd4b11a0be5aab8474d09010a05be9781a289ae18e484f844c"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/ducky-fine/render-evidence.json",
+      "bytes": 1596,
+      "sha256": "abd97e22b41ae4afd275038714bf71d91a759d52e1b020bfe41d7703318235aa"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/ducky-fine/scene.blend",
+      "bytes": 10076476,
+      "sha256": "d5cb02efe5222dd2c6d87ae0891ac9335a919a5607db9dc49a9a3d1c217efd86"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/ducky-fine/still-stats.json",
+      "bytes": 403,
+      "sha256": "7c7ae0d0242ee9fbedb4615d39b1802e9ab191e31a42beb07bf836e4802a7f37"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/ducky-fine/turntable.mp4",
+      "bytes": 1618511,
+      "sha256": "42bce51532df35607b8bb1d57df3586913c93a88b7da75cd7b241e8a174b7112"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/ducky-fine/video-evidence.json",
+      "bytes": 1760,
+      "sha256": "c9dea332aad0caa9ba6b8ac0228e6ffe0030a073d85c939552b29678efaf34ff"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/ducky-fine/video-probe.json",
+      "bytes": 1631,
+      "sha256": "c1d6892a3628bf6f176622c99a3fc6080c337e020ede36dbd9783afcafd59cfb"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/ducky-fine/video-stats.json",
+      "bytes": 405,
+      "sha256": "1f98a403a297005039131fc00d5b2529b06506351f716e9ec66b6d9a85c6b321"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/evidence/geometry.json",
+      "bytes": 120431,
+      "sha256": "bbd2ad9ab64406f95d21b9647dd539cdd595ae2019e33bdd1dfe9a8dd1c3b24a"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/fit-results-blank.csv",
+      "bytes": 782,
+      "sha256": "60a429e435c20f6247c90e1d7289ba6d52737f85915698dfcd3bda46def12cd7"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/mona-fine/assembly-repair.json",
+      "bytes": 79694,
+      "sha256": "d63494609275afccf6ceee71457e223b8c8e0f63dfcc2f243f60880d6183dcf5"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/mona-fine/assembly-steps.csv",
+      "bytes": 1561799,
+      "sha256": "5c9d47dcad83b0019fffa39089421b4211975aa8aac33902dc1663e1d760b039"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/mona-fine/bom-summary.csv",
+      "bytes": 24413,
+      "sha256": "0090bc3f4bbb2ed1bb9597210470722339aa5670e87928ba55c9d568549585f3"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/mona-fine/bom.csv",
+      "bytes": 1836368,
+      "sha256": "6d010f7da1ac2c01d38c8ad169c5333801b8dc004c97feed8ace06318b9d25c6"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/mona-fine/manifest.json",
+      "bytes": 8957631,
+      "sha256": "5316d06fb48bdb0a850814ab09b2b487a0f4b5f031e29881ad73870c89ab1369"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/mona-fine/preview.png",
+      "bytes": 1635639,
+      "sha256": "0a99c320fb92dd75044ac66f9df526fd1e83ad29a106ff82408166898ffde67e"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/mona-fine/render-evidence.json",
+      "bytes": 1590,
+      "sha256": "84003283b0c5608f0b7cfbfdf0d44c0604d6d45bd2e25c9388d5ab9e2f6af382"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/mona-fine/scene.blend",
+      "bytes": 13563097,
+      "sha256": "4649772f1748eed893041cbd57ab98298404f3e54795c122404945baf65a4701"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/mona-fine/still-stats.json",
+      "bytes": 403,
+      "sha256": "0a29ea016706b0429ce3d7855073ea92464926848c63b267c305e979818164de"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/mona-fine/turntable.mp4",
+      "bytes": 2250803,
+      "sha256": "433affdefb25fb8a8a88748c9f433e0c8697b0d68282aa4a34315463c78c887b"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/mona-fine/video-evidence.json",
+      "bytes": 1752,
+      "sha256": "65ee7dc15bd84878190d3a63143baef44ad702a3f213da8ecb205c09e33215c2"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/mona-fine/video-probe.json",
+      "bytes": 1630,
+      "sha256": "01620a861008413980201259eb99bb69922f56f0c9ee14bb5cca559868b5133b"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/mona-fine/video-stats.json",
+      "bytes": 404,
+      "sha256": "5527621eb898db65adb1561461061b9df941cad586dad4c3969a53500715c93b"
+    },
+    {
+      "path": "artifacts/selected/r2-20260919/type-plan.json",
+      "bytes": 65046,
+      "sha256": "42de9ccf07b4cebf783f504172f5264efb0e55868d1b6c95d7fa310a3e4d767a"
+    },
+    {
+      "path": "design/connector.json",
+      "bytes": 925,
+      "sha256": "a84c71298904dd8aef9f420fbc03cd62d44e8ab37efe9d1bf4f2c5062b05c9f9"
+    },
+    {
+      "path": "design/selected-connectors-v2.json",
+      "bytes": 3180,
+      "sha256": "1da9814dcd23e787e130ef99b0d0e0567b0b79c5ef25d7458a2218465520a3e8"
+    },
+    {
+      "path": "design/selected-designs.json",
+      "bytes": 1767,
+      "sha256": "c975b74aebe8bce94dd441ef45fb0404b76eebe36c10dfad7cdde1d7ce727c40"
+    },
+    {
+      "path": "feedback/2026-09-19/media-manifest.json",
+      "bytes": 5281,
+      "sha256": "2fb83e741a95830fad539fdc4a120b5c6d3d944126eafd61cd1f67d07fbb89fa"
+    },
+    {
+      "path": "feedback/2026-09-19/media/photo-01.jpg",
+      "bytes": 252230,
+      "sha256": "148bd6d705c811f9c77a2f6f20cfaeac2029b03e8c08ad8d1f684b836d82edc5"
+    },
+    {
+      "path": "feedback/2026-09-19/media/photo-02.jpg",
+      "bytes": 605870,
+      "sha256": "085f9b0478f276b6b9614218662d3c9ac385f2b9491eef4e3994c723718feeed"
+    },
+    {
+      "path": "feedback/2026-09-19/media/photo-03.jpg",
+      "bytes": 302779,
+      "sha256": "a629fa4ee4d58882a1cbc658a7df462d1218763ae218512a0836f5577b4cbb9a"
+    },
+    {
+      "path": "feedback/2026-09-19/media/photo-04.jpg",
+      "bytes": 326495,
+      "sha256": "5574e06de3c0a24d857075d57e8610935c9a6cac781963201ad3cc0d8662d8df"
+    },
+    {
+      "path": "feedback/2026-09-19/media/photo-05.jpg",
+      "bytes": 356984,
+      "sha256": "918e3522b9b803f630bc69839c5c0733a62a61871be7c511a1461d42b022bedb"
+    },
+    {
+      "path": "feedback/2026-09-19/media/photo-06.jpg",
+      "bytes": 342238,
+      "sha256": "1835f9c8a46dadd7549bcda8cf1aa96ac1e1d2166478d77324dd90f89fdf3598"
+    },
+    {
+      "path": "feedback/2026-09-19/media/photo-07.jpg",
+      "bytes": 400252,
+      "sha256": "3ae4f1a046cdfb5f9aa02d4705453d30b135f647ee8fb3345ff815ef47fae5ea"
+    },
+    {
+      "path": "feedback/2026-09-19/media/photo-08.jpg",
+      "bytes": 461113,
+      "sha256": "ff27d697dca6bd1b9e3fc1906e88f883f51935607fd3a1e04159589042e36a8a"
+    },
+    {
+      "path": "feedback/2026-09-19/media/photo-09.jpg",
+      "bytes": 544549,
+      "sha256": "006a3127eabf12f7dd6d9727a6c2bc861368aaf146e5dc27af68bfeb9f306bd0"
+    },
+    {
+      "path": "feedback/2026-09-19/media/photo-10.jpg",
+      "bytes": 572991,
+      "sha256": "0811d1121ff238f8d4f8759f69b9e4e9f1cb66b2b4ecb7ecf371d9ef1cb2bfe9"
+    },
+    {
+      "path": "feedback/2026-09-19/media/trial-feedback-combined.mp4",
+      "bytes": 14847020,
+      "sha256": "e44c57632d5c7760d6e4618a61eb008257f1f1dc4bee8a12cb3831cd7e9092e6"
+    },
+    {
+      "path": "feedback/2026-09-19/media/video-01-silent.mp4",
+      "bytes": 12190294,
+      "sha256": "6c6bc616b2d3b2f625b051959f3b1429af624569e1c5541d0971d08acb929486"
+    },
+    {
+      "path": "feedback/2026-09-19/media/video-02-silent.mp4",
+      "bytes": 2657191,
+      "sha256": "6faa42e12fa038fbfbeb25af6e0d616574b429432b668d14eaf7bd661e216861"
+    },
+    {
+      "path": "p4-trial-11-parts.3mf",
+      "bytes": 28661,
+      "sha256": "ce054bdae89885e9dfc0fe8dfdf5871f1b573ba1fdc25f09f24fe503ee11c69f"
+    },
+    {
+      "path": "p4-trial-11-parts.stl",
+      "bytes": 264284,
+      "sha256": "76fbc0193ab8956fa484dd2d36585993daf1375f5e528bfc080f40849fbbdadb"
+    }
+  ]
+}

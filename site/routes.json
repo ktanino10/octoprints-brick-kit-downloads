@@ -1,0 +1,9 @@
+{
+  "home": {"template": "index.html", "legacy": "index.html", "localized": "index.html"},
+  "downloads": {"template": "downloads.html", "legacy": "downloads.html", "localized": "downloads.html"},
+  "feedback": {"template": "feedback.html", "legacy": "feedback.html", "localized": "feedback.html"},
+  "history": {"template": "history.html", "legacy": "history.html", "localized": "history.html"},
+  "viewer": {"template": "viewer.html", "legacy": "viewer/index.html", "localized": "viewer/index.html"},
+  "gallery-phase1": {"template": "gallery-phase1.html", "legacy": "artifacts/phase1/gallery.html", "localized": "gallery/phase1.html"},
+  "gallery-selected": {"template": "gallery-selected.html", "legacy": "artifacts/selected/r2-20260919/gallery.html", "localized": "gallery/selected.html"}
+}

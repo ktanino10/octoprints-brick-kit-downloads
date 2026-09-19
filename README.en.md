@@ -1,0 +1,152 @@
+# Octoprints — A public archive of prototypes and improvements
+
+[日本語](README.md) / [English](README.en.md)
+
+**[Public site / English](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/)** ·
+**[Assembly viewer](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/viewer/)** ·
+**[All downloads](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/downloads.html)** ·
+**[Physical feedback](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/feedback.html)** ·
+**[Design history](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/history.html)** ·
+**[Versioned ZIP downloads](https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/tag/archive-2026-09-19-r2)**
+
+[Public repository](https://github.com/ktanino10/octoprints-brick-kit-downloads) ·
+[日本語サイト](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/).
+The legacy root URLs remain available:
+[home](https://ktanino10.github.io/octoprints-brick-kit-downloads/),
+[viewer](https://ktanino10.github.io/octoprints-brick-kit-downloads/viewer/),
+[downloads](https://ktanino10.github.io/octoprints-brick-kit-downloads/downloads.html),
+[feedback](https://ktanino10.github.io/octoprints-brick-kit-downloads/feedback.html), and
+[history](https://ktanino10.github.io/octoprints-brick-kit-downloads/history.html).
+
+This is a noncommercial prototype record for approximately 180 mm-tall Mona, Copilot, and Ducky models assembled from independent bricks.
+**Prototype: issues were found in the first physical trial; redesign is under discussion. Full-kit printing is ON HOLD.**
+Actual parts have been printed, and small, difficult-to-handle parts and blocked holes were reported.
+The holes were blocked **before** post-print ultrasonic cleaning. The cause, actual slicer profile, notch-specific results, and retention remain unknown.
+The trial is not a pass for physical fit, retention, or full physical assembly. All distributed geometry remains **NOT_SLICED**.
+
+## What the archive contains
+
+| Category | Preserved work |
+|---|---|
+| Phase1 candidates | Three characters at three detail levels: **9 candidates**, 9 images, **9 Blender scenes**, **3 Balanced videos**, individual/aggregate bills of materials (BOMs), and placements. |
+| Selected r2 | Mona Fine 4 mm / Copilot Chunky 8 mm / Ducky Fine 4 mm: 3 images, 3 Blender scenes, 3 videos, BOMs, proposed assembly sequences, and part IDs. |
+| Native CAD | The r2 assemblies have **26,766 individual instances sharing 236 native types**: 2 shared FreeCAD libraries, 3 assemblies, and STEP/STL files by type. The legacy version preserves **21 basic types** and **5 historical 6 mm coupons**. |
+| Trials and aids | Separate 4 mm and 8 mm trial sets, **11 parts each**, with 3MF/STL/STEP, FreeCAD, layouts, and a results CSV; left/right temporary supports for Mona's whiskers. The two legacy root-level 4 mm downloads are unchanged. |
+| Physical feedback | 10 metadata-sanitized JPEGs, 2 silent MP4s plus 1 combined MP4 in the corrected order, and records of the issues and redesign discussion. |
+
+The selected r2 part counts are **Mona Fine 4 mm: 13,434 / Copilot Chunky 8 mm: 3,021 / Ducky Fine 4 mm: 10,311**.
+Selection for appearance is separate from manufacturing approval. Changes to grouping changed the seams; pixel-for-pixel identity with Phase1 is not claimed.
+
+- [Static gallery of all 9 candidates](artifacts/phase1/gallery.html) / [Selected r2 images and videos](artifacts/selected/r2-20260919/gallery.html).
+- [Physical photos, videos, and reports](feedback/2026-09-19/README.en.md) / [Feedback page](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/feedback.html).
+- [Design history and unresolved conditions](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/history.html).
+- [Complete file inventory, sizes, and SHA-256 hashes](archive/inventory.json) / [Checksums](archive/SHA256SUMS.txt).
+- [Public-copy metadata cleanup and native-geometry preservation record](archive/portability.json).
+- [English archive and ZIP guide](docs/ARCHIVE.en.md) / [English r2 trial guide](docs/TRIAL-GUIDE.en.md).
+
+The four existing ZIP packages at **`archive-2026-09-19-r2` are immutable archives**.
+They retain their original documents; these English companions are provided separately, outside the ZIPs.
+
+To open a FreeCAD assembly, extract the entire ZIP and preserve the relative layout of `cad/assemblies/` and `cad/libraries/`.
+There are **11 FreeCAD documents and 12 Blender scenes in total**.
+The 26,766 instances are not 26,766 separately supplied STL files.
+The viewer supports the assembled model, exploded view, layers, proposed assembly sequence, part IDs, BOM, viewpoints, and videos.
+It does not run CAD, slice geometry, or operate a printer from the browser.
+
+The originating development repository and history, runtime environment, conversations, and internal logs are not included.
+Where local paths or other metadata were cleaned up, source hashes and public-file hashes are distinguished.
+Use the public inventory to verify current downloads. Historical numerical checks must not be read as physical approval.
+
+For the selected r2 4 mm joint, the inlet wall was revised from the old **0.877 mm** to **1.21 mm**.
+The stud has a **1.10 mm stem diameter, 0.98 mm tip diameter, and 0.60 mm height**.
+These are CAD dimensions; strength and retention have not been validated.
+
+## Desired output modes — pending clarification
+
+The requested direction is **printing separate parts and assembling them afterward**, plus a proposed **“print everything at once”** alternative.
+The second option is **not yet defined**: it could mean printing the assembled model as one piece, or batch-printing still-separate parts on one plate.
+A one-piece model has not been selected. No new printable files have been supplied or approved, and no redesign, slicing, or printing has been performed for this request.
+**Full-kit printing remains ON HOLD.** This intention is separate from the existing trial record.
+
+## Legacy 4 mm joint and small trial set
+
+The following preserves the historical preparation and observation procedure; it is **not a current instruction to reprint**.
+
+> **2026-09-19 physical feedback: redesign under discussion**
+>
+> The trial parts were reported to be “small and difficult to make,” with “some holes filled with plastic.”
+> The current design will not be carried directly into full-model printing. The files below remain as a record of the earlier trial.
+> Read the [photos, videos, and redesign discussion](feedback/2026-09-19/README.en.md).
+> The rights for these photos and videos are explained in that record's “Photo and video rights” section.
+
+**NOT_SLICED — These trial parts are unsliced, and a physical-fit pass has not been confirmed. Issues were reported in the first physical trial.**
+
+These files are for comparing joints under the design assumption of a **Bambu Lab P1S, 0.2 mm nozzle, and PLA**.
+They are not a Bambu Studio project with printer settings, G-code, or print-ready data.
+A 0.2 mm nozzle does not guarantee that the thin stem will resist breakage, or that fit and retention will be satisfactory.
+
+### Downloads
+
+- [Geometry-only 3MF with 11 parts](p4-trial-11-parts.3mf) — Layout data referencing shared types. This is normally the preferred input.
+- [STL of the same 11 parts](p4-trial-11-parts.stl) — Units are millimeters. This is an alternative to the 3MF, not an additional set.
+
+**Do not load the 3MF and STL together on the same plate: doing so duplicates the parts. Use only one.**
+Download through the GitHub file page and confirm that the saved file still has its `.3mf` or `.stl` extension.
+
+### Contents
+
+| Part | Quantity |
+|---|---:|
+| Receivers identified by 1–4 notches | 1 of each; 4 total |
+| Common male keys | 4 |
+| Lower parts of the offset joint | 2 |
+| Upper part of the offset joint | 1 |
+| Total | **11** |
+
+Receiver notch counts **1 / 2 / 3 / 4** correspond to diameter differences of **−0.05 / 0 / +0.10 / +0.20 mm**.
+The difference is **the receiver's straight bore diameter minus the male stem diameter**, not a per-side clearance.
+The −0.05 mm condition is intentional nominal interference.
+Even keys printed from the same type can differ physically or wear, so use a separate key for each condition.
+
+### Preparing in Bambu Studio on another PC
+
+1. Open the geometry-only 3MF and select an **existing preset for the actual Bambu Lab P1S / 0.2 mm nozzle**.
+   If that preset is not available, stop. Do not substitute another printer or a 0.4 mm nozzle preset.
+2. Select the plate type and PLA that will actually be used. This pack does not specify a PLA brand, color, or plate type.
+   An existing, compatible Generic PLA preset may be a provisional candidate, but it must be checked against the actual material.
+   Use compatible existing profiles for layer height, temperature, speed, and other settings; record the profile names and values used.
+3. Confirm that there are **11 parts**. **Receiver holes face down, male stems face up, and the bottoms are at z=0.**
+   Do not change orientation or size by automatic rotation or scaling.
+   The layout is within a nominal **256 × 256 mm** area, but must be checked again against the selected printer and plate.
+4. Slice locally and inspect the layer preview.
+   Check that receiver holes are not unintentionally filled at their entrances, that paths for the thin male stems have not disappeared,
+   that the hole roofs have bridging and top-surface paths, and that unwanted supports do not block the holes.
+   If there are warnings or anything you cannot judge, stop for review rather than proceeding to printing.
+5. Record the selected printer, nozzle, material and process profiles, layer height, warnings, and preview.
+   Save a Bambu Studio project locally under a **different name from the original file**.
+   Record print time and PLA quantity only from an actual slice using those settings; do not substitute estimates based on geometry alone.
+
+This pack has not validated profile compatibility, layer previews, print time, PLA quantity, or supports.
+Confirming that geometry exists and fits in a layout is not a slicing pass or a physical manufacturing guarantee.
+There is no automatic printer connection or Print/Send function.
+**Do not connect to a printer or use Send/Print as part of this preparation.**
+
+### Minimum observations for a physical trial
+
+Begin with the loosest condition, **+0.20 mm (4 notches)**. If it is tight, stop rather than forcing it.
+
+- Actual nozzle diameter, PLA, plate, profiles used, and layer height.
+- Whether the part seats without excessive force, with any incomplete seating, play, or bottoming-out noted.
+- Whether the key falls out under its own weight when the receiver is gently turned upside down.
+- Cracks, stress whitening, or looseness after **5 insertion/removal cycles**, and any damage to the receiver roof. If possible, include photographs and the male stem's outside diameter.
+
+There is no need to force calipers into the small holes. Record unmeasured values as unknown.
+Only try the **3-part offset joint** after basic fit has been checked.
+This small trial does not validate the loads, impacts, or assembly feasibility of the large model.
+
+**Physical fit, retention, and full physical assembly remain unvalidated. This is not a final manufacturing release.**
+
+## License and attribution
+
+The model-derived data is for noncommercial experimentation under [CC BY-NC 4.0](LICENSE).
+See [ATTRIBUTION.en.md](ATTRIBUTION.en.md) for upstream credit, modifications, trademark notices, and the separate rights for contributor-owned physical-feedback photos and videos.

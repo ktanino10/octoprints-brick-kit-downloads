@@ -169,7 +169,7 @@ def classify(name):
         return "selected", REVISION
     if name.startswith("viewer/"):
         return "viewer", "public-viewer-2026-09-19"
-    if name.startswith(("design/", "archive/")):
+    if name.startswith(("design/", "archive/", "docs/")):
         return "design", REVISION
     return "site", "public-archive-2026-09-19"
 
@@ -178,6 +178,8 @@ def make_inventory():
     source = {entry["path"]: entry for entry in json.loads((ROOT / "archive/source-inventory.json").read_text())["files"]}
     names = all_files("artifacts") + all_files("design") + all_files("feedback") + all_files("assets")
     names += all_files("viewer/assets") + ["viewer/index.html"]
+    names += all_files("ja") + all_files("en") + all_files("docs")
+    names += ["README.en.md", "ATTRIBUTION.en.md"]
     names += ["p4-trial-11-parts.3mf", "p4-trial-11-parts.stl", "index.html", "downloads.html",
               "feedback.html", "history.html", "LICENSE", "ATTRIBUTION.md", "README.md",
               "archive/status.json", "archive/portability.json", "archive/source-inventory.json",

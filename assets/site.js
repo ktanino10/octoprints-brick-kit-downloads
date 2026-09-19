@@ -1,3 +1,5 @@
+import { assetURL, numberLocale } from './i18n.js';
+
 const $ = (selector) => document.querySelector(selector);
 const selected = new Set(['mona-fine', 'copilot-chunky', 'ducky-fine']);
 const styles = { chunky: 'A / Chunky', balanced: 'B / Balanced', fine: 'C / Fine' };
@@ -14,7 +16,7 @@ const create = (tag, className, text) => {
   if (text !== undefined) node.textContent = text;
   return node;
 };
-const number = (n) => n.toLocaleString('ja-JP');
+const number = (n) => n.toLocaleString(numberLocale());
 
 export async function readJSON(path) {
   const response = await fetch(publicURL(path), { credentials: 'omit', signal: AbortSignal.timeout(20000) });
@@ -98,7 +100,7 @@ function initializeVideoDisclosures() {
       details.querySelectorAll('video').forEach((video) => {
         if (details.open && !video.querySelector('source') && video.dataset.videoUrl) {
           const source = create('source');
-          source.src = video.dataset.videoUrl;
+          source.src = assetURL(video.dataset.videoUrl);
           source.type = 'video/mp4';
           video.preload = 'metadata';
           video.append(source);

@@ -4,9 +4,12 @@
 
 ```sh
 npm ci --prefix viewer --no-audit --no-fund
+node viewer/scripts/extract-i18n.mjs
+python3 tools/localize_pages.py build
 npm test --prefix viewer
 npm run build --prefix viewer
 python3 tools/validate_archive.py
+python3 tools/validate_bilingual.py
 python3 tools/build_site.py
 ```
 
@@ -46,3 +49,25 @@ ZIPの中身を変更するときは新しい版・Releaseを使用し、既存�
 `verify_native.py` は展開済みFreeCADを再計算・保存せず開くだけです。
 `make_portability.py` は形状ストリーム・配置・ピクセルの比較結果をパス情報なしの公開記録へまとめます。
 これらは初回移植で使用した手順で、通常のサイト配信からは実行しません。
+
+## 日英ページの保守
+
+`site/templates/` が7ページの共通HTML、`site/routes.json` が既存URLと `/ja/`・`/en/` の対応です。
+ルートの既存日本語ページを含む21個の薄いHTMLを生成し、画像・動画・CAD・モデルJSONは共有します。
+生成されたHTMLや `assets/translations.js` を直接編集せず、テンプレートと `site/i18n/*.en.json` を更新してください。
+
+日本語の原文をメッセージIDとするカタログです。動的テキストはASTから抽出し、`{0}` 等の変数を
+英訳でも維持します。HTMLはパーサーで組み立て、実行時は表示テキストと説明属性だけを更新します。
+`innerHTML`、外部翻訳API、ブラウザー言語による自動リダイレクトは使用しません。
+文字列が欠落した英語表示は明示エラーになり、ビルドとブラウザー検査でも検出します。
+
+モデルのID・数値・列挙値・JSON・CSVは翻訳しません。ファイル一覧のパスと取得先も対応を固定します。
+言語切替は同じDOM/3Dキャンバス上で行い、部品選択・進行・検索・BOM・視点を維持します。
+ビューアの共有URLにも状態を持たせ、新しいタブや再読み込み時は型・範囲・IDを検証して復元します。
+言語はURLとHTMLで明示し、localStorageやブラウザーの既定言語に依存しません。
+
+言語変更だけの作業で `prepare` や `bundles` を再実行しないでください。
+`site/immutable-artifacts.json` は既存の制作物・媒体・Releaseメタデータを固定し、
+`validate_bilingual.py` がハッシュの不変と共有アセットの利用を検証します。
+`browser_bilingual.py` は日英の本文・aria・エラー、3体の実WebGL、切替前後の状態、
+深い共有URL・再読み込み、390px表示、既存URL互換を確認します。
