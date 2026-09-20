@@ -62,7 +62,7 @@ function catalog() {
     prototypes_url: 'cad/prototypes.json',
     candidates: ['mona', 'copilot', 'ducky'].map((character) => {
       const id = `${character}-practical8`;
-      return { id, character, style: 'practical8', pitch_mm: 8, metrics: manifest().metrics,
+      return { id, character, style: 'practical8', pitch_mm: 8, metrics: manifest().metrics, status: { ...status },
         manifest_url: `${id}/manifest.json`, render_url: `${id}/assembled.png`,
         exploded_url: `${id}/exploded.png`, blend_url: `${id}/scene.blend`,
         video_url: `${id}/turntable.mp4`, bom_url: `${id}/bom.csv`,

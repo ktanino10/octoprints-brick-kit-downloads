@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "revision": "r3-8mm-20260920",
+  "tag": "archive-2026-09-20-r3",
+  "bundles": [
+    {
+      "filename": "r3-8mm-nine-brick-trial-NOT-SLICED.zip",
+      "label": "新版の9部品試験セット",
+      "description": "新しい2×2・2×4接合部と薄いプレート、ネイティブCAD・STEP/STL・形状3MF・日英試験ガイド。",
+      "revision": "r3-8mm-20260920",
+      "status": "PROTOTYPE_NOT_SLICED",
+      "file_count": 29,
+      "bytes": 4257474,
+      "sha256": "095547b1202b1fe672bfd7b9f0a88aba155ca7576fb76dfb78efdede85bd506d",
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/archive-2026-09-20-r3/r3-8mm-nine-brick-trial-NOT-SLICED.zip"
+    },
+    {
+      "filename": "r3-8mm-all-parts-NOT-SLICED.zip",
+      "label": "新版の全個別部品・共有CAD・色別配置",
+      "description": "133型のSTL/STEP、相対参照付き共有CADと3体、33色別3MF、BOM・日英組立ガイド。",
+      "revision": "r3-8mm-20260920",
+      "status": "PROTOTYPE_NOT_SLICED",
+      "file_count": 563,
+      "bytes": 96116100,
+      "sha256": "c8e8d47c3ff51171574e7344a63071ec3276f8288600594250efd8fad0fad269",
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/archive-2026-09-20-r3/r3-8mm-all-parts-NOT-SLICED.zip"
+    },
+    {
+      "filename": "r3-8mm-20260920-media.zip",
+      "label": "共通ブロック・Blenderと画像・動画",
+      "description": "同じ版のBlenderシーン、完成形・分解画像、3体のターンテーブルと寸法図。",
+      "revision": "r3-8mm-20260920",
+      "status": "PROTOTYPE_NOT_SLICED",
+      "file_count": 218,
+      "bytes": 73849142,
+      "sha256": "732154a32b701752d975eb4139265d0f2dbac8c3b762028fb0c1c06a21683b31",
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/archive-2026-09-20-r3/r3-8mm-20260920-media.zip"
+    }
+  ]
+}

@@ -172,8 +172,10 @@ export class PartsInspector {
         const type = this.manifest.types[part.type_id];
         values.push(['支持・保持', SUPPORT_CLASSES[part.support_class]]);
         values.push(['実機状態', '嵌合・保持力未確認 / UNKNOWN']);
-        values.push(['占有形状', `${type.footprint_cells.length}セル / 外接 ${type.cells.join(' × ')}セル`]);
-        values.push(['組み替え', part.changed_grouping ? '基準部品を組み替え' : '基準のまとまりを維持']);
+        if (this.manifest.schema_version === 2) {
+          values.push(['占有形状', `${type.footprint_cells.length}セル / 外接 ${type.cells.join(' × ')}セル`]);
+          values.push(['組み替え', part.changed_grouping ? '基準部品を組み替え' : '基準のまとまりを維持']);
+        }
       }
       for (const [label, value] of values) {
         const row = element('div');

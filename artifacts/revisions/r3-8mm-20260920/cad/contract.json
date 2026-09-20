@@ -1,0 +1,71 @@
+{
+  "schema_version": 3,
+  "revision": "r3-8mm-20260920",
+  "units": "mm",
+  "origin": "body-bottom-center",
+  "scope": "full",
+  "counts": {
+    "proof_types": 3,
+    "trial_types": 9,
+    "trial_pieces": 9,
+    "planned_native_types": 133,
+    "figure_assemblies": 3,
+    "figure_instances": 1627,
+    "native_archives": 7,
+    "individual_stl": 145,
+    "illustration_stl": 1
+  },
+  "status": {
+    "physical_fit": "UNKNOWN",
+    "retention_strength": "UNKNOWN",
+    "slicer_status": "NOT_SLICED",
+    "production_export": "BLOCKED"
+  },
+  "source": {
+    "basis": "Mechanical principle and dimensional values supplied by the user; independently implemented here",
+    "not_official_lego_dimensions": true,
+    "commercial_brick_compatibility": "NOT_CLAIMED",
+    "private_reference_assets_or_code_copied": false,
+    "personalization": "NONE"
+  },
+  "config_sha256": "20d5accb2427cb1bcb33116eb112ca47dc5a60332b3cccbfc37c3368c2e93005",
+  "native_feature_tree": "Proxy-free native planes/lofts/boxes/cylinders/cones/booleans with editable expressions",
+  "polyomino_cavity": "Continuous sharp inset outline formed from owned row runs and shared-row bridges, not per-cell blind holes",
+  "tube_engagement": "Male stems fit OUTSIDE tubes, between tubes/posts and perimeter walls; tube bores stay open through roof ribs",
+  "fit_variables": "Male diameter correction and female RADIAL clearance are independent",
+  "physical_fit": "UNKNOWN",
+  "retention_strength": "UNKNOWN",
+  "slicer_status": "NOT_SLICED",
+  "not_print_approval": true,
+  "printing_or_sending": "NOT_AUTHORIZED",
+  "native_colors": "Explicit logical ColorId and editable native DisplayColorRGB; no GUI renderer was run",
+  "editing": [
+    "Edit each Parameters_* node. BodyHeight, dimensions, male diameter correction, and female radial clearance drive native expressions.",
+    "Topology and stud masks are fixed per type. Select another archetype or regenerate the plan to change owned cells.",
+    "Export only the named final solid, not the hidden construction tree. Trial print layout has exactly nine listed parts.",
+    "Retest the native assembly contract after edits; the saved figures are nominal placements, not a physical fit approval."
+  ],
+  "verification": "Actual BRep validity/sections/COM, native insertion/bearing, separate-process moved-copy reopening, dimension edits and mesh manifold validation",
+  "illustrations": [
+    {
+      "source_type_id": "BR-02x04-H096",
+      "stl": "illustration/BR-02x04-H096-cutaway-x-positive.stl",
+      "metadata": "illustration/BR-02x04-H096-cutaway-x-positive.json",
+      "role": "ILLUSTRATION_ONLY_NOT_A_KIT_OR_TRIAL_PART",
+      "source_master_meshes": [
+        "parts/BR-02x02-H096.stl",
+        "parts/BR-02x04-H096.stl"
+      ]
+    }
+  ],
+  "tessellation": {
+    "source": "Actual native FreeCAD BRep / MeshPart.meshFromShape",
+    "linear_deflection_mm": 0.01,
+    "angular_deflection_rad": 0.12,
+    "rounding_decimals": 8,
+    "maximum_circle_chord_error_mm": 0.01,
+    "meaning": "Digital mesh fidelity only; NOT a printed tolerance or physical fit claim"
+  },
+  "mesh_fidelity_report": "mesh-fidelity.json",
+  "maximum_measured_facet_radial_error_bound_mm": 0.0043054557727635326
+}

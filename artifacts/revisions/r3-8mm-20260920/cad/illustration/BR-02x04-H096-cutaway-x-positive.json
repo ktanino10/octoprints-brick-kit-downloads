@@ -1,0 +1,244 @@
+{
+  "schema_version": 3,
+  "revision": "r3-8mm-20260920",
+  "units": "mm",
+  "purpose": "ILLUSTRATION_ONLY_NOT_A_KIT_OR_TRIAL_PART",
+  "paths_relative_to": "cad",
+  "source_type_id": "BR-02x04-H096",
+  "source_native_library": "libraries/CommonLibrary.FCStd",
+  "source_native_object": "Parameters_765de06bc3b1_FinalSolid",
+  "source_native_sha256": "96f8093f8e3c3bdbc006756e34b3c92561a26e85e7011ee2847cb7d0e4725dfb",
+  "source_volume_mm3": 2729.4413956012,
+  "source_meshes_unchanged": {
+    "BR-02x02-H096": {
+      "stl": "parts/BR-02x02-H096.stl",
+      "sha256": "4e41b7c134ca18fc06b28ee536a5608c99c440cb64b567ae4f679bbf673d1625"
+    },
+    "BR-02x04-H096": {
+      "stl": "parts/BR-02x04-H096.stl",
+      "sha256": "4dbd0e2a7325ee5b7e6317606f980fad2aae1350279c568ab6d242ddd5cf23f4"
+    }
+  },
+  "method": "Actual FreeCAD source BRep intersected with a positive-X half-space box, then native MeshPart tessellation",
+  "cut_plane": {
+    "axis": "X",
+    "coordinate_mm": 0,
+    "keep": "positive X",
+    "outward_cut_normal": [
+      -1,
+      0,
+      0
+    ]
+  },
+  "origin": "Unchanged source master body-bottom-center; the half is NOT recentered",
+  "stl": "illustration/BR-02x04-H096-cutaway-x-positive.stl",
+  "stl_sha256": "a687562b7bb02fc234ef9d7a1c4551b98ef937cfc96fe0cbb71c8180f92db5bf",
+  "measurement": {
+    "valid": true,
+    "solid_count": 1,
+    "volume_mm3": 1364.720697800602,
+    "bounds_mm": [
+      [
+        -1e-07,
+        -15.9000001,
+        -1.0000000027052896e-07
+      ],
+      [
+        7.9,
+        15.900000099999998,
+        11.4
+      ]
+    ],
+    "brep_faces": 63,
+    "bounds_method": "Native OpenCascade optimalBoundingBox(False, False), without triangulation; ordinary BoundBox includes untrimmed loft support surfaces after the Boolean cut",
+    "mesh_vertices": 2351,
+    "mesh_faces": 4698,
+    "mesh_volume_mm3": 1364.52328325766,
+    "center_of_mass_mm": [
+      4.233145916046957,
+      -9.215516730436023e-16,
+      6.0829632877351365
+    ],
+    "native_cut_face_count": 1,
+    "native_cut_face_area_mm2": 163.10365337928903,
+    "native_roof_away_from_ribs_mm": 1.5999999999999996,
+    "native_roof_spans_mm": [
+      [
+        [
+          2.0,
+          4.0,
+          8.0
+        ],
+        [
+          2.0,
+          4.0,
+          9.6
+        ]
+      ]
+    ],
+    "three_half_tube_walls_present": true,
+    "three_half_bores_open": true
+  },
+  "native_tool": {
+    "freecad": "1.1.3",
+    "opencascade": "7.8.1",
+    "gui_up": 0
+  },
+  "created_at": "2026-09-20T12:42:08.116018+00:00",
+  "status": {
+    "physical_fit": "UNKNOWN",
+    "retention_strength": "UNKNOWN",
+    "slicer_status": "NOT_SLICED",
+    "production_export": "BLOCKED"
+  },
+  "notes": [
+    "The longitudinal cut exposes all three real between-stud tube axes and preserves four complete top studs.",
+    "The cut plane also intersects the real longitudinal roof rib. Its visible web includes the 1.6 mm roof plus 1.2 mm rib; the roof away from ribs remains 1.6 mm.",
+    "View from negative X, slightly below the roof, to see the real cavity and tube bores. No cavity geometry was drawn or fabricated for the illustration.",
+    "Use the unmodified master meshes for full 2x2/2x4 underside views. This cutaway is not another trial piece and changes no type-plan or figure inventory."
+  ],
+  "tessellation": {
+    "source": "Actual native FreeCAD BRep / MeshPart.meshFromShape",
+    "linear_deflection_mm": 0.01,
+    "angular_deflection_rad": 0.12,
+    "rounding_decimals": 8,
+    "maximum_circle_chord_error_mm": 0.01,
+    "meaning": "Digital mesh fidelity only; NOT a printed tolerance or physical fit claim"
+  },
+  "mesh_refreshed_at": "2026-09-20T12:57:11.155509+00:00",
+  "mesh_validation": {
+    "watertight": true,
+    "winding_consistent": true,
+    "positive_volume": true,
+    "connected_components": 1,
+    "vertices": 2351,
+    "triangles": 4698,
+    "volume_mm3": 1364.5232823788813,
+    "bounds_mm": [
+      [
+        -0.0,
+        -15.899999618530273,
+        0.0
+      ],
+      [
+        7.900000095367432,
+        15.899999618530273,
+        11.399999618530273
+      ]
+    ],
+    "relative_volume_error": 0.00014465628171311806
+  },
+  "circular_fidelity": {
+    "result": "PASS",
+    "meaning": "Digital mesh fidelity only; NOT a printed tolerance or physical fit claim",
+    "method": "Actual STL side facets: maximum reference radius times angular chord loss, plus measured vertex radial error; includes STL float32 roundoff. Horizontal end caps excluded.",
+    "maximum_radial_error_bound_mm": 0.004215821532606257,
+    "maximum_angular_span_rad": 0.11855089185040768,
+    "surface_count": 17,
+    "side_facets": 3094,
+    "surfaces": {
+      "stud-4-stem": {
+        "side_facets": 210,
+        "maximum_angular_span_rad": 0.05984010021075292,
+        "maximum_vertex_radial_error_mm": 4.5593845943159295e-07,
+        "maximum_radial_error_bound_mm": 0.0010746200198005873
+      },
+      "stud-4-tip": {
+        "side_facets": 316,
+        "maximum_angular_span_rad": 0.11855089185040768,
+        "maximum_vertex_radial_error_mm": 7.967353838900237e-07,
+        "maximum_radial_error_bound_mm": 0.004215821532606257
+      },
+      "stud-5-stem": {
+        "side_facets": 210,
+        "maximum_angular_span_rad": 0.05984006158842803,
+        "maximum_vertex_radial_error_mm": 2.4291344846716356e-07,
+        "maximum_radial_error_bound_mm": 0.0010744095259307862
+      },
+      "stud-5-tip": {
+        "side_facets": 316,
+        "maximum_angular_span_rad": 0.11855085920115993,
+        "maximum_vertex_radial_error_mm": 6.944705130962348e-07,
+        "maximum_radial_error_bound_mm": 0.00421566414832491
+      },
+      "stud-6-stem": {
+        "side_facets": 210,
+        "maximum_angular_span_rad": 0.05984006158842803,
+        "maximum_vertex_radial_error_mm": 2.4291344846716356e-07,
+        "maximum_radial_error_bound_mm": 0.0010744095259307862
+      },
+      "stud-6-tip": {
+        "side_facets": 316,
+        "maximum_angular_span_rad": 0.11855085920115904,
+        "maximum_vertex_radial_error_mm": 6.944705130962348e-07,
+        "maximum_radial_error_bound_mm": 0.004215664148325176
+      },
+      "stud-7-stem": {
+        "side_facets": 210,
+        "maximum_angular_span_rad": 0.05984010021075292,
+        "maximum_vertex_radial_error_mm": 4.5593845943159295e-07,
+        "maximum_radial_error_bound_mm": 0.0010746200198005873
+      },
+      "stud-7-tip": {
+        "side_facets": 316,
+        "maximum_angular_span_rad": 0.11855089185040768,
+        "maximum_vertex_radial_error_mm": 7.967353838900237e-07,
+        "maximum_radial_error_bound_mm": 0.004215821532606257
+      },
+      "tube-0-outside": {
+        "side_facets": 114,
+        "maximum_angular_span_rad": 0.05977829080259767,
+        "maximum_vertex_radial_error_mm": 4.426350219688402e-07,
+        "maximum_radial_error_bound_mm": 0.0014371960649959628
+      },
+      "tube-0-entry": {
+        "side_facets": 108,
+        "maximum_angular_span_rad": 0.05817788907441379,
+        "maximum_vertex_radial_error_mm": 4.2019486512501203e-07,
+        "maximum_radial_error_bound_mm": 0.0013613114296608508
+      },
+      "tube-0-bore-not-stud-socket": {
+        "side_facets": 108,
+        "maximum_angular_span_rad": 0.05817786888558185,
+        "maximum_vertex_radial_error_mm": 4.227006915602516e-07,
+        "maximum_radial_error_bound_mm": 0.000677303208062563
+      },
+      "tube-1-outside": {
+        "side_facets": 114,
+        "maximum_angular_span_rad": 0.05977819431574094,
+        "maximum_vertex_radial_error_mm": 1.19643112306278e-07,
+        "maximum_radial_error_bound_mm": 0.0014369141206544158
+      },
+      "tube-1-entry": {
+        "side_facets": 108,
+        "maximum_angular_span_rad": 0.058177673270534136,
+        "maximum_vertex_radial_error_mm": 1.2759039824672413e-07,
+        "maximum_radial_error_bound_mm": 0.001361018364114705
+      },
+      "tube-1-bore-not-stud-socket": {
+        "side_facets": 108,
+        "maximum_angular_span_rad": 0.05817770435722913,
+        "maximum_vertex_radial_error_mm": 6.254882456424582e-08,
+        "maximum_radial_error_bound_mm": 0.0006769422632142419
+      },
+      "tube-2-outside": {
+        "side_facets": 114,
+        "maximum_angular_span_rad": 0.05977829080259767,
+        "maximum_vertex_radial_error_mm": 4.426350219688402e-07,
+        "maximum_radial_error_bound_mm": 0.0014371960649956056
+      },
+      "tube-2-entry": {
+        "side_facets": 108,
+        "maximum_angular_span_rad": 0.0581778890744129,
+        "maximum_vertex_radial_error_mm": 4.2019486512501203e-07,
+        "maximum_radial_error_bound_mm": 0.001361311532229696
+      },
+      "tube-2-bore-not-stud-socket": {
+        "side_facets": 108,
+        "maximum_angular_span_rad": 0.05817786888558185,
+        "maximum_vertex_radial_error_mm": 4.227006915602516e-07,
+        "maximum_radial_error_bound_mm": 0.0006773032080627406
+      }
+    }
+  }
+}

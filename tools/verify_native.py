@@ -31,7 +31,18 @@ for path in files:
     instances = 0
     checked_shapes = set()
     for link in links:
-        target = link.getLinkedObject()
+        target = link.LinkedObject
+        if isinstance(target, tuple):
+            target = target[0]
+        visited = set()
+        while target is not None and target.TypeId == "App::Link":
+            identity = (target.Document.Name, target.Name)
+            if identity in visited:
+                raise ValueError(f"Cyclic native link: {path.name}: {link.Name}")
+            visited.add(identity)
+            target = target.LinkedObject
+            if isinstance(target, tuple):
+                target = target[0]
         if target is None or target.Document is None:
             raise ValueError(f"Unresolved native link: {path.name}: {link.Name}")
         if hasattr(target, "Shape") and target.Shape.isNull():

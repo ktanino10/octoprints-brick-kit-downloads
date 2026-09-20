@@ -95,7 +95,7 @@ def verified_files(stage, inventory, imported, blender, native):
             if not (report["opened"] and report["proxy_free"] and not report["saved"] and not report["recomputed"]
                     and report["sha256"] == digest):
                 raise ValueError(f"Native reopened bytes do not match: {name}")
-        if path.suffix in {".FCStd", ".3mf"}:
+        if path.suffix in {".FCStd", ".3mf", ".zip"}:
             check_archive(path, stage, set(entries))
         if path.suffix in MEDIA_FORMATS:
             inspect_media(path)
@@ -175,29 +175,41 @@ def main():
                 or assembly.get("valid_single_solid_targets_checked", 0) < candidate["unique_types"]):
             raise ValueError(f"Native assembly instances do not match manifest IDs: {candidate['id']}")
     names = [entry["path"] for entry in verified]
-    common = [name for name in names if Path(name).suffix not in MEDIA_FORMATS]
     media = [name for name in names if Path(name).suffix in MEDIA_FORMATS]
     stamp = (*map(int, args.date.split("-")), 0, 0, 0)
     if len(stamp) != 6:
         raise ValueError("Invalid package date")
     directory = ROOT / ".archive-work" / f"release-{args.revision}"
-    definitions = [
-        ("native", "共通ブロック・CADと試験データ一式",
-         "この版の共有ライブラリー・組立CAD・型別形状・色別配置・BOM・組立候補・少数試験。", common),
-        ("media", "共通ブロック・Blenderと画像・動画",
-         "同じ版のBlenderシーン、完成形・分解画像、3体のターンテーブルと寸法図。", media),
-    ]
     bundles = []
-    for suffix, label, description, members in definitions:
-        if not members:
-            raise ValueError(f"Missing required artifact category: {suffix}")
-        filename = f"{args.revision}-{suffix}.zip"
+    source_bundles = [
+        ("r3-8mm-nine-brick-trial-NOT-SLICED.zip", "新版の9部品試験セット",
+         "新しい2×2・2×4接合部と薄いプレート、ネイティブCAD・STEP/STL・形状3MF・日英試験ガイド。"),
+        ("r3-8mm-all-parts-NOT-SLICED.zip", "新版の全個別部品・共有CAD・色別配置",
+         "133型のSTL/STEP、相対参照付き共有CADと3体、33色別3MF、BOM・日英組立ガイド。"),
+    ]
+    for filename, label, description in source_bundles:
+        relative = f"artifacts/revisions/{args.revision}/{filename}"
+        if relative not in names:
+            raise ValueError(f"Missing required source download bundle: {filename}")
         path = directory / filename
-        count = create_package(path, members, stage, args.revision, stamp)
+        if path.exists():
+            raise ValueError(f"Refusing to replace an immutable release asset: {filename}")
+        path.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(stage / relative, path)
+        with zipfile.ZipFile(path) as package:
+            count = len(package.namelist())
         bundles.append({"filename": filename, "label": label, "description": description,
                         "revision": args.revision, "status": "PROTOTYPE_NOT_SLICED", "file_count": count,
                         "bytes": path.stat().st_size, "sha256": sha(path.read_bytes()),
                         "url": f"https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/{args.release_tag}/{filename}"})
+    filename = f"{args.revision}-media.zip"
+    media_path = directory / filename
+    count = create_package(media_path, media, stage, args.revision, stamp)
+    bundles.append({"filename": filename, "label": "共通ブロック・Blenderと画像・動画",
+                    "description": "同じ版のBlenderシーン、完成形・分解画像、3体のターンテーブルと寸法図。",
+                    "revision": args.revision, "status": "PROTOTYPE_NOT_SLICED", "file_count": count,
+                    "bytes": media_path.stat().st_size, "sha256": sha(media_path.read_bytes()),
+                    "url": f"https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/{args.release_tag}/{filename}"})
     for entry in verified:
         output = ROOT / entry["path"]
         output.parent.mkdir(parents=True, exist_ok=True)

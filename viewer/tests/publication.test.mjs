@@ -26,10 +26,16 @@ test('published catalog pointers match actual frozen bytes and no pending input 
 
 test('a pending revision cannot become current or borrow an earlier catalog', () => {
   const pending = structuredClone(publication);
+  const pendingEntry = pending.revisions.find((entry) => entry.id === COMMON_REVISION);
+  pendingEntry.availability = 'INPUT_WAIT';
+  delete pendingEntry.catalog_url;
+  delete pendingEntry.catalog_sha256;
+  delete pendingEntry.bundle_index_url;
   pending.current_revision = COMMON_REVISION;
   assert.throws(() => validatePublication(pending), /入力待ち/);
   const borrowed = structuredClone(publication);
   const current = borrowed.revisions.find((entry) => entry.id === COMMON_REVISION);
+  current.availability = 'INPUT_WAIT';
   current.catalog_url = '/artifacts/selected/r2-20260919/catalog.json';
   assert.throws(() => validatePublication(borrowed), /入力待ち/);
 });

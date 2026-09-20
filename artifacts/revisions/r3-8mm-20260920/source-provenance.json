@@ -1,0 +1,40 @@
+{
+  "repository": "https://github.com/martinwoodward/octoprints",
+  "revision": "981a85f0bec9d1a9c280fd5719d0d797852229c4",
+  "license": "CC-BY-NC-4.0",
+  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/martinwoodward/octoprints/981a85f0bec9d1a9c280fd5719d0d797852229c4/models/mona/mona.stl",
+      "bytes": 750084,
+      "sha256": "14e2eeb21375ef20c605e95479643db80f6ba9d34588f224f5b117cfe3985b3d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/martinwoodward/octoprints/981a85f0bec9d1a9c280fd5719d0d797852229c4/models/mona/mona_multicolor.3mf",
+      "bytes": 284639,
+      "sha256": "aed080c6f51471fd8b76c625f49c9168fc33d158d2febf44ddb151be84a13178"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/martinwoodward/octoprints/981a85f0bec9d1a9c280fd5719d0d797852229c4/models/copilot/copilot.stl",
+      "bytes": 706884,
+      "sha256": "26dad79fa9c74ff682e72f46619460d75f6d73d51c71677723a629dd9c3c6dde"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/martinwoodward/octoprints/981a85f0bec9d1a9c280fd5719d0d797852229c4/models/copilot/copilot_multicolor.3mf",
+      "bytes": 253075,
+      "sha256": "15aefe74f5f38892e7b6227f062f349fb256a222aec9207f7a09f6e31e388ab0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/martinwoodward/octoprints/981a85f0bec9d1a9c280fd5719d0d797852229c4/models/ducky/ducky.stl",
+      "bytes": 744584,
+      "sha256": "587eadf57cbc93aa5c5bf3be0a88c9d7e18b600d7aa3e2741d105e936f8d11c9"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/martinwoodward/octoprints/981a85f0bec9d1a9c280fd5719d0d797852229c4/models/ducky/ducky_multicolor.3mf",
+      "bytes": 291634,
+      "sha256": "2f67fba4d2341428878bab8ae463f22ef71ab56390f7284ad95348ea220c79bc"
+    }
+  ],
+  "modifications": "Independent8mm common-brick adaptation, grippable contour/support parts, open underside wall/tube/rib interface, assembly layouts and media.",
+  "reference_mechanical_values": "User-supplied dimensional/principle reference only; no private personalized design, code or images copied."
+}

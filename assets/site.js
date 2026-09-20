@@ -218,9 +218,25 @@ async function loadCurrentModels() {
         create('h3', '', names[candidate.character]));
         $('#current-exploded').append(figure);
       }
+      if ($('#current-exploded') && candidate.before_after_url) {
+        const comparison = create('a', 'text-link', `${names[candidate.character]} · 旧r2との比較画像 ↗`);
+        comparison.href = publicURL(candidate.before_after_url);
+        card.append(comparison);
+      }
     }
     $('#current-summary').textContent = `${entry.id} · 合計${number(total)}部品。${physicalSummary(entry)}`;
     $('#selected-videos')?.replaceChildren(...catalog.candidates.map((candidate) => videoCard(candidate, entry.id, true)));
+    const mechanics = $('#current-mechanics');
+    if (mechanics && catalog.common_parts) {
+      for (const [url, label] of [
+        [catalog.common_parts.dimension_comparison_url, '同じ縮尺で見る旧試験片と8 mm共通ブロック'],
+        [catalog.common_parts.underside_sections_url, '実ネイティブ形状の開いた下面・断面'],
+      ]) {
+        const figure = create('figure', 'video-card');
+        figure.append(imageLink(url, url, label, `${entry.id} · ${label}`), create('h3', '', label));
+        mechanics.append(figure);
+      }
+    }
   } catch (error) {
     $('#current-error').hidden = false;
     $('#current-error').textContent = `現行版の公開記録を読み込めません。${error.message}`;

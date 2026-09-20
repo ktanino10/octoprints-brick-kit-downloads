@@ -1,13 +1,17 @@
 {
   "schema_version": 1,
-  "current_revision": "r2-20260919",
+  "current_revision": "r3-8mm-20260920",
   "revisions": [
     {
       "id": "r3-8mm-20260920",
       "generation": "common-blocks",
-      "availability": "INPUT_WAIT",
+      "availability": "AVAILABLE",
       "recorded_on": "2026-09-20",
       "design_implementation": "AUTHORIZED",
+      "catalog_url": "/artifacts/revisions/r3-8mm-20260920/catalog.json",
+      "catalog_sha256": "f068972006b9d12e303ccdd0344607f69ba8df1ceca71a94f582e9dcfb1af5fd",
+      "source_commit": "125ecacc0deb8c74819e4c1934ff3729d1a99791",
+      "bundle_index_url": "/archive/releases/r3-8mm-20260920.json",
       "status": {
         "physical_trial": "NOT_TESTED",
         "physical_fit": "UNKNOWN",

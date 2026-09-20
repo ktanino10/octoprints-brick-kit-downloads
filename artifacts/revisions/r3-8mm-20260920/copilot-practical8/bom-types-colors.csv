@@ -1,0 +1,109 @@
+type_id,color_id,name,hex,quantity,body_width_mm,body_depth_mm,body_height_mm,native_stl
+BR-01x01-H096,c0,Indigo purple,#482960,1,7.8,7.8,9.6,../cad/parts/BR-01x01-H096.stl
+BR-01x01-H096,c1,Blue,#0A2989,9,7.8,7.8,9.6,../cad/parts/BR-01x01-H096.stl
+BR-01x02-H096,c0,Indigo purple,#482960,83,7.8,15.8,9.6,../cad/parts/BR-01x02-H096.stl
+BR-01x02-H096,c1,Blue,#0A2989,18,7.8,15.8,9.6,../cad/parts/BR-01x02-H096.stl
+BR-01x02-H096,c2,Bright green,#BECF00,1,7.8,15.8,9.6,../cad/parts/BR-01x02-H096.stl
+BR-01x03-H096,c0,Indigo purple,#482960,6,7.8,23.8,9.6,../cad/parts/BR-01x03-H096.stl
+BR-01x03-H096,c1,Blue,#0A2989,4,7.8,23.8,9.6,../cad/parts/BR-01x03-H096.stl
+BR-01x03-H096,c2,Bright green,#BECF00,6,7.8,23.8,9.6,../cad/parts/BR-01x03-H096.stl
+BR-01x04-H096,c0,Indigo purple,#482960,9,7.8,31.8,9.6,../cad/parts/BR-01x04-H096.stl
+BR-01x04-H096,c1,Blue,#0A2989,1,7.8,31.8,9.6,../cad/parts/BR-01x04-H096.stl
+BR-01x06-H096,c0,Indigo purple,#482960,1,7.8,47.8,9.6,../cad/parts/BR-01x06-H096.stl
+BR-01x07-H096,c0,Indigo purple,#482960,1,7.8,55.8,9.6,../cad/parts/BR-01x07-H096.stl
+BR-01x08-H096,c0,Indigo purple,#482960,5,7.8,63.8,9.6,../cad/parts/BR-01x08-H096.stl
+BR-01x08-H096,c1,Blue,#0A2989,1,7.8,63.8,9.6,../cad/parts/BR-01x08-H096.stl
+BR-01x09-H096,c0,Indigo purple,#482960,1,7.8,71.8,9.6,../cad/parts/BR-01x09-H096.stl
+BR-01x10-H096,c0,Indigo purple,#482960,1,7.8,79.8,9.6,../cad/parts/BR-01x10-H096.stl
+BR-02x02-H096,c0,Indigo purple,#482960,54,15.8,15.8,9.6,../cad/parts/BR-02x02-H096.stl
+BR-02x02-H096,c1,Blue,#0A2989,5,15.8,15.8,9.6,../cad/parts/BR-02x02-H096.stl
+BR-02x03-H096,c0,Indigo purple,#482960,25,15.8,23.8,9.6,../cad/parts/BR-02x03-H096.stl
+BR-02x03-H096,c1,Blue,#0A2989,4,15.8,23.8,9.6,../cad/parts/BR-02x03-H096.stl
+BR-02x04-H096,c0,Indigo purple,#482960,85,15.8,31.8,9.6,../cad/parts/BR-02x04-H096.stl
+BR-02x04-H096,c1,Blue,#0A2989,5,15.8,31.8,9.6,../cad/parts/BR-02x04-H096.stl
+BR-02x06-H096,c0,Indigo purple,#482960,38,15.8,47.8,9.6,../cad/parts/BR-02x06-H096.stl
+BR-02x08-H096,c0,Indigo purple,#482960,71,15.8,63.8,9.6,../cad/parts/BR-02x08-H096.stl
+BR-04x04-H096,c0,Indigo purple,#482960,5,31.8,31.8,9.6,../cad/parts/BR-04x04-H096.stl
+BR-04x06-H096,c0,Indigo purple,#482960,42,31.8,47.8,9.6,../cad/parts/BR-04x06-H096.stl
+CT-03C-H096-c1d6f05dcc,c0,Indigo purple,#482960,22,15.8,15.8,9.6,../cad/parts/CT-03C-H096-c1d6f05dcc.stl
+CT-03C-H096-c1d6f05dcc,c1,Blue,#0A2989,6,15.8,15.8,9.6,../cad/parts/CT-03C-H096-c1d6f05dcc.stl
+CT-04C-H096-15e33fd0c4,c0,Indigo purple,#482960,5,15.8,23.8,9.6,../cad/parts/CT-04C-H096-15e33fd0c4.stl
+CT-04C-H096-15e33fd0c4,c1,Blue,#0A2989,3,15.8,23.8,9.6,../cad/parts/CT-04C-H096-15e33fd0c4.stl
+CT-04C-H096-8e241044a8,c0,Indigo purple,#482960,4,15.8,23.8,9.6,../cad/parts/CT-04C-H096-8e241044a8.stl
+CT-04C-H096-c7f6e1087d,c1,Blue,#0A2989,4,15.8,23.8,9.6,../cad/parts/CT-04C-H096-c7f6e1087d.stl
+CT-04C-H096-c7f6e1087d,c2,Bright green,#BECF00,1,15.8,23.8,9.6,../cad/parts/CT-04C-H096-c7f6e1087d.stl
+CT-05C-H096-1898941840,c0,Indigo purple,#482960,1,15.8,31.8,9.6,../cad/parts/CT-05C-H096-1898941840.stl
+CT-05C-H096-4050bcf8df,c0,Indigo purple,#482960,1,23.8,23.8,9.6,../cad/parts/CT-05C-H096-4050bcf8df.stl
+CT-05C-H096-4050bcf8df,c1,Blue,#0A2989,1,23.8,23.8,9.6,../cad/parts/CT-05C-H096-4050bcf8df.stl
+CT-05C-H096-4415eb3f30,c0,Indigo purple,#482960,1,15.8,31.8,9.6,../cad/parts/CT-05C-H096-4415eb3f30.stl
+CT-05C-H096-73f76289ae,c0,Indigo purple,#482960,1,15.8,31.8,9.6,../cad/parts/CT-05C-H096-73f76289ae.stl
+CT-05C-H096-7ede4fdf04,c0,Indigo purple,#482960,1,15.8,23.8,9.6,../cad/parts/CT-05C-H096-7ede4fdf04.stl
+CT-05C-H096-7ede4fdf04,c1,Blue,#0A2989,1,15.8,23.8,9.6,../cad/parts/CT-05C-H096-7ede4fdf04.stl
+CT-05C-H096-c763985811,c0,Indigo purple,#482960,3,15.8,23.8,9.6,../cad/parts/CT-05C-H096-c763985811.stl
+CT-05C-H096-c763985811,c1,Blue,#0A2989,2,15.8,23.8,9.6,../cad/parts/CT-05C-H096-c763985811.stl
+CT-05C-H096-d1758b0b33,c0,Indigo purple,#482960,1,23.8,23.8,9.6,../cad/parts/CT-05C-H096-d1758b0b33.stl
+CT-05C-H096-e7674de05c,c0,Indigo purple,#482960,1,15.8,23.8,9.6,../cad/parts/CT-05C-H096-e7674de05c.stl
+CT-06C-H096-31129ef203,c0,Indigo purple,#482960,1,15.8,31.8,9.6,../cad/parts/CT-06C-H096-31129ef203.stl
+CT-06C-H096-579600b9e3,c0,Indigo purple,#482960,1,15.8,31.8,9.6,../cad/parts/CT-06C-H096-579600b9e3.stl
+CT-06C-H096-6fa6c35f3e,c0,Indigo purple,#482960,1,15.8,39.8,9.6,../cad/parts/CT-06C-H096-6fa6c35f3e.stl
+CT-06C-H096-834a107884,c1,Blue,#0A2989,1,23.8,23.8,9.6,../cad/parts/CT-06C-H096-834a107884.stl
+CT-06C-H096-adaaf29086,c0,Indigo purple,#482960,3,15.8,31.8,9.6,../cad/parts/CT-06C-H096-adaaf29086.stl
+CT-06C-H096-adaaf29086,c1,Blue,#0A2989,1,15.8,31.8,9.6,../cad/parts/CT-06C-H096-adaaf29086.stl
+CT-07C-H096-19b018b623,c0,Indigo purple,#482960,1,15.8,31.8,9.6,../cad/parts/CT-07C-H096-19b018b623.stl
+CT-07C-H096-19b018b623,c1,Blue,#0A2989,2,15.8,31.8,9.6,../cad/parts/CT-07C-H096-19b018b623.stl
+CT-07C-H096-48e06b5e1e,c0,Indigo purple,#482960,1,15.8,31.8,9.6,../cad/parts/CT-07C-H096-48e06b5e1e.stl
+CT-07C-H096-48e06b5e1e,c1,Blue,#0A2989,1,15.8,31.8,9.6,../cad/parts/CT-07C-H096-48e06b5e1e.stl
+CT-07C-H096-8db0b03e41,c0,Indigo purple,#482960,1,23.8,23.8,9.6,../cad/parts/CT-07C-H096-8db0b03e41.stl
+CT-07C-H096-d4c0928299,c0,Indigo purple,#482960,2,15.8,31.8,9.6,../cad/parts/CT-07C-H096-d4c0928299.stl
+CT-07C-H096-e10d9a04a7,c1,Blue,#0A2989,1,23.8,23.8,9.6,../cad/parts/CT-07C-H096-e10d9a04a7.stl
+CT-07C-H096-fa3c95b030,c0,Indigo purple,#482960,1,15.8,47.8,9.6,../cad/parts/CT-07C-H096-fa3c95b030.stl
+CT-08C-H096-0300667972,c0,Indigo purple,#482960,1,15.8,39.8,9.6,../cad/parts/CT-08C-H096-0300667972.stl
+CT-09C-H096-10fa964061,c0,Indigo purple,#482960,1,15.8,39.8,9.6,../cad/parts/CT-09C-H096-10fa964061.stl
+CT-09C-H096-10fa964061,c1,Blue,#0A2989,3,15.8,39.8,9.6,../cad/parts/CT-09C-H096-10fa964061.stl
+CT-09C-H096-1b75716a54,c0,Indigo purple,#482960,2,15.8,39.8,9.6,../cad/parts/CT-09C-H096-1b75716a54.stl
+CT-09C-H096-1b75716a54,c1,Blue,#0A2989,1,15.8,39.8,9.6,../cad/parts/CT-09C-H096-1b75716a54.stl
+CT-09C-H096-2942373b3f,c0,Indigo purple,#482960,2,23.8,31.8,9.6,../cad/parts/CT-09C-H096-2942373b3f.stl
+CT-09C-H096-2f6410248c,c0,Indigo purple,#482960,1,23.8,31.8,9.6,../cad/parts/CT-09C-H096-2f6410248c.stl
+CT-09C-H096-4d411266f7,c0,Indigo purple,#482960,1,15.8,63.8,9.6,../cad/parts/CT-09C-H096-4d411266f7.stl
+CT-09C-H096-5ba1c77317,c0,Indigo purple,#482960,2,23.8,31.8,9.6,../cad/parts/CT-09C-H096-5ba1c77317.stl
+CT-09C-H096-5ba1c77317,c1,Blue,#0A2989,2,23.8,31.8,9.6,../cad/parts/CT-09C-H096-5ba1c77317.stl
+CT-09C-H096-5eb32c5359,c1,Blue,#0A2989,1,23.8,31.8,9.6,../cad/parts/CT-09C-H096-5eb32c5359.stl
+CT-09C-H096-792fee37ed,c0,Indigo purple,#482960,1,15.8,47.8,9.6,../cad/parts/CT-09C-H096-792fee37ed.stl
+CT-10C-H096-0b7a9c0a1e,c1,Blue,#0A2989,1,15.8,47.8,9.6,../cad/parts/CT-10C-H096-0b7a9c0a1e.stl
+CT-10C-H096-498a75f3cc,c0,Indigo purple,#482960,1,31.8,31.8,9.6,../cad/parts/CT-10C-H096-498a75f3cc.stl
+CT-10C-H096-b3692aef1c,c0,Indigo purple,#482960,1,15.8,47.8,9.6,../cad/parts/CT-10C-H096-b3692aef1c.stl
+CT-10C-H096-e13752c9a5,c0,Indigo purple,#482960,1,23.8,31.8,9.6,../cad/parts/CT-10C-H096-e13752c9a5.stl
+CT-11C-H096-0895aaf048,c0,Indigo purple,#482960,1,31.8,39.8,9.6,../cad/parts/CT-11C-H096-0895aaf048.stl
+CT-12C-H096-6c0730a2f8,c0,Indigo purple,#482960,1,31.8,39.8,9.6,../cad/parts/CT-12C-H096-6c0730a2f8.stl
+CT-12C-H096-dc1b462174,c0,Indigo purple,#482960,2,31.8,31.8,9.6,../cad/parts/CT-12C-H096-dc1b462174.stl
+CT-13C-H096-801b39afdd,c0,Indigo purple,#482960,1,23.8,47.8,9.6,../cad/parts/CT-13C-H096-801b39afdd.stl
+CT-14C-H096-2372a156c3,c0,Indigo purple,#482960,1,23.8,47.8,9.6,../cad/parts/CT-14C-H096-2372a156c3.stl
+CT-14C-H096-3d781c79eb,c0,Indigo purple,#482960,1,23.8,47.8,9.6,../cad/parts/CT-14C-H096-3d781c79eb.stl
+CT-14C-H096-4670762ea0,c0,Indigo purple,#482960,1,23.8,47.8,9.6,../cad/parts/CT-14C-H096-4670762ea0.stl
+CT-14C-H096-725e4e42b1,c0,Indigo purple,#482960,1,31.8,47.8,9.6,../cad/parts/CT-14C-H096-725e4e42b1.stl
+CT-16C-H096-4ed4585c23,c0,Indigo purple,#482960,1,39.8,95.8,9.6,../cad/parts/CT-16C-H096-4ed4585c23.stl
+CT-16C-H096-6106604ce2,c0,Indigo purple,#482960,1,23.8,47.8,9.6,../cad/parts/CT-16C-H096-6106604ce2.stl
+CT-16C-H096-cf4d7fb859,c0,Indigo purple,#482960,1,31.8,47.8,9.6,../cad/parts/CT-16C-H096-cf4d7fb859.stl
+CT-16C-H096-ec6875af8a,c0,Indigo purple,#482960,1,31.8,47.8,9.6,../cad/parts/CT-16C-H096-ec6875af8a.stl
+CT-17C-H096-c50680b76b,c0,Indigo purple,#482960,1,23.8,63.8,9.6,../cad/parts/CT-17C-H096-c50680b76b.stl
+CT-18C-H096-329a29cf63,c0,Indigo purple,#482960,1,23.8,63.8,9.6,../cad/parts/CT-18C-H096-329a29cf63.stl
+CT-18C-H096-a657ab12fa,c0,Indigo purple,#482960,1,47.8,63.8,9.6,../cad/parts/CT-18C-H096-a657ab12fa.stl
+CT-18C-H096-b75d99ebb6,c0,Indigo purple,#482960,1,23.8,63.8,9.6,../cad/parts/CT-18C-H096-b75d99ebb6.stl
+CT-18C-H096-d42c35ea27,c0,Indigo purple,#482960,1,23.8,63.8,9.6,../cad/parts/CT-18C-H096-d42c35ea27.stl
+CT-18C-H096-e47607893e,c0,Indigo purple,#482960,1,31.8,63.8,9.6,../cad/parts/CT-18C-H096-e47607893e.stl
+CT-18C-H096-fb13703b24,c0,Indigo purple,#482960,1,31.8,55.8,9.6,../cad/parts/CT-18C-H096-fb13703b24.stl
+CT-19C-H096-68fd21333d,c0,Indigo purple,#482960,1,39.8,47.8,9.6,../cad/parts/CT-19C-H096-68fd21333d.stl
+CT-19C-H096-7ff6fe2c87,c0,Indigo purple,#482960,1,31.8,39.8,9.6,../cad/parts/CT-19C-H096-7ff6fe2c87.stl
+CT-20C-H096-c36775f192,c0,Indigo purple,#482960,1,31.8,63.8,9.6,../cad/parts/CT-20C-H096-c36775f192.stl
+CT-20C-H096-fbc0adfd2a,c0,Indigo purple,#482960,1,23.8,63.8,9.6,../cad/parts/CT-20C-H096-fbc0adfd2a.stl
+CT-22C-H096-0d74c66059,c0,Indigo purple,#482960,1,47.8,63.8,9.6,../cad/parts/CT-22C-H096-0d74c66059.stl
+CT-22C-H096-22857b5e7c,c0,Indigo purple,#482960,1,39.8,63.8,9.6,../cad/parts/CT-22C-H096-22857b5e7c.stl
+CT-23C-H096-394afd9b8e,c0,Indigo purple,#482960,1,31.8,47.8,9.6,../cad/parts/CT-23C-H096-394afd9b8e.stl
+CT-25C-H096-b6b30d10c3,c0,Indigo purple,#482960,1,31.8,55.8,9.6,../cad/parts/CT-25C-H096-b6b30d10c3.stl
+CT-28C-H096-9b6b82951e,c0,Indigo purple,#482960,1,63.8,63.8,9.6,../cad/parts/CT-28C-H096-9b6b82951e.stl
+PL-01x02-H032,c0,Indigo purple,#482960,2,7.8,15.8,3.2,../cad/parts/PL-01x02-H032.stl
+PL-01x04-H032,c0,Indigo purple,#482960,1,7.8,31.8,3.2,../cad/parts/PL-01x04-H032.stl
+PL-01x08-H032,c0,Indigo purple,#482960,4,7.8,63.8,3.2,../cad/parts/PL-01x08-H032.stl
+PL-02x02-H032,c0,Indigo purple,#482960,18,15.8,15.8,3.2,../cad/parts/PL-02x02-H032.stl
+PL-02x04-H032,c0,Indigo purple,#482960,44,15.8,31.8,3.2,../cad/parts/PL-02x04-H032.stl
+PL-02x08-H032,c0,Indigo purple,#482960,16,15.8,63.8,3.2,../cad/parts/PL-02x08-H032.stl

@@ -205,4 +205,21 @@ export async function renderDownloads(catalog, candidate, signal, context = { ki
     const available = await appendDownload(host, entry, signal);
     if (available && !signal.aborted && entry.extension === 'MP4') addVideo(entry.url, videoHost, candidate);
   }));
+  if (context.kind === 'common' && !signal.aborted && candidate.plate_files?.length) {
+    const details = element('details', 'video-details');
+    details.append(element('summary', '', `色別の形状3MF・${candidate.plate_files.length}枚（NOT_SLICED）`),
+      element('p', 'control-help', '各プレートは別部品の配置です。一体造形や設定済みP1Sプロジェクトではありません。試験前の全数印刷は保留します。'));
+    const links = element('div');
+    details.append(links);
+    let loaded = false;
+    details.addEventListener('toggle', () => {
+      if (!details.open || loaded || signal.aborted) return;
+      loaded = true;
+      for (const plate of candidate.plate_files) {
+        appendDownload(links, { label: `${plate.color_id} · ${plate.part_count}部品 · ${plate.url.split('/').at(-1)}`,
+          extension: '3MF', url: plate.url }, signal);
+      }
+    });
+    host.append(details);
+  }
 }

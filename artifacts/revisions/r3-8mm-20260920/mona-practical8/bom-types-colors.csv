@@ -1,0 +1,88 @@
+type_id,color_id,name,hex,quantity,body_width_mm,body_depth_mm,body_height_mm,native_stl
+BR-01x01-H096,c1,Jade white,#FFFFFF,3,7.8,7.8,9.6,../cad/parts/BR-01x01-H096.stl
+BR-01x01-H096,c2,Black,#000000,2,7.8,7.8,9.6,../cad/parts/BR-01x01-H096.stl
+BR-01x02-H096,c0,Purple,#5E43B7,47,7.8,15.8,9.6,../cad/parts/BR-01x02-H096.stl
+BR-01x02-H096,c2,Black,#000000,5,7.8,15.8,9.6,../cad/parts/BR-01x02-H096.stl
+BR-01x02-H096,c3,Hot pink,#F5547C,15,7.8,15.8,9.6,../cad/parts/BR-01x02-H096.stl
+BR-01x03-H096,c0,Purple,#5E43B7,12,7.8,23.8,9.6,../cad/parts/BR-01x03-H096.stl
+BR-01x03-H096,c2,Black,#000000,1,7.8,23.8,9.6,../cad/parts/BR-01x03-H096.stl
+BR-01x03-H096,c3,Hot pink,#F5547C,4,7.8,23.8,9.6,../cad/parts/BR-01x03-H096.stl
+BR-01x04-H096,c0,Purple,#5E43B7,6,7.8,31.8,9.6,../cad/parts/BR-01x04-H096.stl
+BR-01x04-H096,c3,Hot pink,#F5547C,2,7.8,31.8,9.6,../cad/parts/BR-01x04-H096.stl
+BR-01x06-H096,c0,Purple,#5E43B7,6,7.8,47.8,9.6,../cad/parts/BR-01x06-H096.stl
+BR-01x08-H096,c0,Purple,#5E43B7,5,7.8,63.8,9.6,../cad/parts/BR-01x08-H096.stl
+BR-01x08-H096,c3,Hot pink,#F5547C,1,7.8,63.8,9.6,../cad/parts/BR-01x08-H096.stl
+BR-01x09-H096,c0,Purple,#5E43B7,2,7.8,71.8,9.6,../cad/parts/BR-01x09-H096.stl
+BR-02x02-H096,c0,Purple,#5E43B7,35,15.8,15.8,9.6,../cad/parts/BR-02x02-H096.stl
+BR-02x02-H096,c3,Hot pink,#F5547C,3,15.8,15.8,9.6,../cad/parts/BR-02x02-H096.stl
+BR-02x03-H096,c0,Purple,#5E43B7,21,15.8,23.8,9.6,../cad/parts/BR-02x03-H096.stl
+BR-02x03-H096,c1,Jade white,#FFFFFF,1,15.8,23.8,9.6,../cad/parts/BR-02x03-H096.stl
+BR-02x03-H096,c2,Black,#000000,1,15.8,23.8,9.6,../cad/parts/BR-02x03-H096.stl
+BR-02x03-H096,c3,Hot pink,#F5547C,6,15.8,23.8,9.6,../cad/parts/BR-02x03-H096.stl
+BR-02x04-H096,c0,Purple,#5E43B7,60,15.8,31.8,9.6,../cad/parts/BR-02x04-H096.stl
+BR-02x04-H096,c3,Hot pink,#F5547C,9,15.8,31.8,9.6,../cad/parts/BR-02x04-H096.stl
+BR-02x06-H096,c0,Purple,#5E43B7,33,15.8,47.8,9.6,../cad/parts/BR-02x06-H096.stl
+BR-02x06-H096,c3,Hot pink,#F5547C,1,15.8,47.8,9.6,../cad/parts/BR-02x06-H096.stl
+BR-02x08-H096,c0,Purple,#5E43B7,50,15.8,63.8,9.6,../cad/parts/BR-02x08-H096.stl
+BR-02x08-H096,c3,Hot pink,#F5547C,3,15.8,63.8,9.6,../cad/parts/BR-02x08-H096.stl
+BR-04x04-H096,c0,Purple,#5E43B7,3,31.8,31.8,9.6,../cad/parts/BR-04x04-H096.stl
+BR-04x06-H096,c0,Purple,#5E43B7,25,31.8,47.8,9.6,../cad/parts/BR-04x06-H096.stl
+CT-03C-H096-c1d6f05dcc,c0,Purple,#5E43B7,21,15.8,15.8,9.6,../cad/parts/CT-03C-H096-c1d6f05dcc.stl
+CT-03C-H096-c1d6f05dcc,c3,Hot pink,#F5547C,8,15.8,15.8,9.6,../cad/parts/CT-03C-H096-c1d6f05dcc.stl
+CT-04C-H096-15e33fd0c4,c0,Purple,#5E43B7,4,15.8,23.8,9.6,../cad/parts/CT-04C-H096-15e33fd0c4.stl
+CT-04C-H096-15e33fd0c4,c3,Hot pink,#F5547C,2,15.8,23.8,9.6,../cad/parts/CT-04C-H096-15e33fd0c4.stl
+CT-04C-H096-8e241044a8,c0,Purple,#5E43B7,4,15.8,23.8,9.6,../cad/parts/CT-04C-H096-8e241044a8.stl
+CT-04C-H096-a6bced9f60,c0,Purple,#5E43B7,1,15.8,23.8,9.6,../cad/parts/CT-04C-H096-a6bced9f60.stl
+CT-04C-H096-bec36f7bdc,c0,Purple,#5E43B7,1,15.8,23.8,9.6,../cad/parts/CT-04C-H096-bec36f7bdc.stl
+CT-05C-H096-73f76289ae,c0,Purple,#5E43B7,1,15.8,31.8,9.6,../cad/parts/CT-05C-H096-73f76289ae.stl
+CT-05C-H096-7ede4fdf04,c0,Purple,#5E43B7,4,15.8,23.8,9.6,../cad/parts/CT-05C-H096-7ede4fdf04.stl
+CT-05C-H096-7ede4fdf04,c3,Hot pink,#F5547C,7,15.8,23.8,9.6,../cad/parts/CT-05C-H096-7ede4fdf04.stl
+CT-05C-H096-a75f0f97b1,c1,Jade white,#FFFFFF,1,23.8,23.8,9.6,../cad/parts/CT-05C-H096-a75f0f97b1.stl
+CT-05C-H096-c763985811,c0,Purple,#5E43B7,2,15.8,23.8,9.6,../cad/parts/CT-05C-H096-c763985811.stl
+CT-05C-H096-c763985811,c3,Hot pink,#F5547C,7,15.8,23.8,9.6,../cad/parts/CT-05C-H096-c763985811.stl
+CT-06C-H096-1f09483782,c0,Purple,#5E43B7,1,23.8,23.8,9.6,../cad/parts/CT-06C-H096-1f09483782.stl
+CT-06C-H096-31129ef203,c0,Purple,#5E43B7,1,15.8,31.8,9.6,../cad/parts/CT-06C-H096-31129ef203.stl
+CT-06C-H096-834a107884,c3,Hot pink,#F5547C,1,23.8,23.8,9.6,../cad/parts/CT-06C-H096-834a107884.stl
+CT-07C-H096-19b018b623,c3,Hot pink,#F5547C,2,15.8,31.8,9.6,../cad/parts/CT-07C-H096-19b018b623.stl
+CT-07C-H096-48e06b5e1e,c0,Purple,#5E43B7,2,15.8,31.8,9.6,../cad/parts/CT-07C-H096-48e06b5e1e.stl
+CT-07C-H096-8db0b03e41,c2,Black,#000000,1,23.8,23.8,9.6,../cad/parts/CT-07C-H096-8db0b03e41.stl
+CT-07C-H096-9fe7fee271,c0,Purple,#5E43B7,1,23.8,23.8,9.6,../cad/parts/CT-07C-H096-9fe7fee271.stl
+CT-07C-H096-e10d9a04a7,c3,Hot pink,#F5547C,2,23.8,23.8,9.6,../cad/parts/CT-07C-H096-e10d9a04a7.stl
+CT-07C-H096-f685e61d18,c0,Purple,#5E43B7,1,23.8,31.8,9.6,../cad/parts/CT-07C-H096-f685e61d18.stl
+CT-08C-H096-385592b6ac,c0,Purple,#5E43B7,1,15.8,39.8,9.6,../cad/parts/CT-08C-H096-385592b6ac.stl
+CT-08C-H096-7668c4598f,c0,Purple,#5E43B7,1,23.8,31.8,9.6,../cad/parts/CT-08C-H096-7668c4598f.stl
+CT-09C-H096-1b75716a54,c3,Hot pink,#F5547C,1,15.8,39.8,9.6,../cad/parts/CT-09C-H096-1b75716a54.stl
+CT-09C-H096-256f2a62e3,c0,Purple,#5E43B7,1,31.8,39.8,9.6,../cad/parts/CT-09C-H096-256f2a62e3.stl
+CT-09C-H096-2942373b3f,c2,Black,#000000,1,23.8,31.8,9.6,../cad/parts/CT-09C-H096-2942373b3f.stl
+CT-09C-H096-2f6410248c,c0,Purple,#5E43B7,1,23.8,31.8,9.6,../cad/parts/CT-09C-H096-2f6410248c.stl
+CT-09C-H096-2f6410248c,c2,Black,#000000,1,23.8,31.8,9.6,../cad/parts/CT-09C-H096-2f6410248c.stl
+CT-09C-H096-5ba1c77317,c3,Hot pink,#F5547C,1,23.8,31.8,9.6,../cad/parts/CT-09C-H096-5ba1c77317.stl
+CT-09C-H096-5eb32c5359,c3,Hot pink,#F5547C,1,23.8,31.8,9.6,../cad/parts/CT-09C-H096-5eb32c5359.stl
+CT-10C-H096-0b7a9c0a1e,c3,Hot pink,#F5547C,1,15.8,47.8,9.6,../cad/parts/CT-10C-H096-0b7a9c0a1e.stl
+CT-10C-H096-415fcecd4d,c0,Purple,#5E43B7,2,15.8,63.8,9.6,../cad/parts/CT-10C-H096-415fcecd4d.stl
+CT-10C-H096-506b844354,c0,Purple,#5E43B7,1,31.8,31.8,9.6,../cad/parts/CT-10C-H096-506b844354.stl
+CT-10C-H096-9e938acd9a,c0,Purple,#5E43B7,1,31.8,31.8,9.6,../cad/parts/CT-10C-H096-9e938acd9a.stl
+CT-12C-H096-dc1b462174,c0,Purple,#5E43B7,1,31.8,31.8,9.6,../cad/parts/CT-12C-H096-dc1b462174.stl
+CT-14C-H096-3e2c5d19d1,c0,Purple,#5E43B7,1,31.8,55.8,9.6,../cad/parts/CT-14C-H096-3e2c5d19d1.stl
+CT-15C-H096-683acb1ad3,c3,Hot pink,#F5547C,1,31.8,47.8,9.6,../cad/parts/CT-15C-H096-683acb1ad3.stl
+CT-16C-H096-ab7eb6d927,c0,Purple,#5E43B7,1,31.8,47.8,9.6,../cad/parts/CT-16C-H096-ab7eb6d927.stl
+CT-17C-H096-43671a5b5c,c0,Purple,#5E43B7,1,15.8,71.8,9.6,../cad/parts/CT-17C-H096-43671a5b5c.stl
+CT-17C-H096-9b7af214e9,c0,Purple,#5E43B7,1,15.8,71.8,9.6,../cad/parts/CT-17C-H096-9b7af214e9.stl
+CT-17C-H096-b738ac4977,c3,Hot pink,#F5547C,1,23.8,63.8,9.6,../cad/parts/CT-17C-H096-b738ac4977.stl
+CT-17C-H096-be766a974c,c0,Purple,#5E43B7,1,23.8,63.8,9.6,../cad/parts/CT-17C-H096-be766a974c.stl
+CT-18C-H096-469022c2b9,c0,Purple,#5E43B7,1,31.8,63.8,9.6,../cad/parts/CT-18C-H096-469022c2b9.stl
+CT-18C-H096-7dc999aebd,c0,Purple,#5E43B7,1,31.8,63.8,9.6,../cad/parts/CT-18C-H096-7dc999aebd.stl
+CT-18C-H096-d42c35ea27,c0,Purple,#5E43B7,1,23.8,63.8,9.6,../cad/parts/CT-18C-H096-d42c35ea27.stl
+CT-20C-H096-21b3f8c171,c3,Hot pink,#F5547C,1,23.8,95.8,9.6,../cad/parts/CT-20C-H096-21b3f8c171.stl
+CT-20C-H096-33529a809f,c0,Purple,#5E43B7,1,31.8,63.8,9.6,../cad/parts/CT-20C-H096-33529a809f.stl
+CT-20C-H096-8f6969895d,c0,Purple,#5E43B7,1,31.8,63.8,9.6,../cad/parts/CT-20C-H096-8f6969895d.stl
+CT-25C-H096-06daa47720,c0,Purple,#5E43B7,1,39.8,79.8,9.6,../cad/parts/CT-25C-H096-06daa47720.stl
+CT-25C-H096-5500434ce2,c0,Purple,#5E43B7,1,39.8,47.8,9.6,../cad/parts/CT-25C-H096-5500434ce2.stl
+CT-25C-H096-b6b30d10c3,c0,Purple,#5E43B7,1,31.8,55.8,9.6,../cad/parts/CT-25C-H096-b6b30d10c3.stl
+CT-25C-H096-cba8834f53,c0,Purple,#5E43B7,1,31.8,55.8,9.6,../cad/parts/CT-25C-H096-cba8834f53.stl
+PL-01x06-H032,c0,Purple,#5E43B7,2,7.8,47.8,3.2,../cad/parts/PL-01x06-H032.stl
+PL-01x08-H032,c0,Purple,#5E43B7,2,7.8,63.8,3.2,../cad/parts/PL-01x08-H032.stl
+PL-02x02-H032,c0,Purple,#5E43B7,4,15.8,15.8,3.2,../cad/parts/PL-02x02-H032.stl
+PL-02x04-H032,c0,Purple,#5E43B7,32,15.8,31.8,3.2,../cad/parts/PL-02x04-H032.stl
+PL-02x06-H032,c0,Purple,#5E43B7,3,15.8,47.8,3.2,../cad/parts/PL-02x06-H032.stl
+PL-02x08-H032,c0,Purple,#5E43B7,7,15.8,63.8,3.2,../cad/parts/PL-02x08-H032.stl

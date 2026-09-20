@@ -1,0 +1,67 @@
+type_id,color_id,name,hex,quantity,body_width_mm,body_depth_mm,body_height_mm,native_stl
+BR-01x02-H096,c0,Yellow,#F4EE2A,58,7.8,15.8,9.6,../cad/parts/BR-01x02-H096.stl
+BR-01x02-H096,c1,Pumpkin orange,#FF9016,2,7.8,15.8,9.6,../cad/parts/BR-01x02-H096.stl
+BR-01x03-H096,c0,Yellow,#F4EE2A,2,7.8,23.8,9.6,../cad/parts/BR-01x03-H096.stl
+BR-01x04-H096,c0,Yellow,#F4EE2A,7,7.8,31.8,9.6,../cad/parts/BR-01x04-H096.stl
+BR-01x04-H096,c1,Pumpkin orange,#FF9016,1,7.8,31.8,9.6,../cad/parts/BR-01x04-H096.stl
+BR-01x06-H096,c0,Yellow,#F4EE2A,1,7.8,47.8,9.6,../cad/parts/BR-01x06-H096.stl
+BR-01x08-H096,c0,Yellow,#F4EE2A,2,7.8,63.8,9.6,../cad/parts/BR-01x08-H096.stl
+BR-02x02-H096,c0,Yellow,#F4EE2A,32,15.8,15.8,9.6,../cad/parts/BR-02x02-H096.stl
+BR-02x02-H096,c1,Pumpkin orange,#FF9016,2,15.8,15.8,9.6,../cad/parts/BR-02x02-H096.stl
+BR-02x02-H096,c2,Black,#000000,1,15.8,15.8,9.6,../cad/parts/BR-02x02-H096.stl
+BR-02x03-H096,c0,Yellow,#F4EE2A,26,15.8,23.8,9.6,../cad/parts/BR-02x03-H096.stl
+BR-02x03-H096,c1,Pumpkin orange,#FF9016,1,15.8,23.8,9.6,../cad/parts/BR-02x03-H096.stl
+BR-02x04-H096,c0,Yellow,#F4EE2A,81,15.8,31.8,9.6,../cad/parts/BR-02x04-H096.stl
+BR-02x04-H096,c1,Pumpkin orange,#FF9016,1,15.8,31.8,9.6,../cad/parts/BR-02x04-H096.stl
+BR-02x04-H096,c2,Black,#000000,1,15.8,31.8,9.6,../cad/parts/BR-02x04-H096.stl
+BR-02x06-H096,c0,Yellow,#F4EE2A,17,15.8,47.8,9.6,../cad/parts/BR-02x06-H096.stl
+BR-02x06-H096,c1,Pumpkin orange,#FF9016,1,15.8,47.8,9.6,../cad/parts/BR-02x06-H096.stl
+BR-02x08-H096,c0,Yellow,#F4EE2A,50,15.8,63.8,9.6,../cad/parts/BR-02x08-H096.stl
+BR-03x06-H096,c0,Yellow,#F4EE2A,1,23.8,47.8,9.6,../cad/parts/BR-03x06-H096.stl
+BR-04x04-H096,c0,Yellow,#F4EE2A,5,31.8,31.8,9.6,../cad/parts/BR-04x04-H096.stl
+BR-04x06-H096,c0,Yellow,#F4EE2A,22,31.8,47.8,9.6,../cad/parts/BR-04x06-H096.stl
+CT-03C-H096-c1d6f05dcc,c0,Yellow,#F4EE2A,2,15.8,15.8,9.6,../cad/parts/CT-03C-H096-c1d6f05dcc.stl
+CT-03C-H096-c1d6f05dcc,c1,Pumpkin orange,#FF9016,2,15.8,15.8,9.6,../cad/parts/CT-03C-H096-c1d6f05dcc.stl
+CT-04C-H096-15e33fd0c4,c0,Yellow,#F4EE2A,4,15.8,23.8,9.6,../cad/parts/CT-04C-H096-15e33fd0c4.stl
+CT-04C-H096-8e241044a8,c0,Yellow,#F4EE2A,4,15.8,23.8,9.6,../cad/parts/CT-04C-H096-8e241044a8.stl
+CT-05C-H096-c763985811,c0,Yellow,#F4EE2A,2,15.8,23.8,9.6,../cad/parts/CT-05C-H096-c763985811.stl
+CT-05C-H096-c763985811,c2,Black,#000000,1,15.8,23.8,9.6,../cad/parts/CT-05C-H096-c763985811.stl
+CT-05C-H096-e7674de05c,c1,Pumpkin orange,#FF9016,1,15.8,23.8,9.6,../cad/parts/CT-05C-H096-e7674de05c.stl
+CT-06C-H096-31129ef203,c0,Yellow,#F4EE2A,1,15.8,31.8,9.6,../cad/parts/CT-06C-H096-31129ef203.stl
+CT-06C-H096-579600b9e3,c0,Yellow,#F4EE2A,2,15.8,31.8,9.6,../cad/parts/CT-06C-H096-579600b9e3.stl
+CT-06C-H096-88c8e83714,c2,Black,#000000,1,15.8,31.8,9.6,../cad/parts/CT-06C-H096-88c8e83714.stl
+CT-07C-H096-19b018b623,c2,Black,#000000,1,15.8,31.8,9.6,../cad/parts/CT-07C-H096-19b018b623.stl
+CT-07C-H096-48e06b5e1e,c0,Yellow,#F4EE2A,1,15.8,31.8,9.6,../cad/parts/CT-07C-H096-48e06b5e1e.stl
+CT-07C-H096-9fe7fee271,c0,Yellow,#F4EE2A,1,23.8,23.8,9.6,../cad/parts/CT-07C-H096-9fe7fee271.stl
+CT-07C-H096-e10d9a04a7,c2,Black,#000000,1,23.8,23.8,9.6,../cad/parts/CT-07C-H096-e10d9a04a7.stl
+CT-08C-H096-b34d7e82a8,c0,Yellow,#F4EE2A,2,23.8,31.8,9.6,../cad/parts/CT-08C-H096-b34d7e82a8.stl
+CT-09C-H096-2f6410248c,c0,Yellow,#F4EE2A,2,23.8,31.8,9.6,../cad/parts/CT-09C-H096-2f6410248c.stl
+CT-09C-H096-c77ac71faf,c0,Yellow,#F4EE2A,1,23.8,31.8,9.6,../cad/parts/CT-09C-H096-c77ac71faf.stl
+CT-10C-H096-e13752c9a5,c0,Yellow,#F4EE2A,1,23.8,31.8,9.6,../cad/parts/CT-10C-H096-e13752c9a5.stl
+CT-10C-H096-e61a31186b,c0,Yellow,#F4EE2A,1,15.8,63.8,9.6,../cad/parts/CT-10C-H096-e61a31186b.stl
+CT-11C-H096-87c8dc469d,c0,Yellow,#F4EE2A,1,31.8,31.8,9.6,../cad/parts/CT-11C-H096-87c8dc469d.stl
+CT-12C-H096-3d81b30a49,c0,Yellow,#F4EE2A,1,23.8,47.8,9.6,../cad/parts/CT-12C-H096-3d81b30a49.stl
+CT-12C-H096-dc1b462174,c0,Yellow,#F4EE2A,2,31.8,31.8,9.6,../cad/parts/CT-12C-H096-dc1b462174.stl
+CT-14C-H096-634b639087,c0,Yellow,#F4EE2A,1,31.8,47.8,9.6,../cad/parts/CT-14C-H096-634b639087.stl
+CT-14C-H096-7783926aa4,c0,Yellow,#F4EE2A,1,31.8,39.8,9.6,../cad/parts/CT-14C-H096-7783926aa4.stl
+CT-16C-H096-6106604ce2,c1,Pumpkin orange,#FF9016,1,23.8,47.8,9.6,../cad/parts/CT-16C-H096-6106604ce2.stl
+CT-16C-H096-e200c2979a,c0,Yellow,#F4EE2A,1,31.8,47.8,9.6,../cad/parts/CT-16C-H096-e200c2979a.stl
+CT-17C-H096-59541c1f04,c0,Yellow,#F4EE2A,1,31.8,39.8,9.6,../cad/parts/CT-17C-H096-59541c1f04.stl
+CT-18C-H096-b75d99ebb6,c0,Yellow,#F4EE2A,1,23.8,63.8,9.6,../cad/parts/CT-18C-H096-b75d99ebb6.stl
+CT-18C-H096-e47607893e,c0,Yellow,#F4EE2A,1,31.8,63.8,9.6,../cad/parts/CT-18C-H096-e47607893e.stl
+CT-20C-H096-33529a809f,c0,Yellow,#F4EE2A,1,31.8,63.8,9.6,../cad/parts/CT-20C-H096-33529a809f.stl
+CT-20C-H096-79a15afcbe,c0,Yellow,#F4EE2A,2,31.8,63.8,9.6,../cad/parts/CT-20C-H096-79a15afcbe.stl
+CT-21C-H096-f08d83c02d,c1,Pumpkin orange,#FF9016,1,39.8,47.8,9.6,../cad/parts/CT-21C-H096-f08d83c02d.stl
+CT-24C-H096-5f7a42e330,c0,Yellow,#F4EE2A,1,31.8,63.8,9.6,../cad/parts/CT-24C-H096-5f7a42e330.stl
+CT-24C-H096-60744f3966,c0,Yellow,#F4EE2A,1,31.8,63.8,9.6,../cad/parts/CT-24C-H096-60744f3966.stl
+CT-24C-H096-65a3298f1a,c0,Yellow,#F4EE2A,1,31.8,63.8,9.6,../cad/parts/CT-24C-H096-65a3298f1a.stl
+CT-26C-H096-b3f5221ae5,c0,Yellow,#F4EE2A,1,39.8,47.8,9.6,../cad/parts/CT-26C-H096-b3f5221ae5.stl
+CT-28C-H096-95faf6dd80,c0,Yellow,#F4EE2A,1,47.8,47.8,9.6,../cad/parts/CT-28C-H096-95faf6dd80.stl
+PL-01x02-H032,c0,Yellow,#F4EE2A,1,7.8,15.8,3.2,../cad/parts/PL-01x02-H032.stl
+PL-01x04-H032,c0,Yellow,#F4EE2A,1,7.8,31.8,3.2,../cad/parts/PL-01x04-H032.stl
+PL-01x06-H032,c0,Yellow,#F4EE2A,1,7.8,47.8,3.2,../cad/parts/PL-01x06-H032.stl
+PL-01x08-H032,c0,Yellow,#F4EE2A,2,7.8,63.8,3.2,../cad/parts/PL-01x08-H032.stl
+PL-02x02-H032,c0,Yellow,#F4EE2A,10,15.8,15.8,3.2,../cad/parts/PL-02x02-H032.stl
+PL-02x04-H032,c0,Yellow,#F4EE2A,24,15.8,31.8,3.2,../cad/parts/PL-02x04-H032.stl
+PL-02x06-H032,c0,Yellow,#F4EE2A,3,15.8,47.8,3.2,../cad/parts/PL-02x06-H032.stl
+PL-02x08-H032,c0,Yellow,#F4EE2A,6,15.8,63.8,3.2,../cad/parts/PL-02x08-H032.stl

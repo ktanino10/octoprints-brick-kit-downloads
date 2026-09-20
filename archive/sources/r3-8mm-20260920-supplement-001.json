@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "revision": "r3-8mm-20260920",
+  "source_revision": "125ecacc0deb8c74819e4c1934ff3729d1a99791",
+  "base_ready_receipt_sha256": "7b26031d2f9d8e978ee35ac729400aceceb8293c46758e2074fe963cf724bee1",
+  "reason": "The catalog explicitly references this public trial-layout file, but the initial native shareable inventory omitted it.",
+  "operation": "ADD_ONLY",
+  "files": [
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/layout.json",
+      "bytes": 2098384,
+      "sha256": "2f4f5a7d085556c1f13eb027c2b9f3a002f8bd0bbf8c1c89c9642c11749e2736"
+    }
+  ]
+}

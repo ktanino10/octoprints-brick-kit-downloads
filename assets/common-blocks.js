@@ -19,9 +19,10 @@ export function commonFile(value, revision) {
   return revisionFile(path, { id: revision, generation: 'common-blocks' });
 }
 
-export function validateCommonStatus(status) {
+export function validateCommonStatus(status, { visualRequired = true } = {}) {
   requireThat(record(status)
-    && status.visual_selection === 'PRACTICAL_8MM_REDESIGN_AUTHORIZED'
+    && ((!visualRequired && status.visual_selection === undefined)
+      || status.visual_selection === 'PRACTICAL_8MM_REDESIGN_AUTHORIZED')
     && status.physical_fit === 'UNKNOWN' && status.retention_strength === 'UNKNOWN'
     && status.slicer_status === 'NOT_SLICED' && status.full_print === 'ON_HOLD'
     && status.production_export === 'BLOCKED', '共通ブロックの設計承認・実物未検証・未スライスの状態が一致しません。');
@@ -59,7 +60,7 @@ export function validateCommonCatalog(catalog) {
   requireThat(record(catalog) && catalog.schema_version === 3 && catalog.units === 'mm'
     && catalog.stage === COMMON_STAGE, '共通ブロックのカタログ形式・単位・試作段階が不正です。');
   assertRevision(catalog.revision);
-  validateCommonStatus(catalog.status);
+  validateCommonStatus(catalog.status, { visualRequired: false });
   requireThat(Array.isArray(catalog.candidates) && catalog.candidates.length === 3, '共通ブロック版には3キャラクターが必要です。');
   const found = new Set();
   const candidates = catalog.candidates.map((candidate) => {
@@ -68,22 +69,43 @@ export function validateCommonCatalog(catalog) {
       && candidate.pitch_mm === 8 && !found.has(candidate.character), '共通ブロックの候補ID・ピッチ・キャラクターが一致しません。');
     found.add(candidate.character);
     validateMetrics(candidate.metrics, candidate.id, { estimateRequired: false });
-    if (candidate.status !== undefined) validateCommonStatus(candidate.status);
+    validateCommonStatus(candidate.status);
     const normalized = { ...candidate };
     for (const field of ['manifest_url', 'render_url', 'exploded_url', 'blend_url', 'video_url',
       'bom_url', 'native_assembly_url', 'assembly_guide_url']) {
       normalized[field] = commonFile(candidate[field], catalog.revision);
     }
-    for (const field of ['summary_bom_url', 'assembly_steps_url', 'evidence_url', 'thumbnail_url']) {
+    for (const field of ['summary_bom_url', 'assembly_steps_url', 'evidence_url', 'thumbnail_url',
+      'assembly_guide_en_url', 'plate_index_url', 'before_after_url']) {
       if (candidate[field] !== undefined) normalized[field] = commonFile(candidate[field], catalog.revision);
+    }
+    if (candidate.plate_files !== undefined) {
+      requireThat(Array.isArray(candidate.plate_files) && candidate.plate_files.length > 0,
+        '色別プレートのファイル一覧が不正です。');
+      normalized.plate_files = candidate.plate_files.map((plate) => {
+        requireThat(record(plate) && text(plate.color_id) && Number.isSafeInteger(plate.part_count) && plate.part_count > 0,
+          '色別プレートの色・部品数が不正です。');
+        return { ...plate, url: commonFile(plate.url, catalog.revision) };
+      });
+      requireThat(normalized.plate_files.reduce((sum, plate) => sum + plate.part_count, 0) === candidate.metrics.part_count,
+        '色別プレートの数量が、このモデルの部品数と一致しません。');
     }
     requireThat(candidate.warnings === undefined || (Array.isArray(candidate.warnings) && candidate.warnings.every(text)),
       '注意事項の形式が不正です。');
     return normalized;
   });
   const normalized = { ...catalog, candidates, prototypes_url: commonFile(catalog.prototypes_url, catalog.revision) };
-  for (const field of ['contact_sheet_url', 'evidence_url', 'dimensions_url', 'common_parts_url']) {
+  for (const field of ['contact_sheet_url', 'evidence_url', 'dimensions_url', 'common_parts_url', 'review_data_url']) {
     if (catalog[field] !== undefined) normalized[field] = commonFile(catalog[field], catalog.revision);
+  }
+  if (catalog.common_parts !== undefined) {
+    requireThat(record(catalog.common_parts) && Array.isArray(catalog.common_parts.libraries), '共有部品ライブラリーの記録が不正です。');
+    normalized.common_parts = {
+      ...catalog.common_parts,
+      libraries: catalog.common_parts.libraries.map((url) => commonFile(url, catalog.revision)),
+      dimension_comparison_url: commonFile(catalog.common_parts.dimension_comparison_url, catalog.revision),
+      underside_sections_url: commonFile(catalog.common_parts.underside_sections_url, catalog.revision),
+    };
   }
   return normalized;
 }
@@ -118,6 +140,8 @@ export function validateCommonManifest(manifest, candidateId) {
       && part.insertion_axis === '-Z' && Array.isArray(part.support_ids) && part.support_ids.every(text)
       && new Set(part.support_ids).size === part.support_ids.length
       && nonnegativeInteger(part.support_stud_sites), `${part.id} の共通ブロック配置・高さ・役割が不正です。`);
+    requireThat(part.support_class === undefined || ['GROUND', 'OPEN_UNDERSIDE_SEATED_NOMINAL'].includes(part.support_class),
+      `${part.id} の共通ブロック支持区分が不正です。`);
     ids.add(part.id);
     typeIds.add(part.type_id);
     colorIds.add(part.color_id);

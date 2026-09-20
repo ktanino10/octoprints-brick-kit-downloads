@@ -26,10 +26,35 @@ This is a noncommercial prototype record for approximately 180 mm-tall Mona, Cop
 The revised approach prioritizes parts such as 2×2 and 2×4 blocks, 9.6 mm brick bodies and 3.2 mm plates,
 with open undersides and wall/tube/rib retention. Earlier 4 mm Fine and 1.10 mm pin constraints are superseded where they conflict with this direction.
 
-The new revision is `r3-8mm-20260920`. The [revision registry](archive/revisions.json) and
-[current-model page](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/models.html) distinguish available files from inputs still awaited.
-No earlier image, geometry or part count is presented as the new design while its real deliverables are being prepared.
+The current revision is **`r3-8mm-20260920`**. The [revision registry](archive/revisions.json) and
+[current-model page](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/models.html) use actual, checked deliverables from that same revision.
+No earlier image or geometry is substituted for the redesigned models.
 See the [common-block design/publication guide](docs/COMMON-BLOCKS.en.md) / [日本語](docs/COMMON-BLOCKS.ja.md).
+
+| Actual r3 model | Individual parts | Types used | Width × depth × height / mm | Small 1×1 exceptions |
+|---|---:|---:|---|---:|
+| Mona | 519 | 68 | 199.8 × 167.8 × 181.0 | 5 |
+| Copilot | 695 | 86 | 247.8 × 199.8 × 181.0 | 10 |
+| Ducky | 413 | 56 | 151.8 × 215.8 × 181.0 | 0 |
+
+There are **1,627 instances sharing 133 master types**. Seven new FreeCAD documents cover two shared libraries,
+three assemblies, the trial and native section checks. The release includes complete/exploded PNGs, three Blender scenes,
+three 6-second 720×720 turntables, per-type STL/STEP, **33 color-grouped geometry 3MF plates** (11 / 13 / 9),
+individual/type-color BOMs and bilingual guides.
+
+- **[New release and ZIP packages](https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/tag/archive-2026-09-20-r3)**
+- [Nine-piece trial 3MF](artifacts/revisions/r3-8mm-20260920/cad/trial/plate.3mf) /
+  [equivalent trial STL](artifacts/revisions/r3-8mm-20260920/cad/trial/plate.stl) /
+  [English trial instructions](artifacts/revisions/r3-8mm-20260920/TRIAL-en.md).
+- [Same-scale old/new dimensions](artifacts/revisions/r3-8mm-20260920/size-comparison.png) /
+  [actual BRep open undersides and sections](artifacts/revisions/r3-8mm-20260920/open-underside-sections.png).
+- [Relocated native reopening and geometry-preservation record](archive/portability/r3-8mm-20260920.json).
+
+The new trial has **nine pieces**: three male 2×2 variants, five female 2×4 variants, and one thin 2×4 plate.
+Male values are **stud diameter corrections −0.10 / 0 / +0.10 mm**; female values are
+**radial clearances −0.04 / 0 / +0.04 / +0.08 / +0.12 mm**, not the earlier r2 diameter differences.
+The 0.4 mm nozzle is a comparison candidate, not claimed installed. The last reported installed nozzle was 0.2 mm;
+confirm the current hardware.
 
 **The new revision has not been physically tested. Fit, retention and full assembly are unvalidated; full-kit printing is ON HOLD.**
 The small-part handling and blocked-hole feedback belongs to the earlier r2 4 mm trial on 2026-09-19, not the new revision.

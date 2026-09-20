@@ -80,6 +80,26 @@ export function renderTrials(context, signal) {
         heading.append(element('h3', '', set.label ?? '8 mm共通ブロック・小型試験'),
           element('span', 'small-label', `${number(set.piece_count, 0)}個 / NOT_SLICED`));
         box.append(heading, element('p', 'control-help', '形状のみの試験資料です。実際の機種・ノズル・材料・プレート・スライス条件とレイヤー経路を別途確認します。'));
+        if (!Array.isArray(set.radial_clearances_mm) || !set.radial_clearances_mm.every(Number.isFinite)
+          || !Array.isArray(set.male_diameter_corrections_mm) || !set.male_diameter_corrections_mm.every(Number.isFinite)
+          || !Number.isFinite(set.nozzle_recommendation_mm) || !Number.isFinite(set.last_reported_installed_nozzle_mm)) {
+          throw new DataError('新版試験の直径補正・半径隙間・ノズル記録が不正です。');
+        }
+        const signed = (values) => values.map((value) => `${value > 0 ? '+' : ''}${number(value, 2)}`).join(' / ');
+        const facts = element('dl', 'evidence-facts');
+        for (const [label, value] of [
+          ['雄側のスタッド直径補正', `${signed(set.male_diameter_corrections_mm)} mm`],
+          ['雌側の半径隙間', `${signed(set.radial_clearances_mm)} mm`],
+          ['比較するノズル候補', `${number(set.nozzle_recommendation_mm)} mm（装着済みとは限りません）`],
+          ['最後に報告された装着ノズル', `${number(set.last_reported_installed_nozzle_mm)} mm（今回の設定は実機で確認）`],
+          ['姿勢', '下面開口を下・突起を上・すべての底面z=0'],
+          ['実機嵌合・保持力', 'UNKNOWN / NOT_SLICED'],
+        ]) {
+          const row = element('div');
+          row.append(element('dt', '', label), element('dd', '', value));
+          facts.append(row);
+        }
+        box.append(facts, element('p', 'card-footnote', '雌側は半径隙間で、旧r2の直径差ではありません。雄側の直径補正と混同しないでください。負の隙間は意図的な公称干渉で、無理に押し込みません。'));
         const entries = [];
         if (set.downloads !== undefined) {
           if (!Array.isArray(set.downloads)) throw new DataError('新版試験セットの取得先一覧が不正です。');
@@ -96,6 +116,7 @@ export function renderTrials(context, signal) {
             ['plate_step_url', '新版試験の配置STEP'],
             ['layout_url', '新版試験の配置・数量JSON'],
             ['instructions_url', '新版試験の条件・姿勢ガイド'],
+            ['bundle_url', '新版9部品の試験セットZIP'],
             ['parts_csv_url', '試験片の数量CSV'],
             ['csv_url', '試験片の記録CSV'],
           ]) {

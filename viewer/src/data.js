@@ -17,6 +17,7 @@ export const SUPPORT_CLASSES = Object.freeze({
   RETENTION_REQUIRED: '保持対策が必要',
   CRADLE_AND_RETENTION_REQUIRED: '受け台と保持対策が必要',
   CRADLE_SUPPORTED_RETENTION_REQUIRED: '仮支持台が必要・保持力未確認',
+  OPEN_UNDERSIDE_SEATED_NOMINAL: '開いた下面で公称着座・保持力未確認',
 });
 const RETENTION_RISK_LABELS = Object.freeze({
   SELF_WEIGHT_CANTILEVER_REQUIRES_RETENTION_OR_TEMPORARY_SUPPORT: '単体自重の片持ち条件・保持対策または仮支持が必要',
@@ -423,6 +424,13 @@ export function assemblyScope(assembly) {
     ...(Array.isArray(assembly?.insertion_sweep_assumptions) ? assembly.insertion_sweep_assumptions : []),
     assembly?.independent_order_check?.scope,
   ].filter((value) => typeof value === 'string' && value.length > 0);
+  if (assembly?.insertion_sweep_validation === 'PASS_NATIVE_OPEN_UNDERSIDE_VERTICAL') {
+    return {
+      label: '開いた下面・公称上下経路のデジタル検査済み',
+      detail: '実ネイティブ形状の列・界面・着座と上下配置を検査したデジタル記録です。印刷誤差、手や工具、摩擦、荷重、実物保持力は含みません。',
+      sourceDetails,
+    };
+  }
   if (assembly?.insertion_sweep_validation === 'PASS_OCCUPANCY_PENDING_NATIVE_PROFILE') {
     return {
       label: '格子経路のみ確認・実形状照合待ち',

@@ -21,6 +21,19 @@ DOCS = {
     "artifacts/selected/r2-20260919/TRIAL-GUIDE.md": "docs/TRIAL-GUIDE.en.md",
     "docs/COMMON-BLOCKS.ja.md": "docs/COMMON-BLOCKS.en.md",
 }
+registry_path = ROOT / "archive/revisions.json"
+if registry_path.is_file():
+    for revision in json.loads(registry_path.read_text())["revisions"]:
+        if revision["generation"] != "common-blocks" or revision["availability"] != "AVAILABLE":
+            continue
+        base = f"artifacts/revisions/{revision['id']}/"
+        source_catalog = json.loads((ROOT / revision["catalog_url"].lstrip("/")).read_text())
+        for candidate in source_catalog["candidates"]:
+            if candidate.get("assembly_guide_en_url"):
+                DOCS[base + candidate["assembly_guide_url"]] = base + candidate["assembly_guide_en_url"]
+        for trial in source_catalog.get("trial_sets", []):
+            if trial.get("instructions_en_url"):
+                DOCS[base + trial["instructions_url"]] = base + trial["instructions_en_url"]
 
 
 def normalize(text):
@@ -88,7 +101,12 @@ def required_messages():
             catalog_path = ROOT / revision["catalog_url"].lstrip("/")
             current = json.loads(catalog_path.read_text())
             paths.append(catalog_path)
-            paths += [ROOT / candidate["manifest_url"].lstrip("/") for candidate in current["candidates"]]
+            paths += [
+                ROOT / candidate["manifest_url"].lstrip("/")
+                if candidate["manifest_url"].startswith(("/", "artifacts/"))
+                else catalog_path.parent / candidate["manifest_url"]
+                for candidate in current["candidates"]
+            ]
             paths.append(ROOT / revision["bundle_index_url"].lstrip("/"))
     for path in paths:
         collect(json.loads(path.read_text()))

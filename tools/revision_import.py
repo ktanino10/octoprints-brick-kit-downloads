@@ -6,6 +6,7 @@ import hashlib
 import json
 from pathlib import Path, PurePosixPath
 import re
+import posixpath
 import shutil
 import subprocess
 import xml.etree.ElementTree as ET
@@ -16,7 +17,7 @@ from import_archive import clean_json, sanitize_native
 
 ROOT = Path(__file__).resolve().parents[1]
 SUFFIXES = {".json", ".csv", ".md", ".txt", ".html", ".svg", ".png", ".jpg", ".jpeg",
-            ".webp", ".mp4", ".blend", ".FCStd", ".step", ".stp", ".stl", ".3mf"}
+            ".webp", ".mp4", ".blend", ".FCStd", ".step", ".stp", ".stl", ".3mf", ".zip"}
 PRIVATE = re.compile(rb"/Users/|/home/[^/ ]+/|/private/var/|/var/folders/|file:///|"
                      rb"session-state/|github_pat_[A-Za-z0-9_]{30,}|gh[pousr]_[A-Za-z0-9]{25,}")
 
@@ -35,7 +36,7 @@ def safe_relative(value, prefix):
         raise ValueError(f"Hidden/internal artifact path: {value}")
     if {"frames", "render-frames", "cache", "caches", "logs", "runs", "__pycache__", "node_modules", "venv"} & set(path.parts):
         raise ValueError(f"Runtime/cache path is not a deliverable: {value}")
-    if path.suffix not in SUFFIXES:
+    if path.suffix not in SUFFIXES and path.name != "LICENSE":
         raise ValueError(f"Unapproved artifact format: {value}")
     return path
 
@@ -190,6 +191,42 @@ def source_inventory(receipt):
         "files": [{key: entry[key] for key in ("path", "bytes", "sha256")} for entry in receipt["files"]],
     }
 
+def rebuild_source_bundle(source, target, stage, prefix, entries):
+    with zipfile.ZipFile(source) as archive:
+        names = set(archive.namelist())
+        output = []
+        for member in archive.infolist():
+            if member.is_dir():
+                continue
+            relative = PurePosixPath(member.filename)
+            if relative.is_absolute() or ".." in relative.parts or "\\" in member.filename:
+                raise ValueError(f"Unsafe source bundle member: {member.filename}")
+            full = prefix + member.filename
+            if full not in entries or relative.suffix == ".zip":
+                raise ValueError(f"Bundle member is not an explicitly approved individual file: {member.filename}")
+            original = archive.read(member)
+            if sha(original) != entries[full]["sha256"]:
+                raise ValueError(f"Bundle contains different source bytes: {member.filename}")
+            data = (stage / full).read_bytes()
+            if relative.suffix == ".FCStd":
+                import io
+                with zipfile.ZipFile(io.BytesIO(data)) as native:
+                    document = ET.fromstring(native.read("Document.xml"))
+                    for link in document.iter("XLink"):
+                        linked = link.get("file")
+                        if linked:
+                            dependency = posixpath.normpath(posixpath.join(str(relative.parent), linked))
+                            if dependency not in names:
+                                raise ValueError(f"Native dependency is absent from this bundle: {member.filename}: {linked}")
+            entry = zipfile.ZipInfo(member.filename, date_time=(2026, 9, 20, 0, 0, 0))
+            entry.compress_type = zipfile.ZIP_DEFLATED
+            entry.external_attr = 0o100644 << 16
+            output.append((entry, data))
+    with zipfile.ZipFile(target, "w") as archive:
+        for member, data in output:
+            archive.writestr(member, data, compresslevel=6)
+    return len(output)
+
 
 def stage_revision(receipt, source, stage):
     validate_receipt(receipt)
@@ -200,18 +237,25 @@ def stage_revision(receipt, source, stage):
         checked_input(source, entry)
     stage.mkdir(parents=True)
     changes = []
-    for entry in receipt["files"]:
+    entries = {entry["path"]: entry for entry in receipt["files"]}
+    ordered = sorted(receipt["files"], key=lambda entry: Path(entry["path"]).suffix == ".zip")
+    for entry in ordered:
         data = checked_input(source, entry)
         target = stage / entry["path"]
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(data)
-        notes = sanitize_copy(source, source / entry["path"], target)
+        if target.suffix == ".zip":
+            count = rebuild_source_bundle(source / entry["path"], target, stage,
+                                          f"artifacts/revisions/{receipt['revision']}/", entries)
+            notes = [f"Same {count} approved members and relative layout; rebuilt from metadata-sanitized individual files."]
+        else:
+            notes = sanitize_copy(source, source / entry["path"], target)
         changes.append({"path": entry["path"], "source_sha256": entry["sha256"],
                         "public_sha256": sha(target.read_bytes()), "changes": notes,
                         "blender_metadata_check": "PENDING" if target.suffix == ".blend" else "NOT_APPLICABLE"})
     for entry in receipt["files"]:
         target = stage / entry["path"]
-        if target.suffix in {".FCStd", ".3mf"}:
+        if target.suffix in {".FCStd", ".3mf", ".zip"}:
             check_archive(target, stage, available)
     return changes
 

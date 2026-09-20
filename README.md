@@ -25,10 +25,32 @@ Mona・Copilot・Duckyを約180 mmの独立ブリックで組み立てる、非�
 2×2・2×4などを中心に、本体9.6 mm・プレート3.2 mm、開いた下面の壁・筒・リブによる保持へ見直します。
 旧4 mm細密と1.10 mmピンを維持する制約は、新方針と矛盾する部分について置き換えます。
 
-新revisionは `r3-8mm-20260920`。現在の公開可能版と入力待ち状態は
-[版別公開記録](archive/revisions.json) と [現行3体ページ](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/models.html) で明示します。
-制作データを受領・照合するまでは、新しい画像・形状・部品数を旧版で埋め合わせません。
+現行revisionは **`r3-8mm-20260920`**。実制作物を受領・照合した同じ版だけを
+[版別公開記録](archive/revisions.json) と [現行3体ページ](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/models.html) で表示します。
+旧画像・旧形状で新版を代用していません。
 [新版の設計・公開範囲](docs/COMMON-BLOCKS.ja.md) / [English](docs/COMMON-BLOCKS.en.md) を参照してください。
+
+| r3の実データ | 個別部品 | 使用する型 | 幅 × 奥行 × 高さ / mm | 1×1例外 |
+|---|---:|---:|---|---:|
+| Mona | 519 | 68 | 199.8 × 167.8 × 181.0 | 5 |
+| Copilot | 695 | 86 | 247.8 × 199.8 × 181.0 | 10 |
+| Ducky | 413 | 56 | 151.8 × 215.8 × 181.0 | 0 |
+
+合計 **1,627個・共有133型**。新版のFreeCADは共有ライブラリー2冊・組立3体・試験・断面検査の計7文書です。
+完成/分解PNG、3つのBlenderシーンと6秒・720×720のターンテーブル、型別STL/STEP、
+33枚の色別形状3MF（11 / 13 / 9枚）、個別/型色別BOM・日英ガイドを公開しています。
+
+- **[新版リリースとZIP](https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/tag/archive-2026-09-20-r3)**
+- [9部品の試験3MF](artifacts/revisions/r3-8mm-20260920/cad/trial/plate.3mf) /
+  [同じ試験のSTL](artifacts/revisions/r3-8mm-20260920/cad/trial/plate.stl) /
+  [日英の試験手順](artifacts/revisions/r3-8mm-20260920/TRIAL-ja.md)
+- [新旧寸法の比較](artifacts/revisions/r3-8mm-20260920/size-comparison.png) /
+  [実BRep由来の開いた下面・断面](artifacts/revisions/r3-8mm-20260920/open-underside-sections.png)
+- [新しいnative移動再オープン・形状保持の記録](archive/portability/r3-8mm-20260920.json)
+
+新試験は、雄2×2を3個、雌2×4を5個、薄い2×4プレート1個の**9部品**です。
+雄はスタッドの**直径補正 −0.10 / 0 / +0.10 mm**、雌は**半径隙間 −0.04 / 0 / +0.04 / +0.08 / +0.12 mm**。
+旧r2の直径差と混同しません。0.4 mmは比較候補で、最後の装着報告は0.2 mmです。実機の装着ノズルを確認してください。
 
 **新型の実物試験は未実施、嵌合・保持力・全体組立は未検証。全数印刷は保留です。**
 写真・動画にある小ささと穴詰まりは、2026-09-19の旧r2・4 mm試作の報告で、新型の試験結果ではありません。

@@ -1,0 +1,530 @@
+{
+  "schema_version": 3,
+  "revision": "r3-8mm-20260920",
+  "stage": "DIGITAL_PROTOTYPE_NOT_PHYSICALLY_TESTED",
+  "units": "mm",
+  "frame": {
+    "up": "+Z",
+    "front": "-Y",
+    "handedness": "right"
+  },
+  "position_origin": "body-bottom-center",
+  "prototypes_url": "cad/prototypes.json",
+  "contact_sheet_url": "comparison.jpg",
+  "source_history_url": "/artifacts/phase1/gallery.html",
+  "review_data_url": "r3-8mm-all-parts-NOT-SLICED.zip",
+  "candidates": [
+    {
+      "id": "mona-practical8",
+      "character": "mona",
+      "style": "practical8",
+      "label": "実用8 mm / Practical common bricks",
+      "pitch_mm": 8.0,
+      "layer_mm": 3.2,
+      "manifest_url": "mona-practical8/manifest.json",
+      "render_url": "mona-practical8/assembled.png",
+      "exploded_url": "mona-practical8/exploded.png",
+      "blend_url": "mona-practical8/scene.blend",
+      "video_url": "mona-practical8/turntable.mp4",
+      "before_after_url": "mona-before-after.jpg",
+      "bom_url": "mona-practical8/bom.csv",
+      "summary_bom_url": "mona-practical8/bom-types-colors.csv",
+      "assembly_steps_url": "mona-practical8/assembly-steps.csv",
+      "assembly_guide_url": "mona-practical8/ASSEMBLY-ja.md",
+      "assembly_guide_en_url": "mona-practical8/ASSEMBLY-en.md",
+      "native_assembly_url": "cad/assemblies/mona-practical8.FCStd",
+      "plate_index_url": "mona-practical8/plates/plates.json",
+      "plate_files": [
+        {
+          "url": "mona-practical8/plates/c0-plate-01-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 31
+        },
+        {
+          "url": "mona-practical8/plates/c0-plate-02-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 36
+        },
+        {
+          "url": "mona-practical8/plates/c0-plate-03-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 31
+        },
+        {
+          "url": "mona-practical8/plates/c0-plate-04-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 40
+        },
+        {
+          "url": "mona-practical8/plates/c0-plate-05-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 69
+        },
+        {
+          "url": "mona-practical8/plates/c0-plate-06-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 86
+        },
+        {
+          "url": "mona-practical8/plates/c0-plate-07-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 129
+        },
+        {
+          "url": "mona-practical8/plates/c1-plate-01-NOT-SLICED.3mf",
+          "color_id": "c1",
+          "part_count": 5
+        },
+        {
+          "url": "mona-practical8/plates/c2-plate-01-NOT-SLICED.3mf",
+          "color_id": "c2",
+          "part_count": 12
+        },
+        {
+          "url": "mona-practical8/plates/c3-plate-01-NOT-SLICED.3mf",
+          "color_id": "c3",
+          "part_count": 61
+        },
+        {
+          "url": "mona-practical8/plates/c3-plate-02-NOT-SLICED.3mf",
+          "color_id": "c3",
+          "part_count": 19
+        }
+      ],
+      "metrics": {
+        "part_count": 519,
+        "unique_types": 68,
+        "color_count": 4,
+        "layer_count": 20,
+        "height_mm": 181.0,
+        "width_mm": 199.8,
+        "depth_mm": 167.8,
+        "bounds_mm": [
+          [
+            -99.9,
+            -83.9,
+            0.0
+          ],
+          [
+            99.9,
+            83.9,
+            181.0
+          ]
+        ],
+        "standard_rectangle_parts": 412,
+        "contour_parts": 107,
+        "one_by_one_parts": 5,
+        "one_by_one_ids": [
+          "MON-R3-0218",
+          "MON-R3-0273",
+          "MON-R3-0288",
+          "MON-R3-0291",
+          "MON-R3-0308"
+        ],
+        "minimum_xy_short_dimension_mm": 7.8,
+        "minimum_xy_long_dimension_mm": 7.8,
+        "grippable_long_dimension_ge_15_8_mm": 514,
+        "baseline_r2_part_count": 13434,
+        "approx_build_hours": [
+          1.6,
+          4.1
+        ],
+        "effort_basis": "Unmeasured planning estimate: 10-25 seconds per larger part plus 12-30 minutes sorting; NOT print time.",
+        "measured_straight_wall_mm": 1.4599999999999866,
+        "measured_entry_wall_mm": 1.259999999999998,
+        "measured_min_roof_mm": 1.0,
+        "wall_measurement_status": "NATIVE_SECTIONS_MEASURED_NOT_PRINT_TESTED"
+      },
+      "status": {
+        "visual_selection": "PRACTICAL_8MM_REDESIGN_AUTHORIZED",
+        "physical_fit": "UNKNOWN",
+        "retention_strength": "UNKNOWN",
+        "slicer_status": "NOT_SLICED",
+        "full_print": "ON_HOLD",
+        "production_export": "BLOCKED"
+      },
+      "warnings": [
+        "r3は8 mm共通ブロックへ改訂したデジタル試作。実物は未検証、全数印刷は保留です。",
+        "旧r2は小さく扱いにくい・穴が埋まる実物問題が報告されています。新版の合格を意味しません。",
+        "原型の配色を用いた8 mm近似です。輪郭は最大1格子程度、接合部と継ぎ目は大きく変わります。",
+        "下面は開いた壁・筒・リブです。LEGOの原理を参考に独立実装し、ロゴや互換性・嵌合保証は付けません。",
+        "1x1例外は5個。例外を含む最小平面寸法と部品IDを記録しています。"
+      ]
+    },
+    {
+      "id": "copilot-practical8",
+      "character": "copilot",
+      "style": "practical8",
+      "label": "実用8 mm / Practical common bricks",
+      "pitch_mm": 8.0,
+      "layer_mm": 3.2,
+      "manifest_url": "copilot-practical8/manifest.json",
+      "render_url": "copilot-practical8/assembled.png",
+      "exploded_url": "copilot-practical8/exploded.png",
+      "blend_url": "copilot-practical8/scene.blend",
+      "video_url": "copilot-practical8/turntable.mp4",
+      "before_after_url": "copilot-before-after.jpg",
+      "bom_url": "copilot-practical8/bom.csv",
+      "summary_bom_url": "copilot-practical8/bom-types-colors.csv",
+      "assembly_steps_url": "copilot-practical8/assembly-steps.csv",
+      "assembly_guide_url": "copilot-practical8/ASSEMBLY-ja.md",
+      "assembly_guide_en_url": "copilot-practical8/ASSEMBLY-en.md",
+      "native_assembly_url": "cad/assemblies/copilot-practical8.FCStd",
+      "plate_index_url": "copilot-practical8/plates/plates.json",
+      "plate_files": [
+        {
+          "url": "copilot-practical8/plates/c0-plate-01-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 25
+        },
+        {
+          "url": "copilot-practical8/plates/c0-plate-02-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 36
+        },
+        {
+          "url": "copilot-practical8/plates/c0-plate-03-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 36
+        },
+        {
+          "url": "copilot-practical8/plates/c0-plate-04-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 34
+        },
+        {
+          "url": "copilot-practical8/plates/c0-plate-05-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 24
+        },
+        {
+          "url": "copilot-practical8/plates/c0-plate-06-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 42
+        },
+        {
+          "url": "copilot-practical8/plates/c0-plate-07-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 62
+        },
+        {
+          "url": "copilot-practical8/plates/c0-plate-08-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 72
+        },
+        {
+          "url": "copilot-practical8/plates/c0-plate-09-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 88
+        },
+        {
+          "url": "copilot-practical8/plates/c0-plate-10-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 183
+        },
+        {
+          "url": "copilot-practical8/plates/c0-plate-11-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 7
+        },
+        {
+          "url": "copilot-practical8/plates/c1-plate-01-NOT-SLICED.3mf",
+          "color_id": "c1",
+          "part_count": 78
+        },
+        {
+          "url": "copilot-practical8/plates/c2-plate-01-NOT-SLICED.3mf",
+          "color_id": "c2",
+          "part_count": 8
+        }
+      ],
+      "metrics": {
+        "part_count": 695,
+        "unique_types": 86,
+        "color_count": 3,
+        "layer_count": 20,
+        "height_mm": 181.0,
+        "width_mm": 247.8,
+        "depth_mm": 199.8,
+        "bounds_mm": [
+          [
+            -123.9,
+            -99.9,
+            0.0
+          ],
+          [
+            123.9,
+            99.9,
+            181.0
+          ]
+        ],
+        "standard_rectangle_parts": 567,
+        "contour_parts": 128,
+        "one_by_one_parts": 10,
+        "one_by_one_ids": [
+          "COP-R3-0150",
+          "COP-R3-0152",
+          "COP-R3-0155",
+          "COP-R3-0168",
+          "COP-R3-0172",
+          "COP-R3-0194",
+          "COP-R3-0424",
+          "COP-R3-0442",
+          "COP-R3-0521",
+          "COP-R3-0676"
+        ],
+        "minimum_xy_short_dimension_mm": 7.8,
+        "minimum_xy_long_dimension_mm": 7.8,
+        "grippable_long_dimension_ge_15_8_mm": 685,
+        "baseline_r2_part_count": 3021,
+        "approx_build_hours": [
+          2.1,
+          5.3
+        ],
+        "effort_basis": "Unmeasured planning estimate: 10-25 seconds per larger part plus 12-30 minutes sorting; NOT print time.",
+        "measured_straight_wall_mm": 1.459999999999976,
+        "measured_entry_wall_mm": 1.259999999999998,
+        "measured_min_roof_mm": 1.0,
+        "wall_measurement_status": "NATIVE_SECTIONS_MEASURED_NOT_PRINT_TESTED"
+      },
+      "status": {
+        "visual_selection": "PRACTICAL_8MM_REDESIGN_AUTHORIZED",
+        "physical_fit": "UNKNOWN",
+        "retention_strength": "UNKNOWN",
+        "slicer_status": "NOT_SLICED",
+        "full_print": "ON_HOLD",
+        "production_export": "BLOCKED"
+      },
+      "warnings": [
+        "r3は8 mm共通ブロックへ改訂したデジタル試作。実物は未検証、全数印刷は保留です。",
+        "旧r2は小さく扱いにくい・穴が埋まる実物問題が報告されています。新版の合格を意味しません。",
+        "原型の配色を用いた8 mm近似です。輪郭は最大1格子程度、接合部と継ぎ目は大きく変わります。",
+        "下面は開いた壁・筒・リブです。LEGOの原理を参考に独立実装し、ロゴや互換性・嵌合保証は付けません。",
+        "1x1例外は10個。例外を含む最小平面寸法と部品IDを記録しています。"
+      ]
+    },
+    {
+      "id": "ducky-practical8",
+      "character": "ducky",
+      "style": "practical8",
+      "label": "実用8 mm / Practical common bricks",
+      "pitch_mm": 8.0,
+      "layer_mm": 3.2,
+      "manifest_url": "ducky-practical8/manifest.json",
+      "render_url": "ducky-practical8/assembled.png",
+      "exploded_url": "ducky-practical8/exploded.png",
+      "blend_url": "ducky-practical8/scene.blend",
+      "video_url": "ducky-practical8/turntable.mp4",
+      "before_after_url": "ducky-before-after.jpg",
+      "bom_url": "ducky-practical8/bom.csv",
+      "summary_bom_url": "ducky-practical8/bom-types-colors.csv",
+      "assembly_steps_url": "ducky-practical8/assembly-steps.csv",
+      "assembly_guide_url": "ducky-practical8/ASSEMBLY-ja.md",
+      "assembly_guide_en_url": "ducky-practical8/ASSEMBLY-en.md",
+      "native_assembly_url": "cad/assemblies/ducky-practical8.FCStd",
+      "plate_index_url": "ducky-practical8/plates/plates.json",
+      "plate_files": [
+        {
+          "url": "ducky-practical8/plates/c0-plate-01-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 29
+        },
+        {
+          "url": "ducky-practical8/plates/c0-plate-02-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 37
+        },
+        {
+          "url": "ducky-practical8/plates/c0-plate-03-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 26
+        },
+        {
+          "url": "ducky-practical8/plates/c0-plate-04-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 48
+        },
+        {
+          "url": "ducky-practical8/plates/c0-plate-05-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 72
+        },
+        {
+          "url": "ducky-practical8/plates/c0-plate-06-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 101
+        },
+        {
+          "url": "ducky-practical8/plates/c0-plate-07-NOT-SLICED.3mf",
+          "color_id": "c0",
+          "part_count": 81
+        },
+        {
+          "url": "ducky-practical8/plates/c1-plate-01-NOT-SLICED.3mf",
+          "color_id": "c1",
+          "part_count": 13
+        },
+        {
+          "url": "ducky-practical8/plates/c2-plate-01-NOT-SLICED.3mf",
+          "color_id": "c2",
+          "part_count": 6
+        }
+      ],
+      "metrics": {
+        "part_count": 413,
+        "unique_types": 56,
+        "color_count": 3,
+        "layer_count": 20,
+        "height_mm": 181.0,
+        "width_mm": 151.8,
+        "depth_mm": 215.8,
+        "bounds_mm": [
+          [
+            -75.9,
+            -107.9,
+            0.0
+          ],
+          [
+            75.9,
+            107.9,
+            181.0
+          ]
+        ],
+        "standard_rectangle_parts": 362,
+        "contour_parts": 51,
+        "one_by_one_parts": 0,
+        "one_by_one_ids": [],
+        "minimum_xy_short_dimension_mm": 7.8,
+        "minimum_xy_long_dimension_mm": 15.8,
+        "grippable_long_dimension_ge_15_8_mm": 413,
+        "baseline_r2_part_count": 10311,
+        "approx_build_hours": [
+          1.3,
+          3.4
+        ],
+        "effort_basis": "Unmeasured planning estimate: 10-25 seconds per larger part plus 12-30 minutes sorting; NOT print time.",
+        "measured_straight_wall_mm": 1.4599999999999902,
+        "measured_entry_wall_mm": 1.259999999999998,
+        "measured_min_roof_mm": 1.0,
+        "wall_measurement_status": "NATIVE_SECTIONS_MEASURED_NOT_PRINT_TESTED"
+      },
+      "status": {
+        "visual_selection": "PRACTICAL_8MM_REDESIGN_AUTHORIZED",
+        "physical_fit": "UNKNOWN",
+        "retention_strength": "UNKNOWN",
+        "slicer_status": "NOT_SLICED",
+        "full_print": "ON_HOLD",
+        "production_export": "BLOCKED"
+      },
+      "warnings": [
+        "r3は8 mm共通ブロックへ改訂したデジタル試作。実物は未検証、全数印刷は保留です。",
+        "旧r2は小さく扱いにくい・穴が埋まる実物問題が報告されています。新版の合格を意味しません。",
+        "原型の配色を用いた8 mm近似です。輪郭は最大1格子程度、接合部と継ぎ目は大きく変わります。",
+        "下面は開いた壁・筒・リブです。LEGOの原理を参考に独立実装し、ロゴや互換性・嵌合保証は付けません。",
+        "1x1例外は0個。例外を含む最小平面寸法と部品IDを記録しています。"
+      ]
+    }
+  ],
+  "common_parts": {
+    "libraries": [
+      "cad/libraries/CommonLibrary.FCStd",
+      "cad/libraries/ContourLibrary.FCStd"
+    ],
+    "dimension_comparison_url": "size-comparison.png",
+    "underside_sections_url": "open-underside-sections.png",
+    "master_count": 133,
+    "drawings_directory": "drawings/"
+  },
+  "native_cad": {
+    "fcstd_url": "cad/libraries/CommonLibrary.FCStd",
+    "contour_fcstd_url": "cad/libraries/ContourLibrary.FCStd"
+  },
+  "trial_sets": [
+    {
+      "pitch_mm": 8.0,
+      "piece_count": 9,
+      "material": "PLA",
+      "nozzle_recommendation_mm": 0.4,
+      "last_reported_installed_nozzle_mm": 0.2,
+      "nozzle_status": "CONFIRM_ON_ACTUAL_SLICING_PC_NOT_AN_INSTALLED_NOZZLE_CLAIM",
+      "radial_clearances_mm": [
+        -0.04,
+        0.0,
+        0.04,
+        0.08,
+        0.12
+      ],
+      "male_diameter_corrections_mm": [
+        -0.1,
+        0.0,
+        0.1
+      ],
+      "orientation": "Open underside DOWN, top studs UP, all bottoms z=0 / 下面開口を下・突起を上",
+      "parts": [
+        {
+          "label": "TRIAL-M1-02x02",
+          "url": "cad/trial/parts/TRIAL-M1-02x02.stl",
+          "quantity": 1
+        },
+        {
+          "label": "TRIAL-M2-02x02",
+          "url": "cad/trial/parts/TRIAL-M2-02x02.stl",
+          "quantity": 1
+        },
+        {
+          "label": "TRIAL-M3-02x02",
+          "url": "cad/trial/parts/TRIAL-M3-02x02.stl",
+          "quantity": 1
+        },
+        {
+          "label": "TRIAL-F1-02x04",
+          "url": "cad/trial/parts/TRIAL-F1-02x04.stl",
+          "quantity": 1
+        },
+        {
+          "label": "TRIAL-F2-02x04",
+          "url": "cad/trial/parts/TRIAL-F2-02x04.stl",
+          "quantity": 1
+        },
+        {
+          "label": "TRIAL-F3-02x04",
+          "url": "cad/trial/parts/TRIAL-F3-02x04.stl",
+          "quantity": 1
+        },
+        {
+          "label": "TRIAL-F4-02x04",
+          "url": "cad/trial/parts/TRIAL-F4-02x04.stl",
+          "quantity": 1
+        },
+        {
+          "label": "TRIAL-F5-02x04",
+          "url": "cad/trial/parts/TRIAL-F5-02x04.stl",
+          "quantity": 1
+        },
+        {
+          "label": "TRIAL-PL-02x04",
+          "url": "cad/trial/parts/TRIAL-PL-02x04.stl",
+          "quantity": 1
+        }
+      ],
+      "native_url": "cad/trial/Trial.FCStd",
+      "plate_url": "cad/trial/plate.3mf",
+      "plate_stl_url": "cad/trial/plate.stl",
+      "plate_step_url": "cad/trial/plate.step",
+      "layout_url": "cad/trial/layout.json",
+      "instructions_url": "TRIAL-ja.md",
+      "instructions_en_url": "TRIAL-en.md",
+      "bundle_url": "r3-8mm-nine-brick-trial-NOT-SLICED.zip",
+      "slicer_status": "NOT_SLICED",
+      "time": null,
+      "mass": null
+    }
+  ],
+  "status": {
+    "physical_fit": "UNKNOWN",
+    "retention_strength": "UNKNOWN",
+    "slicer_status": "NOT_SLICED",
+    "full_print": "ON_HOLD",
+    "production_export": "BLOCKED"
+  }
+}
