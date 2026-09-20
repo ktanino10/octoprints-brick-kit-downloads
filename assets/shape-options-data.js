@@ -74,7 +74,8 @@ export function validateShapeStudy(study, pointer) {
     '実部品数・型数・小部品・寸法または固定ブロック規格が不正です。');
     if (row.variant === 'baseline-r3') {
       requireThat(metrics.part_count === BASELINE_COUNTS[row.character]
-        && row.candidate_id === `${row.character}-practical8`, '現行r3の基準ID・部品数が変更されています。');
+        && row.baseline_candidate_id === `${row.character}-practical8`
+        && row.evidence?.baseline_identity_verified === true, '現行r3の基準ID・部品数が変更されています。');
     }
     requireThat(object(row.evidence) && hash(row.evidence.manifest_sha256) && hash(row.evidence.bom_sha256)
       && hash(row.evidence.native_geometry_sha256)

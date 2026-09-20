@@ -18,12 +18,14 @@ function fixture() {
     source_commit: pointer.source_commit, ...flags,
     rows: SHAPE_CHARACTERS.flatMap((character) => SHAPE_VARIANTS.map((variant, index) => ({
       character, variant, candidate_id: index ? `unit-test-only-${character}-${variant}` : `${character}-practical8`,
+      baseline_candidate_id: `${character}-practical8`,
       pitch_mm: 8, stud_diameter_mm: 4.8,
       metrics: { part_count: BASELINE_COUNTS[character] + index, unique_types: 2, small_part_count: 0,
         small_part_definition: 'Synthetic unit-test definition; never published',
         minimum_part_mm: [15.8, 15.8, 3.2], dimensions_mm: [100, 100, 181] },
       evidence: { manifest_sha256: '1'.repeat(64), bom_sha256: '2'.repeat(64), native_geometry_sha256: '4'.repeat(64),
-        counted_instances: BASELINE_COUNTS[character] + index, count_method: 'unit-test-only actual-ID contract fixture' },
+        counted_instances: BASELINE_COUNTS[character] + index, count_method: 'unit-test-only actual-ID contract fixture',
+        baseline_identity_verified: index === 0 },
       appearance_changes: ['Unit fixture, not a production image.'], assembly_tradeoffs: ['Unit fixture.'],
       images: Object.fromEntries(['perspective', 'front'].map((view) => [view, {
         path: `/artifacts/studies/${SHAPE_STUDY_ID}/unit-only-${character}-${variant}-${view}.png`,
