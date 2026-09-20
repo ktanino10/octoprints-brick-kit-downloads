@@ -10,7 +10,7 @@ import { markGallerySelection, renderDownloads, renderGallery } from './assets.j
 import { PartsInspector } from './inspector.js';
 import { candidateHeading, enableControls, renderMetrics, renderProgress, resetMetrics } from './presentation.js';
 import { BrickStudio } from './studio.js';
-import { resolveViewContext, validateManifestChoice } from './revisions.js';
+import { resolvePublishedContext, validateManifestChoice } from './revisions.js';
 import { renderViewContext } from './revision-ui.js';
 import { renderTrials } from './trials.js';
 import { readViewState, writeViewState } from './view-state.js';
@@ -28,7 +28,7 @@ let catalogRequest = null;
 let selectionGeneration = 0;
 let progress = { explosion: 0, layers: 0, steps: 0 };
 let viewContext = null;
-const requestedMode = new URLSearchParams(window.location.search).get('mode') === 'phase1' ? 'phase1' : 'selected';
+const requestedMode = new URLSearchParams(window.location.search).get('mode') ?? 'current';
 const requestedRevision = new URLSearchParams(window.location.search).get('revision');
 let requestedView = new URLSearchParams(window.location.search).get('view');
 const inspector = new PartsInspector(selectPart);
@@ -254,11 +254,11 @@ async function loadCatalog(preferredId) {
   setStageMessage('形状データを読み込み中', '公開アーカイブの比較カタログを確認しています。');
   $$('button[data-character], button[data-style]').forEach((button) => { button.disabled = true; });
   try {
-    const context = await resolveViewContext({
+    const context = await resolvePublishedContext({
       mode: requestedMode,
-      previewRevision: requestedRevision,
-      readJSON: (url) => getJSON(url, request.signal),
-      readOptionalJSON: (url) => getJSON(url, request.signal, { optional: true }),
+      revision: requestedRevision,
+      candidate: new URLSearchParams(window.location.search).get('candidate'),
+      readJSON: (url, sha256 = null) => getJSON(url, request.signal, { sha256 }),
     });
     if (request.signal.aborted) return;
     viewContext = context;
@@ -330,6 +330,7 @@ window.addEventListener('pageshow', (event) => {
 
 setLanguageContext((url) => {
   if (!candidate) return url;
+  url.searchParams.set('revision', viewContext.revision);
   url.searchParams.set('candidate', candidate.id);
   if (!studioAvailable || !studio || !index) return url;
   return writeViewState(url, {

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "current_revision": "r2-20260919",
+  "revisions": [
+    {
+      "id": "r3-8mm-20260920",
+      "generation": "common-blocks",
+      "availability": "INPUT_WAIT",
+      "recorded_on": "2026-09-20",
+      "design_implementation": "AUTHORIZED",
+      "status": {
+        "physical_trial": "NOT_TESTED",
+        "physical_fit": "UNKNOWN",
+        "retention_strength": "UNKNOWN",
+        "full_assembly": "UNKNOWN",
+        "slicer": "NOT_SLICED",
+        "full_kit_printing": "ON_HOLD"
+      }
+    },
+    {
+      "id": "r2-20260919",
+      "generation": "r2",
+      "availability": "AVAILABLE",
+      "recorded_on": "2026-09-19",
+      "catalog_url": "/artifacts/selected/r2-20260919/catalog.json",
+      "catalog_sha256": "59a5a92f0ed8dacac938c23f6824ff10b7712dd1a91799f258c615aed9d78dbd",
+      "feedback_url": "/feedback/2026-09-19/README.md",
+      "status": {
+        "physical_trial": "ISSUES_REPORTED",
+        "physical_fit": "UNKNOWN",
+        "retention_strength": "UNKNOWN",
+        "full_assembly": "UNKNOWN",
+        "slicer": "NOT_SLICED",
+        "full_kit_printing": "ON_HOLD"
+      }
+    },
+    {
+      "id": "phase1",
+      "generation": "phase1",
+      "availability": "AVAILABLE",
+      "recorded_on": "2026-09-19",
+      "catalog_url": "/artifacts/phase1/catalog.json",
+      "catalog_sha256": "4ca49373da6ac02400fa53321fcb993eadd1db5aa5bebe5204db7c3c99bcb951",
+      "status": {
+        "physical_trial": "NOT_VALIDATED",
+        "physical_fit": "UNKNOWN",
+        "retention_strength": "UNKNOWN",
+        "full_assembly": "UNKNOWN",
+        "slicer": "NOT_SLICED",
+        "full_kit_printing": "ON_HOLD"
+      }
+    }
+  ]
+}

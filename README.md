@@ -7,7 +7,7 @@
 **[全ダウンロード](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/downloads.html)** ·
 **[実物フィードバック](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/feedback.html)** ·
 **[設計の経緯](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/history.html)** ·
-**[版付きZIP配布](https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/tag/archive-2026-09-19-r2)**
+**[現行3体・公開状況](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/models.html)**
 
 [公開リポジトリ](https://github.com/ktanino10/octoprints-brick-kit-downloads) ·
 [English site](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/)。
@@ -18,9 +18,23 @@
 [経緯](https://ktanino10.github.io/octoprints-brick-kit-downloads/history.html)）も引き続き利用できます。
 
 Mona・Copilot・Duckyを約180 mmの独立ブリックで組み立てる、非商用の試作記録です。
-**試作・初回印刷で課題あり／改善検討中。全数印刷は保留しています。**
-実際に部品は印刷されましたが、扱いにくさと穴詰まりが報告されています。
-物理嵌合・保持力・全体組立の合格を意味しません。配布する形状はすべて **NOT_SLICED** です。
+**2026-09-20、8 mm基準の共通ブロックへ設計を改訂する実装が承認されました。**
+2×2・2×4などを中心に、本体9.6 mm・プレート3.2 mm、開いた下面の壁・筒・リブによる保持へ見直します。
+旧4 mm細密と1.10 mmピンを維持する制約は、新方針と矛盾する部分について置き換えます。
+
+新revisionは `r3-8mm-20260920`。現在の公開可能版と入力待ち状態は
+[版別公開記録](archive/revisions.json) と [現行3体ページ](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/models.html) で明示します。
+制作データを受領・照合するまでは、新しい画像・形状・部品数を旧版で埋め合わせません。
+[新版の設計・公開範囲](docs/COMMON-BLOCKS.ja.md) / [English](docs/COMMON-BLOCKS.en.md) を参照してください。
+
+**新型の実物試験は未実施、嵌合・保持力・全体組立は未検証。全数印刷は保留です。**
+写真・動画にある小ささと穴詰まりは、2026-09-19の旧r2・4 mm試作の報告で、新型の試験結果ではありません。
+穴詰まりは超音波洗浄の前から発生。原因・実際のスライス条件・条件別保持力は未確定です。
+形状3MFは **NOT_SLICED**。Bambu Studioの機種設定入りプロジェクトやG-codeではありません。
+
+## 保存された旧版・過去の実物フィードバック
+
+以下の数量・形式はPhase1/r2の保存内容です。新型の数量・試験片として転用しません。
 
 | 区分 | 保存した制作物 |
 |---|---|
@@ -44,7 +58,7 @@ Mona・Copilot・Duckyを約180 mmの独立ブリックで組み立てる、非�
 同梱の原文書はそのまま残し、英語の案内はZIP外の別文書として提供します。
 
 FreeCADの組立は、ZIPを全展開し `cad/assemblies/` と `cad/libraries/` の相対配置を保って開きます。
-26,766個の別々のSTLを配布しているのではありません。Blenderは12シーン、FreeCADは計11文書を保存しています。
+旧版の26,766個の別々のSTLを配布しているのではありません。Phase1/r2のBlender12シーン・FreeCAD計11文書を保存しています。
 ビューアは完成形・分解・層・順序候補・部品ID・BOM・視点・動画に対応し、ブラウザーからCAD実行・スライス・プリンター操作はしません。
 
 制作元のリポジトリや履歴、実行環境、会話・内部ログは含めていません。
@@ -54,11 +68,13 @@ FreeCADの組立は、ZIPを全展開し `cad/assemblies/` と `cad/libraries/` 
 選定r2の4 mm接合部では、穴入口側の壁厚を旧0.877 mmから1.21 mmへ見直しました。
 軸径1.10 mm・先端径0.98 mm・高さ0.60 mmはCAD上の寸法であり、強度・保持力は未検証です。
 
-## 希望する出力（要確認・未採用）
+## 印刷方式：分割組立と、意図確認待ちの別方式
 
 希望は、**部品をばらばらに印刷して後で組み立てる方式**と、**「最初から全て印刷する」別案**の2パターンです。
 後者が「組立状態の模型を一体で印刷する」意味か、「独立した部品を同じプレート上で一括印刷する」意味かは未確認です。
-一体型が選ばれたとは扱いません。この希望に対応する新しい印刷用ファイルの提供・承認、再設計、スライス、印刷は行っていません。
+一体型が選ばれたとは扱いません。今回承認されたのは共通ブロックによる分割組立方式の設計改訂です。
+色別に部品を並べた形状3MFの提供は、一体造形の希望確認や実際の製造承認を意味しません。
+組立ビューの完成形を一体印刷可能なファイルとは扱わず、スライス・印刷・プリンター送信は行いません。
 **全数印刷は引き続き保留**です。既存の試験記録と、今後の希望を区別してください。
 
 ## 従来の4 mm接合部・小型試験セット

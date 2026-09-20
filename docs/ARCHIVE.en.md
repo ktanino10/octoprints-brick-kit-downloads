@@ -4,7 +4,10 @@
 [Archive overview](../README.en.md) ·
 [All downloads](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/downloads.html)
 
-**Prototype: issues were found in the first physical trial; redesign is under discussion. Full-kit printing is ON HOLD. All geometry is NOT_SLICED.**
+**This guide describes the frozen Phase1/r2 packages, not the current common-block revision.**
+The 8 mm common-block redesign was authorized on 2026-09-20; see the [new design/publication guide](COMMON-BLOCKS.en.md)
+and [revision registry](../archive/revisions.json) for current availability.
+**Issues were found in the earlier 4 mm physical trial. Full-kit printing is ON HOLD. All geometry is NOT_SLICED.**
 This is an archive of work and observations, not a manufacturing release or a set of printer-ready projects.
 The first 4 mm trial reported difficult-to-handle small parts and holes blocked **before** post-print ultrasonic cleaning.
 The cause, actual slicer profile, notch-specific outcomes, retention, and full physical assembly remain unvalidated.

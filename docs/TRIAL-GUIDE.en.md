@@ -9,7 +9,9 @@ This is the English companion to the original r2 trial guide. The original artif
 > **Public-archive update, 2026-09-19:** The procedure below records the r2 prototype investigation.
 > In the subsequent first physical trial of the 4 mm parts, the contributor reported “small and difficult to make” parts and holes filled with plastic.
 > The holes were blocked **before** ultrasonic cleaning. The cause, actual slicer profile, retention, and condition-specific outcomes remain unknown.
-> **Full-kit printing is ON HOLD; no new design has been adopted.**
+> **Historical r2 guide: full-kit printing is ON HOLD.**
+> The 8 mm common-block redesign was authorized on 2026-09-20, but these earlier trial files were not converted into that revision.
+> Use the [revision registry](../archive/revisions.json) and [common-block guide](COMMON-BLOCKS.en.md) for the revised design's availability and separate physical gates.
 > Read the [physical-feedback record](../feedback/2026-09-19/README.en.md) first.
 > All files remain **NOT_SLICED**. This preserves the historical procedure; it is **not a current instruction to reprint**.
 

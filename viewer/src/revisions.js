@@ -1,6 +1,7 @@
 import {
   artifactPath, DataError, revisionPath, SELECTION_URL, SELECTED_STAGE, validateCatalog,
 } from './data.js';
+import { PUBLICATION_URL, chooseRevision, validatePublication } from '../../assets/publication.js';
 
 export const CURRENT_SELECTION_URL = '/artifacts/selected/current.json';
 export const PHASE1_CATALOG_URL = '/artifacts/phase1/catalog.json';
@@ -86,7 +87,34 @@ export async function resolveViewContext({ mode, previewRevision = null, readJSO
   return contextFromCatalog(selection, await readJSON(pointer.catalog_url), pointer);
 }
 
+export async function resolvePublishedContext({ mode = 'current', revision = null, candidate = null, readJSON }) {
+  const publication = validatePublication(await readJSON(PUBLICATION_URL));
+  const entry = chooseRevision(publication, { mode, revision, candidate });
+  const catalog = validateCatalog(await readJSON(entry.catalog_url, entry.catalog_sha256));
+  let context;
+  if (entry.generation === 'phase1') {
+    context = { kind: 'phase1', revision: entry.id, selection: null, catalog, catalogURL: entry.catalog_url };
+  } else if (entry.generation === 'r2') {
+    const selection = validateSelection(await readJSON(SELECTION_URL));
+    context = contextFromCatalog(selection, catalog, {
+      revision: entry.id, catalog_url: entry.catalog_url, selection_url: SELECTION_URL,
+    });
+  } else {
+    assert(catalog.schema_version === 3 && catalog.revision === entry.id,
+      '新版のカタログと公開版一覧が一致しません。');
+    context = { kind: 'common', revision: entry.id, selection: null, catalog, catalogURL: entry.catalog_url };
+  }
+  if (candidate) assert(catalog.candidates.some((item) => item.id === candidate), '指定された部品モデルは、この版に存在しません。');
+  return { ...context, publication, publicationEntry: entry, isCurrent: entry.id === publication.current_revision,
+    statusURL: PUBLICATION_URL };
+}
+
 export function validateManifestChoice(manifest, context) {
+  if (context.kind === 'common') {
+    assert(manifest.schema_version === 3 && manifest.revision === context.revision,
+      '新版の配置マニフェストが表示中の版と一致しません。');
+    return;
+  }
   if (context.kind === 'phase1') {
     assert(manifest.schema_version === 1, 'Phase1履歴に別版の配置データが含まれています。');
     return;

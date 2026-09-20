@@ -356,10 +356,11 @@ export function isPartVisible(part, index, layerProgress, stepProgress) {
 
 export function displayPosition(part, explosion, center, layerMm) {
   const amount = Math.max(0, Math.min(1, explosion));
+  const height = layerMm === null ? part.position_mm[2] : part.layer * layerMm;
   return [
     part.position_mm[0] + (part.position_mm[0] - center[0]) * amount * 0.36,
     part.position_mm[1] + (part.position_mm[1] - center[1]) * amount * 0.36,
-    part.position_mm[2] + part.layer * layerMm * amount * 1.75,
+    part.position_mm[2] + height * amount * 1.75,
   ];
 }
 

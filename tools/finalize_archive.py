@@ -159,6 +159,14 @@ def make_bundles():
 
 
 def classify(name):
+    if name.startswith("artifacts/revisions/"):
+        revision = Path(name).parts[2]
+        group = "common-trial" if {"trial", "trials"} & set(Path(name).parts[3:]) else "common"
+        return group, revision
+    if name.startswith("assets/thumbs/revisions/"):
+        return "common", Path(name).parts[3]
+    if Path(name).name.startswith("COMMON-BLOCKS"):
+        return "design", "r3-8mm-20260920"
     if name.startswith("feedback/"):
         return "feedback", "physical-feedback-2026-09-19"
     if name.startswith("p4-trial") or "/cad/trial/" in name or "/cad/aids/" in name or Path(name).name in {"TRIAL-GUIDE.md", "fit-results-blank.csv"}:
@@ -176,10 +184,17 @@ def classify(name):
 
 def make_inventory():
     source = {entry["path"]: entry for entry in json.loads((ROOT / "archive/source-inventory.json").read_text())["files"]}
+    for inventory in sorted((ROOT / "archive/sources").glob("*.json")):
+        for entry in json.loads(inventory.read_text())["files"]:
+            if entry["path"] in source:
+                raise ValueError(f"Duplicate imported source artifact: {entry['path']}")
+            source[entry["path"]] = entry
+    publication = json.loads((ROOT / "archive/revisions.json").read_text())
     names = all_files("artifacts") + all_files("design") + all_files("feedback") + all_files("assets")
     names += all_files("viewer/assets") + ["viewer/index.html"]
     names += all_files("ja") + all_files("en") + all_files("docs")
-    names += ["README.en.md", "ATTRIBUTION.en.md"]
+    names += ["README.en.md", "ATTRIBUTION.en.md", "models.html", "archive/revisions.json"]
+    names += all_files("archive/releases") + all_files("archive/sources") + all_files("archive/portability")
     names += ["p4-trial-11-parts.3mf", "p4-trial-11-parts.stl", "index.html", "downloads.html",
               "feedback.html", "history.html", "LICENSE", "ATTRIBUTION.md", "README.md",
               "archive/status.json", "archive/portability.json", "archive/source-inventory.json",
@@ -199,15 +214,17 @@ def make_inventory():
             entry["source_sha256"] = source[name]["sha256"]
             entry["source_bytes"] = source[name]["bytes"]
             entry["relation"] = "BYTE_IDENTICAL" if entry["sha256"] == entry["source_sha256"] else "PUBLIC_METADATA_OR_PRESENTATION_DERIVATIVE"
-        if name.startswith("assets/thumbs/"):
+        if name.startswith("assets/thumbs/") and not name.startswith("assets/thumbs/revisions/"):
             prefix, candidate = path.stem.split("-", 1)
             entry["derived_from"] = f"{SELECTED_ROOT if prefix == 'selected' else 'artifacts/phase1'}/{candidate}/preview.png"
             entry["relation"] = "RESIZED_WEBP_FROM_ACTUAL_RENDER"
         entries.append(entry)
     write_json(ROOT / "archive/inventory.json", {
-        "schema_version": 1, "archive_revision": TAG, "units": "bytes",
+        "schema_version": 1, "archive_revision": TAG if publication["current_revision"] == REVISION else publication["current_revision"], "units": "bytes",
         "scope": "All approved deliverables, feedback, served viewer and portal assets. Inventory/checksum files exclude themselves.",
-        "physical_status": "INITIAL_TRIAL_ISSUES_REPORTED_PRODUCTION_BLOCKED",
+        "physical_status": "REVISION_SPECIFIC_PHYSICAL_VALIDATION_PENDING_PRODUCTION_BLOCKED",
+        "current_revision": publication["current_revision"],
+        "revision_status": {entry["id"]: entry["status"] for entry in publication["revisions"]},
         "files": entries, "totals": {"files": len(entries), "bytes": sum(f["bytes"] for f in entries),
                                     "groups": dict(Counter(f["group"] for f in entries))},
     })
@@ -219,6 +236,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("operation", choices=("prepare", "bundles", "inventory"))
     args = parser.parse_args()
+    if args.operation != "inventory" and (ROOT / "site/immutable-artifacts.json").exists():
+        parser.error("Historical artifacts are immutable. Import/package a new revision instead of preparing or rebundling Phase1/r2.")
     if args.operation == "prepare":
         prepare_media()
         curate_engineering()

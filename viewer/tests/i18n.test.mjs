@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { readFile, readdir } from 'node:fs/promises';
 import { interpolate, translate, MissingTranslationError, validateLocale, setLocale, getLocale, localizedURL } from '../../assets/i18n.js';
 import { readViewState, writeViewState } from '../src/view-state.js';
 import { makeIndex } from '../src/data.js';
@@ -18,8 +18,8 @@ const state = {
 };
 
 test('every reviewed English message keeps its interpolation variables', async () => {
-  for (const file of ['runtime', 'data', 'pages']) {
-    const messages = JSON.parse(await readFile(new URL(`site/i18n/${file}.en.json`, root), 'utf8'));
+  for (const file of (await readdir(new URL('site/i18n/', root))).filter((name) => name.endsWith('.en.json'))) {
+    const messages = JSON.parse(await readFile(new URL(`site/i18n/${file}`, root), 'utf8'));
     for (const [source, target] of Object.entries(messages)) {
       assert.ok(target.length, source);
       assert.deepEqual(new Set(source.match(/\{\d+\}/g) ?? []), new Set(target.match(/\{\d+\}/g) ?? []), source);

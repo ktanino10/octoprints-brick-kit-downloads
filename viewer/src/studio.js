@@ -169,7 +169,9 @@ export class BrickStudio {
     }
     this.baseBounds = manifestBounds(manifest, (id) => this.geometryFor(id));
     this.center = this.baseBounds.getCenter(new THREE.Vector3()).toArray();
-    this.layerMm = manifest.types[manifest.parts[0].type_id].layer_mm;
+    this.layerMm = manifest.schema_version === 3 ? null : manifest.types[manifest.parts[0].type_id].layer_mm;
+    const explosionHeights = manifest.parts.map((part) => this.layerMm === null ? part.position_mm[2] : part.layer * this.layerMm);
+    this.explosionHeights = { min: Math.min(...explosionHeights), max: Math.max(...explosionHeights) };
     this.floor.position.z = this.baseBounds.min.z - 0.2;
     this.grid.position.set(this.center[0], this.center[1], this.baseBounds.min.z - 0.15);
     this.fitBounds = this.baseBounds.clone();
@@ -195,8 +197,8 @@ export class BrickStudio {
         this.fitBounds.min[axis] = center + (this.baseBounds.min[axis] - center) * (1 + progress.explosion * 0.36);
         this.fitBounds.max[axis] = center + (this.baseBounds.max[axis] - center) * (1 + progress.explosion * 0.36);
       }
-      this.fitBounds.min.z += this.index.layers[0] * this.layerMm * progress.explosion * 1.75;
-      this.fitBounds.max.z += this.index.layers.at(-1) * this.layerMm * progress.explosion * 1.75;
+      this.fitBounds.min.z += this.explosionHeights.min * progress.explosion * 1.75;
+      this.fitBounds.max.z += this.explosionHeights.max * progress.explosion * 1.75;
       const ratio = this.fitBounds.getSize(new THREE.Vector3()).length() / previousSize;
       const offset = this.camera.position.clone().sub(this.controls.target).multiplyScalar(ratio);
       this.controls.target.copy(this.fitBounds.getCenter(new THREE.Vector3()));

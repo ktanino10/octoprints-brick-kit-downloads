@@ -1,8 +1,9 @@
 import { DataError } from './data.js';
 import { $, element } from './dom.js';
 import { publicURL } from './paths.js';
+import { PUBLICATION_URL, findRevision, physicalSummary } from '../../assets/publication.js';
 
-export async function getJSON(url, signal, { optional = false } = {}) {
+export async function getJSON(url, signal, { optional = false, sha256 = null } = {}) {
   const timeout = AbortSignal.timeout(30000);
   const combined = signal ? AbortSignal.any([signal, timeout]) : timeout;
   let response;
@@ -16,6 +17,18 @@ export async function getJSON(url, signal, { optional = false } = {}) {
   }
   if (optional && response.status === 404) return null;
   if (!response.ok) throw new DataError(`ファイルを読み込めません（HTTP ${response.status}）: ${url}`);
+  if (sha256 !== null) {
+    if (!/^[0-9a-f]{64}$/.test(sha256)) throw new DataError('公開ファイルの照合ハッシュが不正です。');
+    const bytes = await response.arrayBuffer();
+    const hash = [...new Uint8Array(await crypto.subtle.digest('SHA-256', bytes))]
+      .map((value) => value.toString(16).padStart(2, '0')).join('');
+    if (hash !== sha256) throw new DataError('公開カタログの内容が登録ハッシュと一致しません。古いキャッシュや配信状態を確認してください。');
+    try {
+      return JSON.parse(new TextDecoder().decode(bytes));
+    } catch {
+      throw new DataError(`JSONとして読み込めません: ${url}`);
+    }
+  }
   try {
     return await response.json();
   } catch {
@@ -66,6 +79,16 @@ export class ArchiveStatus {
     this.render('公開記録を確認中', 'この版の記録を読み込んでいます。');
     try {
       const record = await getJSON(this.#endpoint, request.signal);
+      if (this.#endpoint === PUBLICATION_URL) {
+        const entry = findRevision(record, this.#revision);
+        if (entry.availability !== 'AVAILABLE') throw new DataError('表示中の版は、まだ公開用の実データがそろっていません。');
+        if (version !== this.#version) return;
+        this.render(`${entry.recorded_on} 公開記録`, physicalSummary(entry), true);
+        $('#freshness').dataset.revision = entry.id;
+        $('#freshness').dataset.physicalTrial = entry.status.physical_trial;
+        $('#evidence-status').textContent = entry.id === record.current_revision ? '現行のデジタル試作・実物未承認' : '旧版の保存記録・現行試作ではない';
+        return;
+      }
       if (record.schema_version !== 1 || !Array.isArray(record.archived_revisions)
           || !record.archived_revisions.includes(this.#revision)
           || typeof record.updated !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(record.updated)

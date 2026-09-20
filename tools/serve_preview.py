@@ -11,6 +11,14 @@ PREFIX = "/octoprints-brick-kit-downloads/"
 
 
 class Handler(SimpleHTTPRequestHandler):
+    def handle(self):
+        try:
+            super().handle()
+        except (BrokenPipeError, ConnectionResetError) as error:
+            self.server.client_disconnects += 1
+            if self.server.client_disconnects <= 3:
+                print(f"Preview request cancelled by client: {type(error).__name__}", flush=True)
+
     def translate_path(self, path):
         name = unquote(urlsplit(path).path)
         if not name.startswith(PREFIX):
@@ -60,7 +68,7 @@ class Handler(SimpleHTTPRequestHandler):
             remaining -= len(chunk)
 
     def log_message(self, format, *args):
-        if args and str(args[1]) not in {"200", "206", "304"}:
+        if len(args) < 2 or str(args[1]) not in {"200", "206", "304"}:
             super().log_message(format, *args)
 
 
@@ -68,8 +76,10 @@ parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--port", type=int, default=8859)
 args = parser.parse_args()
 server = ThreadingHTTPServer(("127.0.0.1", args.port), Handler)
+server.client_disconnects = 0
 print(f"Preview ready on 127.0.0.1:{args.port}{PREFIX}", flush=True)
 try:
     server.serve_forever()
 finally:
     server.server_close()
+    print(f"Preview stopped; client-cancelled requests: {server.client_disconnects}", flush=True)

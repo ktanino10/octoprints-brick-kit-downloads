@@ -7,7 +7,7 @@
 **[All downloads](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/downloads.html)** ·
 **[Physical feedback](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/feedback.html)** ·
 **[Design history](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/history.html)** ·
-**[Versioned ZIP downloads](https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/tag/archive-2026-09-19-r2)**
+**[Current models and publication status](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/models.html)**
 
 [Public repository](https://github.com/ktanino10/octoprints-brick-kit-downloads) ·
 [日本語サイト](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/).
@@ -19,12 +19,23 @@ The legacy root URLs remain available:
 [history](https://ktanino10.github.io/octoprints-brick-kit-downloads/history.html).
 
 This is a noncommercial prototype record for approximately 180 mm-tall Mona, Copilot, and Ducky models assembled from independent bricks.
-**Prototype: issues were found in the first physical trial; redesign is under discussion. Full-kit printing is ON HOLD.**
-Actual parts have been printed, and small, difficult-to-handle parts and blocked holes were reported.
-The holes were blocked **before** post-print ultrasonic cleaning. The cause, actual slicer profile, notch-specific results, and retention remain unknown.
-The trial is not a pass for physical fit, retention, or full physical assembly. All distributed geometry remains **NOT_SLICED**.
+**On 2026-09-20, implementation of an 8 mm common-block redesign was authorized.**
+The revised approach prioritizes parts such as 2×2 and 2×4 blocks, 9.6 mm brick bodies and 3.2 mm plates,
+with open undersides and wall/tube/rib retention. Earlier 4 mm Fine and 1.10 mm pin constraints are superseded where they conflict with this direction.
 
-## What the archive contains
+The new revision is `r3-8mm-20260920`. The [revision registry](archive/revisions.json) and
+[current-model page](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/models.html) distinguish available files from inputs still awaited.
+No earlier image, geometry or part count is presented as the new design while its real deliverables are being prepared.
+See the [common-block design/publication guide](docs/COMMON-BLOCKS.en.md) / [日本語](docs/COMMON-BLOCKS.ja.md).
+
+**The new revision has not been physically tested. Fit, retention and full assembly are unvalidated; full-kit printing is ON HOLD.**
+The small-part handling and blocked-hole feedback belongs to the earlier r2 4 mm trial on 2026-09-19, not the new revision.
+Those holes were blocked **before** ultrasonic cleaning. The cause, actual slicer settings and condition-specific retention remain unresolved.
+Geometry-only 3MF files remain **NOT_SLICED**, not configured Bambu Studio projects or G-code.
+
+## Preserved earlier revisions and physical feedback
+
+The quantities below describe Phase1/r2 history. They are not the new revision's counts or trial sets.
 
 | Category | Preserved work |
 |---|---|
@@ -48,7 +59,7 @@ The four existing ZIP packages at **`archive-2026-09-19-r2` are immutable archiv
 They retain their original documents; these English companions are provided separately, outside the ZIPs.
 
 To open a FreeCAD assembly, extract the entire ZIP and preserve the relative layout of `cad/assemblies/` and `cad/libraries/`.
-There are **11 FreeCAD documents and 12 Blender scenes in total**.
+The preserved **Phase1/r2 history contains 11 FreeCAD documents and 12 Blender scenes**.
 The 26,766 instances are not 26,766 separately supplied STL files.
 The viewer supports the assembled model, exploded view, layers, proposed assembly sequence, part IDs, BOM, viewpoints, and videos.
 It does not run CAD, slice geometry, or operate a printer from the browser.
@@ -65,7 +76,9 @@ These are CAD dimensions; strength and retention have not been validated.
 
 The requested direction is **printing separate parts and assembling them afterward**, plus a proposed **“print everything at once”** alternative.
 The second option is **not yet defined**: it could mean printing the assembled model as one piece, or batch-printing still-separate parts on one plate.
-A one-piece model has not been selected. No new printable files have been supplied or approved, and no redesign, slicing, or printing has been performed for this request.
+A one-piece model has not been selected. The new authorization concerns redesigning the separate-part assembly system.
+Color-grouped geometry-only plate layouts do not confirm a preference for a monolithic model or approve manufacturing.
+The assembled viewer is not a one-piece printable file. No slicing, printing or printer transmission is performed.
 **Full-kit printing remains ON HOLD.** This intention is separate from the existing trial record.
 
 ## Legacy 4 mm joint and small trial set

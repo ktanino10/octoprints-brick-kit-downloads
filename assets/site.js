@@ -1,4 +1,5 @@
 import { assetURL, numberLocale } from './i18n.js';
+import { COMMON_REVISION, PUBLICATION_URL, chooseRevision, validatePublication, physicalSummary } from './publication.js';
 
 const $ = (selector) => document.querySelector(selector);
 const selected = new Set(['mona-fine', 'copilot-chunky', 'ducky-fine']);
@@ -18,9 +19,16 @@ const create = (tag, className, text) => {
 };
 const number = (n) => n.toLocaleString(numberLocale());
 
-export async function readJSON(path) {
+export async function readJSON(path, sha256 = null) {
   const response = await fetch(publicURL(path), { credentials: 'omit', signal: AbortSignal.timeout(20000) });
   if (!response.ok) throw new Error(`HTTP ${response.status}: ${path}`);
+  if (sha256 !== null) {
+    const buffer = await response.arrayBuffer();
+    const actual = [...new Uint8Array(await crypto.subtle.digest('SHA-256', buffer))]
+      .map((value) => value.toString(16).padStart(2, '0')).join('');
+    if (!/^[0-9a-f]{64}$/.test(sha256) || actual !== sha256) throw new Error('公開カタログの照合ハッシュが一致しません。');
+    return JSON.parse(new TextDecoder().decode(buffer));
+  }
   return response.json();
 }
 
@@ -73,14 +81,15 @@ function renderCandidates(catalog) {
   }
 }
 
-function videoCard(candidate, label) {
+function videoCard(candidate, label, common = false) {
   const card = create('figure', 'video-card');
   const video = create('video');
   video.controls = true;
   video.preload = 'none';
   video.playsInline = true;
   video.poster = publicURL(candidate.render_url);
-  video.setAttribute('aria-label', `${label} ${names[candidate.character]} ${styles[candidate.style]}の動画`);
+  const style = common ? '8 mm共通ブロック' : styles[candidate.style];
+  video.setAttribute('aria-label', `${label} ${names[candidate.character]} ${style}の動画`);
   video.dataset.videoUrl = publicURL(candidate.video_url);
   const status = create('p', '', `${label} / ${candidate.pitch_mm} mm / 実生成・無音`);
   video.addEventListener('error', () => {
@@ -90,7 +99,7 @@ function videoCard(candidate, label) {
   const download = create('a', '', 'このMP4を取得 ↓');
   download.href = publicURL(candidate.video_url);
   download.download = '';
-  card.append(video, create('h3', '', `${names[candidate.character]} / ${styles[candidate.style]}`), status, download);
+  card.append(video, create('h3', '', `${names[candidate.character]} / ${style}`), status, download);
   return card;
 }
 
@@ -133,13 +142,8 @@ function initializeLightbox() {
 
 async function loadMedia() {
   try {
-    const [phase1, current] = await Promise.all([
-      readJSON('artifacts/phase1/catalog.json'),
-      readJSON('artifacts/selected/r2-20260919/catalog.json'),
-    ]);
+    const phase1 = await readJSON('artifacts/phase1/catalog.json');
     renderCandidates(phase1);
-    if (current.revision !== 'r2-20260919' || current.candidates.length !== 3) throw new Error('選定版の記録が一致しません。');
-    $('#selected-videos').replaceChildren(...current.candidates.map((candidate) => videoCard(candidate, '選定 r2-20260919')));
     $('#history-videos').replaceChildren(...phase1.candidates.filter((candidate) => candidate.style === 'balanced').map((candidate) => videoCard(candidate, 'Phase1・Balanced履歴')));
   } catch (error) {
     const host = $('#media-error');
@@ -149,6 +153,78 @@ async function loadMedia() {
     retry.href = location.href;
     host.append(retry);
     $('#candidate-matrix').replaceChildren(create('p', '', '画像や数値を代替データで表示していません。静的ギャラリーでも確認できます。'));
+  }
+}
+
+function pendingRevision(entry) {
+  const note = create('div', 'revision-wait');
+  note.dataset.availability = 'INPUT_WAIT';
+  note.append(create('p', 'eyebrow', entry.id), create('h2', '', '8 mm共通ブロックの制作データを受領待ちです。'),
+    create('p', '', '設計改訂の実装は承認済みです。実際のCAD・画像・動画がそろうまで、新しい形状や部品数は表示しません。'));
+  const history = create('a', 'text-link', '旧r2の保存済みモデルを見る →');
+  history.href = publicURL('viewer/?mode=r2');
+  note.append(history);
+  $('#current-specimens').replaceChildren(note);
+  $('#current-summary').textContent = physicalSummary(entry);
+  $('#selected-videos')?.replaceChildren(create('p', 'quiet', '新版の動画は公開用ファイルの受領待ちです。旧版の動画で代用しません。'));
+}
+
+async function loadCurrentModels() {
+  try {
+    const publication = validatePublication(await readJSON(PUBLICATION_URL));
+    const planned = publication.revisions.find((entry) => entry.id === COMMON_REVISION);
+    if (planned?.availability === 'INPUT_WAIT') {
+      pendingRevision(planned);
+      return;
+    }
+    const entry = chooseRevision(publication);
+    if (entry.generation !== 'common-blocks') throw new Error('現行の共通ブロック版が公開記録にありません。');
+    const catalog = await readJSON(entry.catalog_url, entry.catalog_sha256);
+    if (catalog.schema_version !== 3 || catalog.revision !== entry.id
+      || !Array.isArray(catalog.candidates) || catalog.candidates.length !== 3
+      || new Set(catalog.candidates.map((item) => item.character)).size !== 3
+      || catalog.candidates.some((item) => !names[item.character] || !item.render_url || !item.video_url
+        || !Number.isSafeInteger(item.metrics?.part_count) || item.metrics.part_count <= 0
+        || !Number.isFinite(item.metrics.height_mm) || item.metrics.height_mm <= 0)) {
+      throw new Error('現行3体の実画像・動画・部品数・寸法が一致しません。');
+    }
+    const host = $('#current-specimens');
+    host.replaceChildren();
+    let total = 0;
+    for (const candidate of catalog.candidates) {
+      total += candidate.metrics.part_count;
+      const card = create('article', `specimen ${candidate.character}`);
+      card.dataset.candidate = candidate.id;
+      card.dataset.revision = entry.id;
+      const heading = create('div', 'specimen-top');
+      heading.append(create('span', '', names[candidate.character].toUpperCase()), create('span', '', '8 mm / COMMON'));
+      card.append(heading, imageLink(candidate.render_url, candidate.thumbnail_url ?? candidate.render_url,
+        `${names[candidate.character]}・8 mm共通ブロックの実生成画像`,
+        `${entry.id} · ${names[candidate.character]} · ${number(candidate.metrics.part_count)}部品 / ${candidate.metrics.height_mm} mm。実物嵌合・保持力は未検証。`));
+      const title = create('h2', '', names[candidate.character]);
+      title.append(create('small', '', '8 mm共通ブロック'));
+      const count = create('p');
+      count.append(create('strong', '', number(candidate.metrics.part_count)), document.createTextNode(' 部品 '),
+        create('span', '', `${candidate.metrics.height_mm} mm`));
+      const link = create('a', 'specimen-link', '組立候補・部品IDを見る ↗');
+      link.href = publicURL(`viewer/?revision=${encodeURIComponent(entry.id)}&candidate=${encodeURIComponent(candidate.id)}`);
+      card.append(title, count, link);
+      host.append(card);
+      if ($('#current-exploded') && candidate.exploded_render_url) {
+        const figure = create('figure', 'video-card');
+        figure.append(imageLink(candidate.exploded_render_url, candidate.exploded_render_url,
+          `${names[candidate.character]}・同じ版の分解画像`, `${entry.id} · ${names[candidate.character]} · 分解表示`),
+        create('h3', '', names[candidate.character]));
+        $('#current-exploded').append(figure);
+      }
+    }
+    $('#current-summary').textContent = `${entry.id} · 合計${number(total)}部品。${physicalSummary(entry)}`;
+    $('#selected-videos')?.replaceChildren(...catalog.candidates.map((candidate) => videoCard(candidate, entry.id, true)));
+  } catch (error) {
+    $('#current-error').hidden = false;
+    $('#current-error').textContent = `現行版の公開記録を読み込めません。${error.message}`;
+    $('#current-specimens').replaceChildren(create('p', 'loading', '公開版の確認ができないため、別の版の画像や部品数は表示しません。'));
+    $('#current-summary').textContent = '公開状態は不明です。全数印刷は保留します。';
   }
 }
 
@@ -170,3 +246,4 @@ initializeLightbox();
 initializeVideoDisclosures();
 renderPhotos();
 if ($('#candidate-matrix')) loadMedia();
+if ($('#current-specimens')) loadCurrentModels();

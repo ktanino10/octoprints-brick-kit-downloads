@@ -29,6 +29,7 @@ commit = os.environ.get("GITHUB_SHA") or subprocess.check_output(["git", "-C", s
     "commit": commit,
     "workflow_run": os.environ.get("GITHUB_RUN_ID"),
     "archive_revision": inventory["archive_revision"],
-    "physical_status": "ISSUES_REPORTED_PRODUCTION_BLOCKED",
+    "current_revision": inventory.get("current_revision", "r2-20260919"),
+    "physical_status": inventory["physical_status"],
 }, indent=2) + "\n")
 print(f"Staged {len(names)} files plus deployment metadata; {inventory['totals']['bytes']} bytes.")

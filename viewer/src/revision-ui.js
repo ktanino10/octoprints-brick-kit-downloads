@@ -1,6 +1,7 @@
 import { artifactPath, CHARACTERS, STYLES } from './data.js';
 import { $, element, number } from './dom.js';
 import { publicURL } from './paths.js';
+import { R2_REVISION, physicalSummary } from '../../assets/publication.js';
 
 export function renderViewContext(context) {
   const history = context.kind === 'phase1';
@@ -50,4 +51,16 @@ export function renderViewContext(context) {
     ? '以下は旧接合部の外観基準データです。新版の試験片・CAD・動画ではありません。'
     : '公開用メタデータ整理済みのファイルです。組立FCStdは部品ライブラリーが必要なため、配布カタログのCAD一式ZIPを推奨します。全数印刷は保留です。';
   $('#footer-scope').textContent = history ? 'PHASE 1 · 比較履歴' : `${context.revision} · 外観基準のみ選択済み`;
+  if (context.publicationEntry) {
+    $('#selected-mode-link').textContent = '現行版';
+    $('#selected-mode-link').setAttribute('aria-current', context.isCurrent ? 'page' : 'false');
+    $('#r2-mode-link').setAttribute('aria-current', context.revision === R2_REVISION ? 'page' : 'false');
+    $('#revision-detail').textContent = physicalSummary(context.publicationEntry);
+    if (!context.isCurrent) {
+      $('#revision-title').textContent = history ? 'Phase1の外観候補・保存された履歴' : '旧r2の接合部試作・保存された履歴';
+      $('#comparison-kicker').textContent = 'SUPERSEDED / HISTORICAL GEOMETRY';
+      $('#downloads-title').textContent = '旧版の保存資料・現行版ではありません';
+      $('#footer-scope').textContent = `${context.revision} · 保存された旧版`;
+    }
+  }
 }

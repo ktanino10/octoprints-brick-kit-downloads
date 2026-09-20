@@ -194,7 +194,7 @@ def validate(full):
                 ensure(forbidden not in probe["format"].get("tags", {}), f"Private media tag: {path.name}")
     print(json.dumps({"files": len(files), "bytes": inventory["totals"]["bytes"], "groups": dict(Counter(entry["group"] for entry in files)),
                       "local_links": "PASS", "legacy_files": "UNCHANGED", "privacy": "PASS",
-                      "physical_status": "ISSUES_REPORTED_NOT_VALIDATED"}, indent=2))
+                      "physical_status": inventory["physical_status"]}, indent=2))
 
 
 if __name__ == "__main__":

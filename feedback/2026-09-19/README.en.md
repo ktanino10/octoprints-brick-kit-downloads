@@ -4,7 +4,11 @@
 [Archive overview](../../README.en.md) ·
 [Public feedback page](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/feedback.html)
 
-**Outcome: the current small-joint design will not be carried directly into the full model. Redesign is under discussion.**
+> **Historical context, added 2026-09-20:** these photos, videos and findings belong to the earlier r2 4 mm trial.
+> Implementation of the 8 mm common-block redesign was subsequently authorized. This is not a physical result for the new revision.
+> See the [revision registry](../../archive/revisions.json) and [design guide](../../docs/COMMON-BLOCKS.en.md) for its separate availability and validation gates.
+
+**Outcome recorded on 2026-09-19: the earlier small-joint design would not be carried directly into the full model; redesign was under discussion.**
 **Full-kit printing is ON HOLD**, and all distributed geometry remains **NOT_SLICED**.
 This does not mean that no physical trial took place: actual trial parts were printed and issues were reported.
 
@@ -80,7 +84,7 @@ No audio transcription or measurements of force or dimensions from the videos we
 Publishing the photos and videos does not establish a pass or fail for every hole or condition.
 Public file sizes and hashes are recorded in [media-manifest.json](media-manifest.json).
 
-## Direction under discussion
+## Direction under discussion at the time (2026-09-19)
 
 The contributor expressed a wish to “use real LEGO as a reference” and to have “LEGO-like blocks.”
 **Adoption or manufacture of a new design has not been decided.**

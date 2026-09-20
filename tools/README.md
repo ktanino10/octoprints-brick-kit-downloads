@@ -52,8 +52,8 @@ ZIPの中身を変更するときは新しい版・Releaseを使用し、既存�
 
 ## 日英ページの保守
 
-`site/templates/` が7ページの共通HTML、`site/routes.json` が既存URLと `/ja/`・`/en/` の対応です。
-ルートの既存日本語ページを含む21個の薄いHTMLを生成し、画像・動画・CAD・モデルJSONは共有します。
+`site/templates/` が8ページの共通HTML、`site/routes.json` が既存URLと `/ja/`・`/en/` の対応です。
+ルートの既存日本語ページを含む24個の薄いHTMLを生成し、画像・動画・CAD・モデルJSONは共有します。
 生成されたHTMLや `assets/translations.js` を直接編集せず、テンプレートと `site/i18n/*.en.json` を更新してください。
 
 日本語の原文をメッセージIDとするカタログです。動的テキストはASTから抽出し、`{0}` 等の変数を
@@ -71,3 +71,16 @@ ZIPの中身を変更するときは新しい版・Releaseを使用し、既存�
 `validate_bilingual.py` がハッシュの不変と共有アセットの利用を検証します。
 `browser_bilingual.py` は日英の本文・aria・エラー、3体の実WebGL、切替前後の状態、
 深い共有URL・再読み込み、390px表示、既存URL互換を確認します。
+
+## 版を切り替えるとき
+
+`archive/revisions.json` が現行版、世代、公開可否、カタログSHA-256、版別の実物状態を分離します。
+`INPUT_WAIT` にカタログやZIPの取得リンクを付けたり、現行版に指定することはできません。
+新しい版は制作担当の固定commit・実出力・公開allowlistがそろった後にだけ取り込みます。
+旧 `artifacts/selected/current.json` と `archive/status.json` はr2当時の固定記録として残し、更新しません。
+
+旧候補IDを含む共有URLはr2/Phase1に固定して解釈し、新型へ黙って置き換えません。
+不明な版・candidate・モードやカタログハッシュ不一致は明示エラーです。
+`browser_revision.py --expect-input-wait` は制作データ未受領時の画面と旧版の実WebGLを検証します。
+READY後は新型の実データ検査を追加してから、フラグなしの受入検証と公開を行います。
+作り物のモデル・画像や、旧版を付け替えた新revisionは公開しません。
