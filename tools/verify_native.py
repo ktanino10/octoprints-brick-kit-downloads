@@ -29,12 +29,18 @@ for path in files:
     links = [obj for obj in doc.Objects if obj.TypeId == "App::Link"]
     resolved = 0
     instances = 0
+    checked_shapes = set()
     for link in links:
         target = link.getLinkedObject()
         if target is None or target.Document is None:
             raise ValueError(f"Unresolved native link: {path.name}: {link.Name}")
         if hasattr(target, "Shape") and target.Shape.isNull():
             raise ValueError(f"Linked native shape is empty: {path.name}: {link.Name}")
+        identity = (target.Document.Name, target.Name)
+        if "assemblies" in path.parts and identity not in checked_shapes:
+            if not hasattr(target, "Shape") or not target.Shape.isValid() or len(target.Shape.Solids) != 1 or target.Shape.Volume <= 0:
+                raise ValueError(f"Assembly target is not one valid native solid: {path.name}: {link.Name}")
+            checked_shapes.add(identity)
         resolved += 1
         instances += max(1, getattr(link, "ElementCount", 0))
     proxy_objects = [obj.Name for obj in doc.Objects if getattr(obj, "Proxy", None)]
@@ -45,6 +51,7 @@ for path in files:
         "document_objects": len(doc.Objects),
         "native_links_resolved": resolved,
         "link_instances": instances,
+        "valid_single_solid_targets_checked": len(checked_shapes),
         "proxy_free": True, "opened": True, "recomputed": False, "saved": False,
         "sha256": hashlib.sha256(before).hexdigest(),
     }

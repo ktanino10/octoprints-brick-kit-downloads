@@ -100,3 +100,10 @@ JSONは付随情報だけ、PNGはメタデータchunkだけ、FreeCADは文書�
 実在を照合します。型数はコードに固定せず、3体が実際に使う型の和集合から確かめます。
 part IDs、3.2 mm単位の底面Z、brick/plateの可変高さ、公称の接触グラフを検証し、
 旧micro-pin形状・別版・物理合格の偽装を受け付けません。これは物理製造の認定ではありません。
+
+`verify_publication.py` は実Pages配信のpublic commitとcurrent revisionを確認し、
+指定した前回公開commitから変化したファイルだけを匿名GETしてSHA-256を照合します。
+新しいRelease ZIP、日英各route、MP4の206 Rangeも確認し、旧大型履歴を全件再ダウンロードしません。
+`--expected-commit` はpublic側の配信commit、`--before` は今回の反映前のpublic mainです。
+制作担当のprivate source commitと取り違えないでください。これは認証不要な公開結果の検査であり、
+ネットワークへソースや資格情報を送る処理ではありません。

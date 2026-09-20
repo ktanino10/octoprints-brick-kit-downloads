@@ -171,7 +171,8 @@ def main():
     native_by_path = {entry["path"]: entry for entry in native["documents"]}
     for candidate in data_contract["candidates"]:
         assembly = native_by_path.get(candidate["native_assembly"].lstrip("/"))
-        if assembly is None or assembly["link_instances"] != candidate["part_count"]:
+        if (assembly is None or assembly["link_instances"] != candidate["part_count"]
+                or assembly.get("valid_single_solid_targets_checked", 0) < candidate["unique_types"]):
             raise ValueError(f"Native assembly instances do not match manifest IDs: {candidate['id']}")
     names = [entry["path"] for entry in verified]
     common = [name for name in names if Path(name).suffix not in MEDIA_FORMATS]
