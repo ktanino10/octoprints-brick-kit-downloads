@@ -110,6 +110,11 @@ def required_messages():
             paths.append(ROOT / revision["bundle_index_url"].lstrip("/"))
     for path in paths:
         collect(json.loads(path.read_text()))
+    comparison_pointer = ROOT / "archive/shape-study.json"
+    if comparison_pointer.is_file():
+        pointer = json.loads(comparison_pointer.read_text())
+        if pointer["state"] == "READY":
+            collect(json.loads((ROOT / pointer["data_url"].lstrip("/")).read_text()))
     return {"pages": sorted(pages), "runtime": sorted(runtime), "data": sorted(data)}
 
 

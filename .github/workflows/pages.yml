@@ -33,6 +33,7 @@ jobs:
           node --check assets/downloads.js
           node --check assets/i18n.js
           node --check assets/assembly.js
+          node --check assets/shape-options.js
       - name: Build both languages from shared templates
         run: |
           node viewer/scripts/extract-i18n.mjs
@@ -49,6 +50,7 @@ jobs:
           python3 tools/validate_bilingual.py
           node tools/check_revision.mjs --revision r3-8mm-20260920
           python3 tools/validate_revision.py
+          python3 tools/validate_shape_study.py
       - name: Stage only the audited public payload
         run: python3 tools/build_site.py
       - name: Upload Pages artifact

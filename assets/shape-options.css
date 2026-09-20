@@ -1,0 +1,27 @@
+.study-controls{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin:28px 0 16px}
+.study-characters,.study-views{display:flex;gap:6px;flex-wrap:wrap}
+.study-controls button{background:white;color:var(--ink);border:1px solid var(--line);border-radius:5px;padding:10px 16px;font-weight:650;font-size:13px}
+.study-controls button[aria-pressed="true"]{background:var(--ink);color:white;border-color:var(--ink)}
+.study-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.study-card{background:white;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.study-card[data-variant="baseline-r3"]{border-top:4px solid #697f94}
+.study-card[data-variant="plate-refined"]{border-top:4px solid #6f48b8}
+.study-card[data-variant="contour-refined"]{border-top:4px solid #237d85}
+.study-card h3{font-size:20px;margin:0}
+.study-card-header,.study-card-content{padding:22px}
+.study-card .image-link img{width:100%;aspect-ratio:1;object-fit:contain;background:#f2f5f8}
+.study-card .count{font:750 32px/1.3 "Avenir Next",sans-serif}
+.study-card .count small{font:500 12px -apple-system,sans-serif;margin-left:7px}
+.study-delta{font-size:13px;font-weight:650;color:var(--plum)}
+.study-facts{font-size:12px;margin:15px 0 22px}
+.study-facts>div{display:grid;grid-template-columns:1fr 1.2fr;gap:12px;border-bottom:1px solid var(--line);padding:9px 0}
+.study-facts dt{color:var(--muted)}.study-facts dd{margin:0;overflow-wrap:anywhere}
+.study-card h4{font-size:13px;margin:18px 0 8px}
+.study-card ul{padding-left:18px;font-size:12px;line-height:1.8}
+.study-card .study-evidence{font-size:10px;color:var(--muted);overflow-wrap:anywhere}
+.study-table{width:100%;border-collapse:collapse;min-width:700px;background:white;font-size:12px}
+.study-table th,.study-table td{padding:14px;border-bottom:1px solid var(--line);text-align:left}
+.study-table thead{background:#e8edf5}.study-table th:first-child{min-width:205px}
+.study-table button{border:0;background:none;padding:0;color:var(--blue);font-size:12px;text-align:left;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:850px){.study-grid{grid-template-columns:1fr}.study-card{display:grid;grid-template-columns:42% 58%}.study-card-header{grid-column:1/-1}.study-card-content{padding:16px}.study-card h3{font-size:19px}.study-facts>div{grid-template-columns:1fr;gap:3px}.study-card .image-link img{position:sticky;top:10px}}
+@media(max-width:460px){.study-card{display:block}.study-card .image-link img{max-height:370px}.study-controls button{font-size:12px;padding:10px 12px}.study-facts>div{grid-template-columns:1fr 1.3fr}}

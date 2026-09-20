@@ -2,6 +2,7 @@
   "home": {"template": "index.html", "legacy": "index.html", "localized": "index.html"},
   "models": {"template": "models.html", "legacy": "models.html", "localized": "models.html"},
   "assembly": {"template": "assembly.html", "legacy": "assembly.html", "localized": "assembly.html"},
+  "shape-options": {"template": "shape-options.html", "legacy": "shape-options.html", "localized": "shape-options.html"},
   "downloads": {"template": "downloads.html", "legacy": "downloads.html", "localized": "downloads.html"},
   "feedback": {"template": "feedback.html", "legacy": "feedback.html", "localized": "feedback.html"},
   "history": {"template": "history.html", "legacy": "history.html", "localized": "history.html"},

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "study_id": "shape-study-20260920",
+  "state": "INPUT_WAIT",
+  "baseline_revision": "r3-8mm-20260920",
+  "selection": "UNSELECTED",
+  "physical_fit": "UNKNOWN",
+  "retention_strength": "UNKNOWN",
+  "slicer_status": "NOT_SLICED",
+  "full_print": "ON_HOLD"
+}

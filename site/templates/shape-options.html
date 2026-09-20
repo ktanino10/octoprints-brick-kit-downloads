@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="扱いやすさを目指した現行r3の8 mm規格を基準に、プレート細分化案と輪郭・斜面案の実画像・実ブロック数・増減を比較します。新案は未採用・実物未検証です。"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'"><title>形状とブロック数の比較 — Octoprints</title><link rel="icon" href="viewer/assets/mark.svg"><link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/shape-options.css"><script type="module" src="assets/shape-options.js"></script></head>
+<body><a class="skip" href="#main">本文へ</a><header class="header wrap"><a class="brand" href="./">octoprints<span>SHAPE + PIECE COUNT / DESIGN STUDY</span></a><nav aria-label="メイン"><a href="./">ホーム</a><a href="models.html">現行r3</a><a href="viewer/">組立ビューア</a><a href="downloads.html">ダウンロード</a><a href="history.html">設計の経緯</a></nav></header>
+<div class="status-strip"><div class="wrap"><strong>比較案は未採用・実物未検証</strong><span>現行r3は変更しません</span></div></div>
+<main id="main" class="wrap content-page">
+  <div class="page-heading"><p class="eyebrow">FIXED 8 mm INTERFACE / ACTUAL COUNTS, NOT ESTIMATES</p><h1>形を変えると、<br>ブロック数はどう変わるか。</h1><p>現行r3を基準に、プレートで段差を細かくする案と、輪郭・斜面で見た目を整える案を比べます。新しい6候補の数量は、実際に配置された個別部品から数えた値だけを表示します。</p></div>
+  <div class="note"><strong>同じ8 mm接合規格の、別の形状スタディです。</strong>比較画像の良し悪しと、組み立てやすさ・嵌合・保持力の合格は別です。部品の大きさ、薄さ、小さい例外も併記します。現行r3の519 / 695 / 413部品と、既存の試験・配布物は変更しません。</div>
+  <div class="study-controls">
+    <div class="character-switch study-characters" role="group" aria-label="比較するキャラクター">
+      <button type="button" data-study-character="mona" aria-pressed="true">Mona</button><button type="button" data-study-character="copilot" aria-pressed="false">Copilot</button><button type="button" data-study-character="ducky" aria-pressed="false">Ducky</button>
+    </div>
+    <div class="study-views" role="group" aria-label="比較する視点">
+      <button type="button" data-study-view="perspective" aria-pressed="true">斜め・同じカメラ</button><button type="button" data-study-view="front" aria-pressed="false">正面・同じ縮尺</button>
+    </div>
+  </div>
+  <p id="study-status" role="status" class="quiet">実比較データの公開状態を確認しています。</p>
+  <div id="study-pending" class="revision-wait" hidden><h2>実画像と数量の確定を待っています。</h2><p>制作担当が新しい6候補を作成中です。仮の部品数や、旧形状の画像を改善案として表示しません。実データがそろうまで比較欄は未公開です。</p><a href="models.html" class="text-link">現行r3の実モデルを見る →</a></div>
+  <div id="study-error" class="error" role="alert" hidden></div>
+  <section id="study-results" hidden aria-labelledby="study-character-title">
+    <div class="section-heading"><div><p class="eyebrow" id="study-revision"></p><h2 id="study-character-title"></h2></div><p>同じキャラクターでは、カメラ・縮尺・配色・照明条件をそろえた実画像を比較します。</p></div>
+    <div id="study-cards" class="study-grid"></div>
+    <p class="quiet">短辺・長辺・厚みの最小値は、それぞれ別の部品から得られる場合があります。3つを組み合わせた寸法の部品が存在する、と解釈しないでください。</p>
+    <h2>3体・9案を数値で確認する。</h2><p class="quiet">部品数は配置された個別部品の数、型数は一意の形状の数です。同じ型を複数回使う場合も、個別部品はそれぞれ数えています。</p>
+    <div class="table-scroll"><table class="study-table"><thead><tr><th scope="col">キャラクター / 案</th><th scope="col">実部品数</th><th scope="col">現行比</th><th scope="col">型数</th><th scope="col">小部品の例外</th><th scope="col">高さ / mm</th></tr></thead><tbody id="study-table"></tbody></table></div>
+    <p id="study-provenance" class="quiet"></p>
+  </section>
+  <section class="prose">
+    <h2>「一回で印刷」と「分割して組み立てる」を区別する。</h2>
+    <p>r2を一回の印刷に使う考えは、使い方の構想として残します。ただし、現在のr2は多数の個別部品の配置で、閉じた一体形状やそのまま一体印刷できるデータである保証はありません。一体出力にする場合は、別の形状化とスライス検証が必要です。今回、一体造形版や印刷ジョブは作成しません。</p>
+    <p>r3は、別々に印刷した部品を後で組み立てる設計です。このページの2案も、その考え方を維持した未採用の検討案です。見た目が改善しても、実物の扱いやすさ・嵌合・保持力・安定性を確認したことにはなりません。</p>
+    <p><strong>NOT_SLICED・実物未検証・全数印刷保留です。</strong>新しい試験の合格や正式採用を意味する表示はしません。</p>
+  </section>
+  <noscript><p class="note">この比較にはJavaScriptが必要です。<a href="archive/shape-study.json">比較データの公開状態</a>と<a href="models.html">現行r3</a>は直接確認できます。</p></noscript>
+</main><footer class="footer wrap"><div><a class="brand" href="./">octoprints<span>制作物と、改善の記録を公開。</span></a><p>モデル派生物は<a href="LICENSE">CC BY-NC 4.0</a>。<a href="ATTRIBUTION.md">帰属・改変・権利の区分</a>を維持します。市販ブリック互換性や製造適合性は保証しません。</p></div><div><a href="models.html">現行3体</a><a href="https://github.com/ktanino10/octoprints-brick-kit-downloads">公開リポジトリ ↗</a></div></footer>
+<dialog id="image-dialog" aria-label="形状比較画像の拡大"><button class="dialog-close" type="button" aria-label="拡大画像を閉じる">閉じる ×</button><img alt=""><p></p><a class="text-link" download>実画像を取得 ↓</a></dialog>
+</body></html>

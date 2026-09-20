@@ -3,7 +3,7 @@ import { assetURL, setLanguageContext } from './i18n.js';
 import { PUBLICATION_URL, validatePublication } from './publication.js';
 
 const $ = (selector) => document.querySelector(selector);
-const labels = { common: '新版・8 mm共通ブロック', 'common-trial': '新版・共通ブロックの小型試験', selected: '旧r2の制作物・履歴', phase1: 'Phase1 / 履歴', trial: '旧r2・4 mm/8 mm試験の履歴', feedback: '実物フィードバック', design: '設計記録', viewer: '公開ビューア', site: '公開サイト・権利表示' };
+const labels = { study: '未採用の形状比較スタディ', common: '新版・8 mm共通ブロック', 'common-trial': '新版・共通ブロックの小型試験', selected: '旧r2の制作物・履歴', phase1: 'Phase1 / 履歴', trial: '旧r2・4 mm/8 mm試験の履歴', feedback: '実物フィードバック', design: '設計記録', viewer: '公開ビューア', site: '公開サイト・権利表示' };
 const pageSize = 30;
 let files = [];
 let page = 0;

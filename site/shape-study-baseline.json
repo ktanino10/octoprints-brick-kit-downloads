@@ -1,0 +1,2956 @@
+{
+  "public_commit": "fda5bf561235d839b572171d0c0d4679e619a52a",
+  "baseline_revision": "r3-8mm-20260920",
+  "files": [
+    {
+      "path": "archive/portability/r3-8mm-20260920.json",
+      "bytes": 225220,
+      "sha256": "0d92b47341ee091efa1a9fc8e02053e78e0b9b4ff35d43e99af5ed135e4172d1"
+    },
+    {
+      "path": "archive/releases/r3-8mm-20260920.json",
+      "bytes": 1967,
+      "sha256": "44de01ccb58681bc387281050acb51461f099ab33d19f27f2ae471a284171807"
+    },
+    {
+      "path": "archive/revisions.json",
+      "bytes": 1975,
+      "sha256": "faec128a7636ff771c5f3330adc61423f295e0db1cbbfcb5447969ed6aa22b93"
+    },
+    {
+      "path": "archive/sources/r3-8mm-20260920-supplement-001.json",
+      "bytes": 597,
+      "sha256": "f1e6df9aaaf1e6bfa14c780146d6b888cc416faa6f23fa427b13dce314525324"
+    },
+    {
+      "path": "archive/sources/r3-8mm-20260920.json",
+      "bytes": 121733,
+      "sha256": "80a3865ae0ca76a07cf513fba8082552401d7e5b4dfe13a8efab22f3f5879bb7"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ATTRIBUTION.md",
+      "bytes": 1131,
+      "sha256": "84e7461577572f6bcbe1b1dd933b1f2d8cd8f7509bd2797292a4c0ed8482162d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/LICENSE",
+      "bytes": 19346,
+      "sha256": "3711f963c05d0be80d53e5923308a6dee31b203da23435c9cfb7c7b6e4dd5e19"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/TRIAL-en.md",
+      "bytes": 2835,
+      "sha256": "9a228666c910627d5f4ee32c73ab158f3f117557497539749e749250c0e00d6f"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/TRIAL-ja.md",
+      "bytes": 3349,
+      "sha256": "7297d475117f4a850e632890019992835cdbbe62f91b7fbcacd29c9c6c80a205"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/assemblies/copilot-practical8-id-map.json",
+      "bytes": 90243,
+      "sha256": "4219e967da0a9161fc44d63f791c9ca8ca47fb93a6d0a1e4ca9db0902e2f19bd"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/assemblies/copilot-practical8.FCStd",
+      "bytes": 45955,
+      "sha256": "022e7f707f35844418ee63dc4f4d4c4b5234b65431007e85b0205fe1db24d27d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/assemblies/ducky-practical8-id-map.json",
+      "bytes": 53787,
+      "sha256": "d8a958ba511a51fae585413406fa8764a08a9e16976b29043745ee19a7158de9"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/assemblies/ducky-practical8.FCStd",
+      "bytes": 28848,
+      "sha256": "e88a113c6bf19aac9c4e5011bcb786c7171721f77e83174e110ffdc4b3de489b"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/assemblies/mona-practical8-id-map.json",
+      "bytes": 68379,
+      "sha256": "6bd4ffb1b185350222cb0375231e9f640aa7a941816c99e1de8d2a5f8eef1dbb"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/assemblies/mona-practical8.FCStd",
+      "bytes": 37394,
+      "sha256": "88ed3a9214d626cde91c586a2fcb7a1c43a49c35b57572316b088e3c99e75acb"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/contract.json",
+      "bytes": 3223,
+      "sha256": "f13d3328d67cbc080d6373961965aa2222dd338c6381eb8b7890efa36310de51"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/illustration/BR-02x04-H096-cutaway-x-positive.json",
+      "bytes": 8909,
+      "sha256": "d1cd588dc41f0ca397f54f3a3b0de96e2b2158c064e8309e13557f1abd6fc413"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/illustration/BR-02x04-H096-cutaway-x-positive.stl",
+      "bytes": 234984,
+      "sha256": "a687562b7bb02fc234ef9d7a1c4551b98ef937cfc96fe0cbb71c8180f92db5bf"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/libraries/CommonLibrary.FCStd",
+      "bytes": 2643229,
+      "sha256": "1642e1df4f7c76928ff8542797c7ec249f3ef19bdc1b2cb8e831b4e8d6806d6d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/libraries/ContourLibrary.FCStd",
+      "bytes": 27663144,
+      "sha256": "d919a041e476a8dbf998fdf9d48bbdc0e4976f84a525b89c3c3bc72d9bc3a9ae"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/mesh-fidelity.json",
+      "bytes": 26926,
+      "sha256": "9845977fceaedfeee52e4c4e6401096dea11ac2a9dbab231581fa083d1d38b8b"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-01x01-H096.step",
+      "bytes": 19371,
+      "sha256": "2904fa56331f0b92a0b5996fb05875537ee01db0ed233f92f18dfcd8cfb407a8"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-01x01-H096.stl",
+      "bytes": 38684,
+      "sha256": "ee942a2a5b60faef7ed16dc54aca6e67f346da7ab2e69ed59e6e7232dcfe69f4"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-01x02-H096.step",
+      "bytes": 34273,
+      "sha256": "7aa7b3f9d518d8a6c13a950bb455f9f03076b06500c530b8bf59444b20c60a2d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-01x02-H096.stl",
+      "bytes": 113784,
+      "sha256": "65a20e8a1a0ed4118d5c9c1cddb48a957761e8ff9b078214bee489fc779dbe26"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-01x03-H096.step",
+      "bytes": 49856,
+      "sha256": "089c1af6f365d8dbb78d76771f40ab1bd36f1feb85fbc5d951428cdc4c7efc26"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-01x03-H096.stl",
+      "bytes": 188884,
+      "sha256": "11eab45bf8455aefef42c56efd645416cc26a7fdf2f36f704e6644fd1e802772"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-01x04-H096.step",
+      "bytes": 65646,
+      "sha256": "2ffc51700cdbbbbc7de198f93b918d18aa684f73a137c0ca5997b5a1010feb20"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-01x04-H096.stl",
+      "bytes": 263984,
+      "sha256": "77115325d9557b692df72beb1964e67eef5a437e04d5d76a98fa1c5841c8e25c"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-01x06-H096.step",
+      "bytes": 97359,
+      "sha256": "f63c045a1100f936830b7ae27f2949613d6702468ca735e21c8d0bffe3bbf9e0"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-01x06-H096.stl",
+      "bytes": 414184,
+      "sha256": "4921d6647df18a88daeae98ace3d2d8b79756183bb6e19e6721ec2f96717eaa7"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-01x07-H096.step",
+      "bytes": 113259,
+      "sha256": "effdb9caa3d3d5938b8418d89b9f4d68319e2b0b2119f30a1a0b31e017b3e629"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-01x07-H096.stl",
+      "bytes": 489284,
+      "sha256": "8b65f218a160b1ea908b8c9a65f084470362f26c389da2c139a2ece5473b7dd5"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-01x08-H096.step",
+      "bytes": 129085,
+      "sha256": "cbd3792e4ded9fd18f36902574910506c00cfa2a3cdd8b484aec1fda58e3bc8d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-01x08-H096.stl",
+      "bytes": 564384,
+      "sha256": "ba2fc921ec5942aeadaa27fde27afe8d89c045eca748be55ad48515912ef1dc9"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-01x09-H096.step",
+      "bytes": 144997,
+      "sha256": "d24908a1c6a15a47cd76cba26ee8f1a51a94aefb714f50aa9f78b28c210fcbce"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-01x09-H096.stl",
+      "bytes": 639484,
+      "sha256": "5516d4447b5c1067d807b79edcd2c5f05960da17ea33f53afa7a4430433501ea"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-01x10-H096.step",
+      "bytes": 160812,
+      "sha256": "af6704d9e9a9ff75bb2e0fd8951848351f47150312339e162587609eab631990"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-01x10-H096.stl",
+      "bytes": 714584,
+      "sha256": "07c34f7cad8818427ebd2b2174ea9050713cedd1213c304894a21e3eb6a8c61e"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-02x02-H096.step",
+      "bytes": 52488,
+      "sha256": "f067e0235a4c6dbaed44cc1822f65a20f7c08744517c3f13d161b1ba0f997a25"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-02x02-H096.stl",
+      "bytes": 204384,
+      "sha256": "4e41b7c134ca18fc06b28ee536a5608c99c440cb64b567ae4f679bbf673d1625"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-02x03-H096.step",
+      "bytes": 78899,
+      "sha256": "46a138dcc4b703f1f8596b7dcc4ef920d24ca0708452e0077dbcb2553fcf5cc4"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-02x03-H096.stl",
+      "bytes": 332484,
+      "sha256": "8fb1a303dfc7acebbc5c8f52fcae948eb64d19e6eab786f28a934e4e2af6a20d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-02x04-H096.step",
+      "bytes": 105180,
+      "sha256": "564a2f7031906e554c6ca304cb38e98a4d67acf977bbab8ae03d6573aceb738b"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-02x04-H096.stl",
+      "bytes": 460584,
+      "sha256": "4dbd0e2a7325ee5b7e6317606f980fad2aae1350279c568ab6d242ddd5cf23f4"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-02x06-H096.step",
+      "bytes": 157911,
+      "sha256": "9c571251a72a540f06a27396de17df4a78f33a6ac8a7efe5965d65963ce19fb6"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-02x06-H096.stl",
+      "bytes": 716784,
+      "sha256": "cafcadc5cdbd348ff2911f2aaac148683ede53bc85c29783f0cc09e2605b1e99"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-02x08-H096.step",
+      "bytes": 210625,
+      "sha256": "2bb51ef389e85a27f824210c178f059137aa8b245087809a15066b776bd9c7c7"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-02x08-H096.stl",
+      "bytes": 972984,
+      "sha256": "120d31f13e89b1063d41434325b5cf40ce4cf9d4d174dc05cf7167b34fdc8d94"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-03x06-H096.step",
+      "bytes": 257830,
+      "sha256": "c82ab491a0ca6c6eb8dd9bea04a24072d8d1c343d2773ce772bcb027dd76ce4d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-03x06-H096.stl",
+      "bytes": 1206884,
+      "sha256": "55bc39ebef924cbe91bd46cd56865d2a8a5bcf38aa7c6b96e6d048e7c3bb2d99"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-04x04-H096.step",
+      "bytes": 231403,
+      "sha256": "ef75a14d942881606d12ff2154ff8c4a8dbc0e1c3a289410a8c0c6069e846e3d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-04x04-H096.stl",
+      "bytes": 1078784,
+      "sha256": "8bc0da81670d527a7c047571720942af808f5ddfe559a6a2720ceb8a9b2ee122"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-04x06-H096.step",
+      "bytes": 357551,
+      "sha256": "00b1f9f6619f193dee566dfb26d57df20982bff0d8aec7dedfe3ad5ad75f8d8a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/BR-04x06-H096.stl",
+      "bytes": 1696984,
+      "sha256": "55bb32f4535d1b4a701357619e2c64bf06c2ae3c94c3411ba22bfd1f2c846a29"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-03C-H096-c1d6f05dcc.step",
+      "bytes": 46426,
+      "sha256": "e0f05f96412da34eb8098435ea17a51fcde143d96030671d557abc5f481bc00a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-03C-H096-c1d6f05dcc.stl",
+      "bytes": 115684,
+      "sha256": "77548908409e1bc08c4b07f0ba59f2b9e60a8893759f544071c363f3fc652fad"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-04C-H096-15e33fd0c4.step",
+      "bytes": 60802,
+      "sha256": "f1f770573e255c891a8f09410da64260840aaf527951a22eaacca46e48ac1060"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-04C-H096-15e33fd0c4.stl",
+      "bytes": 153884,
+      "sha256": "a6de86ae572b411ce77fbc047dc5d05be3969ccd94c525bc5ed0a02adb5a1407"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-04C-H096-8e241044a8.step",
+      "bytes": 60741,
+      "sha256": "320ed837e8f015e5a37dcc9f5b9676f40e255d25c7546172d385c2d994ac88ea"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-04C-H096-8e241044a8.stl",
+      "bytes": 153884,
+      "sha256": "baa32c85be609600a60357f8bd885144680addad7b82f916c05f7b215cd8d3c3"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-04C-H096-a6bced9f60.step",
+      "bytes": 66700,
+      "sha256": "77c38c3e6e356e10e32b2da137ec1db53b8abf9cbec45fcd0f442a3e146ac697"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-04C-H096-a6bced9f60.stl",
+      "bytes": 154784,
+      "sha256": "de692f6c8bad05679efae07f7728a3cd7417556df82fc3d10a60088f6f052a99"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-04C-H096-bec36f7bdc.step",
+      "bytes": 66706,
+      "sha256": "5dd31348a16a33619fc7783026c936c60d140274b3b8b2e4965423ce63c4e9c8"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-04C-H096-bec36f7bdc.stl",
+      "bytes": 154884,
+      "sha256": "459852e23184329f9e5f8418ff19507899d18eb010b22f22cbafb1acb822cfb6"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-04C-H096-c7f6e1087d.step",
+      "bytes": 66833,
+      "sha256": "58848eec376b15e6ed49ba15014c99cf6a193f01ae808309bf5ab59272b055ea"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-04C-H096-c7f6e1087d.stl",
+      "bytes": 154684,
+      "sha256": "1d850976325d122ad2dde36b86066818784cd24941da64aa651d491b5a896621"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-05C-H096-1898941840.step",
+      "bytes": 74962,
+      "sha256": "f41521eafdb4189f1f5384655f952f7f9ca71e22b140a55caeaa3e4c706413ea"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-05C-H096-1898941840.stl",
+      "bytes": 192584,
+      "sha256": "988d4bf7a9434e33bcb03958af7d0738c73e939ce5c9f0ad0c3bb117cecc7d8f"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-05C-H096-4050bcf8df.step",
+      "bytes": 69046,
+      "sha256": "32c5ae74c3f12f8b35a5cef5c44c450d158c4f423f2a1390cabe4f53519ddc7b"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-05C-H096-4050bcf8df.stl",
+      "bytes": 191684,
+      "sha256": "c8fabfd03fd666e867c8f5d6b5a6a7977c7a1846adb4140b5cadaf46d0dec59a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-05C-H096-4415eb3f30.step",
+      "bytes": 80831,
+      "sha256": "94147d9992cc7ffb7b2326a0ca22b162ea6e8b01ae26c92b31c200f4df9cb502"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-05C-H096-4415eb3f30.stl",
+      "bytes": 193384,
+      "sha256": "d23087ceb4257a617d935d69e6045ae55346c750a6777cff132e3cccbb7f96b0"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-05C-H096-73f76289ae.step",
+      "bytes": 74901,
+      "sha256": "3ed99b9e427bce71533cddcefbe5bbf67e2704fe7ed75de2847bb9e2ccff86db"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-05C-H096-73f76289ae.stl",
+      "bytes": 192584,
+      "sha256": "6c107d1d5c5a04fac24984a5f21a74ed45d75df7bf8eb1d71dec9d2460b04808"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-05C-H096-7ede4fdf04.step",
+      "bytes": 79107,
+      "sha256": "c05f6ed8fe6e03e5832dc8354f0dba85e8ca1ef3df78ac07583286afb219f1ea"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-05C-H096-7ede4fdf04.stl",
+      "bytes": 244484,
+      "sha256": "f77aa64bffa5cb6fc1d29af4d7681fd6f443cd834464443c6d5f5c709f6401c5"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-05C-H096-a75f0f97b1.step",
+      "bytes": 80695,
+      "sha256": "3e63c1da7b32073f54a436285798bcf5e39972ff8ec6a71d472c3140d7635be9"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-05C-H096-a75f0f97b1.stl",
+      "bytes": 193184,
+      "sha256": "3f6980e423887270831ee7dd12f0e5817e74849bc177d24edf1288ca04a84cc1"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-05C-H096-c763985811.step",
+      "bytes": 79060,
+      "sha256": "e19a4c4fb7bdbaf2825ad71deca974612a43aaeeb231bfc54e901bda9cb96db8"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-05C-H096-c763985811.stl",
+      "bytes": 244484,
+      "sha256": "0ea48754dd16b76b93bb2b61d5bea9d68476324ca8c2640a95813f499f22dcf9"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-05C-H096-d1758b0b33.step",
+      "bytes": 75001,
+      "sha256": "84dcac311084266d5e7eade493453d430b774374abec96f06e2d34847f23ce84"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-05C-H096-d1758b0b33.stl",
+      "bytes": 192384,
+      "sha256": "875aeca8ebb262fb29566761276e25913998033175476a1333dde3750beb6ec7"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-05C-H096-e7674de05c.step",
+      "bytes": 74829,
+      "sha256": "b032319e3ebd0e09b9bbf9db1dd7da12babf6e893bac29867ab5934ca44d770d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-05C-H096-e7674de05c.stl",
+      "bytes": 192284,
+      "sha256": "9fb2ba1d56a8afbffd3e770b2618cc64de8ced86ab00769239794c949fef0d7f"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-06C-H096-1f09483782.step",
+      "bytes": 93335,
+      "sha256": "27a879f7ca8c75fa77cf4be4804ecdc6d263794fc697bbc146c9c18ee4b36f0d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-06C-H096-1f09483782.stl",
+      "bytes": 282984,
+      "sha256": "9e03ac737b075cb160dc7ae785c046ca7eeddd3ac8c2087e876fc39605a910a8"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-06C-H096-31129ef203.step",
+      "bytes": 93093,
+      "sha256": "cf41af050dd87dda7a312f068c8d0c4b01aa0c5fec14d90980dadfe99996e9b4"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-06C-H096-31129ef203.stl",
+      "bytes": 282984,
+      "sha256": "70b6274515acc23a3b41401049d7b1751213468edecb0416d8307ec0b70fb7bf"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-06C-H096-579600b9e3.step",
+      "bytes": 89002,
+      "sha256": "3fd9670adcb0468dd1c11396d5381fe70761219eb49185c4dc3a1b745c056a40"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-06C-H096-579600b9e3.stl",
+      "bytes": 230984,
+      "sha256": "8359be468eb4e38ee13148474377a932fe8f2b47e1fc2e31df71865afb63fb58"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-06C-H096-6fa6c35f3e.step",
+      "bytes": 89225,
+      "sha256": "2b753b25aa4497aa49dc458098f41ed2a3ad7a8a340feb65cc3b6db7312985bd"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-06C-H096-6fa6c35f3e.stl",
+      "bytes": 231084,
+      "sha256": "ea9e00328b275a3846c9ec5900aef1f08d58f754f13e3ceed47a660557a72d1d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-06C-H096-834a107884.step",
+      "bytes": 93390,
+      "sha256": "1e09ef57728425554534ff7f52987526e5b6e19c1c3d7af75d7ab2ab5c107781"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-06C-H096-834a107884.stl",
+      "bytes": 282984,
+      "sha256": "47e43ea077b62973c9eaab73e95ecbe1cb48e9e957e4feda5ec85235fe708c67"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-06C-H096-88c8e83714.step",
+      "bytes": 99090,
+      "sha256": "724a273523bd981e962f260ec317fd656770e715086a578e577e7d040883ca9d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-06C-H096-88c8e83714.stl",
+      "bytes": 283884,
+      "sha256": "d355f33c9a98016bf76f5d674f250c53532957610577468b6d8619759361d350"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-06C-H096-adaaf29086.step",
+      "bytes": 93214,
+      "sha256": "368504e7924ec456042a377f5361087557479591ee7097c88ee21f6fbdc1b64d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-06C-H096-adaaf29086.stl",
+      "bytes": 283084,
+      "sha256": "39727bd5706f439367956b473c27edf8894747be104fd1eb98f210a623163651"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-07C-H096-19b018b623.step",
+      "bytes": 111520,
+      "sha256": "1da015e940c1d489c0677cdb55a027c7d47abd1efa9af2ca1d95dad3af649225"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-07C-H096-19b018b623.stl",
+      "bytes": 373584,
+      "sha256": "560eb2ae930e27b94a87b3a9dd9f78fc17fcb6eb886f24a39ffefa5ec0e7683d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-07C-H096-48e06b5e1e.step",
+      "bytes": 111470,
+      "sha256": "156e2ed44662d864a5d4a9d286ed9b15249b63e90db92556fd5ac6eddc64e22d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-07C-H096-48e06b5e1e.stl",
+      "bytes": 373484,
+      "sha256": "662bf324886f91bff25a8ef8a3cf7015ff6e32c22cee561e29119b513c047440"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-07C-H096-8db0b03e41.step",
+      "bytes": 105558,
+      "sha256": "3d2e904e30038c7a48225e7685abafc178c88ce2363ff01b602c70b74d2a85f6"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-07C-H096-8db0b03e41.stl",
+      "bytes": 372684,
+      "sha256": "5aa1ea2bb00878ec7b60c12c42787a4440023c87bbb4d6b2aa4e3c0eb9af79ea"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-07C-H096-9fe7fee271.step",
+      "bytes": 105623,
+      "sha256": "79803ff5f768fe48ac57bdc630ce1b2bbee2238a60588a8215d0129e7f2eba3b"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-07C-H096-9fe7fee271.stl",
+      "bytes": 372684,
+      "sha256": "9438c5329a100544c12e693981c00f54c88fa57d8df59dd88047ebda34b75708"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-07C-H096-d4c0928299.step",
+      "bytes": 107098,
+      "sha256": "d6ac4b9d80c78cdea7b6fbf98cac42db083c366e10dd86e8ea7c66fd439e474e"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-07C-H096-d4c0928299.stl",
+      "bytes": 321384,
+      "sha256": "fae517714f81cd40c835019c7c801c503e18b286a9afde3408cbd0cbf5ae3ac7"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-07C-H096-e10d9a04a7.step",
+      "bytes": 111647,
+      "sha256": "2c2f51a9d53766f9f4d9a2d8dab0d6bdccbf863dd6433773907e0f5397b8cdc0"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-07C-H096-e10d9a04a7.stl",
+      "bytes": 373484,
+      "sha256": "017d39578d29bf8be83c24135f55c2e8ccd6cc15a9b3bbca9f38347afbc7d956"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-07C-H096-f685e61d18.step",
+      "bytes": 107265,
+      "sha256": "917983c2ba5e1fcd7aa2ea654abd3244087b2cdb585af859d75e0b4e2c8b6029"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-07C-H096-f685e61d18.stl",
+      "bytes": 321484,
+      "sha256": "b6e4956398358e6d5693d4e22158b75ff41fa2e639253f20aea6022d9467e5e3"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-07C-H096-fa3c95b030.step",
+      "bytes": 103472,
+      "sha256": "b7275409b25f6b9d7e174d80c6e47640dcae8bfa354abcd1011451cb5d4c70d1"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-07C-H096-fa3c95b030.stl",
+      "bytes": 269584,
+      "sha256": "98b3ff542da158c18439fcd514b95f206c001ac55440842c7722e586349c310e"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-08C-H096-0300667972.step",
+      "bytes": 125768,
+      "sha256": "29d2a637cad9fa13a1fe9880abe0ec4d337d47bc73a5d36b7d915ffadd6ee4be"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-08C-H096-0300667972.stl",
+      "bytes": 412184,
+      "sha256": "520392ceb61b3dc96bc5e617caf9c590f0399c149eab924f37c935a97bc30bd4"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-08C-H096-385592b6ac.step",
+      "bytes": 125653,
+      "sha256": "c3c08e0d16233fa8095a4abe8e2e015f13fcf68efc55c644100ea5d359a39906"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-08C-H096-385592b6ac.stl",
+      "bytes": 412184,
+      "sha256": "54e8a575863bdd959e7765bb6f97bec185039b0f47865f328b9fed9162ec4e28"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-08C-H096-7668c4598f.step",
+      "bytes": 125811,
+      "sha256": "b601a7616bf78566ce1ec737fc317147959ca3534ff4f7396032453a40463d9b"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-08C-H096-7668c4598f.stl",
+      "bytes": 411884,
+      "sha256": "98cdc871cd1af2f9739fc316473bd4f2de0b6aa719f92c494a8ada53789c0b37"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-08C-H096-b34d7e82a8.step",
+      "bytes": 119628,
+      "sha256": "30d120e29b0dbc635892ced15b56b320a0013227753a4b9785704234c0417963"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-08C-H096-b34d7e82a8.stl",
+      "bytes": 411084,
+      "sha256": "bb01de7c68afc23c68a09400a4c2aae92c73a993f4e6b5f85ad1702fb9157124"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-09C-H096-10fa964061.step",
+      "bytes": 143888,
+      "sha256": "a957f3570ac7d53366193ec58fb40f34521c927343a5a137abe1999978924fb5"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-09C-H096-10fa964061.stl",
+      "bytes": 502784,
+      "sha256": "9c40674b8b4871ef1275e8935bc0a2d75f5b02dd10d6f7b517946cb0c2739d9a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-09C-H096-1b75716a54.step",
+      "bytes": 143938,
+      "sha256": "98c63bb3d74c0430672a47bfd27fa54d59bc20f8a4b4d6e92c063668c778d916"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-09C-H096-1b75716a54.stl",
+      "bytes": 502784,
+      "sha256": "2f080cc7ed29f95444c2e8bfe8087814743248d24af71ffd9e21c8018e7c284d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-09C-H096-256f2a62e3.step",
+      "bytes": 130014,
+      "sha256": "3db9cbd81aa66ad78ed454dc62ad6dc3a458f2514d6a8e2867ab247d12e44b5a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-09C-H096-256f2a62e3.stl",
+      "bytes": 397484,
+      "sha256": "9cd486e2257ced68aa72da8efea90642c2f67bf3a8326c3258338aa24ecba0d6"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-09C-H096-2942373b3f.step",
+      "bytes": 138087,
+      "sha256": "53fec75c7399382fc3ae85f1ea9e7581ef496efc94349aa9636b5299aea9e770"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-09C-H096-2942373b3f.stl",
+      "bytes": 501584,
+      "sha256": "303df0b4aba14504fcfde5109c21c46b13b813b915d16805615736ec2d1e6434"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-09C-H096-2f6410248c.step",
+      "bytes": 143998,
+      "sha256": "0d7a26f4a9f4681e11408648b68490a72060d96dadca278f46562eefd1aeaa8b"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-09C-H096-2f6410248c.stl",
+      "bytes": 502384,
+      "sha256": "1b65812cbf0119bc02f6eef02ad03811c19146cd020996b9eec1eafa1e3f5a50"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-09C-H096-4d411266f7.step",
+      "bytes": 137936,
+      "sha256": "0ce7e492d216445f7f65ef313c95886e67bb091da8920bd2fbc7f98630380da0"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-09C-H096-4d411266f7.stl",
+      "bytes": 347384,
+      "sha256": "c4c7ccb8774c4961474a6983860c242579dd8dc149a7f7ea79b1baf8428fedc2"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-09C-H096-5ba1c77317.step",
+      "bytes": 138151,
+      "sha256": "7c78b057e9b5dbdd5c7d7427b1288a93bedda7d30276f32ea6031ab55f5627a0"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-09C-H096-5ba1c77317.stl",
+      "bytes": 501584,
+      "sha256": "6f2f4b64d2106bffa89c0f51432f7610eebc24d6e9065f58f6f9325c558bdb99"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-09C-H096-5eb32c5359.step",
+      "bytes": 144083,
+      "sha256": "4137363d15090baf084d265e457ab55e46af00b27df34590eec0cf7265df937e"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-09C-H096-5eb32c5359.stl",
+      "bytes": 502384,
+      "sha256": "95e4d68bb557bfc23a7a4442b87331290b988a51391b8560e8dadd7449543804"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-09C-H096-792fee37ed.step",
+      "bytes": 140080,
+      "sha256": "fa058a76925e8ac05ac024cc09d3a3a1effec54b9408110c25605dc07b82e465"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-09C-H096-792fee37ed.stl",
+      "bytes": 450584,
+      "sha256": "059fa67016d8f3163312505cc0b6c5fb3d97368f2cf9d5cdf348a541aa80f860"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-09C-H096-c77ac71faf.step",
+      "bytes": 133800,
+      "sha256": "b6ddbf258264c9951dacb5e29b358772bc45e80e861f9263d4b1e859115e2f96"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-09C-H096-c77ac71faf.stl",
+      "bytes": 449484,
+      "sha256": "6c4aa2f52de40ce2e3a37d71dec076f48e3a41dd06b2ccd1bd0935228431208c"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-10C-H096-0b7a9c0a1e.step",
+      "bytes": 164426,
+      "sha256": "14a9c84b4ce257d35231a0c866171939951d307e863ec4c36157aed350f90910"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-10C-H096-0b7a9c0a1e.stl",
+      "bytes": 541784,
+      "sha256": "e8e349f4d9ba482f3eb8008a413c9232f9ae14ef1b62ab832ad3c414a7e73397"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-10C-H096-415fcecd4d.step",
+      "bytes": 158093,
+      "sha256": "d16a794c36deac049b67b3cb4e17904c0cd3d6df268b0ed63d6a91bf4eddd273"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-10C-H096-415fcecd4d.stl",
+      "bytes": 386584,
+      "sha256": "235d8e269150bb7a6124e2df5aee4bddd874ca599058fe5e7ed72ab692ae59d7"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-10C-H096-498a75f3cc.step",
+      "bytes": 152304,
+      "sha256": "7822fc3c695d476b57995bf3c56e06af749339c80dfeaeccf936c3853322cfeb"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-10C-H096-498a75f3cc.stl",
+      "bytes": 539984,
+      "sha256": "94a29f8f945b77194441a9503644cfdb11477852861c63f1745bd630ef7078dc"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-10C-H096-506b844354.step",
+      "bytes": 146440,
+      "sha256": "671401b30ded9123632503128c2a41ae8314ba47fefd9e3166e342256153d5ba"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-10C-H096-506b844354.stl",
+      "bytes": 539184,
+      "sha256": "2ec258001384973e80b72228f1921ba8190efc346c71fd509562c30c1540459c"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-10C-H096-9e938acd9a.step",
+      "bytes": 146348,
+      "sha256": "93c7636fb97b52b4840faac803877f3dadf09403888c8293afaaee225a0fe74d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-10C-H096-9e938acd9a.stl",
+      "bytes": 539184,
+      "sha256": "865ba4a65f4fd1bececbc9853c6f4502cff3b42bc71e7afc490aa595175e5031"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-10C-H096-b3692aef1c.step",
+      "bytes": 158256,
+      "sha256": "32a5a15d4b9cb32c47afba04495ca4d6f2ca08ef43e0fbdd8e87d35af6ba6ca5"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-10C-H096-b3692aef1c.stl",
+      "bytes": 541084,
+      "sha256": "f2edd06792aebbe687a35884cb319d227f4f3479c26d8deba9f4e817a26abbab"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-10C-H096-e13752c9a5.step",
+      "bytes": 156462,
+      "sha256": "1323dda1ce493588874283a24c957e4ed4b332d89e85361364a2b13860a6e0ae"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-10C-H096-e13752c9a5.stl",
+      "bytes": 592084,
+      "sha256": "d42b6d804d1b3efd4433b78842f581c1ed548a2662e028cd1de9ecd721517ead"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-10C-H096-e61a31186b.step",
+      "bytes": 150380,
+      "sha256": "a6dc9f725f4e0a15b9dc8de7fe93db6c63bd7b152d7b02644fb5142f7371419d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-10C-H096-e61a31186b.stl",
+      "bytes": 436984,
+      "sha256": "5f1b514a805558045bac6eda3c2a1a852a925095dc54051febf0bb595d2ed368"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-11C-H096-0895aaf048.step",
+      "bytes": 166850,
+      "sha256": "adac2c1fa3a7ce32fd49f2977e84b5d4e7655a87014332b3599a6f0ea2816773"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-11C-H096-0895aaf048.stl",
+      "bytes": 578784,
+      "sha256": "f6d60b6342aab6d68a34f9a83e219713411ff525e731d63e4b7e2dec1ebc9549"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-11C-H096-87c8dc469d.step",
+      "bytes": 170649,
+      "sha256": "0472708e81d5a90338941df6faa3e7a8463e6cf4e614b6659917e1a8df4b75f8"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-11C-H096-87c8dc469d.stl",
+      "bytes": 630584,
+      "sha256": "dfde81523c41c652b6210b94f53a26e0e8c5923f703c1a3cef59abdc24101c8f"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-12C-H096-3d81b30a49.step",
+      "bytes": 191225,
+      "sha256": "52668069ae0ec17a29b88c682c1f0d52bc868d7192e5a1a49fb3d6fb4e89a696"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-12C-H096-3d81b30a49.stl",
+      "bytes": 669684,
+      "sha256": "0c0651c0ed4ced207be265f2a2bdcc727eee071eb76c2a1dac2b86a6c35805f0"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-12C-H096-6c0730a2f8.step",
+      "bytes": 185252,
+      "sha256": "bd8f79754ede883f8d391785994c27fdc567934464bbb140fd479ae04f14a34f"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-12C-H096-6c0730a2f8.stl",
+      "bytes": 669084,
+      "sha256": "bf6c8dba472526a62a07353890fee4d3d75f2f75f6d0338b8dd57110b6a1e6a9"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-12C-H096-dc1b462174.step",
+      "bytes": 183032,
+      "sha256": "c5cf961e9668ac6c64c91eca8dc6951d0371e4eca10b300a8e9359d4b91a4842"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-12C-H096-dc1b462174.stl",
+      "bytes": 720184,
+      "sha256": "f27359c4026b2f571bcd763e9dba7f7f9c4601b885761a7dcdfe0e78b43f9e32"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-13C-H096-801b39afdd.step",
+      "bytes": 203459,
+      "sha256": "8c20556f34b4116839d9555cb3974511ed42f049247c7a8d6213f00b57a00cc5"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-13C-H096-801b39afdd.stl",
+      "bytes": 759384,
+      "sha256": "ecd4284154a3a6f214dfb680d1ffae2ac7b28769b96e87c452be233871fd0187"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-14C-H096-2372a156c3.step",
+      "bytes": 221667,
+      "sha256": "91308e27d1a92b2d95efeda2c8b55f9b6a3b99dd7b73356a57eb8768249ecf61"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-14C-H096-2372a156c3.stl",
+      "bytes": 849884,
+      "sha256": "d69c433201a3523cf2c6b3e7eacbfcfcbbb01f48e71f8d98f8e888155cd0bb76"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-14C-H096-3d781c79eb.step",
+      "bytes": 221798,
+      "sha256": "9ed2dfa09a74ac6d7afd019f6999d0fb96313df91b49b6c212848e2aab3195b1"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-14C-H096-3d781c79eb.stl",
+      "bytes": 849884,
+      "sha256": "23e809526e674acf8e5fcd15638eef2d9f6d5eff5343b132d6609036fdbd0a12"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-14C-H096-3e2c5d19d1.step",
+      "bytes": 213893,
+      "sha256": "310d112890ff854cff6f10a7a0646a3e921cf3343249f937173a8e43ea7ea452"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-14C-H096-3e2c5d19d1.stl",
+      "bytes": 746384,
+      "sha256": "9ed71075d4a1d728fdb8100049a5c7e52ea316b6b445bfeb481492e5c69ed79d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-14C-H096-4670762ea0.step",
+      "bytes": 227578,
+      "sha256": "8b6f0219b062a892cb2d8d0ddabc777219232e20a7debb075b5a2c0f5fc1ee78"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-14C-H096-4670762ea0.stl",
+      "bytes": 850684,
+      "sha256": "f974b2e9a87e4bbb7ce2b2b752f51323e81c4fa7326064d22bf6f2a663ede6a5"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-14C-H096-634b639087.step",
+      "bytes": 211862,
+      "sha256": "1c3b637f01518b359df03d29eee4cb69cca1db87e06222ed5f4e3de170f2dc56"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-14C-H096-634b639087.stl",
+      "bytes": 796984,
+      "sha256": "54ca2a047ac9d783a9e10ca04b082684f89ef861deb9243e2029a290aacc162c"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-14C-H096-725e4e42b1.step",
+      "bytes": 217799,
+      "sha256": "2e9c278e0db42e8ca80a8315d8323e76bda5c96bf3bc55de26bee4de62d6825b"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-14C-H096-725e4e42b1.stl",
+      "bytes": 797784,
+      "sha256": "5081bfb809b6fa6d2682af340ad79711929349133b71f59b178feda1c5e1ae7d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-14C-H096-7783926aa4.step",
+      "bytes": 221526,
+      "sha256": "eafe3f5c6881eefc991160d142474dbcf57e21a5ba8410be5dea4df0f8932c96"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-14C-H096-7783926aa4.stl",
+      "bytes": 849984,
+      "sha256": "1aa8202f6fa561c19e041d342e5197e309a2fb169edb535cd21559f2283aa539"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-15C-H096-683acb1ad3.step",
+      "bytes": 237453,
+      "sha256": "4737797acdf26cb682246201b061fdeb39cddc1fbcb800b1a337a5a24d05f9ab"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-15C-H096-683acb1ad3.stl",
+      "bytes": 837084,
+      "sha256": "a40a87b8551397cf8c65f64002c3385fd064c21c36de8a8d331f0f329de09b3a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-16C-H096-4ed4585c23.step",
+      "bytes": 220406,
+      "sha256": "96ca007580cc3ebfd61cbff85f9db725c17fe125b63e543aeb8ead75c01630a8"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-16C-H096-4ed4585c23.stl",
+      "bytes": 613684,
+      "sha256": "b58a210ef87f34e3f369ba7feb3f8e38ab96f45992ec5c8dcabb264611accbae"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-16C-H096-6106604ce2.step",
+      "bytes": 258467,
+      "sha256": "ee658796de4db4a738f5b0a6e0191f09b605db0a9c9375d3ae75663921be4a8c"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-16C-H096-6106604ce2.stl",
+      "bytes": 1030884,
+      "sha256": "48be5092d9e907f3c6082a2336c3ef9e054c668fe2a81275b806e16f0b560a03"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-16C-H096-ab7eb6d927.step",
+      "bytes": 254418,
+      "sha256": "da0c7939ff049c15076297f2ab0dad20b8b579fbec2ebf6e1c7b493cfcc5ff25"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-16C-H096-ab7eb6d927.stl",
+      "bytes": 978984,
+      "sha256": "560ecb4cdade95c5a187e0ba5ef3314a46129b21112c563baaf3782e0b4b474c"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-16C-H096-cf4d7fb859.step",
+      "bytes": 254207,
+      "sha256": "01ed1959597dc7c0bf2b26a4921d7e2131dd80987bea94bf9d7205fb7bb4cf63"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-16C-H096-cf4d7fb859.stl",
+      "bytes": 978784,
+      "sha256": "b285a2a796a703811ff5e5be5a7617f89984a6c9487471408e907d56ed53f8f3"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-16C-H096-e200c2979a.step",
+      "bytes": 248530,
+      "sha256": "6379d3b5af4783c7b38104f64e22e9b49f9e71892c7f3b60f37713393aa26652"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-16C-H096-e200c2979a.stl",
+      "bytes": 977984,
+      "sha256": "c6a9003e21154cf235ef13c2d1b08bcb7c246410c9595aed29526f9d8482c55d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-16C-H096-ec6875af8a.step",
+      "bytes": 254220,
+      "sha256": "fd29d423c105e00added59371edc251b89fe65529597aef23aa169d243b2d88e"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-16C-H096-ec6875af8a.stl",
+      "bytes": 978884,
+      "sha256": "6caea1c654a855d44fa90f3547bd34b4ac96b0935848c24fda8ff3eb728a0305"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-17C-H096-43671a5b5c.step",
+      "bytes": 274345,
+      "sha256": "631e67b064df81234e79ad0b5fe9d76b0f461c356f351dbba8d34d3e40ed6567"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-17C-H096-43671a5b5c.stl",
+      "bytes": 1018484,
+      "sha256": "21009f8b92a91c11989d5b8f2acca5e5c7518a08988cd76dae6e7058de5816d1"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-17C-H096-59541c1f04.step",
+      "bytes": 276499,
+      "sha256": "fe8d2010fe431f79fc88c970b9191d4bd52165e14e392eff341ec093b815f254"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-17C-H096-59541c1f04.stl",
+      "bytes": 1121584,
+      "sha256": "8d822c7e9e6c042c80bc1eaded483c95451c2a1d434d9138840dc8ae3067e6c0"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-17C-H096-9b7af214e9.step",
+      "bytes": 274411,
+      "sha256": "1840dfc5bfd151c96e0ec95b913843186463536e4647b324fd8938e384d30f8a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-17C-H096-9b7af214e9.stl",
+      "bytes": 1018484,
+      "sha256": "7d2992f89c4d1fc575692d35502e44b8962ce3d49387aaa5e8fdb55139f156f9"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-17C-H096-b738ac4977.step",
+      "bytes": 274675,
+      "sha256": "5a5acf93a42deb893094ed953f8e37aa8ee3192ca24942918b8fd61c25da4898"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-17C-H096-b738ac4977.stl",
+      "bytes": 1018184,
+      "sha256": "6d6d81e575c871382b933c17e77eb3230f0eed33b95203880def7e140b17e64e"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-17C-H096-be766a974c.step",
+      "bytes": 268747,
+      "sha256": "bea40b8326efbe8b1d1a2d699c5c8cd153ca1af47c0b449d60a4fdfa892b3a3d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-17C-H096-be766a974c.stl",
+      "bytes": 1017384,
+      "sha256": "08079b0434547385834586ba96e7cf259db30699ec7bbdca455c490758f914f6"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-17C-H096-c50680b76b.step",
+      "bytes": 274580,
+      "sha256": "4fb76de48ab7a0138d3815e9057e4074b545f71a9b19478c2d64638a134232c0"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-17C-H096-c50680b76b.stl",
+      "bytes": 1018184,
+      "sha256": "8ed0ac203ea49a2048da0fd16f9cc19342fe5f81e1e5a9b7701276ba6450f286"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-18C-H096-329a29cf63.step",
+      "bytes": 293107,
+      "sha256": "93b01e6155db711a639971ffc66343f8d5864869861a2cd3ec0d6f68f3ec73a0"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-18C-H096-329a29cf63.stl",
+      "bytes": 1108684,
+      "sha256": "cf323feeafc262caff2b120ed4e518bfd133075ffd3f1c965c4d40435113d8b6"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-18C-H096-469022c2b9.step",
+      "bytes": 282300,
+      "sha256": "2fc8543c6b3ade24d18e5927031e85a28ec3f83c8209df6293cea5488d3fb0b0"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-18C-H096-469022c2b9.stl",
+      "bytes": 1055884,
+      "sha256": "e3a499dce791c4e88f217b78c4f1d6d7718b5ecb910acb152090c8616cb3872c"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-18C-H096-7dc999aebd.step",
+      "bytes": 284177,
+      "sha256": "86b31b87ff56af2f98e8fb2ba9a1f6ac4aefa9f1813d2b2e47c7cc56d77d92df"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-18C-H096-7dc999aebd.stl",
+      "bytes": 1004784,
+      "sha256": "801c4317f1bd8f340e6b6da41da2e2c9686124b2550a47fffedcce2e06ff78ff"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-18C-H096-a657ab12fa.step",
+      "bytes": 274483,
+      "sha256": "e16e4c3523fbdb2263907c3b7550cec05c5eb0b9de5c7154fb9a7b184ae8f759"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-18C-H096-a657ab12fa.stl",
+      "bytes": 951884,
+      "sha256": "861f6537f5e740948cadb7a51f8c52717fe924403c08cbabdc38be2f3f3cb71d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-18C-H096-b75d99ebb6.step",
+      "bytes": 287139,
+      "sha256": "c75cb24d322253ac9ab6a1fc3a78364e73e29540e2c28ace96391fca16014104"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-18C-H096-b75d99ebb6.stl",
+      "bytes": 1107884,
+      "sha256": "2564a6e8b1696ff9c6f250d8e12b74cf1cd5cc44f8307c01628a69d18c51b959"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-18C-H096-d42c35ea27.step",
+      "bytes": 293141,
+      "sha256": "739a620cc411d4d45ede3c82bb6712e330dc195a64706206913079833de792e7"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-18C-H096-d42c35ea27.stl",
+      "bytes": 1108684,
+      "sha256": "486f5c06f00b9bc321a85d592daf64c798e449dc721a2ca2722d12711d3bf534"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-18C-H096-e47607893e.step",
+      "bytes": 283167,
+      "sha256": "18b2de7275dc9f9d66a20eef2d2c75667d841e9d63f1ec0fbb26f0307be885eb"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-18C-H096-e47607893e.stl",
+      "bytes": 1055984,
+      "sha256": "22a2008dc03988c47d39eb377ea377eba7fda8083c02cdc9ce8009a411927de6"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-18C-H096-fb13703b24.step",
+      "bytes": 286765,
+      "sha256": "170a5f8efbb1a41fd916415d6fe0ae6ca69f4ec7f672f2215b24ba004ab39c69"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-18C-H096-fb13703b24.stl",
+      "bytes": 1108084,
+      "sha256": "89ddf19e52e6ff2a7b50dc934aae2b286d2ccf9e708fc75cde8b37e0a215f777"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-19C-H096-68fd21333d.step",
+      "bytes": 299195,
+      "sha256": "6f532b98536d067349fb0d3243dc7d55705d05fc4eee65949c75cc0d851200ab"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-19C-H096-68fd21333d.stl",
+      "bytes": 1197684,
+      "sha256": "2cd620ccfacbdad31fac0316b5519122d432f800761bf88d28e1227b4ab890d6"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-19C-H096-7ff6fe2c87.step",
+      "bytes": 307353,
+      "sha256": "cca8fc8847cda3b6918100b284a284d1754ac73d17cabd77fcb809628925a5fc"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-19C-H096-7ff6fe2c87.stl",
+      "bytes": 1301784,
+      "sha256": "0e714aaa5c4014b2cc214ce2148202140c8718f9b9d883766117a4c13c39cdc8"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-20C-H096-21b3f8c171.step",
+      "bytes": 313765,
+      "sha256": "af69563f58cf9bccbf88d8da38e04b920e88479ca42cfadd91914279ad9ee280"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-20C-H096-21b3f8c171.stl",
+      "bytes": 1081484,
+      "sha256": "c01f3cca8776659c71230b468ce0fc5f7fd9f7232338f3ac4d78750da89e061c"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-20C-H096-33529a809f.step",
+      "bytes": 319829,
+      "sha256": "555df7c990a52012fbcd00b89270d1ff622e5ec2c5ee68739841fe1288dc6208"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-20C-H096-33529a809f.stl",
+      "bytes": 1236984,
+      "sha256": "e579c3a01b6fb138d2d0964b24f3930d852b32bb89f4648307433f3bf8a8549b"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-20C-H096-79a15afcbe.step",
+      "bytes": 320007,
+      "sha256": "77460cf8eb0fe8f84e38b3e69799ec04fec2191de51a30303465671354c220f1"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-20C-H096-79a15afcbe.stl",
+      "bytes": 1236984,
+      "sha256": "0695c091007f184db191e245af0c67f398e7a385ad7685bb34ef8245dfff0e26"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-20C-H096-8f6969895d.step",
+      "bytes": 319149,
+      "sha256": "d66ac4f5abd66d9bbdc0fa71f547b7ee06db382e1b0f397a2f8364e538f5146f"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-20C-H096-8f6969895d.stl",
+      "bytes": 1236884,
+      "sha256": "69ffa567c46c6ae2e9b20551d8491467407f7ed8a61dc940fa361ed45e41d530"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-20C-H096-c36775f192.step",
+      "bytes": 319395,
+      "sha256": "57c7728ae061ce9fe9fa479bcc69a6fabeb990368630b6c73810b1f05268ddec"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-20C-H096-c36775f192.stl",
+      "bytes": 1236984,
+      "sha256": "6de68d6452895d50c4518b7068a8d44f5498bf220988f0a8a0ba99a99719a62a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-20C-H096-fbc0adfd2a.step",
+      "bytes": 323792,
+      "sha256": "7385a181de462c7bf524a1a7ec496f4ed4efbcdfe44b48114a37af3b3fc238b2"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-20C-H096-fbc0adfd2a.stl",
+      "bytes": 1288884,
+      "sha256": "a86d8c5b4805c513176755c6edc372895c0842097ff5bc7fb92306e38bd3d733"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-21C-H096-f08d83c02d.step",
+      "bytes": 335545,
+      "sha256": "b0f298a4831449489b65ac74da169a8d0387928efb9b794f1affafe60c7c2694"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-21C-H096-f08d83c02d.stl",
+      "bytes": 1378584,
+      "sha256": "7f52eebe6e0ecaa7474d2af1e40f7fca256b058cc1ddf49894c4f65be6468972"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-22C-H096-0d74c66059.step",
+      "bytes": 340145,
+      "sha256": "27f98aeb726715d5bdbb1846aecd71368f7e9ff9fb0d3570955166ff5b85d472"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-22C-H096-0d74c66059.stl",
+      "bytes": 1209684,
+      "sha256": "b61229393431b000329db1d9f9db4a6122c15bab1eb6a10ee7629fcb1d6d11d6"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-22C-H096-22857b5e7c.step",
+      "bytes": 340790,
+      "sha256": "4caad4054add27b29f1d27be3bae7a48c65dc73f0f22daaf1f0d6754386c0379"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-22C-H096-22857b5e7c.stl",
+      "bytes": 1364584,
+      "sha256": "8008f640cbb5a1286915a72a5e731a37807bd8750ef4bdc990b33027e2ff4b2a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-23C-H096-394afd9b8e.step",
+      "bytes": 372260,
+      "sha256": "fdad1c0947e090bda3fd8deefcb3d6d9fdf984b4f64a2368f6b794cefe88afef"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-23C-H096-394afd9b8e.stl",
+      "bytes": 1559584,
+      "sha256": "9125bdbef87e9b43c4a9aae997332a6953906d8fff3fec4f4b8f1a30dc75139a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-24C-H096-5f7a42e330.step",
+      "bytes": 387215,
+      "sha256": "7bc296e6d51b187751057817aa66761d969b04b790b0e1af4836661c4d1daf20"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-24C-H096-5f7a42e330.stl",
+      "bytes": 1598084,
+      "sha256": "f19e61500bc881342aa3c26d86dd6bb1443be33536eb00a0786296e01160dd3b"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-24C-H096-60744f3966.step",
+      "bytes": 386757,
+      "sha256": "04deafa91c697cac555f4783c7e5ae89e59f30b682e9b5c600c5158d2565f27a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-24C-H096-60744f3966.stl",
+      "bytes": 1598084,
+      "sha256": "5488ae1e5d7b9dd0c8315eb8c6af780289a91787a2e1d47b4169af5dbb4a6fea"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-24C-H096-65a3298f1a.step",
+      "bytes": 393265,
+      "sha256": "31eea4d49513b2617a9038763d9fc9f91f1e63a7a1a331d5ac78f66de61f0514"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-24C-H096-65a3298f1a.stl",
+      "bytes": 1598984,
+      "sha256": "e6cd9e18fa783f6f17b78ded4492047ecce384d37beede12b02cd3dcae46aa35"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-25C-H096-06daa47720.step",
+      "bytes": 404610,
+      "sha256": "b0b4b53bf7fac183cffedd131a68fd0abd226ada8ab98b3409d32b2644930726"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-25C-H096-06daa47720.stl",
+      "bytes": 1533984,
+      "sha256": "77dcd22756eb647f0e44b09e2e01dc08bb3641261d2d886c6627943fbbb5df15"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-25C-H096-5500434ce2.step",
+      "bytes": 409104,
+      "sha256": "1945b7a716eab76ac6f51f502cb0460735bd0b7277c3c6c248139b2a3283f35b"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-25C-H096-5500434ce2.stl",
+      "bytes": 1740684,
+      "sha256": "15316b4ceab059cf8be79b3c431f0ce2c760519fd39f7b4659f67882a9bdb40a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-25C-H096-b6b30d10c3.step",
+      "bytes": 409363,
+      "sha256": "48b2db7814f0842e7d313bf7805b506de646d49b6509fec6584090fecf7d0313"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-25C-H096-b6b30d10c3.stl",
+      "bytes": 1740784,
+      "sha256": "07ce313883588184b9d20de12b5dfe4006f6cadb662cdadf74425b9266de12c3"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-25C-H096-cba8834f53.step",
+      "bytes": 409164,
+      "sha256": "b0cc346ed294ab723147b4fdc162b79b7e84483236dd38d68ecfa28172376575"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-25C-H096-cba8834f53.stl",
+      "bytes": 1740784,
+      "sha256": "5ff7571e8b2ad254d1220e68163f238b3ee85c474ba6835080270e6318272607"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-26C-H096-b3f5221ae5.step",
+      "bytes": 428486,
+      "sha256": "dc8fd36ecc90364f89d6f1dcab8ac3f7f2787ff5e2d69325ab7ee72511df2f38"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-26C-H096-b3f5221ae5.stl",
+      "bytes": 1831184,
+      "sha256": "4e097bf9ea9808259b04848ce2e31943321e69ec951b2e6847a142d9dd6d1ef4"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-28C-H096-95faf6dd80.step",
+      "bytes": 456094,
+      "sha256": "3c62bdb23fa6a0c5f6acca24618ed9937b30eca870ffa8ac2996219b93457ecb"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-28C-H096-95faf6dd80.stl",
+      "bytes": 1959284,
+      "sha256": "a35d8bf5cce0265d6f68c9bc18808a3b7f4dce1f779c9f47b7a27c4bff1237ac"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-28C-H096-9b6b82951e.step",
+      "bytes": 432590,
+      "sha256": "63deb8846b702318bc87f08265c06bce513a48d1423aad0c97e3db615de4bdbb"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/CT-28C-H096-9b6b82951e.stl",
+      "bytes": 1750384,
+      "sha256": "4225fdffc4f50a2b8f9e7fe4c35446c2c3892206bbaa46cef3909436f22555a0"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/PL-01x02-H032.step",
+      "bytes": 34257,
+      "sha256": "cc7299dc08445de6a4d65bbd3f4febf0b576339bfdfbbfd12b320c11a203f827"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/PL-01x02-H032.stl",
+      "bytes": 113784,
+      "sha256": "2a5aebadc7e8eb74f0a339c4ab6fb62e1d08f214c34bac4d0c9a7a63f8316775"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/PL-01x04-H032.step",
+      "bytes": 65596,
+      "sha256": "8bf869ffaa2c3d15f664b15afe0e887c09bcd6999a2832464b10d58e8998710e"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/PL-01x04-H032.stl",
+      "bytes": 263984,
+      "sha256": "88f51a0db9342c8e4a0e4d321afd6e8faae2d040d7a8c4faea9e8d207b769985"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/PL-01x06-H032.step",
+      "bytes": 97275,
+      "sha256": "bdbee25d7defec8d1a97fc755803503a0a75deccc546304f530249de260df10c"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/PL-01x06-H032.stl",
+      "bytes": 414184,
+      "sha256": "193a0fb69db816dc8ea2b75f9f089bbac6ec1db60b4a02794419fdd7b74a9348"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/PL-01x08-H032.step",
+      "bytes": 128967,
+      "sha256": "1c21d911a8c008f6eee11f55eb9edaee316cad9e4d9bb1fad4702b9a1ebe1d0a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/PL-01x08-H032.stl",
+      "bytes": 564384,
+      "sha256": "ca9e16760cc3e4f81e1f6f56459217ecd5a319414a657d32bf8a0dad43b905fd"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/PL-02x02-H032.step",
+      "bytes": 52441,
+      "sha256": "9cc0d2b5cc118085a7601017c875c53c660b666fb47c6334bb520eb297457664"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/PL-02x02-H032.stl",
+      "bytes": 204384,
+      "sha256": "671ff06b6da333f87f090ce83634c98d5b9b1734d0168ed459df570bb6a70a0b"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/PL-02x04-H032.step",
+      "bytes": 105061,
+      "sha256": "783b39d295d89053bc83a198ee2358fe3ddc57d6467fb472a18bdb15bef3b0a4"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/PL-02x04-H032.stl",
+      "bytes": 460584,
+      "sha256": "54661f67bf59c30f821542de4ced6f62de90adbad9052032ed385f3aeae915bb"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/PL-02x06-H032.step",
+      "bytes": 157773,
+      "sha256": "3e9c5d898ab923777a1b6ec023a5109c81e4512fc79351a7633b70052a4dbeb3"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/PL-02x06-H032.stl",
+      "bytes": 716784,
+      "sha256": "006928def9a7832446f104f1554851898ed55c2a59f9d6f37881b64094b80180"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/PL-02x08-H032.step",
+      "bytes": 210432,
+      "sha256": "3e27ec46fcb6fb1f714db77976c737aa7b71a807530669628c29d6d187c3622b"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/parts/PL-02x08-H032.stl",
+      "bytes": 972984,
+      "sha256": "47c091cf71456231f6b2897c63606f5c0a92f0d74b086b7b1ea2b1700d3be43e"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/proof/Proof.FCStd",
+      "bytes": 251527,
+      "sha256": "0a78dab973998b4e78358c16da03f4d62fbcd13ffb81cf452b3d1cc521851e45"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/proof/parts/BR-02x02-H096.step",
+      "bytes": 52486,
+      "sha256": "8da08c1ee129df630013672325eabaf1884428a7377d4b53fb83657ea9caa5b4"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/proof/parts/BR-02x02-H096.stl",
+      "bytes": 204384,
+      "sha256": "4e41b7c134ca18fc06b28ee536a5608c99c440cb64b567ae4f679bbf673d1625"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/proof/parts/BR-02x04-H096.step",
+      "bytes": 105178,
+      "sha256": "3d27b3b98674d8406777d006caa17908c7a21873fddbccb613073184f862feaf"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/proof/parts/BR-02x04-H096.stl",
+      "bytes": 460584,
+      "sha256": "4dbd0e2a7325ee5b7e6317606f980fad2aae1350279c568ab6d242ddd5cf23f4"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/proof/parts/PL-02x04-H032.step",
+      "bytes": 105059,
+      "sha256": "fd5157a72c7d6831b24d5992eefee9c36471e85ff7acf9fa5b060452b4ccd6bb"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/proof/parts/PL-02x04-H032.stl",
+      "bytes": 460584,
+      "sha256": "54661f67bf59c30f821542de4ced6f62de90adbad9052032ed385f3aeae915bb"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/proof/prototypes.json",
+      "bytes": 744369,
+      "sha256": "cfeef037672b7ffa1d0d37770671f5270df2a9c19935a5a9ebf6d6ab01c00931"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/prototypes.json",
+      "bytes": 65538303,
+      "sha256": "c11e40d506e6326584dd2c4410b9869c1e541688ec37db5819d247bcef812cdb"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/Trial.FCStd",
+      "bytes": 1033098,
+      "sha256": "2806ad6e0b11c9e1f1efcbf398dedb46e9560b07f65c9b7f8ffd7686d11980d0"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/layout.json",
+      "bytes": 2098384,
+      "sha256": "2f4f5a7d085556c1f13eb027c2b9f3a002f8bd0bbf8c1c89c9642c11749e2736"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/parts/TRIAL-F1-02x04.step",
+      "bytes": 110359,
+      "sha256": "26b073b7de187ec4b373715df436fa0b18722fbf56f6378d0f94cedd8a3c749e"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/parts/TRIAL-F1-02x04.stl",
+      "bytes": 462584,
+      "sha256": "96dd9b657001c226835cdc05b1bd5af4f82b7be887d58f00d8e0221877969298"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/parts/TRIAL-F2-02x04.step",
+      "bytes": 115150,
+      "sha256": "79efa0e2b9b3b750165594181e1de78a5100e915ac97f9313aebc25d29400047"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/parts/TRIAL-F2-02x04.stl",
+      "bytes": 463384,
+      "sha256": "c372d1ab938628538ab8ce80649afabea21edc972827831a2b101c6d4f3eeca1"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/parts/TRIAL-F3-02x04.step",
+      "bytes": 120482,
+      "sha256": "97d4635c5826f3ff1782c158225e5e02d7710f9442a796e215b19870c8a10b2d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/parts/TRIAL-F3-02x04.stl",
+      "bytes": 462984,
+      "sha256": "b1a0319e49d37295e4d321925a966b7a7a927febae2aa1b1abde53532520c7f4"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/parts/TRIAL-F4-02x04.step",
+      "bytes": 125623,
+      "sha256": "304bbd9889db913d8ea1e25bf91430e56cfcd69f96774c641e4862c134908c38"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/parts/TRIAL-F4-02x04.stl",
+      "bytes": 463784,
+      "sha256": "8e43f39e42a4de12a0940f1dd8bc87bcb0c577972036d97ad0d25015767e3b5f"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/parts/TRIAL-F5-02x04.step",
+      "bytes": 130718,
+      "sha256": "97e33aa585cc4fd6a394e9e99df842641de3d9a1183aa6d6d52cc26a2f5828c3"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/parts/TRIAL-F5-02x04.stl",
+      "bytes": 464584,
+      "sha256": "dbd7f4a99030eee1438855ef26e6e918059bb7b113de4d58dc7a7e9e57b36a0b"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/parts/TRIAL-M1-02x02.step",
+      "bytes": 57606,
+      "sha256": "2f6563632022e1d6fdd773dd8a557cc939f61290b711dd45877a8151c73789d6"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/parts/TRIAL-M1-02x02.stl",
+      "bytes": 205184,
+      "sha256": "ba3d87597dcb46154cf5565509e5df9954c93bba09a2b086f80a7ba651735e00"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/parts/TRIAL-M2-02x02.step",
+      "bytes": 62664,
+      "sha256": "bf0b5d57c1d1602faecfc7d6d55db7c652e09919f49e586dad0d27adc285e093"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/parts/TRIAL-M2-02x02.stl",
+      "bytes": 205984,
+      "sha256": "56654281cab07e3d9615c7f24044a9afe7ec5b397cec1caebd109aa2664743a9"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/parts/TRIAL-M3-02x02.step",
+      "bytes": 67819,
+      "sha256": "4875d19deafd2aaf19b7298a2d4717b9ce780f2cb5a861928c4fcb8c26fe3126"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/parts/TRIAL-M3-02x02.stl",
+      "bytes": 206784,
+      "sha256": "31251a0d16b1a72b1fd557221a823f7c02263c9570a47e1f8f9dd6a9ac38cf68"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/parts/TRIAL-PL-02x04.step",
+      "bytes": 105059,
+      "sha256": "66fe99ebd0006d2b6d753f7dfb36d5db259b441d538dfe32c9eceb30b83f7ea7"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/parts/TRIAL-PL-02x04.stl",
+      "bytes": 460584,
+      "sha256": "54661f67bf59c30f821542de4ced6f62de90adbad9052032ed385f3aeae915bb"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/plate.3mf",
+      "bytes": 655233,
+      "sha256": "d3f08daa698480bb65d504389bdc251508cca3fe4cd1470d2f5ac4bedb54b662"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/plate.step",
+      "bytes": 931167,
+      "sha256": "1f7b877db9b7dce89aea10b1b7afa37649f13248b776980cb440777159f8935f"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/plate.stl",
+      "bytes": 3395184,
+      "sha256": "1649de2b7afbe9703748401bf9016dbfcebbd5d098c3ae8ba88cefc952b2c3f3"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/cad/trial/prototypes.json",
+      "bytes": 2266893,
+      "sha256": "2cbf37f1ccb3563863d6c19591e076276ec8c93623b5626bd642801a4e4c8055"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/catalog.json",
+      "bytes": 18046,
+      "sha256": "f068972006b9d12e303ccdd0344607f69ba8df1ceca71a94f582e9dcfb1af5fd"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/comparison.jpg",
+      "bytes": 697196,
+      "sha256": "8e0040c10a7bfc077920f860f81b71594a2d842bf1388a623235bea01843887d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-before-after.jpg",
+      "bytes": 246061,
+      "sha256": "f74347981894cb7eeee6951ab6f2cf67a463ced1f3a8e5417fa0757361f55ba0"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/ASSEMBLY-en.md",
+      "bytes": 2013,
+      "sha256": "0c978a813958e421239fc70a7dddeb0ab6c7a5c8975989e59fd270f243c8d8aa"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/ASSEMBLY-ja.md",
+      "bytes": 2170,
+      "sha256": "80c24ad42ae947b08cfc0aea168f211de8ac04c37c0545a17c64f0c44af3893a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/assembled.png",
+      "bytes": 1467314,
+      "sha256": "e1c2bf07da1dbc8e4ff6ba558811e48d2e6360baeb2898ea8cf7e188ebfe60a7"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/assembly-steps.csv",
+      "bytes": 65650,
+      "sha256": "3103babf666a81403e3259860ec2bbf85bcf2fe38abc9ffeeab5895bd070efa5"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/bom-types-colors.csv",
+      "bytes": 10626,
+      "sha256": "1c82c809919f64240d947e5f75067d28ec4ed90550ed1fc99dd9589f9103042f"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/bom.csv",
+      "bytes": 95426,
+      "sha256": "baf4914aa1e5a2ffb2ab607939ef3eb8ff850d16f6ab4a89981ff96b37bc5d11"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/courses/course-01.svg",
+      "bytes": 91097,
+      "sha256": "8c888fe40eef772a7ac0b1de72f5b994e35f9bb08f85c2b249494eac9b98d1cd"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/courses/course-02.svg",
+      "bytes": 85512,
+      "sha256": "b2379db9330a91659b26d33b0d3bf20405fa238aad4a7b9c6bd9f50a8fc48648"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/courses/course-03.svg",
+      "bytes": 58966,
+      "sha256": "25bb042ef54cee12f28bc0751d6cf13bb47c91813c06a8c8ca9981a300d976fd"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/courses/course-04.svg",
+      "bytes": 53549,
+      "sha256": "a5f3b3a0c7c330551e68fbaff59dfcd9945a64f6c8a2c258b30ee199f011c2ae"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/courses/course-05.svg",
+      "bytes": 65775,
+      "sha256": "b7d30bc2ddf8ff10393b236db6bef7618e2e6674524b417f91e3613987f456b3"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/courses/course-06.svg",
+      "bytes": 72875,
+      "sha256": "a915e6ac1f4f5f54e5d41419cc8d33a36d64fcd7d632722da34f151bf31dd616"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/courses/course-07.svg",
+      "bytes": 73075,
+      "sha256": "ed07c8facd6b63a1474d7bb5801dfa82ae5d86725c99f9eeb29a6f60521f1127"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/courses/course-08.svg",
+      "bytes": 119951,
+      "sha256": "118ce742e50a2f1a83d18e0758ba5c4db36284bc603dbdc008a41ef975ef0a0f"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/courses/course-09.svg",
+      "bytes": 75365,
+      "sha256": "3cccbee5beb30c19f1ceed60321bb5d94a31544d9b042f18f4417f416000f76b"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/courses/course-10.svg",
+      "bytes": 78742,
+      "sha256": "25413370afcecdf4808d2692223b0233f997698310626f6bb976f41a855a9e24"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/courses/course-11.svg",
+      "bytes": 77136,
+      "sha256": "0fcbb815688801156fb3f132d5a131b6d954a695bbd8ee6aa101dc81b7c61c2a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/courses/course-12.svg",
+      "bytes": 74836,
+      "sha256": "f6204ea148fae90314e2a417227ea1466dbabcbb6a9687fde07e90a4489faa81"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/courses/course-13.svg",
+      "bytes": 111762,
+      "sha256": "a9151263ff68ba9222c55767156dcf593832009ce2a9107eee05fa58eb3fccd3"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/courses/course-14.svg",
+      "bytes": 65676,
+      "sha256": "b08a8036129d577cb1f12c05093cd63c544b78f25ae940846f16ef323a9de261"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/courses/course-15.svg",
+      "bytes": 64714,
+      "sha256": "c542bf113c9d5c49437cbb4bd02712e239852f391c22352b06afecd055eaedcf"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/courses/course-16.svg",
+      "bytes": 59500,
+      "sha256": "0be055f1bf0f520bcd578e0e52d754586a397d823fed83b8cb3497e41db8011e"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/courses/course-17.svg",
+      "bytes": 60088,
+      "sha256": "128ebc132c6d070e256f65eabf317c03397872f10573d2e4810b1310a20f8407"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/courses/course-18.svg",
+      "bytes": 67894,
+      "sha256": "334464c0b13bc484111372cff192edac4a3a72a2d9427624fc8a41012ac3f1f4"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/courses/course-19.svg",
+      "bytes": 46050,
+      "sha256": "a6f306925302e180e524bb3e2311673762d4ef3c308dc46084732532e5080332"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/courses/course-20.svg",
+      "bytes": 31312,
+      "sha256": "0e6bc6d3c8b3302150fcd68d4200813b00577ff71f89a5bb3a4deeb04f438378"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/exploded.png",
+      "bytes": 1744399,
+      "sha256": "678df478762f65235bb43b0a1acea47827ff3a03b86c288b74f1309b14b06bfc"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/manifest.json",
+      "bytes": 483879,
+      "sha256": "e9f7fa13a1b4d4ba7037fc71294d02094a181aa40e3b4ed1dcbb98b44961c1a2"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/plates/c0-plate-01-NOT-SLICED.3mf",
+      "bytes": 2980515,
+      "sha256": "559ac4457ca72c11e4671f515f6f4431388d0104a86c710a1a18a8c95d745031"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/plates/c0-plate-02-NOT-SLICED.3mf",
+      "bytes": 180922,
+      "sha256": "9ed368a87a55d371eab693fa9b9b08224761e9499c2028b7f58693699cf358c2"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/plates/c0-plate-03-NOT-SLICED.3mf",
+      "bytes": 424445,
+      "sha256": "8e9a9908ac217a62b4293098ffb51e79b458b4f90972b8ef6c3d1d84a36f51f3"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/plates/c0-plate-04-NOT-SLICED.3mf",
+      "bytes": 1550075,
+      "sha256": "756df39859ddd68bf179c72e7f87b9abca5fe2a84214bc350d3168d7da11e427"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/plates/c0-plate-05-NOT-SLICED.3mf",
+      "bytes": 317320,
+      "sha256": "b13b91e5916d56b13b7686fdf81001ac457c039d62c7e31781a8e7a7e9774ed2"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/plates/c0-plate-06-NOT-SLICED.3mf",
+      "bytes": 2069300,
+      "sha256": "6c49fb3a98f576bb9067164b07bb35194269cb8f69ed1c58885542a1c1ec0d6a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/plates/c0-plate-07-NOT-SLICED.3mf",
+      "bytes": 2175887,
+      "sha256": "44ffac26e47db8373ad8d502a377d6de02c0866c00551c37a14146f2cbf2b1c2"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/plates/c0-plate-08-NOT-SLICED.3mf",
+      "bytes": 648625,
+      "sha256": "e7f67dd0cd7652b72a440bf6168395bb99d6b30f119bdb01f88391373c44eb55"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/plates/c0-plate-09-NOT-SLICED.3mf",
+      "bytes": 506790,
+      "sha256": "182d223badd87352ff848e0c1ca53b6f8de6d0fdb326795393759bd9d4015980"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/plates/c0-plate-10-NOT-SLICED.3mf",
+      "bytes": 247015,
+      "sha256": "1407dfe4ce9354686c9546d00e6ba7ad29bc3f25a3be4e2f61bff32f69283690"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/plates/c0-plate-11-NOT-SLICED.3mf",
+      "bytes": 53705,
+      "sha256": "92224b65ff05dab9d7196124797084cd30c80e43179c07d2429212cfdee35305"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/plates/c1-plate-01-NOT-SLICED.3mf",
+      "bytes": 1438420,
+      "sha256": "87597763c2243998a520158cabb5735727227c666099a03cb809125a36f5291a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/plates/c2-plate-01-NOT-SLICED.3mf",
+      "bytes": 90195,
+      "sha256": "bf9e20f2dc9513d93281682729d1b29b1a6574fc1fcf4cad76656628750d4e8e"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/plates/plates.json",
+      "bytes": 363863,
+      "sha256": "1310398b75f80d21fef23452be668e6ce4d8d36c13dadd90d9cd0b1a7f7b7e3a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/scene.blend",
+      "bytes": 20964141,
+      "sha256": "9b53f9c895e24ca4c9e74dbfc759f5c76b3ea584a180853a702325f00db436c4"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/copilot-practical8/turntable.mp4",
+      "bytes": 1555166,
+      "sha256": "1b693042a19f9acd749d7c477229809f301ecdabd9dc7ff0a848e2bc8cfe3e45"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/BR-01x01-H096.svg",
+      "bytes": 23190,
+      "sha256": "bf43d5a5cd61503363da5dd68619f98bdab5795ed18ed5ba8e31e4e0c21e38ca"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/BR-01x02-H096.svg",
+      "bytes": 58519,
+      "sha256": "b539997279a5fc9678ff8688ffa1a755c668c46100031623f9fdf1921cf42fa3"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/BR-01x03-H096.svg",
+      "bytes": 93847,
+      "sha256": "187e7b97182d6653aa2ff9fa8c45743fa6494f95ff74a63f1d870f4c04b560bc"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/BR-01x04-H096.svg",
+      "bytes": 129175,
+      "sha256": "e3ff635a0b72d09846e44404a1882184a82d07dd1f663c198ef852c1a2744549"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/BR-01x06-H096.svg",
+      "bytes": 199831,
+      "sha256": "e90b33c9fabef45059d3c5f4503fc21bf3a4f7d74266ad87720f46e3b2c40f18"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/BR-01x07-H096.svg",
+      "bytes": 235159,
+      "sha256": "ce68ceb8833e823c8954ac4767f5dd190aa2f13305936b05a631e29ce49a2b49"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/BR-01x08-H096.svg",
+      "bytes": 270487,
+      "sha256": "26cc5ca924d9de4a8df69f4794e99627d875e2ec2a97bdb24e4fdccf83ad1d0d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/BR-01x09-H096.svg",
+      "bytes": 305815,
+      "sha256": "e46ebdcd363f055d7e503c13156a0ae17512d761866ac96ed184212adab35afb"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/BR-01x10-H096.svg",
+      "bytes": 341143,
+      "sha256": "4499dba429236de1ac3705ad3330a679238f065472b639a973e3e4d7929831e5"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/BR-02x02-H096.svg",
+      "bytes": 123992,
+      "sha256": "1cc372ba946fa97a867a48dc2050dd9d9cee1cb4b1baf07f20aa6b39671ea938"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/BR-02x03-H096.svg",
+      "bytes": 204632,
+      "sha256": "7380af6540719127ee6f4a2e0e308dbc57a436ee9f8f829339cac1f9250e5553"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/BR-02x04-H096.svg",
+      "bytes": 285272,
+      "sha256": "f7aaf35714828310104f8f8ae29305835f664b44bb9f79c0e63b60485ae2e8af"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/BR-02x06-H096.svg",
+      "bytes": 446552,
+      "sha256": "73244bc3726fd1efd4c817e80583b8e29720e529f31c55b5e4d7764a10010f3d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/BR-02x08-H096.svg",
+      "bytes": 607832,
+      "sha256": "5b14fa0c941333dd1f324547c5bbcb9906cbaa6f0449e8e5a0244b6c21ac0ac7"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/BR-03x06-H096.svg",
+      "bytes": 769112,
+      "sha256": "37b8900538d07750583a6e73916f99dc5e22c9c0cecbc6bb13551682f14102f5"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/BR-04x04-H096.svg",
+      "bytes": 688472,
+      "sha256": "ef81f5e6c71ba947c07b54f9940532b092bacd8d9e200c785322eb1bc523b5d1"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/BR-04x06-H096.svg",
+      "bytes": 1091672,
+      "sha256": "dd227ae7ebf40310bd24130d98aba54736867894a5b8132ff78274980df602d7"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-03C-H096-c1d6f05dcc.svg",
+      "bytes": 65441,
+      "sha256": "bcb503b85e6fd3cf0360b0d8c213c564823e42d0e7e0ba72cb2096147f661d70"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-04C-H096-15e33fd0c4.svg",
+      "bytes": 86177,
+      "sha256": "e62527fc312d52174a22b0bd6945385920e68fa969a9f5449f6633c4211e2061"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-04C-H096-8e241044a8.svg",
+      "bytes": 86177,
+      "sha256": "b7c78acb3d931dd794c4c4f79a6b0c1b479357479054b09bd7eb25d6ad0cc1a5"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-04C-H096-a6bced9f60.svg",
+      "bytes": 87233,
+      "sha256": "9c474c567eb201216cfa541d46225176aba516377d513896661c1c3ccd97ed0e"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-04C-H096-bec36f7bdc.svg",
+      "bytes": 87329,
+      "sha256": "a5528fd049de8b74c24754fd4871575be5f91f7959c5458e4d9ee89d9147fbd9"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-04C-H096-c7f6e1087d.svg",
+      "bytes": 87137,
+      "sha256": "a4c650887f284219bcb1b3a4641e4792aa797298b0cc7baeb4b5f7f7e1e8c488"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-05C-H096-1898941840.svg",
+      "bytes": 107393,
+      "sha256": "703d87b784e60ec274591383c04f76401e797a79cb96f878aa2695cf752e2b38"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-05C-H096-4050bcf8df.svg",
+      "bytes": 106529,
+      "sha256": "03c9995fa0766154d48f5a534561ceada3ca6c33fd0e3e7c7cd761c4302eb628"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-05C-H096-4415eb3f30.svg",
+      "bytes": 108353,
+      "sha256": "c0e558ad4c7a42b90d175fa9551c9c45ed8ca70841bf8db0eb327f29b0907ab4"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-05C-H096-73f76289ae.svg",
+      "bytes": 107393,
+      "sha256": "bba6fd81ec838975458a84392164e8057580d74c3b121caaa450695f9a005b5e"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-05C-H096-7ede4fdf04.svg",
+      "bytes": 146753,
+      "sha256": "e5b44b98acd79188b401d99f46858132a2665fff695f1f0e99698b80414f2c85"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-05C-H096-a75f0f97b1.svg",
+      "bytes": 108353,
+      "sha256": "52ac4a2f7bded7ff5a5d5a2db6ba75e45363d4bc89d56e3b23a312179f4c990b"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-05C-H096-c763985811.svg",
+      "bytes": 146753,
+      "sha256": "4a0ce853f1955220d04cbbafe0c2d4a588a2ab2035d7b0bcc7a4010832c73701"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-05C-H096-d1758b0b33.svg",
+      "bytes": 107393,
+      "sha256": "62bc74229c9f6a3951bffa462bb1080779f21beaac7a4b7bc84fb38b81f1d941"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-05C-H096-e7674de05c.svg",
+      "bytes": 107297,
+      "sha256": "3734b842876b494c776ed6c1212871bb01ef54575ff9e7adccae55fbbe3b6589"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-06C-H096-1f09483782.svg",
+      "bytes": 167969,
+      "sha256": "1f55c0b850eef9be94647e0e8af8890404d34feaf4e65295e7425fa48464a916"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-06C-H096-31129ef203.svg",
+      "bytes": 167777,
+      "sha256": "13ab80cdb2bfd01fe26f03ec42c7cd974e782caed376b8e3b9d56d28473eedfe"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-06C-H096-579600b9e3.svg",
+      "bytes": 128513,
+      "sha256": "d330edc7c52d9b90df7df75abfc8ec320334adaaf2805dbcb1fe941424670218"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-06C-H096-6fa6c35f3e.svg",
+      "bytes": 128417,
+      "sha256": "72e6fb46dcdf5b155697994bd28e9def3063a0793b5c41ed6b2456b3db54e2e2"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-06C-H096-834a107884.svg",
+      "bytes": 167969,
+      "sha256": "ff7f07ef7193fda90744472d901a6637ad03a38944658cb6b98005b2cecf2525"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-06C-H096-88c8e83714.svg",
+      "bytes": 168833,
+      "sha256": "30d1308afac8bb8e13f8857ab317255fa41199199e97361ae8fccd3077182ac9"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-06C-H096-adaaf29086.svg",
+      "bytes": 167873,
+      "sha256": "aac4d40ce539eb04d9c1c7c55074f6bc183eae9eccf2e0a5856d76a300d03192"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-07C-H096-19b018b623.svg",
+      "bytes": 228353,
+      "sha256": "630f132f6ec1cee8d803b1cf27627bf8f9d0f11217f202eb7f51769017c34f21"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-07C-H096-48e06b5e1e.svg",
+      "bytes": 228257,
+      "sha256": "484a897a2c5e9079295ce3e9ebff0083b52fc5006d736dbdd3078455accc3e2e"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-07C-H096-8db0b03e41.svg",
+      "bytes": 227489,
+      "sha256": "dce4482469f03f4ee2301f34ffc3ebbdf761a0df541aa09e11c58f1177e7db3d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-07C-H096-9fe7fee271.svg",
+      "bytes": 227489,
+      "sha256": "909de62acab0a41250b0a148dc31ed06e8469ed3bcb35c34bf27f4d187342688"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-07C-H096-d4c0928299.svg",
+      "bytes": 188897,
+      "sha256": "da429dddb87fdcd7e3a9f9db56eb9dc77d3a15e4365b2a93dad677273b08fb58"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-07C-H096-e10d9a04a7.svg",
+      "bytes": 228449,
+      "sha256": "0c6ac902d447c96234ae06814d05bb24f95c0e2335d0cebdf5396e4d33c5d4ca"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-07C-H096-f685e61d18.svg",
+      "bytes": 188993,
+      "sha256": "6b6528aa30eefa8f196dacf880eb7938ff189fb2eba1a0c80606f86fd0d146a3"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-07C-H096-fa3c95b030.svg",
+      "bytes": 149441,
+      "sha256": "de2d80249784118fe1f375bc4272d5e8c31fbea28445d9f7838e2ade749bafaa"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-08C-H096-0300667972.svg",
+      "bytes": 249473,
+      "sha256": "b9cc8316052483f347631d3f4374f726ab4f29831899c9aed0fd50acc9503851"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-08C-H096-385592b6ac.svg",
+      "bytes": 249473,
+      "sha256": "bb500ddf8731115455081748c6286e2de6f68f4a496c73b32268bb89de2729d3"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-08C-H096-7668c4598f.svg",
+      "bytes": 249377,
+      "sha256": "ae88718a3aee009be32ba4b06b9f8fa4bfaca2dc46650a1978b36611ed850481"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-08C-H096-b34d7e82a8.svg",
+      "bytes": 248417,
+      "sha256": "ce051e6c00e499531a196e2805e29c982009e3c9b439de3619c6918fbe7c411b"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-09C-H096-10fa964061.svg",
+      "bytes": 310049,
+      "sha256": "0ffb0fa68b64ab4d341c7781a6b3abaf0895da757613c628c8481bebf3e0bca2"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-09C-H096-1b75716a54.svg",
+      "bytes": 310049,
+      "sha256": "4f70b41ae552694fa6875af512a274aa6eefbf9419864e03a3bf8e9073939e77"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-09C-H096-256f2a62e3.svg",
+      "bytes": 230081,
+      "sha256": "819e09aed21c7c2b5e678cfa0fa27c2fea3bcce31ff58a360ba98e4ed3194365"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-09C-H096-2942373b3f.svg",
+      "bytes": 308897,
+      "sha256": "198b1d03a21e81afecfbfe1e2bbbea8ae6585214634c8a2f1b5c0aba94648c69"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-09C-H096-2f6410248c.svg",
+      "bytes": 309857,
+      "sha256": "e2bb7d5703509f954504f7e65a46495baa9092e86d56523168f4e66c261d53af"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-09C-H096-4d411266f7.svg",
+      "bytes": 192449,
+      "sha256": "f2f59a65e62c702bc151787470e11d881d707dbeb71cf39912904f9442a97842"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-09C-H096-5ba1c77317.svg",
+      "bytes": 308897,
+      "sha256": "077647d9057fd298e1ae2d61f29f560f94c63b99cafc9b5c2eaaf8d01e987f0a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-09C-H096-5eb32c5359.svg",
+      "bytes": 309857,
+      "sha256": "9980fcd560cc7561f0d4c6af55eb3da6895274f0a1fa9274c923886a71f81728"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-09C-H096-792fee37ed.svg",
+      "bytes": 270401,
+      "sha256": "af688dfa8ae3d1830f63eedd2bfc6e60a6d9b136bde853faa9d2ba554ac1502a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-09C-H096-c77ac71faf.svg",
+      "bytes": 269537,
+      "sha256": "92750953c83706f6a1ab3e6b391ea3bd34e4d241ca5938c3a810fee641c57cee"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-10C-H096-0b7a9c0a1e.svg",
+      "bytes": 331745,
+      "sha256": "17139238c536e454211dbff33090ac4b323cb27fa7c337d70f25521b677e7ced"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-10C-H096-415fcecd4d.svg",
+      "bytes": 214529,
+      "sha256": "b6133601680d481916d445c30b37e5c3624bd48456ebefda0fe5b938bfab827e"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-10C-H096-498a75f3cc.svg",
+      "bytes": 330017,
+      "sha256": "3fd252ae2a282619f498c186d6808d8f66593c662bb5c57e9a5121241aa28b14"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-10C-H096-506b844354.svg",
+      "bytes": 329057,
+      "sha256": "c5653fd0177a5c21539b8adedbe05d86c2f9427108b880ff18d0662dc195190a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-10C-H096-9e938acd9a.svg",
+      "bytes": 329057,
+      "sha256": "4d358e8c72fd5afbb4536e56917dff6bed9725dce647d1e57c058c6b25448fe0"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-10C-H096-b3692aef1c.svg",
+      "bytes": 330881,
+      "sha256": "7c97a1e25784e9df4d98e85a91ba0d50238925480b30126844252725cb84f276"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-10C-H096-e13752c9a5.svg",
+      "bytes": 369377,
+      "sha256": "bdf82ede65e0931154f79ea310215bb58c64a81b3cb9860d5f6928a5db8dc7ab"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-10C-H096-e61a31186b.svg",
+      "bytes": 251873,
+      "sha256": "99f87d41ddbed2366b20f448c0ed4e179fe4c4184d821522b02177156214603e"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-11C-H096-0895aaf048.svg",
+      "bytes": 351329,
+      "sha256": "dce0f8cbaa798ea0213d767a4db961676e6ef949ef77097f9d33bdefe2c7fd48"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-11C-H096-87c8dc469d.svg",
+      "bytes": 390593,
+      "sha256": "031d7d699532b46f5cc319ce40297b63cb5d5081356e3752b389029024696687"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-12C-H096-3d81b30a49.svg",
+      "bytes": 412193,
+      "sha256": "b7ea354ce35a6244b474fa4bae03c3dfab5d5db1e1e7436c9c958ee1c9685173"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-12C-H096-6c0730a2f8.svg",
+      "bytes": 411617,
+      "sha256": "577f19a465a37224b3be21b924aa559ada9c2c40366589e1b770cfdd4cee91f5"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-12C-H096-dc1b462174.svg",
+      "bytes": 450017,
+      "sha256": "cd4fd8b3b0519753fdeb72f403525de8cf391451b3922a0f64b95cb0a4d9aeb8"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-13C-H096-801b39afdd.svg",
+      "bytes": 471713,
+      "sha256": "592a745901b88e799f03443e068a9194ed138404e9cfb7fb91da1412a0a3fe03"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-14C-H096-2372a156c3.svg",
+      "bytes": 532193,
+      "sha256": "1a45bb8777c666e00883de68254cd61aff7af414bb22590155ba31708b3d656c"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-14C-H096-3d781c79eb.svg",
+      "bytes": 532193,
+      "sha256": "7a3a4ce9c4819b0d4c1875c68e2e364953ae2ea9f421323e9c0860ebf7210c5c"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-14C-H096-3e2c5d19d1.svg",
+      "bytes": 453953,
+      "sha256": "4854a91995b7f7866a3af74d82d972e64fcba13760cc405644d9904ee12bd025"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-14C-H096-4670762ea0.svg",
+      "bytes": 533153,
+      "sha256": "ff41eee78b7f4052bd7a310f2d6a3c5add5d213e91b8e5f709546d4194bd3efd"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-14C-H096-634b639087.svg",
+      "bytes": 491873,
+      "sha256": "9b05379ddf0dae701fd67e74ef49085d6060a466c6abf497c3158676c9038321"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-14C-H096-725e4e42b1.svg",
+      "bytes": 492833,
+      "sha256": "56133615dbc77ae16aaacbbf023d5c3423b747a623c8b102c1b84092aff53225"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-14C-H096-7783926aa4.svg",
+      "bytes": 532481,
+      "sha256": "b68359f0e74ea158b91ef4864d3d27020cc75bc66b4da2d67dfec773dde96cd1"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-15C-H096-683acb1ad3.svg",
+      "bytes": 515009,
+      "sha256": "d30402d4f8c1f45ad2d6b17c8e366fdbabe17217548344f7a78225e60d29ffe4"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-16C-H096-4ed4585c23.svg",
+      "bytes": 336545,
+      "sha256": "6ca30c42075c1e601c9b8ecb2d9580a76f67c767a954c1e3f0315304a6e0c2c2"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-16C-H096-6106604ce2.svg",
+      "bytes": 653153,
+      "sha256": "d5c3a1e56c34e8fe58fde08dc5a467f45c855f96980a62082b9f870d642de58c"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-16C-H096-ab7eb6d927.svg",
+      "bytes": 613985,
+      "sha256": "6fd0ee456285c636b5a0314dd7f309f5a8b8d3bfc39a8d4a8a27b3605887f63e"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-16C-H096-cf4d7fb859.svg",
+      "bytes": 613793,
+      "sha256": "6e03a2268363b9cc2bbd55ee9049ebb7d7d0adee518aa9fa428694e1854e431b"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-16C-H096-e200c2979a.svg",
+      "bytes": 612833,
+      "sha256": "ac099e3b863e03ff3b86c461bf2900a67b9ebbef8708255f0c8af76724b70a86"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-16C-H096-ec6875af8a.svg",
+      "bytes": 613889,
+      "sha256": "ae5b25aa4b56dde737a6414eeafda748bc43307081570b99a69f6cedf133ae5c"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-17C-H096-43671a5b5c.svg",
+      "bytes": 635777,
+      "sha256": "a0be3300e9b16064bb1cec4969b36e5b737e6e56c526b7d7ccf2206588e645ac"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-17C-H096-59541c1f04.svg",
+      "bytes": 714017,
+      "sha256": "2656461e57b6d17eddd28cbda514f24b233c78a5ebdd57fbc0bbd5c2333023fb"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-17C-H096-9b7af214e9.svg",
+      "bytes": 635777,
+      "sha256": "751c8cddfd24a561a900f43bd9e7d85d66f586014c9ac5287413b2e3761663e2"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-17C-H096-b738ac4977.svg",
+      "bytes": 635681,
+      "sha256": "8721f4a0b2867d4c879a5aa94f3f6d1e1b428ca4bc91a2e7f3ca60f8ceaade19"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-17C-H096-be766a974c.svg",
+      "bytes": 634721,
+      "sha256": "577650b4a94a30cceac533664e5f8546461361225725c0c1ebf7154beeceac31"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-17C-H096-c50680b76b.svg",
+      "bytes": 635681,
+      "sha256": "1e3964f30fd3aab437102c9c59180be6bbf8bb61b682a598c75993a5e4c930b8"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-18C-H096-329a29cf63.svg",
+      "bytes": 696161,
+      "sha256": "7f1b58606357182208ab742ed6e226fa83bd6c5470417f4e385b39d4e5e35797"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-18C-H096-469022c2b9.svg",
+      "bytes": 655937,
+      "sha256": "05e6ab9bc2f1b76d7a180fbe3d8b760e920dfef805d6f7fef9667906a19d5f70"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-18C-H096-7dc999aebd.svg",
+      "bytes": 617729,
+      "sha256": "e0eeccd4c4ee618524282b566525a86ad641479e60a0c43fb6bfbfca30915dcb"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-18C-H096-a657ab12fa.svg",
+      "bytes": 577409,
+      "sha256": "49f99034fd96f04a4e2bb6845712466a3e4475a48b9291775eface7f6a793512"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-18C-H096-b75d99ebb6.svg",
+      "bytes": 695201,
+      "sha256": "1bb14f6fdd83d1715de977885983abe15825cff7515c2047624a95e63e95961a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-18C-H096-d42c35ea27.svg",
+      "bytes": 696161,
+      "sha256": "7a5f3cf765118feb72c998683c840b26e99eb8f6caf3667dd0b4b3025b0b9562"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-18C-H096-e47607893e.svg",
+      "bytes": 656033,
+      "sha256": "758ae12c3a950b38e2b17c5a5542878c2ff544649a863bcf4a5c86f257edeae8"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-18C-H096-fb13703b24.svg",
+      "bytes": 695585,
+      "sha256": "a1e638104df6a426e7c9543a22938986ca84121f2d62128fd04e35b31fddb89f"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-19C-H096-68fd21333d.svg",
+      "bytes": 755201,
+      "sha256": "7649f0135dde3b843871a7a91094788be683a2e93dd84651a5b62fb9171e6695"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-19C-H096-7ff6fe2c87.svg",
+      "bytes": 834017,
+      "sha256": "611791bf0a32a05dc203718f920ad7ab0af4235a0f2ac70c264cd770ea290905"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-20C-H096-21b3f8c171.svg",
+      "bytes": 659105,
+      "sha256": "41d1536b41d8c13ded61780a24a69da3e8d49ea63ef5f915f3622335021eb4c2"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-20C-H096-33529a809f.svg",
+      "bytes": 776993,
+      "sha256": "162c1987d85a408ed71efc1faf787e37140bc194590bd2c13138e8ebec086cd3"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-20C-H096-79a15afcbe.svg",
+      "bytes": 776993,
+      "sha256": "cb4af582d98cbde36523b0da615bfe295fa26bee5efb6180fd943d03e01a3366"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-20C-H096-8f6969895d.svg",
+      "bytes": 776897,
+      "sha256": "8dfeafcabed41865ce3c70351b4f47d0437f8c6d73470e6e0fce1cac9553771a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-20C-H096-c36775f192.svg",
+      "bytes": 776993,
+      "sha256": "c975e44439cc004dbaff740ec55130b5e7bf6a24c4964724fba6de5cbd6d3001"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-20C-H096-fbc0adfd2a.svg",
+      "bytes": 816161,
+      "sha256": "8f203b5ea40e7b0c13020715dddfd666314475e834eeb03702ff067fbe206248"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-21C-H096-f08d83c02d.svg",
+      "bytes": 876065,
+      "sha256": "1fbc44df4364139c4ced26d00aa3d91a3d346e8b8798c52b96eca741cb549747"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-22C-H096-0d74c66059.svg",
+      "bytes": 740417,
+      "sha256": "80a72a60c892a7d144fe35cce514bb7eda554d7aa271ee5ffcfd7b5798da001e"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-22C-H096-22857b5e7c.svg",
+      "bytes": 856961,
+      "sha256": "73fe0d063e084f20c42838845c4d159beaf10ee9d4db20a639f1706bd815f8bd"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-23C-H096-394afd9b8e.svg",
+      "bytes": 997025,
+      "sha256": "fd942682ec1af37b89fbfc0572d9f944ea9e7b6de7e5c9f1bc0cf0c99dc6ae7d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-24C-H096-5f7a42e330.svg",
+      "bytes": 1017857,
+      "sha256": "4cf714427ce27592c5f6a5d33693b7c0ce050b305f1aa9677ff5451f25a01cef"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-24C-H096-60744f3966.svg",
+      "bytes": 1017857,
+      "sha256": "609e3c9c83818d82841a1e4b718141256f7e2580844602506473f4706d302a2e"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-24C-H096-65a3298f1a.svg",
+      "bytes": 1018913,
+      "sha256": "a3bb641f3eeb957a7a1573f9541ccf5c00c03b43521b8407d8c8c09e5b6a5079"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-25C-H096-06daa47720.svg",
+      "bytes": 961889,
+      "sha256": "40ffea7bad208603ded243255c2959784070ab3f95e91895047bb164f19be323"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-25C-H096-5500434ce2.svg",
+      "bytes": 1118081,
+      "sha256": "a9496e56e9d53774dc8749826675af6881b9a43570fdd5ca25dc7adbe2745f95"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-25C-H096-b6b30d10c3.svg",
+      "bytes": 1117985,
+      "sha256": "5f68586d0d3dda6a751e0000802f5c484e2ac53b6992738a19708903f74861cb"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-25C-H096-cba8834f53.svg",
+      "bytes": 1117985,
+      "sha256": "eb5148527b9a5535c424848c479b4b500ae1ca2bc252be4ef3b4ba60b9837b4f"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-26C-H096-b3f5221ae5.svg",
+      "bytes": 1178561,
+      "sha256": "39664d56eda7141b95d3c232b42a99b3f3c62cd6faa0f726a0a4fc87b1340899"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-28C-H096-95faf6dd80.svg",
+      "bytes": 1259145,
+      "sha256": "50dfe752d2734d5c8fc08b445b6323c7a00a972291e33f6d3b84f2495d57dd01"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/CT-28C-H096-9b6b82951e.svg",
+      "bytes": 1099005,
+      "sha256": "d08c34cea75129a087b4981f612058451d28f4d8f269520ca975d36ed6610190"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/PL-01x02-H032.svg",
+      "bytes": 58519,
+      "sha256": "d0c6d7f81758a90c4b9f20d7c14deacb6f9f0565fa9f2f4c46e64fd115c3ae62"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/PL-01x04-H032.svg",
+      "bytes": 129175,
+      "sha256": "7525430c7d5328cf8a5b1234c6d54d7d8f1a20c542f6def601d62f37657b34b3"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/PL-01x06-H032.svg",
+      "bytes": 199831,
+      "sha256": "5bb04858238b705591b104c9b3b1c3686acf7f361271fda44e0bac8fc9c221a7"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/PL-01x08-H032.svg",
+      "bytes": 270487,
+      "sha256": "4cf20e4dce486422fb76882aec8a36c8ddd358062d834e22018b2e88103ae559"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/PL-02x02-H032.svg",
+      "bytes": 123992,
+      "sha256": "e5b965056155e7a6af0565207e956a27816bce9eb82c8bc58e0102ff5bdf1fa7"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/PL-02x04-H032.svg",
+      "bytes": 285272,
+      "sha256": "8041450b2367a65d1c19bc32b967b1499889570d4303f0a5d59e9711264d53b3"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/PL-02x06-H032.svg",
+      "bytes": 446552,
+      "sha256": "ca127f1e571aa837fe58bc11ca55d8f96bca223cfeef134181c457c3ed5015c4"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/drawings/PL-02x08-H032.svg",
+      "bytes": 607832,
+      "sha256": "439c86de3f941e497c866a776738def328f24386c3ddc9dbcd2c7acd7964f875"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-before-after.jpg",
+      "bytes": 204376,
+      "sha256": "f3d45e9f4a6b3aa1f887e9302399bfa8937c9e8ffd84f368daadaf5c65804fbe"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/ASSEMBLY-en.md",
+      "bytes": 2008,
+      "sha256": "1e30e129d6c04458750b5bea10db025e654544e57ef59339302a1e37da20453d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/ASSEMBLY-ja.md",
+      "bytes": 2165,
+      "sha256": "f43c159c496fd87e3083eb20685e537c094e2d415b4272555fa70076e9b26243"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/assembled.png",
+      "bytes": 1415386,
+      "sha256": "d40acc87665c24990dcb64461df3112941abe3e1b7091aa47b464002f7a92f22"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/assembly-steps.csv",
+      "bytes": 38881,
+      "sha256": "18c34cbb74b3c87873e50d16112eb27439d022359fed1eb7fc63dc4176e9d84e"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/bom-types-colors.csv",
+      "bytes": 6108,
+      "sha256": "74e635aebb4590a4ae025f62e516145ded5e06b27bc8a33393fd2cc57ee2ca16"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/bom.csv",
+      "bytes": 53735,
+      "sha256": "1e8451013436a38583a122b3d21d0ad2fef6c530e7a752156fb52dacac2d32eb"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/courses/course-01.svg",
+      "bytes": 50265,
+      "sha256": "dcc8920c0eb19ab4acb6d09fc94621c84ee1637739f98a4f5d8b52681daabda0"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/courses/course-02.svg",
+      "bytes": 47663,
+      "sha256": "08aaa7d783bd38ccbc0a70fbd6cd218a64eadf55ebfc7c838d6b2d75b9efb24b"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/courses/course-03.svg",
+      "bytes": 27545,
+      "sha256": "29c3d0e9c7f989ed996285e20d0dedf9dd277e84f311b63ec4062add4cf616e5"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/courses/course-04.svg",
+      "bytes": 36980,
+      "sha256": "d9debbbc3e43ae5d8ebed21c5e3217f851939702ad640e0d0df0b9bfe7ad8e66"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/courses/course-05.svg",
+      "bytes": 42664,
+      "sha256": "ec415c39120a33a55e233ccb4c772109138acd02912843e6e472046a4fd402b2"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/courses/course-06.svg",
+      "bytes": 44279,
+      "sha256": "2fa70663364ce71ecff8d759a0441131773eb5b82523e349b1eaabf38d35e47c"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/courses/course-07.svg",
+      "bytes": 47653,
+      "sha256": "a720b5056a5043252280bb3a5803ba6ba39263d92008bf3ff22bb325af095432"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/courses/course-08.svg",
+      "bytes": 62559,
+      "sha256": "eb19de522a6b5aee2350851f9b2c44aa903975accb6f660324edd9ee3b22ea3c"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/courses/course-09.svg",
+      "bytes": 49257,
+      "sha256": "20fb163d7d46cacc696bf432d41194567e030b0a99b66dab31311abe78389fbd"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/courses/course-10.svg",
+      "bytes": 52282,
+      "sha256": "2bdd8c792140c5d8ecf3f6f38f838b3c8db4606b34eabdd993203468287b47ae"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/courses/course-11.svg",
+      "bytes": 55650,
+      "sha256": "68d90dab6021545dd157e151fe5f5250969759423b6fc88d9e3c7251d9e33d09"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/courses/course-12.svg",
+      "bytes": 50152,
+      "sha256": "ac34a954de74f506eda51ffd68f136cbb1ff9e7b3c91c0d820b7334a7ca949cc"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/courses/course-13.svg",
+      "bytes": 53132,
+      "sha256": "33a7f5a510a51cfb1d2dfb19b19f01331061e88a2188cf74a8651efa844e3b21"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/courses/course-14.svg",
+      "bytes": 44270,
+      "sha256": "d574397745035f56ddb72cf702f739d9ef4da69ee2d14bb659f0f03b4dd5a9ef"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/courses/course-15.svg",
+      "bytes": 43750,
+      "sha256": "c30a0865da0a48c04ab21c2dc622b099fa5afd948ca8edea11e0a04299f47e53"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/courses/course-16.svg",
+      "bytes": 43028,
+      "sha256": "daea4b5dae1b3c8c414b66c37bf4c9a5376e79eaa8b0423a04666eaae5c7ba3f"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/courses/course-17.svg",
+      "bytes": 40010,
+      "sha256": "c742cfddd6032cae6871534281c249d98e3682c38e4b44de6bc1bfc19267cea7"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/courses/course-18.svg",
+      "bytes": 39274,
+      "sha256": "e54a8ed533604ae105e9eba58b4077d26d3955a861de5f07f9610932e7f2153c"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/courses/course-19.svg",
+      "bytes": 32026,
+      "sha256": "c219aa071fb19983557bb52b858e3de903a8721a12a425accc820cd83d6eb10f"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/courses/course-20.svg",
+      "bytes": 20310,
+      "sha256": "e174dfabb56f67725edf12cb83bca02e3673ca7238b03770987606d2583d6569"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/exploded.png",
+      "bytes": 1569026,
+      "sha256": "aceb683dde6d32b8e9aaf9ebffc9599f506cd7c5d65004996427d9c8b88c08ae"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/manifest.json",
+      "bytes": 293652,
+      "sha256": "5f3e7e749e2022113e2eba2de71be4aea048b265be4403b8d76db8b00e9992f3"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/plates/c0-plate-01-NOT-SLICED.3mf",
+      "bytes": 1927023,
+      "sha256": "3d346cda543e331753a5c6ca5704deb97912782a3999122b2eef81e253ca8669"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/plates/c0-plate-02-NOT-SLICED.3mf",
+      "bytes": 547876,
+      "sha256": "995df50b0f794be97b28da7bdde119e42c8822b5676e1c908cdb3c33816855db"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/plates/c0-plate-03-NOT-SLICED.3mf",
+      "bytes": 1237998,
+      "sha256": "75f55dbf84c70b254fd40b9f242786d3dc37324bfdf6a44cc6514c60b4fc3d69"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/plates/c0-plate-04-NOT-SLICED.3mf",
+      "bytes": 2710828,
+      "sha256": "b5f586b0e61a37fb521da62b2f54405a8db0e82edb0b6a988634ac3fcbadcdf2"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/plates/c0-plate-05-NOT-SLICED.3mf",
+      "bytes": 88364,
+      "sha256": "7d1ff9fa742d9a8e1cb92caf5e1251f4b2d9479423592ef3b7a50c20751ecf79"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/plates/c0-plate-06-NOT-SLICED.3mf",
+      "bytes": 767743,
+      "sha256": "17941efaf5dba09e35aad35b454757d42f3371486ce4ad8a5150340921ac6834"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/plates/c0-plate-07-NOT-SLICED.3mf",
+      "bytes": 146783,
+      "sha256": "7c690e5b3bfec7f7774ac102d8cb12a42bce086d2487edbc688103caa20019fd"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/plates/c1-plate-01-NOT-SLICED.3mf",
+      "bytes": 906042,
+      "sha256": "fce1db3305717ab172d9cee632883ddbf9f7cdd70b97c8f7c25c87b477687f6c"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/plates/c2-plate-01-NOT-SLICED.3mf",
+      "bytes": 374568,
+      "sha256": "3e0c107bf8bb5ae6c3bf8e215e8a1091eafcb3f4870335ddd04102039f68126e"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/plates/plates.json",
+      "bytes": 216387,
+      "sha256": "ada24d9be48a89088d7fb85fa6f8069ffa7f8f7781b42cef676a0cc204fc6995"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/scene.blend",
+      "bytes": 15560172,
+      "sha256": "2262ff84e24b3dc0d67a17fe4006d38a5e6a8441b456fd59bea46fc431b52560"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/ducky-practical8/turntable.mp4",
+      "bytes": 1190563,
+      "sha256": "b8a7e49745b0ca96b92a37d9d8b8ed82cf10cef6e2cdad8320b9bd8a89ab89c3"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/gallery.html",
+      "bytes": 7448,
+      "sha256": "e509a58b98cda0232160557b472f982af4f058d47336fd61cd803d5cbd15cff3"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-before-after.jpg",
+      "bytes": 270053,
+      "sha256": "841c53e63fdae67e9d69d0c62dfcd87b83c54e34337578a154b9b3c9f4bbccc6"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/ASSEMBLY-en.md",
+      "bytes": 2006,
+      "sha256": "9759c40e99bafde822741e0764c9827889c1b281a679226c700feddc0f6d0b74"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/ASSEMBLY-ja.md",
+      "bytes": 2163,
+      "sha256": "de4cc06cab1ade9def6da7344b1ebeac7ae82216c4650405d995fc4fca0bfa56"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/assembled.png",
+      "bytes": 1455566,
+      "sha256": "f8d4a069a1260b4265e5016428d8cd1d9c961ee39c3ed7ea856a4df75f191d7c"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/assembly-steps.csv",
+      "bytes": 49335,
+      "sha256": "de4b975616914b87ca923f423900471cf731f223810bfa7e65067f2bfca70810"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/bom-types-colors.csv",
+      "bytes": 8048,
+      "sha256": "3c30bf4ff443ca448941965e201c2601d4407021d4009f1faca073d4125e0149"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/bom.csv",
+      "bytes": 68497,
+      "sha256": "23f0b738cd53c76c0473f47b6819066e9ffc104da012c4c0c781025dbd8a2ff2"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/courses/course-01.svg",
+      "bytes": 55248,
+      "sha256": "0316b76fd200975b7af01186c7f44f5b69a62e420f297427d31ad56548858633"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/courses/course-02.svg",
+      "bytes": 53884,
+      "sha256": "5d9bf22ad488872a09dc2db363a635344f2f0662028298641d9ed916f8ad9882"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/courses/course-03.svg",
+      "bytes": 31273,
+      "sha256": "eaadef80cf8f2657709767ac4df0ece623eb59219c376aaee2d1b8765b6e8ade"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/courses/course-04.svg",
+      "bytes": 42158,
+      "sha256": "87397143df7fe8aee177f313eb07cc10d9c976c0a7453ec8d4a10484ce90f7a3"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/courses/course-05.svg",
+      "bytes": 48539,
+      "sha256": "ca1c3dbb8b44e884f7274c2d1f97402a14225a8301c2e316ad830699bdd1e3d5"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/courses/course-06.svg",
+      "bytes": 55142,
+      "sha256": "7b2d0c175571bab0cb18aefd12190060fd5f9a5fe6345bb78167d2373d5ffd1b"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/courses/course-07.svg",
+      "bytes": 59746,
+      "sha256": "cf88ae3c8c83333e92663a2b25db31ddca15e4a0931d63ed13d27d8b806f3346"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/courses/course-08.svg",
+      "bytes": 93658,
+      "sha256": "8a958e1528cb15149cf556bd333a0430d0f8bfebbf35d71e7caee0701cda8717"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/courses/course-09.svg",
+      "bytes": 61342,
+      "sha256": "f54a3926f4b3a0c638a45c241707bd2e776ca20365822a281d7bb333dcbe388b"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/courses/course-10.svg",
+      "bytes": 62383,
+      "sha256": "e8242935dde6cd765996b7e1b4fbc4e508bedd5cdbab326c5c76f55b8bbd7a83"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/courses/course-11.svg",
+      "bytes": 59549,
+      "sha256": "ab66879402beb99cae0028c249f79d963de603596eaad3e5c0aa90d9c0e65ebf"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/courses/course-12.svg",
+      "bytes": 58837,
+      "sha256": "4fcf372d960c9a31c89960a152793783c1851a0ae133e68b3a4b48279c939b06"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/courses/course-13.svg",
+      "bytes": 81577,
+      "sha256": "5eaac2497ddc86b1ed6dc34b6bd3423200896a951d96ba4d5de0982fae5201f2"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/courses/course-14.svg",
+      "bytes": 53879,
+      "sha256": "a9e16a76a75cba64049c739c8c272917d279a29468faf4248a23f0825e8c22e3"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/courses/course-15.svg",
+      "bytes": 53345,
+      "sha256": "669f69d02ecd374d24236a905b09074e69caebcd626d2757bcee0ce5b144946a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/courses/course-16.svg",
+      "bytes": 48537,
+      "sha256": "70932c20cdc8134219ada88bcb977eb532b8ca8e04308bae277d46984785e34f"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/courses/course-17.svg",
+      "bytes": 48179,
+      "sha256": "f6eaf8756886e74f8e2e99a3edb041483761decad1ee59d17799b63671393c97"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/courses/course-18.svg",
+      "bytes": 46933,
+      "sha256": "9ffb61f388c43e20062d824381ce893047cedae1051bbd6bcf5ac9c466968555"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/courses/course-19.svg",
+      "bytes": 36463,
+      "sha256": "e59a3ce6305946993f9813e1091f8b5cb2b0b1755b9ee5f7c619c5757eebc68a"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/courses/course-20.svg",
+      "bytes": 13893,
+      "sha256": "4847389bf0a708427a75cb8e19e7062fd4916be57529c869534d64498449c686"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/exploded.png",
+      "bytes": 1747903,
+      "sha256": "403770350351bfbed686558bcb9717f6121415bfa0d720ede242a86c71d8a3e4"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/manifest.json",
+      "bytes": 366454,
+      "sha256": "8b9957525e0e67b34ad93c0b38529e494008e631192a537e5d75b163db951189"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/plates/c0-plate-01-NOT-SLICED.3mf",
+      "bytes": 2187247,
+      "sha256": "3dee4e653c5786b8e5af4686224a94a76848ca6645098b1994444e847429fcbe"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/plates/c0-plate-02-NOT-SLICED.3mf",
+      "bytes": 431914,
+      "sha256": "e7c707b2af70ef1c663e7653c0e9ecab6e42327ae64f91ad7aa0b8ba1bc9a0d9"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/plates/c0-plate-03-NOT-SLICED.3mf",
+      "bytes": 1823511,
+      "sha256": "49767ca90b9e7c30f4f4264b5a30ef3166b8c96c6150567dd32ed47973271771"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/plates/c0-plate-04-NOT-SLICED.3mf",
+      "bytes": 635115,
+      "sha256": "c02f63762656c36e72ec76fc7c3be9076dd4535ab644e022ffda0dc76de6b02f"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/plates/c0-plate-05-NOT-SLICED.3mf",
+      "bytes": 1447593,
+      "sha256": "19a866908a55908ab75d4839db1fe9c2cdd6cb7246b71d3f08ffbf62971bd118"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/plates/c0-plate-06-NOT-SLICED.3mf",
+      "bytes": 642506,
+      "sha256": "91bd761dbae3902bdc0b5b45e952b2a5c62aec294a9edbbd0fbd9ea78b82f1bd"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/plates/c0-plate-07-NOT-SLICED.3mf",
+      "bytes": 347424,
+      "sha256": "9c832b2810c241ad54b0c38ae9d11baa03013e0cc2b07ff81bf957a6f484b9fc"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/plates/c1-plate-01-NOT-SLICED.3mf",
+      "bytes": 108806,
+      "sha256": "dd177e3f8b6f243282e269e64a193fa0aa6aaf0e3a039a1c1392821456a2b3d2"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/plates/c2-plate-01-NOT-SLICED.3mf",
+      "bytes": 393514,
+      "sha256": "9e0f622c9771c4e27ddcf580e3105abec6f44b67544c66ebebdc593b7272edcc"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/plates/c3-plate-01-NOT-SLICED.3mf",
+      "bytes": 1977172,
+      "sha256": "9f8347cd80fd3d2575f9be9fe34227872c900edaf7ec64f8c4df955f79364aa4"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/plates/c3-plate-02-NOT-SLICED.3mf",
+      "bytes": 46022,
+      "sha256": "1743ce4709c67e9f221ca20d0a60ceb2bc48d2dbc496664e35303a549e1f8710"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/plates/plates.json",
+      "bytes": 272238,
+      "sha256": "71242687b1f1e9a2fe4e744a8a88ede952f00dfc3e50af82cded722f72046332"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/scene.blend",
+      "bytes": 16530928,
+      "sha256": "4793d29621e1c6c75887f7c560ca616e67e18780b490e73b621a2d66ba04b00b"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/mona-practical8/turntable.mp4",
+      "bytes": 1535200,
+      "sha256": "07241ae5dc9b812433d215c97dfae292e4f8d10bf50cc901e2ec5eed9935c885"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/open-underside-sections.png",
+      "bytes": 84822,
+      "sha256": "9382deb8f9f7983d44c1f7b2c5954c7542a47160b148994b6f4e7911a67aff40"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/r3-8mm-all-parts-NOT-SLICED.zip",
+      "bytes": 96116100,
+      "sha256": "c8e8d47c3ff51171574e7344a63071ec3276f8288600594250efd8fad0fad269"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/r3-8mm-nine-brick-trial-NOT-SLICED.zip",
+      "bytes": 4257474,
+      "sha256": "095547b1202b1fe672bfd7b9f0a88aba155ca7576fb76dfb78efdede85bd506d"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/size-comparison.png",
+      "bytes": 94898,
+      "sha256": "7d5747876d4d1b59897de38796687c3547c5eeb09263a0ade598077bd9840a34"
+    },
+    {
+      "path": "artifacts/revisions/r3-8mm-20260920/source-provenance.json",
+      "bytes": 2136,
+      "sha256": "142a54e660e09b6fd0acea44400383c4882d0c70b97d514662eb1dbd3ba5b2a2"
+    }
+  ]
+}

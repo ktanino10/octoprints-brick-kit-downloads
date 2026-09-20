@@ -52,8 +52,8 @@ ZIPの中身を変更するときは新しい版・Releaseを使用し、既存�
 
 ## 日英ページの保守
 
-`site/templates/` が9ページの共通HTML、`site/routes.json` が既存URLと `/ja/`・`/en/` の対応です。
-ルートの既存日本語ページを含む27個の薄いHTMLを生成し、画像・動画・CAD・モデルJSONは共有します。
+`site/templates/` が10ページの共通HTML、`site/routes.json` が既存URLと `/ja/`・`/en/` の対応です。
+ルートの既存日本語ページを含む30個の薄いHTMLを生成し、画像・動画・CAD・モデルJSONは共有します。
 生成されたHTMLや `assets/translations.js` を直接編集せず、テンプレートと `site/i18n/*.en.json` を更新してください。
 
 日本語の原文をメッセージIDとするカタログです。動的テキストはASTから抽出し、`{0}` 等の変数を
@@ -107,3 +107,16 @@ part IDs、3.2 mm単位の底面Z、brick/plateの可変高さ、公称の接触
 `--expected-commit` はpublic側の配信commit、`--before` は今回の反映前のpublic mainです。
 制作担当のprivate source commitと取り違えないでください。これは認証不要な公開結果の検査であり、
 ネットワークへソースや資格情報を送る処理ではありません。
+
+## 形状と部品数の比較
+
+`shape-options.html` は現行版を置き換えない独立した比較面です。
+`archive/shape-study.json` の `INPUT_WAIT` は実画像・実数量なしを意味し、推定値を埋めません。
+READY後だけ、sourceの明示allowlist・固定commit・実manifest/BOM/native geometryのhashを持つ
+軽量summaryを配信します。native CADや大きいBlender/meshはこの比較には追加しません。
+同じcharacter/viewのcamera/scale/palette条件IDを一致させ、9行すべての画像identityと実数量を検査します。
+
+`site/shape-study-baseline.json` とテストが、採用済みr3の585成果物・current registry・Release/出典記録を
+固定します。比較の増減は実instance数の差分で、型数・STL数とは区別します。
+最小短辺・長辺・厚みが別部品に由来する場合に、架空の最小XYZ部品を表示しないよう各最小値と明記します。
+`validate_shape_study.py` が画像の実hashと軽量payload予算、current r3不変を確認します。

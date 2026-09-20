@@ -163,6 +163,8 @@ def classify(name):
         revision = Path(name).parts[2]
         group = "common-trial" if {"trial", "trials"} & set(Path(name).parts[3:]) else "common"
         return group, revision
+    if name.startswith("artifacts/studies/"):
+        return "study", Path(name).parts[2]
     if name.startswith("assets/thumbs/revisions/"):
         return "common", Path(name).parts[3]
     if Path(name).name.startswith("COMMON-BLOCKS"):
@@ -193,7 +195,8 @@ def make_inventory():
     names = all_files("artifacts") + all_files("design") + all_files("feedback") + all_files("assets")
     names += all_files("viewer/assets") + ["viewer/index.html"]
     names += all_files("ja") + all_files("en") + all_files("docs")
-    names += ["README.en.md", "ATTRIBUTION.en.md", "models.html", "assembly.html", "archive/revisions.json"]
+    names += ["README.en.md", "ATTRIBUTION.en.md", "models.html", "assembly.html", "shape-options.html",
+              "archive/revisions.json", "archive/shape-study.json"]
     names += all_files("archive/releases") + all_files("archive/sources") + all_files("archive/portability")
     names += ["p4-trial-11-parts.3mf", "p4-trial-11-parts.stl", "index.html", "downloads.html",
               "feedback.html", "history.html", "LICENSE", "ATTRIBUTION.md", "README.md",
@@ -209,7 +212,8 @@ def make_inventory():
         entry = {"path": name, "group": group, "revision": revision,
                  "format": path.suffix.lstrip(".").upper() or "TEXT",
                  "bytes": len(data), "sha256": digest(data), "url": PAGE + name,
-                 "status": "PROTOTYPE_NOT_SLICED" if group in {"selected", "trial", "phase1"} else "ARCHIVE_RECORD"}
+                 "status": "UNSELECTED_DIGITAL_STUDY" if group == "study"
+                 else "PROTOTYPE_NOT_SLICED" if group in {"selected", "trial", "phase1"} else "ARCHIVE_RECORD"}
         if name in source:
             entry["source_sha256"] = source[name]["sha256"]
             entry["source_bytes"] = source[name]["bytes"]
