@@ -32,6 +32,7 @@ jobs:
           node --check assets/site.js
           node --check assets/downloads.js
           node --check assets/i18n.js
+          node --check assets/assembly.js
       - name: Build both languages from shared templates
         run: |
           node viewer/scripts/extract-i18n.mjs

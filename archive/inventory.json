@@ -67,8 +67,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "MD",
-      "bytes": 12838,
-      "sha256": "318c7323d717142fcd70e0e6af7063e8714a3f1d01fac5c53d2df0c61fc91a03",
+      "bytes": 13096,
+      "sha256": "354d9f46dc7000c2e87c7192c3e1b8ac66d4dceb1122407adcd88fb2a49e2a98",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/README.en.md",
       "status": "ARCHIVE_RECORD"
     },
@@ -77,8 +77,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "MD",
-      "bytes": 12921,
-      "sha256": "f0b1a7ad98e1c90c89ba14e29cdf01b926458b86ef6c25028224d5e89535d541",
+      "bytes": 13192,
+      "sha256": "38d477d933e99bd2a78f17a66424015f755c4fa726fe7f8904cab400ae82b091",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/README.md",
       "status": "ARCHIVE_RECORD"
     },
@@ -9737,6 +9737,26 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "assembly.html",
+      "group": "site",
+      "revision": "public-archive-2026-09-19",
+      "format": "HTML",
+      "bytes": 7251,
+      "sha256": "ef6cdcebe9815b363e989f8eb891814a9d065c8174a0e8deeb0095335823b5d5",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assembly.html",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
+      "path": "assets/assembly.js",
+      "group": "site",
+      "revision": "public-archive-2026-09-19",
+      "format": "JS",
+      "bytes": 8251,
+      "sha256": "73ebddd9f823a73dba308adc1f521151072ac42d22e5235686cab2adacc82b62",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/assembly.js",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
       "path": "assets/common-blocks.js",
       "group": "site",
       "revision": "public-archive-2026-09-19",
@@ -9801,8 +9821,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "CSS",
-      "bytes": 19144,
-      "sha256": "72e48b08c7c4acc2cfad434708c8a423103fc2d68c7a7555b9e602a195505745",
+      "bytes": 19504,
+      "sha256": "d20083642286c6a2f30067472543087db64821a64ec002c1ffb6dbeed66ed29c",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/site.css",
       "status": "ARCHIVE_RECORD"
     },
@@ -9965,8 +9985,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "JS",
-      "bytes": 260092,
-      "sha256": "7ed011ad9af02e066c4ff7a259385797be12983b0b5e99ec326625444e0e97d5",
+      "bytes": 270205,
+      "sha256": "2725af2c6ac378f5c364d67422b848168e9dddc126697a13510e1d28f113506e",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/translations.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -10054,9 +10074,19 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "HTML",
-      "bytes": 9610,
-      "sha256": "f3de2557899eff6f6e2f165c5f77413bfaf6c079a4e71358f26fead3d3a29db2",
+      "bytes": 9706,
+      "sha256": "1ec8d78df3914bd857b0b4998ee9b5c0a93cf7331898bd6fa7abe1eb1fc6233d",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/downloads.html",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
+      "path": "en/assembly.html",
+      "group": "site",
+      "revision": "public-archive-2026-09-19",
+      "format": "HTML",
+      "bytes": 7020,
+      "sha256": "993020ca30b92ad09506f4a4b9c70f36b9d8040ccc6b12b75dc39dfab1e7c865",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/en/assembly.html",
       "status": "ARCHIVE_RECORD"
     },
     {
@@ -10064,8 +10094,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "HTML",
-      "bytes": 9390,
-      "sha256": "402998d9cd758e0831f612f3be31071801155edfc7605281d0bff474be747f1a",
+      "bytes": 9486,
+      "sha256": "7d4ebfc5a09345edc5435ff5bba800a9ea77303d158a90dece6b5275ff16049e",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/en/downloads.html",
       "status": "ARCHIVE_RECORD"
     },
@@ -10114,8 +10144,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "HTML",
-      "bytes": 17084,
-      "sha256": "5636edc541791bb0743ced7020ffa63b5d9c386faa71fea43c6843012f97f2f1",
+      "bytes": 17171,
+      "sha256": "a6e40a0612d5aadf03be780912877ad462481f06c53279be21103ede9f6fce8b",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/en/index.html",
       "status": "ARCHIVE_RECORD"
     },
@@ -10124,8 +10154,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "HTML",
-      "bytes": 6125,
-      "sha256": "4eedf05119cf038179f8f6ee4151d9fcc53b476349bb11d05d8499810529603f",
+      "bytes": 6244,
+      "sha256": "2ea88133931759856d2f1b1395c0a8be47e5834b12a061cb5dfef08da1252ea6",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/en/models.html",
       "status": "ARCHIVE_RECORD"
     },
@@ -10324,9 +10354,19 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "HTML",
-      "bytes": 17227,
-      "sha256": "7158735ec42a847abb4524176a0307102cfda252ea30be37ce0da681a52c7d27",
+      "bytes": 17318,
+      "sha256": "9017695fd451b790b8849ac7f5c95315a261f75509670a7e60212a813afa0d97",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/index.html",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
+      "path": "ja/assembly.html",
+      "group": "site",
+      "revision": "public-archive-2026-09-19",
+      "format": "HTML",
+      "bytes": 7249,
+      "sha256": "64ef92791e0ce14e72abd392ee4306ed58d0e65e319d04cc2ce9b8eebbed07e5",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/assembly.html",
       "status": "ARCHIVE_RECORD"
     },
     {
@@ -10334,8 +10374,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "HTML",
-      "bytes": 9623,
-      "sha256": "9f17add7a9017c5d4b8c023bba539fe7f434660f5406882f50af535f398b810e",
+      "bytes": 9716,
+      "sha256": "0bf20f607e31c3e89059cfe7c366152120ee9b83727b81f24690353b6fdb57b0",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/downloads.html",
       "status": "ARCHIVE_RECORD"
     },
@@ -10384,8 +10424,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "HTML",
-      "bytes": 17201,
-      "sha256": "1777b3639b2b5a4c2378f07ee4e72e78b33acf5ff1632d2223dd043265c87894",
+      "bytes": 17292,
+      "sha256": "4471a48531e66c8c4f6ebbb562504050394a8769d5c3fce4f858337417b3c8d3",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/index.html",
       "status": "ARCHIVE_RECORD"
     },
@@ -10394,8 +10434,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "HTML",
-      "bytes": 6130,
-      "sha256": "cbb84cf26b00936d17a6b0b1aaf67e2600d3bcea40828ae662708635482b72df",
+      "bytes": 6246,
+      "sha256": "7d15012718ede3c806db0a1145805575c82ef51ee64bc94c751c7227c0f52a77",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/models.html",
       "status": "ARCHIVE_RECORD"
     },
@@ -10414,8 +10454,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "HTML",
-      "bytes": 6147,
-      "sha256": "cc0a2e77809a51564f1a2a185c3e456e57b7bdc7c22be5b833d2ecd495596933",
+      "bytes": 6266,
+      "sha256": "588b5650b1ef4dd6d11fb06b7adac4cbd3a63303eaff443c5990aa341536ea8b",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/models.html",
       "status": "ARCHIVE_RECORD"
     },
@@ -10474,8 +10514,8 @@
       "group": "viewer",
       "revision": "public-viewer-2026-09-19",
       "format": "JS",
-      "bytes": 1068235,
-      "sha256": "e1bd37b8dc36fb44d299591e6319ea1844873ba2a7253ea6d8e7694a7b429078",
+      "bytes": 1084537,
+      "sha256": "d48a6d449025e540e22272b32b7294cab28f78556203f976f519b00f0983bfc8",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/viewer/assets/studio.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -10491,10 +10531,10 @@
     }
   ],
   "totals": {
-    "files": 821,
-    "bytes": 307969398,
+    "files": 825,
+    "bytes": 308027381,
     "groups": {
-      "site": 35,
+      "site": 39,
       "design": 12,
       "phase1": 149,
       "selected": 544,

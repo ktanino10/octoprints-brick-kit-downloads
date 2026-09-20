@@ -11,6 +11,12 @@ PREFIX = "/octoprints-brick-kit-downloads/"
 
 
 class Handler(SimpleHTTPRequestHandler):
+    protocol_version = "HTTP/1.1"
+
+    def setup(self):
+        super().setup()
+        self.connection.settimeout(60)
+
     def handle(self):
         try:
             super().handle()
@@ -72,10 +78,14 @@ class Handler(SimpleHTTPRequestHandler):
             super().log_message(format, *args)
 
 
+class PreviewServer(ThreadingHTTPServer):
+    request_queue_size = 128
+
+
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--port", type=int, default=8859)
 args = parser.parse_args()
-server = ThreadingHTTPServer(("127.0.0.1", args.port), Handler)
+server = PreviewServer(("127.0.0.1", args.port), Handler)
 server.client_disconnects = 0
 print(f"Preview ready on 127.0.0.1:{args.port}{PREFIX}", flush=True)
 try:

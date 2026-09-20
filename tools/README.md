@@ -52,8 +52,8 @@ ZIPの中身を変更するときは新しい版・Releaseを使用し、既存�
 
 ## 日英ページの保守
 
-`site/templates/` が8ページの共通HTML、`site/routes.json` が既存URLと `/ja/`・`/en/` の対応です。
-ルートの既存日本語ページを含む24個の薄いHTMLを生成し、画像・動画・CAD・モデルJSONは共有します。
+`site/templates/` が9ページの共通HTML、`site/routes.json` が既存URLと `/ja/`・`/en/` の対応です。
+ルートの既存日本語ページを含む27個の薄いHTMLを生成し、画像・動画・CAD・モデルJSONは共有します。
 生成されたHTMLや `assets/translations.js` を直接編集せず、テンプレートと `site/i18n/*.en.json` を更新してください。
 
 日本語の原文をメッセージIDとするカタログです。動的テキストはASTから抽出し、`{0}` 等の変数を

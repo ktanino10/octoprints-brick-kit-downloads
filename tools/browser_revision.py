@@ -69,7 +69,7 @@ with sync_playwright() as playwright:
             assert upcoming["availability"] == "AVAILABLE"
             assert upcoming["id"] == registry["current_revision"]
         for locale in ["ja", "en"]:
-            for route in ["", "models.html", "downloads.html", "history.html", "feedback.html",
+            for route in ["", "models.html", "assembly.html", "downloads.html", "history.html", "feedback.html",
                           "gallery/phase1.html", "gallery/selected.html"]:
                 response = page.goto(urljoin(base, locale + "/" + route), wait_until="networkidle", timeout=90000)
                 assert response.status == 200
@@ -101,6 +101,13 @@ with sync_playwright() as playwright:
                     expect(page.locator("#file-list .path")).to_have_count(9)
                     for name in page.locator("#file-list .path").all_text_contents():
                         assert name.startswith("artifacts/phase1/")
+                if route == "assembly.html":
+                    if args.expect_input_wait:
+                        expect(page.locator("#assembly-error")).to_be_visible()
+                        expect(page.locator("#assembly-parts tr")).to_have_count(0)
+                    else:
+                        expect(page.locator("#assembly-error")).to_be_hidden()
+                        expect(page.locator("#assembly-overview")).to_be_visible()
                 if route == "feedback.html":
                     expect(page.locator("#photo-grid figure")).to_have_count(10)
                     assert page.locator('a[href="https://youtu.be/rHhXFxvFU-E"]').count() == 1
@@ -169,6 +176,21 @@ with sync_playwright() as playwright:
                 page.locator("#studio").scroll_into_view_if_needed()
                 page.screenshot(path=str(args.output / f"current-{identifier}.png"))
                 checked(f"current {identifier}: actual geometry, mesh pick, orbit, Z/layer/step, ID/BOM, language/reload and video")
+                page.goto(urljoin(base, f"en/assembly.html?revision={upcoming['id']}&candidate={identifier}"),
+                          wait_until="networkidle", timeout=90000)
+                expect(page.locator("#assembly-error")).to_be_hidden()
+                expect(page.locator("#assembly-counts")).to_contain_text(f"{total:,}")
+                page.locator("#assembly-search").fill(picked)
+                expect(page.locator("#assembly-parts tr[data-part-id]")).to_have_count(1)
+                expect(page.locator("#assembly-parts tr")).to_have_attribute("data-part-id", picked)
+                page.locator('[data-language="ja"]').click()
+                page.locator('[data-language="en"]').click()
+                page.reload(wait_until="networkidle")
+                expect(page.locator("#assembly-candidate")).to_have_value(identifier)
+                expect(page.locator("#assembly-search")).to_have_value(picked)
+                expect(page.locator("#assembly-parts tr")).to_have_attribute("data-part-id", picked)
+                localized(page, "en")
+                checked(f"current {identifier}: bilingual assembly guide reads identical actual part IDs and preserves filters")
         if args.expect_input_wait:
             assert not any("/artifacts/revisions/" in url for url in requested), requested
             page.goto(urljoin(base, f"en/viewer/?revision={upcoming['id']}"), wait_until="networkidle", timeout=90000)
@@ -212,7 +234,7 @@ with sync_playwright() as playwright:
         mobile = browser.new_context(viewport={"width": 390, "height": 844}, is_mobile=True, has_touch=True,
                                      locale="ja-JP", reduced_motion="reduce")
         phone = mobile.new_page()
-        for route in ["", "models.html", "downloads.html", "history.html", "feedback.html"]:
+        for route in ["", "models.html", "assembly.html", "downloads.html", "history.html", "feedback.html"]:
             phone.goto(urljoin(base, "en/" + route), wait_until="networkidle", timeout=90000)
             localized(phone, "en")
             no_overflow(phone)

@@ -10,6 +10,10 @@ dialog{border:0;border-radius:10px;padding:24px;width:min(850px,calc(100% - 24px
 .revision-filters{grid-template-columns:1.4fr 1fr 1fr 1fr}
 .dimension-table th,.dimension-table td{padding:16px;text-align:left;border-bottom:1px solid var(--line)}
 .dimension-table thead{background:#e8edf5}
+.assembly-table{width:100%;border-collapse:collapse;background:white;font-size:12px;min-width:620px}
+.assembly-table th,.assembly-table td{padding:14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.assembly-table thead{background:#e8edf5}
+.assembly-table small{display:block;color:var(--muted);font-size:10px;overflow-wrap:anywhere}
 #current-specimens>.loading{grid-column:1/-1;align-self:center}
 #current-error{grid-column:1/-1}
 .revision-wait{grid-column:1/-1;background:#e9eef7;padding:30px;border-radius:8px;align-self:center}

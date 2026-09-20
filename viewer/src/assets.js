@@ -189,6 +189,11 @@ export async function renderDownloads(catalog, candidate, signal, context = { ki
   $('video', videoHost)?.pause();
   videoHost.replaceChildren();
   host.replaceChildren();
+  if (context.kind === 'common') {
+    const guide = element('a', 'button secondary compact', '日英の組立候補ガイド →');
+    guide.href = publicURL(`/assembly.html?revision=${encodeURIComponent(catalog.revision)}&candidate=${encodeURIComponent(candidate.id)}`);
+    host.append(guide);
+  }
   let entries;
   try {
     entries = downloadEntries(catalog, candidate, { baselineOnly: context.kind === 'baseline' });

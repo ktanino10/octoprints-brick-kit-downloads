@@ -9,6 +9,9 @@
 **[Design history](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/history.html)** ·
 **[Current models and publication status](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/models.html)**
 
+The [revised proposed-sequence guide](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/assembly.html)
+reads IDs, types, colors, base positions, rotations and steps from the same revision's actual manifest. It is not physical assembly approval.
+
 [Public repository](https://github.com/ktanino10/octoprints-brick-kit-downloads) ·
 [日本語サイト](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/).
 The legacy root URLs remain available:

@@ -9,6 +9,9 @@
 **[設計の経緯](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/history.html)** ·
 **[現行3体・公開状況](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/models.html)**
 
+[新版の組立候補ガイド](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/assembly.html) は、
+同じ版の実マニフェストからID・型・色・底面位置・回転・順序を表示します。実物組立の承認ではありません。
+
 [公開リポジトリ](https://github.com/ktanino10/octoprints-brick-kit-downloads) ·
 [English site](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/)。
 従来のルートURL（[トップ](https://ktanino10.github.io/octoprints-brick-kit-downloads/)・
