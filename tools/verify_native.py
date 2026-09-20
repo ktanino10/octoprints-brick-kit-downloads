@@ -1,6 +1,7 @@
 """Reopen extracted, portable FreeCAD documents without recomputing or saving."""
 
 import argparse
+import hashlib
 import json
 from pathlib import Path
 
@@ -11,8 +12,18 @@ parser.add_argument("--root", type=Path, required=True)
 parser.add_argument("--output", type=Path, required=True)
 args = parser.parse_args()
 root = args.root.resolve()
+workspace = Path(__file__).resolve().parents[1]
+if not root.is_relative_to(workspace / ".archive-work") or root == workspace / ".archive-work":
+    raise ValueError("Native reopening must use an extracted bundle in owned staging")
+if any(path.is_symlink() for path in root.rglob("*")):
+    raise ValueError("Native staging contains symlinks")
+if not args.output.resolve().is_relative_to(workspace / ".archive-work"):
+    raise ValueError("Native verification reports must stay in owned staging")
 records = []
-for path in sorted(root.rglob("*.FCStd")):
+files = sorted(root.rglob("*.FCStd"))
+if not files:
+    raise ValueError("No native documents were found in the staged revision")
+for path in files:
     before = path.read_bytes()
     doc = FreeCAD.openDocument(str(path))
     links = [obj for obj in doc.Objects if obj.TypeId == "App::Link"]
@@ -35,6 +46,7 @@ for path in sorted(root.rglob("*.FCStd")):
         "native_links_resolved": resolved,
         "link_instances": instances,
         "proxy_free": True, "opened": True, "recomputed": False, "saved": False,
+        "sha256": hashlib.sha256(before).hexdigest(),
     }
     records.append(record)
     print("REOPEN", record, flush=True)

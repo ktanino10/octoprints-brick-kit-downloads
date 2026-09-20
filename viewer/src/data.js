@@ -7,6 +7,7 @@ export const STYLES = Object.freeze({
   chunky: { name: 'ざっくり', english: 'Chunky' },
   balanced: { name: 'バランス', english: 'Balanced' },
   fine: { name: 'こまかく', english: 'Fine' },
+  practical8: { name: '8 mm共通ブロック', english: 'Common blocks' },
 });
 export const SELECTED_STAGE = 'SELECTED_PROTOTYPE';
 export const SELECTION_URL = '/design/selected-designs.json';
@@ -28,23 +29,6 @@ const VISUAL_BASELINE_SCOPES = new Set([
   'Visual baseline only: character, source palette, approximately 180 mm scale and chosen grid feel',
 ]);
 
-export class DataError extends Error {
-  constructor(message) {
-    super(message);
-    this.name = 'DataError';
-  }
-}
-
-const requireThat = (condition, message) => {
-  if (!condition) throw new DataError(message);
-};
-const record = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
-const finite = (value) => typeof value === 'number' && Number.isFinite(value);
-const nonnegativeInteger = (value) => Number.isSafeInteger(value) && value >= 0;
-const positive = (value) => finite(value) && value > 0;
-const vector = (value, size) => Array.isArray(value) && value.length === size && value.every(finite);
-const text = (value) => typeof value === 'string' && value.length > 0;
-const owns = (value, key) => Object.hasOwn(value, key);
 const partIdCollator = new Intl.Collator('en', { numeric: true });
 
 export function artifactPath(value) {
@@ -64,43 +48,6 @@ export function revisionPath(value, revision) {
   return path;
 }
 
-export function validateFootprint(type, label, required = false) {
-  if (!required && type.footprint_cells === undefined) return;
-  requireThat(Array.isArray(type.footprint_cells) && type.footprint_cells.length > 0, `${label} の占有セル定義がありません。`);
-  const occupied = new Set();
-  for (const cell of type.footprint_cells) {
-    requireThat(Array.isArray(cell) && cell.length === 2
-      && cell.every(nonnegativeInteger) && cell[0] < type.cells[0] && cell[1] < type.cells[1], `${label} の占有セルが外接範囲外です。`);
-    const key = cell.join(',');
-    requireThat(!occupied.has(key), `${label} の占有セルが重複しています。`);
-    occupied.add(key);
-  }
-  const pending = [type.footprint_cells[0]];
-  const visited = new Set([pending[0].join(',')]);
-  for (let cursor = 0; cursor < pending.length; cursor += 1) {
-    const [x, y] = pending[cursor];
-    for (const next of [[x - 1, y], [x + 1, y], [x, y - 1], [x, y + 1]]) {
-      const key = next.join(',');
-      if (occupied.has(key) && !visited.has(key)) { visited.add(key); pending.push(next); }
-    }
-  }
-  requireThat(visited.size === occupied.size, `${label} の占有セルが連結していません。`);
-}
-
-export function validateMetrics(metrics, name = 'モデル') {
-  requireThat(record(metrics), `${name}の指標がありません。`);
-  for (const key of ['part_count', 'unique_types', 'color_count', 'layer_count']) {
-    requireThat(nonnegativeInteger(metrics[key]) && metrics[key] > 0, `${name}の ${key} が不正です。`);
-  }
-  for (const key of ['height_mm', 'width_mm', 'depth_mm']) {
-    requireThat(positive(metrics[key]), `${name}の ${key} が不正です。`);
-  }
-  requireThat(vector(metrics.approx_build_hours, 2)
-    && metrics.approx_build_hours[0] >= 0
-    && metrics.approx_build_hours[1] >= metrics.approx_build_hours[0], `${name}の組立目安が不正です。`);
-  return metrics;
-}
-
 function validateWarnings(warnings) {
   requireThat(warnings === undefined || (Array.isArray(warnings) && warnings.every(text)), '注意事項の形式が不正です。');
 }
@@ -113,6 +60,7 @@ function validateStatus(status, visualSelection = 'PENDING') {
 }
 
 export function validateCatalog(catalog) {
+  if (catalog?.schema_version === 3) return validateCommonCatalog(catalog);
   requireThat(record(catalog) && catalog.schema_version === 1, 'カタログの形式に対応していません（schema_version: 1 が必要です）。');
   const selected = catalog.stage === SELECTED_STAGE;
   const pathFor = selected ? (value) => revisionPath(value, catalog.revision) : artifactPath;
@@ -128,7 +76,7 @@ export function validateCatalog(catalog) {
   for (const candidate of catalog.candidates) {
     requireThat(record(candidate) && text(candidate.id), '案のIDがありません。');
     requireThat(!ids.has(candidate.id), `案のIDが重複しています: ${candidate.id}`);
-    requireThat(owns(CHARACTERS, candidate.character) && owns(STYLES, candidate.style), '未対応のキャラクターまたは解像度です。');
+    requireThat(owns(CHARACTERS, candidate.character) && ['chunky', 'balanced', 'fine'].includes(candidate.style), '未対応のキャラクターまたは解像度です。');
     const combination = `${candidate.character}/${candidate.style}`;
     requireThat(!combinations.has(combination), `キャラクターと解像度が重複しています: ${combination}`);
     requireThat(text(candidate.label) && positive(candidate.pitch_mm) && positive(candidate.layer_mm), `${candidate.id} の表示情報が不正です。`);
@@ -151,6 +99,7 @@ export function validateCatalog(catalog) {
 }
 
 export function validateManifest(manifest, candidateId) {
+  if (manifest?.schema_version === 3) return validateCommonManifest(manifest, candidateId);
   requireThat(record(manifest) && [1, 2].includes(manifest.schema_version) && manifest.units === 'mm', '配置データの形式または単位が未対応です。mm / schema_version: 1 または 2 が必要です。');
   const selected = manifest.schema_version === 2;
   requireThat(manifest.candidate_id === candidateId, '選択した案と配置データのIDが一致しません。');
@@ -290,6 +239,7 @@ export function validateManifest(manifest, candidateId) {
 }
 
 export function validatePrototypes(prototypes) {
+  if (prototypes?.schema_version === 3) return validateCommonPrototypes(prototypes);
   requireThat(record(prototypes) && [1, 2].includes(prototypes.schema_version)
     && prototypes.units === 'mm' && ['body-bottom-center', 'body-bottom-bbox-center', 'body-bottom-BBOX-center'].includes(prototypes.origin)
     && record(prototypes.types), '部品形状の形式が不正です（mm・本体底面中心原点が必要です）。');
@@ -314,6 +264,7 @@ export function validatePrototypes(prototypes) {
 }
 
 export function validateGeometryMatch(manifest, prototypes) {
+  if (manifest.schema_version === 3) return validateCommonMatch(manifest, prototypes);
   for (const typeId of new Set(manifest.parts.map((part) => part.type_id))) {
     const source = manifest.types[typeId];
     const prototype = prototypes.types[typeId];
@@ -345,7 +296,8 @@ export function makeIndex(manifest) {
     types.set(part.type_id, (types.get(part.type_id) ?? 0) + 1);
   }
   const sortedParts = [...manifest.parts].sort((a, b) => partIdCollator.compare(a.id, b.id));
-  return { partsById, groups, colors, types, layers, steps, sortedParts };
+  return { partsById, groups, colors, types, layers, steps, sortedParts,
+    verticalGridMm: manifest.schema_version === 3 ? 3.2 : null };
 }
 
 export function isPartVisible(part, index, layerProgress, stepProgress) {
@@ -387,6 +339,23 @@ export function parseEvidenceStatus(value, revision = null) {
 }
 
 export function downloadEntries(catalog, candidate, { baselineOnly = false } = {}) {
+  if (catalog.schema_version === 3) {
+    const entries = [
+      ['配置マニフェスト', 'JSON', candidate.manifest_url],
+      ['部品表', 'CSV', candidate.bom_url],
+      ['集計部品表', 'CSV', candidate.summary_bom_url],
+      ['組立候補の記録', 'CSV', candidate.assembly_steps_url],
+      ['この案のネイティブ組立CAD', 'FCSTD', candidate.native_assembly_url],
+      ['組立ガイド・未検証の順序候補', 'MD', candidate.assembly_guide_url],
+      ['完成形の実生成画像', 'PNG', candidate.render_url],
+      ['同じ版の実生成分解画像', 'PNG', candidate.exploded_url],
+      ['Blenderシーン', 'BLEND', candidate.blend_url],
+      ['360°ターンテーブル', 'MP4', candidate.video_url],
+    ];
+    return entries.filter(([, , url]) => Boolean(url)).map(([label, extension, url]) => ({
+      label, extension, url: commonFile(url, catalog.revision),
+    }));
+  }
   const entries = [
     ['配置マニフェスト', 'JSON', candidate.manifest_url],
     ['部品表', 'CSV', candidate.bom_url],
@@ -480,3 +449,9 @@ export function assemblySetup(manifest) {
     retentionRequiredBeforeRemoval: aids.some((aid) => aid.removal_gate === 'DO_NOT_REMOVE_UNTIL_PHYSICAL_RETENTION_CONFIRMED'),
   };
 }
+import {
+  DataError, requireThat, record, finite, nonnegativeInteger, positive, vector, text, owns,
+  validateFootprint, validateMetrics,
+} from '../../assets/data-contracts.js';
+import { commonFile, validateCommonCatalog, validateCommonManifest, validateCommonPrototypes, validateCommonMatch } from '../../assets/common-blocks.js';
+export { DataError, validateFootprint, validateMetrics } from '../../assets/data-contracts.js';

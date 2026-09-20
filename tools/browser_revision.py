@@ -83,6 +83,14 @@ with sync_playwright() as playwright:
                         expect(page.locator("#selected-videos video")).to_have_count(0)
                     else:
                         expect(page.locator("#current-specimens article")).to_have_count(3)
+                        for image in page.locator("#current-specimens img").all():
+                            image.scroll_into_view_if_needed()
+                            expect(image).not_to_have_js_property("naturalWidth", 0)
+                        if route == "models.html":
+                            expect(page.locator("#current-exploded img")).to_have_count(3)
+                            for image in page.locator("#current-exploded img").all():
+                                image.scroll_into_view_if_needed()
+                                expect(image).not_to_have_js_property("naturalWidth", 0)
                 if route == "downloads.html":
                     expect(page.locator("#download-error")).to_be_hidden()
                     expect(page.locator("#historical-bundles .bundle")).to_have_count(4)
@@ -99,6 +107,68 @@ with sync_playwright() as playwright:
                 if not route:
                     page.screenshot(path=str(args.output / f"home-{locale}.png"), full_page=True)
             checked(f"{locale}: current/INPUT_WAIT distinction, history, download isolation and feedback")
+        if not args.expect_input_wait:
+            catalog = context.request.get(urljoin(base, upcoming["catalog_url"].lstrip("/"))).json()
+            for candidate in catalog["candidates"]:
+                identifier = candidate["id"]
+                total = candidate["metrics"]["part_count"]
+                page.goto(urljoin(base, f"en/viewer/?revision={upcoming['id']}&candidate={identifier}"),
+                          wait_until="networkidle", timeout=90000)
+                expect(page.locator("#canvas-host")).to_have_attribute("data-model-ready", "true", timeout=90000)
+                expect(page.locator("#canvas-host")).to_have_attribute("data-candidate", identifier)
+                expect(page.locator("#canvas-host")).to_have_attribute("data-visible-parts", str(total))
+                expect(page.locator("#freshness")).to_have_attribute("data-revision", upcoming["id"])
+                expect(page.locator("#freshness")).to_have_attribute("data-physical-trial", "NOT_TESTED")
+                expect(page.locator("#production-gate")).to_contain_text("Do not print")
+                canvas = page.locator("#canvas-host canvas")
+                canvas.scroll_into_view_if_needed()
+                box = canvas.bounding_box()
+                for x, y in [(0.5, 0.5), (0.45, 0.45), (0.55, 0.6), (0.5, 0.35)]:
+                    canvas.click(position={"x": box["width"] * x, "y": box["height"] * y})
+                    if page.locator("#clear-selection").is_visible():
+                        break
+                expect(page.locator("#clear-selection")).to_be_visible()
+                picked = page.locator("#part-details .part-id").inner_text()
+                page.locator("#part-search").fill(picked)
+                expect(page.locator("#part-list [data-part-id]")).to_have_count(1)
+                for mode in ["colors", "types", "combined"]:
+                    page.locator(f'[data-bom="{mode}"]').click()
+                    expect(page.locator("#bom-table tfoot")).to_contain_text(f"{total:,}")
+                canvas.press("ArrowRight")
+                page.locator("#explode").focus()
+                page.locator("#explode").press("End")
+                expect(page.locator("#canvas-host")).to_have_attribute("data-explosion", "1")
+                page.locator("#layers").focus()
+                page.locator("#layers").press("Home")
+                expect(page.locator("#canvas-host")).to_have_attribute("data-visible-parts", "0")
+                page.locator("#show-complete").click()
+                page.locator("#steps").focus()
+                page.locator("#steps").press("Home")
+                page.locator("#next-step").click()
+                expect(page.locator("#canvas-host")).to_have_attribute("data-visible-parts", "1")
+                page.locator('[data-language="ja"]').click()
+                expect(page.locator("#part-details .part-id")).to_have_text(picked)
+                page.locator('[data-language="en"]').click()
+                page.reload(wait_until="networkidle", timeout=90000)
+                expect(page.locator("#canvas-host")).to_have_attribute("data-model-ready", "true", timeout=90000)
+                expect(page.locator("#part-details .part-id")).to_have_text(picked)
+                expect(page.locator("#canvas-host")).to_have_attribute("data-visible-parts", "1")
+                page.locator("#show-complete").click()
+                page.locator("#part-search").fill("")
+                page.locator("#clear-selection").click()
+                page.locator("#video-preview summary").click()
+                video = page.locator("#video-preview video")
+                expect(video.locator("source")).to_have_count(1)
+                expect(video).not_to_have_js_property("readyState", 0, timeout=30000)
+                video.evaluate("(video) => { video.muted = true; return video.play(); }")
+                page.wait_for_timeout(250)
+                assert video.evaluate("(video) => video.currentTime > 0 && video.videoWidth > 0")
+                video.evaluate("(video) => video.pause()")
+                localized(page, "en")
+                page.locator("#video-preview summary").click()
+                page.locator("#studio").scroll_into_view_if_needed()
+                page.screenshot(path=str(args.output / f"current-{identifier}.png"))
+                checked(f"current {identifier}: actual geometry, mesh pick, orbit, Z/layer/step, ID/BOM, language/reload and video")
         if args.expect_input_wait:
             assert not any("/artifacts/revisions/" in url for url in requested), requested
             page.goto(urljoin(base, f"en/viewer/?revision={upcoming['id']}"), wait_until="networkidle", timeout=90000)
@@ -146,6 +216,17 @@ with sync_playwright() as playwright:
             phone.goto(urljoin(base, "en/" + route), wait_until="networkidle", timeout=90000)
             localized(phone, "en")
             no_overflow(phone)
+        if not args.expect_input_wait:
+            phone.goto(urljoin(base, "en/viewer/?candidate=copilot-practical8"), wait_until="networkidle", timeout=90000)
+            expect(phone.locator("#canvas-host")).to_have_attribute("data-model-ready", "true", timeout=90000)
+            phone.locator("#explode").focus()
+            phone.locator("#explode").press("End")
+            expect(phone.locator("#canvas-host")).to_have_attribute("data-explosion", "1")
+            phone.locator("#show-complete").click()
+            localized(phone, "en")
+            no_overflow(phone)
+            phone.locator("#viewport").scroll_into_view_if_needed()
+            phone.screenshot(path=str(args.output / "current-mobile.png"))
         mobile.close()
         checked("English revision pages fit a 390px screen with explicit URL language")
         assert not report["errors"], report["errors"]

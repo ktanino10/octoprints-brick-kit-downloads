@@ -3,8 +3,10 @@
 [日本語](ATTRIBUTION.md) / [English](ATTRIBUTION.en.md) · [Archive overview](README.en.md)
 
 This public archive grew out of a noncommercial exploration of assembling Mona, Copilot, and Ducky from independent bricks.
-It includes 9 candidate models and 3 selected models, rendered images and videos, native CAD, placements and bills of materials,
-custom joints, and trial parts. The two legacy root-level files for the 4 mm, 11-part trial are preserved unchanged.
+It keeps the nine Phase1 candidates and three selected r2 models as history, separate from the new 8 mm common-block revision.
+Actual published models, images/videos, native CAD, placements, BOMs, joints and trials are identified in the
+[revision registry](archive/revisions.json) and [complete inventory](archive/inventory.json).
+The two legacy root-level files for the 4 mm, 11-part trial are preserved unchanged.
 
 ## Upstream work and credit
 
@@ -30,6 +32,12 @@ The r2 revision changed part grouping and joints. The overall envelope and color
 identical seams or pixel-for-pixel identity with Phase1 are **not** claimed.
 These parts were not designed as compatible replacements for commercial bricks.
 
+The r3 redesign authorized on 2026-09-20 uses an 8 mm pitch, 9.6 mm brick bodies and 3.2 mm plates,
+with open-underside walls, tubes and ribs. It prioritizes parts such as 2×2 and 2×4 blocks rather than preserving
+the earlier micro-pin system, grouping or counts.
+These are independent prototype dimension assumptions, not official LEGO manufacturing tolerances or compatibility claims.
+A revision awaiting actual deliverables is not described as available; earlier published artifacts and hashes are preserved.
+
 ## Model license and limits
 
 The model-derived deliverables are noncommercial experimental data distributed under **CC BY-NC 4.0**.
@@ -39,8 +47,9 @@ The included [LICENSE](LICENSE) is the upstream CC BY-NC 4.0 license text; it ha
 No endorsement, sponsorship, certification, or compatibility by **GitHub or LEGO** is claimed.
 Trademark rights belong to their respective owners.
 Distributing geometry is not a guarantee of physical safety, fit, retention, or suitability for manufacture.
-The files remain prototypes marked **NOT_SLICED**; the first physical trial revealed issues, redesign is under discussion,
-and full-kit printing is **ON HOLD**.
+The files remain prototypes marked **NOT_SLICED**, and full-kit printing is **ON HOLD**.
+Implementation of the common-block redesign is authorized, but physical manufacturing is not approved.
+Issues in the earlier 4 mm physical trial are not presented as physical results for the new 8 mm common blocks.
 
 ## Photos, videos, and software
 

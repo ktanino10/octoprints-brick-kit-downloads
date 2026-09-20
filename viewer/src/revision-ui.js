@@ -4,6 +4,10 @@ import { publicURL } from './paths.js';
 import { R2_REVISION, physicalSummary } from '../../assets/publication.js';
 
 export function renderViewContext(context) {
+  if (context.kind === 'common') {
+    renderCommonContext(context);
+    return;
+  }
   const history = context.kind === 'phase1';
   const baseline = context.kind === 'baseline';
   const preview = context.kind === 'preview';
@@ -33,6 +37,36 @@ export function renderViewContext(context) {
   if (context.selection) {
     for (const choice of context.selection.selections) {
       $('#selection-summary').append(element('li', '', `${CHARACTERS[choice.character].name} · ${STYLES[choice.style].english} ${number(choice.pitch_mm)} mm / 基準 ${number(choice.baseline_part_count, 0)}個`));
+    }
+
+    function renderCommonContext(context) {
+      document.body.dataset.viewMode = 'common';
+      $('.style-switch').hidden = true;
+      $('.gallery-columns').hidden = true;
+      $('#selected-mode-link').setAttribute('aria-current', context.isCurrent ? 'page' : 'false');
+      $('#history-mode-link').setAttribute('aria-current', 'false');
+      $('#r2-mode-link').setAttribute('aria-current', 'false');
+      $('#phase1-gallery-link').href = publicURL('/artifacts/phase1/gallery.html');
+      $('#phase-label').textContent = 'r3 · 8 mm共通ブロック';
+      $('#visual-gate').textContent = '設計改訂の実装承認済み';
+      $('#assembly-gate').hidden = false;
+      $('#assembly-gate').textContent = 'デジタル試作・実物組立未検証';
+      $('#physical-gate').textContent = 'この版の実物試験は未実施';
+      $('#production-gate').textContent = '全数印刷は保留';
+      $('#revision-id').textContent = context.revision;
+      $('#revision-title').textContent = '手で持つ共通ブロックへ設計し直した3体';
+      $('#revision-detail').textContent = physicalSummary(context.publicationEntry);
+      $('#revision-notice').dataset.kind = 'common';
+      $('#selection-summary').replaceChildren(...context.catalog.candidates.map((candidate) =>
+        element('li', '', `${CHARACTERS[candidate.character].name} · 8 mm · ${number(candidate.metrics.part_count, 0)}個`)));
+      $('#comparison-kicker').textContent = 'CURRENT / 8 mm COMMON-BLOCK DIGITAL PROTOTYPES';
+      $('#comparison-copy').textContent = '同じ版の実生成画像と動画だけを表示します。旧Fine・Chunkyの画像や部品数を新型へ流用しません。';
+      $('#selection-note-title').textContent = '設計改訂の実装承認は、物理的な製造承認ではありません。';
+      $('#selection-note-copy').textContent = 'この画面は表示切替とファイルの読み取りだけです。CAD生成・プリンター接続・送信・承認操作は行いません。';
+      $('#visual-selection-status').textContent = '8 mm共通ブロックの設計改訂を承認';
+      $('#downloads-title').textContent = 'この共通ブロック版の実データ';
+      $('#downloads-scope').textContent = '組立FCStdは共有ライブラリーが必要です。版別ダウンロードのCAD一式を使い、同じフォルダー構成で開いてください。NOT_SLICED・全数印刷保留です。';
+      $('#footer-scope').textContent = `${context.revision} · 実物未検証の共通ブロック`;
     }
   }
   $('#comparison-kicker').textContent = history ? 'PHASE 1 · HISTORICAL COMPARISON' : baseline ? 'APPROVED EXTERIOR BASELINES · OLD GEOMETRY'

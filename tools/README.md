@@ -84,3 +84,19 @@ ZIPの中身を変更するときは新しい版・Releaseを使用し、既存�
 `browser_revision.py --expect-input-wait` は制作データ未受領時の画面と旧版の実WebGLを検証します。
 READY後は新型の実データ検査を追加してから、フラグなしの受入検証と公開を行います。
 作り物のモデル・画像や、旧版を付け替えた新revisionは公開しません。
+
+`revision_import.py` はREADY receiptと固定source commit、明示ファイルごとのSHA-256を検証し、
+新版だけを `.archive-work/import-<revision>/` へコピーします。ソースも公開済み旧版も変更しません。
+JSONは付随情報だけ、PNGはメタデータchunkだけ、FreeCADは文書プロパティだけを整理し、
+形状ストリームと同じallowlist内の相対参照を検証します。新しい版を自動でcurrentにする機能はありません。
+
+`portable_blender.py` は `--revision`・`--stage-root`・`--report` をBlenderの `--` より後に要求します。
+編集先は所有する一時stagingだけです。メッシュ・配置・マテリアル指紋と保存後SHAを確認します。
+`verify_native.py` もstagingへ全展開したパッケージのみを、保存・再計算せず開きます。
+これらの報告が全ネイティブファイルの実バイトに一致して初めて、`package_revision.py` が新規ZIPと
+版別の出典/portable記録を作れます。既存revision・ZIP・成果物の上書きは拒否します。
+
+`check_revision.mjs` はschema3の実マニフェスト・実共有メッシュ集合・各画像/動画/ガイドの
+実在を照合します。型数はコードに固定せず、3体が実際に使う型の和集合から確かめます。
+part IDs、3.2 mm単位の底面Z、brick/plateの可変高さ、公称の接触グラフを検証し、
+旧micro-pin形状・別版・物理合格の偽装を受け付けません。これは物理製造の認定ではありません。

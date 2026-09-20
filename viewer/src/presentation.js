@@ -34,7 +34,8 @@ export function candidateHeading(catalog, candidate, viewContext = { kind: 'phas
   const style = STYLES[candidate.style];
   const fineCaution = candidate.style === 'fine'
     ? ` · ${number(candidate.metrics.part_count, 0)}部品 / PLA小型接合部は実機試験が前提` : '';
-  const revised = viewContext.kind === 'selected' || viewContext.kind === 'preview';
+  const common = viewContext.kind === 'common';
+  const revised = common || viewContext.kind === 'selected' || viewContext.kind === 'preview';
   const revisionLabel = revised ? ` · ${viewContext.revision}${viewContext.kind === 'preview' ? ' / PREVIEW' : ''}`
     : viewContext.kind === 'baseline' ? ' · PHASE 1基準 / 旧接合部' : '';
   $('#candidate-kicker').textContent = `${style.english.toUpperCase()} · ${number(candidate.pitch_mm)} mm PITCH${revisionLabel}${fineCaution}`;
@@ -56,10 +57,12 @@ export function candidateHeading(catalog, candidate, viewContext = { kind: 'phas
   const balanced = catalog.candidates.find((entry) => entry.character === candidate.character && entry.style === 'balanced');
   context.dataset.fine = String(candidate.style === 'fine');
   context.replaceChildren(
-    element('strong', '', viewContext.kind === 'baseline' ? '選択済み外観基準・旧形状'
+    element('strong', '', common ? '8 mm共通ブロック・実物未検証' : viewContext.kind === 'baseline' ? '選択済み外観基準・旧形状'
       : revised ? '外観基準選択済み・接合部は試作'
         : candidate.style === 'fine' ? '細密 / 高工数の検討案' : '外観と作業量を比べる'),
-    element('span', 'effort-facts', `${number(metrics.part_count, 0)}個 · ${metrics.approx_build_hours.map((value) => number(value)).join('–')}時間（推定）`),
+    element('span', 'effort-facts', metrics.approx_build_hours
+      ? `${number(metrics.part_count, 0)}個 · ${metrics.approx_build_hours.map((value) => number(value)).join('–')}時間（推定）`
+      : `${number(metrics.part_count, 0)}個 · 組立時間は未算定`),
   );
   if (candidate.style === 'fine' && balanced) {
     context.append(element('span', 'effort-ratio', `バランス案の約${number(metrics.part_count / balanced.metrics.part_count)}倍の部品数`));
@@ -73,7 +76,8 @@ export function renderMetrics(manifest, candidate, viewContext = { kind: 'phase1
   metric('#metric-parts', number(manifest.parts.length, 0), '個');
   metric('#metric-height', number(metrics.height_mm), 'mm');
   metric('#metric-footprint', `${number(metrics.width_mm)} × ${number(metrics.depth_mm)}`, 'mm');
-  metric('#metric-time', metrics.approx_build_hours.map((value) => number(value)).join('–'), '時間');
+  metric('#metric-time', metrics.approx_build_hours ? metrics.approx_build_hours.map((value) => number(value)).join('–') : '—',
+    metrics.approx_build_hours ? '時間' : '未算定');
   $('#height-value').textContent = number(metrics.height_mm);
   $('#total-count').textContent = number(manifest.parts.length, 0);
   $('#data-candidate').textContent = manifest.candidate_id;
@@ -118,13 +122,39 @@ export function renderMetrics(manifest, candidate, viewContext = { kind: 'phase1
   $('#warning-list').replaceChildren(...warnings.map((warning) => element('li', '', warning)));
   const comparison = $('#baseline-comparison');
   comparison.hidden = viewContext.kind === 'phase1';
-  if (viewContext.kind === 'selected' || viewContext.kind === 'preview') {
+  if (viewContext.kind === 'common') {
+    comparison.textContent = '旧版とは部品の大きさ・形状・分割・数量が異なる再設計です。新しい部品IDはこの版のBOM・組立候補で確認してください。';
+    $('#metric-time').title = metrics.approx_build_hours ? '組立時間は設計上の見積りで、実測ではありません。' : '実際の組立時間はまだ測定していません。値を推定で埋めていません。';
+    renderCommonDimensions(manifest);
+  } else if (viewContext.kind === 'selected' || viewContext.kind === 'preview') {
     comparison.textContent = `選択済み外観基準 ${number(metrics.baseline_part_count, 0)}個 → この接合部試作 ${number(metrics.part_count, 0)}個。部品の組み替えを含み、外観の選択が接合部の承認を意味するものではありません。`;
     renderCurrentDimensions(metrics);
     renderRevisionFacts(graph, manifest);
   } else if (viewContext.kind === 'baseline') {
     comparison.textContent = `表示は選択済みのPhase1基準 ${number(metrics.part_count, 0)}個です。旧壁厚・旧接合部の情報であり、新版の測定値ではありません。`;
   }
+}
+
+function renderCommonDimensions(manifest) {
+  const host = $('#current-dimensions');
+  const typeIds = [...new Set(manifest.parts.map((part) => part.type_id))];
+  const heights = [...new Set(typeIds.map((id) => manifest.types[id].body_height_mm))].sort((a, b) => a - b);
+  const small = manifest.parts.filter((part) => part.small_part_exception).length;
+  const facts = element('dl', 'evidence-facts');
+  for (const [label, value] of [
+    ['格子ピッチ', '8 mm'],
+    ['実際に使う本体高さ', `${heights.map((height) => number(height, 1)).join(' / ')} mm`],
+    ['スタッド径・高さ', '4.8 / 1.8 mm'],
+    ['共有する型数', number(typeIds.length, 0)],
+    ['小部品の例外', `${number(small, 0)}部品`],
+  ]) {
+    const row = element('div');
+    row.append(element('dt', '', label), element('dd', '', value));
+    facts.append(row);
+  }
+  host.replaceChildren(element('h4', '', 'この版の共通ブロック寸法'), facts,
+    element('p', 'control-help', '開いた下面の壁・筒・リブによる独立設計です。LEGO公式の製造寸法・互換性や、FDMでの保持力を保証しません。小部品の例外も含め、実物の扱いやすさは未検証です。'));
+  host.hidden = false;
 }
 
 function renderAssemblySetup(manifest) {
@@ -221,8 +251,13 @@ export function renderProgress(progress, index, visible, total) {
   $('#explode').setAttribute('aria-valuetext', progress.explosion === 0 ? '完成形' : `${Math.round(progress.explosion * 100)}パーセント分解`);
   $('#layers').max = String(index.layers.length);
   $('#layers').value = String(progress.layers);
-  $('#layer-value').textContent = `${number(progress.layers, 0)} / ${number(index.layers.length, 0)} 層`;
-  $('#layers').setAttribute('aria-valuetext', `${index.layers.length}層のうち下から${progress.layers}層まで`);
+  $('#layer-value').textContent = index.verticalGridMm
+    ? `${number(progress.layers, 0)} / ${number(index.layers.length, 0)} 底面高さ`
+    : `${number(progress.layers, 0)} / ${number(index.layers.length, 0)} 層`;
+  $('#layers').setAttribute('aria-valuetext', index.verticalGridMm
+    ? progress.layers ? `底面Zが${number(index.layers[progress.layers - 1] * index.verticalGridMm, 1)} mmまでの部品を表示`
+      : '開始前、表示部品なし'
+    : `${index.layers.length}層のうち下から${progress.layers}層まで`);
   $('#steps').max = String(index.steps.length);
   $('#steps').value = String(progress.steps);
   $('#step-value').textContent = `${number(progress.steps, 0)} / ${number(index.steps.length, 0)}`;

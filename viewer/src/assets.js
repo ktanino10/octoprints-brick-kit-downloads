@@ -20,9 +20,10 @@ function placeholderIcon() {
 export function renderGallery(catalog, onSelect, context = { kind: 'phase1' }) {
   const gallery = $('#gallery');
   const history = context.kind === 'phase1';
+  const common = context.kind === 'common';
   gallery.replaceChildren();
   gallery.classList.toggle('selected-gallery', !history);
-  $('#comparison-title').textContent = history ? `${catalog.candidates.length}つの案、同じ目線で。`
+  $('#comparison-title').textContent = common ? '8 mm共通ブロック・同じ版の3体。' : history ? `${catalog.candidates.length}つの案、同じ目線で。`
     : context.kind === 'baseline' ? '選択済み3案の外観基準（旧形状）。' : '選択済み3案の接合部試作。';
   for (const [character, info] of Object.entries(CHARACTERS)) {
     const row = element('div', history ? 'gallery-row' : 'selected-gallery-item');
@@ -32,6 +33,7 @@ export function renderGallery(catalog, onSelect, context = { kind: 'phase1' }) {
     heading.append(dot, element('h3', '', info.name), element('span', '', `${info.short} / 約180 mm`));
     row.append(heading);
     for (const [style, styleInfo] of Object.entries(STYLES)) {
+      if (history && style === 'practical8') continue;
       const candidate = catalog.candidates.find((entry) => entry.character === character && entry.style === style);
       if (!candidate) {
         if (!history) continue;
@@ -43,7 +45,7 @@ export function renderGallery(catalog, onSelect, context = { kind: 'phase1' }) {
       button.type = 'button';
       button.dataset.candidate = candidate.id;
       button.setAttribute('aria-pressed', 'false');
-      const scope = context.kind === 'baseline' ? 'Phase1外観基準・旧形状' : history ? 'Phase1履歴'
+      const scope = common ? `${catalog.revision}の共通ブロック試作` : context.kind === 'baseline' ? 'Phase1外観基準・旧形状' : history ? 'Phase1履歴'
         : `${catalog.revision}の接合部試作${context.kind === 'preview' ? '・版指定プレビュー' : ''}`;
       button.setAttribute('aria-label', `${info.name}・${styleInfo.name}、${number(candidate.metrics.part_count, 0)}個。${scope}をスタジオで表示`);
       const imageContainer = element('span', 'gallery-image');
@@ -85,7 +87,9 @@ export function renderGallery(catalog, onSelect, context = { kind: 'phase1' }) {
       const count = element('span');
       count.append(element('strong', '', number(candidate.metrics.part_count, 0)), document.createTextNode('個'));
       numbers.append(count, element('span', '', `${number(candidate.pitch_mm)} mmピッチ`), element('span', '', `${number(candidate.metrics.height_mm)} mm高`));
-      const effort = element('span', 'gallery-effort', `${candidate.metrics.approx_build_hours.map((value) => number(value)).join('–')}時間（推定）`);
+      const effort = element('span', 'gallery-effort', candidate.metrics.approx_build_hours
+        ? `${candidate.metrics.approx_build_hours.map((value) => number(value)).join('–')}時間（推定）`
+        : '組立時間は未算定・実物組立は未検証');
       if (style === 'fine') {
         effort.classList.add('fine-effort');
         effort.append(element('span', 'effort-tag', '高工数'));
@@ -134,7 +138,7 @@ function addVideo(url, host, candidate) {
   video.controls = true;
   video.preload = 'none';
   video.playsInline = true;
-  video.setAttribute('aria-label', `${candidate.label}の360度ターンテーブル`);
+  video.setAttribute('aria-label', `${candidate.label ?? `${CHARACTERS[candidate.character].name} ${STYLES[candidate.style].name}`}の360度ターンテーブル`);
   const caption = element('p', 'video-caption', '実生成の動画です。分解・層の操作は動画には反映されません。');
   video.addEventListener('error', () => {
     caption.textContent = '動画を再生できません。ファイルを取得して、対応プレーヤーで確認してください。';

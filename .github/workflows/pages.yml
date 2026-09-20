@@ -38,6 +38,8 @@ jobs:
           python3 tools/localize_pages.py build
       - name: Verify actual candidate data and viewer contracts
         run: npm test --prefix viewer
+      - name: Verify isolated native import boundaries
+        run: python3 -m unittest discover -s tools/tests
       - name: Rebuild the self-contained viewer
         run: npm run build --prefix viewer
       - name: Verify public hashes, coverage, privacy and links

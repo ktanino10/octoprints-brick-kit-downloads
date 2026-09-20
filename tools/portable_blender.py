@@ -1,16 +1,35 @@
 """Run with Blender --background --factory-startup --disable-autoexec --python."""
 
 import array
+import argparse
 import hashlib
 import json
 from pathlib import Path
+import re
 import sys
 
 import bpy
 
-ROOT = Path.cwd().resolve()
+ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 from import_archive import clean_json
+
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("--revision", required=True)
+parser.add_argument("--stage-root", type=Path, required=True)
+parser.add_argument("--report", type=Path, required=True)
+args = parser.parse_args(sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else [])
+stage = args.stage_root.resolve()
+if not stage.is_relative_to(ROOT / ".archive-work") or stage == ROOT / ".archive-work":
+    raise ValueError("Native publication metadata may only be edited in an owned revision staging directory")
+if not re.fullmatch(r"r3-[a-zA-Z0-9._-]+", args.revision):
+    raise ValueError("Invalid revision")
+artifact_root = stage / "artifacts/revisions" / args.revision
+if not artifact_root.is_dir() or not artifact_root.resolve().is_relative_to(stage) or any(path.is_symlink() for path in artifact_root.rglob("*")):
+    raise ValueError("Missing or symlinked revision staging inputs")
+report_path = args.report.resolve()
+if not report_path.is_relative_to(ROOT / ".archive-work"):
+    raise ValueError("Native validation report must stay in owned staging")
 
 
 def geometry_digest():
@@ -33,11 +52,41 @@ def geometry_digest():
     return digest.hexdigest()
 
 
+def appearance_digest():
+    records = []
+    for material in sorted(bpy.data.materials, key=lambda item: item.name):
+        nodes = []
+        if material.use_nodes and material.node_tree:
+            for node in material.node_tree.nodes:
+                inputs = []
+                for socket in node.inputs:
+                    if not hasattr(socket, "default_value"):
+                        continue
+                    value = socket.default_value
+                    if isinstance(value, (float, int, str, bool)):
+                        normalized = value
+                    elif value is None:
+                        normalized = None
+                    elif hasattr(value, "__len__") and all(isinstance(item, (int, float)) for item in value):
+                        normalized = list(value)
+                    else:
+                        continue
+                    inputs.append([socket.name, normalized])
+                nodes.append([node.name, node.type, inputs])
+        records.append([material.name, list(material.diffuse_color), material.use_nodes, nodes])
+    return hashlib.sha256(json.dumps(records, sort_keys=True).encode()).hexdigest()
+
+
 results = []
-for path in sorted((ROOT / "artifacts").rglob("*.blend")):
-    relative = path.relative_to(ROOT).as_posix()
+files = sorted(artifact_root.rglob("*.blend"))
+if not files:
+    raise ValueError("No actual Blender scenes in the ready staging input")
+for path in files:
+    relative = path.relative_to(stage).as_posix()
+    input_hash = hashlib.sha256(path.read_bytes()).hexdigest()
     bpy.ops.wm.open_mainfile(filepath=str(path), load_ui=True, use_scripts=False)
     before = geometry_digest()
+    colors_before = appearance_digest()
     if bpy.data.libraries or bpy.utils.blend_paths():
         raise ValueError(f"External native dependency requires review: {relative}")
     for screen in bpy.data.screens:
@@ -56,16 +105,21 @@ for path in sorted((ROOT / "artifacts").rglob("*.blend")):
             text.clear()
             text.write(json.dumps(cleaned, ensure_ascii=False, separators=(",", ":")))
     bpy.context.preferences.filepaths.save_version = 0
-    bpy.ops.wm.save_as_mainfile(filepath=relative, check_existing=False, compress=True, relative_remap=False)
+    bpy.ops.wm.save_as_mainfile(filepath=path.relative_to(ROOT).as_posix(), check_existing=False, compress=True, relative_remap=False)
     bpy.ops.wm.open_mainfile(filepath=str(path), load_ui=True, use_scripts=False)
     after = geometry_digest()
-    if before != after:
+    colors_after = appearance_digest()
+    if before != after or colors_before != colors_after:
         raise ValueError(f"Native geometry changed while saving: {relative}")
     results.append({
         "path": relative, "objects": len(bpy.data.objects), "meshes": len(bpy.data.meshes),
         "geometry_sha256_before": before, "geometry_sha256_after": after,
         "geometry_unchanged": True, "native_reopened": True,
+        "input_sha256": input_hash, "public_sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+        "appearance_sha256_before": colors_before, "appearance_sha256_after": colors_after,
+        "material_parameters_unchanged": True,
         "change": "Blender File Browser directory and render output made relative; no remeshing.",
     })
     print("PORTABLE", relative, len(bpy.data.objects), before, flush=True)
-(ROOT / ".archive-work/blender-portability.json").write_text(json.dumps(results, indent=2) + "\n")
+report_path.parent.mkdir(parents=True, exist_ok=True)
+report_path.write_text(json.dumps(results, indent=2) + "\n")

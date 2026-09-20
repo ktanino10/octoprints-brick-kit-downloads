@@ -56,8 +56,9 @@ export class PartsInspector {
     $('#part-search').disabled = false;
     $('#only-visible').disabled = false;
     $('#only-underside').disabled = false;
-    $('#support-filter').disabled = manifest.schema_version !== 2;
-    $('#support-filter-control').hidden = manifest.schema_version !== 2;
+    const supports = manifest.parts.some((part) => part.support_class);
+    $('#support-filter').disabled = !supports;
+    $('#support-filter-control').hidden = !supports;
     const supportOptions = [element('option', '', 'すべての区分')];
     supportOptions[0].value = '';
     for (const supportClass of new Set(manifest.parts.map((part) => part.support_class).filter(Boolean))) {
@@ -153,6 +154,15 @@ export class PartsInspector {
         ['元の位置', `${part.position_mm.map((v) => number(v, 3)).join(', ')} mm`],
         ['Z回転', `${part.rotation_z_deg}°`],
       ];
+      if (this.manifest.schema_version === 3) {
+        const type = this.manifest.types[part.type_id];
+        values[2] = ['底面Z・高さ単位', `${number(part.position_mm[2], 1)} mm / ${part.layer} × 3.2 mm`];
+        values.push(['本体寸法', `${type.body_mm.map((value) => number(value, 1)).join(' × ')} mm`]);
+        values.push(['部品の種類', type.kind]);
+        values.push(['占有形状', `${type.footprint_cells.length}セル / 外接 ${type.cells.join(' × ')}セル`]);
+        values.push(['部品役割', part.role]);
+        values.push(['小部品の例外', part.small_part_exception ? '例外的な小部品・実物の扱いやすさ未検証' : '共通部品・実物の扱いやすさ未検証']);
+      }
       if (part.insertion_axis) {
         values.push(['接続先候補', part.attach_to ?? 'なし（開始候補）']);
         values.push(['差込候補', part.insertion_axis === '+Z' ? '+Z · 下側からの後付け候補' : '−Z · 上側からの候補']);

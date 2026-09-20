@@ -1,5 +1,6 @@
 import { assetURL, numberLocale } from './i18n.js';
 import { COMMON_REVISION, PUBLICATION_URL, chooseRevision, validatePublication, physicalSummary } from './publication.js';
+import { validateCommonCatalog } from './common-blocks.js';
 
 const $ = (selector) => document.querySelector(selector);
 const selected = new Set(['mona-fine', 'copilot-chunky', 'ducky-fine']);
@@ -179,7 +180,7 @@ async function loadCurrentModels() {
     }
     const entry = chooseRevision(publication);
     if (entry.generation !== 'common-blocks') throw new Error('現行の共通ブロック版が公開記録にありません。');
-    const catalog = await readJSON(entry.catalog_url, entry.catalog_sha256);
+    const catalog = validateCommonCatalog(await readJSON(entry.catalog_url, entry.catalog_sha256));
     if (catalog.schema_version !== 3 || catalog.revision !== entry.id
       || !Array.isArray(catalog.candidates) || catalog.candidates.length !== 3
       || new Set(catalog.candidates.map((item) => item.character)).size !== 3
@@ -210,9 +211,9 @@ async function loadCurrentModels() {
       link.href = publicURL(`viewer/?revision=${encodeURIComponent(entry.id)}&candidate=${encodeURIComponent(candidate.id)}`);
       card.append(title, count, link);
       host.append(card);
-      if ($('#current-exploded') && candidate.exploded_render_url) {
+      if ($('#current-exploded') && candidate.exploded_url) {
         const figure = create('figure', 'video-card');
-        figure.append(imageLink(candidate.exploded_render_url, candidate.exploded_render_url,
+        figure.append(imageLink(candidate.exploded_url, candidate.exploded_url,
           `${names[candidate.character]}・同じ版の分解画像`, `${entry.id} · ${names[candidate.character]} · 分解表示`),
         create('h3', '', names[candidate.character]));
         $('#current-exploded').append(figure);

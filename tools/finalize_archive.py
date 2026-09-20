@@ -9,8 +9,6 @@ import struct
 import zipfile
 import zlib
 
-from PIL import Image
-
 ROOT = Path(__file__).resolve().parents[1]
 REVISION = "r2-20260919"
 TAG = "archive-2026-09-19-r2"
@@ -57,6 +55,8 @@ def clean_png(path):
 
 
 def prepare_media():
+    from PIL import Image
+
     report = []
     for path in sorted((ROOT / "artifacts").rglob("preview.png")):
         report.append(clean_png(path))

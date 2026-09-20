@@ -16,7 +16,8 @@ export function revisionFile(value, revision) {
   requireThat(typeof value === 'string' && !value.includes('\\'), '公開版のファイル参照が不正です。');
   const root = roots[revision.generation](revision.id);
   const input = value.startsWith('artifacts/') ? `/${value}` : value;
-  requireThat(root && input.startsWith(root), '公開版のファイル参照に別世代が混在しています。');
+  requireThat(root && input.startsWith(root) && !/%(?:2e|2f|5c)/i.test(input),
+    '公開版のファイル参照に別世代が混在しています。');
   const url = new URL(input, 'https://archive.invalid');
   requireThat(url.origin === 'https://archive.invalid' && url.pathname.startsWith(root)
     && !url.username && !url.password && !url.search && !url.hash

@@ -4,6 +4,9 @@
 /feedback/** -text
 /assets/thumbs/** -text
 /archive/*.json -text
+/archive/releases/** -text
+/archive/sources/** -text
+/archive/portability/** -text
 /archive/SHA256SUMS.txt -text
 /viewer/assets/** -text
 /p4-trial-11-parts.3mf -text
