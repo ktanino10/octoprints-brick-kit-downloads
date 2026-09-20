@@ -1,0 +1,110 @@
+{
+  "study_id": "shape-study-20260920",
+  "source_commit": "3ef504a3819eef7e864fd606991d793abfb56ef8",
+  "public_files_copied": 32,
+  "public_source_bytes": 5342538,
+  "native_assets_copied": 0,
+  "private_paths_published": false,
+  "rows": [
+    {
+      "candidate_id": "mona-baseline-r3",
+      "manifest_sha256": "1fb892560d33ada2ad9009eaf05700109814f6e8b68e2d5da0da64b87a31f3e1",
+      "bom_sha256": "a97dfb44617ee520f75be9e739707f6aba6d788ab49b15b220740a6c51fd2586",
+      "native_geometry_sha256": "702a59dc5b5648b33ecb2d5ca921a07c257d165f12c295f08d0824bc9eb33c41",
+      "counted_instances": 519,
+      "count_method": "Actual assembly instances including internal supports/foundation; no fixture, trial or stage objects",
+      "baseline_identity_verified": true,
+      "id_pose_projection_sha256": "8612dd6bee4af7db9874de791d467eb8b8be052f46f29a4bd9d89093c574523a",
+      "bom_ids_types_colors_poses_match": true
+    },
+    {
+      "candidate_id": "mona-plate-refined",
+      "manifest_sha256": "90505b12f4f107759168d1464e8071b22d3d6fb819ba498147090a3383029b0c",
+      "bom_sha256": "6cbe9948ee1464bd2f88d2b7963b784023f92962637e4a8f749c64d83854f050",
+      "native_geometry_sha256": "e4c3f84ac0627ac0b87617f2f5b9b7066f16f29b7dc4ec340f9756f2542db1d5",
+      "counted_instances": 670,
+      "count_method": "Actual assembly instances including internal supports/foundation; no fixture, trial or stage objects",
+      "baseline_identity_verified": false,
+      "id_pose_projection_sha256": "bb32d59087218f49e11fe50f7a6530b6ad94ac535d54642eecc3e87c7b947774",
+      "bom_ids_types_colors_poses_match": true
+    },
+    {
+      "candidate_id": "mona-contour-refined",
+      "manifest_sha256": "9ebc247a35764dcbb36f13d9ec883b11b573171a19a3b6d762d3d3690ae5fab8",
+      "bom_sha256": "3768835d278313668941ce358962f6dbf4023d31a19e9341a277af1b8a0855d0",
+      "native_geometry_sha256": "c6346aed8eaa157e43bb4471b2bcdf7409195b6041e492ea1072753f45443991",
+      "counted_instances": 519,
+      "count_method": "Actual assembly instances including internal supports/foundation; no fixture, trial or stage objects",
+      "baseline_identity_verified": false,
+      "id_pose_projection_sha256": "8ef54facc994db651796467ea5c3dfd1d4b3066bcf332df1dfe0b64ec60771a0",
+      "bom_ids_types_colors_poses_match": true
+    },
+    {
+      "candidate_id": "copilot-baseline-r3",
+      "manifest_sha256": "f91c692f911118e4aa5a70cd0520758ea2effc2c992b6d878f7fb461fe829c3e",
+      "bom_sha256": "6f6edb356648d02a0213c474567d7684ab2b010602ee458b674e9883e4df350e",
+      "native_geometry_sha256": "89cb9dc656d01b4614268982d1812823151450f4ae7a9147fc35e662fa31044d",
+      "counted_instances": 695,
+      "count_method": "Actual assembly instances including internal supports/foundation; no fixture, trial or stage objects",
+      "baseline_identity_verified": true,
+      "id_pose_projection_sha256": "f48cd6521518233b5bf98e625b936644bec534baafc463cfd03513f0c0e50826",
+      "bom_ids_types_colors_poses_match": true
+    },
+    {
+      "candidate_id": "copilot-plate-refined",
+      "manifest_sha256": "7093207d27771200102dcb0ffbee7864085efdc0888f5df77b737cbff55d9b87",
+      "bom_sha256": "16733cb022967c54e51c36c1f44014b6923a533476ea4963220b2ccd0bfd8151",
+      "native_geometry_sha256": "93f468c8e20d1a24e593df4f50dcb3ea918a4cf059feb52c08eb9774fb65c845",
+      "counted_instances": 916,
+      "count_method": "Actual assembly instances including internal supports/foundation; no fixture, trial or stage objects",
+      "baseline_identity_verified": false,
+      "id_pose_projection_sha256": "02ddada25051866de77cb00ef02f833e2c2c56beacf587f3e634833a5c8b8e75",
+      "bom_ids_types_colors_poses_match": true
+    },
+    {
+      "candidate_id": "copilot-contour-refined",
+      "manifest_sha256": "04826c8996271df770cfad248f0c7a86ffdfdb7b4984e0e4037b4c6b2793b69c",
+      "bom_sha256": "2551931e1a5c17145a1edd7d0292c9ce609639231fce995d8c78dd717046292e",
+      "native_geometry_sha256": "29f971c034dfd5d16414ca48ab2d62ab8fde80c87222e31504f3b2ccde91d6ed",
+      "counted_instances": 695,
+      "count_method": "Actual assembly instances including internal supports/foundation; no fixture, trial or stage objects",
+      "baseline_identity_verified": false,
+      "id_pose_projection_sha256": "a7097d481616f85ec68cedf4beb10d513402894cc49fbcf36244c4ccfffe19af",
+      "bom_ids_types_colors_poses_match": true
+    },
+    {
+      "candidate_id": "ducky-baseline-r3",
+      "manifest_sha256": "74dbf3646b57a94ad37394d5240c22645d103aa712aa2faa7f44c5ce6762e438",
+      "bom_sha256": "dca56daacb52e6e219fae633608170362093087c5aa715a7d57a852005878060",
+      "native_geometry_sha256": "bef80b64ef8a37598241026740896dffca162ba86b4e2f062453ee13985af0f8",
+      "counted_instances": 413,
+      "count_method": "Actual assembly instances including internal supports/foundation; no fixture, trial or stage objects",
+      "baseline_identity_verified": true,
+      "id_pose_projection_sha256": "c3d104125ffb9ad1a07a6568c796b7a9ae0e444061e7ef66bfcfc8bf5adce69f",
+      "bom_ids_types_colors_poses_match": true
+    },
+    {
+      "candidate_id": "ducky-plate-refined",
+      "manifest_sha256": "5b0964d3858f92029b03dc30ab41ec9a84e502503da80e08e55888be61944f5e",
+      "bom_sha256": "632a2e61b89785516ecc0d5e1a5e00d7bdc0a2b415a551ccb9f68b5c1c8fac6d",
+      "native_geometry_sha256": "f540f06af04eaeb73a5340b8044467e71817f99527b0da93ff5a47f74305034c",
+      "counted_instances": 522,
+      "count_method": "Actual assembly instances including internal supports/foundation; no fixture, trial or stage objects",
+      "baseline_identity_verified": false,
+      "id_pose_projection_sha256": "7eba6aa546cd4a3487f65746195d0ebdbd0592da94d01875605960a7ba4f7d1b",
+      "bom_ids_types_colors_poses_match": true
+    },
+    {
+      "candidate_id": "ducky-contour-refined",
+      "manifest_sha256": "ea44c4e529d123506cabbc4227e4af571f41a7e1753915814c61356a2adf9784",
+      "bom_sha256": "87ec617b802a2683dc2a594120a58490e868dc4525db013d610b84e835ca67aa",
+      "native_geometry_sha256": "0a2fd3dbfd856c98aba6dcf354e5e4e4fa74b099017bedb9713be07bc066b050",
+      "counted_instances": 413,
+      "count_method": "Actual assembly instances including internal supports/foundation; no fixture, trial or stage objects",
+      "baseline_identity_verified": false,
+      "id_pose_projection_sha256": "97e892b06daf9069c73786b9d937759cf8ec49b1de2f3d0bfd6ba197ab28f64c",
+      "bom_ids_types_colors_poses_match": true
+    }
+  ],
+  "files": []
+}

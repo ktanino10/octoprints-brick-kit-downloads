@@ -1,0 +1,17 @@
+{
+  "基準形状を無変更で再描画": "Unchanged baseline geometry, re-rendered under shared comparison conditions.",
+  "現行の比較基準。実機嵌合・保持力・扱いやすさが合格済みという意味ではありません。": "Reference only; physical fit, retention and handling have not been approved.",
+  "現行r3：9.6 mm主体の把持可能なブロック構成。基準形状と部品数を変更していません。": "Current r3: grippable construction mainly using 9.6 mm bricks. Baseline geometry and count are unchanged.",
+  "頭頂・耳周辺と頬上端の露出した高さ段差を、3.2mmの段に分けます。プレート境界や露出スタッドも増えて見えます。": "Refine exposed height steps around the crown, ear region and upper cheeks into 3.2 mm courses. More plate seams and exposed studs may be visible.",
+  "段差を小さくする代わりに部品・積層手順が増えます。薄いプレートの扱いやすさや強度は未検証です。新しい1×1チップは追加しません。": "Smaller steps cost more pieces and stacking steps. Thin-plate handling and strength remain untested. No new 1x1 chips are introduced.",
+  "A：原型の輪郭が高さ方向に変わる表面だけを3.2 mmプレートへ細分化。下側の把持可能な背板と上側の接続を残し、内部の大きいブロックは再利用します。": "A: use 3.2 mm plates only where the original surface contour changes within a brick course. Retain grippable backing and upper mating sites; reuse large internal bricks.",
+  "頭頂・耳周辺と頬上端の露出した高さ段差を、実体の斜面で置き換えます。全ての段や顔の8mm格子が消えるわけではありません。": "Refine exposed height steps around the crown, ear region and upper cheeks with actual sloped solids. This does not remove every step or the face's 8 mm XY grid.",
+  "一対一の置換なので部品数は同じですが、専用型が増えます。斜面下の屋根を厚くし下面空洞を浅くしています。材料量・スライス時間・保持力は未確認です。": "One-for-one replacements keep the piece count, but require new types. The roof is thicker and the underside cavity shallower. Filament, slicing time and retention are unknown.",
+  "B：露出した一列だけを実形状の斜面にしたブロックへ36個ずつ置換。Blenderの平滑化ではなく、下面接合を保つ独立した1ソリッド部品です。": "B: replace 36 exposed-row blocks per character with actual sloped single-solid parts. This is native geometry, not Blender smoothing; the bottom interface is retained.",
+  "ヘルメット上面・側面とゴーグル周辺の露出した高さ段差を、3.2mmの段に分けます。プレート境界や露出スタッドも増えて見えます。": "Refine exposed height steps around the helmet top/sides and goggle region into 3.2 mm courses. More plate seams and exposed studs may be visible.",
+  "ヘルメット上面・側面とゴーグル周辺の露出した高さ段差を、実体の斜面で置き換えます。全ての段や顔の8mm格子が消えるわけではありません。": "Refine exposed height steps around the helmet top/sides and goggle region with actual sloped solids. This does not remove every step or the face's 8 mm XY grid.",
+  "頭頂・胴上面とくちばし周辺の露出した高さ段差を、3.2mmの段に分けます。プレート境界や露出スタッドも増えて見えます。": "Refine exposed height steps around the crown, upper body and beak region into 3.2 mm courses. More plate seams and exposed studs may be visible.",
+  "頭頂・胴上面とくちばし周辺の露出した高さ段差を、実体の斜面で置き換えます。全ての段や顔の8mm格子が消えるわけではありません。": "Refine exposed height steps around the crown, upper body and beak region with actual sloped solids. This does not remove every step or the face's 8 mm XY grid.",
+  "これは形の差と個数を比べる資料で、A/Bの美観・扱いやすさが合格という判定ではありません。8mmのXY格子と目・口などの粗さは残ります。": "This compares geometry and quantity; it does not declare either option aesthetically or physically superior. The 8 mm XY grid and coarse eye/mouth details remain.",
+  "形を見るため全案を同じマット材質で描画しています。ベース色は元パレットのままで、斜面だけを白い部品へ変更していません。": "All options use the same matte diagnostic finish for shape comparison. Base palette colors are unchanged; slopes are not substituted with white parts."
+}

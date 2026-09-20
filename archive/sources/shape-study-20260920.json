@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "revision": "shape-study-20260920",
+  "source_revision": "3ef504a3819eef7e864fd606991d793abfb56ef8",
+  "source_public_study_sha256": "44e3eb00e697bde16540c935db56718238a58e4d30b121ab83c67999ebcdffcc",
+  "scope": "Only the explicitly approved compact media/metrics. Private count paths and native assets excluded.",
+  "files": [
+    {
+      "path": "artifacts/studies/shape-study-20260920/ATTRIBUTION.md",
+      "bytes": 846,
+      "sha256": "64f14bd2c6cf4d7dea1862a60053360a16dbdd25fa205b33891d7ec1f29dcd6d"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/LICENSE",
+      "bytes": 19346,
+      "sha256": "3711f963c05d0be80d53e5923308a6dee31b203da23435c9cfb7c7b6e4dd5e19"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/all-characters-front-comparison.jpg",
+      "bytes": 784505,
+      "sha256": "ece0e8c92b3e797d2db7b803d82814440fdb159b5b182c4c293ab4034e83c9fc"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/all-characters-three_quarter-comparison.jpg",
+      "bytes": 865498,
+      "sha256": "3d6002805c7c9314f516335bd9c2358c2ebb6596dd56d12a2a112b56d061315f"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/comparison-en.html",
+      "bytes": 4904,
+      "sha256": "e696b3ced725b2617a5c07aa68da09a9ecef16c14a7db70ed0b97902cd6819eb"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/comparison-ja.html",
+      "bytes": 5219,
+      "sha256": "380e8801d71de9e649c6d104794f24786d2a3e84d787f6e329180528c80621af"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/comparison.csv",
+      "bytes": 905,
+      "sha256": "7411ac4d6f6f9220b14d6476bdebee13f5342d647508573052b1487dd5c83eab"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/copilot-baseline-r3-front.jpg",
+      "bytes": 83802,
+      "sha256": "72bfdf0270850901583145d6b84a54a8fdab804228ec9e9f18c955fb54b24bb1"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/copilot-baseline-r3-three_quarter.jpg",
+      "bytes": 126150,
+      "sha256": "dbd4f077cb3c78cc288550792e1b6ad3ba2027beb96f2723e7a04dd002e97980"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/copilot-contour-refined-front.jpg",
+      "bytes": 85183,
+      "sha256": "87852ab7c3d87bd00a6a99f363fc7c024d4ef9590587de2a9e7e61168ff3d8e4"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/copilot-contour-refined-three_quarter.jpg",
+      "bytes": 124162,
+      "sha256": "41293dd03904a94808c8f8a7ff6ad9ccd32798aea9c0173a354b76b6d085590c"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/copilot-front-comparison.jpg",
+      "bytes": 225137,
+      "sha256": "4670f78a2cd41fb31448d7546c621e65a6f6a83c169ca1a9ba52351674982187"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/copilot-plate-refined-front.jpg",
+      "bytes": 89679,
+      "sha256": "44f110926bdd0209e9d30b1c975f713fa03bdb09e6a4e871cfd1ba483691a561"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/copilot-plate-refined-three_quarter.jpg",
+      "bytes": 130547,
+      "sha256": "c01f1483984ea9253193a78f5f39b9ec79351e66380228079e0efdfae7124983"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/copilot-three_quarter-comparison.jpg",
+      "bytes": 283337,
+      "sha256": "c95c4431d8056d21c614da00f572bc43b3fd06a518a871674b752c97623cc43b"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/ducky-baseline-r3-front.jpg",
+      "bytes": 118085,
+      "sha256": "92321a0bce1348f958b6985b017f87bb031cd5abcb45fe8540823be29152e267"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/ducky-baseline-r3-three_quarter.jpg",
+      "bytes": 107526,
+      "sha256": "a295c97c302da4b23e3ec0203fa1541873f8f4e07a6b5ae06c3381aacd982379"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/ducky-contour-refined-front.jpg",
+      "bytes": 119041,
+      "sha256": "5721fb19b8995d98723354221c2fc9d0e1d1af87936a9248be09c32575d2ff23"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/ducky-contour-refined-three_quarter.jpg",
+      "bytes": 105652,
+      "sha256": "f6ecf3720586da3190ddb0adfd5d1d5f9e7ff23eb416bac80d17a528aa8cdf17"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/ducky-front-comparison.jpg",
+      "bytes": 263729,
+      "sha256": "385384ec334693ae094e131bc246fc0977950723df42eb22e4cd53c501658cd8"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/ducky-plate-refined-front.jpg",
+      "bytes": 124572,
+      "sha256": "9001b908e51bcc2ae6d589b7f5a74812b18be45bf850c75d9aa3d3ab1961fe1b"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/ducky-plate-refined-three_quarter.jpg",
+      "bytes": 111329,
+      "sha256": "8dacb351e1cfe73e0da35bc90104e1c60a689125d334ce47ce1adaa58bdee783"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/ducky-three_quarter-comparison.jpg",
+      "bytes": 245995,
+      "sha256": "45fc5356423fd55ffb21265db80d51eddf39d78df6e4b2c4b0279aadeb76bfcf"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/mona-baseline-r3-front.jpg",
+      "bytes": 102674,
+      "sha256": "65769d0715ea8999c680ecb4822d3ecbe87f09e605be9f2c662ef390213d57d9"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/mona-baseline-r3-three_quarter.jpg",
+      "bytes": 131788,
+      "sha256": "4e2a040ec848ecfda7f71ef50646690665a1b32f3c8e8cad9853934308bac7e6"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/mona-contour-refined-front.jpg",
+      "bytes": 103137,
+      "sha256": "a1764136f357d3194bb66d95d6bf768fbb88948d478e533b893fce9558fcc353"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/mona-contour-refined-three_quarter.jpg",
+      "bytes": 128698,
+      "sha256": "ec92c8db8d764acc802394212967eacc6971aa79b66a0f5d51cf39922da7fd9d"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/mona-front-comparison.jpg",
+      "bytes": 253650,
+      "sha256": "8cce58c7fba7f360a2648cab18abb933ce488573df8a32d9c8e6a42d40abd309"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/mona-plate-refined-front.jpg",
+      "bytes": 109476,
+      "sha256": "9454342f7d1247fc9232bdfaa884fe187763a544cda07d2ac01a20064d1d8509"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/mona-plate-refined-three_quarter.jpg",
+      "bytes": 136407,
+      "sha256": "b0c27bd2258e1254b97fa89bc26236245599da05aef5bc522209dadc10491398"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/mona-three_quarter-comparison.jpg",
+      "bytes": 292810,
+      "sha256": "3adbd0c354373983c3b709acc8819fc157e11c99f51fd270e6a1c50cbcae6622"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/study.json",
+      "bytes": 58749,
+      "sha256": "44e3eb00e697bde16540c935db56718238a58e4d30b121ab83c67999ebcdffcc"
+    }
+  ]
+}

@@ -41,11 +41,16 @@ def main():
             if path.stat().st_size != image["bytes"] or sha(path) != image["sha256"]:
                 raise ValueError(f"Actual comparison image hash/size mismatch: {image['path']}")
             files.add(path)
+    for image in data["comparisons"]:
+        path = ROOT / image["path"].lstrip("/")
+        if not path.is_file() or sha(path) != image["sha256"]:
+            raise ValueError("Actual full comparison-sheet hash mismatch")
+        files.add(path)
     folder = ROOT / "artifacts/studies" / STUDY
     for file in folder.rglob("*"):
         if file.is_symlink():
             raise ValueError("Study payload contains a symlink")
-        if file.is_file() and file.suffix.lower() not in {".json", ".png", ".jpg", ".jpeg", ".webp", ".svg", ".md", ".txt", ".csv"}:
+        if file.is_file() and file.suffix.lower() not in {".json", ".png", ".jpg", ".jpeg", ".webp", ".svg", ".md", ".txt", ".csv", ".html"} and file.name != "LICENSE":
             raise ValueError(f"Large native/interactive payload is outside this comparison scope: {file.name}")
     size = sum(file.stat().st_size for file in folder.rglob("*") if file.is_file())
     if size > 150_000_000:

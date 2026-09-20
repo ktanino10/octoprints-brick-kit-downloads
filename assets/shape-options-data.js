@@ -53,6 +53,7 @@ export function validateShapeStudy(study, pointer) {
     && study.baseline_revision === pointer.baseline_revision && study.source_commit === pointer.source_commit
     && study.selection === 'UNSELECTED' && study.physical_fit === 'UNKNOWN'
     && study.retention_strength === 'UNKNOWN' && study.slicer_status === 'NOT_SLICED'
+    && study.full_print === 'ON_HOLD'
     && Array.isArray(study.rows) && study.rows.length === 9, '実画像と部品数の比較データが公開記録と一致しません。');
   const identities = new Set();
   const cameras = new Map();
@@ -68,6 +69,8 @@ export function validateShapeStudy(study, pointer) {
     requireThat(object(metrics) && count(metrics.part_count) && metrics.part_count > 0
       && count(metrics.unique_types) && metrics.unique_types > 0 && metrics.unique_types <= metrics.part_count
       && count(metrics.small_part_count) && metrics.small_part_count <= metrics.part_count
+      && count(metrics.plate_parts) && metrics.plate_parts <= metrics.part_count
+      && count(metrics.assembly_step_count) && metrics.assembly_step_count > 0
       && dimensions(metrics.minimum_part_mm) && dimensions(metrics.dimensions_mm)
       && typeof metrics.small_part_definition === 'string' && metrics.small_part_definition.length > 0
       && row.pitch_mm === 8 && row.stud_diameter_mm === 4.8,
@@ -79,6 +82,8 @@ export function validateShapeStudy(study, pointer) {
     }
     requireThat(object(row.evidence) && hash(row.evidence.manifest_sha256) && hash(row.evidence.bom_sha256)
       && hash(row.evidence.native_geometry_sha256)
+      && hash(row.evidence.id_pose_projection_sha256)
+      && row.evidence.bom_ids_types_colors_poses_match === true
       && row.evidence.counted_instances === metrics.part_count
       && typeof row.evidence.count_method === 'string' && row.evidence.count_method.length > 0,
     '部品数が実マニフェスト・BOMの個別ID数に結び付いていません。');
@@ -102,5 +107,22 @@ export function validateShapeStudy(study, pointer) {
     }
   }
   requireThat(identities.size === 9, '3キャラクターそれぞれの現行版と2つの実比較案が必要です。');
+  requireThat(typeof study.appearance_limit === 'string' && study.appearance_limit.length > 0
+    && typeof study.render_note === 'string' && study.render_note.length > 0
+    && object(study.camera_conditions) && Array.isArray(study.comparisons), '比較画像の限界・描画条件・比較シートがありません。');
+  for (const [key, group] of cameras) {
+    const conditions = study.camera_conditions[group];
+    requireThat(object(conditions) && conditions.projection === 'ORTHOGRAPHIC'
+      && typeof conditions.pixels_per_mm_in_image_plane === 'number' && conditions.pixels_per_mm_in_image_plane > 0
+      && conditions.character === key.split('/')[0]
+      && conditions.view === (key.endsWith('/perspective') ? 'three_quarter' : 'front')
+      && hash(conditions.camera_condition_sha256),
+    '比較カメラの記録が、画像の同条件グループと一致しません。');
+  }
+  for (const view of ['three_quarter', 'front']) {
+    const sheet = study.comparisons.find((item) => object(item) && item.character === 'all' && item.view === view);
+    requireThat(sheet && hash(sheet.sha256), '全3体の実比較シートがありません。');
+    studyPath(sheet.path);
+  }
   return study;
 }

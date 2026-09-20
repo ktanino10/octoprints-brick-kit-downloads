@@ -1,0 +1,1335 @@
+{
+  "schema_version": 1,
+  "kind": "SHAPE_AND_PIECE_COUNT_STUDY",
+  "study_id": "shape-study-20260920",
+  "baseline_revision": "r3-8mm-20260920",
+  "source_commit": "3ef504a3819eef7e864fd606991d793abfb56ef8",
+  "selection": "UNSELECTED",
+  "physical_fit": "UNKNOWN",
+  "retention_strength": "UNKNOWN",
+  "slicer_status": "NOT_SLICED",
+  "full_print": "ON_HOLD",
+  "source_study_sha256": "44e3eb00e697bde16540c935db56718238a58e4d30b121ab83c67999ebcdffcc",
+  "rows": [
+    {
+      "character": "mona",
+      "variant": "baseline-r3",
+      "candidate_id": "mona-baseline-r3",
+      "baseline_candidate_id": "mona-practical8",
+      "pitch_mm": 8,
+      "stud_diameter_mm": 4.8,
+      "metrics": {
+        "part_count": 519,
+        "unique_types": 68,
+        "small_part_count": 5,
+        "small_part_definition": "8 mm格子1セルの1×1部品。新しい1×1チップは追加していません。",
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "dimensions_mm": [
+          199.8,
+          167.8,
+          181.0
+        ],
+        "plate_parts": 50,
+        "assembly_step_count": 519,
+        "common_parts": 412,
+        "contour_or_slope_parts": 107
+      },
+      "images": {
+        "perspective": {
+          "path": "/artifacts/studies/shape-study-20260920/mona-baseline-r3-three_quarter.jpg",
+          "sha256": "4e2a040ec848ecfda7f71ef50646690665a1b32f3c8e8cad9853934308bac7e6",
+          "bytes": 131788,
+          "comparison_group": "shape-study-20260920-mona-three_quarter",
+          "source_render_sha256": "b6cfe3bcb69a356900347cac18e7c8d8d1381d7be81044840ab2493919f1f3c1"
+        },
+        "front": {
+          "path": "/artifacts/studies/shape-study-20260920/mona-baseline-r3-front.jpg",
+          "sha256": "65769d0715ea8999c680ecb4822d3ecbe87f09e605be9f2c662ef390213d57d9",
+          "bytes": 102674,
+          "comparison_group": "shape-study-20260920-mona-front",
+          "source_render_sha256": "b04c170872a82e57a0551303123489882bc280c5be1c1c32f8c0d46761efe8cc"
+        }
+      },
+      "appearance_changes": [
+        "基準形状を無変更で再描画"
+      ],
+      "assembly_tradeoffs": [
+        "現行の比較基準。実機嵌合・保持力・扱いやすさが合格済みという意味ではありません。"
+      ],
+      "evidence": {
+        "manifest_sha256": "1fb892560d33ada2ad9009eaf05700109814f6e8b68e2d5da0da64b87a31f3e1",
+        "bom_sha256": "a97dfb44617ee520f75be9e739707f6aba6d788ab49b15b220740a6c51fd2586",
+        "native_geometry_sha256": "702a59dc5b5648b33ecb2d5ca921a07c257d165f12c295f08d0824bc9eb33c41",
+        "counted_instances": 519,
+        "count_method": "Actual assembly instances including internal supports/foundation; no fixture, trial or stage objects",
+        "baseline_identity_verified": true,
+        "id_pose_projection_sha256": "8612dd6bee4af7db9874de791d467eb8b8be052f46f29a4bd9d89093c574523a",
+        "bom_ids_types_colors_poses_match": true
+      }
+    },
+    {
+      "character": "mona",
+      "variant": "plate-refined",
+      "candidate_id": "mona-plate-refined",
+      "baseline_candidate_id": "mona-practical8",
+      "pitch_mm": 8,
+      "stud_diameter_mm": 4.8,
+      "metrics": {
+        "part_count": 670,
+        "unique_types": 112,
+        "small_part_count": 5,
+        "small_part_definition": "8 mm格子1セルの1×1部品。新しい1×1チップは追加していません。",
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "dimensions_mm": [
+          199.8,
+          167.8,
+          181.0
+        ],
+        "plate_parts": 291,
+        "assembly_step_count": 670,
+        "common_parts": 484,
+        "contour_or_slope_parts": 186
+      },
+      "images": {
+        "perspective": {
+          "path": "/artifacts/studies/shape-study-20260920/mona-plate-refined-three_quarter.jpg",
+          "sha256": "b0c27bd2258e1254b97fa89bc26236245599da05aef5bc522209dadc10491398",
+          "bytes": 136407,
+          "comparison_group": "shape-study-20260920-mona-three_quarter",
+          "source_render_sha256": "8822a4a6445e2f9009607bc33c83cb64c897a9859d49a6213ddb0f01b41aef7d"
+        },
+        "front": {
+          "path": "/artifacts/studies/shape-study-20260920/mona-plate-refined-front.jpg",
+          "sha256": "9454342f7d1247fc9232bdfaa884fe187763a544cda07d2ac01a20064d1d8509",
+          "bytes": 109476,
+          "comparison_group": "shape-study-20260920-mona-front",
+          "source_render_sha256": "236bd559e10c686be93f70fa3e3ced774b4b2b00c439fb721a2c2ddc696c3073"
+        }
+      },
+      "appearance_changes": [
+        "頭頂・耳周辺と頬上端の露出した高さ段差を、3.2mmの段に分けます。プレート境界や露出スタッドも増えて見えます。"
+      ],
+      "assembly_tradeoffs": [
+        "段差を小さくする代わりに部品・積層手順が増えます。薄いプレートの扱いやすさや強度は未検証です。新しい1×1チップは追加しません。"
+      ],
+      "evidence": {
+        "manifest_sha256": "90505b12f4f107759168d1464e8071b22d3d6fb819ba498147090a3383029b0c",
+        "bom_sha256": "6cbe9948ee1464bd2f88d2b7963b784023f92962637e4a8f749c64d83854f050",
+        "native_geometry_sha256": "e4c3f84ac0627ac0b87617f2f5b9b7066f16f29b7dc4ec340f9756f2542db1d5",
+        "counted_instances": 670,
+        "count_method": "Actual assembly instances including internal supports/foundation; no fixture, trial or stage objects",
+        "baseline_identity_verified": false,
+        "id_pose_projection_sha256": "bb32d59087218f49e11fe50f7a6530b6ad94ac535d54642eecc3e87c7b947774",
+        "bom_ids_types_colors_poses_match": true
+      }
+    },
+    {
+      "character": "mona",
+      "variant": "contour-refined",
+      "candidate_id": "mona-contour-refined",
+      "baseline_candidate_id": "mona-practical8",
+      "pitch_mm": 8,
+      "stud_diameter_mm": 4.8,
+      "metrics": {
+        "part_count": 519,
+        "unique_types": 78,
+        "small_part_count": 5,
+        "small_part_definition": "8 mm格子1セルの1×1部品。新しい1×1チップは追加していません。",
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "dimensions_mm": [
+          199.8,
+          167.8,
+          181.0
+        ],
+        "plate_parts": 50,
+        "assembly_step_count": 519,
+        "common_parts": 376,
+        "contour_or_slope_parts": 143
+      },
+      "images": {
+        "perspective": {
+          "path": "/artifacts/studies/shape-study-20260920/mona-contour-refined-three_quarter.jpg",
+          "sha256": "ec92c8db8d764acc802394212967eacc6971aa79b66a0f5d51cf39922da7fd9d",
+          "bytes": 128698,
+          "comparison_group": "shape-study-20260920-mona-three_quarter",
+          "source_render_sha256": "02cfb8f8a7ea15976383ae3f13c7f900798e6fd3e881b7789b0e66734000027f"
+        },
+        "front": {
+          "path": "/artifacts/studies/shape-study-20260920/mona-contour-refined-front.jpg",
+          "sha256": "a1764136f357d3194bb66d95d6bf768fbb88948d478e533b893fce9558fcc353",
+          "bytes": 103137,
+          "comparison_group": "shape-study-20260920-mona-front",
+          "source_render_sha256": "bb9838da285d32ecbcda266814b63ee3c3b9719fbdd3aebb2232861e0eea2cfa"
+        }
+      },
+      "appearance_changes": [
+        "頭頂・耳周辺と頬上端の露出した高さ段差を、実体の斜面で置き換えます。全ての段や顔の8mm格子が消えるわけではありません。"
+      ],
+      "assembly_tradeoffs": [
+        "一対一の置換なので部品数は同じですが、専用型が増えます。斜面下の屋根を厚くし下面空洞を浅くしています。材料量・スライス時間・保持力は未確認です。"
+      ],
+      "evidence": {
+        "manifest_sha256": "9ebc247a35764dcbb36f13d9ec883b11b573171a19a3b6d762d3d3690ae5fab8",
+        "bom_sha256": "3768835d278313668941ce358962f6dbf4023d31a19e9341a277af1b8a0855d0",
+        "native_geometry_sha256": "c6346aed8eaa157e43bb4471b2bcdf7409195b6041e492ea1072753f45443991",
+        "counted_instances": 519,
+        "count_method": "Actual assembly instances including internal supports/foundation; no fixture, trial or stage objects",
+        "baseline_identity_verified": false,
+        "id_pose_projection_sha256": "8ef54facc994db651796467ea5c3dfd1d4b3066bcf332df1dfe0b64ec60771a0",
+        "bom_ids_types_colors_poses_match": true
+      }
+    },
+    {
+      "character": "copilot",
+      "variant": "baseline-r3",
+      "candidate_id": "copilot-baseline-r3",
+      "baseline_candidate_id": "copilot-practical8",
+      "pitch_mm": 8,
+      "stud_diameter_mm": 4.8,
+      "metrics": {
+        "part_count": 695,
+        "unique_types": 86,
+        "small_part_count": 10,
+        "small_part_definition": "8 mm格子1セルの1×1部品。新しい1×1チップは追加していません。",
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "dimensions_mm": [
+          247.8,
+          199.8,
+          181.0
+        ],
+        "plate_parts": 85,
+        "assembly_step_count": 695,
+        "common_parts": 567,
+        "contour_or_slope_parts": 128
+      },
+      "images": {
+        "perspective": {
+          "path": "/artifacts/studies/shape-study-20260920/copilot-baseline-r3-three_quarter.jpg",
+          "sha256": "dbd4f077cb3c78cc288550792e1b6ad3ba2027beb96f2723e7a04dd002e97980",
+          "bytes": 126150,
+          "comparison_group": "shape-study-20260920-copilot-three_quarter",
+          "source_render_sha256": "dfabcd38efc96cb844251e4a4644576eb0bccbab14bcd05a99d552941ca038d8"
+        },
+        "front": {
+          "path": "/artifacts/studies/shape-study-20260920/copilot-baseline-r3-front.jpg",
+          "sha256": "72bfdf0270850901583145d6b84a54a8fdab804228ec9e9f18c955fb54b24bb1",
+          "bytes": 83802,
+          "comparison_group": "shape-study-20260920-copilot-front",
+          "source_render_sha256": "4bdc488273a73b34bc9af1b430bed5b3e8c463aa142abfab662e09a39ab0a88c"
+        }
+      },
+      "appearance_changes": [
+        "基準形状を無変更で再描画"
+      ],
+      "assembly_tradeoffs": [
+        "現行の比較基準。実機嵌合・保持力・扱いやすさが合格済みという意味ではありません。"
+      ],
+      "evidence": {
+        "manifest_sha256": "f91c692f911118e4aa5a70cd0520758ea2effc2c992b6d878f7fb461fe829c3e",
+        "bom_sha256": "6f6edb356648d02a0213c474567d7684ab2b010602ee458b674e9883e4df350e",
+        "native_geometry_sha256": "89cb9dc656d01b4614268982d1812823151450f4ae7a9147fc35e662fa31044d",
+        "counted_instances": 695,
+        "count_method": "Actual assembly instances including internal supports/foundation; no fixture, trial or stage objects",
+        "baseline_identity_verified": true,
+        "id_pose_projection_sha256": "f48cd6521518233b5bf98e625b936644bec534baafc463cfd03513f0c0e50826",
+        "bom_ids_types_colors_poses_match": true
+      }
+    },
+    {
+      "character": "copilot",
+      "variant": "plate-refined",
+      "candidate_id": "copilot-plate-refined",
+      "baseline_candidate_id": "copilot-practical8",
+      "pitch_mm": 8,
+      "stud_diameter_mm": 4.8,
+      "metrics": {
+        "part_count": 916,
+        "unique_types": 143,
+        "small_part_count": 10,
+        "small_part_definition": "8 mm格子1セルの1×1部品。新しい1×1チップは追加していません。",
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "dimensions_mm": [
+          247.8,
+          199.8,
+          181.0
+        ],
+        "plate_parts": 434,
+        "assembly_step_count": 916,
+        "common_parts": 675,
+        "contour_or_slope_parts": 241
+      },
+      "images": {
+        "perspective": {
+          "path": "/artifacts/studies/shape-study-20260920/copilot-plate-refined-three_quarter.jpg",
+          "sha256": "c01f1483984ea9253193a78f5f39b9ec79351e66380228079e0efdfae7124983",
+          "bytes": 130547,
+          "comparison_group": "shape-study-20260920-copilot-three_quarter",
+          "source_render_sha256": "859ad499057992fb7acf2d52af27912018aa187307aaedb20b050386c7dda32c"
+        },
+        "front": {
+          "path": "/artifacts/studies/shape-study-20260920/copilot-plate-refined-front.jpg",
+          "sha256": "44f110926bdd0209e9d30b1c975f713fa03bdb09e6a4e871cfd1ba483691a561",
+          "bytes": 89679,
+          "comparison_group": "shape-study-20260920-copilot-front",
+          "source_render_sha256": "6a41e590b1832f20038a4dd4a6c19b5a56fa6b8036e0f05fa77fb50639a0453b"
+        }
+      },
+      "appearance_changes": [
+        "ヘルメット上面・側面とゴーグル周辺の露出した高さ段差を、3.2mmの段に分けます。プレート境界や露出スタッドも増えて見えます。"
+      ],
+      "assembly_tradeoffs": [
+        "段差を小さくする代わりに部品・積層手順が増えます。薄いプレートの扱いやすさや強度は未検証です。新しい1×1チップは追加しません。"
+      ],
+      "evidence": {
+        "manifest_sha256": "7093207d27771200102dcb0ffbee7864085efdc0888f5df77b737cbff55d9b87",
+        "bom_sha256": "16733cb022967c54e51c36c1f44014b6923a533476ea4963220b2ccd0bfd8151",
+        "native_geometry_sha256": "93f468c8e20d1a24e593df4f50dcb3ea918a4cf059feb52c08eb9774fb65c845",
+        "counted_instances": 916,
+        "count_method": "Actual assembly instances including internal supports/foundation; no fixture, trial or stage objects",
+        "baseline_identity_verified": false,
+        "id_pose_projection_sha256": "02ddada25051866de77cb00ef02f833e2c2c56beacf587f3e634833a5c8b8e75",
+        "bom_ids_types_colors_poses_match": true
+      }
+    },
+    {
+      "character": "copilot",
+      "variant": "contour-refined",
+      "candidate_id": "copilot-contour-refined",
+      "baseline_candidate_id": "copilot-practical8",
+      "pitch_mm": 8,
+      "stud_diameter_mm": 4.8,
+      "metrics": {
+        "part_count": 695,
+        "unique_types": 94,
+        "small_part_count": 10,
+        "small_part_definition": "8 mm格子1セルの1×1部品。新しい1×1チップは追加していません。",
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "dimensions_mm": [
+          247.8,
+          199.8,
+          181.0
+        ],
+        "plate_parts": 85,
+        "assembly_step_count": 695,
+        "common_parts": 531,
+        "contour_or_slope_parts": 164
+      },
+      "images": {
+        "perspective": {
+          "path": "/artifacts/studies/shape-study-20260920/copilot-contour-refined-three_quarter.jpg",
+          "sha256": "41293dd03904a94808c8f8a7ff6ad9ccd32798aea9c0173a354b76b6d085590c",
+          "bytes": 124162,
+          "comparison_group": "shape-study-20260920-copilot-three_quarter",
+          "source_render_sha256": "7f6391ec4df1879b2cfe61699515ebbc3dc87dac73f43283407864f72031f719"
+        },
+        "front": {
+          "path": "/artifacts/studies/shape-study-20260920/copilot-contour-refined-front.jpg",
+          "sha256": "87852ab7c3d87bd00a6a99f363fc7c024d4ef9590587de2a9e7e61168ff3d8e4",
+          "bytes": 85183,
+          "comparison_group": "shape-study-20260920-copilot-front",
+          "source_render_sha256": "b02366103eb3196567180f23c11d81b31cd6b2fdcc070438a708786708ba40d7"
+        }
+      },
+      "appearance_changes": [
+        "ヘルメット上面・側面とゴーグル周辺の露出した高さ段差を、実体の斜面で置き換えます。全ての段や顔の8mm格子が消えるわけではありません。"
+      ],
+      "assembly_tradeoffs": [
+        "一対一の置換なので部品数は同じですが、専用型が増えます。斜面下の屋根を厚くし下面空洞を浅くしています。材料量・スライス時間・保持力は未確認です。"
+      ],
+      "evidence": {
+        "manifest_sha256": "04826c8996271df770cfad248f0c7a86ffdfdb7b4984e0e4037b4c6b2793b69c",
+        "bom_sha256": "2551931e1a5c17145a1edd7d0292c9ce609639231fce995d8c78dd717046292e",
+        "native_geometry_sha256": "29f971c034dfd5d16414ca48ab2d62ab8fde80c87222e31504f3b2ccde91d6ed",
+        "counted_instances": 695,
+        "count_method": "Actual assembly instances including internal supports/foundation; no fixture, trial or stage objects",
+        "baseline_identity_verified": false,
+        "id_pose_projection_sha256": "a7097d481616f85ec68cedf4beb10d513402894cc49fbcf36244c4ccfffe19af",
+        "bom_ids_types_colors_poses_match": true
+      }
+    },
+    {
+      "character": "ducky",
+      "variant": "baseline-r3",
+      "candidate_id": "ducky-baseline-r3",
+      "baseline_candidate_id": "ducky-practical8",
+      "pitch_mm": 8,
+      "stud_diameter_mm": 4.8,
+      "metrics": {
+        "part_count": 413,
+        "unique_types": 56,
+        "small_part_count": 0,
+        "small_part_definition": "8 mm格子1セルの1×1部品。新しい1×1チップは追加していません。",
+        "minimum_part_mm": [
+          7.8,
+          15.8,
+          3.2
+        ],
+        "dimensions_mm": [
+          151.8,
+          215.8,
+          181.0
+        ],
+        "plate_parts": 48,
+        "assembly_step_count": 413,
+        "common_parts": 362,
+        "contour_or_slope_parts": 51
+      },
+      "images": {
+        "perspective": {
+          "path": "/artifacts/studies/shape-study-20260920/ducky-baseline-r3-three_quarter.jpg",
+          "sha256": "a295c97c302da4b23e3ec0203fa1541873f8f4e07a6b5ae06c3381aacd982379",
+          "bytes": 107526,
+          "comparison_group": "shape-study-20260920-ducky-three_quarter",
+          "source_render_sha256": "f40c3b202c0b124c5d68932cf7378d136157fb04c630dcca19bdf58984ca5a32"
+        },
+        "front": {
+          "path": "/artifacts/studies/shape-study-20260920/ducky-baseline-r3-front.jpg",
+          "sha256": "92321a0bce1348f958b6985b017f87bb031cd5abcb45fe8540823be29152e267",
+          "bytes": 118085,
+          "comparison_group": "shape-study-20260920-ducky-front",
+          "source_render_sha256": "a9cef092a0bc1e5e6a74eb99d50706b3d80f7520bd04d9db10f479a3d810220f"
+        }
+      },
+      "appearance_changes": [
+        "基準形状を無変更で再描画"
+      ],
+      "assembly_tradeoffs": [
+        "現行の比較基準。実機嵌合・保持力・扱いやすさが合格済みという意味ではありません。"
+      ],
+      "evidence": {
+        "manifest_sha256": "74dbf3646b57a94ad37394d5240c22645d103aa712aa2faa7f44c5ce6762e438",
+        "bom_sha256": "dca56daacb52e6e219fae633608170362093087c5aa715a7d57a852005878060",
+        "native_geometry_sha256": "bef80b64ef8a37598241026740896dffca162ba86b4e2f062453ee13985af0f8",
+        "counted_instances": 413,
+        "count_method": "Actual assembly instances including internal supports/foundation; no fixture, trial or stage objects",
+        "baseline_identity_verified": true,
+        "id_pose_projection_sha256": "c3d104125ffb9ad1a07a6568c796b7a9ae0e444061e7ef66bfcfc8bf5adce69f",
+        "bom_ids_types_colors_poses_match": true
+      }
+    },
+    {
+      "character": "ducky",
+      "variant": "plate-refined",
+      "candidate_id": "ducky-plate-refined",
+      "baseline_candidate_id": "ducky-practical8",
+      "pitch_mm": 8,
+      "stud_diameter_mm": 4.8,
+      "metrics": {
+        "part_count": 522,
+        "unique_types": 93,
+        "small_part_count": 0,
+        "small_part_definition": "8 mm格子1セルの1×1部品。新しい1×1チップは追加していません。",
+        "minimum_part_mm": [
+          7.8,
+          15.8,
+          3.2
+        ],
+        "dimensions_mm": [
+          151.8,
+          215.8,
+          181.0
+        ],
+        "plate_parts": 222,
+        "assembly_step_count": 522,
+        "common_parts": 413,
+        "contour_or_slope_parts": 109
+      },
+      "images": {
+        "perspective": {
+          "path": "/artifacts/studies/shape-study-20260920/ducky-plate-refined-three_quarter.jpg",
+          "sha256": "8dacb351e1cfe73e0da35bc90104e1c60a689125d334ce47ce1adaa58bdee783",
+          "bytes": 111329,
+          "comparison_group": "shape-study-20260920-ducky-three_quarter",
+          "source_render_sha256": "fbd5bdc276f77548e6b42789fd16bf78b6f0bf1817896a04984c81fe68c0b5a4"
+        },
+        "front": {
+          "path": "/artifacts/studies/shape-study-20260920/ducky-plate-refined-front.jpg",
+          "sha256": "9001b908e51bcc2ae6d589b7f5a74812b18be45bf850c75d9aa3d3ab1961fe1b",
+          "bytes": 124572,
+          "comparison_group": "shape-study-20260920-ducky-front",
+          "source_render_sha256": "44f48f103b76bd992e3e56337b9438c227c847456e55d3497609c22f58e58378"
+        }
+      },
+      "appearance_changes": [
+        "頭頂・胴上面とくちばし周辺の露出した高さ段差を、3.2mmの段に分けます。プレート境界や露出スタッドも増えて見えます。"
+      ],
+      "assembly_tradeoffs": [
+        "段差を小さくする代わりに部品・積層手順が増えます。薄いプレートの扱いやすさや強度は未検証です。新しい1×1チップは追加しません。"
+      ],
+      "evidence": {
+        "manifest_sha256": "5b0964d3858f92029b03dc30ab41ec9a84e502503da80e08e55888be61944f5e",
+        "bom_sha256": "632a2e61b89785516ecc0d5e1a5e00d7bdc0a2b415a551ccb9f68b5c1c8fac6d",
+        "native_geometry_sha256": "f540f06af04eaeb73a5340b8044467e71817f99527b0da93ff5a47f74305034c",
+        "counted_instances": 522,
+        "count_method": "Actual assembly instances including internal supports/foundation; no fixture, trial or stage objects",
+        "baseline_identity_verified": false,
+        "id_pose_projection_sha256": "7eba6aa546cd4a3487f65746195d0ebdbd0592da94d01875605960a7ba4f7d1b",
+        "bom_ids_types_colors_poses_match": true
+      }
+    },
+    {
+      "character": "ducky",
+      "variant": "contour-refined",
+      "candidate_id": "ducky-contour-refined",
+      "baseline_candidate_id": "ducky-practical8",
+      "pitch_mm": 8,
+      "stud_diameter_mm": 4.8,
+      "metrics": {
+        "part_count": 413,
+        "unique_types": 67,
+        "small_part_count": 0,
+        "small_part_definition": "8 mm格子1セルの1×1部品。新しい1×1チップは追加していません。",
+        "minimum_part_mm": [
+          7.8,
+          15.8,
+          3.2
+        ],
+        "dimensions_mm": [
+          151.8,
+          215.8,
+          181.0
+        ],
+        "plate_parts": 48,
+        "assembly_step_count": 413,
+        "common_parts": 326,
+        "contour_or_slope_parts": 87
+      },
+      "images": {
+        "perspective": {
+          "path": "/artifacts/studies/shape-study-20260920/ducky-contour-refined-three_quarter.jpg",
+          "sha256": "f6ecf3720586da3190ddb0adfd5d1d5f9e7ff23eb416bac80d17a528aa8cdf17",
+          "bytes": 105652,
+          "comparison_group": "shape-study-20260920-ducky-three_quarter",
+          "source_render_sha256": "8cad5d6756fddbcf9a079d9a967d457c1dd3346d6bc7d3457ac06043c0bd565d"
+        },
+        "front": {
+          "path": "/artifacts/studies/shape-study-20260920/ducky-contour-refined-front.jpg",
+          "sha256": "5721fb19b8995d98723354221c2fc9d0e1d1af87936a9248be09c32575d2ff23",
+          "bytes": 119041,
+          "comparison_group": "shape-study-20260920-ducky-front",
+          "source_render_sha256": "40e6a0cd8b81a77a4f5615261f3243f25663b382c1650cf2a06a7fd1ba4c4256"
+        }
+      },
+      "appearance_changes": [
+        "頭頂・胴上面とくちばし周辺の露出した高さ段差を、実体の斜面で置き換えます。全ての段や顔の8mm格子が消えるわけではありません。"
+      ],
+      "assembly_tradeoffs": [
+        "一対一の置換なので部品数は同じですが、専用型が増えます。斜面下の屋根を厚くし下面空洞を浅くしています。材料量・スライス時間・保持力は未確認です。"
+      ],
+      "evidence": {
+        "manifest_sha256": "ea44c4e529d123506cabbc4227e4af571f41a7e1753915814c61356a2adf9784",
+        "bom_sha256": "87ec617b802a2683dc2a594120a58490e868dc4525db013d610b84e835ca67aa",
+        "native_geometry_sha256": "0a2fd3dbfd856c98aba6dcf354e5e4e4fa74b099017bedb9713be07bc066b050",
+        "counted_instances": 413,
+        "count_method": "Actual assembly instances including internal supports/foundation; no fixture, trial or stage objects",
+        "baseline_identity_verified": false,
+        "id_pose_projection_sha256": "97e892b06daf9069c73786b9d937759cf8ec49b1de2f3d0bfd6ba197ab28f64c",
+        "bom_ids_types_colors_poses_match": true
+      }
+    }
+  ],
+  "camera_conditions": {
+    "shape-study-20260920-mona-three_quarter": {
+      "camera_group_id": "shape-study-20260920-mona-three_quarter",
+      "character": "mona",
+      "view": "three_quarter",
+      "projection": "ORTHOGRAPHIC",
+      "target_mm": [
+        0.0,
+        0.0,
+        90.5
+      ],
+      "position_mm": [
+        232.01792093,
+        -546.59996795,
+        354.878818
+      ],
+      "ortho_scale_mm": 311.91565065,
+      "image_size_px": [
+        1100,
+        1100
+      ],
+      "pixels_per_mm_in_image_plane": 3.5265944421439377,
+      "geometry_scale_m_per_mm": 0.001,
+      "color_management": {
+        "view_transform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.30000001192092896
+      },
+      "material_preview": {
+        "roughness": 0.65,
+        "specular_ior_level": 0.0,
+        "purpose": "Uniform matte diagnostic material; preserve base colors and avoid specular highlights resembling new white parts"
+      },
+      "framing": "Computed once from immutable r3 bounds; never auto-fit or re-center an individual study variant",
+      "camera_condition_sha256": "a97b8a0379e10c8a5e73b4ac12821a276a1363b9f554a3aadb844d7c80cce379",
+      "camera_matrix_world_m": [
+        [
+          0.9205048680305481,
+          -0.15892469882965088,
+          0.3569505512714386,
+          0.23201791942119598
+        ],
+        [
+          0.3907310366630554,
+          0.3744032382965088,
+          -0.840923011302948,
+          -0.5465999841690063
+        ],
+        [
+          -1.1113123754569187e-08,
+          0.9135453701019287,
+          0.406736820936203,
+          0.35487884283065796
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "lighting": [
+        {
+          "name": "Large soft key",
+          "kind": "AREA",
+          "position_m": [
+            0.15000000596046448,
+            -0.4000000059604645,
+            0.550000011920929
+          ],
+          "rotation_rad": [
+            0.7484449148178101,
+            3.524262126575195e-08,
+            0.3587706983089447
+          ],
+          "energy": 10.0,
+          "size_m": 0.3799999952316284
+        },
+        {
+          "name": "Broad fill",
+          "kind": "AREA",
+          "position_m": [
+            -0.3499999940395355,
+            -0.11999999731779099,
+            0.2800000011920929
+          ],
+          "rotation_rad": [
+            1.0963964462280273,
+            -6.112402672897588e-08,
+            -1.2404991388320923
+          ],
+          "energy": 4.0,
+          "size_m": 0.3199999928474426
+        },
+        {
+          "name": "Contour light",
+          "kind": "AREA",
+          "position_m": [
+            0.10000000149011612,
+            0.3499999940395355,
+            0.5
+          ],
+          "rotation_rad": [
+            0.7260439395904541,
+            4.854819835031776e-08,
+            2.863292932510376
+          ],
+          "energy": 12.0,
+          "size_m": 0.2800000011920929
+        }
+      ],
+      "world_lighting": {
+        "background_rgba": [
+          0.6800000071525574,
+          0.7599999904632568,
+          0.8600000143051147,
+          1.0
+        ],
+        "strength": 0.3499999940395355
+      },
+      "palette_sha256": "4be6f976dc4f0bac62f19b0f6d2c5d8d04e056b17f7cb1433009bbf3418fc110"
+    },
+    "shape-study-20260920-mona-front": {
+      "camera_group_id": "shape-study-20260920-mona-front",
+      "character": "mona",
+      "view": "front",
+      "projection": "ORTHOGRAPHIC",
+      "target_mm": [
+        0.0,
+        0.0,
+        90.5
+      ],
+      "position_mm": [
+        0.0,
+        -650.0,
+        90.5
+      ],
+      "ortho_scale_mm": 239.76,
+      "image_size_px": [
+        1100,
+        1100
+      ],
+      "pixels_per_mm_in_image_plane": 4.587921254587921,
+      "geometry_scale_m_per_mm": 0.001,
+      "color_management": {
+        "view_transform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.30000001192092896
+      },
+      "material_preview": {
+        "roughness": 0.65,
+        "specular_ior_level": 0.0,
+        "purpose": "Uniform matte diagnostic material; preserve base colors and avoid specular highlights resembling new white parts"
+      },
+      "framing": "Computed once from immutable r3 bounds; never auto-fit or re-center an individual study variant",
+      "camera_condition_sha256": "3baa3692a2c0f009db1adf8c825a8c84eb3b26d16949e395226fb62423f2c82e",
+      "camera_matrix_world_m": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654e-07,
+          -1.0,
+          -0.6500000357627869
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654e-07,
+          0.09050000458955765
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "lighting": [
+        {
+          "name": "Large soft key",
+          "kind": "AREA",
+          "position_m": [
+            0.15000000596046448,
+            -0.4000000059604645,
+            0.550000011920929
+          ],
+          "rotation_rad": [
+            0.7484449148178101,
+            3.524262126575195e-08,
+            0.3587706983089447
+          ],
+          "energy": 10.0,
+          "size_m": 0.3799999952316284
+        },
+        {
+          "name": "Broad fill",
+          "kind": "AREA",
+          "position_m": [
+            -0.3499999940395355,
+            -0.11999999731779099,
+            0.2800000011920929
+          ],
+          "rotation_rad": [
+            1.0963964462280273,
+            -6.112402672897588e-08,
+            -1.2404991388320923
+          ],
+          "energy": 4.0,
+          "size_m": 0.3199999928474426
+        },
+        {
+          "name": "Contour light",
+          "kind": "AREA",
+          "position_m": [
+            0.10000000149011612,
+            0.3499999940395355,
+            0.5
+          ],
+          "rotation_rad": [
+            0.7260439395904541,
+            4.854819835031776e-08,
+            2.863292932510376
+          ],
+          "energy": 12.0,
+          "size_m": 0.2800000011920929
+        }
+      ],
+      "world_lighting": {
+        "background_rgba": [
+          0.6800000071525574,
+          0.7599999904632568,
+          0.8600000143051147,
+          1.0
+        ],
+        "strength": 0.3499999940395355
+      },
+      "palette_sha256": "4be6f976dc4f0bac62f19b0f6d2c5d8d04e056b17f7cb1433009bbf3418fc110"
+    },
+    "shape-study-20260920-copilot-three_quarter": {
+      "camera_group_id": "shape-study-20260920-copilot-three_quarter",
+      "character": "copilot",
+      "view": "three_quarter",
+      "projection": "ORTHOGRAPHIC",
+      "target_mm": [
+        0.0,
+        0.0,
+        90.5
+      ],
+      "position_mm": [
+        232.01792093,
+        -546.59996795,
+        354.878818
+      ],
+      "ortho_scale_mm": 367.40301859,
+      "image_size_px": [
+        1100,
+        1100
+      ],
+      "pixels_per_mm_in_image_plane": 2.993987377190101,
+      "geometry_scale_m_per_mm": 0.001,
+      "color_management": {
+        "view_transform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.30000001192092896
+      },
+      "material_preview": {
+        "roughness": 0.65,
+        "specular_ior_level": 0.0,
+        "purpose": "Uniform matte diagnostic material; preserve base colors and avoid specular highlights resembling new white parts"
+      },
+      "framing": "Computed once from immutable r3 bounds; never auto-fit or re-center an individual study variant",
+      "camera_condition_sha256": "790cdf6361ce6b78850d64d2de56abc54641ef1015c7439b873b0bf6f8ee1bdc",
+      "camera_matrix_world_m": [
+        [
+          0.9205048680305481,
+          -0.15892469882965088,
+          0.3569505512714386,
+          0.23201791942119598
+        ],
+        [
+          0.3907310366630554,
+          0.3744032382965088,
+          -0.840923011302948,
+          -0.5465999841690063
+        ],
+        [
+          -1.1113123754569187e-08,
+          0.9135453701019287,
+          0.406736820936203,
+          0.35487884283065796
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "lighting": [
+        {
+          "name": "Large soft key",
+          "kind": "AREA",
+          "position_m": [
+            0.15000000596046448,
+            -0.4000000059604645,
+            0.550000011920929
+          ],
+          "rotation_rad": [
+            0.7484449148178101,
+            3.524262126575195e-08,
+            0.3587706983089447
+          ],
+          "energy": 10.0,
+          "size_m": 0.3799999952316284
+        },
+        {
+          "name": "Broad fill",
+          "kind": "AREA",
+          "position_m": [
+            -0.3499999940395355,
+            -0.11999999731779099,
+            0.2800000011920929
+          ],
+          "rotation_rad": [
+            1.0963964462280273,
+            -6.112402672897588e-08,
+            -1.2404991388320923
+          ],
+          "energy": 4.0,
+          "size_m": 0.3199999928474426
+        },
+        {
+          "name": "Contour light",
+          "kind": "AREA",
+          "position_m": [
+            0.10000000149011612,
+            0.3499999940395355,
+            0.5
+          ],
+          "rotation_rad": [
+            0.7260439395904541,
+            4.854819835031776e-08,
+            2.863292932510376
+          ],
+          "energy": 12.0,
+          "size_m": 0.2800000011920929
+        }
+      ],
+      "world_lighting": {
+        "background_rgba": [
+          0.6800000071525574,
+          0.7599999904632568,
+          0.8600000143051147,
+          1.0
+        ],
+        "strength": 0.3499999940395355
+      },
+      "palette_sha256": "c4ea5025b3fefdc2a42b2687bddc216779932921d77c07f734439694e251c511"
+    },
+    "shape-study-20260920-copilot-front": {
+      "camera_group_id": "shape-study-20260920-copilot-front",
+      "character": "copilot",
+      "view": "front",
+      "projection": "ORTHOGRAPHIC",
+      "target_mm": [
+        0.0,
+        0.0,
+        90.5
+      ],
+      "position_mm": [
+        0.0,
+        -650.0,
+        90.5
+      ],
+      "ortho_scale_mm": 297.36,
+      "image_size_px": [
+        1100,
+        1100
+      ],
+      "pixels_per_mm_in_image_plane": 3.699219800914716,
+      "geometry_scale_m_per_mm": 0.001,
+      "color_management": {
+        "view_transform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.30000001192092896
+      },
+      "material_preview": {
+        "roughness": 0.65,
+        "specular_ior_level": 0.0,
+        "purpose": "Uniform matte diagnostic material; preserve base colors and avoid specular highlights resembling new white parts"
+      },
+      "framing": "Computed once from immutable r3 bounds; never auto-fit or re-center an individual study variant",
+      "camera_condition_sha256": "7e625acfe2ff0645f4818932946cf0888e8a2818c95afcd5460f3409ddf15da3",
+      "camera_matrix_world_m": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654e-07,
+          -1.0,
+          -0.6500000357627869
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654e-07,
+          0.09050000458955765
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "lighting": [
+        {
+          "name": "Large soft key",
+          "kind": "AREA",
+          "position_m": [
+            0.15000000596046448,
+            -0.4000000059604645,
+            0.550000011920929
+          ],
+          "rotation_rad": [
+            0.7484449148178101,
+            3.524262126575195e-08,
+            0.3587706983089447
+          ],
+          "energy": 10.0,
+          "size_m": 0.3799999952316284
+        },
+        {
+          "name": "Broad fill",
+          "kind": "AREA",
+          "position_m": [
+            -0.3499999940395355,
+            -0.11999999731779099,
+            0.2800000011920929
+          ],
+          "rotation_rad": [
+            1.0963964462280273,
+            -6.112402672897588e-08,
+            -1.2404991388320923
+          ],
+          "energy": 4.0,
+          "size_m": 0.3199999928474426
+        },
+        {
+          "name": "Contour light",
+          "kind": "AREA",
+          "position_m": [
+            0.10000000149011612,
+            0.3499999940395355,
+            0.5
+          ],
+          "rotation_rad": [
+            0.7260439395904541,
+            4.854819835031776e-08,
+            2.863292932510376
+          ],
+          "energy": 12.0,
+          "size_m": 0.2800000011920929
+        }
+      ],
+      "world_lighting": {
+        "background_rgba": [
+          0.6800000071525574,
+          0.7599999904632568,
+          0.8600000143051147,
+          1.0
+        ],
+        "strength": 0.3499999940395355
+      },
+      "palette_sha256": "c4ea5025b3fefdc2a42b2687bddc216779932921d77c07f734439694e251c511"
+    },
+    "shape-study-20260920-ducky-three_quarter": {
+      "camera_group_id": "shape-study-20260920-ducky-three_quarter",
+      "character": "ducky",
+      "view": "three_quarter",
+      "projection": "ORTHOGRAPHIC",
+      "target_mm": [
+        0.0,
+        0.0,
+        90.5
+      ],
+      "position_mm": [
+        232.01792093,
+        -546.59996795,
+        354.878818
+      ],
+      "ortho_scale_mm": 324.32720571,
+      "image_size_px": [
+        1100,
+        1100
+      ],
+      "pixels_per_mm_in_image_plane": 3.391636534443474,
+      "geometry_scale_m_per_mm": 0.001,
+      "color_management": {
+        "view_transform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.30000001192092896
+      },
+      "material_preview": {
+        "roughness": 0.65,
+        "specular_ior_level": 0.0,
+        "purpose": "Uniform matte diagnostic material; preserve base colors and avoid specular highlights resembling new white parts"
+      },
+      "framing": "Computed once from immutable r3 bounds; never auto-fit or re-center an individual study variant",
+      "camera_condition_sha256": "f16e9ed0497cbb059ee6e63213b8458137f575f8891e697d87cb3c395e56dc30",
+      "camera_matrix_world_m": [
+        [
+          0.9205048680305481,
+          -0.15892469882965088,
+          0.3569505512714386,
+          0.23201791942119598
+        ],
+        [
+          0.3907310366630554,
+          0.3744032382965088,
+          -0.840923011302948,
+          -0.5465999841690063
+        ],
+        [
+          -1.1113123754569187e-08,
+          0.9135453701019287,
+          0.406736820936203,
+          0.35487884283065796
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "lighting": [
+        {
+          "name": "Large soft key",
+          "kind": "AREA",
+          "position_m": [
+            0.15000000596046448,
+            -0.4000000059604645,
+            0.550000011920929
+          ],
+          "rotation_rad": [
+            0.7484449148178101,
+            3.524262126575195e-08,
+            0.3587706983089447
+          ],
+          "energy": 10.0,
+          "size_m": 0.3799999952316284
+        },
+        {
+          "name": "Broad fill",
+          "kind": "AREA",
+          "position_m": [
+            -0.3499999940395355,
+            -0.11999999731779099,
+            0.2800000011920929
+          ],
+          "rotation_rad": [
+            1.0963964462280273,
+            -6.112402672897588e-08,
+            -1.2404991388320923
+          ],
+          "energy": 4.0,
+          "size_m": 0.3199999928474426
+        },
+        {
+          "name": "Contour light",
+          "kind": "AREA",
+          "position_m": [
+            0.10000000149011612,
+            0.3499999940395355,
+            0.5
+          ],
+          "rotation_rad": [
+            0.7260439395904541,
+            4.854819835031776e-08,
+            2.863292932510376
+          ],
+          "energy": 12.0,
+          "size_m": 0.2800000011920929
+        }
+      ],
+      "world_lighting": {
+        "background_rgba": [
+          0.6800000071525574,
+          0.7599999904632568,
+          0.8600000143051147,
+          1.0
+        ],
+        "strength": 0.3499999940395355
+      },
+      "palette_sha256": "a38808e2a129660dad53a192a3e95c3084afdee3e78ad85bb9ad2097baee06e4"
+    },
+    "shape-study-20260920-ducky-front": {
+      "camera_group_id": "shape-study-20260920-ducky-front",
+      "character": "ducky",
+      "view": "front",
+      "projection": "ORTHOGRAPHIC",
+      "target_mm": [
+        0.0,
+        0.0,
+        90.5
+      ],
+      "position_mm": [
+        0.0,
+        -650.0,
+        90.5
+      ],
+      "ortho_scale_mm": 217.2,
+      "image_size_px": [
+        1100,
+        1100
+      ],
+      "pixels_per_mm_in_image_plane": 5.064456721915286,
+      "geometry_scale_m_per_mm": 0.001,
+      "color_management": {
+        "view_transform": "AgX",
+        "look": "AgX - Medium High Contrast",
+        "exposure": -0.30000001192092896
+      },
+      "material_preview": {
+        "roughness": 0.65,
+        "specular_ior_level": 0.0,
+        "purpose": "Uniform matte diagnostic material; preserve base colors and avoid specular highlights resembling new white parts"
+      },
+      "framing": "Computed once from immutable r3 bounds; never auto-fit or re-center an individual study variant",
+      "camera_condition_sha256": "25aa238c2c06f89c5acdb11b6f14c1f435462b3d934480c65614dd9f79836bd3",
+      "camera_matrix_world_m": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654e-07,
+          -1.0,
+          -0.6500000357627869
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654e-07,
+          0.09050000458955765
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "lighting": [
+        {
+          "name": "Large soft key",
+          "kind": "AREA",
+          "position_m": [
+            0.15000000596046448,
+            -0.4000000059604645,
+            0.550000011920929
+          ],
+          "rotation_rad": [
+            0.7484449148178101,
+            3.524262126575195e-08,
+            0.3587706983089447
+          ],
+          "energy": 10.0,
+          "size_m": 0.3799999952316284
+        },
+        {
+          "name": "Broad fill",
+          "kind": "AREA",
+          "position_m": [
+            -0.3499999940395355,
+            -0.11999999731779099,
+            0.2800000011920929
+          ],
+          "rotation_rad": [
+            1.0963964462280273,
+            -6.112402672897588e-08,
+            -1.2404991388320923
+          ],
+          "energy": 4.0,
+          "size_m": 0.3199999928474426
+        },
+        {
+          "name": "Contour light",
+          "kind": "AREA",
+          "position_m": [
+            0.10000000149011612,
+            0.3499999940395355,
+            0.5
+          ],
+          "rotation_rad": [
+            0.7260439395904541,
+            4.854819835031776e-08,
+            2.863292932510376
+          ],
+          "energy": 12.0,
+          "size_m": 0.2800000011920929
+        }
+      ],
+      "world_lighting": {
+        "background_rgba": [
+          0.6800000071525574,
+          0.7599999904632568,
+          0.8600000143051147,
+          1.0
+        ],
+        "strength": 0.3499999940395355
+      },
+      "palette_sha256": "a38808e2a129660dad53a192a3e95c3084afdee3e78ad85bb9ad2097baee06e4"
+    }
+  },
+  "appearance_limit": "これは形の差と個数を比べる資料で、A/Bの美観・扱いやすさが合格という判定ではありません。8mmのXY格子と目・口などの粗さは残ります。",
+  "render_note": "形を見るため全案を同じマット材質で描画しています。ベース色は元パレットのままで、斜面だけを白い部品へ変更していません。",
+  "comparisons": [
+    {
+      "character": "mona",
+      "view": "three_quarter",
+      "path": "/artifacts/studies/shape-study-20260920/mona-three_quarter-comparison.jpg",
+      "sha256": "3adbd0c354373983c3b709acc8819fc157e11c99f51fd270e6a1c50cbcae6622"
+    },
+    {
+      "character": "copilot",
+      "view": "three_quarter",
+      "path": "/artifacts/studies/shape-study-20260920/copilot-three_quarter-comparison.jpg",
+      "sha256": "c95c4431d8056d21c614da00f572bc43b3fd06a518a871674b752c97623cc43b"
+    },
+    {
+      "character": "ducky",
+      "view": "three_quarter",
+      "path": "/artifacts/studies/shape-study-20260920/ducky-three_quarter-comparison.jpg",
+      "sha256": "45fc5356423fd55ffb21265db80d51eddf39d78df6e4b2c4b0279aadeb76bfcf"
+    },
+    {
+      "character": "all",
+      "view": "three_quarter",
+      "path": "/artifacts/studies/shape-study-20260920/all-characters-three_quarter-comparison.jpg",
+      "sha256": "3d6002805c7c9314f516335bd9c2358c2ebb6596dd56d12a2a112b56d061315f"
+    },
+    {
+      "character": "mona",
+      "view": "front",
+      "path": "/artifacts/studies/shape-study-20260920/mona-front-comparison.jpg",
+      "sha256": "8cce58c7fba7f360a2648cab18abb933ce488573df8a32d9c8e6a42d40abd309"
+    },
+    {
+      "character": "copilot",
+      "view": "front",
+      "path": "/artifacts/studies/shape-study-20260920/copilot-front-comparison.jpg",
+      "sha256": "4670f78a2cd41fb31448d7546c621e65a6f6a83c169ca1a9ba52351674982187"
+    },
+    {
+      "character": "ducky",
+      "view": "front",
+      "path": "/artifacts/studies/shape-study-20260920/ducky-front-comparison.jpg",
+      "sha256": "385384ec334693ae094e131bc246fc0977950723df42eb22e4cd53c501658cd8"
+    },
+    {
+      "character": "all",
+      "view": "front",
+      "path": "/artifacts/studies/shape-study-20260920/all-characters-front-comparison.jpg",
+      "sha256": "ece0e8c92b3e797d2db7b803d82814440fdb159b5b182c4c293ab4034e83c9fc"
+    }
+  ]
+}

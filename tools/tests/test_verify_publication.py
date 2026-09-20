@@ -6,7 +6,7 @@ import unittest
 from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from verify_publication import BASE, request_url, verify_bytes
+from verify_publication import BASE, request_url, require_unchanged_catalog, verify_bytes
 
 
 class PublicVerificationTests(unittest.TestCase):
@@ -46,6 +46,18 @@ class PublicVerificationTests(unittest.TestCase):
         self.assertTrue(result.startswith(BASE + "artifacts/"))
         self.assertNotIn(" ", result)
         self.assertIn("%E5%AF%B8", result)
+
+    def test_study_can_avoid_large_release_downloads_only_for_an_unchanged_catalog(self):
+        path = "archive/releases/unit-only.json"
+        old = {path: "a" * 64}
+        inventory = {"files": [{"path": path, "sha256": "a" * 64}]}
+        require_unchanged_catalog(old, inventory, path)
+        for previous, current in [
+            ({}, inventory), (old, {"files": []}),
+            (old, {"files": [{"path": path, "sha256": "b" * 64}]}),
+        ]:
+            with self.assertRaisesRegex(ValueError, "preserve the existing release catalog"):
+                require_unchanged_catalog(previous, current, path)
 
 
 if __name__ == "__main__":

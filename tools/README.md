@@ -120,3 +120,18 @@ READY後だけ、sourceの明示allowlist・固定commit・実manifest/BOM/nativ
 固定します。比較の増減は実instance数の差分で、型数・STL数とは区別します。
 最小短辺・長辺・厚みが別部品に由来する場合に、架空の最小XYZ部品を表示しないよう各最小値と明記します。
 `validate_shape_study.py` が画像の実hashと軽量payload予算、current r3不変を確認します。
+
+公開済みスタディの原本は `artifacts/studies/shape-study-20260920/study.json`、
+表示用の明示変換は同じ場所の `public-study.json` です。32個の許可ファイルは元バイトを保持し、
+表示用summaryを加えた33ファイルは約5.14 MiBです。
+`import_shape_study.py --handoff <private-ready-receipt>` は、そのreceiptとallowlistのhashを確認し、
+明示された実manifest/BOMのID・型・色・配置・個数を読み取り専用で照合しました。
+receiptや絶対パスは公開せず、パスなしの照合記録を `archive/sources/` に残します。
+取り込み済みフォルダーの上書きは拒否します。
+
+`browser_shape_options.py` は日英の9行、3体×2視点、実画像、数量・型数・各最小値、
+言語切替・共有URL・再読み込み、390px表示と通信失敗を確認します。
+`verify_publication.py --study shape-study-20260920` は通常の `--revision`・公開commit指定に加え、
+新しい比較のREADY/未採用/未検証状態を匿名で確認します。現在版と既存Releaseカタログに変更があれば失敗し、
+不変の大型ZIPを再ダウンロードせず、今回追加・変更した画像・summary・UIだけを全件hash照合します。
+比較を追加するだけの場合、現行registryや正式Releaseを更新しません。

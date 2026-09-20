@@ -1,0 +1,10 @@
+character,variant_id,physical_piece_count,baseline_count,delta,unique_types,common_parts,contour_or_slope_parts,plate_parts,one_by_one_exceptions,min_xy_short_mm,min_xy_long_mm,min_body_height_mm,height_mm,layer_count,assembly_step_count
+mona,baseline-r3,519,519,0,68,412,107,50,5,7.8,7.8,3.2,181.0,20,519
+mona,plate-refined,670,519,151,112,484,186,291,5,7.8,7.8,3.2,181.0,50,670
+mona,contour-refined,519,519,0,78,376,143,50,5,7.8,7.8,3.2,181.0,20,519
+copilot,baseline-r3,695,695,0,86,567,128,85,10,7.8,7.8,3.2,181.0,20,695
+copilot,plate-refined,916,695,221,143,675,241,434,10,7.8,7.8,3.2,181.0,50,916
+copilot,contour-refined,695,695,0,94,531,164,85,10,7.8,7.8,3.2,181.0,20,695
+ducky,baseline-r3,413,413,0,56,362,51,48,0,7.8,15.8,3.2,181.0,20,413
+ducky,plate-refined,522,413,109,93,413,109,222,0,7.8,15.8,3.2,181.0,43,522
+ducky,contour-refined,413,413,0,67,326,87,48,0,7.8,15.8,3.2,181.0,20,413

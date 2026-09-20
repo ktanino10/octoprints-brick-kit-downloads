@@ -1,0 +1,21 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>形状と実際の部品数</title><style>*{box-sizing:border-box}body{font-family:system-ui,sans-serif;background:#e8eef4;color:#18344b;max-width:1500px;margin:auto;padding:26px;line-height:1.7;overflow-wrap:anywhere}img{width:100%;height:auto;display:block}section{background:white;padding:20px;margin:24px 0;border-radius:12px}table{border-collapse:collapse;width:100%;table-layout:fixed}th,td{text-align:left;padding:10px;border-bottom:1px solid #cad7e1}.status{background:#e1d9eb;padding:16px;border-left:5px solid #74618c}a{color:#295b99}@media(max-width:600px){body{padding:12px}th,td{padding:7px;font-size:12px}}</style>
+<h1>形状と実際の部品数</h1><p class="status">未採用の比較スタディ · 実物未検証 · NOT SLICED · 現行r3は変更しません</p>
+<p><a href="study.json">Actual metrics / camera conditions JSON</a> · <a href="comparison.csv">CSV</a> ·
+<a href="comparison-en.html">English</a></p>
+<p>実assembly instance数。内部支持/基礎を含み、治具・試験片・背景は含みません。型数、STL数、頂点数、色数とは別です。</p>
+<p>最小短辺・長辺・高さはそれぞれの最小値で、同じ一個の部品のXYZとは限りません。</p>
+<p>これは形の差と個数を比べる資料で、A/Bの美観・扱いやすさが合格という判定ではありません。8mmのXY格子と目・口などの粗さは残ります。</p>
+<section><h2>MONA</h2>
+<a href="mona-three_quarter-comparison.jpg"><img src="mona-three_quarter-comparison.jpg" alt="mona same-scale comparison"></a>
+<details><summary>正面から比較</summary><img src="mona-front-comparison.jpg" alt="mona front comparison"></details>
+<table><thead><tr><th>案</th><th>実部品数</th><th>Δ</th><th>型数</th><th>1×1</th></tr></thead><tbody><tr><td>現行r3</td><td>519</td><td>+0</td><td>68</td><td>5</td></tr><tr><td>A: プレート細分化</td><td>670</td><td>+151</td><td>112</td><td>5</td></tr><tr><td>B: 輪郭・斜面</td><td>519</td><td>+0</td><td>78</td><td>5</td></tr></tbody></table></section><section><h2>COPILOT</h2>
+<a href="copilot-three_quarter-comparison.jpg"><img src="copilot-three_quarter-comparison.jpg" alt="copilot same-scale comparison"></a>
+<details><summary>正面から比較</summary><img src="copilot-front-comparison.jpg" alt="copilot front comparison"></details>
+<table><thead><tr><th>案</th><th>実部品数</th><th>Δ</th><th>型数</th><th>1×1</th></tr></thead><tbody><tr><td>現行r3</td><td>695</td><td>+0</td><td>86</td><td>10</td></tr><tr><td>A: プレート細分化</td><td>916</td><td>+221</td><td>143</td><td>10</td></tr><tr><td>B: 輪郭・斜面</td><td>695</td><td>+0</td><td>94</td><td>10</td></tr></tbody></table></section><section><h2>DUCKY</h2>
+<a href="ducky-three_quarter-comparison.jpg"><img src="ducky-three_quarter-comparison.jpg" alt="ducky same-scale comparison"></a>
+<details><summary>正面から比較</summary><img src="ducky-front-comparison.jpg" alt="ducky front comparison"></details>
+<table><thead><tr><th>案</th><th>実部品数</th><th>Δ</th><th>型数</th><th>1×1</th></tr></thead><tbody><tr><td>現行r3</td><td>413</td><td>+0</td><td>56</td><td>0</td></tr><tr><td>A: プレート細分化</td><td>522</td><td>+109</td><td>93</td><td>0</td></tr><tr><td>B: 輪郭・斜面</td><td>413</td><td>+0</td><td>67</td><td>0</td></tr></tbody></table></section><h3>現行r3</h3><p>現行r3：9.6 mm主体の把持可能なブロック構成。基準形状と部品数を変更していません。</p><p>現行の比較基準。実機嵌合・保持力・扱いやすさが合格済みという意味ではありません。</p><h3>A: プレート細分化</h3><p>A：原型の輪郭が高さ方向に変わる表面だけを3.2 mmプレートへ細分化。下側の把持可能な背板と上側の接続を残し、内部の大きいブロックは再利用します。</p><p>段差を小さくする代わりに部品・積層手順が増えます。薄いプレートの扱いやすさや強度は未検証です。新しい1×1チップは追加しません。</p><h3>B: 輪郭・斜面</h3><p>B：露出した一列だけを実形状の斜面にしたブロックへ36個ずつ置換。Blenderの平滑化ではなく、下面接合を保つ独立した1ソリッド部品です。</p><p>一対一の置換なので部品数は同じですが、専用型が増えます。斜面下の屋根を厚くし下面空洞を浅くしています。材料量・スライス時間・保持力は未確認です。</p><p class="status">現r2は分割データです。一回で一体出力できる保証はなく、一体化には別のデータ化とスライス検証が必要です。今回その作業は行っていません。</p>
+<footer>Independent noncommercial adaptation of martinwoodward/octoprints @981a85f0bec9d1a9c280fd5719d0d797852229c4.
+<a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC4.0</a>. No GitHub/LEGO sponsorship or compatibility claim.
+Physical fit/retention UNKNOWN; no new trial or manufacturing release.</footer></html>

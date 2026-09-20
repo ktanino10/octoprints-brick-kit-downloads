@@ -46,11 +46,19 @@ def verify_bytes(url, size, digest):
     return {"url": url, "bytes": count, "sha256": actual.hexdigest(), "status": 200, "authentication": "none"}
 
 
+def require_unchanged_catalog(previous, inventory, path):
+    entry = next((entry for entry in inventory["files"] if entry["path"] == path), None)
+    if not entry or not previous.get(path) or previous[path] != entry["sha256"]:
+        raise ValueError("A shape-only publication must preserve the existing release catalog")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--revision", required=True)
     parser.add_argument("--expected-commit", required=True)
     parser.add_argument("--before", required=True, help="Exact public commit before this publication")
+    parser.add_argument("--study", choices=["shape-study-20260920"],
+                        help="Verify a lightweight study while requiring existing releases to remain unchanged")
     parser.add_argument("--report", type=Path, required=True)
     args = parser.parse_args()
     if not re.fullmatch(r"r3-[a-zA-Z0-9._-]+", args.revision):
@@ -86,6 +94,19 @@ def main():
     original = json.loads(subprocess.check_output(
         ["git", "-C", str(ROOT), "show", f"{args.before}:archive/inventory.json"], text=True))
     previous = {entry["path"]: entry["sha256"] for entry in original["files"]}
+    study = None
+    if args.study:
+        if original["current_revision"] != args.revision:
+            raise ValueError("A comparison must retain the previously adopted current revision")
+        require_unchanged_catalog(previous, inventory, current["bundle_index_url"].lstrip("/"))
+        study = get_json(BASE + "archive/shape-study.json")
+        expected_study = json.loads((ROOT / "archive/shape-study.json").read_text())
+        if study != expected_study or study["study_id"] != args.study or study["baseline_revision"] != args.revision:
+            raise ValueError("The live study record is stale or differs from its checked inputs")
+        for key, value in {"state": "READY", "selection": "UNSELECTED", "physical_fit": "UNKNOWN",
+                           "retention_strength": "UNKNOWN", "slicer_status": "NOT_SLICED", "full_print": "ON_HOLD"}.items():
+            if study.get(key) != value:
+                raise ValueError(f"Incorrect study publication or physical gate: {key}")
     changed = [entry for entry in inventory["files"] if previous.get(entry["path"]) != entry["sha256"]]
     with ThreadPoolExecutor(max_workers=4) as pool:
         futures = [pool.submit(verify_bytes, entry["url"], entry["bytes"], entry["sha256"]) for entry in changed]
@@ -95,7 +116,7 @@ def main():
     local_releases = json.loads((ROOT / current["bundle_index_url"].lstrip("/")).read_text())
     if releases != local_releases or releases["revision"] != args.revision:
         raise ValueError("Stale or wrong-revision release catalog")
-    bundles = [verify_bytes(entry["url"], entry["bytes"], entry["sha256"]) for entry in releases["bundles"]]
+    bundles = [] if args.study else [verify_bytes(entry["url"], entry["bytes"], entry["sha256"]) for entry in releases["bundles"]]
     routes = []
     definitions = json.loads((ROOT / "site/routes.json").read_text())
     for locale in ["ja", "en"]:
@@ -117,6 +138,8 @@ def main():
     args.report.parent.mkdir(parents=True, exist_ok=True)
     report = {"revision": args.revision, "deployment": deployment, "anonymous_routes": routes,
               "changed_files": files, "new_bundles": bundles, "video_range": video_range,
+              "study": study,
+              "unchanged_release_catalog_checked_without_redownloading_assets": bool(args.study),
               "old_binary_history_not_redownloaded": True, "physical_fit": "UNKNOWN",
               "slicing": "NOT_SLICED", "full_kit_printing": "ON_HOLD"}
     args.report.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")

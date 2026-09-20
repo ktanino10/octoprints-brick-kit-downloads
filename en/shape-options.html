@@ -11,7 +11,7 @@
       <button type="button" data-study-character="mona" aria-pressed="true">Mona</button><button type="button" data-study-character="copilot" aria-pressed="false">Copilot</button><button type="button" data-study-character="ducky" aria-pressed="false">Ducky</button>
     </div>
     <div class="study-views" role="group" data-l10n-aria-label="ec5f18ead24947c9" aria-label="Comparison viewpoint">
-      <button type="button" data-study-view="perspective" aria-pressed="true"><!--l10n:9a53c79675850d15-->Perspective · matched camera</button><button type="button" data-study-view="front" aria-pressed="false"><!--l10n:c1cd29be01d7eedb-->Front · matched scale</button>
+      <button type="button" data-study-view="perspective" aria-pressed="true"><!--l10n:9a53c79675850d15-->Three-quarter · matched camera</button><button type="button" data-study-view="front" aria-pressed="false"><!--l10n:c1cd29be01d7eedb-->Front · matched scale</button>
     </div>
   </div>
   <p id="study-status" role="status" class="quiet"><!--l10n:a5ff5c16a9a40092-->Checking publication status of the actual comparison data.</p>
@@ -19,11 +19,14 @@
   <div id="study-error" class="error" role="alert" hidden></div>
   <section id="study-results" hidden aria-labelledby="study-character-title">
     <div class="section-heading"><div><p class="eyebrow" id="study-revision"></p><h2 id="study-character-title"></h2></div><p><!--l10n:db0428bba8b30b18-->Variants of the same character use matched camera, scale, palette and lighting conditions.</p></div>
+    <p id="study-appearance-limit" class="note"></p>
+    <p id="study-render-note" class="quiet"></p>
     <div id="study-cards" class="study-grid"></div>
     <p class="quiet"><!--l10n:57a4520bf5850d79-->Minimum short side, long side and thickness may come from different parts. Do not assume one part has all three minimum dimensions together.</p>
     <h2><!--l10n:501ae1920b413b27-->Compare the numbers for all three characters and nine variants.</h2><p class="quiet"><!--l10n:4696651e2a142922-->Part count means placed individual instances; type count means unique shapes. Repeated uses of one type each count as separate parts.</p>
     <div class="table-scroll"><table class="study-table"><thead><tr><th scope="col"><!--l10n:59bceaeed9907bc3-->Character / variant</th><th scope="col"><!--l10n:6099606966751cac-->Actual parts</th><th scope="col"><!--l10n:7bb130fcec00e9a0-->Change vs r3</th><th scope="col"><!--l10n:e630081df433300c-->Types</th><th scope="col"><!--l10n:3978f6b5768af4ba-->Small-part exceptions</th><th scope="col"><!--l10n:8f57dc85613816bb-->Height / mm</th></tr></thead><tbody id="study-table"></tbody></table></div>
     <p id="study-provenance" class="quiet"></p>
+    <p><a id="study-sheet" class="button secondary"><!--l10n:55069a480c3c04ae-->Open the matched-condition comparison sheet for all three characters ↗</a></p>
   </section>
   <section class="prose">
     <h2><!--l10n:9bbb419128f3f6b5-->Distinguish a single print from separate-part assembly.</h2>

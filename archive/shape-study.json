@@ -1,11 +1,14 @@
 {
   "schema_version": 1,
   "study_id": "shape-study-20260920",
-  "state": "INPUT_WAIT",
+  "state": "READY",
   "baseline_revision": "r3-8mm-20260920",
   "selection": "UNSELECTED",
   "physical_fit": "UNKNOWN",
   "retention_strength": "UNKNOWN",
   "slicer_status": "NOT_SLICED",
-  "full_print": "ON_HOLD"
+  "full_print": "ON_HOLD",
+  "source_commit": "3ef504a3819eef7e864fd606991d793abfb56ef8",
+  "data_url": "/artifacts/studies/shape-study-20260920/public-study.json",
+  "data_sha256": "21192b2860440568272d708fbf029d7ebb7e3b038304f5df3b85019f9b233446"
 }

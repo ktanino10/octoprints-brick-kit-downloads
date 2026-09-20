@@ -16,15 +16,25 @@ const pointer = { ...pending, state: 'READY', data_url: `/artifacts/studies/${SH
 function fixture() {
   return { schema_version: 1, study_id: SHAPE_STUDY_ID, kind: 'SHAPE_AND_PIECE_COUNT_STUDY',
     source_commit: pointer.source_commit, ...flags,
+    appearance_limit: 'Unit-only test limit.', render_note: 'Unit-only render note.',
+    camera_conditions: Object.fromEntries(SHAPE_CHARACTERS.flatMap((character) =>
+      ['perspective', 'front'].map((view) => [`unit-only-${character}-${view}`, {
+        character, view: view === 'perspective' ? 'three_quarter' : 'front',
+        projection: 'ORTHOGRAPHIC', pixels_per_mm_in_image_plane: 4, camera_condition_sha256: '5'.repeat(64),
+      }]))),
+    comparisons: ['three_quarter', 'front'].map((view) => ({ character: 'all', view,
+      path: `/artifacts/studies/${SHAPE_STUDY_ID}/unit-only-sheet-${view}.jpg`, sha256: '6'.repeat(64) })),
     rows: SHAPE_CHARACTERS.flatMap((character) => SHAPE_VARIANTS.map((variant, index) => ({
       character, variant, candidate_id: index ? `unit-test-only-${character}-${variant}` : `${character}-practical8`,
       baseline_candidate_id: `${character}-practical8`,
       pitch_mm: 8, stud_diameter_mm: 4.8,
       metrics: { part_count: BASELINE_COUNTS[character] + index, unique_types: 2, small_part_count: 0,
+        plate_parts: 1, assembly_step_count: BASELINE_COUNTS[character] + index,
         small_part_definition: 'Synthetic unit-test definition; never published',
         minimum_part_mm: [15.8, 15.8, 3.2], dimensions_mm: [100, 100, 181] },
       evidence: { manifest_sha256: '1'.repeat(64), bom_sha256: '2'.repeat(64), native_geometry_sha256: '4'.repeat(64),
         counted_instances: BASELINE_COUNTS[character] + index, count_method: 'unit-test-only actual-ID contract fixture',
+        id_pose_projection_sha256: '7'.repeat(64), bom_ids_types_colors_poses_match: true,
         baseline_identity_verified: index === 0 },
       appearance_changes: ['Unit fixture, not a production image.'], assembly_tradeoffs: ['Unit fixture.'],
       images: Object.fromEntries(['perspective', 'front'].map((view) => [view, {
@@ -61,6 +71,11 @@ test('all nine actual identity/metrics/image records share the declared view con
     (value) => { value.rows[1].pitch_mm = 4; },
     (value) => { value.selection = 'APPROVED'; },
     (value) => { value.physical_fit = 'PASS'; },
+    (value) => { value.full_print = 'APPROVED'; },
+    (value) => { value.rows[1].evidence.bom_ids_types_colors_poses_match = false; },
+    (value) => { value.rows[1].evidence.id_pose_projection_sha256 = null; },
+    (value) => { value.comparisons = []; },
+    (value) => { value.camera_conditions['unit-only-mona-front'].view = 'three_quarter'; },
     (value) => { value.rows.pop(); },
   ]) {
     const changed = fixture();
@@ -76,6 +91,57 @@ test('comparison resources never escape the study; only baseline can reuse curre
   const baseline = '/artifacts/revisions/r3-8mm-20260920/mona-practical8/assembled.png';
   assert.throws(() => studyPath(baseline));
   assert.equal(studyPath(baseline, { baseline: true }), baseline);
+});
+
+test('the published comparison preserves every READY source quantity, image, camera and verification record', async () => {
+  const root = new URL('../../', import.meta.url);
+  const load = async (name) => JSON.parse(await readFile(new URL(name, root), 'utf8'));
+  const publication = await load('archive/shape-study.json');
+  const dataBytes = await readFile(new URL(publication.data_url.slice(1), root));
+  assert.equal(createHash('sha256').update(dataBytes).digest('hex'), publication.data_sha256);
+  const data = validateShapeStudy(JSON.parse(dataBytes), publication);
+  const sourceBytes = await readFile(new URL(`artifacts/studies/${SHAPE_STUDY_ID}/study.json`, root));
+  assert.equal(createHash('sha256').update(sourceBytes).digest('hex'), data.source_study_sha256);
+  const source = JSON.parse(sourceBytes);
+  const verification = await load(`archive/sources/${SHAPE_STUDY_ID}-verification.json`);
+  assert.equal(verification.source_commit, publication.source_commit);
+  assert.equal(source.current_revision_unchanged, data.baseline_revision);
+  assert.equal(source.status.selection, 'PENDING');
+  assert.equal(source.status.current_r3_replacement, 'NOT_AUTHORIZED');
+  assert.equal(source.status.full_print, data.full_print);
+  assert.deepEqual(data.camera_conditions, source.camera_conditions);
+  assert.equal(data.appearance_limit, source.appearance_limit_ja);
+  assert.equal(data.render_note, source.render_note_ja);
+  for (const row of data.rows) {
+    const original = source.rows.find((entry) => entry.candidate_id === row.candidate_id);
+    assert.ok(original);
+    assert.equal(row.character, original.character);
+    assert.equal(row.variant, original.variant_id);
+    for (const [publicKey, sourceKey] of [
+      ['part_count', 'physical_piece_count'], ['unique_types', 'unique_types'],
+      ['small_part_count', 'one_by_one_exceptions'], ['plate_parts', 'plate_parts'],
+      ['assembly_step_count', 'assembly_step_count'], ['common_parts', 'common_parts'],
+      ['contour_or_slope_parts', 'contour_or_slope_parts'],
+    ]) assert.equal(row.metrics[publicKey], original.metrics[sourceKey], `${row.candidate_id}: ${publicKey}`);
+    assert.equal(row.metrics.part_count - BASELINE_COUNTS[row.character], original.metrics.delta);
+    assert.deepEqual(row.metrics.dimensions_mm, original.metrics.overall_size_mm);
+    assert.deepEqual(row.metrics.minimum_part_mm, [
+      original.metrics.min_xy_short_mm, original.metrics.min_xy_long_mm, original.metrics.min_body_height_mm,
+    ]);
+    assert.deepEqual(row.appearance_changes, [original.appearance_changes_ja]);
+    assert.deepEqual(row.assembly_tradeoffs, [original.tradeoff_ja]);
+    const proof = verification.rows.find((entry) => entry.candidate_id === row.candidate_id);
+    assert.deepEqual({ candidate_id: row.candidate_id, ...row.evidence }, proof);
+    for (const key of ['manifest_sha256', 'bom_sha256', 'native_geometry_sha256']) {
+      assert.equal(row.evidence[key], original.provenance[key]);
+    }
+    for (const [publicView, sourceView] of [['perspective', 'three_quarter'], ['front', 'front']]) {
+      const image = row.images[publicView], expected = original.images[sourceView];
+      assert.equal(image.path, `/artifacts/studies/${SHAPE_STUDY_ID}/${expected.path}`);
+      assert.equal(image.sha256, expected.sha256);
+      assert.equal(image.comparison_group, expected.camera_group_id);
+    }
+  }
 });
 
 test('the adopted r3 baseline and all its native/media/release metadata stay byte-identical', async () => {

@@ -28,10 +28,18 @@ function deltaText(row) {
 
 function render() {
   if (!study) return;
+  const url = new URL(location.href);
+  url.searchParams.set('character', character);
+  url.searchParams.set('view', view);
+  history.replaceState(history.state, '', url);
   for (const button of document.querySelectorAll('[data-study-character]')) button.setAttribute('aria-pressed', String(button.dataset.studyCharacter === character));
   for (const button of document.querySelectorAll('[data-study-view]')) button.setAttribute('aria-pressed', String(button.dataset.studyView === view));
   $('#study-character-title').textContent = `${names[character]} · ${view === 'front' ? '正面' : '斜め'}`;
   $('#study-revision').textContent = study.study_id;
+  $('#study-appearance-limit').textContent = study.appearance_limit;
+  $('#study-render-note').textContent = study.render_note;
+  const sheet = study.comparisons.find((item) => item.character === 'all' && item.view === (view === 'perspective' ? 'three_quarter' : 'front'));
+  $('#study-sheet').href = assetURL(sheet.path);
   $('#study-cards').replaceChildren();
   for (const variant of SHAPE_VARIANTS) {
     const row = study.rows.find((entry) => entry.character === character && entry.variant === variant);
@@ -50,8 +58,8 @@ function render() {
     const img = element('img');
     img.src = link.href;
     img.alt = `${names[character]} · ${variants[variant]} · ${view === 'front' ? '正面' : '斜め'}の実生成画像`;
-    img.width = 1200;
-    img.height = 1200;
+    img.width = 1100;
+    img.height = 1100;
     img.addEventListener('error', () => {
       $('#study-error').hidden = false;
       $('#study-error').textContent = '実比較画像を読み込めません。旧画像や代替画像には置き換えていません。再読み込みしてください。';
@@ -63,6 +71,7 @@ function render() {
     const facts = element('dl', undefined, 'study-facts');
     for (const [label, value] of [
       ['一意の形状・型', format(metrics.unique_types, 0)],
+      ['プレート部品 / 組立手順', `${format(metrics.plate_parts, 0)} / ${format(metrics.assembly_step_count, 0)}`],
       ['小部品の例外', `${format(metrics.small_part_count, 0)}個 · ${metrics.small_part_definition}`],
       ['各最小値：短辺 / 長辺 / 厚み', `${metrics.minimum_part_mm.map((value) => format(value, 2)).join(' / ')} mm`],
       ['全体寸法 / mm', metrics.dimensions_mm.map((value) => format(value, 2)).join(' × ')],

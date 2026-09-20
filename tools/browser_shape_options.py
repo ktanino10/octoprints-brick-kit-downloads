@@ -3,7 +3,7 @@
 import argparse
 import json
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import parse_qs, urljoin, urlsplit
 
 from playwright.sync_api import sync_playwright, expect
 
@@ -72,6 +72,15 @@ with sync_playwright() as playwright:
                 expect(page.locator('[data-study-character="mona"]')).to_be_disabled()
             else:
                 expect(page.locator("#study-table tr")).to_have_count(9)
+                for row in study["rows"]:
+                    cells = page.locator(f'#study-table tr[data-candidate="{row["candidate_id"]}"] td')
+                    baseline = {"mona": 519, "copilot": 695, "ducky": 413}[row["character"]]
+                    delta = row["metrics"]["part_count"] - baseline
+                    expect(cells).to_have_text([
+                        f'{row["metrics"]["part_count"]:,}', f'+{delta}' if delta > 0 else str(delta),
+                        str(row["metrics"]["unique_types"]), str(row["metrics"]["small_part_count"]),
+                        f'{row["metrics"]["dimensions_mm"][2]:g}',
+                    ])
                 for character in ["mona", "copilot", "ducky"]:
                     page.locator(f'[data-study-character="{character}"]').click()
                     for view in ["perspective", "front"]:
@@ -83,8 +92,21 @@ with sync_playwright() as playwright:
                             expect(card.locator(".count strong")).to_have_text(f'{row["metrics"]["part_count"]:,}')
                             expect(card.locator("img")).not_to_have_js_property("naturalWidth", 0)
                             assert row["images"][view]["path"].lstrip("/") in card.locator("img").get_attribute("src")
+                            metrics = row["metrics"]
+                            facts = card.locator(".study-facts dd")
+                            expect(facts.nth(0)).to_have_text(str(metrics["unique_types"]))
+                            expect(facts.nth(1)).to_have_text(f'{metrics["plate_parts"]} / {metrics["assembly_step_count"]}')
+                            expect(facts.nth(3)).to_have_text(" / ".join(f"{value:g}" for value in metrics["minimum_part_mm"]) + " mm")
+                            expect(facts.nth(4)).to_have_text(" × ".join(f"{value:g}" for value in metrics["dimensions_mm"]))
+                            for key in ["manifest_sha256", "bom_sha256", "native_geometry_sha256"]:
+                                expect(card.locator(".study-evidence")).to_contain_text(row["evidence"][key])
+                        assert parse_qs(urlsplit(page.url).query) == {"character": [character], "view": [view]}
                         if locale == "en":
                             english(page)
+                            page.locator("#study-cards").screenshot(path=str(args.output / f"{character}-{view}-en.png"))
+                page.reload(wait_until="networkidle")
+                expect(page.locator('[data-study-character="ducky"]')).to_have_attribute("aria-pressed", "true")
+                expect(page.locator('[data-study-view="front"]')).to_have_attribute("aria-pressed", "true")
                 page.locator('.study-card[data-variant="plate-refined"] [data-lightbox]').click()
                 expect(page.locator("#image-dialog")).to_be_visible()
                 expect(page.locator("#image-dialog img")).not_to_have_js_property("naturalWidth", 0)
@@ -97,6 +119,8 @@ with sync_playwright() as playwright:
                 expect(page.locator('[data-study-character="ducky"]')).to_have_attribute("aria-pressed", "true")
                 expect(page.locator('[data-study-view="front"]')).to_have_attribute("aria-pressed", "true")
                 page.locator(f'[data-language="{locale}"]').click()
+                sheet = next(item for item in study["comparisons"] if item["character"] == "all" and item["view"] == "front")
+                expect(page.locator("#study-sheet")).to_have_attribute("href", urljoin(base, sheet["path"].lstrip("/")))
             if locale == "en":
                 english(page)
             page.screenshot(path=str(args.output / f"comparison-{locale}.png"), full_page=True)
@@ -115,6 +139,12 @@ with sync_playwright() as playwright:
         phone.screenshot(path=str(args.output / "comparison-mobile.png"), full_page=True)
         phone_context.close()
         checked("390px direct English share URL ignores browser-language defaults")
+        page.goto(urljoin(base, "shape-options.html?character=invalid&view=invalid"), wait_until="networkidle")
+        expect(page.locator("html")).to_have_attribute("lang", "ja")
+        if not args.expect_input_wait:
+            expect(page.locator('[data-study-character="mona"]')).to_have_attribute("aria-pressed", "true")
+            expect(page.locator('[data-study-view="perspective"]')).to_have_attribute("aria-pressed", "true")
+        checked("legacy root URL and invalid comparison choices use safe explicit defaults")
         failure = browser.new_context()
         failed = failure.new_page()
         failed.route("**/archive/shape-study.json", lambda route: route.fulfill(status=503, body="unavailable"))
@@ -124,6 +154,16 @@ with sync_playwright() as playwright:
         english(failed)
         failure.close()
         checked("unavailable comparison data is an explicit error, never invented counts/images")
+        if not args.expect_input_wait:
+            images = browser.new_context()
+            broken = images.new_page()
+            broken.route("**/mona-plate-refined-three_quarter.jpg", lambda route: route.fulfill(status=404, body="missing"))
+            broken.goto(urljoin(base, "en/shape-options.html"), wait_until="networkidle")
+            expect(broken.locator("#study-error")).to_be_visible()
+            expect(broken.locator('.study-card[data-variant="plate-refined"] img')).to_have_js_property("naturalWidth", 0)
+            english(broken)
+            images.close()
+            checked("a failed real image is reported explicitly without a proxy or historical substitute")
         assert not report["errors"], report["errors"]
     except Exception as error:
         report["failure"] = str(error)

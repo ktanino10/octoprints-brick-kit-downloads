@@ -61,6 +61,26 @@ The small-part handling and blocked-hole feedback belongs to the earlier r2 4 mm
 Those holes were blocked **before** ultrasonic cleaning. The cause, actual slicer settings and condition-specific retention remain unresolved.
 Geometry-only 3MF files remain **NOT_SLICED**, not configured Bambu Studio projects or G-code.
 
+## Shape and actual part-count comparison
+
+The **[bilingual image and quantity comparison](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/shape-options.html)**
+shows adopted r3 alongside two unselected studies with matched camera, scale and palette.
+All retain the 8 mm connection system and 181 mm overall height.
+Counts were checked against actual manifest and BOM part IDs; they are individual instances, not type counts or estimates.
+
+| Character | Adopted r3 | A: surface plate refinement | B: contour / slope replacement |
+|---|---:|---:|---:|
+| Mona | 519 | 670 (+151) | 519 (no change) |
+| Copilot | 695 | 916 (+221) | 695 (no change) |
+| Ducky | 413 | 522 (+109) | 413 (no change) |
+
+A refines surface height steps with 3.2 mm plates, at the cost of more seams, exposed studs and assembly work.
+B replaces 36 blocks per character with slopes one-for-one, keeping the part count unchanged but adding specialized types,
+thicker roofs and shallower underside cavities. Coarse eyes and mouths from the 8 mm XY grid remain.
+No new 1×1 chips, trial sets or one-piece print version were created.
+**The alternatives are unselected and physically unvalidated. Adopted r3, existing downloads and formal releases are unchanged;
+full-kit printing remains on hold.**
+
 ## Preserved earlier revisions and physical feedback
 
 The quantities below describe Phase1/r2 history. They are not the new revision's counts or trial sets.
