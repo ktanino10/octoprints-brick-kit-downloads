@@ -253,3 +253,10 @@ STL/STEP/BOM/手順は版別Releaseから公開します。`.FCStd`相対layout�
 PARTIALのままにします。commit自己参照は `archive/deployment.json` の実commitを参照し、
 検査済み内容のcommitは別フィールドに保存します。`verify_density_publication.py` は
 変更したPagesファイルと新matrixのRelease assetsだけを匿名照合し、旧大型履歴を再ダウンロードしません。
+
+`density_release.py` は明示された公開copyのhash一覧、Blenderのgeometry/material/animation保存照合、
+FreeCAD移動reopen記録がすべて一致した場合だけRelease専用ZIPを作ります。
+`cases/<case>/assembly.FCStd` から `shared/masters/` や `shared/authoring/` への相対linkを
+パッケージ内で解決できることを検査します。圧縮時はファイルをstream転送し、100 MBのGit制限を
+Release資産へ誤適用しません。ただし単一Release assetの2 GB上限は超えられません。
+既存ZIPの上書き、未記録のnative文書、未確認のanimation変更、機械pathの混入は拒否します。
