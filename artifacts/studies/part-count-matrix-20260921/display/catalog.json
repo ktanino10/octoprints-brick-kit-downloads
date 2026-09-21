@@ -17754,6 +17754,3546 @@
       "display_triangles_per_frame": 92660696,
       "reduction": 4.756529219249551
     },
+    "copilot-p400": {
+      "source_manifest_sha256": "c72630b179af06b1850f44c670bc16505745b12c13dd31beab9813016743e4e3",
+      "geometry_files": [
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/9d075952e568e9534ecc8cd5ca2aa153946ffa18dc4026133cc2a1abdf3f3383-e004.mesh.gz",
+          "bytes": 1068,
+          "sha256": "82148a26fe1b6db8028e7a1e0ab7b8ef69bbcb3f7a1e95e29df3ce935e843886",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-01x01-H048",
+          "geometry_sha256": "cafdd6657587121c2049ad862cdb5595dcd34aaacb4f3676625fb8f6c7afbc0f",
+          "source_geometry_sha256": "9d075952e568e9534ecc8cd5ca2aa153946ffa18dc4026133cc2a1abdf3f3383",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 388,
+              "triangles": 772,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -3.9000000953674316,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  3.9000000953674316,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 247.3197778439967,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 1
+            },
+            "after": {
+              "vertices": 76,
+              "triangles": 148,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -3.9000000953674316,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  3.9000000953674316,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 246.75179247832807,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 1
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03993258252739906,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/af812d15a8df8c8ea224bf4d78bff868d658c57419ac13c10f3e7aba2fe06653-e004.mesh.gz",
+          "bytes": 1167,
+          "sha256": "a71300ad281264aba7fce56468f09545215ca6e2948994110f8e557633ddb7bc",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-01x01-H048-EDGE-C020",
+          "geometry_sha256": "840610880c5941c3bde9f7df04bccb5766b46b426531a723598ffe8a53635af3",
+          "source_geometry_sha256": "af812d15a8df8c8ea224bf4d78bff868d658c57419ac13c10f3e7aba2fe06653",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 392,
+              "triangles": 780,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -3.9000000953674316,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  3.9000000953674316,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 246.70644347433654,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 1
+            },
+            "after": {
+              "vertices": 84,
+              "triangles": 164,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -3.9000000953674316,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  3.9000000953674316,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 246.23673487844877,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 1
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03993258252739906,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/e1468f627fadc7c8ea93e4381f94c2a405065867c49daf18160cc40d66a3991d-e004.mesh.gz",
+          "bytes": 2744,
+          "sha256": "8f155026d4d8816a51604351150b2b4ac6cc7bfd75fdd2d426ce4c381083ac49",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-01x02-H048",
+          "geometry_sha256": "ef308fbaad8d1bae9fd12dac4edbbcf1e8d614d0df37d613258c601d7e01529d",
+          "source_geometry_sha256": "e1468f627fadc7c8ea93e4381f94c2a405065867c49daf18160cc40d66a3991d",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 1139,
+              "triangles": 2274,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -7.900000095367432,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  7.900000095367432,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 480.3463808941132,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 2
+            },
+            "after": {
+              "vertices": 202,
+              "triangles": 400,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -7.900000095367432,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  7.900000095367432,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 478.9828964060614,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 2
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03978782147169113,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/8ee28933753d8acf0982891f003ee505015c63cc9cdbe75acf4b608e71b3a6f9-e004.mesh.gz",
+          "bytes": 2830,
+          "sha256": "747eba17a0e9d39ecf24e34306bb6246e475a1b2a421952c4d8e57225bf7ffea",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-01x02-H048-EDGE-C020",
+          "geometry_sha256": "856e5af0263276f76d05a572ed25d9ab16b31e75c66e3ecffb6b0a6d7e295025",
+          "source_geometry_sha256": "8ee28933753d8acf0982891f003ee505015c63cc9cdbe75acf4b608e71b3a6f9",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 1143,
+              "triangles": 2282,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -7.900000095367432,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  7.900000095367432,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 479.4130456311777,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 2
+            },
+            "after": {
+              "vertices": 207,
+              "triangles": 410,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -7.900000095367432,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  7.900000095367432,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 478.0557856682039,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 2
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03978782147169113,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/76025c1adef8877e7fe08aee4bd32d879dd7ceec6f648459c7819cc4d6b8c90b-e004.mesh.gz",
+          "bytes": 4367,
+          "sha256": "bf91e0b1347fe8a846a02752283abc5b9525b27bd3cf4609178d9157958fe08e",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-01x03-H048",
+          "geometry_sha256": "d0f1e43ca6216bbcd69775275647f45ab22eb7d2726bb0c0bb9e6d74b1797845",
+          "source_geometry_sha256": "76025c1adef8877e7fe08aee4bd32d879dd7ceec6f648459c7819cc4d6b8c90b",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 1890,
+              "triangles": 3776,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -11.899999618530273,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  11.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 713.3729594404915,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 3
+            },
+            "after": {
+              "vertices": 321,
+              "triangles": 638,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -11.899999618530273,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  11.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 711.0657973044414,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 3
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.039266232401132584,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/4ec3b76720adf4d7e8cc21059c7f2fb65a4266973eca5e3c012c09f2710335ab-e004.mesh.gz",
+          "bytes": 4509,
+          "sha256": "9265da6e8eb45fc99335eccea464c603b969c79d967ffc03f31c12c49ce63483",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-01x03-H048-EDGE-C020",
+          "geometry_sha256": "7b1b78aaeec23645b049d6bc7c96107d9fd823013512cac41751f56af14cef0b",
+          "source_geometry_sha256": "4ec3b76720adf4d7e8cc21059c7f2fb65a4266973eca5e3c012c09f2710335ab",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 1894,
+              "triangles": 3784,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -11.899999618530273,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  11.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 712.11962440008,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 3
+            },
+            "after": {
+              "vertices": 334,
+              "triangles": 664,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -11.899999618530273,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  11.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 709.9665254332652,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 3
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.039266232401132584,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/add2c2c799eceb68fd9c0ebbd4a3a3739ad1b10ac35b5eb519e5333d54ea00e3-e004.mesh.gz",
+          "bytes": 5907,
+          "sha256": "e05917e78321e51f7ae651bf2ae81dd785491201ce010a0c7d06e13f482f23cb",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-01x04-H048",
+          "geometry_sha256": "557a5328701298d864808607cb8ff4dd0ef82f753fc864e4d77bb70a7c02149f",
+          "source_geometry_sha256": "add2c2c799eceb68fd9c0ebbd4a3a3739ad1b10ac35b5eb519e5333d54ea00e3",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 2641,
+              "triangles": 5278,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -15.899999618530273,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  15.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 946.3995631015024,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 4
+            },
+            "after": {
+              "vertices": 450,
+              "triangles": 896,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -15.899999618530273,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  15.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 943.0529723950422,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 4
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03948744386434555,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/aa789ac94a069badf3625281dbe17e89e866aa574eed68816e964360cdc8883e-e004.mesh.gz",
+          "bytes": 5914,
+          "sha256": "76dcd4f2129d28621385c75e6553b1065a9bea38e3c42f075e1131807d4a0222",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-01x04-H048-EDGE-C020",
+          "geometry_sha256": "d48dbcdc0bb949afcb9f430083f0d58fefbd9f09f5cadf5708f3a9c09eecffc2",
+          "source_geometry_sha256": "aa789ac94a069badf3625281dbe17e89e866aa574eed68816e964360cdc8883e",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 2645,
+              "triangles": 5286,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -15.899999618530273,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  15.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 944.8262275270316,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 4
+            },
+            "after": {
+              "vertices": 451,
+              "triangles": 898,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -15.899999618530273,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  15.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 941.523466339846,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 4
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03948744386434555,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/79d69c3c77f666ecf35f4f1a95d444884f41d75237b4f76501ecdc0b71884c53-e004.mesh.gz",
+          "bytes": 7610,
+          "sha256": "f42613f7b8032a16bb1f5654210637b96c3db4c4ca57ed88b75c876688cb3d07",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-01x05-H048",
+          "geometry_sha256": "229e6aba445b20b1a29e68a28bfd21a285cd769d10f286d1ca2451b23df12c01",
+          "source_geometry_sha256": "79d69c3c77f666ecf35f4f1a95d444884f41d75237b4f76501ecdc0b71884c53",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 3392,
+              "triangles": 6780,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -19.899999618530273,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  19.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 1179.4261375589278,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 5
+            },
+            "after": {
+              "vertices": 565,
+              "triangles": 1126,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -19.899999618530273,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  19.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 1175.2135841770569,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 5
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03998236730694771,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/79f35ea4a602d28511dd0c491bb9f8af997cd3aef2d59d7afa17b3468b345f62-e004.mesh.gz",
+          "bytes": 7787,
+          "sha256": "904836360a194f15c4a5cde599629533541ae62c1c10adc196b58e6384f0609e",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-01x05-H048-EDGE-C020",
+          "geometry_sha256": "3e02cc58ccbf8f1d2ffebc5bb4e2b7090110d82fa5f1590d545fa8e0b573f8f6",
+          "source_geometry_sha256": "79f35ea4a602d28511dd0c491bb9f8af997cd3aef2d59d7afa17b3468b345f62",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 3396,
+              "triangles": 6788,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -19.899999618530273,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  19.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 1177.5328028872711,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 5
+            },
+            "after": {
+              "vertices": 584,
+              "triangles": 1164,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -19.899999618530273,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  19.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 1173.4751323113278,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 5
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03883398696780205,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/acf28b192aa77e054ac93c0c75acc405cb6439761bfa2eebd4817c4ac0f76b17-e004.mesh.gz",
+          "bytes": 9085,
+          "sha256": "4e2507746641f44dc6cf4bd7f0950a4f54dea169e00de9fa52ca37e0045ace19",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-01x06-H048",
+          "geometry_sha256": "fa80aacd3adc4f8a27655d143592bed3a7ba9660b7f3f43d2c4f8452b3e843c7",
+          "source_geometry_sha256": "acf28b192aa77e054ac93c0c75acc405cb6439761bfa2eebd4817c4ac0f76b17",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 4143,
+              "triangles": 8282,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -23.899999618530273,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  23.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 1412.4527426446766,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 6
+            },
+            "after": {
+              "vertices": 681,
+              "triangles": 1358,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -23.899999618530273,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  23.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 1407.160501218355,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 6
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03948492556810379,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/07de4c02e74ce1c554ffa0296ec20cfbad84e38cabaf9a5c84ff763357d11838-e004.mesh.gz",
+          "bytes": 9256,
+          "sha256": "cff0a94b67b3112e6270dc82ef19bc15b67ace15e4fd9db197d7c778d3bb8731",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-01x06-H048-EDGE-C020",
+          "geometry_sha256": "e1f580202ede26833a560d3939af90a9f2e72164585480434b46d8d4aa4229d1",
+          "source_geometry_sha256": "07de4c02e74ce1c554ffa0296ec20cfbad84e38cabaf9a5c84ff763357d11838",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 4147,
+              "triangles": 8290,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -23.899999618530273,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  23.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 1410.2394074389613,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 6
+            },
+            "after": {
+              "vertices": 694,
+              "triangles": 1384,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -23.899999618530273,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  23.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 1405.234247957484,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 6
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03948492556810379,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/711e6c326a4d944fe481bae2dc142e69ed758ca488e9d406c9efdac53aa19b26-e004.mesh.gz",
+          "bytes": 11951,
+          "sha256": "20a89c8052248344a32ed1d73a4b671fd34de5819610c4dae940b15c900556d7",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-01x08-H048-EDGE-C020",
+          "geometry_sha256": "69fc05bd2a19499299af2b2e49e65f85b2b56ad656cae59283d6a2f24e4aa3ed",
+          "source_geometry_sha256": "711e6c326a4d944fe481bae2dc142e69ed758ca488e9d406c9efdac53aa19b26",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 5649,
+              "triangles": 11294,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -31.899999618530273,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  31.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 1875.6526149425733,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 8
+            },
+            "after": {
+              "vertices": 919,
+              "triangles": 1834,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -31.899999618530273,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  31.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 1868.3528894540048,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 8
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.039706356823444366,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/b95bf7a23927a6ce49ee6ec255a1be3131d1eae4ccb967e20aed31ff88f49cc7-e004.mesh.gz",
+          "bytes": 13455,
+          "sha256": "56a59e00123da02b55a3abe7e47760945bb1b97b7295eb3233f7d559b0ddd7bd",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-01x09-H048-EDGE-C020",
+          "geometry_sha256": "7dcf5aae1ea59a7201e8848222043441fc8e9249f20dcfd649d98d249d64b0a5",
+          "source_geometry_sha256": "b95bf7a23927a6ce49ee6ec255a1be3131d1eae4ccb967e20aed31ff88f49cc7",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 6400,
+              "triangles": 12796,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -35.900001525878906,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  35.900001525878906,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 2108.359417460684,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 9
+            },
+            "after": {
+              "vertices": 1033,
+              "triangles": 2062,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -35.900001525878906,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  35.900001525878906,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 2099.8762409207343,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 9
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.039167843759059906,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/20cbfc91aaeea0f341e5751b84410ee06cb10d1e06968d88d0abf1a62d994141-e004.mesh.gz",
+          "bytes": 15193,
+          "sha256": "1eddd9905bd7c98ca32c955849eecd9f2ca6ede153fd0bc066743c745ab158ef",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-01x10-H048-EDGE-C020",
+          "geometry_sha256": "288e5c63ffe8c6b6c69ccc11f6c61d512fa60f133909b6a200a82547b35c3992",
+          "source_geometry_sha256": "20cbfc91aaeea0f341e5751b84410ee06cb10d1e06968d88d0abf1a62d994141",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 7151,
+              "triangles": 14298,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -39.900001525878906,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  39.900001525878906,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 2341.066012915972,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 10
+            },
+            "after": {
+              "vertices": 1154,
+              "triangles": 2304,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -39.900001525878906,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  39.900001525878906,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 2331.615580851058,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 10
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03998016193509102,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/e7d6c6d270ca1aece82ea4dd07dbc1a2511a66dc60130eb0debe6887958f0ee8-e004.mesh.gz",
+          "bytes": 18489,
+          "sha256": "7e3678aa22c6563baa5ea1e083c4cc0744ceb42306ba7b824b9f192f06308e1d",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-01x12-H048-EDGE-C020",
+          "geometry_sha256": "ab34cde5bdae2de7a732d4a38c7a02ce03a39b69c02cda17b15f1748e95c018c",
+          "source_geometry_sha256": "e7d6c6d270ca1aece82ea4dd07dbc1a2511a66dc60130eb0debe6887958f0ee8",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 8653,
+              "triangles": 17302,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -47.900001525878906,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  47.900001525878906,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 2806.479202226804,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 12
+            },
+            "after": {
+              "vertices": 1405,
+              "triangles": 2806,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -47.900001525878906,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  47.900001525878906,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 2795.216742862772,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 12
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03944827988743782,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/68dcde39d696218f5923ec33252e2ef333dc363f5b1f7b6684519bbb78f28cc6-e004.mesh.gz",
+          "bytes": 5093,
+          "sha256": "f922ca0d8699b7c601cc75464d039e1fc34da25c0c87a44fc1bcc30391eff9b5",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-02x02-H048",
+          "geometry_sha256": "8d7970519bcaccfad3b9e7e4a428fb66c05ea4b3aa4775cfd266ad30b055bfa9",
+          "source_geometry_sha256": "68dcde39d696218f5923ec33252e2ef333dc363f5b1f7b6684519bbb78f28cc6",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 2045,
+              "triangles": 4086,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -7.900000095367432,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  7.900000095367432,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 890.5723269702598,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 4
+            },
+            "after": {
+              "vertices": 376,
+              "triangles": 748,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -7.900000095367432,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  7.900000095367432,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 888.24814722989,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 4
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03988354280591011,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/84efbec113e306f5d5473aafa0acc102a7e9667fe4e3a8c27434c4575035686e-e004.mesh.gz",
+          "bytes": 5089,
+          "sha256": "1f08386a82d347ea94db9c58e6c113ea1da8df4dd6d72db1151a3520b539ec65",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-02x02-H048-EDGE-C020",
+          "geometry_sha256": "d8177f9ca6a59591d8cee36b2511c3346cbdcda0587dce1dd8eb51777c507c08",
+          "source_geometry_sha256": "84efbec113e306f5d5473aafa0acc102a7e9667fe4e3a8c27434c4575035686e",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 2049,
+              "triangles": 4094,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -7.900000095367432,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  7.900000095367432,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 889.3189900511138,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 4
+            },
+            "after": {
+              "vertices": 380,
+              "triangles": 756,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -7.900000095367432,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  7.900000095367432,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 886.9924469735812,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 4
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03988354280591011,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/edf3cd5db0d90e4ca77b3a6dfdc2ced46916c8d4d6fd30ac2353e1e2bd87b6ef-e004.mesh.gz",
+          "bytes": 8643,
+          "sha256": "a903f94edc15c1def17e2f08181a9df66e086a9d24cc82f1d1795a01d6107160",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-02x03-H048",
+          "geometry_sha256": "2c66a3b961d6a01bf02f312d57a57b2127e341efb487fdb1a4e1968732d21ebe",
+          "source_geometry_sha256": "edf3cd5db0d90e4ca77b3a6dfdc2ced46916c8d4d6fd30ac2353e1e2bd87b6ef",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 3326,
+              "triangles": 6648,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -11.899999618530273,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  11.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 1320.5901790078046,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 6
+            },
+            "after": {
+              "vertices": 635,
+              "triangles": 1266,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -11.899999618530273,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  11.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 1317.2763345365258,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 6
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.039992596954107285,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/1304e63fb5db24c994e3ece9dae9365fd76df5262b97f9035fe6998f95e4b3e9-e004.mesh.gz",
+          "bytes": 8685,
+          "sha256": "a099f3e73293c4fff4234a4144caf5afc26d5b778fefe0b92efe29a03befff81",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-02x03-H048-EDGE-C020",
+          "geometry_sha256": "926c8a58217ad8d3687ca983bef526357bceb6bdf4541d77494d5417d2fc685f",
+          "source_geometry_sha256": "1304e63fb5db24c994e3ece9dae9365fd76df5262b97f9035fe6998f95e4b3e9",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 3330,
+              "triangles": 6656,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -11.899999618530273,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  11.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 1319.0168426926566,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 6
+            },
+            "after": {
+              "vertices": 640,
+              "triangles": 1276,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -11.899999618530273,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  11.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 1315.3392533266383,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 6
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.039992596954107285,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/b765441b67f47a10d348316f29b8aece61636d7d21a5f6d100c6e2473c11b437-e004.mesh.gz",
+          "bytes": 11701,
+          "sha256": "36c621071b8c1c5c2fc068628588be33b297585d5aea41041873b652f2587ec1",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-02x04-H048",
+          "geometry_sha256": "80706177311e270115790703db308bbdc5581c17b3fa6397169e91451320044f",
+          "source_geometry_sha256": "b765441b67f47a10d348316f29b8aece61636d7d21a5f6d100c6e2473c11b437",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 4607,
+              "triangles": 9210,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -15.899999618530273,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  15.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 1750.6080787533656,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 8
+            },
+            "after": {
+              "vertices": 869,
+              "triangles": 1734,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -15.899999618530273,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  15.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 1745.3161468226936,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 8
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03954118862748146,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/73f1ba85beada7dbadde615b4d92b6e6f8c51af15ca3403898bc7440a7b25a07-e004.mesh.gz",
+          "bytes": 11689,
+          "sha256": "0c1678dcad50eb8d861b2a8546a0d9b0c3b175179cf4e47895f82dedeea04cef",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-02x04-H048-EDGE-C020",
+          "geometry_sha256": "072ca871c72bf75fe7ab07be76023739d3da7dbf088b3b68f2b3015461e2aea2",
+          "source_geometry_sha256": "73f1ba85beada7dbadde615b4d92b6e6f8c51af15ca3403898bc7440a7b25a07",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 4611,
+              "triangles": 9218,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -15.899999618530273,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  15.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 1748.7147415226743,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 8
+            },
+            "after": {
+              "vertices": 862,
+              "triangles": 1720,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -15.899999618530273,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  15.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 1743.3164615836613,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 8
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03976322337985039,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/0be231cdf3879b7d85cc4e2660df7a767c640490c051291fa432267ebadf549c-e004.mesh.gz",
+          "bytes": 15131,
+          "sha256": "c7f1579be8382cc0f98b4a8ae29121cd8e34e67c97712e0ead9690e750b708f0",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-02x05-H048-EDGE-C020",
+          "geometry_sha256": "914d486a48cc5b032e354a5c3706d60afb0b8c0131edadd81fa2c12ce689b493",
+          "source_geometry_sha256": "0be231cdf3879b7d85cc4e2660df7a767c640490c051291fa432267ebadf549c",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 5892,
+              "triangles": 11780,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -19.899999618530273,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  19.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 2178.4125699555184,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 10
+            },
+            "after": {
+              "vertices": 1125,
+              "triangles": 2246,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -19.899999618530273,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  19.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 2171.8287426423,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 10
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.039519764482975006,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/729874f9cd931f39922c0615cf92550ed41e1f309e659a46e75ff45ff5235a54-e004.mesh.gz",
+          "bytes": 18122,
+          "sha256": "8c3f9c6abdcfaf1ffd3f238133678142979b6f9b76113ad4c7a5e0cf58b8e287",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-02x06-H048-EDGE-C020",
+          "geometry_sha256": "ad76187d366f40e93e3065064bd60f760fe630297dffd8a4cdfb1120428c9b13",
+          "source_geometry_sha256": "729874f9cd931f39922c0615cf92550ed41e1f309e659a46e75ff45ff5235a54",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 7173,
+              "triangles": 14342,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -23.899999618530273,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  23.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 2608.1104711986036,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 12
+            },
+            "after": {
+              "vertices": 1351,
+              "triangles": 2698,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -23.899999618530273,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  23.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 2600.2879806314345,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 12
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03966883569955826,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/574858c873abf55ed5ae2c6b06717a4b52c5ae6971e512801cdec3109f016de5-e004.mesh.gz",
+          "bytes": 20908,
+          "sha256": "18f5785329cb789879ae7850aef3eb46c26dd1bfba923374bd6516fc8a082737",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-02x07-H048-EDGE-C020",
+          "geometry_sha256": "af022a904d335e89c765a98b0c0dec33b46bf5eeb29edde96eb0c99b09e39448",
+          "source_geometry_sha256": "574858c873abf55ed5ae2c6b06717a4b52c5ae6971e512801cdec3109f016de5",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 8454,
+              "triangles": 16904,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -27.899999618530273,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  27.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 3037.8083687912017,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 14
+            },
+            "after": {
+              "vertices": 1565,
+              "triangles": 3126,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -27.899999618530273,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  27.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 3027.5228170189534,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 14
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03970617055892944,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/bbf14cafd5999635f1b39d2bab30774c1bd54483958147d13064f9391aadd553-e004.mesh.gz",
+          "bytes": 24012,
+          "sha256": "6c3d7aa726b85191cacb898d56fd0d2445bf4649fa11ecbede9187bc83e01466",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-02x08-H048-EDGE-C020",
+          "geometry_sha256": "13860813ce6938128706c32c4ed5e8f8a07e1153329edfb40dfe8623c960b325",
+          "source_geometry_sha256": "bbf14cafd5999635f1b39d2bab30774c1bd54483958147d13064f9391aadd553",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 9735,
+              "triangles": 19466,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -31.899999618530273,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  31.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 3467.5062700343656,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 16
+            },
+            "after": {
+              "vertices": 1814,
+              "triangles": 3624,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -31.899999618530273,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  31.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 3456.5056875917867,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 16
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.039701320230960846,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/03a3a13904660725a867cee02a9931476d3d224f36c31c0c530fe798a3d3cd1c-e004.mesh.gz",
+          "bytes": 14198,
+          "sha256": "3fdc100d0af6ccd28ffc0001e402abc14f0d5fa2e000d0f0cc701ecb5e944bf6",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-03x03-H048-EDGE-C020",
+          "geometry_sha256": "9cebcb21d4d30cd057b7ec6d1f73555143cd448020a41b66d4123e083b5ec10d",
+          "source_geometry_sha256": "03a3a13904660725a867cee02a9931476d3d224f36c31c0c530fe798a3d3cd1c",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 5516,
+              "triangles": 11028,
+              "bounds_mm": [
+                [
+                  -11.899999618530273,
+                  -11.899999618530273,
+                  0
+                ],
+                [
+                  11.899999618530273,
+                  11.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 1965.4979050154182,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 9
+            },
+            "after": {
+              "vertices": 1054,
+              "triangles": 2104,
+              "bounds_mm": [
+                [
+                  -11.899999618530273,
+                  -11.899999618530273,
+                  0
+                ],
+                [
+                  11.899999618530273,
+                  11.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 1959.3886078266555,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 9
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03986416757106781,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/b48d149ec584ca2c924f0e7c99e9188e417d0dff0c6c710e52339a8ba4b8a260-e004.mesh.gz",
+          "bytes": 19873,
+          "sha256": "e7742d92c95b2212f6f972ce020d38802241a1f113502da0815bb880860702eb",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-03x04-H048-EDGE-C020",
+          "geometry_sha256": "db7fbd0ae29d68c9b26fefbd7b9da0957ef634562618d6ea574f73e17f4c1aa4",
+          "source_geometry_sha256": "b48d149ec584ca2c924f0e7c99e9188e417d0dff0c6c710e52339a8ba4b8a260",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 7702,
+              "triangles": 15400,
+              "bounds_mm": [
+                [
+                  -11.899999618530273,
+                  -15.899999618530273,
+                  0
+                ],
+                [
+                  11.899999618530273,
+                  15.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 2611.9790293322912,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 12
+            },
+            "after": {
+              "vertices": 1462,
+              "triangles": 2920,
+              "bounds_mm": [
+                [
+                  -11.899999618530273,
+                  -15.899999618530273,
+                  0
+                ],
+                [
+                  11.899999618530273,
+                  15.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 2603.8781924977848,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 12
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03976858779788017,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/46587283ae1c717491a0f9de751acee8c9a231689a34ce608e0d23a9657eaefd-e004.mesh.gz",
+          "bytes": 27436,
+          "sha256": "fe3b0c8ae89c32c3b8a88946c6f3d624053b8f5a37c815c256b5145b23dae036",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-04x04-H048-EDGE-C020",
+          "geometry_sha256": "50b60c79070cf34719c1d87d8624f9e21b595e43fd04988a79763007afe0e9c0",
+          "source_geometry_sha256": "46587283ae1c717491a0f9de751acee8c9a231689a34ce608e0d23a9657eaefd",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 10793,
+              "triangles": 21582,
+              "bounds_mm": [
+                [
+                  -15.899999618530273,
+                  -15.899999618530273,
+                  0
+                ],
+                [
+                  15.899999618530273,
+                  15.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 3475.2433925757873,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 16
+            },
+            "after": {
+              "vertices": 2035,
+              "triangles": 4066,
+              "bounds_mm": [
+                [
+                  -15.899999618530273,
+                  -15.899999618530273,
+                  0
+                ],
+                [
+                  15.899999618530273,
+                  15.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 3463.558534351505,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 16
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03992437943816185,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/918ce85cc6ef5b72d8d0cc5e9d77879562da2c4f7d8e09322c6d169ea1e579a2-e004.mesh.gz",
+          "bytes": 35322,
+          "sha256": "c50b4740d81d57c989f2f494a1984c2c1b58545844c74c5ce7aa9abb7c9acb95",
+          "format": "OBM1_GZIP",
+          "type_id": "BR-04x05-H048-EDGE-C020",
+          "geometry_sha256": "f9c9dfb513671e1ef10dc1e8cd96d6d89722b78b5ddd2d7d795a5815bbe11c16",
+          "source_geometry_sha256": "918ce85cc6ef5b72d8d0cc5e9d77879562da2c4f7d8e09322c6d169ea1e579a2",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 13884,
+              "triangles": 27764,
+              "bounds_mm": [
+                [
+                  -15.899999618530273,
+                  -19.899999618530273,
+                  0
+                ],
+                [
+                  15.899999618530273,
+                  19.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 4338.50760454976,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 20
+            },
+            "after": {
+              "vertices": 2641,
+              "triangles": 5278,
+              "bounds_mm": [
+                [
+                  -15.899999618530273,
+                  -19.899999618530273,
+                  0
+                ],
+                [
+                  15.899999618530273,
+                  19.899999618530273,
+                  6.599999904632568
+                ]
+              ],
+              "volume_mm3": 4323.288724342401,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 20
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03997640311717987,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-03C-H048-c1d6f05dcc.mesh.gz",
+          "bytes": 14277,
+          "sha256": "6cb111902fa18a3061c32e3a12420253b297e24c73b18dead6975815e16ffacf",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-03C-H048-c1d6f05dcc",
+          "geometry_sha256": "c1ae884b0e673e4be5d10a9fa30ad55f10f6e80d3ec4cd2ab17577a1b7efe377"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-03C-H048-c1d6f05dcc-EDGE-C020.mesh.gz",
+          "bytes": 14404,
+          "sha256": "e5959b09b2ef358f48c20cb1ef2721f6a55afad5a15f84ab6149b6c81a86dd01",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-03C-H048-c1d6f05dcc-EDGE-C020",
+          "geometry_sha256": "20b0b5ddaa04afed2a7a9a0b0673883e69c57257656c507f368eed2fbee7bc71"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-04C-H048-15e33fd0c4.mesh.gz",
+          "bytes": 19089,
+          "sha256": "70e11c81eafae3e8ac813bdb98a7f4edb5ba55557696deab7894e984324be10c",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-04C-H048-15e33fd0c4",
+          "geometry_sha256": "031e93d87f70b3fae580b1034221161653738a6423a439c9ab04223e31ef3fa4"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-04C-H048-15e33fd0c4-EDGE-C020.mesh.gz",
+          "bytes": 19282,
+          "sha256": "81eba109c046d619fb529b3851b43b625a484a7cafd6dc4802fea5098c4a6b78",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-04C-H048-15e33fd0c4-EDGE-C020",
+          "geometry_sha256": "49f4c81d7e6141f871ca7abbb274d744575f58ba88096cd41f0864c32648c768"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-04C-H048-8e241044a8.mesh.gz",
+          "bytes": 18996,
+          "sha256": "e357e289af8fb54c114d77c0e56f5a1e88958e5f3f1063aeb637b4083a01b5aa",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-04C-H048-8e241044a8",
+          "geometry_sha256": "42d5742a0fa44c8d9135cbdffda6cb5a5318de87b6accc33b850e5f4efcd138f"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-04C-H048-8e241044a8-EDGE-C020.mesh.gz",
+          "bytes": 19126,
+          "sha256": "d9ed2e3c8eaabefb2edc49c737a2144a7c4b491807d5b5a4c1d56b3074f5ab32",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-04C-H048-8e241044a8-EDGE-C020",
+          "geometry_sha256": "0409cabdd44d31b4b2423b0bec253ee72eaff11b49b615a9e4695e163ace879e"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-04C-H048-a6bced9f60-EDGE-C020.mesh.gz",
+          "bytes": 20029,
+          "sha256": "7d70afc881f49ad2a317916f00aed0cc8c2205d7b714dd740e5faa1dfcb757a6",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-04C-H048-a6bced9f60-EDGE-C020",
+          "geometry_sha256": "bfc6fa3f92bccfcfaebe6810fa244d240bc8d4594cf5075978472ca2fbae287f"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-04C-H048-c7f6e1087d-EDGE-C020.mesh.gz",
+          "bytes": 19184,
+          "sha256": "eb03cb16722bd6022a657d69f5ddd375791fa7ceeddf6b7e5a1b68832ffa2543",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-04C-H048-c7f6e1087d-EDGE-C020",
+          "geometry_sha256": "6f8aa03be5b94377b542d35b950c1fae7f6877e65c5dc613ac87d779cb71d39f"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-05C-H048-1898941840-EDGE-C020.mesh.gz",
+          "bytes": 23878,
+          "sha256": "5d5264fc6515c6e491a968f7530e05be8a37f41f8733b0ad9b6a001781477e91",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-05C-H048-1898941840-EDGE-C020",
+          "geometry_sha256": "f482935404b239dfcd488419dcc27e85a5536b0954bb979b452cba33728f1361"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-05C-H048-4050bcf8df-EDGE-C020.mesh.gz",
+          "bytes": 24184,
+          "sha256": "b0db6bdddac6e1ea899f98912051a859bf77ffc49041c06e3de9cbdb1fa653ab",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-05C-H048-4050bcf8df-EDGE-C020",
+          "geometry_sha256": "47225f140f4c98a6e55a208a8fcd184db8cd8601c0067bba23895be91b531ab2"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-05C-H048-4415eb3f30-EDGE-C020.mesh.gz",
+          "bytes": 23979,
+          "sha256": "d3ab28918972c1c9634363bed5b92f708f91a7fc484b691bae4c2ad8733266b9",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-05C-H048-4415eb3f30-EDGE-C020",
+          "geometry_sha256": "05081896157371965bb5991eb2f6a6cd5465d5a54a148c11c85ba2a4aa4250f6"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-05C-H048-73f76289ae.mesh.gz",
+          "bytes": 23565,
+          "sha256": "5c67f2502d28614047e5da5e173baecc338320e715ca84d2cafc90b97c6bf99a",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-05C-H048-73f76289ae",
+          "geometry_sha256": "74ebc53c9dd0dd9e67fd1a576e84988589c9e2b060cc49470c6b92eb36a5102f"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-05C-H048-73f76289ae-EDGE-C020.mesh.gz",
+          "bytes": 23700,
+          "sha256": "7e4ffb26a4b84899647c33263bf650ec1fba6d72df0dea8043b73e70b4b21515",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-05C-H048-73f76289ae-EDGE-C020",
+          "geometry_sha256": "02e5d7a67416039ee75b91d1f8019e0befdc6ed74bbfb3f9508ff6d5ba25771a"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-05C-H048-7ede4fdf04.mesh.gz",
+          "bytes": 30866,
+          "sha256": "85e0d1c7fc22d9402975b690930b239283ac2c14058e5e14186d2857559a3a2e",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-05C-H048-7ede4fdf04",
+          "geometry_sha256": "2c6079f6e60372a2620cf7f43ccb037e349918fbd1dce137c32253331331c548"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-05C-H048-7ede4fdf04-EDGE-C020.mesh.gz",
+          "bytes": 30939,
+          "sha256": "984c49ca423a105d3e382ad8041d2d040447e5c30f0ca9f4a9ec0e1f4fdba489",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-05C-H048-7ede4fdf04-EDGE-C020",
+          "geometry_sha256": "f21d1e01ce6d75671b5b41a85233705f03cf1d075d3aa51c90f5a836ce15c899"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-05C-H048-9fb1b8d9d3-EDGE-C020.mesh.gz",
+          "bytes": 23930,
+          "sha256": "8568a532a8391d4570b18ec9c7ae7869c3c396b4b480cd15f7ef1f0eb4dce902",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-05C-H048-9fb1b8d9d3-EDGE-C020",
+          "geometry_sha256": "1581f97d5e2912f06d9f0c35e2d8bd3669b8cc0b2bff7be858187a03358d5733"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-05C-H048-b2eb379a91-EDGE-C020.mesh.gz",
+          "bytes": 24752,
+          "sha256": "c109524a5c7ee800bcbc6d2175d7892ff4cbb635128425c60ddf574d77a9e67b",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-05C-H048-b2eb379a91-EDGE-C020",
+          "geometry_sha256": "691dcb360660de139a41208dc0326625e9c011349075b57011d7c7bca7adb0cd"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-05C-H048-c763985811.mesh.gz",
+          "bytes": 30679,
+          "sha256": "e7a48bcca71ffa4bda694845af9c492a3965b4a3cc8b02135bc8ba5dd5c75696",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-05C-H048-c763985811",
+          "geometry_sha256": "d4cf2dff502c73534fa5867b5f4848833cbdd6fd09de1847fb5201a59606b825"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-05C-H048-c763985811-EDGE-C020.mesh.gz",
+          "bytes": 30837,
+          "sha256": "cf2efacecd1dfa67a7420527bfe2f1b04ae73f88a664583ae0027a991b45809c",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-05C-H048-c763985811-EDGE-C020",
+          "geometry_sha256": "861684ae383f080227d0f8c60e2ccfb76a0061fe85af5493c8f1d908da89f873"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-05C-H048-e7674de05c-EDGE-C020.mesh.gz",
+          "bytes": 23515,
+          "sha256": "0a2a1f09212684981f814f1f9b93eee13104612a8dd0f4509f1c0d9a5f7ca3b2",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-05C-H048-e7674de05c-EDGE-C020",
+          "geometry_sha256": "06aad247af9549c2f482ff1a0d952d236e71bc5c08e15c8a2aa6784cbe71f420"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-06C-H048-040004cf27-EDGE-C020.mesh.gz",
+          "bytes": 28484,
+          "sha256": "2d0759d7022169bc9e6132797bc3147ffe0075941dcddfc252957d753d024189",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-06C-H048-040004cf27-EDGE-C020",
+          "geometry_sha256": "91749793b1790b93f777e53cdd085a697a2ad8bbaebba5ce2a2dfeef97c83b4b"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-06C-H048-1de883dfa4-EDGE-C020.mesh.gz",
+          "bytes": 35366,
+          "sha256": "deba745857814ddf7fdc3d66bae9a68bc770552c237011c6764f2832d53aace5",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-06C-H048-1de883dfa4-EDGE-C020",
+          "geometry_sha256": "f1acd5993c519b340fd3385c07bbd5348f01beacfb86e25f6bb4136c0cf315ce"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-06C-H048-1f09483782.mesh.gz",
+          "bytes": 35575,
+          "sha256": "d4c969c954f75cdf0345c3e9e3138a915235c4ecdeac7def2f754ab04df5c511",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-06C-H048-1f09483782",
+          "geometry_sha256": "655d4fc51d97a08f9031566aefd608c6005284e75b233957e3f1da092efd8730"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-06C-H048-1f09483782-EDGE-C020.mesh.gz",
+          "bytes": 35637,
+          "sha256": "22003d29d41fdde818041732fe6e8dde54cd51d1de3e55f63c4192614f3389bd",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-06C-H048-1f09483782-EDGE-C020",
+          "geometry_sha256": "d568f686d1577006e6c726ab91b7f41fda9883a41a56d487363bb1f54ba896ec"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-06C-H048-31129ef203.mesh.gz",
+          "bytes": 35317,
+          "sha256": "d68e53f9ef33894002c0d4d1ea0e5c13d5e5791b368f9362248beed37e30a196",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-06C-H048-31129ef203",
+          "geometry_sha256": "4a03142abef8e1f46afab1f0a57eceb315e968a318d657c850b10b1f36489e2e"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-06C-H048-31129ef203-EDGE-C020.mesh.gz",
+          "bytes": 35377,
+          "sha256": "b70eea676d1890fb048ef5a22a904035799c2559d71a86a20e72a1f3c645bc20",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-06C-H048-31129ef203-EDGE-C020",
+          "geometry_sha256": "45e3a1e09c3b1cc6f85e8b5df48307fb3ef9a7c352bdf0cedf750fd8390f92e1"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-06C-H048-579600b9e3.mesh.gz",
+          "bytes": 28015,
+          "sha256": "cc947cb3cb3d04aaa134c42d753f522c515eb1900a80916bf15e08b2a62f9577",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-06C-H048-579600b9e3",
+          "geometry_sha256": "1c8e2a6a458203078808cd0bb82a18c8500c14a85e576628f2e497039412087a"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-06C-H048-579600b9e3-EDGE-C020.mesh.gz",
+          "bytes": 28055,
+          "sha256": "21e2a4b1a43b87226c7cf7701b2b70ee837eb8f66d3f905903a7365133f4fd82",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-06C-H048-579600b9e3-EDGE-C020",
+          "geometry_sha256": "6c485e82b42b6e71d64cfda4ff6cfe1dd1dffa407ed6cbdd10a6602fd9b6ba39"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-06C-H048-6fa6c35f3e-EDGE-C020.mesh.gz",
+          "bytes": 28297,
+          "sha256": "725c4651e5b415362f669f889a9f167ccb9aa426b74c0f439a2bb800b9873ce5",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-06C-H048-6fa6c35f3e-EDGE-C020",
+          "geometry_sha256": "042a8b5cc998e6fdd64daf448486ff3dc2e4707e779e5084f20945b393d0b90c"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-06C-H048-7e0a0c4a1a-EDGE-C020.mesh.gz",
+          "bytes": 34446,
+          "sha256": "80b76610799da24a795c26b61727e8182d715656024f0d02c254d144ef28384d",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-06C-H048-7e0a0c4a1a-EDGE-C020",
+          "geometry_sha256": "23fbaefd1c99487129b41f860a74aaadf90978baf821a9ae99cf2ec1f0813338"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-06C-H048-88c8e83714-EDGE-C020.mesh.gz",
+          "bytes": 35344,
+          "sha256": "936abe49d804ba48505fc9469a960b2be86a5c8cc2f6257fed792cd5b2760369",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-06C-H048-88c8e83714-EDGE-C020",
+          "geometry_sha256": "8ce419bfbd5ac6d44b2d340bfec97c1b24403fb1ff1eedfb1107c53d1884ae8e"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-06C-H048-adaaf29086.mesh.gz",
+          "bytes": 35577,
+          "sha256": "6a0b04353de8773993ed092e6c6ae98705f88d4089cc0546ad7a8a1c97772e9e",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-06C-H048-adaaf29086",
+          "geometry_sha256": "794d445a12221837e5500d6fb623d3b7d5bbdbafa966c16cd4a7a1650fe1b249"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-06C-H048-adaaf29086-EDGE-C020.mesh.gz",
+          "bytes": 35554,
+          "sha256": "f23e6d8ec7231fd2c8f2c68e9090ed5e4d3ff12507d7a5a18ae4c32838c845ce",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-06C-H048-adaaf29086-EDGE-C020",
+          "geometry_sha256": "5e103a5f3f75c829ca527e0347879c14ce2aae8b9d04e485e02e519582aff829"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-06C-H048-e4a18a0220-EDGE-C020.mesh.gz",
+          "bytes": 28758,
+          "sha256": "86d98d88dd3536fbde5ca08874160acb194c8dbb3660da75602f1cc19b4ec06e",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-06C-H048-e4a18a0220-EDGE-C020",
+          "geometry_sha256": "8961e0b0f80b0c04dd4a18b9db45095b41b85ad54494f15b4406bd7e0db652f2"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-07C-H048-15b6f98028-EDGE-C020.mesh.gz",
+          "bytes": 40144,
+          "sha256": "61b0e32c50229d3d164c7d163cc7d539e99ce67af97351b01f8149adecc8aab2",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-07C-H048-15b6f98028-EDGE-C020",
+          "geometry_sha256": "bf08b7802f5b533526ef9e9e16b7f6811c8ddb0db3e01ef091fcddda31c52056"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-07C-H048-19b018b623.mesh.gz",
+          "bytes": 45897,
+          "sha256": "710a250d9e13adaa4680137332a8d0ed37eadfe5969c31fecd899a672003b7c2",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-07C-H048-19b018b623",
+          "geometry_sha256": "6242cdd7dbed74cf59893436f213ea9f99425234a4b1f000c9aa4330b47963d3"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-07C-H048-19b018b623-EDGE-C020.mesh.gz",
+          "bytes": 45833,
+          "sha256": "8dc35f6bc44964cd8b1eb8efeca3f42a39290f7f0d047d6c46096e644a41b71f",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-07C-H048-19b018b623-EDGE-C020",
+          "geometry_sha256": "acb82f0d8ef2a249dfc9e91c1cb6c022618b728faf5939020e64ba84f03a57b1"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-07C-H048-370aafe7ff-EDGE-C020.mesh.gz",
+          "bytes": 40022,
+          "sha256": "c5f493986b525b113766d35d7ae24fe066578ccbd3adaad1ffdd82a6432d8f55",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-07C-H048-370aafe7ff-EDGE-C020",
+          "geometry_sha256": "c17a59f999ee7e2937880f567de5216ee1445536ee9e8d50db578ad29254f5d8"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-07C-H048-47687fad65-EDGE-C020.mesh.gz",
+          "bytes": 40066,
+          "sha256": "a510e926591400ab0ce2567b1cf1e08c91c8385b467c35d9bdb6d476d3647e8b",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-07C-H048-47687fad65-EDGE-C020",
+          "geometry_sha256": "23181b33d46a1d41628abd7fdebe1dda7c5460502b3774c3ddccdcfd257c1831"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-07C-H048-48e06b5e1e.mesh.gz",
+          "bytes": 45676,
+          "sha256": "14a399007f5240fb14f35421055ac415ae0a244d8a702e8435d973353b97d0bd",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-07C-H048-48e06b5e1e",
+          "geometry_sha256": "1a1b06bb2559ecfbdfb785f7271b95447c8d60c894b6d00568bbf25a05bef0f7"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-07C-H048-48e06b5e1e-EDGE-C020.mesh.gz",
+          "bytes": 45729,
+          "sha256": "b204ebdb3145ae0b7b3bf0ecbc52bbdb8451166de0ff8dd8a4d1729ccc381e8b",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-07C-H048-48e06b5e1e-EDGE-C020",
+          "geometry_sha256": "6c271e4b2a0754569e970183399e7d481fa166029ab25ade987e051ebc0128f7"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-07C-H048-6da108573e-EDGE-C020.mesh.gz",
+          "bytes": 39791,
+          "sha256": "1a8e6fb280ef3224ff7249a7338db1c4bf0d8442e1887eff745a81544392a32e",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-07C-H048-6da108573e-EDGE-C020",
+          "geometry_sha256": "c6d2edec1092b5a9a1cd909e1d30678d3d2e2453933cf89b0ad548fd2d2e60fc"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-07C-H048-72a74687bf-EDGE-C020.mesh.gz",
+          "bytes": 39470,
+          "sha256": "87aa7f14de4d5bb891e76fe570a7e417a9b0ebecc2013f505965d538815517ca",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-07C-H048-72a74687bf-EDGE-C020",
+          "geometry_sha256": "e7d53ba83ea899db6e3706c18f42cfca8df1635b8923e55bb3b0e19034d7cffb"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-07C-H048-74db02a664-EDGE-C020.mesh.gz",
+          "bytes": 32818,
+          "sha256": "1ae23cffa6290f6e4a93e6d420ddfa20201f3bc079683d04f0b17c4a78949e2d",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-07C-H048-74db02a664-EDGE-C020",
+          "geometry_sha256": "bbb912d2ff5ca0d04489d12986855add11a8361c3465845c95aa3725e4678717"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-07C-H048-8db0b03e41-EDGE-C020.mesh.gz",
+          "bytes": 45254,
+          "sha256": "924a4246fc122dd924771571ca8060de183bf7d95ddb398665f3d1814371a9da",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-07C-H048-8db0b03e41-EDGE-C020",
+          "geometry_sha256": "3890396dc8837db8cc2d9d89b987d9344f870cef4aa4ad08e42fa3a81a653b38"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-07C-H048-9beb2ab922-EDGE-C020.mesh.gz",
+          "bytes": 39933,
+          "sha256": "524b8eaab59fbee5338614c086fd3b8f2294d7a055a22178c4210b746cb6bee4",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-07C-H048-9beb2ab922-EDGE-C020",
+          "geometry_sha256": "933dae2598301aaf7c2e16708ea56a621094d7a1c0919fcbea4bf66be1b5c627"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-07C-H048-9fe7fee271.mesh.gz",
+          "bytes": 45326,
+          "sha256": "478f35298ad92e32a540d70b3247a347a04843725174a77b0385d1ce00aa0490",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-07C-H048-9fe7fee271",
+          "geometry_sha256": "26c15b6f47533581a10e630d05a1b506ee3e14a684c47a3ab8f847bf31ff9570"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-07C-H048-9fe7fee271-EDGE-C020.mesh.gz",
+          "bytes": 45365,
+          "sha256": "3fb8c30ce50e30bbfd0a60dc346b8bf5963b76a284b6e079dcd9b82bb5d3672b",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-07C-H048-9fe7fee271-EDGE-C020",
+          "geometry_sha256": "afda9a94e6a509e6e7051d7aab708627cc220c22974e1b410d6d4845670fe6ea"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-07C-H048-c1dd9ea58c-EDGE-C020.mesh.gz",
+          "bytes": 41242,
+          "sha256": "8f8f15a992996e8519435ee552e3f0aeaa3d7dea6995f6c8b15a933bc02db29d",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-07C-H048-c1dd9ea58c-EDGE-C020",
+          "geometry_sha256": "1974a9105ecd2b25d294beb258fcfeecec956c4b3b5a975768fa8f6c8eee8ea7"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-07C-H048-cc027dea83-EDGE-C020.mesh.gz",
+          "bytes": 33319,
+          "sha256": "132b15652accd04af5b3caed6d88cc71b3eb84af2c09e93613ef2bdfd8f8d0b6",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-07C-H048-cc027dea83-EDGE-C020",
+          "geometry_sha256": "342462bbfa41ac06449852496ff7b224241cb75849d41b2bcb0946bad55e5eda"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-07C-H048-d4c0928299.mesh.gz",
+          "bytes": 39621,
+          "sha256": "6ef96171bcb99c9d65fdcf0a15e125e341b0bbbaab803e3bf3d3e40f4085f060",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-07C-H048-d4c0928299",
+          "geometry_sha256": "b49b4e7206a95ad71517d2ae25f712d89c748ade0aee7534d2ba7518dbf8e2a0"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-07C-H048-d4c0928299-EDGE-C020.mesh.gz",
+          "bytes": 39670,
+          "sha256": "aac265df2dc84f26618713de5c87a4e4c9ad698885d9c14ed8f7440db3af344a",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-07C-H048-d4c0928299-EDGE-C020",
+          "geometry_sha256": "d400f703ba5c3c2ddd552a8faa3deb7ced426a729bea74d83116106a6813c85f"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-07C-H048-e10d9a04a7-EDGE-C020.mesh.gz",
+          "bytes": 45202,
+          "sha256": "520c9bc5d7878fb3215e198b73bde6b65014deb84da3e028fac8080652b846c8",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-07C-H048-e10d9a04a7-EDGE-C020",
+          "geometry_sha256": "9338303e03aad1f9d6ac8233788ed6ccff47bcaaaa808281f2f6af38bb33c344"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-07C-H048-e42e91e2b8.mesh.gz",
+          "bytes": 39682,
+          "sha256": "d8dc90a17b711296c93b8c56ca7ce33a0798e9f9313a72ad79bd351de74df189",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-07C-H048-e42e91e2b8",
+          "geometry_sha256": "f262a7ded3494d1e2a0c900a12643409ce6ecb651078e3e30e4b09c0a03a44ce"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-07C-H048-e42e91e2b8-EDGE-C020.mesh.gz",
+          "bytes": 39682,
+          "sha256": "ff1698286a58bab2e662eee5af06a249e146ccad157b5982584e1117eddfd4aa",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-07C-H048-e42e91e2b8-EDGE-C020",
+          "geometry_sha256": "7583c6b5c78b7a978ae5a14b66c0ca2a8729f200ef2d8a82b6946d7d8c61f49e"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-07C-H048-f7779baa32.mesh.gz",
+          "bytes": 40456,
+          "sha256": "09959dbeffaa1bb5cd7139a18737bf2eaa8e1b6b0a4b0e263fdb0598d8d0fa96",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-07C-H048-f7779baa32",
+          "geometry_sha256": "9971bb0fdb1203f58ee127229e51db94906ecd22d4e877afc8f90f781d3816e6"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-07C-H048-f7779baa32-EDGE-C020.mesh.gz",
+          "bytes": 40497,
+          "sha256": "302d29382e74df3c67e23c8fff07170d842c797f684b59a9dda14bc0e7be281e",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-07C-H048-f7779baa32-EDGE-C020",
+          "geometry_sha256": "11bdbce0b66878bd4e2c8a55ddb5e86e042c8d3738601fc35ec42eab6aafb9c3"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-07C-H048-ffcac5b962-EDGE-C020.mesh.gz",
+          "bytes": 33773,
+          "sha256": "4d45ce157fa36c078f8098acf0a5a1162dfaf6ff5920f96ecb97de253e79bc11",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-07C-H048-ffcac5b962-EDGE-C020",
+          "geometry_sha256": "1dde78334c6d599b777c66f6325e3a96278569bef16dabf131b66ab733f065c3"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-08C-H048-0300667972-EDGE-C020.mesh.gz",
+          "bytes": 50804,
+          "sha256": "212f3244c1b9d1bf2615ecdf540cfa46b8ecafc18d56f5fb08522517edd126bf",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-08C-H048-0300667972-EDGE-C020",
+          "geometry_sha256": "d1ea8cb8f11463ab1d5f4b4b63aca7300b269552147efbd2f27a72a9b714c5a3"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-08C-H048-2676942104-EDGE-C020.mesh.gz",
+          "bytes": 50967,
+          "sha256": "2a8809082a9a0b017de4450ab3bae468bf883668d492e94a33553e7f210ead73",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-08C-H048-2676942104-EDGE-C020",
+          "geometry_sha256": "d77ed4a8315c61f2305b7a4e0a16ce9e45b0509ddd45b0b13058a15e752026b5"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-08C-H048-2c5d77da22-EDGE-C020.mesh.gz",
+          "bytes": 45976,
+          "sha256": "14cfdeb5bd6f12d1b000880ebd5c1e52ce69094be6048ee372a3ee992a8fab9b",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-08C-H048-2c5d77da22-EDGE-C020",
+          "geometry_sha256": "939ea38dca9e9de616784ccc5c8585182bbd53e8933c8567338f655acbd28049"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-08C-H048-385592b6ac-EDGE-C020.mesh.gz",
+          "bytes": 50654,
+          "sha256": "002f87e662423dc1a4abe5b49ea003760233ab9eb2657d97bdd44931952dae39",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-08C-H048-385592b6ac-EDGE-C020",
+          "geometry_sha256": "0b10714ffbb1c43458ced02fd7062e774166b7fe0cf227dd5f2fcc6dffa8c9f2"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-08C-H048-40c07caec4-EDGE-C020.mesh.gz",
+          "bytes": 50490,
+          "sha256": "68c07381d7bbf18c5e02c79a94d8da4cb6293345f039fa1b45660487b1ae6a53",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-08C-H048-40c07caec4-EDGE-C020",
+          "geometry_sha256": "afd0b162eb3d3ce8071fce647c76d459203c0db1cee2b65f3d25ee1f7d228ed1"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-08C-H048-56b2e1e414-EDGE-C020.mesh.gz",
+          "bytes": 49383,
+          "sha256": "9dbc6925d823d9eba53cd0ea8ef06b85c653b3fbacdb6ec114f66e4fecc395a6",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-08C-H048-56b2e1e414-EDGE-C020",
+          "geometry_sha256": "aae884711348eded28432af3a7a90f8e6c83b28cea1b867ce43b84c07ed965ff"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-08C-H048-7f38ea7dc2-EDGE-C020.mesh.gz",
+          "bytes": 50363,
+          "sha256": "763cef3ddd05eb13257f4b2043a84fc14ae57265a52a0e5fcfa408496bc3f6cf",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-08C-H048-7f38ea7dc2-EDGE-C020",
+          "geometry_sha256": "3cfe30bfaaa2ef677e3462ad87e567fbcf288e73077b8b0aaf4bdf1107b0f536"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-08C-H048-9022c20661-EDGE-C020.mesh.gz",
+          "bytes": 55487,
+          "sha256": "e92dc43fd781b0d69e8bc4460a5d0710f4ac611b5b30e66e2f1576b38764ef40",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-08C-H048-9022c20661-EDGE-C020",
+          "geometry_sha256": "749f5b6c5f8b3a54feeab9b33bd7c252bbbd31732deccef7df47805ac78a3312"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-08C-H048-ab4bfe0cc7-EDGE-C020.mesh.gz",
+          "bytes": 36778,
+          "sha256": "809f1b1c014667e5bc9786036e4c72cb6bc8a3405e1ccb046391189acf25835c",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-08C-H048-ab4bfe0cc7-EDGE-C020",
+          "geometry_sha256": "910c77f737ab9900b4b1ff81cb44102ca4343a08f1a8b876182f0dd2c968c2e2"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-08C-H048-b34d7e82a8-EDGE-C020.mesh.gz",
+          "bytes": 50534,
+          "sha256": "82c7c8909659328d8e92a8e75119e9f8562834215645ff1f623783755684e881",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-08C-H048-b34d7e82a8-EDGE-C020",
+          "geometry_sha256": "34c21c11b5ed0174b615f35846130e2d69fbfb9603cd28f253df4626f693b394"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-08C-H048-e64f5ce8c6-EDGE-C020.mesh.gz",
+          "bytes": 50201,
+          "sha256": "967a2e66f4fdbef273b8afc201ecf270fcb745027415955025667b32f6cdbfde",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-08C-H048-e64f5ce8c6-EDGE-C020",
+          "geometry_sha256": "f3094c623d165d2ad91fcf31e53b4496c6ccabfd7a0cc01ae69a808b443c0a86"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-10fa964061-EDGE-C020.mesh.gz",
+          "bytes": 60134,
+          "sha256": "7ef2e3aacab6c11a652ba49a51238ee1480f8dea9d19c225ab253e4edafc86b7",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-09C-H048-10fa964061-EDGE-C020",
+          "geometry_sha256": "25ecc9cf6b4a89ee323a76caee58015de846c25815384abf2ce1818d85b60e2a"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-19b47c0720-EDGE-C020.mesh.gz",
+          "bytes": 55335,
+          "sha256": "d086e1a0f5bea06c1da8f33f75959152962fce91105cd956d7e883111b60d5f1",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-09C-H048-19b47c0720-EDGE-C020",
+          "geometry_sha256": "9c36ca004347d60cb71436117738b2cb4d49f7426dc9cc17e14c76c45c58c9ee"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-1b75716a54-EDGE-C020.mesh.gz",
+          "bytes": 60282,
+          "sha256": "018e7e13536d61772a8c8cde1641c60f704d2225079d73c38f03bfdf447e5a6a",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-09C-H048-1b75716a54-EDGE-C020",
+          "geometry_sha256": "70a77dd6685e537809fb819dfc6282110db70f1b2aef06f7d12b6e1b837d8202"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-2942373b3f-EDGE-C020.mesh.gz",
+          "bytes": 59579,
+          "sha256": "c5e47fdd9a47816e9a3dec249e3bbb4e677c0e854e1725646aa7625ae7212d52",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-09C-H048-2942373b3f-EDGE-C020",
+          "geometry_sha256": "0fec732a9ecf823eb58bf448637487b64d5da57cc03133fec53770bdcd0aa096"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-2bc2853866-EDGE-C020.mesh.gz",
+          "bytes": 49013,
+          "sha256": "ba59ec40e07ab3444daa554f89fd6440088ed10c8b87251d3f30200929a6cc4f",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-09C-H048-2bc2853866-EDGE-C020",
+          "geometry_sha256": "4795930116c37f5ea74b082a39a5cd638e8e72f87b223eba195c3ff441317e10"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-2f6410248c-EDGE-C020.mesh.gz",
+          "bytes": 59801,
+          "sha256": "d85a8c5be0ddeeb9dbd99dee33561afc23d3f182081e4dfe385e79a1a3e37b39",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-09C-H048-2f6410248c-EDGE-C020",
+          "geometry_sha256": "0d759eab280a20646d84d93205f48178326c7b064b2a3e07e2314e8ed92854e3"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-415b9d4854-EDGE-C020.mesh.gz",
+          "bytes": 61148,
+          "sha256": "f2adc8cba03db434695fce28251c3b9789f285078bc31ccae62bdeaf9256a087",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-09C-H048-415b9d4854-EDGE-C020",
+          "geometry_sha256": "d4e84cd67c8d8b9fbcacda86de9c04cd94b0954cab8715d1787ddf0dbd625bed"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-5ba1c77317-EDGE-C020.mesh.gz",
+          "bytes": 59810,
+          "sha256": "a3e413be206b8854e5582f76c563e63a5c793f42e58e968d6fd683eea7971e56",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-09C-H048-5ba1c77317-EDGE-C020",
+          "geometry_sha256": "fe289e29244352167b43b44322fbea316462219fc6e391b38869739685e6eb26"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-5eb32c5359-EDGE-C020.mesh.gz",
+          "bytes": 59861,
+          "sha256": "0c1de04a6bff79a4a6664fc6d3e108c34c075876a0d5adba84c6efbb55257ecf",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-09C-H048-5eb32c5359-EDGE-C020",
+          "geometry_sha256": "1899856c57434044c1207a47575b9c4222daee09a4703650d86fe79a20c332b3"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-619cfdedda-EDGE-C020.mesh.gz",
+          "bytes": 60615,
+          "sha256": "c586bc5ae5749e383dc39a4fe25b4c2dedb80da8d533db34c28c59ed284cc84e",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-09C-H048-619cfdedda-EDGE-C020",
+          "geometry_sha256": "d8afd624bcea5258abe9e8227092abaf6c913c9e9da0076422984eb10da82332"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-792fee37ed-EDGE-C020.mesh.gz",
+          "bytes": 55041,
+          "sha256": "9f6ddc31367d90367ad3fb3dd94f28ea3d459647ef9e0381ff93e57f8ef32436",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-09C-H048-792fee37ed-EDGE-C020",
+          "geometry_sha256": "7750f6403abedbb3afa30b9638ea5a72e522762f5bfe6c288a783a7fdce10ad6"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-f0f5e236bd-EDGE-C020.mesh.gz",
+          "bytes": 54737,
+          "sha256": "1e26e2da93fd2099112e09de6978d84fc38b1551bf073f0914fe775f74d20062",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-09C-H048-f0f5e236bd-EDGE-C020",
+          "geometry_sha256": "14352812b438e70f21ae05162ec68ab31876a4dd586dae1909882df270d12107"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-10C-H048-6685db8648-EDGE-C020.mesh.gz",
+          "bytes": 64386,
+          "sha256": "688fa9195bbaebbce5981b2ea200f611c583c2ffa9cdff589726e708992899c2",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-10C-H048-6685db8648-EDGE-C020",
+          "geometry_sha256": "6ed151a0d6115781ecfe3ce9a98527514269a6e14a7281022643848836c6d63d"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-10C-H048-6f25413d60-EDGE-C020.mesh.gz",
+          "bytes": 65225,
+          "sha256": "ba6a7b68997c9ddd5d50face604f111c9d2667532e835346a301b25dfc99f754",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-10C-H048-6f25413d60-EDGE-C020",
+          "geometry_sha256": "ed935e82f5197e48ca05f60f753f7ec9b89798c31ed3c4a1246623b5913bb00f"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-10C-H048-71024a1453-EDGE-C020.mesh.gz",
+          "bytes": 70108,
+          "sha256": "310ae59382f8abbde794a6e7ae04ea326bb6b46fec28c2258253cf0994f2a199",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-10C-H048-71024a1453-EDGE-C020",
+          "geometry_sha256": "0a41e3ac613f162fc871221db7293c055268bfd7d768b50c4acd6637907716c5"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-10C-H048-a154228b8a-EDGE-C020.mesh.gz",
+          "bytes": 64891,
+          "sha256": "2b07c1a562656e506491889059c17cc282f6c353c00179dc0405d4bc6c8c4b98",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-10C-H048-a154228b8a-EDGE-C020",
+          "geometry_sha256": "902b0c434eaf3dddfc1ba313ebb993c3efd79d6829fded110e73415e4d337f33"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-10C-H048-b3692aef1c-EDGE-C020.mesh.gz",
+          "bytes": 64646,
+          "sha256": "dd18540b9df191cbb8469d48053970a54f69932afa06257f609bc2810227d3c3",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-10C-H048-b3692aef1c-EDGE-C020",
+          "geometry_sha256": "1bfb4409392720cb1cdd5c2527ee415f36abf03c8f48825b450bf1075b0e1692"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-10C-H048-d4ef8cf0e8-EDGE-C020.mesh.gz",
+          "bytes": 58511,
+          "sha256": "a3532f576dd2462eb108c195942487c1946996f88127a70758a1dd60ef35f8cf",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-10C-H048-d4ef8cf0e8-EDGE-C020",
+          "geometry_sha256": "45320ee5817015aff2bcf7a4b75da54f96e1a061d9c3f2fc82e2a60cb4b96705"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-10C-H048-d5a8b98a9b-EDGE-C020.mesh.gz",
+          "bytes": 65417,
+          "sha256": "7f3bc39f4cb5f8cb9f2e46ebf108169838cccc299c9c61d0aa9c598febc066c8",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-10C-H048-d5a8b98a9b-EDGE-C020",
+          "geometry_sha256": "9019fa4a4d17c7832b6c505ffa51e4939f9ac3654e4744f0fbf92f745c965ce5"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-10C-H048-d6324c8a56-EDGE-C020.mesh.gz",
+          "bytes": 64461,
+          "sha256": "6faeff7bf6da87ef47f7373046e0e31652c40266f0d048ee4144379abda9ab93",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-10C-H048-d6324c8a56-EDGE-C020",
+          "geometry_sha256": "090ed7b55e29c350ef7013e671d1d483d85d27e93af7df075d6af59e289bec17"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-10C-H048-e13752c9a5-EDGE-C020.mesh.gz",
+          "bytes": 70403,
+          "sha256": "49cbbc6a4ca296082476491a68dbf37191f3d9e1aa581623636c291ddf049fe7",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-10C-H048-e13752c9a5-EDGE-C020",
+          "geometry_sha256": "5b35325d7a2819281749806f2c3f22ccdbd4d091e581f58c405620ccf7e6f507"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-11C-H048-19e6f750fa-EDGE-C020.mesh.gz",
+          "bytes": 74358,
+          "sha256": "31e7b8aaa4c2caee816a2be464fb3a794e98e9c672618d5e4858e3469ba0c73e",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-11C-H048-19e6f750fa-EDGE-C020",
+          "geometry_sha256": "4299d3b8bee13674a61accfcea087c8a5aef3b62845d136c1ec51a442c543645"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-11C-H048-300b51f304-EDGE-C020.mesh.gz",
+          "bytes": 69584,
+          "sha256": "9d5ec487d9dd6ef3ed945c6fe19b5ba167eaa7dd2c74f19f421fa9cf037fcaf1",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-11C-H048-300b51f304-EDGE-C020",
+          "geometry_sha256": "54fe44902d1e4a051ed379468d137073afb753f5ddc1533294cab775d5acca76"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-11C-H048-4aaaca6928-EDGE-C020.mesh.gz",
+          "bytes": 70151,
+          "sha256": "de55e3803744772b85c6d4f575a6fc1c88a5d259d58624342fd97a0f258a3b36",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-11C-H048-4aaaca6928-EDGE-C020",
+          "geometry_sha256": "90934ef6f603838d48be650651dea311846e43732004898786976fa0f9d7ee56"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-11C-H048-51645b78fc-EDGE-C020.mesh.gz",
+          "bytes": 68811,
+          "sha256": "6df967654a7e6acf16ce04feb8f721ea126e56ddb36fc39362e377d1a9cb7923",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-11C-H048-51645b78fc-EDGE-C020",
+          "geometry_sha256": "f35abd03bd660ce47d546360c245f488338755f29112812517db394613ad6624"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-11C-H048-61c223c85d-EDGE-C020.mesh.gz",
+          "bytes": 74557,
+          "sha256": "4158f35e71fdbb9aedbaa2eb6af96eb013ac6cbfe301281334805a812ca715f6",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-11C-H048-61c223c85d-EDGE-C020",
+          "geometry_sha256": "3ff0fc5414369db55e164f6707a44166c82fdc41815edb998b637a3bf3577460"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-11C-H048-6914ea5a07-EDGE-C020.mesh.gz",
+          "bytes": 80638,
+          "sha256": "2b6cf05174dd208e64863289fa05d1eed8e6a3fee1f65be2a8be59d325590b4f",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-11C-H048-6914ea5a07-EDGE-C020",
+          "geometry_sha256": "d5647a197951b621d292083b04ad33ffc38ad859df41f5493859b886b8238320"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-11C-H048-6aa1d772d5-EDGE-C020.mesh.gz",
+          "bytes": 68532,
+          "sha256": "e6610b2e328c2f48f86a744101be5ed86d37e06e66422c2844ad2838f2e2bc70",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-11C-H048-6aa1d772d5-EDGE-C020",
+          "geometry_sha256": "8a6262cd24d8eb5f02e2bd1031f12770b740b2d68f011d07c0f9dfdc015d26d8"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-11C-H048-6b26bf00b4-EDGE-C020.mesh.gz",
+          "bytes": 74426,
+          "sha256": "41e9424ca8f779439bac7635443cd2e708439caa7db4af75491573992109530d",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-11C-H048-6b26bf00b4-EDGE-C020",
+          "geometry_sha256": "4adca1e36e79a611de4fb23a770fb9c7671b900327b7aa1c851d80c5a325e759"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-11C-H048-7d45da0666-EDGE-C020.mesh.gz",
+          "bytes": 69201,
+          "sha256": "b8f271fe5b8c31bb961ae68f6da538d3603e7a30c19d54a2738bf23d0ac1e35a",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-11C-H048-7d45da0666-EDGE-C020",
+          "geometry_sha256": "fe120ecb9940def1e6ae180c83737259ef3410ab39e8a5e3ec3330561d4f3f99"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-11C-H048-9087ddfc89-EDGE-C020.mesh.gz",
+          "bytes": 70092,
+          "sha256": "7e0ba0fae727fbf50e2a269c602fb2d1a05692bb8803f7f806b3f157a106183e",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-11C-H048-9087ddfc89-EDGE-C020",
+          "geometry_sha256": "08f482ebda30e13a0624f50554ddb1ec7623225dbcde529b7a6977993c2566f4"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-11C-H048-9b0f6ccc99-EDGE-C020.mesh.gz",
+          "bytes": 74098,
+          "sha256": "f279bbc96fddc26273d2da5a48294b9ebcdf58e1bf594eb2c93a73baad1743e2",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-11C-H048-9b0f6ccc99-EDGE-C020",
+          "geometry_sha256": "182808a9998d7dd45536d3e49d289cee80a402c388b425927fa25755ac92ae10"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-11C-H048-b0163edc7f-EDGE-C020.mesh.gz",
+          "bytes": 80608,
+          "sha256": "6afe942132b1af2e1ba9e50dd44756850290b988ffca84092dd181be5b497abc",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-11C-H048-b0163edc7f-EDGE-C020",
+          "geometry_sha256": "c44637bc9046a2f2e535ccb7b9827e9b62de38914e783c50305a796b0dc5ed9b"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-11C-H048-bc339a65a9-EDGE-C020.mesh.gz",
+          "bytes": 71526,
+          "sha256": "a3299cc004272c731553123a4ae144211e294208e67738865ae4cde65dcc0966",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-11C-H048-bc339a65a9-EDGE-C020",
+          "geometry_sha256": "98f7053901fd935296a0957b6acfce0c7cd98faf9fd755cb582138d8d92c51b7"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-11C-H048-c0629de5fd-EDGE-C020.mesh.gz",
+          "bytes": 61600,
+          "sha256": "e3c991dd0f91e36dc2f26d841f2957590224ce6481302fafe24310685a09d6da",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-11C-H048-c0629de5fd-EDGE-C020",
+          "geometry_sha256": "4d97716cce1af4bafa3cadd728040f05aaa55d760be01062db5c5e88355aa738"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-12C-H048-0b74f4c95e-EDGE-C020.mesh.gz",
+          "bytes": 68155,
+          "sha256": "e1220d096ca2e4bd6a5d80e8f084b545cca6a54b1868fb76b5f28e8dcd41e92d",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-12C-H048-0b74f4c95e-EDGE-C020",
+          "geometry_sha256": "dd201275eba323ca857251b2029e06f63e3be436ee332d082f9e8fcf3127506a"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-12C-H048-0c5e5c7de7-EDGE-C020.mesh.gz",
+          "bytes": 80372,
+          "sha256": "9149575accb68aeb14a1bd2d707fbd972b838326913820d459f708e741973f4a",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-12C-H048-0c5e5c7de7-EDGE-C020",
+          "geometry_sha256": "9b155ebab650180e596c5e0ad1ce222346b044c5ae698611e9fb2af532d89a7e"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-12C-H048-5cf781c50b-EDGE-C020.mesh.gz",
+          "bytes": 85123,
+          "sha256": "5e75b15c4cd42d6bef0a44d1e18282f908d5133c06b36774832b1587d405a2b5",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-12C-H048-5cf781c50b-EDGE-C020",
+          "geometry_sha256": "ec382381b0dd76e1bf5cf5066f1f3fbdf8a004fd4136701eab35fc091cd8f930"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-12C-H048-5e8028ae31-EDGE-C020.mesh.gz",
+          "bytes": 73973,
+          "sha256": "aed3461db3534cbf7d6b3138be3298f411d1a8f09cc9cc508642dccd8950fac7",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-12C-H048-5e8028ae31-EDGE-C020",
+          "geometry_sha256": "3d89d5222fe5340fdd7f8070ad6f213ab01cedd2efbee2ab7f4a98dac5a579fd"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-12C-H048-6040f49a34-EDGE-C020.mesh.gz",
+          "bytes": 84721,
+          "sha256": "054c7dc55b5f3e84ff1dc550292ebb23fb426918ddac66477806b55c45cd121d",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-12C-H048-6040f49a34-EDGE-C020",
+          "geometry_sha256": "e1bbe261b52812953384c7047dd6a5f8b0f1408d0d40b6376a380b6b48c0298e"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-12C-H048-62e4850baf-EDGE-C020.mesh.gz",
+          "bytes": 78852,
+          "sha256": "303c993c7e1e9d5a6bbb2749678b9ce61a018c4f5417f736e5ef8451d094d069",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-12C-H048-62e4850baf-EDGE-C020",
+          "geometry_sha256": "42f50c6bd0025d03844a1ce15696d30d043106a1952589c8ed42f1c92ee97054"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-12C-H048-8a6f104421-EDGE-C020.mesh.gz",
+          "bytes": 59241,
+          "sha256": "ebc34a171b74bad674903f4b28cc3a976fad0f2857829ba797986a2b33f790d7",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-12C-H048-8a6f104421-EDGE-C020",
+          "geometry_sha256": "2974cf79189cae76b6fb17209d00c1b418e582c47dc55ac029a1457d2474378b"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-12C-H048-9ab8ea75d3-EDGE-C020.mesh.gz",
+          "bytes": 86286,
+          "sha256": "f85bea33ddb4565de6cade559375230937ad592e7e95045c880811fada6cf287",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-12C-H048-9ab8ea75d3-EDGE-C020",
+          "geometry_sha256": "e07c03509fd5dbd0d2c3cc26d07663a86cea69d99c1a72148613bfa481e21264"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-12C-H048-c7e0dd6f03-EDGE-C020.mesh.gz",
+          "bytes": 74379,
+          "sha256": "64ae4b1c1c3e45253ca13707e9caf1782163465746e7edfd518da09eaa594e93",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-12C-H048-c7e0dd6f03-EDGE-C020",
+          "geometry_sha256": "3acb957f4c6604fdf5348e2b220312902504aa2ae93cf2ab025f793da27d1617"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-12C-H048-d60518a25d-EDGE-C020.mesh.gz",
+          "bytes": 82416,
+          "sha256": "085c55fa2122f7eddbb935139a0f21360f8e82d5453d4f773dfa11b3c267425d",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-12C-H048-d60518a25d-EDGE-C020",
+          "geometry_sha256": "f70902c162f224bd773a1944dcbb1e3ffad62bd77d24c145fed5b2572c6f838b"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-12C-H048-ebffe76004-EDGE-C020.mesh.gz",
+          "bytes": 79083,
+          "sha256": "c28188d41b28b67ced7ba3ed4ad367c89fb4b13f41820ffc30700a801f9de2c1",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-12C-H048-ebffe76004-EDGE-C020",
+          "geometry_sha256": "5042667a8634535ce26291e74ca983b0b7124bef7a517ff4599f4e67fbe0cddb"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-12C-H048-ee0ea1331f-EDGE-C020.mesh.gz",
+          "bytes": 80675,
+          "sha256": "e5f4ed53fe838ea1589e8c648631d3adcb5e03af87f0a65e51ac7b24e635907e",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-12C-H048-ee0ea1331f-EDGE-C020",
+          "geometry_sha256": "62bddf1d445195b8fd348df53c846356d6ae605fafaa6462e51ff05096609a61"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-12C-H048-f63d61757c-EDGE-C020.mesh.gz",
+          "bytes": 79879,
+          "sha256": "b01a6d894971d21c2a1b003e30ee73ec1c80e54d03332868092f10ebe8e4c548",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-12C-H048-f63d61757c-EDGE-C020",
+          "geometry_sha256": "2946787ab033a098c9d0117ff70ce8b05034cf66e902ebeff096bcbcbdb06fc5"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-09e4eb6019-EDGE-C020.mesh.gz",
+          "bytes": 79338,
+          "sha256": "aee161dfce925bbbcfba199110bcf0bffd33d43a7b88e8709519a1483b90d35c",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-13C-H048-09e4eb6019-EDGE-C020",
+          "geometry_sha256": "e56559042a2d33ca93471d944606f6dd3d5f6191abd9762e6a86918a7bbcbe06"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-21cc7eaf66-EDGE-C020.mesh.gz",
+          "bytes": 96156,
+          "sha256": "18631e99ace81f80b78e7a43acb7060a187a0fa8eaecbf890cf41f4cca07c8e6",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-13C-H048-21cc7eaf66-EDGE-C020",
+          "geometry_sha256": "bc0a40787f74463a98e684eb0e4c5e6728d785a304a75e56bc0bd3e100a0e412"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-44af369e92-EDGE-C020.mesh.gz",
+          "bytes": 94862,
+          "sha256": "8b72a0a5fe11f6f2aa63f4e38e7ef151884a9dd72d0f5f4524a5feaa1044595b",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-13C-H048-44af369e92-EDGE-C020",
+          "geometry_sha256": "ca179ad704235191ab9f3db0376ae0bb6f8d082dcc8cbc4a33d250783658f7ee"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-467ec6063e-EDGE-C020.mesh.gz",
+          "bytes": 73627,
+          "sha256": "0d8b1892423001871a170a91533721820331a7e37f82b57a5f8d3ecfb0dd8868",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-13C-H048-467ec6063e-EDGE-C020",
+          "geometry_sha256": "e429933825a0097a41c7bee186b4a4f37a28f1d7d4c2ee27c971bab5a30ba885"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-6520692d31-EDGE-C020.mesh.gz",
+          "bytes": 89184,
+          "sha256": "57dc082e4380fbf6075afca385bd122c914c6b459f459b74afafdad83ddd5d03",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-13C-H048-6520692d31-EDGE-C020",
+          "geometry_sha256": "31bfec7e40a6ddade57d14c2a9896dccdb09fa3c498ced2394003facae835538"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-77816783ab-EDGE-C020.mesh.gz",
+          "bytes": 89157,
+          "sha256": "9606ff770063c5fd50ff72b007bf323655b71f6b4f2b65009d34568cf189b59a",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-13C-H048-77816783ab-EDGE-C020",
+          "geometry_sha256": "c420e9a83151e250cde57d20023f9f6e27baa298b70d23e62572ff5b718c7c61"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-9e84dd857d-EDGE-C020.mesh.gz",
+          "bytes": 72460,
+          "sha256": "216843aa4ab098f17125bbf053bcf07edfaa9c59290877d243aaf45958b1c6d5",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-13C-H048-9e84dd857d-EDGE-C020",
+          "geometry_sha256": "6596e4483d98bf5cd5ad1fbc580ed032533f7fb6eac38497fd321bed042fa5f5"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-9f3fc85061-EDGE-C020.mesh.gz",
+          "bytes": 94824,
+          "sha256": "8a1aaad910cd0dc71686097a9b30810c9c10558e2fe400e1f4009fb3494dee5b",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-13C-H048-9f3fc85061-EDGE-C020",
+          "geometry_sha256": "dbcfa03e64977fa2af313c51b847d7011acbe917595eb5671a22fe0f8661eed1"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-b0fd3a4cb6-EDGE-C020.mesh.gz",
+          "bytes": 79565,
+          "sha256": "0e25cdae97115153b77853dce50a1d370b3d8d7d4beb767ce81090695c12cfa3",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-13C-H048-b0fd3a4cb6-EDGE-C020",
+          "geometry_sha256": "788c13ffd806942a074660c2af4a66631060e1e7ed0fc2cf839cc4fb3071f10f"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-b354f82be6-EDGE-C020.mesh.gz",
+          "bytes": 88847,
+          "sha256": "b3d8612aad735c1dc73d6ce91f58bed66ff2b1532a9228cc07af9b7ab854fc20",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-13C-H048-b354f82be6-EDGE-C020",
+          "geometry_sha256": "7006729324453b39f38487ad9d3d2e71e29a3dc9290180105b9887ee22e99f04"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-b63f416bd3-EDGE-C020.mesh.gz",
+          "bytes": 78701,
+          "sha256": "4b3a7a45ff59851a9529f34603725ee4463854e78057473ab2af9054c68ff75c",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-13C-H048-b63f416bd3-EDGE-C020",
+          "geometry_sha256": "f7e8aab5f037d5e269f6cd29860427d5e32ca54378f8e25d48252e6e51dcd413"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-cdfa907ec5-EDGE-C020.mesh.gz",
+          "bytes": 94665,
+          "sha256": "dd5502ee9b30f5473defb7a8bc5aee0ae1cc06e05ff11b95822b82813f05d095",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-13C-H048-cdfa907ec5-EDGE-C020",
+          "geometry_sha256": "40b3af1c46979c855a560ff43ffc647def612ef5d93d1ba7fa8fd086a65c2928"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-e4bdb6e259-EDGE-C020.mesh.gz",
+          "bytes": 95763,
+          "sha256": "bb6403eebb626f0168c7d06f87795c0af9498598f0a6b3b7ec83f211031f38b7",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-13C-H048-e4bdb6e259-EDGE-C020",
+          "geometry_sha256": "5ff9b461b3408f335f4b59db2e2f114fab914e71f849648956a0688b2262f558"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-e93cb96448-EDGE-C020.mesh.gz",
+          "bytes": 88993,
+          "sha256": "303c5535440a83b185816c68e1ef031c64b9fc31f6f49e705de98ca24730228d",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-13C-H048-e93cb96448-EDGE-C020",
+          "geometry_sha256": "73f45d3e3038951fc736e477edb5b141968c638b8fbde9cc75339213fba48691"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-14C-H048-40d6e926b8-EDGE-C020.mesh.gz",
+          "bytes": 95593,
+          "sha256": "a7cb54da51d77629643d9a10034e9838e18044bffb62527bf9e62d407c1f4979",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-14C-H048-40d6e926b8-EDGE-C020",
+          "geometry_sha256": "66ae9817f0857d76e5504521544c4f8ad0dfd8c2ebba31db3e8c5581b9e24f3b"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-14C-H048-530f228c6a-EDGE-C020.mesh.gz",
+          "bytes": 100519,
+          "sha256": "a8e240bf1a7ecfebfbebaa048ea0cf811bc8dfa2987798d96da1cda6af620263",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-14C-H048-530f228c6a-EDGE-C020",
+          "geometry_sha256": "32daea31c839be33d13f522b878f90355c507875be1f815bc1c981b7d9a48468"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-14C-H048-589235113d-EDGE-C020.mesh.gz",
+          "bytes": 93849,
+          "sha256": "6f5a329e979ba0ea81cc128a39a45899bfe01e652be816e8ce7c074e15e0c04e",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-14C-H048-589235113d-EDGE-C020",
+          "geometry_sha256": "76cefeec5322e0be2a00a1c9ba2188b8b89e7f6cd18fe3855025e168c2d9ccbf"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-14C-H048-66748d8502-EDGE-C020.mesh.gz",
+          "bytes": 83434,
+          "sha256": "240ae4d03af98171e5ab5301c17b6fee2c82b98a4f76b2dd52e4696f40b40d89",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-14C-H048-66748d8502-EDGE-C020",
+          "geometry_sha256": "0dce4fa2926c776f1460406f22fee015095d45cb7cfe202bb9902b4b3db7d543"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-14C-H048-79965678da-EDGE-C020.mesh.gz",
+          "bytes": 91019,
+          "sha256": "1bcd4c7ebc2fafaea4984b71d5b0d6cc085dc2e24f8b81cf0ec876643a231ad4",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-14C-H048-79965678da-EDGE-C020",
+          "geometry_sha256": "6228c62a46651dad44c44ae8ac5c9c6fc39c3e61433255b73c1f2d512b2f2f91"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-14C-H048-7e1c2eb297-EDGE-C020.mesh.gz",
+          "bytes": 94169,
+          "sha256": "8a4368b80d8a66c549cc435aee8f0ceaaa4f9a2ccd3e6729dd9be75b35d69b75",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-14C-H048-7e1c2eb297-EDGE-C020",
+          "geometry_sha256": "e44c0565a82f8cc9460ed355ce2bd9c09ddcdf3d3d5c0239cd34f8723d3eb213"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-14C-H048-80d08fbb88-EDGE-C020.mesh.gz",
+          "bytes": 105580,
+          "sha256": "78e6abf98c8e3fb7051aa3f632980da58a4f08ec1d47af7400fd75d8f05e2ea9",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-14C-H048-80d08fbb88-EDGE-C020",
+          "geometry_sha256": "7d4d0854b8975ce26c88e8a5182f863305f1bfb55d66b76cddd898fb0bcf4861"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-14C-H048-d27c0ede0d-EDGE-C020.mesh.gz",
+          "bytes": 100727,
+          "sha256": "1867f27d41ead176dc6f3a9382d3aa91e8753959c6ee82f1271cc5f1295b40c7",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-14C-H048-d27c0ede0d-EDGE-C020",
+          "geometry_sha256": "a651e2bd6cb6307b671aef9e64ac5e76963a817bfa7c9a2fb8234f3a72318b68"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-14C-H048-d4302f08dd-EDGE-C020.mesh.gz",
+          "bytes": 93125,
+          "sha256": "078a6f0aeb403f5687ea85bb23719ced8f07475cfd2b3c24d76474372bf901f7",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-14C-H048-d4302f08dd-EDGE-C020",
+          "geometry_sha256": "a90fd502c30bcc2819720fae963c48fea0c2b1eab4088caa1dd6f89166e730b2"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-14C-H048-e8cf8dd1ac-EDGE-C020.mesh.gz",
+          "bytes": 93218,
+          "sha256": "9aadcd1762c8ca700ae3b6f8ae272361047abbe49af8c8c6818af3f0983fe338",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-14C-H048-e8cf8dd1ac-EDGE-C020",
+          "geometry_sha256": "dfad9662ce21452540667c01654cce40704f40eecefadd8476f43b6835d874ab"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-14C-H048-ee56157261-EDGE-C020.mesh.gz",
+          "bytes": 105476,
+          "sha256": "1f55a3fc37fd7bcf67c6b86ddce689dfed837aad5b54b30ce42047ce1c358d04",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-14C-H048-ee56157261-EDGE-C020",
+          "geometry_sha256": "8a33d007c428f426abb8df561bc0d440cfef4a9cd013ac080743cfac17de1cb8"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-15C-H048-13737c90c9-EDGE-C020.mesh.gz",
+          "bytes": 115439,
+          "sha256": "c8126b02f09c7e1f697c7e46e2c25269f77f5926fdf5024c04cfedc96c6a40d3",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-15C-H048-13737c90c9-EDGE-C020",
+          "geometry_sha256": "32c7cae292f0d61b1296083520a35bc520ab73d26dc02ea003bdeba4f97e20a9"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-15C-H048-6dddaeba00-EDGE-C020.mesh.gz",
+          "bytes": 102754,
+          "sha256": "9c610dbb2d19b60abfb237003f9d8b63abdf6104b550dc9742c626afeb2f5cb1",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-15C-H048-6dddaeba00-EDGE-C020",
+          "geometry_sha256": "d5539f9f9cf0456a750c4c32e94a433a7a057bc584af185cfb9d3ef950ed2b40"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-15C-H048-ad7cbe1691-EDGE-C020.mesh.gz",
+          "bytes": 71187,
+          "sha256": "37b9de25e4d4866aa2115916c09666a94a0edbbe141690666a2cb7a830dc0217",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-15C-H048-ad7cbe1691-EDGE-C020",
+          "geometry_sha256": "796384d27b86d39a8b4240af3c375762f6b8e5ef5d20822af652f0965ac30ed3"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-15C-H048-adf61ec444-EDGE-C020.mesh.gz",
+          "bytes": 98433,
+          "sha256": "3bcbcfe2099f57aaecc4a8b246d010f38ff3026f50d47a532e747867fe5883db",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-15C-H048-adf61ec444-EDGE-C020",
+          "geometry_sha256": "411e5ee2036c4a14b0f989a2bd672ec562d32db044f29f3a2629aaa2082a3447"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-15C-H048-d87db9f8c0-EDGE-C020.mesh.gz",
+          "bytes": 102879,
+          "sha256": "7249cfcded0ea0019ff47faaba7ff523509b881d35cce60f7896ede958bdd5a5",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-15C-H048-d87db9f8c0-EDGE-C020",
+          "geometry_sha256": "a89c811506c43fb63f6961ff65a4d42ff9bca079942468a16011d41d4f072182"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-16C-H048-75dd96d657-EDGE-C020.mesh.gz",
+          "bytes": 113708,
+          "sha256": "1ad2bf441bbd0eedfa748104fbcfd07a6ef75fcefaaf3ab1c43d315575745c84",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-16C-H048-75dd96d657-EDGE-C020",
+          "geometry_sha256": "86c783a6f655f2900c606b8b4dad1cce3eccd1ba5a360f41075bf805c311e5fd"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-16C-H048-9bad475152-EDGE-C020.mesh.gz",
+          "bytes": 108906,
+          "sha256": "f764413f647823b6fae700730d23806f3a1f3ec83d89a166ad50418c4400de04",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-16C-H048-9bad475152-EDGE-C020",
+          "geometry_sha256": "74ccd76e644e0576a042eded80039e0ffe48efd06ea879623b81557dcd08cc16"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-16C-H048-dae21a9aca-EDGE-C020.mesh.gz",
+          "bytes": 107453,
+          "sha256": "6ecb1eec0faf17f118c8f3ceb72efd6e8fc1e8370cad535163179df33a73879c",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-16C-H048-dae21a9aca-EDGE-C020",
+          "geometry_sha256": "95418803c50189ae128cbe8347f37790ddbf9b48375bd67b98b7762543c0cc02"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-16C-H048-f0da978db1-EDGE-C020.mesh.gz",
+          "bytes": 107208,
+          "sha256": "691282cb483812715c5ece6cade0907b15712a205aa94144f6ffc4b9e8dd89a9",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-16C-H048-f0da978db1-EDGE-C020",
+          "geometry_sha256": "951f8fb3851e730ee5a339701668483a5128f278506da2fc7e3979ac42a16413"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-17C-H048-bbd3f4a169-EDGE-C020.mesh.gz",
+          "bytes": 125306,
+          "sha256": "6a56c1d267f932dd78805b7cd177e08c206358761560e7214a6142ca1f95727c",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-17C-H048-bbd3f4a169-EDGE-C020",
+          "geometry_sha256": "3139bf02cdfe0b1b66c34c6271b54588fcfa66d4b2cbe468ace509e44fbe2b63"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-17C-H048-dee4ba928e-EDGE-C020.mesh.gz",
+          "bytes": 118202,
+          "sha256": "f444480622261d33bd147c2bb2aaa79e176b40d52d0381f4cdd21e3d7343f1f1",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-17C-H048-dee4ba928e-EDGE-C020",
+          "geometry_sha256": "e63e38d5d80150179d3b4fa7a0962687a9a2737aac90c0e77cc748f8499138af"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-17C-H048-e65dd671fd-EDGE-C020.mesh.gz",
+          "bytes": 126187,
+          "sha256": "fcba3f7a2be083f21f8337e8d36844fc0b042828a2f5b1acf591d27d838966a0",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-17C-H048-e65dd671fd-EDGE-C020",
+          "geometry_sha256": "1e149effbd0c4046f0e2311bcfc378e6464b1300c1099b2d5cfee72662fec862"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-18C-H048-106c7f9d2b-EDGE-C020.mesh.gz",
+          "bytes": 139751,
+          "sha256": "e47efe8e334c556c5256167581228bfb016ede62c5d79677b3dc2a39dc33e4c6",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-18C-H048-106c7f9d2b-EDGE-C020",
+          "geometry_sha256": "7ddf86f63e2123323f265fcfc6056867b9b9c48b11e1a52bb59933540acc3e59"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-18C-H048-6b2baeac97-EDGE-C020.mesh.gz",
+          "bytes": 139774,
+          "sha256": "6d47999e6e449c23f3057d4046c1ffad75fb727e064fced2ee95c4bc5d4a8bb9",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-18C-H048-6b2baeac97-EDGE-C020",
+          "geometry_sha256": "6dd0823cc654e29c992cdd8c0862f7dbb1e80e00f8a6ab42fc19eca7bb3eb8c9"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-19C-H048-1e15a7073e-EDGE-C020.mesh.gz",
+          "bytes": 145640,
+          "sha256": "e11ac20eef34b837b9fcbcfedc93e0a69a245cf9c2d69c8fc338df9e33681334",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-19C-H048-1e15a7073e-EDGE-C020",
+          "geometry_sha256": "fa033b34ec97d9157bd180c3ae3da75dfcbbc74295479cb1b1136956e8532e4e"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-19C-H048-6ffd2cb8ad-EDGE-C020.mesh.gz",
+          "bytes": 105112,
+          "sha256": "0ff348d9243edfaf411e23a85598b2a729435ecc33b07b93632abf841266e147",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-19C-H048-6ffd2cb8ad-EDGE-C020",
+          "geometry_sha256": "ed8d5a7d255ccaad43b4802e22d4c115186b797e1ac9fa2b7e9736536fb2e92b"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-19C-H048-7ff6fe2c87-EDGE-C020.mesh.gz",
+          "bytes": 148981,
+          "sha256": "aceb2c895af1496a0ddd08083118a954bc9a1c380a68ff2e0c16a1f78561d0d7",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-19C-H048-7ff6fe2c87-EDGE-C020",
+          "geometry_sha256": "01e6a4c18ffa931291ed58b77a17b6521e5d0d7d468511e2dfa4d224c0935e73"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-19C-H048-9bc3f67d30-EDGE-C020.mesh.gz",
+          "bytes": 122875,
+          "sha256": "e0d7a87a62a08e3bdcdde83f9d72c8ffdbe334d655e44fe84284e454a405ae43",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-19C-H048-9bc3f67d30-EDGE-C020",
+          "geometry_sha256": "ed20b6d210dde119d2b43d4966b04f4690c37fe1a10a485af56d3baa860ffb3a"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-19C-H048-c6dcefd4e3-EDGE-C020.mesh.gz",
+          "bytes": 148567,
+          "sha256": "f3b9cd7583f66d86baa8774f94313576c1fdb0d87fb99a63ccbc3501b75261a8",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-19C-H048-c6dcefd4e3-EDGE-C020",
+          "geometry_sha256": "63b53f2a51a2b617c4427a2700e08f5b4c9bf8becc7d23a4ea2b50ffc069fdf8"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-20C-H048-1782d89818-EDGE-C020.mesh.gz",
+          "bytes": 150354,
+          "sha256": "0d0ea761378da0d52984954c6e94c7ed4b80c853ccdc8c861359208f510406be",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-20C-H048-1782d89818-EDGE-C020",
+          "geometry_sha256": "b36b0310425097ff001866da2edcfc93e6b07a983223e6409f1bb792b311902c"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-20C-H048-19dbbb24d9-EDGE-C020.mesh.gz",
+          "bytes": 154810,
+          "sha256": "57270b113bb3bf30671143d9fc9c3a66b4f29934e3ad2c1114421fc24be67517",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-20C-H048-19dbbb24d9-EDGE-C020",
+          "geometry_sha256": "9da2ae494db3d5fce4cbe4fca94305eeffeaaf090e7a72d02ad9a4eb5fc10f8b"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-20C-H048-484b48754e-EDGE-C020.mesh.gz",
+          "bytes": 142349,
+          "sha256": "704c491ad73ee42a65015a3807436236eb04c15ab907ebf5b89866579a433c66",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-20C-H048-484b48754e-EDGE-C020",
+          "geometry_sha256": "5c9d9898a6e90722d04b3ca14d10b1bfc539159b365a7f4d03973183175c7826"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-21C-H048-0f453e05a8-EDGE-C020.mesh.gz",
+          "bytes": 157638,
+          "sha256": "166610bec4f61df720accd8f18b5267074c7424f40a3c12b132f45510947bb93",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-21C-H048-0f453e05a8-EDGE-C020",
+          "geometry_sha256": "025d8039053a8784bab5da3413a53ba9ae78eda8675aeedc950845f5e1c1ae5a"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-21C-H048-69a068c853-EDGE-C020.mesh.gz",
+          "bytes": 165379,
+          "sha256": "86c206096cface4bb383f8a76d9ff0fafe7f7824f0e2439247165109975a6b6c",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-21C-H048-69a068c853-EDGE-C020",
+          "geometry_sha256": "6c00d3fec2a8c9d757de702d9226078b04cb6d6b02fca4b07c5efb1e9cf1d75c"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-21C-H048-bd83995d3d-EDGE-C020.mesh.gz",
+          "bytes": 164916,
+          "sha256": "8c58481a1805eb0a8d38bf345573daec7138901035e646af048ec64d6457745f",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-21C-H048-bd83995d3d-EDGE-C020",
+          "geometry_sha256": "e769e0e6b23e90320e1089d24cb208b06e27cef18c4c1e677a9d75ca6e07c9e9"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-23C-H048-071a9b0b40-EDGE-C020.mesh.gz",
+          "bytes": 162435,
+          "sha256": "e2c546af84d7b58b516c3c0ba7b73ec4114fdcb8a1cadf3a51ee0ce2d39d9603",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-23C-H048-071a9b0b40-EDGE-C020",
+          "geometry_sha256": "0e456151bbea5d231389e1e41c4264641723dd0a6c608cf9d10c0be0c0452aab"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-23C-H048-3757aa2b50-EDGE-C020.mesh.gz",
+          "bytes": 168755,
+          "sha256": "8aac2a74018da76dd38ba51e1a27e01e5cacb0fdb1e55ab2fd5b68e0f419cc87",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-23C-H048-3757aa2b50-EDGE-C020",
+          "geometry_sha256": "c24d58f0b2367d83148f5c163848db27ca44102242d5a1f0a58e05d47a2313cc"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-26C-H048-3f388b90a7-EDGE-C020.mesh.gz",
+          "bytes": 180124,
+          "sha256": "12353fbbfb12a62f8a5f380475331ee0dd6fc8716f5c9d20c65b34b560e31e16",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-26C-H048-3f388b90a7-EDGE-C020",
+          "geometry_sha256": "9d9d713496b3d0f010c6f9b4e78941f7442e7ba97496769bc697f56b2b590192"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-26C-H048-8c22afbfaf-EDGE-C020.mesh.gz",
+          "bytes": 193941,
+          "sha256": "6d59c2f680efda8cbb35f71a5ed1773e825ae85b4496d5601b3d0bf91a847c14",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-26C-H048-8c22afbfaf-EDGE-C020",
+          "geometry_sha256": "f97f0741e60e9b4745d22f80327d2c8004f6150ad2cb415014e2171928d26e25"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-26C-H048-efefa2a4a4-EDGE-C020.mesh.gz",
+          "bytes": 203548,
+          "sha256": "966689f26e3d57989d478d74ae7ff9172ece08984662d816e9de14f8c4011f0d",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-26C-H048-efefa2a4a4-EDGE-C020",
+          "geometry_sha256": "9759783796a2f6ebde50a6c9c264385c93228e06d444de8daf7ab521924c1e85"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-28C-H048-e14cbe436e-EDGE-C020.mesh.gz",
+          "bytes": 223573,
+          "sha256": "64e1e2d951b2988220f0b4dbfe7dcf8d5e7be1659ae2b8eb6e1015abe2b14035",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-28C-H048-e14cbe436e-EDGE-C020",
+          "geometry_sha256": "9997c4179c18869ff96d0e3cc3e1f97130602d6f30e255d67c4d41cca91a923d"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-29C-H048-15a9675cb2-EDGE-C020.mesh.gz",
+          "bytes": 229342,
+          "sha256": "f4f8630d439783b6b7b696222f0e4fd27c1731d13c4d7b095cb4a536c3418f35",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-29C-H048-15a9675cb2-EDGE-C020",
+          "geometry_sha256": "0dae68b1d2a6f0845f6c3396f5ab2fe99d1d14e2892b9136745ca63919ea4034"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-31C-H048-2dd01d956f-EDGE-C020.mesh.gz",
+          "bytes": 239171,
+          "sha256": "7253b9b8c7e693a0eb84b1d98dbe5eb1d8016c954cb4af255412af9d5d829058",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-31C-H048-2dd01d956f-EDGE-C020",
+          "geometry_sha256": "b2e2f3fee53ad6505ef25ff9f31bc8246d9bd7b96bd29952e582ca81e15b8bf8"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-31C-H048-968a21ecdf-EDGE-C020.mesh.gz",
+          "bytes": 249839,
+          "sha256": "adbb602afebe9b8e297bc11cea24def196c8aaf8037e3de07ea69887d4db73aa",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-31C-H048-968a21ecdf-EDGE-C020",
+          "geometry_sha256": "d0fc04c4a910b652a68c673ba9a060059640d86de8322fa879f33c8c18c16d72"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-31C-H048-c2d3b3bce7-EDGE-C020.mesh.gz",
+          "bytes": 221591,
+          "sha256": "efc6193f5a3d1dfe8460e47d8c99e2da4985a51128cc15383f800dcaf153ee46",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-31C-H048-c2d3b3bce7-EDGE-C020",
+          "geometry_sha256": "df38470a4609b0ccc5ee92d72a0b90ceb4dd0aae9183cebac10aa028653e4d83"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-32C-H048-244d953f27-EDGE-C020.mesh.gz",
+          "bytes": 259809,
+          "sha256": "6a3fc07f7f66b1aa47e63b7b3074875dbd6346bd2d48f187d5bb299126a519dc",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-32C-H048-244d953f27-EDGE-C020",
+          "geometry_sha256": "0345ab396ac5b710f8770cc5ae5a3d9a383e6617924b4d993096cd95b8b54442"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/geometry/CT-32C-H048-2a3f22a5c0-EDGE-C020.mesh.gz",
+          "bytes": 250211,
+          "sha256": "54f7dd94cae17e175a5669045079db135c7db0d7480feec0f3b3ee2a28aaa269",
+          "format": "OBM1_GZIP",
+          "type_id": "CT-32C-H048-2a3f22a5c0-EDGE-C020",
+          "geometry_sha256": "57ccb1be0f0e83e887fc8bfa0bf9f47ca452476ad0ab6565cb53e86dbb47fb7e"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/7200d1c0cde8bc0a6714b46b757130823ead753eb61ae964f254bd015d0d33c8-e004.mesh.gz",
+          "bytes": 2644,
+          "sha256": "c931818be75af7958bfcdd0d2d97b9980e49d39112992eed01c71114ed8729f8",
+          "format": "OBM1_GZIP",
+          "type_id": "PL-01x02-H032",
+          "geometry_sha256": "638aca5d4227d1b96257ea43c230f6d2a09698d89efae4a76d01e66e8824a80c",
+          "source_geometry_sha256": "7200d1c0cde8bc0a6714b46b757130823ead753eb61ae964f254bd015d0d33c8",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 1139,
+              "triangles": 2274,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -7.900000095367432,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  7.900000095367432,
+                  5
+                ]
+              ],
+              "volume_mm3": 338.37517015634955,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 2
+            },
+            "after": {
+              "vertices": 192,
+              "triangles": 380,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -7.900000095367432,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  7.900000095367432,
+                  5
+                ]
+              ],
+              "volume_mm3": 336.9657773483044,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 2
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03977862372994423,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/e47354942dc728b3f69a5f348df7ccd2fdc66cb6b5cf2df4cba4a267063ff04e-e004.mesh.gz",
+          "bytes": 11935,
+          "sha256": "e13d2b2ded7e5dffba5434a77eb65d1288df466de5f9bee9ea79e17475e27480",
+          "format": "OBM1_GZIP",
+          "type_id": "PL-01x08-H032",
+          "geometry_sha256": "8c60ebe1744e4d4656cb4ddb553f20a0dffd2d517aa7bc35d631176d7a8b95c8",
+          "source_geometry_sha256": "e47354942dc728b3f69a5f348df7ccd2fdc66cb6b5cf2df4cba4a267063ff04e",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 5645,
+              "triangles": 11286,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -31.899999618530273,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  31.899999618530273,
+                  5
+                ]
+              ],
+              "volume_mm3": 1325.8851391130363,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 8
+            },
+            "after": {
+              "vertices": 913,
+              "triangles": 1822,
+              "bounds_mm": [
+                [
+                  -3.9000000953674316,
+                  -31.899999618530273,
+                  0
+                ],
+                [
+                  3.9000000953674316,
+                  31.899999618530273,
+                  5
+                ]
+              ],
+              "volume_mm3": 1319.7211566042354,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 8
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03991911560297012,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/5f555cc7795e22dd26ed0f370d008cfa6a9041a3d35444d2bc4e77aa3707c6db-e004.mesh.gz",
+          "bytes": 5182,
+          "sha256": "597d215ba273848ab37d3e4a39f60a3f1a93f562474b98826f809ed921de05a4",
+          "format": "OBM1_GZIP",
+          "type_id": "PL-02x02-H032",
+          "geometry_sha256": "fb9a89c014a20f44fc68f9fd451e42c42bec11446653e0a69bc0e6f41145aef7",
+          "source_geometry_sha256": "5f555cc7795e22dd26ed0f370d008cfa6a9041a3d35444d2bc4e77aa3707c6db",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 2045,
+              "triangles": 4086,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -7.900000095367432,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  7.900000095367432,
+                  5
+                ]
+              ],
+              "volume_mm3": 632.5866866889962,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 4
+            },
+            "after": {
+              "vertices": 390,
+              "triangles": 776,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -7.900000095367432,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  7.900000095367432,
+                  5
+                ]
+              ],
+              "volume_mm3": 630.4835722170376,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 4
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.03985505923628807,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/9b49496229f12237c1e2fc960cc874b4df9586002db97537f8642aace734ef7c-e004.mesh.gz",
+          "bytes": 11486,
+          "sha256": "95c473dfdecb963f5b4270827292774e09c36d3c400747fb617be936b06bca41",
+          "format": "OBM1_GZIP",
+          "type_id": "PL-02x04-H032",
+          "geometry_sha256": "37efa8a27bda19432cc8b4659b0bc937e3529ddb915f590fda107f59292fb736",
+          "source_geometry_sha256": "9b49496229f12237c1e2fc960cc874b4df9586002db97537f8642aace734ef7c",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 4607,
+              "triangles": 9210,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -15.899999618530273,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  15.899999618530273,
+                  5
+                ]
+              ],
+              "volume_mm3": 1245.3103987151937,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 8
+            },
+            "after": {
+              "vertices": 857,
+              "triangles": 1710,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -15.899999618530273,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  15.899999618530273,
+                  5
+                ]
+              ],
+              "volume_mm3": 1240.6697925281387,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 8
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.039949677884578705,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/3892f0c8f142b2327c873a0f8c492efd9be5a93b60d8e0b830af061c470c193b-e004.mesh.gz",
+          "bytes": 24033,
+          "sha256": "3075151d1962cb4e662b3fefa161a1b04a783f0c41b29231975244ad6bcf0cbb",
+          "format": "OBM1_GZIP",
+          "type_id": "PL-02x08-H032",
+          "geometry_sha256": "de9e6426e95f52f7bcbedb574cf73f82be855b3c499ab9d36d69b7f31c54ba0d",
+          "source_geometry_sha256": "3892f0c8f142b2327c873a0f8c492efd9be5a93b60d8e0b830af061c470c193b",
+          "mode": "NATIVE_PREVIEW_TESSELLATION",
+          "quality": {
+            "before": {
+              "vertices": 9731,
+              "triangles": 19458,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -31.899999618530273,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  31.899999618530273,
+                  5
+                ]
+              ],
+              "volume_mm3": 2470.757847113594,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 16
+            },
+            "after": {
+              "vertices": 1814,
+              "triangles": 3624,
+              "bounds_mm": [
+                [
+                  -7.900000095367432,
+                  -31.899999618530273,
+                  0
+                ],
+                [
+                  7.900000095367432,
+                  31.899999618530273,
+                  5
+                ]
+              ],
+              "volume_mm3": 2460.837984917623,
+              "euler_characteristic": 2,
+              "boundary_edges": 0,
+              "nonmanifold_edges": 0,
+              "top_cap_components": 16
+            },
+            "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+            "meshoptimizer_version": "1.2.0",
+            "approximate_error_mm": 0.0398990698158741,
+            "requested_error_mm": 0.04,
+            "original_vertex_positions_retained": true,
+            "manufacturing_geometry_modified": false
+          }
+        }
+      ],
+      "native_triangles_per_frame": 593772438,
+      "display_triangles_per_frame": 123816514,
+      "reduction": 4.7955835519646435
+    },
     "mona-p120": {
       "source_manifest_sha256": "de71dd1f2538175e75b2a3cccda930c1817e07d80e66c3f56d0a9d8649e14bde",
       "geometry_files": [
@@ -28175,6 +31715,66 @@
         "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
         "meshoptimizer_version": "1.2.0",
         "approximate_error_mm": 0.039167843759059906,
+        "requested_error_mm": 0.04,
+        "original_vertex_positions_retained": true,
+        "manufacturing_geometry_modified": false
+      }
+    },
+    "e7d6c6d270ca1aece82ea4dd07dbc1a2511a66dc60130eb0debe6887958f0ee8": {
+      "path": "/artifacts/studies/part-count-matrix-20260921/display/geometry/e7d6c6d270ca1aece82ea4dd07dbc1a2511a66dc60130eb0debe6887958f0ee8-e004.mesh.gz",
+      "bytes": 18489,
+      "sha256": "7e3678aa22c6563baa5ea1e083c4cc0744ceb42306ba7b824b9f192f06308e1d",
+      "format": "OBM1_GZIP",
+      "type_id": "BR-01x12-H048-EDGE-C020",
+      "geometry_sha256": "ab34cde5bdae2de7a732d4a38c7a02ce03a39b69c02cda17b15f1748e95c018c",
+      "source_geometry_sha256": "e7d6c6d270ca1aece82ea4dd07dbc1a2511a66dc60130eb0debe6887958f0ee8",
+      "mode": "NATIVE_PREVIEW_TESSELLATION",
+      "quality": {
+        "before": {
+          "vertices": 8653,
+          "triangles": 17302,
+          "bounds_mm": [
+            [
+              -3.9000000953674316,
+              -47.900001525878906,
+              0
+            ],
+            [
+              3.9000000953674316,
+              47.900001525878906,
+              6.599999904632568
+            ]
+          ],
+          "volume_mm3": 2806.479202226804,
+          "euler_characteristic": 2,
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "top_cap_components": 12
+        },
+        "after": {
+          "vertices": 1405,
+          "triangles": 2806,
+          "bounds_mm": [
+            [
+              -3.9000000953674316,
+              -47.900001525878906,
+              0
+            ],
+            [
+              3.9000000953674316,
+              47.900001525878906,
+              6.599999904632568
+            ]
+          ],
+          "volume_mm3": 2795.216742862772,
+          "euler_characteristic": 2,
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "top_cap_components": 12
+        },
+        "algorithm": "MESHOPT_SIMPLIFY_NO_VERTEX_UPDATE",
+        "meshoptimizer_version": "1.2.0",
+        "approximate_error_mm": 0.03944827988743782,
         "requested_error_mm": 0.04,
         "original_vertex_positions_retained": true,
         "manufacturing_geometry_modified": false

@@ -1,0 +1,66 @@
+{
+  "case_id": "copilot-p400",
+  "source_commit": "df5691fcb57f938c788dfcd9f19fc6df257a1b6b",
+  "metrics": {
+    "part_count": 71261,
+    "unique_types": 214,
+    "one_by_one_exceptions": 111,
+    "layer_count": 125,
+    "minimum_part_mm": [
+      7.8,
+      7.8,
+      3.2
+    ],
+    "grip_long_ge_15_8_count": 71150
+  },
+  "manifest_sha256": "37b26f4f6347aacb09f509e9507842a6223b9f2c7f27e58e22487b8cccb9b212",
+  "bom_sha256": "c5e6bbd8d3bfc8f3ad7f56e65d794305b3ee4d5137d4ee9785de0550cd35e787",
+  "counted_instances": 71261,
+  "bom_ids_match": true,
+  "bom_types_colors_poses_steps_match": true,
+  "identity_projection_sha256": "589ff9a0e9a1c213ba978cdd124f1205cf68d0828bd050e720773ed9515210ee",
+  "body_height_families": [
+    {
+      "body_height_mm": 3.2,
+      "part_count": 248,
+      "unique_types": 5
+    },
+    {
+      "body_height_mm": 4.8,
+      "part_count": 71013,
+      "unique_types": 209
+    }
+  ],
+  "public_native_assembly": {
+    "path": "artifacts/studies/part-count-matrix-20260921/cases/copilot-p400/assembly.FCStd",
+    "document_objects": 228,
+    "native_links_resolved": 228,
+    "link_instances": 71261,
+    "valid_single_solid_targets_checked": 214,
+    "proxy_free": true,
+    "opened": true,
+    "recomputed": false,
+    "saved": false,
+    "sha256": "8f069dfc85d5eb61bc32e80026cff1b0eef1f49d2e5787bb92a130a56ddf8f0b"
+  },
+  "public_blender_motion_preserved": true,
+  "source_saved_scene_binding": "947eb097a55a17ae451032c1a36b84fd58f812bcf36477e3dc419f0f597c51ef",
+  "source_native_reopen": {
+    "result": "PASS_REOPENED_RELATIVE_NATIVE_LINK_ARRAYS",
+    "actual_instance_count": 71261,
+    "all_ids_types_colors_poses_steps": true,
+    "all_sources_inside_bundle": true
+  },
+  "private_inputs_copied": 0,
+  "public_native_id_pose_check": {
+    "case_id": "copilot-p400",
+    "assembly_sha256": "8f069dfc85d5eb61bc32e80026cff1b0eef1f49d2e5787bb92a130a56ddf8f0b",
+    "actual_instances": 71261,
+    "array_count": 228,
+    "all_ids_types_colors_poses_steps": "MATCH",
+    "relocated_reopen": true,
+    "saved": false,
+    "recomputed": false
+  },
+  "files": []
+}

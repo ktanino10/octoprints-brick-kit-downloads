@@ -161,6 +161,50 @@ class RootEvidenceTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 validate_root_evidence(proof, manifest, native)
 
+    def test_a_third_failed_root_is_not_hidden_by_two_passing_whisker_modules(self):
+        manifest, native, proof = self.fixture()
+        body_template, root_template, payload_template = copy.deepcopy(manifest["parts"])
+        native_template = copy.deepcopy(native["whisker_root_native_validation"]["modules"][0])
+        public_template = copy.deepcopy(proof["modules"][0])
+        section_template = copy.deepcopy(proof["root_structural_sections"][0])
+        bodies, roots, payloads = [], [], []
+        native_modules, public_modules, sections, gravity_modules = [], [], [], []
+        manifest["whisker_load_cases"] = {}
+        for index in range(3):
+            body_id, root_id, payload_id = f"UNIT-BODY-{index}", f"UNIT-ROOT-{index}", f"UNIT-PAYLOAD-{index}"
+            bodies.append({**copy.deepcopy(body_template), "id": body_id, "step": index + 1})
+            roots.append({**copy.deepcopy(root_template), "id": root_id, "step": index + 4,
+                          "support_ids": [body_id], "insertion_predecessor_ids": [body_id]})
+            payloads.append({**copy.deepcopy(payload_template), "id": payload_id, "step": index + 7,
+                             "support_ids": [root_id], "insertion_predecessor_ids": [root_id]})
+            manifest["whisker_load_cases"][root_id] = [payload_id]
+            module = copy.deepcopy(native_template)
+            module.update(part_id=root_id, module_insertion_step=index + 4)
+            module["body_supports"][0]["lower_part_id"] = body_id
+            module["gravity_balance"]["downstream_payloads"][0]["part_id"] = payload_id
+            module["gravity_balance"]["assembly_prefix_checks"][0].update(after_step=index + 4, added_part_id=root_id)
+            module["gravity_balance"]["assembly_prefix_checks"][1].update(after_step=index + 7, added_part_id=payload_id)
+            native_modules.append(module)
+            public_modules.append({**copy.deepcopy(public_template), "part_id": root_id, "step": index + 4,
+                                   "actual_body_support_ids": [body_id]})
+            sections.append({**copy.deepcopy(section_template), "part_id": root_id})
+            gravity_modules.append({"part_id": root_id, **copy.deepcopy(module["gravity_balance"])})
+        manifest["parts"] = bodies + roots + payloads
+        manifest["motion"]["stages"][0]["end_step"] = 9
+        native["whisker_root_native_validation"]["modules"] = native_modules
+        proof.update(actual_parts=9, modules=public_modules, root_structural_sections=sections,
+                     geometry_sequence_identity_sha256=geometry_sequence_identity(manifest),
+                     native_root_contact_evidence_sha256=canonical_sha(native["whisker_root_native_validation"]),
+                     actual_native_root_checks=copy.deepcopy(native["whisker_root_native_validation"]))
+        proof["gravity_balance"]["modules"] = gravity_modules
+        self.assertEqual(validate_root_evidence(proof, manifest, native)["checked_root_modules"], 3)
+        native_modules[2]["gravity_balance"]["assembly_prefix_checks"][-1]["minimum_support_margin_mm"] = -5.13
+        proof["native_root_contact_evidence_sha256"] = canonical_sha(native["whisker_root_native_validation"])
+        proof["actual_native_root_checks"] = copy.deepcopy(native["whisker_root_native_validation"])
+        proof["gravity_balance"]["modules"][2] = {"part_id": "UNIT-ROOT-2", **copy.deepcopy(native_modules[2]["gravity_balance"])}
+        with self.assertRaisesRegex(ValueError, "assembly prefix"):
+            validate_root_evidence(proof, manifest, native)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -7,6 +7,7 @@ from urllib.parse import parse_qs, urljoin, urlparse
 
 from playwright.sync_api import expect, sync_playwright
 from browser_study_helpers import english, uncropped_image, play_actual_chapter
+from density_comparison_evidence import verify_comparison_csv
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--url", required=True)
@@ -22,7 +23,8 @@ base = args.url.rstrip("/") + "/"
 args.output.mkdir(parents=True, exist_ok=True)
 report = {"base": base, "engine": args.engine, "browser_executable": args.browser,
           "input_wait": args.expect_input_wait, "checks": [], "errors": [], "cases": [],
-          "media": [], "baseline_media": [], "reference_guides": [], "reference_media": [], "display_modes": []}
+          "media": [], "baseline_media": [], "reference_guides": [], "reference_media": [], "display_modes": [],
+          "comparison_sheets": [], "comparison_csv_rows": None}
 
 
 def checked(message):
@@ -70,6 +72,8 @@ with sync_playwright() as playwright:
         else:
             assert pointer["state"] in ["PARTIAL", "READY"]
             catalog = context.request.get(urljoin(base, pointer["catalog"]["path"].lstrip("/"))).json()
+            comparisons = (context.request.get(urljoin(base, catalog["comparison_sheets"]["path"].lstrip("/"))).json()
+                           if catalog.get("comparison_sheets") else None)
             available = catalog["cases"] + (list(catalog.get("reference_revisions", {}).values()) if args.case else [])
             cases = [entry for entry in available if entry["state"] == "READY"
                      and (not args.case or entry["id"] in args.case)]
@@ -87,6 +91,16 @@ with sync_playwright() as playwright:
                         for image in page.locator("#matrix-cards img").all():
                             expect(image).not_to_have_js_property("naturalWidth", 0)
                             uncropped_image(image)
+                    if comparisons and locale == "en":
+                        row = next(item for item in comparisons["rows"] if item["character"] == character)
+                        expect(page.locator("#matrix-comparison-archive")).to_be_visible()
+                        actual_images = page.locator("#matrix-comparison-images img")
+                        expect(actual_images).to_have_count(3)
+                        for image, descriptor in zip(actual_images.all(), row["images"], strict=True):
+                            expect(image).to_have_js_property("naturalWidth", descriptor["image_size_px"][0])
+                            expect(image).to_have_js_property("naturalHeight", descriptor["image_size_px"][1])
+                            uncropped_image(image)
+                            report["comparison_sheets"].append(image.evaluate("(img) => img.currentSrc"))
                     baseline = catalog.get("reference_revisions", {}).get(character, catalog["baselines"][character])
                     if character in catalog.get("reference_revisions", {}):
                         distinction = page.locator(f'[data-reference-count-distinction="{character}"]')
@@ -104,6 +118,12 @@ with sync_playwright() as playwright:
                         videos.locator("summary").click()
                 assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1")
             checked("matrix character/view controls and fifteen explicit actual/pending states work in both languages")
+            if comparisons:
+                csv_path = comparisons["comparison_csv"]["path"]
+                csv_url = urljoin(base, f"artifacts/studies/{catalog['study_id']}/{csv_path}")
+                result = verify_comparison_csv(context.request.get(csv_url).body(), catalog)
+                report["comparison_csv_rows"] = result["rows"]
+                checked("all nine actual six-way sheets and the fifteen-row CSV preserve fixed denominators and physical-size conditions")
             for entry in cases:
                 page.goto(urljoin(base, f'en/density-guide.html?case={entry["id"]}'), wait_until="domcontentloaded", timeout=120000)
                 expect(page.locator("#density-canvas")).to_have_attribute("data-ready", "true", timeout=180000)

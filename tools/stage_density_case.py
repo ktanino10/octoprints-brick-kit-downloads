@@ -91,6 +91,40 @@ def verify_release_persistence(repo, commit, records):
             raise ValueError("Fixed chunks do not reconstruct the authorized whole ZIP")
 
 
+def verify_artifact_persistence(repo, commit, records, case):
+    verified = []
+    recipes = []
+    prefix = f"artifacts/studies/{STUDY}/"
+    for item in records:
+        if item.get("permission") != "PRIVATE_EXACT_ARTIFACT_PERSISTENCE_NOT_PUBLICATION" or item.get("case_id") != case:
+            raise ValueError("Unexpected raw-artifact persistence scope")
+        index_path = Path(item["index_path"]).relative_to(repo).as_posix()
+        raw = subprocess.check_output(["git", "-C", str(repo), "cat-file", "blob", f"{commit}:{index_path}"])
+        if sha(raw) != item["index_sha256"] or json.loads(raw) != item["record"]:
+            raise ValueError("Fixed raw-artifact persistence index changed")
+        index = item["record"]
+        if index.get("state") != "EXACT_PRIVATE_LARGE_ARTIFACTS_PERSISTED" or index.get("case_id") != case:
+            raise ValueError("Raw-artifact index belongs to another case or is incomplete")
+        for entry in index["files"]:
+            safe_relative(entry["path"])
+            safe_relative(entry["reconstruction_path"])
+            if not (entry["path"].startswith(prefix + f"cases/{case}/")
+                    or entry["path"].startswith(prefix + f"portable/cases/{case}/")):
+                raise ValueError("Raw-artifact persistence names an unapproved case")
+            recipe_raw = subprocess.check_output(["git", "-C", str(repo), "cat-file", "blob",
+                                                  f"{commit}:{entry['reconstruction_path']}"])
+            if sha(recipe_raw) != entry["reconstruction_sha256"]:
+                raise ValueError("Raw-artifact reconstruction record changed")
+            recipe = json.loads(recipe_raw)
+            if recipe["bytes"] != entry["bytes"] or recipe["sha256"] != entry["sha256"]:
+                raise ValueError("Raw-artifact reconstruction does not bind the original file")
+            recipes.append({"path": str(repo / entry["reconstruction_path"]),
+                            "sha256": entry["reconstruction_sha256"], "data": recipe})
+            verified.append({key: entry[key] for key in ["path", "bytes", "sha256"]})
+    verify_release_persistence(repo, commit, recipes)
+    return verified
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--receipt", type=Path, required=True)
@@ -163,6 +197,7 @@ def main():
         data = committed_bytes(repo, path, commit, entry)
         proof[entry["path"]] = {"bytes": len(data), "sha256": sha(data)}
     verify_release_persistence(repo, commit, receipt.get("zip_persistence", []))
+    persisted_artifacts = verify_artifact_persistence(repo, commit, receipt.get("artifact_persistence", []), case)
     releases = [entry for entry in receipt["release_files"] if entry.get("case_id", case) == case]
     if not releases:
         raise ValueError("No actual full native/media package was authorized")
@@ -192,10 +227,19 @@ def main():
     for entry in releases:
         with zipfile.ZipFile(entry["path"]) as package:
             package.extractall(native_root)
+    portable_prefix = f"artifacts/studies/{STUDY}/portable/"
+    for entry in persisted_artifacts:
+        if entry["path"].startswith(portable_prefix):
+            path = native_root / entry["path"][len(portable_prefix):]
+            with path.open("rb") as file:
+                digest = hashlib.file_digest(file, "sha256").hexdigest()
+            if path.stat().st_size != entry["bytes"] or digest != entry["sha256"]:
+                raise ValueError("Whole native/media ZIP does not contain the exact persisted raw artifact")
     (stage / "source-review.json").write_text(json.dumps({
         "study_id": STUDY, "case_id": case, "source_commit": commit, "source_light_files": files,
         "kind": "BASELINE_REFERENCE_NOT_MULTIPLIER_CASE" if args.reference else "ACTUAL_MULTIPLIER_CASE",
         "private_verification_inputs_read": len(proof), "private_inputs_copied": 0,
+        "private_raw_artifact_persistence_verified": len(persisted_artifacts),
         "source_release_files": [{key: item[key] for key in ["bytes", "sha256"]} | {"filename": Path(item["path"]).name}
                                  for item in releases],
         "publication_state": "STAGED_PENDING_PORTABILITY_AND_BROWSER",

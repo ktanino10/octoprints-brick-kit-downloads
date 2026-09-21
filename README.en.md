@@ -67,12 +67,13 @@ Geometry-only 3MF files remain **NOT_SLICED**, not configured Bambu Studio proje
 **[Copilot 1.2× actual 3D guide](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-guide.html?case=copilot-p120)** /
 **[Copilot CG, Blender, animation and native CAD package](https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/tag/part-count-matrix-20260921-copilot-p120)**.
 
-Actual data satisfying the current delivery requirements is available for **Mona's new 1.2×/1.5× revisions and Copilot 1.2×, 1.5×, 2× and 3×: six of fifteen cases**.
+Actual data satisfying the current delivery requirements is available for **Mona's new 1.2×/1.5× revisions and all five Copilot multipliers: seven of fifteen cases**.
 The 1.2× case contains **21,388 parts versus target 21,448 (−60; actual ratio 1.196665×), 155 types,
 519.8 × 439.8 × 397.0 mm**. The 1.5× case contains **26,690 parts versus target 26,810 (−120; actual ratio 1.493314×),
 162 types, 567.8 × 487.8 × 425.8 mm**. The 2× case has **35,648 parts versus target 35,746 (−98; actual ratio 1.994517×),
 182 types, 631.8 × 535.8 × 469.0 mm**. The 3× case has **53,350 parts versus target 53,619 (−269),
-195 types, 727.8 × 615.8 × 541.0 mm**. Separate visible temporary supports number one for 1.2×/1.5×/2× and two for 3×.
+195 types, 727.8 × 615.8 × 541.0 mm**. The 4× case has **71,261 parts versus target 71,492 (−231),
+214 types, 791.8 × 679.8 × 598.6 mm**. Separate temporary aids number one for 1.2×/1.5×/2×, two for 3× and zero for the actual 4× case.
 The Mona-specific no-stand condition is not extended to Copilot. Crown/cheek steps and asymmetric lime regions remain;
 neither aesthetic nor manufacturing approval is implied.
 

@@ -5,7 +5,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "tools"))
-from make_density_receipt import BASE, STUDY, public_asset_records, receipt_for
+from make_density_receipt import BASE, STUDY, file_url, public_asset_records, receipt_for
 from verify_density_publication import browser_coverage
 
 
@@ -31,12 +31,21 @@ class DensityReceiptTests(unittest.TestCase):
                               }} if character == "mona" else {}),
                               "assets": {"cg": [asset], "native_cad": [asset], "assembly": [asset],
                                          "animations": {key: asset for key in ["turntable", "radial_explode", "bottom_up"]}}})
-        return {"study_id": STUDY, "baselines": {key: {"state": "READY", "metrics": {"part_count": value},
+        prefix = f"/artifacts/studies/{STUDY}/"
+        comparisons = [{"path": prefix + name, "bytes": 10, "sha256": "2" * 64} for name in [
+            "comparison-sheets.json", "comparison.csv",
+            *[f"comparisons/{character}-{kind}.jpg" for character in baselines
+              for kind in ["normalized-front", "normalized-three_quarter", "physical-size"]],
+        ]]
+        return {"study_id": STUDY, "comparison_sheets": comparisons[0], "comparison_assets": comparisons,
+                "baselines": {key: {"state": "READY", "metrics": {"part_count": value},
                                                        "assets": copy.deepcopy(cases[0]["assets"])}
                                                for key, value in baselines.items()}, "cases": cases}
 
     def reports(self, catalog):
-        browser = {"base": BASE, "input_wait": False, "errors": [], "cases": [case["id"] for case in catalog["cases"]]}
+        browser = {"base": BASE, "input_wait": False, "errors": [], "cases": [case["id"] for case in catalog["cases"]],
+                   "comparison_sheets": [file_url(file) for file in catalog["comparison_assets"] if file["path"].endswith(".jpg")],
+                   "comparison_csv_rows": 15}
         downloads = {"study_id": STUDY, "catalog_sha256": "b" * 64, "deployment": {"commit": "c" * 40},
                      "assets": [{**entry, "authentication": "none"} for entry in public_asset_records(catalog)],
                      "browser_media_delivery": "PASS"}
@@ -73,7 +82,7 @@ class DensityReceiptTests(unittest.TestCase):
 
     def test_shared_immutable_downloads_are_checked_once_without_losing_case_links(self):
         catalog = self.fixture()
-        self.assertEqual(len(public_asset_records(catalog)), 1)
+        self.assertEqual(len(public_asset_records(catalog)), 12)
         self.assertEqual(len(receipt_for(catalog)["cases"]), 15)
         changed = copy.deepcopy(catalog)
         changed["cases"][0]["assets"]["cg"][0] = {**changed["cases"][0]["assets"]["cg"][0], "sha256": "d" * 64}
@@ -151,6 +160,19 @@ class DensityReceiptTests(unittest.TestCase):
         reference["fixed_count_baseline"] = 12411
         with self.assertRaises(ValueError):
             receipt_for(catalog)
+
+    def test_all_fifteen_assets_do_not_finish_without_actual_comparison_sheets_and_csv(self):
+        catalog = self.fixture()
+        browser, downloads = self.reports(catalog)
+        for remove in ["comparison_sheets", "comparison_assets"]:
+            bad = copy.deepcopy(catalog); del bad[remove]
+            self.assertEqual(receipt_for(bad)["state"], "PARTIAL")
+            with self.assertRaises(ValueError):
+                receipt_for(bad, browser=browser, downloads=downloads, catalog_sha256="b" * 64)
+        for field in ["comparison_sheets", "comparison_csv_rows"]:
+            bad = copy.deepcopy(browser); del bad[field]
+            with self.assertRaises(ValueError):
+                receipt_for(catalog, browser=bad, downloads=downloads, catalog_sha256="b" * 64)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "study_id": "part-count-matrix-20260921",
+  "case_id": "copilot-p400",
+  "actual_count": 71261,
+  "scope": "LARGEST_ACTUAL_CASE_ORIGINAL_AND_DISPLAY_ONLY_MEASUREMENTS_NOT_A_DEVICE_GUARANTEE",
+  "environment": {
+    "host": "macOS desktop",
+    "engine": "Playwright-pinned WebKit 2203",
+    "renderer": "WebKit WebGL; underlying hardware/software backend not disclosed",
+    "mobile": "390px viewport on the same desktop host, not a phone",
+    "conditions": "Local preview; concurrent workloads vary. Raw rendering completion, handler, event-loop, drag and pause values are distinct."
+  },
+  "native_geometry_modified": false,
+  "original_scene_preserved_in_release": true,
+  "native_triangles": 593772438,
+  "light_triangles": 123816514,
+  "records": {
+    "native": [
+      {
+        "width": 1440,
+        "height": 1000,
+        "load_ms": 1112.800500006415,
+        "frames_ms": [
+          1054,
+          630,
+          619,
+          570,
+          822
+        ],
+        "input_handler_ms": [
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "event_loop_yield_ms": [
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "actual_drag_to_finished_frame_ms": 595.6247500143945,
+        "pause_ui_response_ms": 1691.9159579556435,
+        "radial_to_finished_frame_ms": 2594.999999999999,
+        "matrix_mismatches": 0
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "load_ms": 1064.875458017923,
+        "frames_ms": [
+          1246,
+          815,
+          899,
+          573.0000000000009,
+          408.9999999999991
+        ],
+        "input_handler_ms": [
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "event_loop_yield_ms": [
+          1,
+          2,
+          1,
+          1,
+          0
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 548.8283329759724,
+        "pause_ui_response_ms": 603.5310839652084,
+        "radial_to_finished_frame_ms": 2368,
+        "matrix_mismatches": 0
+      }
+    ],
+    "light": [
+      {
+        "width": 1440,
+        "height": 1000,
+        "load_ms": 1515.3312920010649,
+        "frames_ms": [
+          386,
+          189,
+          135,
+          162,
+          388
+        ],
+        "input_handler_ms": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "event_loop_yield_ms": [
+          1,
+          1,
+          2,
+          1,
+          2
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 184.74837497342378,
+        "pause_ui_response_ms": 377.8735409723595,
+        "radial_to_finished_frame_ms": 713,
+        "matrix_mismatches": 0
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "load_ms": 1023.9634590107016,
+        "frames_ms": [
+          202.9999999999999,
+          143,
+          145,
+          83,
+          73
+        ],
+        "input_handler_ms": [
+          0.9999999999998863,
+          0,
+          0,
+          1.0000000000002274,
+          0
+        ],
+        "event_loop_yield_ms": [
+          0.9999999999998863,
+          0,
+          0,
+          1.0000000000002274,
+          0
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 123.69258399121463,
+        "pause_ui_response_ms": 333.18695897469297,
+        "radial_to_finished_frame_ms": 468.99999999999955,
+        "matrix_mismatches": 0
+      }
+    ]
+  }
+}

@@ -477,6 +477,84 @@
         "display_triangles": 31607816,
         "radial_to_finished_frame_ms": 154
       }
+    ],
+    "copilot-p400": [
+      {
+        "width": 1440,
+        "height": 1000,
+        "load_ms": 1515.3312920010649,
+        "frames_ms": [
+          386,
+          189,
+          135,
+          162,
+          388
+        ],
+        "input_handler_ms": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "event_loop_yield_ms": [
+          1,
+          1,
+          2,
+          1,
+          2
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 184.74837497342378,
+        "pause_ui_response_ms": 377.8735409723595,
+        "actual_instances": 71261,
+        "display_triangles": 123816514,
+        "radial_to_finished_frame_ms": 713
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "load_ms": 1023.9634590107016,
+        "frames_ms": [
+          202.9999999999999,
+          143,
+          145,
+          83,
+          73
+        ],
+        "input_handler_ms": [
+          0.9999999999998863,
+          0,
+          0,
+          1.0000000000002274,
+          0
+        ],
+        "event_loop_yield_ms": [
+          0.9999999999998863,
+          0,
+          0,
+          1.0000000000002274,
+          0
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 123.69258399121463,
+        "pause_ui_response_ms": 333.18695897469297,
+        "actual_instances": 71261,
+        "display_triangles": 123816514,
+        "radial_to_finished_frame_ms": 468.99999999999955
+      }
     ]
   }
 }

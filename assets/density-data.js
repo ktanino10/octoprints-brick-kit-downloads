@@ -209,6 +209,7 @@ export function validateDensityCatalog(catalog, pointer) {
   }
   densityAssert(combinations.size === 15, '3体×5倍率の15枠をすべて明示する必要があります。');
   if (catalog.display_catalog !== undefined) validateDensityFile(catalog.display_catalog);
+  if (catalog.comparison_sheets !== undefined) validateDensityFile(catalog.comparison_sheets);
   densityAssert(catalog.reference_revisions === undefined || isObject(catalog.reference_revisions),
     '改訂参照は固定された倍率計算基準と分けて記録する必要があります。');
   for (const [character, reference] of Object.entries(catalog.reference_revisions ?? {})) {

@@ -1199,7 +1199,119 @@
       "id": "copilot-p400",
       "character": "copilot",
       "count_percentage": 400,
-      "state": "INPUT_WAIT"
+      "state": "READY",
+      "metrics": {
+        "part_count": 71261,
+        "unique_types": 214,
+        "one_by_one_exceptions": 111,
+        "layer_count": 125,
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "grip_long_ge_15_8_count": 71150,
+        "dimensions_mm": [
+          791.8,
+          679.8,
+          598.5999999999999
+        ]
+      },
+      "target_count": 71492,
+      "target_difference": -231,
+      "actual_ratio": 3.987075476976445,
+      "manifest": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/cases/copilot-p400-guide.json.gz",
+        "bytes": 2625056,
+        "sha256": "c72630b179af06b1850f44c670bc16505745b12c13dd31beab9813016743e4e3"
+      },
+      "source_manifest_sha256": "37b26f4f6347aacb09f509e9507842a6223b9f2c7f27e58e22487b8cccb9b212",
+      "source_bom_sha256": "c5e6bbd8d3bfc8f3ad7f56e65d794305b3ee4d5137d4ee9785de0550cd35e787",
+      "source_commit": "df5691fcb57f938c788dfcd9f19fc6df257a1b6b",
+      "images": {
+        "front": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/copilot-p400-assembled-front.jpg",
+          "bytes": 80815,
+          "sha256": "4177671dc39dfadde1fe28d5076beb5ff2b3ec7258d7f21348becbe763bf3b4a",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_front"
+        },
+        "three_quarter": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/copilot-p400-assembled-three_quarter.jpg",
+          "bytes": 108433,
+          "sha256": "efa045566b38de3c3d5a37dc93935f08e84c7bafe4dbdc342e01cc0e8eb10f14",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_three_quarter"
+        }
+      },
+      "tradeoff": "実71,261部品、固定目標71,492との差-231で許容内。完成正面・斜めと実MP4のframe1/18/54/73/108/144を閲覧した。 紫のゴーグル枠・頭頂・側面、青いレンズと顔、黄緑の特徴色を実ブロックで表している。後頭部も実部品で閉じた丸みを持つ。相対格子は細かいが、額の段差、青い下顔の同心状の溝、色境界の凹凸は引き続き見える。 実寸791.8x679.8x598.6mm、固定分母17,873に対する実部品数倍率3.987075。約79cm幅の大型案であり、寸法4倍ではない。完成体はP1Sの造形領域に収まらず、別々の部品を組み立てる前提。 黄緑部分の輪郭やレンズ内縁が全て原型に近づいたとは判定していない。増えた数量を外観の合格点に換算せず、選択は保留する。 1x1例外111個、長辺15.8mm以上71,150個。今回の実データには仮支持台がなく、本体ゼロのframe73にも支台はない。実物の保持力・転倒・組立中の安定性を保証するものではない。 native保存・別展開での再open、全71,261ID/type/color/pose/step、214型の実頂点・面、分解と正確な復帰、空から全数までのscene照合は完了している。111,868,399bytesの実Blender sceneも削減せず保存し、現物の嵌合・強度・スライス・印刷の承認とは区別する。",
+      "assets": {
+        "cg": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p400/copilot-p400-cad-scene-animation-public.zip",
+            "filename": "copilot-p400-cad-scene-animation-public.zip",
+            "bytes": 211353409,
+            "sha256": "b8bca6e53482118e7d3f46af26306816c105e0bc4361c906302cf7537d51f2b4",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "still",
+              "blender"
+            ]
+          }
+        ],
+        "native_cad": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p400/copilot-p400-cad-scene-animation-public.zip",
+            "filename": "copilot-p400-cad-scene-animation-public.zip",
+            "bytes": 211353409,
+            "sha256": "b8bca6e53482118e7d3f46af26306816c105e0bc4361c906302cf7537d51f2b4",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "freecad_assembly",
+              "linked_libraries",
+              "stl",
+              "step"
+            ]
+          }
+        ],
+        "assembly": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p400/copilot-p400-cad-scene-animation-public.zip",
+            "filename": "copilot-p400-cad-scene-animation-public.zip",
+            "bytes": 211353409,
+            "sha256": "b8bca6e53482118e7d3f46af26306816c105e0bc4361c906302cf7537d51f2b4",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "bom",
+              "ordered_ids",
+              "instructions"
+            ]
+          }
+        ],
+        "animations": {
+          "turntable": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p400/copilot-p400-assembly-motion.mp4",
+            "bytes": 1900396,
+            "sha256": "8a120ea32424d76f61fe883c9449e74855bae5534bd8501b3926231902c4b448",
+            "start_seconds": 0,
+            "end_seconds": 3
+          },
+          "radial_explode": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p400/copilot-p400-assembly-motion.mp4",
+            "bytes": 1900396,
+            "sha256": "8a120ea32424d76f61fe883c9449e74855bae5534bd8501b3926231902c4b448",
+            "start_seconds": 3,
+            "end_seconds": 6
+          },
+          "bottom_up": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p400/copilot-p400-assembly-motion.mp4",
+            "bytes": 1900396,
+            "sha256": "8a120ea32424d76f61fe883c9449e74855bae5534bd8501b3926231902c4b448",
+            "start_seconds": 6,
+            "end_seconds": 12
+          }
+        }
+      }
     },
     {
       "id": "ducky-p120",
@@ -1617,7 +1729,7 @@
   ],
   "display_catalog": {
     "path": "/artifacts/studies/part-count-matrix-20260921/display/catalog.json",
-    "bytes": 1187386,
-    "sha256": "e9892b21b33a2a69655f38948f0abe74713cf76058c92aa2425f6b7729ffec5a"
+    "bytes": 1345912,
+    "sha256": "f7dca74c06b5ee25fb60deb394023276cd4100192c3da5ad9fab3572c41d8ced"
   }
 }

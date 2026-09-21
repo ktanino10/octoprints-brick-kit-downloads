@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+import re
 
 from density_requirements import MONA_WHISKER_REQUIREMENT, all_cases, delivery_status, logical_case_id
 ROOT = Path(__file__).resolve().parents[1]
@@ -37,7 +38,29 @@ def public_asset_records(catalog):
             if url in files and files[url] != identity:
                 raise ValueError("Shared animation URL has conflicting byte identities")
             files[url] = identity
+    for file in catalog.get("comparison_assets", []):
+        url = file_url(file)
+        identity = {"url": url, "bytes": file["bytes"], "sha256": file["sha256"]}
+        if url in files and files[url] != identity:
+            raise ValueError("Final comparison assets have conflicting byte identities")
+        files[url] = identity
     return list(files.values())
+
+
+def comparison_assets_complete(catalog):
+    prefix = f"/artifacts/studies/{STUDY}/"
+    expected = {prefix + "comparison-sheets.json", prefix + "comparison.csv"}
+    expected.update(prefix + f"comparisons/{character}-{kind}.jpg"
+                    for character in ["mona", "copilot", "ducky"]
+                    for kind in ["normalized-front", "normalized-three_quarter", "physical-size"])
+    files = catalog.get("comparison_assets", [])
+    if len(files) != 11 or {file.get("path") for file in files} != expected:
+        return False
+    if any(type(file.get("bytes")) is not int or file["bytes"] <= 0
+           or not re.fullmatch(r"[0-9a-f]{64}", str(file.get("sha256", ""))) for file in files):
+        return False
+    index = next(file for file in files if file["path"] == prefix + "comparison-sheets.json")
+    return catalog.get("comparison_sheets") == index
 
 
 def receipt_for(catalog, *, browser=None, downloads=None, catalog_sha256=None):
@@ -85,15 +108,19 @@ def receipt_for(catalog, *, browser=None, downloads=None, catalog_sha256=None):
         })
     all_ready = (len(cases) == 15 and len({case["case_id"] for case in cases}) == 15
                  and all(case["status"] == "READY" for case in cases)
-                 and all(row["state"] == "READY" for row in catalog["baselines"].values()))
+                 and all(row["state"] == "READY" for row in catalog["baselines"].values())
+                 and comparison_assets_complete(catalog))
     browser_passed = downloads_passed = False
     if browser is not None or downloads is not None:
         if browser is None or downloads is None or not all_ready:
-            raise ValueError("Final verification needs all fifteen real cases and both public reports")
+            raise ValueError("Final verification needs fifteen real cases, complete comparison sheets/CSV and both public reports")
         expected = {case["case_id"] for case in cases}
         if (browser.get("base") != BASE or browser.get("input_wait") is not False or browser.get("errors") or browser.get("failure")
                 or set(browser.get("cases", [])) != expected or len(browser["cases"]) != 15):
             raise ValueError("Actual public browser report does not cover all fifteen cases")
+        expected_sheets = {file_url(file) for file in catalog["comparison_assets"] if file["path"].endswith(".jpg")}
+        if set(browser.get("comparison_sheets", [])) != expected_sheets or browser.get("comparison_csv_rows") != 15:
+            raise ValueError("Final public browser report does not verify the actual comparison sheets and fifteen-row CSV")
         if downloads.get("catalog_sha256") != catalog_sha256 or downloads.get("study_id") != STUDY:
             raise ValueError("Public download report is not bound to the exact final catalog")
         live = {entry["url"]: entry for entry in downloads.get("assets", [])}
@@ -144,6 +171,7 @@ def receipt_for(catalog, *, browser=None, downloads=None, catalog_sha256=None):
             "data_ready_case_count": sum(case["source_status"] == "READY" for case in cases),
             "requirement_ready_case_count": sum(case["status"] == "READY" for case in cases),
             "historical_data_case_count": len(catalog.get("historical_cases", [])),
+            "final_comparisons_available": comparison_assets_complete(catalog),
         },
     }
 

@@ -5,10 +5,11 @@ import {
   DENSITY_POINTER, DENSITY_CHARACTERS, COUNT_PERCENTAGES,
   validateDensityPointer, validateDensityCatalog, targetPartCount, densityDeliveryStatus,
 } from './density-data.js';
+import { comparisonFile, validateDensityComparisons } from './density-comparisons.js';
 
 const $ = (selector) => document.querySelector(selector);
 const names = { mona: 'Mona', copilot: 'Copilot', ducky: 'Ducky' };
-let catalog = null, character = 'mona', view = 'front';
+let catalog = null, comparisons = null, character = 'mona', view = 'front';
 const params = new URLSearchParams(location.search);
 if (DENSITY_CHARACTERS.includes(params.get('character'))) character = params.get('character');
 if (['front', 'three_quarter'].includes(params.get('view'))) view = params.get('view');
@@ -129,6 +130,22 @@ function render() {
     }
     host.append(card);
   }
+  renderComparisonSheets();
+}
+function renderComparisonSheets() {
+  const panel = $('#matrix-comparison-archive');
+  panel.hidden = !comparisons;
+  if (!comparisons) return;
+  const row = comparisons.rows.find(item => item.character === character);
+  const host = $('#matrix-comparison-images'); host.replaceChildren();
+  for (const image of row.images) {
+    const caption = image.mode === 'ACTUAL_CG_FIXED_PHYSICAL_PX_PER_MM'
+      ? '実寸比・正面：原画像上0.9 px/mm。画面表示は縮小されても6モデルの相対比を保ちます。'
+      : image.view === 'front' ? '正面：6モデルを同じ投影高さで比較。実寸比ではありません。'
+        : '斜め：6モデルを同じ投影高さで比較。実寸比ではありません。';
+    host.append(actualImage(comparisonFile(image), caption));
+  }
+  $('#matrix-comparison-csv').href = assetURL(comparisonFile(comparisons.comparison_csv).path);
 }
 function renderTable() {
   const host = $('#matrix-table'); host.replaceChildren();
@@ -171,6 +188,9 @@ try {
     document.querySelectorAll('[data-density-character],[data-density-view]').forEach((button) => { button.disabled = true; });
   } else {
     catalog = validateDensityCatalog(await readJSON(pointer.catalog.path, pointer.catalog.sha256), pointer);
+    if (catalog.comparison_sheets) {
+      comparisons = validateDensityComparisons(await readJSON(catalog.comparison_sheets.path, catalog.comparison_sheets.sha256), catalog);
+    }
     const ready = catalog.cases.filter((item) => item.state === 'READY').length;
     const eligible = catalog.cases.filter((item) => densityDeliveryStatus(item) === 'READY').length;
     $('#matrix-status').textContent = `追加要件適合 ${number(eligible, 0)} / 15案。比較対象の実データ公開 ${number(ready, 0)} / 15案。旧版は別の履歴です。実物合格ではありません。`;

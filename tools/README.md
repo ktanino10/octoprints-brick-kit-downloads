@@ -326,6 +326,9 @@ portable形式の `origin` はfull sourceの `position_origin` と同じ意味�
 大きい公開ZIPの最終化は既存依存を入れた `.venv/bin/python tools/finalize_density_package.py ...` で実行します。
 Blender 5系の圧縮scene検査には既存のzstandard依存が必要です。Releaseのdraftはタグ参照APIで404になる場合があり、
 draftのasset検査はrelease IDで行います。検査コマンド失敗後にpublishを続行してはいけません。
+大きい元scene等の `artifact_persistence` も、private index・reconstruction・各Gitblob chunk・結合後SHAを検算し、
+portable ZIPに入ったsceneが同じ原本であることをmetadata整理前に確認します。private補助index/chunksは公開せず、
+sceneやanimationをGit100MB制限に合わせて縮小もしません。
 
 ### 改訂1x参照と固定分母
 
@@ -353,3 +356,23 @@ UIに軽量表示を明記し、切替前後の同視点画像・全instance行�
 実pointer dragとplay/pauseを分けて測ります。gl.finishの追加待ちが0でも描画負荷ゼロとは読みません。
 `display/performance.json` にCP2の実測と端末/負荷条件を記録しています。390pxはdesktop上のviewportで、
 実スマートフォンや全端末の滑らかさを保証しません。受領済み各実caseと最終最大案で再測定します。
+
+### 全実案完成後の比較sheetとCSV
+
+制作元の `comparison-sheets.json` は `COMPLETE_REAL_SIX_WAY_COMPARISONS` の固定READY補完だけを受けます。
+各キャラクターは実1x参照＋5案の6列で、Monaの固定分母12,435と新参照実12,411を混同しません。
+`density-comparisons.js` は全15案の受入、各columnのactualID/manifest/BOM/数量/寸法を照合します。
+未完成や旧支台Monaを代用したものは拒否し、補完がない間は比較sheet領域を表示しません。
+
+正面/斜めのnormalized sheetは、元1200px orthographic CGの実投影高864pxを580px panelへ
+縮小した417.6pxへ結びます。実寸frontは元の同じ正面CGからuniform affineを使い、0.9px/mm、
+800px幅panel、top140/共通ground750を検査します。縦横を別々に丸めるresizeは使いません。
+これは原画像内のpx/mmであり、responsive表示後の画面を物理定規にする主張ではありません。
+元PNG/render-statsは最終補完receiptの明示read-only入力で照合し、light JPEGやmetadata整理後PNGのSHAと混ぜません。
+
+`density_comparison_evidence.py` はCSVの厳密な18列・15行と実case集合を読み、固定分母、実参照数、
+目標/実数/差、実倍率、寸法、使用型と小部品数を受入catalogから再計算します。参照3行の混入は拒否します。
+最終receiptのREADYには `comparison_assets` のindex/CSV/9枚のsheetすべての公開bytehashと、
+実ブラウザーによる9画像/15行CSVの確認も必要です。Native/mediaが15案揃っただけでは総完了にしません。
+`import_density_comparisons.py` は固定補完receiptの許可ファイルだけを取り込み、元PNGのSHAを既存のmetadata-only
+保存記録へも照合します。完成前の比較画像は生成しません。元camera/CSV/全列の検査を通してからimmutableに保存します。

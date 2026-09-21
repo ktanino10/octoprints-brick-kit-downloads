@@ -44,7 +44,7 @@
     "field": "commit"
   },
   "verified_content_commit": null,
-  "catalog_sha256": "13b32b26f4452d1f21d7f5acd7a4dc18cb8d00ccc7684e5182c514c783556118",
+  "catalog_sha256": "14f71103554e5a25b72c421a6f3ad96e4d67fa24d19b466a631ff5cb2ce95b03",
   "cases": [
     {
       "case_id": "mona-p120-root-v2",
@@ -284,19 +284,23 @@
       "logical_case_id": "copilot-p400",
       "character": "copilot",
       "multiplier": 4.0,
-      "target_count": null,
-      "actual_count": null,
-      "actual_ratio": null,
-      "status": "INPUT_WAIT",
-      "source_status": "INPUT_WAIT",
+      "target_count": 71492,
+      "actual_count": 71261,
+      "actual_ratio": 3.987075476976445,
+      "status": "READY",
+      "source_status": "READY",
       "whisker_support": null,
-      "cg_url": null,
-      "animation_url": null,
-      "animation_urls": {},
-      "cad_url": null,
-      "assembly_url": null,
-      "viewer_url": null,
-      "viewer_url_en": null
+      "cg_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p400/copilot-p400-cad-scene-animation-public.zip",
+      "animation_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p400/copilot-p400-assembly-motion.mp4",
+      "animation_urls": {
+        "turntable": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p400/copilot-p400-assembly-motion.mp4",
+        "radial_explode": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p400/copilot-p400-assembly-motion.mp4",
+        "bottom_up": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p400/copilot-p400-assembly-motion.mp4"
+      },
+      "cad_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p400/copilot-p400-cad-scene-animation-public.zip",
+      "assembly_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p400/copilot-p400-cad-scene-animation-public.zip",
+      "viewer_url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case=copilot-p400",
+      "viewer_url_en": "https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-guide.html?case=copilot-p400"
     },
     {
       "case_id": "ducky-p120",
@@ -426,8 +430,9 @@
     "mona_whisker_requirement": "NO_EXTERNAL_OR_ASSEMBLY_AIDS",
     "physical_validation": "UNKNOWN",
     "slicer_print_supports": "SEPARATE_UNVALIDATED_CONDITION",
-    "data_ready_case_count": 6,
-    "requirement_ready_case_count": 6,
-    "historical_data_case_count": 2
+    "data_ready_case_count": 7,
+    "requirement_ready_case_count": 7,
+    "historical_data_case_count": 2,
+    "final_comparisons_available": false
   }
 }
