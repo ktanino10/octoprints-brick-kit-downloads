@@ -36,6 +36,8 @@ jobs:
           node --check assets/shape-options.js
           node --check assets/mona-study.js
           node --check assets/mona-refinement.js
+          node --check assets/density-data.js
+          node --check assets/density-matrix.js
       - name: Build both languages from shared templates
         run: |
           node viewer/scripts/extract-i18n.mjs
@@ -57,6 +59,8 @@ jobs:
           python3 tools/validate_mona_study.py
           node tools/check_mona_refinement.mjs
           python3 tools/validate_mona_refinement.py
+          node tools/check_density.mjs
+          python3 tools/validate_density.py
       - name: Stage only the audited public payload
         run: python3 tools/build_site.py
       - name: Upload Pages artifact

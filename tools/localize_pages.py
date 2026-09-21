@@ -116,6 +116,11 @@ def required_messages():
             pointer = json.loads(comparison_pointer.read_text())
             if pointer["state"] == "READY":
                 collect(json.loads((ROOT / pointer["data_url"].lstrip("/")).read_text()))
+    matrix_pointer = ROOT / "archive/density-study.json"
+    if matrix_pointer.is_file():
+        pointer = json.loads(matrix_pointer.read_text())
+        if pointer["state"] != "INPUT_WAIT":
+            collect(json.loads((ROOT / pointer["catalog"]["path"].lstrip("/")).read_text()))
     return {"pages": sorted(pages), "runtime": sorted(runtime), "data": sorted(data)}
 
 

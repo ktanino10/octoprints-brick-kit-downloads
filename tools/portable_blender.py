@@ -15,16 +15,18 @@ sys.path.insert(0, str(ROOT / "tools"))
 from import_archive import clean_json
 
 parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument("--revision", required=True)
+scope = parser.add_mutually_exclusive_group(required=True)
+scope.add_argument("--revision")
+scope.add_argument("--study", choices=["part-count-matrix-20260921"])
 parser.add_argument("--stage-root", type=Path, required=True)
 parser.add_argument("--report", type=Path, required=True)
 args = parser.parse_args(sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else [])
 stage = args.stage_root.resolve()
 if not stage.is_relative_to(ROOT / ".archive-work") or stage == ROOT / ".archive-work":
     raise ValueError("Native publication metadata may only be edited in an owned revision staging directory")
-if not re.fullmatch(r"r3-[a-zA-Z0-9._-]+", args.revision):
+if args.revision and not re.fullmatch(r"r3-[a-zA-Z0-9._-]+", args.revision):
     raise ValueError("Invalid revision")
-artifact_root = stage / "artifacts/revisions" / args.revision
+artifact_root = stage / "artifacts" / ("revisions" if args.revision else "studies") / (args.revision or args.study)
 if not artifact_root.is_dir() or not artifact_root.resolve().is_relative_to(stage) or any(path.is_symlink() for path in artifact_root.rglob("*")):
     raise ValueError("Missing or symlinked revision staging inputs")
 report_path = args.report.resolve()
@@ -77,6 +79,42 @@ def appearance_digest():
     return hashlib.sha256(json.dumps(records, sort_keys=True).encode()).hexdigest()
 
 
+def animation_digest():
+    digest = hashlib.sha256()
+    for scene in sorted(bpy.data.scenes, key=lambda item: item.name):
+        digest.update(json.dumps([scene.name, scene.frame_start, scene.frame_end, scene.render.fps,
+                                  scene.render.fps_base]).encode())
+    for block in sorted([*bpy.data.objects, *bpy.data.scenes], key=lambda item: item.name):
+        animation = block.animation_data
+        if not animation:
+            continue
+        digest.update(block.name.encode())
+        for curve in animation.drivers:
+            variables = []
+            for variable in curve.driver.variables:
+                variables.append([variable.name, variable.type, [
+                    [getattr(target.id, "name", None), target.data_path,
+                     getattr(target, "transform_type", None), getattr(target, "transform_space", None)]
+                    for target in variable.targets]])
+            digest.update(json.dumps([curve.data_path, curve.array_index, curve.driver.type,
+                                      curve.driver.expression, variables], sort_keys=True).encode())
+        action = animation.action
+        if action:
+            digest.update(action.name.encode())
+            curves = list(action.fcurves) if hasattr(action, "fcurves") else []
+            if hasattr(action, "layers"):
+                for layer in action.layers:
+                    for strip in layer.strips:
+                        if hasattr(strip, "channelbags"):
+                            for bag in strip.channelbags:
+                                curves.extend(bag.fcurves)
+            for curve in sorted(curves, key=lambda item: (item.data_path, item.array_index)):
+                digest.update(json.dumps([curve.data_path, curve.array_index,
+                    [[list(point.co), list(point.handle_left), list(point.handle_right), point.interpolation]
+                     for point in curve.keyframe_points]]).encode())
+    return digest.hexdigest()
+
+
 results = []
 files = sorted(artifact_root.rglob("*.blend"))
 if not files:
@@ -87,6 +125,7 @@ for path in files:
     bpy.ops.wm.open_mainfile(filepath=str(path), load_ui=True, use_scripts=False)
     before = geometry_digest()
     colors_before = appearance_digest()
+    animation_before = animation_digest()
     if bpy.data.libraries or bpy.utils.blend_paths():
         raise ValueError(f"External native dependency requires review: {relative}")
     for screen in bpy.data.screens:
@@ -109,7 +148,8 @@ for path in files:
     bpy.ops.wm.open_mainfile(filepath=str(path), load_ui=True, use_scripts=False)
     after = geometry_digest()
     colors_after = appearance_digest()
-    if before != after or colors_before != colors_after:
+    animation_after = animation_digest()
+    if before != after or colors_before != colors_after or animation_before != animation_after:
         raise ValueError(f"Native geometry changed while saving: {relative}")
     results.append({
         "path": relative, "objects": len(bpy.data.objects), "meshes": len(bpy.data.meshes),
@@ -118,6 +158,8 @@ for path in files:
         "input_sha256": input_hash, "public_sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
         "appearance_sha256_before": colors_before, "appearance_sha256_after": colors_after,
         "material_parameters_unchanged": True,
+        "animation_sha256_before": animation_before, "animation_sha256_after": animation_after,
+        "animation_parameters_unchanged": True,
         "change": "Blender File Browser directory and render output made relative; no remeshing.",
     })
     print("PORTABLE", relative, len(bpy.data.objects), before, flush=True)

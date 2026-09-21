@@ -83,6 +83,16 @@
       "status": "ARCHIVE_RECORD"
     },
     {
+      "path": "archive/block-budget-matrix.json",
+      "group": "design",
+      "revision": "r2-20260919",
+      "format": "JSON",
+      "bytes": 454,
+      "sha256": "e7a6c0c72d8a72fb74545eb75d6c0b39fc32dd091d75f36b242cb4f5bb9cf760",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/block-budget-matrix.json",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
       "path": "archive/bundles.json",
       "group": "design",
       "revision": "r2-20260919",
@@ -90,6 +100,16 @@
       "bytes": 2287,
       "sha256": "2998134fc581100cc4e68b0a6ef447b5503c93fdc1304cd11af9612ff8b77de5",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/bundles.json",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
+      "path": "archive/density-study.json",
+      "group": "design",
+      "revision": "r2-20260919",
+      "format": "JSON",
+      "bytes": 437,
+      "sha256": "7c5f7009a501a783fa4647b33643caf9bb0963ddc168c1cfa2354ad0c17229c2",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/density-study.json",
       "status": "ARCHIVE_RECORD"
     },
     {
@@ -18530,6 +18550,36 @@
       "status": "ARCHIVE_RECORD"
     },
     {
+      "path": "assets/density-data.js",
+      "group": "site",
+      "revision": "public-archive-2026-09-19",
+      "format": "JS",
+      "bytes": 10271,
+      "sha256": "6358aad0396978f32cef9b7fb32c9dab6d1b4e599dc074f7cfa13c18e3184ce7",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/density-data.js",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
+      "path": "assets/density-matrix.js",
+      "group": "site",
+      "revision": "public-archive-2026-09-19",
+      "format": "JS",
+      "bytes": 7418,
+      "sha256": "d1d80c0e6cbf0d43513e4819155f21704268cce8cc8791c05647c48277956985",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/density-matrix.js",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
+      "path": "assets/density.css",
+      "group": "site",
+      "revision": "public-archive-2026-09-19",
+      "format": "CSS",
+      "bytes": 4648,
+      "sha256": "1d1be6fa4e4d48982fe8c45c64fdd86daebcb32f06d8e44fcbbabd58b3414a11",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/density.css",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
       "path": "assets/downloads.js",
       "group": "site",
       "revision": "public-archive-2026-09-19",
@@ -18848,9 +18898,29 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "JS",
-      "bytes": 377923,
-      "sha256": "8db496064745ed41fd8db09aca741bb3346b654e035607e404db70544f9ef260",
+      "bytes": 425474,
+      "sha256": "c6bda4b0dc08b1332b29643c9305857b5d8a7812a0f84bca2d154c0555b205aa",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/translations.js",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
+      "path": "density-guide.html",
+      "group": "site",
+      "revision": "public-archive-2026-09-19",
+      "format": "HTML",
+      "bytes": 11469,
+      "sha256": "0ff21cf8766e8348c0a3137f24049cfa882dd5602291a659cd8ab3ed0e0e7ba7",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/density-guide.html",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
+      "path": "density-matrix.html",
+      "group": "site",
+      "revision": "public-archive-2026-09-19",
+      "format": "HTML",
+      "bytes": 9124,
+      "sha256": "8a6b8260fe31225853cec6a3a53bec3551eadef8fa54ce46b0ec70a968cdf757",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/density-matrix.html",
       "status": "ARCHIVE_RECORD"
     },
     {
@@ -18950,6 +19020,26 @@
       "bytes": 7020,
       "sha256": "993020ca30b92ad09506f4a4b9c70f36b9d8040ccc6b12b75dc39dfab1e7c865",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/en/assembly.html",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
+      "path": "en/density-guide.html",
+      "group": "site",
+      "revision": "public-archive-2026-09-19",
+      "format": "HTML",
+      "bytes": 11457,
+      "sha256": "a9ab8225df4e1c2bb426a3b69f098ee93e4f6614f10a106b2c359b6cfbc2be53",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-guide.html",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
+      "path": "en/density-matrix.html",
+      "group": "site",
+      "revision": "public-archive-2026-09-19",
+      "format": "HTML",
+      "bytes": 8914,
+      "sha256": "d6a6459632e8c2ff4d45cd4ef04ae62192fe3bafceff39648ab6f0b364051870",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-matrix.html",
       "status": "ARCHIVE_RECORD"
     },
     {
@@ -19263,6 +19353,26 @@
       "status": "ARCHIVE_RECORD"
     },
     {
+      "path": "ja/density-guide.html",
+      "group": "site",
+      "revision": "public-archive-2026-09-19",
+      "format": "HTML",
+      "bytes": 11473,
+      "sha256": "39f5c688f698e4413bc64ccaeb18c3c2dc6012d1081145d693792019f8cf002c",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
+      "path": "ja/density-matrix.html",
+      "group": "site",
+      "revision": "public-archive-2026-09-19",
+      "format": "HTML",
+      "bytes": 9134,
+      "sha256": "32d60819e751221558c8d9e93689387ec5020f3843c79ad7856fe51e978cdd60",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-matrix.html",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
       "path": "ja/downloads.html",
       "group": "site",
       "revision": "public-archive-2026-09-19",
@@ -19443,6 +19553,16 @@
       "status": "ARCHIVE_RECORD"
     },
     {
+      "path": "viewer/assets/density-guide.js",
+      "group": "viewer",
+      "revision": "public-viewer-2026-09-19",
+      "format": "JS",
+      "bytes": 1253687,
+      "sha256": "a3b0800ee728e77580103fffc74ebaca3ab3b54d1b54bbcc4b1787010c22db5e",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/viewer/assets/density-guide.js",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
       "path": "viewer/assets/mark.svg",
       "group": "viewer",
       "revision": "public-viewer-2026-09-19",
@@ -19467,8 +19587,8 @@
       "group": "viewer",
       "revision": "public-viewer-2026-09-19",
       "format": "JS",
-      "bytes": 1259405,
-      "sha256": "7409374ebff1eab2e12fe5d0fdd2a40b116fc97d0aed557b9d9e49a7ad203814",
+      "bytes": 1333367,
+      "sha256": "af4c41b7981d7dac01b0c5c3a8b36eae597d8d9b637d87586040c17eef79b737",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/viewer/assets/studio.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -19484,11 +19604,11 @@
     }
   ],
   "totals": {
-    "files": 1522,
-    "bytes": 820761764,
+    "files": 1534,
+    "bytes": 822221763,
     "groups": {
-      "site": 59,
-      "design": 25,
+      "site": 68,
+      "design": 27,
       "phase1": 149,
       "common": 561,
       "common-trial": 24,
@@ -19496,7 +19616,7 @@
       "trial": 60,
       "study": 79,
       "feedback": 16,
-      "viewer": 5
+      "viewer": 6
     }
   }
 }

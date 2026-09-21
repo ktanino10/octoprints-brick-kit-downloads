@@ -17,6 +17,11 @@ await build({
   legalComments: 'eof',
   logLevel: 'info',
 });
+await build({
+  absWorkingDir: root, entryPoints: ['src/density-main.js'], outfile: 'assets/density-guide.js',
+  bundle: true, minify: true, sourcemap: false, format: 'esm', target: ['es2022'],
+  legalComments: 'eof', logLevel: 'info',
+});
 
 const dependencies = ['three', 'esbuild', 'playwright', 'playwright-core', '@babel/parser'];
 const licenses = await Promise.all(dependencies.map(async (name) => {

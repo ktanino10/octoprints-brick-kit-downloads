@@ -52,8 +52,8 @@ ZIPの中身を変更するときは新しい版・Releaseを使用し、既存�
 
 ## 日英ページの保守
 
-`site/templates/` が12ページの共通HTML、`site/routes.json` が既存URLと `/ja/`・`/en/` の対応です。
-ルートの既存日本語ページを含む36個の薄いHTMLを生成し、画像・動画・CAD・モデルJSONは共有します。
+`site/templates/` が14ページの共通HTML、`site/routes.json` が既存URLと `/ja/`・`/en/` の対応です。
+ルートの既存日本語ページを含む42個の薄いHTMLを生成し、画像・動画・CAD・モデルJSONは共有します。
 生成されたHTMLや `assets/translations.js` を直接編集せず、テンプレートと `site/i18n/*.en.json` を更新してください。
 
 日本語の原文をメッセージIDとするカタログです。動的テキストはASTから抽出し、`{0}` 等の変数を
@@ -210,3 +210,46 @@ READY後は同フラグなしで実数・高さfamily・全画像・顔優先の
 全35入力のGitblob/サイズ/SHAを確認し、12,435配置・121使用型・実高さfamily・単色・保存sceneの対応を照合します。
 native検証記録はsource担当の再open結果として扱い、publisherが私有sceneを再生成したとは主張しません。
 公開proofには入力パス・実行コマンド・ログを残さず、必要なSHA・実数・判定根拠だけを保存します。
+
+## 3体×5個数倍率の実CG・CAD・3D組立
+
+`density-matrix.html` と `density-guide.html` は、既存r3や以前の比較と独立した
+`part-count-matrix-20260921` を扱います。1倍はユーザーが採用した設計ではなく、
+3体とも初期Fine Cに近い8 mm共通ブロック版に統一する比較前提です。
+Monaは最終12,435、Copilot/Duckyは制作元の実baseline確定後にだけ公開します。
+倍率は個別部品数で、線形サイズでも型数でもありません。整数percentを使った
+`floor((baseline * percent + 50) / 100)` でHALF_UP目標を計算し、実倍率と差分も表示します。
+許容差外は `TARGET_MISSED`、未受領は `INPUT_WAIT`。全15案が4種の実配布を持つまでREADYにはしません。
+
+実ガイドは元の `viewer/assets/studio.js` とは別の `density-guide.js` としてビルドします。
+既存 `BrickStudio` の視点・実形状・描画処理を再利用し、型色ごとのInstancedMeshで配置します。
+放射位置は常に `source.position_mm + source.radial_offset_mm * t` で再評価し、
+0で元位置へ戻します。工程はsourceのstep1..Nとassembly_courseで底から積み、
+同型同色の配置先・BOM・検索・実部品だけの裏面表示を接続します。
+仮支持台は本体個数と分け、必要なstepまでに表示し、未検証の撤去を案内しません。
+単なるZ層分離や分解動画の逆再生ではありません。移動は説明で、衝突/保持の物理シミュレーションではありません。
+
+制作元の `OBM1` 型別gzipは、4-byte magic、uint32LE頂点数/三角形数、Float32LE XYZ、
+Uint32LE面配列です。`density-assets.js` が圧縮bytehashと展開後の座標/面連結hashを照合し、
+最大6リクエストずつ遅延取得します。`pack_density_meshes.py` の `OCBMESH1` は同じ
+Float32/Uint32を型集合として保持する補助形式で、頂点・三角形を生成せず丸め誤差を記録します。
+別tessellationを使う場合は `NATIVE_PREVIEW_TESSELLATION` と精度差を必ず明示します。
+実shapeの欠損をboxに置換しません。モデルID・実数にlocale formattingを逆利用しません。
+
+Pagesには小画像・catalog・圧縮geometry/placementsだけを置き、追加データを140 MB以内へ抑えます。
+旧ファイルを消して容量を作りません。全 `.blend`、動画、実FreeCAD assembly/shared masters/authoring、
+STL/STEP/BOM/手順は版別Releaseから公開します。`.FCStd`相対layoutはパッケージ全展開後に
+別ディレクトリーで再open確認します。ReleaseへのJS fetchを前提にせず、ガイドmeshはPagesから取得します。
+動画だけはHTML mediaとしてGitHubとrelease-assetsのCSPを許可し、実公開のRange/MIME/章再生を検証します。
+
+`check_density.mjs` / `validate_density.py` が実数・0/全ID・工程・放射roundtrip、版不変、容量を検査します。
+`browser_density.py --expect-input-wait` は未受領UIだけを検証し、READY後はフラグなしで
+実cases・各動画章・部品選択・前後左右/裏面・空から組立・日英共有URL・390pxを確認します。
+`browser_density_unit.py` の8部品は明示された非公開のUNIT FIXTUREで、
+制作案や実nativeケースの受入結果ではありません。テストcontextのroute応答以外へ保存・配信しません。
+
+親向け受領記録は `archive/block-budget-matrix.json` です。
+`make_density_receipt.py` は全15実案と公開browserの全case/動画章、匿名全ダウンロードSHAを受けるまで
+PARTIALのままにします。commit自己参照は `archive/deployment.json` の実commitを参照し、
+検査済み内容のcommitは別フィールドに保存します。`verify_density_publication.py` は
+変更したPagesファイルと新matrixのRelease assetsだけを匿名照合し、旧大型履歴を再ダウンロードしません。

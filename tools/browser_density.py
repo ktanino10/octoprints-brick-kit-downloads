@@ -1,0 +1,180 @@
+"""Check matrix readiness and real radial/bottom-up guide behavior in a fresh browser."""
+
+import argparse
+import json
+from pathlib import Path
+from urllib.parse import urljoin
+
+from playwright.sync_api import expect, sync_playwright
+from browser_study_helpers import english, uncropped_image
+
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("--url", required=True)
+parser.add_argument("--browser", required=True)
+parser.add_argument("--expect-input-wait", action="store_true")
+parser.add_argument("--case", help="A specific actual READY case for incremental acceptance")
+parser.add_argument("--output", type=Path, default=Path(".archive-work/density-browser"))
+args = parser.parse_args()
+base = args.url.rstrip("/") + "/"
+args.output.mkdir(parents=True, exist_ok=True)
+report = {"base": base, "input_wait": args.expect_input_wait, "checks": [], "errors": [], "cases": [], "media": []}
+
+
+def checked(message):
+    report["checks"].append(message)
+    print("PASS", message, flush=True)
+
+
+with sync_playwright() as playwright:
+    browser = playwright.chromium.launch(executable_path=args.browser, headless=True,
+                                        args=["--no-first-run", "--disable-background-networking", "--disable-sync"])
+    context = browser.new_context(viewport={"width": 1440, "height": 1050}, reduced_motion="reduce")
+    page = context.new_page()
+    page.set_default_timeout(60000)
+    page.on("pageerror", lambda error: report["errors"].append(str(error)))
+    try:
+        pointer = context.request.get(urljoin(base, "archive/density-study.json")).json()
+        receipt = context.request.get(urljoin(base, "archive/block-budget-matrix.json")).json()
+        current = context.request.get(urljoin(base, "archive/revisions.json")).json()
+        assert current["current_revision"] == "r3-8mm-20260920"
+        if args.expect_input_wait:
+            assert pointer["state"] == "INPUT_WAIT" and receipt["state"] == "INPUT_WAIT"
+            assert not receipt["cases"] and not any(receipt["verification"].values())
+            for locale in ["ja", "en"]:
+                for route in ["density-matrix.html", "density-guide.html"]:
+                    response = page.goto(urljoin(base, f"{locale}/{route}"), wait_until="networkidle")
+                    assert response.status == 200
+                    expect(page.locator("html")).to_have_attribute("lang", locale)
+                    if route == "density-matrix.html":
+                        expect(page.locator("#matrix-pending")).to_be_visible()
+                        expect(page.locator("#matrix-cards img")).to_have_count(0)
+                        expect(page.locator("#matrix-table tr")).to_have_count(0)
+                    else:
+                        expect(page.locator("#density-canvas canvas")).to_have_count(0)
+                        expect(page.locator("#guide-mode")).to_be_disabled()
+                        expect(page.locator("#guide-loading")).to_be_visible()
+                        expect(page.locator("#guide-error")).to_be_hidden()
+                    if locale == "en":
+                        english(page)
+                    assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1")
+            checked("JA/EN pending matrix and guide contain no fabricated cases, geometry or success flags")
+        else:
+            assert pointer["state"] in ["PARTIAL", "READY"]
+            catalog = context.request.get(urljoin(base, pointer["catalog"]["path"].lstrip("/"))).json()
+            cases = [entry for entry in catalog["cases"] if entry["state"] == "READY"
+                     and (not args.case or entry["id"] == args.case)]
+            assert cases
+            for locale in ["ja", "en"]:
+                page.goto(urljoin(base, f"{locale}/density-matrix.html"), wait_until="networkidle")
+                expect(page.locator("#matrix-results")).to_be_visible()
+                expect(page.locator("#matrix-table tr")).to_have_count(15)
+                if locale == "en":
+                    english(page)
+                for character in ["mona", "copilot", "ducky"]:
+                    page.locator(f'[data-density-character="{character}"]').click()
+                    for view in ["front", "three_quarter"]:
+                        page.locator(f'[data-density-view="{view}"]').click()
+                        for image in page.locator("#matrix-cards img").all():
+                            expect(image).not_to_have_js_property("naturalWidth", 0)
+                            uncropped_image(image)
+                assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1")
+            checked("matrix character/view controls and fifteen explicit actual/pending states work in both languages")
+            for entry in cases:
+                page.goto(urljoin(base, f'en/density-guide.html?case={entry["id"]}'), wait_until="domcontentloaded", timeout=120000)
+                expect(page.locator("#density-canvas")).to_have_attribute("data-ready", "true", timeout=180000)
+                expect(page.locator("#guide-error")).to_be_hidden()
+                expect(page.locator("#density-canvas")).to_have_attribute("data-visible-parts", str(entry["metrics"]["part_count"]))
+                english(page)
+                page.locator("#guide-mode").select_option("radial")
+                for value in ["100", "0", "100", "0"]:
+                    page.locator("#guide-explode").evaluate("(input, value) => { input.value = value; input.dispatchEvent(new Event('input', {bubbles:true})); }", value)
+                    expect(page.locator("#density-canvas")).to_have_attribute("data-explosion", str(int(value) / 100).removesuffix(".0"))
+                    diagnostics = page.evaluate("window.__densityGuide.diagnostics()")
+                    assert diagnostics["actual_instances"] == entry["metrics"]["part_count"]
+                    assert diagnostics["matrix_elements_mismatched"] == 0
+                for view in ["front", "back", "left", "right", "underside"]:
+                    page.locator(f'[data-guide-action="view:{view}"]').click()
+                page.locator("#guide-mode").select_option("assembly")
+                expect(page.locator("#density-canvas")).to_have_attribute("data-visible-parts", "0")
+                page.locator('[data-guide-action="part-next"]').click()
+                expect(page.locator("#density-canvas")).to_have_attribute("data-visible-parts", "1")
+                page.locator('[data-guide-action="course-next"]').click()
+                assert int(page.locator("#density-canvas").get_attribute("data-visible-parts")) > 1
+                page.locator('[data-guide-action="complete"]').click()
+                expect(page.locator("#density-canvas")).to_have_attribute("data-visible-parts", str(entry["metrics"]["part_count"]))
+                assert page.evaluate("window.__densityGuide.diagnostics().matrix_elements_mismatched") == 0
+                page.locator("#guide-parts button").first.click()
+                selected = page.locator("#guide-selection strong").inner_text()
+                expect(page.locator("#guide-part-preview canvas")).to_be_visible()
+                page.locator('[data-guide-action="part-bottom"]').click()
+                page.locator("#guide-same").check()
+                page.locator("#guide-search").fill(selected)
+                expect(page.locator("#guide-parts tr")).to_have_count(1)
+                page.locator('[data-language="ja"]').click()
+                expect(page.locator("#guide-selection strong")).to_have_text(selected)
+                page.reload(wait_until="domcontentloaded")
+                expect(page.locator("#density-canvas")).to_have_attribute("data-ready", "true", timeout=180000)
+                expect(page.locator("#guide-selection strong")).to_have_text(selected)
+                for position, name in enumerate(["turntable", "radial_explode", "bottom_up"]):
+                    clip = entry["assets"]["animations"][name]
+                    video = page.locator("#guide-downloads video").nth(position)
+                    result = video.evaluate("""async (video, clip) => {
+                      video.muted = true;
+                      if (video.readyState < 1) {
+                        await new Promise((resolve, reject) => {
+                          const timeout = setTimeout(() => reject(new Error('video metadata timeout')), 60000);
+                          video.addEventListener('loadedmetadata', () => { clearTimeout(timeout); resolve(); }, {once:true});
+                          video.addEventListener('error', () => { clearTimeout(timeout); reject(new Error('video decode failed')); }, {once:true});
+                          video.preload = 'auto'; video.load();
+                        });
+                      }
+                      if (!Number.isFinite(video.duration) || video.duration + .1 < clip.end_seconds) throw new Error('chapter exceeds actual movie');
+                      video.currentTime = clip.start_seconds;
+                      await video.play();
+                      await new Promise((resolve, reject) => {
+                        const timeout = setTimeout(() => reject(new Error('video playback timeout')), 30000);
+                        const check = () => {
+                          if (video.currentTime > clip.start_seconds + .12) {
+                            clearTimeout(timeout); video.removeEventListener('timeupdate', check); resolve();
+                          }
+                        };
+                        video.addEventListener('timeupdate', check); check();
+                      });
+                      video.pause();
+                      return {url: video.currentSrc.split('#')[0], duration: video.duration, current_time: video.currentTime, played: true};
+                    }""", clip)
+                    report["media"].append({"case_id": entry["id"], "chapter": name, **result})
+                page.screenshot(path=str(args.output / f'{entry["id"]}.png'), full_page=True)
+                report["cases"].append(entry["id"])
+            checked("actual cases support radial cycling, all views, empty/part/course/full assembly, selection and shared reload")
+            checked("actual Release/Pages videos decode and play every declared chapter through the page CSP")
+        phone_context = browser.new_context(viewport={"width": 390, "height": 844}, is_mobile=True,
+                                            has_touch=True, locale="ja-JP", reduced_motion="reduce")
+        phone = phone_context.new_page()
+        for route in ["density-matrix.html", "density-guide.html"]:
+            suffix = f'?case={args.case}' if args.case and route == "density-guide.html" else ""
+            phone.goto(urljoin(base, f"en/{route}{suffix}"), wait_until="domcontentloaded")
+            if not args.expect_input_wait and route == "density-guide.html":
+                expect(phone.locator("#density-canvas")).to_have_attribute("data-ready", "true", timeout=180000)
+            english(phone)
+            assert phone.evaluate("document.documentElement.scrollWidth <= innerWidth + 1")
+            phone.screenshot(path=str(args.output / f'mobile-{route}.png'), full_page=True)
+        phone_context.close()
+        checked("390px direct English pages ignore browser language and stay within the viewport")
+        failed_context = browser.new_context()
+        failed = failed_context.new_page()
+        failed.route("**/archive/density-study.json", lambda route: route.fulfill(status=503, body="unavailable"))
+        for route, error in [("density-matrix.html", "#matrix-error"), ("density-guide.html", "#guide-error")]:
+            failed.goto(urljoin(base, "en/" + route), wait_until="networkidle")
+            expect(failed.locator(error)).to_be_visible()
+            english(failed)
+        failed_context.close()
+        checked("missing matrix/guide data is an explicit localized error, not an earlier-model fallback")
+        assert not report["errors"], report["errors"]
+    except Exception as error:
+        report["failure"] = str(error)
+        page.screenshot(path=str(args.output / "failure.png"), full_page=True)
+        raise
+    finally:
+        (args.output / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
+        browser.close()

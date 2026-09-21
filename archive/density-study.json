@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "study_id": "part-count-matrix-20260921",
+  "state": "INPUT_WAIT",
+  "current_revision_unchanged": "r3-8mm-20260920",
+  "baseline_choice": "COMPARISON_ASSUMPTION_NOT_USER_SELECTION",
+  "selection": "NOT_SELECTED",
+  "visual_approval": "PENDING",
+  "physical_fit": "UNKNOWN",
+  "retention_strength": "UNKNOWN",
+  "whole_figure_stability": "UNKNOWN",
+  "slicer_status": "NOT_SLICED",
+  "full_print": "ON_HOLD"
+}

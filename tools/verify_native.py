@@ -48,7 +48,7 @@ for path in files:
         if hasattr(target, "Shape") and target.Shape.isNull():
             raise ValueError(f"Linked native shape is empty: {path.name}: {link.Name}")
         identity = (target.Document.Name, target.Name)
-        if "assemblies" in path.parts and identity not in checked_shapes:
+        if ("assemblies" in path.parts or path.name == "assembly.FCStd") and identity not in checked_shapes:
             if not hasattr(target, "Shape") or not target.Shape.isValid() or len(target.Shape.Solids) != 1 or target.Shape.Volume <= 0:
                 raise ValueError(f"Assembly target is not one valid native solid: {path.name}: {link.Name}")
             checked_shapes.add(identity)

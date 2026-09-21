@@ -184,7 +184,9 @@ def validate(full):
             namespace = {"m": "http://schemas.microsoft.com/3dmanufacturing/core/2015/02"}
             ensure(len(model.findall("m:build/m:item", namespace)) == 11, f"3MF build is not eleven instances: {pitch}")
     audit_links(paths)
-    ensure(sum(entry["bytes"] for entry in files if entry["group"] == "viewer") < 2_000_000, "Viewer bundle unexpectedly large")
+    ensure(sum(entry["bytes"] for entry in files if entry["group"] == "viewer") < 4_000_000, "Two independent viewer bundles unexpectedly large")
+    ensure(all(entry["bytes"] < 2_000_000 for entry in files if entry["path"] in
+               {"viewer/assets/studio.js", "viewer/assets/density-guide.js"}), "A viewer entry bundle exceeds its individual budget")
     if full:
         for path in [p for p in paths if p.suffix == ".mp4"]:
             probe = json.loads(subprocess.check_output(["ffprobe", "-v", "error", "-show_format", "-show_streams", "-of", "json", str(path)]))

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "study_id": "part-count-matrix-20260921",
+  "state": "INPUT_WAIT",
+  "baseline_counts": {"mona": 12435, "copilot": null, "ducky": null},
+  "baseline_assumption": "INITIAL_FINE_C_ADAPTED_8MM_COMPARISON_ASSUMPTION_NOT_USER_SELECTION",
+  "public_commit": {"record": "archive/deployment.json", "field": "commit"},
+  "cases": [],
+  "verification": {
+    "public_browser_passed": false,
+    "anonymous_downloads_passed": false
+  }
+}

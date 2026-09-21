@@ -1,0 +1,10 @@
+{
+  "public_commit": "6445c065e8b69ba399e41d7197e3e6dbb56e1a74",
+  "files": [
+    {"path": "site/mona-refinement-baseline.json", "bytes": 979, "sha256": "953d708ac6b3c2a5c4eab2a95dece1af8ca2103e363b5efbcb00fd617a4f22b9"},
+    {"path": "archive/mona-refinement.json", "bytes": 627, "sha256": "234333d235d5eea001fdec6ab45e0d9f88a7305ef986a8d83edb004bd130cf19"},
+    {"path": "archive/sources/mona-fine-c-refinement-20260921.json", "bytes": 4617, "sha256": "a4cb9d68e6be1ac45767ac6f399304720901a5af7b32c359805de2b071f5e124"},
+    {"path": "archive/sources/mona-fine-c-refinement-20260921-verification.json", "bytes": 5179, "sha256": "9026cfefc6977651291e24b6f660251afbe7a9837e5fd62fe9449d16cf062209"},
+    {"path": "artifacts/studies/mona-fine-c-refinement-20260921/public-study.json", "bytes": 84551, "sha256": "74dbac0aa520a6ffa4cf1550bf90be3400e216d153c1813277bc734b86e5ef87"}
+  ]
+}
