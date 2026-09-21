@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "study_id": "part-count-matrix-20260921",
+  "case_id": "ducky-fine8-base",
+  "kind": "BASELINE_REFERENCE_NOT_MULTIPLIER_CASE",
+  "tag": "part-count-matrix-20260921-ducky-fine8-base",
+  "source_commit": "d8eadae855c504b3fabdf22ed6617edb1b79e993",
+  "assets": [
+    {
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-fine8-base/ducky-fine8-base-cad-scene-animation-public.zip",
+      "bytes": 65961219,
+      "sha256": "fffecaf0b21ee6e41d126e0292a95cf746072a169afe2df176eb8e78fbaf02fd"
+    },
+    {
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-fine8-base/ducky-fine8-base-assembly-motion.mp4",
+      "bytes": 1588356,
+      "sha256": "c11904fb01820e2c39b6de60f8ac6d17d12e118ad62381585214b8c3b5ea1411"
+    }
+  ],
+  "status": "UNSELECTED_DIGITAL_REFERENCE_NOT_SLICED",
+  "physical_fit": "UNKNOWN",
+  "full_print": "ON_HOLD"
+}

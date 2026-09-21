@@ -136,7 +136,7 @@ def main():
     for path in [args.stage, args.inventory, args.blender_report, args.native_report, args.output, args.report]:
         if path.is_symlink() or not path.resolve().is_relative_to(ROOT / ".archive-work"):
             raise ValueError("Package only reviewed files and reports in owned staging")
-    if not re.fullmatch(r"(mona|copilot|ducky)-p(120|150|200|300|400)", args.case):
+    if not re.fullmatch(r"(mona|copilot|ducky)-(p(120|150|200|300|400)|fine8-base)", args.case):
         raise ValueError("Invalid actual case ID")
     inventory = json.loads(args.inventory.read_text())
     if inventory.get("study_id") != STUDY or inventory.get("case_id") != args.case or inventory.get("review_state") != "VERIFIED_PUBLIC_COPY":

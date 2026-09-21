@@ -11,16 +11,19 @@ from playwright.sync_api import expect, sync_playwright
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--url", required=True)
 parser.add_argument("--browser", required=True)
+parser.add_argument("--engine", choices=["chromium", "webkit"], default="chromium")
 parser.add_argument("--case", required=True)
 parser.add_argument("--output", type=Path, required=True)
 args = parser.parse_args()
 base = args.url.rstrip("/") + "/"
-report = {"base": base, "case_id": args.case, "scope": "ACTUAL_NATIVE_CASE_INTERACTION_MEASUREMENTS",
+report = {"base": base, "case_id": args.case, "engine": args.engine, "scope": "ACTUAL_NATIVE_CASE_INTERACTION_MEASUREMENTS",
           "errors": [], "viewports": []}
 
 with sync_playwright() as playwright:
-    browser = playwright.chromium.launch(executable_path=args.browser, headless=True,
-                                        args=["--no-first-run", "--disable-background-networking", "--disable-sync"])
+    launch = {"executable_path": args.browser, "headless": True, "timeout": 60000}
+    if args.engine == "chromium":
+        launch["args"] = ["--no-first-run", "--disable-background-networking", "--disable-sync"]
+    browser = getattr(playwright, args.engine).launch(**launch)
     try:
         for width, height in [(1440, 1000), (390, 844)]:
             context = browser.new_context(viewport={"width": width, "height": height}, reduced_motion="reduce")

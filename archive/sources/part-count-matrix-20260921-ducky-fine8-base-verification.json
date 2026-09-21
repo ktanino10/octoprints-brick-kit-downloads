@@ -1,0 +1,37 @@
+{
+  "metrics": {
+    "part_count": 9669,
+    "unique_types": 85,
+    "one_by_one_exceptions": 5,
+    "layer_count": 77,
+    "minimum_part_mm": [
+      7.8,
+      7.8,
+      3.2
+    ],
+    "grip_long_ge_15_8_count": 9664
+  },
+  "manifest_sha256": "684d5914d023a40a0b25676503b5fdc2bcd2dfeb48a0e1ff7fcaf3189f2157a6",
+  "bom_sha256": "ddf3d62a09a8a8a707466e6f94307f8326ef49e8be9b2b83938f23a5da2185ca",
+  "counted_instances": 9669,
+  "bom_ids_match": true,
+  "bom_types_colors_poses_steps_match": true,
+  "identity_projection_sha256": "bfb857af69cc1367e62b954823feed30bac3f7df15c0cda55c9ef74b3c22982e",
+  "case_id": "ducky-fine8-base",
+  "source_commit": "d8eadae855c504b3fabdf22ed6617edb1b79e993",
+  "baseline_manifest_sha256": "fd5f65d03fb85bea911ec1945e2e8339909dafea2b63c6627523c34b2334d267",
+  "public_native_id_pose_check": {
+    "case_id": "ducky-fine8-base",
+    "assembly_sha256": "bd15c5f3479f651a721d4f7d1aa0eaca0dbaa34261f2e1ec1513254ac0aae20f",
+    "actual_instances": 9669,
+    "array_count": 96,
+    "all_ids_types_colors_poses_steps": "MATCH",
+    "relocated_reopen": true,
+    "saved": false,
+    "recomputed": false
+  },
+  "public_animation_preserved": true,
+  "source_saved_scene_projection_sha256": "5091eb6ce4bb1023e0d3a3d456bdde71acdfdd34b2f93a0885670a908a2cbaae",
+  "kind": "BASELINE_REFERENCE_NOT_MULTIPLIER_CASE",
+  "files": []
+}

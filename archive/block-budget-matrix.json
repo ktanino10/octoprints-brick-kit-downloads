@@ -8,12 +8,32 @@
     "ducky": 9669
   },
   "baseline_assumption": "INITIAL_FINE_C_ADAPTED_8MM_COMPARISON_ASSUMPTION_NOT_USER_SELECTION",
+  "baseline_references": {
+    "mona": {
+      "status": "READY",
+      "cad_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-fine8-base/mona-fine8-base-cad-scene-animation-public.zip",
+      "animation_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-fine8-base/mona-fine8-base-assembly-motion.mp4",
+      "counts_toward_multiplier_cases": false
+    },
+    "copilot": {
+      "status": "READY",
+      "cad_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-fine8-base/copilot-fine8-base-cad-scene-animation-public.zip",
+      "animation_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-fine8-base/copilot-fine8-base-assembly-motion.mp4",
+      "counts_toward_multiplier_cases": false
+    },
+    "ducky": {
+      "status": "READY",
+      "cad_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-fine8-base/ducky-fine8-base-cad-scene-animation-public.zip",
+      "animation_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-fine8-base/ducky-fine8-base-assembly-motion.mp4",
+      "counts_toward_multiplier_cases": false
+    }
+  },
   "public_commit": {
     "record": "archive/deployment.json",
     "field": "commit"
   },
   "verified_content_commit": null,
-  "catalog_sha256": "1044e610ecb919cc735141a2e4cc79cddfbce4df21f2dd96de91200fe067805a",
+  "catalog_sha256": "b3b088ed8ccaeea252203c4ad4299d6e36e88021471f1107a65b51c9ba9ebc8f",
   "cases": [
     {
       "case_id": "mona-p120",
@@ -22,7 +42,9 @@
       "target_count": 14922,
       "actual_count": 14936,
       "actual_ratio": 1.201125854443104,
-      "status": "READY",
+      "status": "REQUIRES_WHISKER_REVISION",
+      "source_status": "READY",
+      "whisker_support": null,
       "cg_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p120/mona-p120-cad-scene-animation-public.zip",
       "animation_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p120/mona-p120-assembly-motion.mp4",
       "animation_urls": {
@@ -39,17 +61,23 @@
       "case_id": "mona-p150",
       "character": "mona",
       "multiplier": 1.5,
-      "target_count": null,
-      "actual_count": null,
-      "actual_ratio": null,
-      "status": "INPUT_WAIT",
-      "cg_url": null,
-      "animation_url": null,
-      "animation_urls": {},
-      "cad_url": null,
-      "assembly_url": null,
-      "viewer_url": null,
-      "viewer_url_en": null
+      "target_count": 18653,
+      "actual_count": 18675,
+      "actual_ratio": 1.5018094089264173,
+      "status": "REQUIRES_WHISKER_REVISION",
+      "source_status": "READY",
+      "whisker_support": null,
+      "cg_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150/mona-p150-cad-scene-animation-public.zip",
+      "animation_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150/mona-p150-assembly-motion.mp4",
+      "animation_urls": {
+        "turntable": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150/mona-p150-assembly-motion.mp4",
+        "radial_explode": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150/mona-p150-assembly-motion.mp4",
+        "bottom_up": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150/mona-p150-assembly-motion.mp4"
+      },
+      "cad_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150/mona-p150-cad-scene-animation-public.zip",
+      "assembly_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150/mona-p150-cad-scene-animation-public.zip",
+      "viewer_url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case=mona-p150",
+      "viewer_url_en": "https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-guide.html?case=mona-p150"
     },
     {
       "case_id": "mona-p200",
@@ -59,6 +87,8 @@
       "actual_count": null,
       "actual_ratio": null,
       "status": "INPUT_WAIT",
+      "source_status": "INPUT_WAIT",
+      "whisker_support": null,
       "cg_url": null,
       "animation_url": null,
       "animation_urls": {},
@@ -75,6 +105,8 @@
       "actual_count": null,
       "actual_ratio": null,
       "status": "INPUT_WAIT",
+      "source_status": "INPUT_WAIT",
+      "whisker_support": null,
       "cg_url": null,
       "animation_url": null,
       "animation_urls": {},
@@ -91,6 +123,8 @@
       "actual_count": null,
       "actual_ratio": null,
       "status": "INPUT_WAIT",
+      "source_status": "INPUT_WAIT",
+      "whisker_support": null,
       "cg_url": null,
       "animation_url": null,
       "animation_urls": {},
@@ -107,6 +141,8 @@
       "actual_count": null,
       "actual_ratio": null,
       "status": "INPUT_WAIT",
+      "source_status": "INPUT_WAIT",
+      "whisker_support": null,
       "cg_url": null,
       "animation_url": null,
       "animation_urls": {},
@@ -123,6 +159,8 @@
       "actual_count": null,
       "actual_ratio": null,
       "status": "INPUT_WAIT",
+      "source_status": "INPUT_WAIT",
+      "whisker_support": null,
       "cg_url": null,
       "animation_url": null,
       "animation_urls": {},
@@ -139,6 +177,8 @@
       "actual_count": null,
       "actual_ratio": null,
       "status": "INPUT_WAIT",
+      "source_status": "INPUT_WAIT",
+      "whisker_support": null,
       "cg_url": null,
       "animation_url": null,
       "animation_urls": {},
@@ -155,6 +195,8 @@
       "actual_count": null,
       "actual_ratio": null,
       "status": "INPUT_WAIT",
+      "source_status": "INPUT_WAIT",
+      "whisker_support": null,
       "cg_url": null,
       "animation_url": null,
       "animation_urls": {},
@@ -171,6 +213,8 @@
       "actual_count": null,
       "actual_ratio": null,
       "status": "INPUT_WAIT",
+      "source_status": "INPUT_WAIT",
+      "whisker_support": null,
       "cg_url": null,
       "animation_url": null,
       "animation_urls": {},
@@ -187,6 +231,8 @@
       "actual_count": null,
       "actual_ratio": null,
       "status": "INPUT_WAIT",
+      "source_status": "INPUT_WAIT",
+      "whisker_support": null,
       "cg_url": null,
       "animation_url": null,
       "animation_urls": {},
@@ -203,6 +249,8 @@
       "actual_count": null,
       "actual_ratio": null,
       "status": "INPUT_WAIT",
+      "source_status": "INPUT_WAIT",
+      "whisker_support": null,
       "cg_url": null,
       "animation_url": null,
       "animation_urls": {},
@@ -219,6 +267,8 @@
       "actual_count": null,
       "actual_ratio": null,
       "status": "INPUT_WAIT",
+      "source_status": "INPUT_WAIT",
+      "whisker_support": null,
       "cg_url": null,
       "animation_url": null,
       "animation_urls": {},
@@ -235,6 +285,8 @@
       "actual_count": null,
       "actual_ratio": null,
       "status": "INPUT_WAIT",
+      "source_status": "INPUT_WAIT",
+      "whisker_support": null,
       "cg_url": null,
       "animation_url": null,
       "animation_urls": {},
@@ -251,6 +303,8 @@
       "actual_count": null,
       "actual_ratio": null,
       "status": "INPUT_WAIT",
+      "source_status": "INPUT_WAIT",
+      "whisker_support": null,
       "cg_url": null,
       "animation_url": null,
       "animation_urls": {},
@@ -263,5 +317,12 @@
   "verification": {
     "public_browser_passed": false,
     "anonymous_downloads_passed": false
+  },
+  "requested_delivery": {
+    "mona_whisker_requirement": "NO_EXTERNAL_OR_ASSEMBLY_AIDS",
+    "physical_validation": "UNKNOWN",
+    "slicer_print_supports": "SEPARATE_UNVALIDATED_CONDITION",
+    "data_ready_case_count": 2,
+    "requirement_ready_case_count": 0
   }
 }

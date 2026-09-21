@@ -6,18 +6,21 @@ from pathlib import Path
 from urllib.parse import urljoin
 
 from playwright.sync_api import expect, sync_playwright
-from browser_study_helpers import english, uncropped_image
+from browser_study_helpers import english, uncropped_image, play_actual_chapter
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--url", required=True)
 parser.add_argument("--browser", required=True)
+parser.add_argument("--engine", choices=["chromium", "webkit"], default="chromium")
 parser.add_argument("--expect-input-wait", action="store_true")
 parser.add_argument("--case", help="A specific actual READY case for incremental acceptance")
 parser.add_argument("--output", type=Path, default=Path(".archive-work/density-browser"))
 args = parser.parse_args()
 base = args.url.rstrip("/") + "/"
 args.output.mkdir(parents=True, exist_ok=True)
-report = {"base": base, "input_wait": args.expect_input_wait, "checks": [], "errors": [], "cases": [], "media": []}
+report = {"base": base, "engine": args.engine, "browser_executable": args.browser,
+          "input_wait": args.expect_input_wait, "checks": [], "errors": [], "cases": [],
+          "media": [], "baseline_media": []}
 
 
 def checked(message):
@@ -26,13 +29,17 @@ def checked(message):
 
 
 with sync_playwright() as playwright:
-    browser = playwright.chromium.launch(executable_path=args.browser, headless=True,
-                                        args=["--no-first-run", "--disable-background-networking", "--disable-sync"])
+    launch = {"executable_path": args.browser, "headless": True, "timeout": 60000}
+    if args.engine == "chromium":
+        launch["args"] = ["--no-first-run", "--disable-background-networking", "--disable-sync"]
+    browser = getattr(playwright, args.engine).launch(**launch)
     context = browser.new_context(viewport={"width": 1440, "height": 1050}, reduced_motion="reduce")
     page = context.new_page()
     page.set_default_timeout(60000)
+    page.set_default_navigation_timeout(90000)
     page.on("pageerror", lambda error: report["errors"].append(str(error)))
     try:
+        print("Checking explicit matrix publication record.", flush=True)
         pointer = context.request.get(urljoin(base, "archive/density-study.json")).json()
         receipt = context.request.get(urljoin(base, "archive/block-budget-matrix.json")).json()
         current = context.request.get(urljoin(base, "archive/revisions.json")).json()
@@ -77,6 +84,17 @@ with sync_playwright() as playwright:
                         for image in page.locator("#matrix-cards img").all():
                             expect(image).not_to_have_js_property("naturalWidth", 0)
                             uncropped_image(image)
+                    baseline = catalog["baselines"][character]
+                    if baseline["state"] == "READY" and locale == "en":
+                        expect(page.locator(f'[data-baseline-download="{character}"]')).to_have_attribute(
+                            "href", baseline["assets"]["native_cad"][0]["url"])
+                        videos = page.locator("#matrix-reference details")
+                        videos.locator("summary").click()
+                        for chapter in ["turntable", "radial_explode", "bottom_up"]:
+                            result = play_actual_chapter(page.locator(f'[data-baseline-chapter="{chapter}"]'),
+                                                         baseline["assets"]["animations"][chapter])
+                            report["baseline_media"].append({"character": character, "chapter": chapter, **result})
+                        videos.locator("summary").click()
                 assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1")
             checked("matrix character/view controls and fifteen explicit actual/pending states work in both languages")
             for entry in cases:
@@ -123,31 +141,7 @@ with sync_playwright() as playwright:
                 for position, name in enumerate(["turntable", "radial_explode", "bottom_up"]):
                     clip = entry["assets"]["animations"][name]
                     video = page.locator("#guide-downloads video").nth(position)
-                    result = video.evaluate("""async (video, clip) => {
-                      video.muted = true;
-                      if (video.readyState < 1) {
-                        await new Promise((resolve, reject) => {
-                          const timeout = setTimeout(() => reject(new Error('video metadata timeout')), 60000);
-                          video.addEventListener('loadedmetadata', () => { clearTimeout(timeout); resolve(); }, {once:true});
-                          video.addEventListener('error', () => { clearTimeout(timeout); reject(new Error('video decode failed')); }, {once:true});
-                          video.preload = 'auto'; video.load();
-                        });
-                      }
-                      if (!Number.isFinite(video.duration) || video.duration + .1 < clip.end_seconds) throw new Error('chapter exceeds actual movie');
-                      video.currentTime = clip.start_seconds;
-                      await video.play();
-                      await new Promise((resolve, reject) => {
-                        const timeout = setTimeout(() => reject(new Error('video playback timeout')), 30000);
-                        const check = () => {
-                          if (video.currentTime > clip.start_seconds + .12) {
-                            clearTimeout(timeout); video.removeEventListener('timeupdate', check); resolve();
-                          }
-                        };
-                        video.addEventListener('timeupdate', check); check();
-                      });
-                      video.pause();
-                      return {url: video.currentSrc.split('#')[0], duration: video.duration, current_time: video.currentTime, played: true};
-                    }""", clip)
+                    result = play_actual_chapter(video, clip)
                     report["media"].append({"case_id": entry["id"], "chapter": name, **result})
                 page.screenshot(path=str(args.output / f'{entry["id"]}.png'), full_page=True)
                 report["cases"].append(entry["id"])
@@ -175,6 +169,30 @@ with sync_playwright() as playwright:
             english(failed)
         failed_context.close()
         checked("missing matrix/guide data is an explicit localized error, not an earlier-model fallback")
+        if not args.expect_input_wait:
+            entry = cases[0]
+            missing_image_context = browser.new_context()
+            missing_image = missing_image_context.new_page()
+            image_url = urljoin(base, entry["images"]["front"]["path"].lstrip("/"))
+            missing_image.route(image_url, lambda route: route.fulfill(status=404, body="missing actual image"))
+            missing_image.goto(urljoin(base, f'en/density-matrix.html?character={entry["character"]}&view=front'),
+                               wait_until="networkidle")
+            expect(missing_image.locator("#matrix-error")).to_be_visible()
+            expect(missing_image.locator(f'.density-card[data-case="{entry["id"]}"] img')).to_have_js_property("naturalWidth", 0)
+            english(missing_image)
+            missing_image_context.close()
+            broken_geometry_context = browser.new_context()
+            broken_geometry = broken_geometry_context.new_page()
+            broken_geometry.route("**/geometry/*.mesh.gz",
+                                  lambda route: route.fulfill(status=503, body="missing actual native geometry"))
+            broken_geometry.goto(urljoin(base, f'en/density-guide.html?case={entry["id"]}'), wait_until="domcontentloaded")
+            expect(broken_geometry.locator("#guide-error")).to_be_visible(timeout=60000)
+            expect(broken_geometry.locator("#density-canvas")).to_have_attribute("data-ready", "false")
+            expect(broken_geometry.locator("#density-canvas canvas")).to_have_count(0)
+            expect(broken_geometry.locator("#guide-mode")).to_be_disabled()
+            english(broken_geometry)
+            broken_geometry_context.close()
+            checked("failed actual images or native meshes show explicit errors without replacement geometry")
         assert not report["errors"], report["errors"]
     except Exception as error:
         report["failure"] = str(error)

@@ -1,0 +1,37 @@
+{
+  "metrics": {
+    "part_count": 12435,
+    "unique_types": 121,
+    "one_by_one_exceptions": 31,
+    "layer_count": 77,
+    "minimum_part_mm": [
+      7.8,
+      7.8,
+      3.2
+    ],
+    "grip_long_ge_15_8_count": 12404
+  },
+  "manifest_sha256": "1b3c29364be77a97294617b8aaa1a7016fbd3ccd80a572103b5aea18e8f5d18f",
+  "bom_sha256": "655133f47a8ed4bd5e9a103c2d67dc1585b6d1e9a47b99ba4391e29e0e354fc9",
+  "counted_instances": 12435,
+  "bom_ids_match": true,
+  "bom_types_colors_poses_steps_match": true,
+  "identity_projection_sha256": "0e24e37dd8ff9366fb64ba8f126d728467a058f26d3b23b6429a2ca972977ac7",
+  "case_id": "mona-fine8-base",
+  "source_commit": "d8eadae855c504b3fabdf22ed6617edb1b79e993",
+  "baseline_manifest_sha256": "5556e329521b5706a366c5dad2aa6c7b13eca9d7d74323338773d5e2b20b2b4c",
+  "public_native_id_pose_check": {
+    "case_id": "mona-fine8-base",
+    "assembly_sha256": "4e87d95e53f421f43400fb92d34442f2bce21c6b47c105d65700705d639dfb13",
+    "actual_instances": 12435,
+    "array_count": 141,
+    "all_ids_types_colors_poses_steps": "MATCH",
+    "relocated_reopen": true,
+    "saved": false,
+    "recomputed": false
+  },
+  "public_animation_preserved": true,
+  "source_saved_scene_projection_sha256": "584c725825511d99695d4dff80c8d4c776432feb1e05b45f48cde9a45637f0f7",
+  "kind": "BASELINE_REFERENCE_NOT_MULTIPLIER_CASE",
+  "files": []
+}

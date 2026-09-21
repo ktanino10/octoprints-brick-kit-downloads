@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 
 from make_density_receipt import receipt_for
+from density_requirements import delivery_status
 from validate_archive import privacy
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -127,7 +128,7 @@ def main():
     privacy(catalog_bytes, "normalized public matrix")
     catalog_path.write_bytes(catalog_bytes)
     pointer = json.loads((ROOT / "archive/density-study.json").read_text())
-    complete = all(item["state"] == "READY" for item in incoming["cases"]) and all(
+    complete = all(delivery_status(item) == "READY" for item in incoming["cases"]) and all(
         item["state"] == "READY" for item in incoming["baselines"].values())
     pointer["state"] = "READY" if complete else "PARTIAL"
     pointer["catalog"] = {"path": "/" + PREFIX + "catalog.json", "bytes": len(catalog_bytes), "sha256": sha(catalog_bytes)}

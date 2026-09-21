@@ -16,12 +16,50 @@ ROOT = Path(__file__).resolve().parents[1]
 STUDY = "part-count-matrix-20260921"
 
 
+def browser_coverage(catalog, browser, previous_catalog):
+    chapters = {"turntable", "radial_explode", "bottom_up"}
+    current = {case["id"]: case for case in catalog["cases"] if case["state"] == "READY"}
+    previous = {case["id"]: case for case in previous_catalog.get("cases", [])}
+    required_cases = {identifier for identifier, case in current.items() if previous.get(identifier) != case}
+    baselines = {name: row for name, row in catalog["baselines"].items() if row["state"] == "READY"}
+    required_baselines = {name for name, row in baselines.items()
+                          if previous_catalog.get("baselines", {}).get(name) != row}
+    tested = set(browser.get("cases", []))
+    if (browser.get("base") != BASE or browser.get("input_wait") is not False
+            or browser.get("errors") or browser.get("failure")
+            or not required_cases <= tested <= current.keys()):
+        raise ValueError("Public browser checks do not cover every new or changed actual case")
+    actual, baseline_actual = set(), set()
+    for field, key, records, result in [
+        ("media", "case_id", current, actual),
+        ("baseline_media", "character", baselines, baseline_actual),
+    ]:
+        for entry in browser.get(field, []):
+            identifier, chapter = entry.get(key), entry.get("chapter")
+            if (identifier not in records or chapter not in chapters or entry.get("played") is not True
+                    or entry.get("url") != records[identifier]["assets"]["animations"][chapter]["url"]):
+                raise ValueError("Public browser media evidence does not match the actual published animation")
+            result.add((identifier, chapter))
+    if (actual != {(identifier, chapter) for identifier in tested for chapter in chapters}
+            or not {(name, chapter) for name in required_baselines for chapter in chapters} <= baseline_actual):
+        raise ValueError("Public media checks omit a changed case or baseline chapter")
+    complete = tested == current.keys() and baseline_actual == {(name, chapter) for name in baselines for chapter in chapters}
+    return {
+        "browser_media_delivery": "PASS" if complete else "PASS_CHANGED_CASES_AND_BASELINES",
+        "browser_cases_verified": sorted(tested),
+        "unchanged_cases_not_retested": sorted(current.keys() - tested),
+        "browser_baseline_chapters_verified": sorted([name, chapter] for name, chapter in baseline_actual),
+    }
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--expected-commit", required=True)
     parser.add_argument("--before", required=True)
     parser.add_argument("--report", type=Path, required=True)
     parser.add_argument("--browser-report", type=Path, help="Actual public browser/media acceptance report")
+    parser.add_argument("--previous-report", type=Path, action="append", default=[],
+                        help="Reuse exact already-verified immutable asset digests after a fresh anonymous availability check")
     args = parser.parse_args()
     if not all(re.fullmatch(r"[0-9a-f]{40}", value) for value in [args.expected_commit, args.before]):
         raise ValueError("Exact public commits are required")
@@ -49,9 +87,26 @@ def main():
     changed = [entry for entry in inventory["files"] if entry["sha256"] != previous.get(entry["path"])]
     with ThreadPoolExecutor(max_workers=4) as pool:
         site = list(pool.map(lambda entry: verify_bytes(entry["url"], entry["bytes"], entry["sha256"]), changed))
+    prior_assets = {}
+    for path in args.previous_report:
+        if not path.resolve().is_relative_to(ROOT / ".archive-work"):
+            raise ValueError("Reuse only explicit owned verification reports")
+        prior = json.loads(path.read_text())
+        if prior.get("study_id") != STUDY:
+            raise ValueError("Prior download report belongs to another study")
+        for entry in prior.get("assets", []):
+            if entry.get("authentication") == "none":
+                prior_assets[entry["url"]] = entry
     assets = []
     for entry in public_asset_records(catalog):
-        assets.append(verify_bytes(entry["url"], entry["bytes"], entry["sha256"]))
+        prior = prior_assets.get(entry["url"])
+        if prior and all(prior.get(key) == entry[key] for key in ["bytes", "sha256"]):
+            with urlopen(Request(entry["url"], method="HEAD", headers=HEADERS), timeout=60) as response:
+                if response.status != 200 or int(response.headers.get("Content-Length", "-1")) != entry["bytes"]:
+                    raise ValueError("An earlier verified immutable download is missing or changed in size")
+            assets.append({**prior, "availability_rechecked": True, "digest_reused_from_owned_prior_verification": True})
+        else:
+            assets.append(verify_bytes(entry["url"], entry["bytes"], entry["sha256"]))
         print("Verified actual download:", entry["url"].rsplit("/", 1)[-1], flush=True)
     video_ranges = []
     for address in sorted({file["url"] for file in public_asset_records(catalog) if file["url"].endswith(".mp4")}):
@@ -70,12 +125,9 @@ def main():
         if not args.browser_report.resolve().is_relative_to(ROOT / ".archive-work"):
             raise ValueError("Use the current owned public browser report")
         browser = json.loads(args.browser_report.read_text())
-        expected = {(case["id"], chapter) for case in catalog["cases"] if case["state"] == "READY"
-                    for chapter in ["turntable", "radial_explode", "bottom_up"]}
-        actual = {(entry["case_id"], entry["chapter"]) for entry in browser.get("media", []) if entry.get("played") is True}
-        if browser.get("base") != BASE or browser.get("errors") or browser.get("failure") or actual != expected:
-            raise ValueError("Public media delivery has not passed for every actual case and chapter")
-        report["browser_media_delivery"] = "PASS"
+        previous_catalog = json.loads(subprocess.check_output([
+            "git", "-C", str(ROOT), "show", args.before + ":" + catalog_path]))
+        report.update(browser_coverage(catalog, browser, previous_catalog))
     else:
         report["browser_media_delivery"] = "NOT_CHECKED"
     args.report.parent.mkdir(parents=True, exist_ok=True)

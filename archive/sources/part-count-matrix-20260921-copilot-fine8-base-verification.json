@@ -1,0 +1,37 @@
+{
+  "metrics": {
+    "part_count": 17873,
+    "unique_types": 148,
+    "one_by_one_exceptions": 34,
+    "layer_count": 77,
+    "minimum_part_mm": [
+      7.8,
+      7.8,
+      3.2
+    ],
+    "grip_long_ge_15_8_count": 17839
+  },
+  "manifest_sha256": "38722785af040902ad033251a8cb8cde901eadeb04efae74aec0e098cb26f16d",
+  "bom_sha256": "e5898e374bf7f710ba4cd7927bc74fa9f15b166747c1aea6fa0da9ad8ca6864d",
+  "counted_instances": 17873,
+  "bom_ids_match": true,
+  "bom_types_colors_poses_steps_match": true,
+  "identity_projection_sha256": "359beb035247aa73e6adc0296cd45ffb4635e8f6894d7b1df8c967e2de6be05d",
+  "case_id": "copilot-fine8-base",
+  "source_commit": "d8eadae855c504b3fabdf22ed6617edb1b79e993",
+  "baseline_manifest_sha256": "5253cbb755fc1069e745dfda69026e0475904abe5e2d76bd7312852672189d7b",
+  "public_native_id_pose_check": {
+    "case_id": "copilot-fine8-base",
+    "assembly_sha256": "2f873f8d4fa02849f9df8988dbd2d04131ac2b85aa0d3a05fdeef71202fccff1",
+    "actual_instances": 17873,
+    "array_count": 160,
+    "all_ids_types_colors_poses_steps": "MATCH",
+    "relocated_reopen": true,
+    "saved": false,
+    "recomputed": false
+  },
+  "public_animation_preserved": true,
+  "source_saved_scene_projection_sha256": "b72276f0990d0ed1230be493907036a034841f4b8f9d3f1359885e1e0857f1c7",
+  "kind": "BASELINE_REFERENCE_NOT_MULTIPLIER_CASE",
+  "files": []
+}

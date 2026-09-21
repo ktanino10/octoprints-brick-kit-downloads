@@ -32,6 +32,21 @@ export function studyImage(image, caption, onError) {
   return link;
 }
 
+export function studyVideo(url, label, onError) {
+  const video = studyElement('video');
+  video.controls = true;
+  video.playsInline = true;
+  video.preload = 'none';
+  video.setAttribute('aria-label', label);
+  const source = studyElement('source');
+  source.type = 'video/mp4';
+  source.src = url;
+  source.addEventListener('error', onError);
+  video.addEventListener('error', onError);
+  video.append(source);
+  return video;
+}
+
 export function renderStudyPanels({ host, comparison, study, roles, names, captionFor, onError }) {
   host.replaceChildren();
   host.classList.toggle('mona-image-grid', comparison.kind !== 'scale');

@@ -13,8 +13,8 @@
   "full_print": "ON_HOLD",
   "baselines": {
     "mona": {
-      "state": "COUNTED",
-      "native_media_status": "PENDING",
+      "state": "READY",
+      "native_media_status": "READY",
       "candidate_id": "mona-fine8-base",
       "pitch_mm": 8,
       "basis": "INITIAL_FINE_C_ADAPTED_8MM",
@@ -35,11 +35,104 @@
           343.8,
           368.2
         ]
-      }
+      },
+      "images": {
+        "front": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/mona-fine8-base-assembled-front.jpg",
+          "bytes": 76164,
+          "sha256": "d2055759151c4d130acd77b0db380c703d61c4487df17cb21cc54eb9e0e15f83",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_front"
+        },
+        "three_quarter": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/mona-fine8-base-assembled-three_quarter.jpg",
+          "bytes": 100783,
+          "sha256": "ce2df06d0d8a2c83d05b697e9baa3c621892e741ae66ec0457fdca705757f936",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_three_quarter"
+        }
+      },
+      "source_commit": "d8eadae855c504b3fabdf22ed6617edb1b79e993",
+      "native_manifest_sha256": "1b3c29364be77a97294617b8aaa1a7016fbd3ccd80a572103b5aea18e8f5d18f",
+      "native_bom_sha256": "655133f47a8ed4bd5e9a103c2d67dc1585b6d1e9a47b99ba4391e29e0e354fc9",
+      "native_id_pose_verification": "MATCH",
+      "assets": {
+        "cg": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-fine8-base/mona-fine8-base-cad-scene-animation-public.zip",
+            "bytes": 103883248,
+            "sha256": "161c4e2d5eff75ab69e5764c5eb89c90bf560ba20bdff4ea67c34b77ac7b6dd6",
+            "filename": "mona-fine8-base-cad-scene-animation-public.zip",
+            "label": "1倍基準の実CG・動画・CAD・Blender・組立データ",
+            "contents": [
+              "still",
+              "blender"
+            ]
+          }
+        ],
+        "native_cad": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-fine8-base/mona-fine8-base-cad-scene-animation-public.zip",
+            "bytes": 103883248,
+            "sha256": "161c4e2d5eff75ab69e5764c5eb89c90bf560ba20bdff4ea67c34b77ac7b6dd6",
+            "filename": "mona-fine8-base-cad-scene-animation-public.zip",
+            "label": "1倍基準の実CG・動画・CAD・Blender・組立データ",
+            "contents": [
+              "freecad_assembly",
+              "linked_libraries",
+              "stl",
+              "step"
+            ]
+          }
+        ],
+        "assembly": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-fine8-base/mona-fine8-base-cad-scene-animation-public.zip",
+            "bytes": 103883248,
+            "sha256": "161c4e2d5eff75ab69e5764c5eb89c90bf560ba20bdff4ea67c34b77ac7b6dd6",
+            "filename": "mona-fine8-base-cad-scene-animation-public.zip",
+            "label": "1倍基準の実CG・動画・CAD・Blender・組立データ",
+            "contents": [
+              "bom",
+              "ordered_ids",
+              "instructions"
+            ]
+          }
+        ],
+        "animations": {
+          "turntable": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-fine8-base/mona-fine8-base-assembly-motion.mp4",
+            "bytes": 1911198,
+            "sha256": "b44dd6d56764785e80a7304f337b609ac5388f5b52ae8be0a39fed523c2c1d92",
+            "start_seconds": 0,
+            "end_seconds": 3
+          },
+          "radial_explode": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-fine8-base/mona-fine8-base-assembly-motion.mp4",
+            "bytes": 1911198,
+            "sha256": "b44dd6d56764785e80a7304f337b609ac5388f5b52ae8be0a39fed523c2c1d92",
+            "start_seconds": 3,
+            "end_seconds": 6
+          },
+          "bottom_up": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-fine8-base/mona-fine8-base-assembly-motion.mp4",
+            "bytes": 1911198,
+            "sha256": "b44dd6d56764785e80a7304f337b609ac5388f5b52ae8be0a39fed523c2c1d92",
+            "start_seconds": 6,
+            "end_seconds": 12
+          }
+        }
+      },
+      "visual_notes": [
+        "前12435部品の最終面取り版と同じ物理ID/型/色/配置を、matrix共通の正面と放射状表示で確認した。形を新案として変えたわけではない。",
+        "目の白縁、段階的な口、額の細い実形状目地と、別の2仮支持台が見える。",
+        "実保存sceneのframe1/54/72/73/144/1は全配置照合済み。73は本体0、最終は12435で、支持台は本体数に含めない。",
+        "これは倍率比較の1x基準で、追加の1.2/1.5/2/3/4倍案の完了数には含めない。美観・保持力・印刷の承認ではない。"
+      ]
     },
     "copilot": {
-      "state": "COUNTED",
-      "native_media_status": "PENDING",
+      "state": "READY",
+      "native_media_status": "READY",
       "candidate_id": "copilot-fine8-base",
       "pitch_mm": 8,
       "basis": "INITIAL_FINE_C_ADAPTED_8MM",
@@ -60,11 +153,104 @@
           423.8,
           368.20000000000005
         ]
-      }
+      },
+      "images": {
+        "front": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/copilot-fine8-base-assembled-front.jpg",
+          "bytes": 79696,
+          "sha256": "cab89f1eb09ca665602121c7ab42dd74d134e2fb80ea065d4a9cd490ab25c2eb",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_front"
+        },
+        "three_quarter": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/copilot-fine8-base-assembled-three_quarter.jpg",
+          "bytes": 102304,
+          "sha256": "b3e181b27377fb29c54cf89dc894261610533005a8e4d875829e15249f96cb96",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_three_quarter"
+        }
+      },
+      "source_commit": "d8eadae855c504b3fabdf22ed6617edb1b79e993",
+      "native_manifest_sha256": "38722785af040902ad033251a8cb8cde901eadeb04efae74aec0e098cb26f16d",
+      "native_bom_sha256": "e5898e374bf7f710ba4cd7927bc74fa9f15b166747c1aea6fa0da9ad8ca6864d",
+      "native_id_pose_verification": "MATCH",
+      "assets": {
+        "cg": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-fine8-base/copilot-fine8-base-cad-scene-animation-public.zip",
+            "bytes": 113578433,
+            "sha256": "1eeecb3ea5a4cd0eabf1d6fbb53622ce645859affb3ef0e0c03056121a169020",
+            "filename": "copilot-fine8-base-cad-scene-animation-public.zip",
+            "label": "1倍基準の実CG・動画・CAD・Blender・組立データ",
+            "contents": [
+              "still",
+              "blender"
+            ]
+          }
+        ],
+        "native_cad": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-fine8-base/copilot-fine8-base-cad-scene-animation-public.zip",
+            "bytes": 113578433,
+            "sha256": "1eeecb3ea5a4cd0eabf1d6fbb53622ce645859affb3ef0e0c03056121a169020",
+            "filename": "copilot-fine8-base-cad-scene-animation-public.zip",
+            "label": "1倍基準の実CG・動画・CAD・Blender・組立データ",
+            "contents": [
+              "freecad_assembly",
+              "linked_libraries",
+              "stl",
+              "step"
+            ]
+          }
+        ],
+        "assembly": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-fine8-base/copilot-fine8-base-cad-scene-animation-public.zip",
+            "bytes": 113578433,
+            "sha256": "1eeecb3ea5a4cd0eabf1d6fbb53622ce645859affb3ef0e0c03056121a169020",
+            "filename": "copilot-fine8-base-cad-scene-animation-public.zip",
+            "label": "1倍基準の実CG・動画・CAD・Blender・組立データ",
+            "contents": [
+              "bom",
+              "ordered_ids",
+              "instructions"
+            ]
+          }
+        ],
+        "animations": {
+          "turntable": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-fine8-base/copilot-fine8-base-assembly-motion.mp4",
+            "bytes": 1803960,
+            "sha256": "8db5c41302dab18ba61396ec2ce332d38055c16eb3e133b96f1f8c89c758e703",
+            "start_seconds": 0,
+            "end_seconds": 3
+          },
+          "radial_explode": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-fine8-base/copilot-fine8-base-assembly-motion.mp4",
+            "bytes": 1803960,
+            "sha256": "8db5c41302dab18ba61396ec2ce332d38055c16eb3e133b96f1f8c89c758e703",
+            "start_seconds": 3,
+            "end_seconds": 6
+          },
+          "bottom_up": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-fine8-base/copilot-fine8-base-assembly-motion.mp4",
+            "bytes": 1803960,
+            "sha256": "8db5c41302dab18ba61396ec2ce332d38055c16eb3e133b96f1f8c89c758e703",
+            "start_seconds": 6,
+            "end_seconds": 12
+          }
+        }
+      },
+      "visual_notes": [
+        "実17873部品の正面・斜めを確認。初期FineCの紫/青/黄緑の配色、ゴーグル、頭部の丸み、左右の形状が8mm系の実ブロックとして残っている。",
+        "共通の正規化画面高で描画しており、旧695部品r3を今回の1xにしたものではない。実487.8x423.8x368.2mmである。",
+        "保存sceneの実frame1/54/72/73/144/1は全17873個の位置/復帰と0空表示を照合済み。仮支持台はこの基準では0個。",
+        "段差、露出スタッド、細い目地と色境界の離散化は残る。新1xは比較用の暫定前提で、美観や物理組立の承認ではない。"
+      ]
     },
     "ducky": {
-      "state": "COUNTED",
-      "native_media_status": "PENDING",
+      "state": "READY",
+      "native_media_status": "READY",
       "candidate_id": "ducky-fine8-base",
       "pitch_mm": 8,
       "basis": "INITIAL_FINE_C_ADAPTED_8MM",
@@ -85,7 +271,100 @@
           423.8,
           368.20000000000005
         ]
-      }
+      },
+      "images": {
+        "front": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/ducky-fine8-base-assembled-front.jpg",
+          "bytes": 56855,
+          "sha256": "fc77a4a7b5c6c3a9d43834f2c8c48ee30fcdebcf17d9dfc14442691d18e4b71a",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_front"
+        },
+        "three_quarter": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/ducky-fine8-base-assembled-three_quarter.jpg",
+          "bytes": 75171,
+          "sha256": "1f11faeec158fc1f66302a6dbc7e6fb73c42fc4dedddc9c4dc8b884b210c3f46",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_three_quarter"
+        }
+      },
+      "source_commit": "d8eadae855c504b3fabdf22ed6617edb1b79e993",
+      "native_manifest_sha256": "684d5914d023a40a0b25676503b5fdc2bcd2dfeb48a0e1ff7fcaf3189f2157a6",
+      "native_bom_sha256": "ddf3d62a09a8a8a707466e6f94307f8326ef49e8be9b2b83938f23a5da2185ca",
+      "native_id_pose_verification": "MATCH",
+      "assets": {
+        "cg": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-fine8-base/ducky-fine8-base-cad-scene-animation-public.zip",
+            "bytes": 65961219,
+            "sha256": "fffecaf0b21ee6e41d126e0292a95cf746072a169afe2df176eb8e78fbaf02fd",
+            "filename": "ducky-fine8-base-cad-scene-animation-public.zip",
+            "label": "1倍基準の実CG・動画・CAD・Blender・組立データ",
+            "contents": [
+              "still",
+              "blender"
+            ]
+          }
+        ],
+        "native_cad": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-fine8-base/ducky-fine8-base-cad-scene-animation-public.zip",
+            "bytes": 65961219,
+            "sha256": "fffecaf0b21ee6e41d126e0292a95cf746072a169afe2df176eb8e78fbaf02fd",
+            "filename": "ducky-fine8-base-cad-scene-animation-public.zip",
+            "label": "1倍基準の実CG・動画・CAD・Blender・組立データ",
+            "contents": [
+              "freecad_assembly",
+              "linked_libraries",
+              "stl",
+              "step"
+            ]
+          }
+        ],
+        "assembly": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-fine8-base/ducky-fine8-base-cad-scene-animation-public.zip",
+            "bytes": 65961219,
+            "sha256": "fffecaf0b21ee6e41d126e0292a95cf746072a169afe2df176eb8e78fbaf02fd",
+            "filename": "ducky-fine8-base-cad-scene-animation-public.zip",
+            "label": "1倍基準の実CG・動画・CAD・Blender・組立データ",
+            "contents": [
+              "bom",
+              "ordered_ids",
+              "instructions"
+            ]
+          }
+        ],
+        "animations": {
+          "turntable": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-fine8-base/ducky-fine8-base-assembly-motion.mp4",
+            "bytes": 1588356,
+            "sha256": "c11904fb01820e2c39b6de60f8ac6d17d12e118ad62381585214b8c3b5ea1411",
+            "start_seconds": 0,
+            "end_seconds": 3
+          },
+          "radial_explode": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-fine8-base/ducky-fine8-base-assembly-motion.mp4",
+            "bytes": 1588356,
+            "sha256": "c11904fb01820e2c39b6de60f8ac6d17d12e118ad62381585214b8c3b5ea1411",
+            "start_seconds": 3,
+            "end_seconds": 6
+          },
+          "bottom_up": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-fine8-base/ducky-fine8-base-assembly-motion.mp4",
+            "bytes": 1588356,
+            "sha256": "c11904fb01820e2c39b6de60f8ac6d17d12e118ad62381585214b8c3b5ea1411",
+            "start_seconds": 6,
+            "end_seconds": 12
+          }
+        }
+      },
+      "visual_notes": [
+        "実9669部品の正面・斜めを閲覧。初期FineCの黄色い丸い頭胴、左右の黒目、橙色のくちばしと側部・尾の段階形状を確認した。",
+        "これは初期FineCの実セル/配色を8mm系へ適合した新1x基準であり、旧413部品のr3ではない。輪郭や色が連続曲面になったと主張しない。",
+        "額と頬に階段状の段差、露出スタッド、目の周りとくちばしの離散色境界が残る。数や3D動画が揃っていることと美観合格は別である。",
+        "実nativeassembly/保存sceneのID・姿勢・単色・空から最終までの動作が照合済み。基準の完成を15倍率案の完成数に足さず、現物嵌合・保持・転倒は未確認とする。"
+      ]
     }
   },
   "appearance_references": [
@@ -262,7 +541,119 @@
       "id": "mona-p150",
       "character": "mona",
       "count_percentage": 150,
-      "state": "INPUT_WAIT"
+      "state": "READY",
+      "metrics": {
+        "part_count": 18675,
+        "unique_types": 129,
+        "one_by_one_exceptions": 50,
+        "layer_count": 89,
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "grip_long_ge_15_8_count": 18625,
+        "dimensions_mm": [
+          487.8,
+          391.8,
+          425.8
+        ]
+      },
+      "target_count": 18653,
+      "target_difference": 22,
+      "actual_ratio": 1.5018094089264173,
+      "manifest": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/cases/mona-p150-guide.json.gz",
+        "bytes": 687555,
+        "sha256": "add9b256e0d421739efa0202ed5ab23324c09a5c92241ac7863085c43abb0594"
+      },
+      "source_manifest_sha256": "d67d5fd1dae37750053e1ab40e73e11621361c757a46700489bbe0ff86aa3135",
+      "source_bom_sha256": "30dedc2f1c4f06d36054a803014f6b8b6bd9ddac06aa9b79dad6d5b3c6c67b54",
+      "source_commit": "c02a11b4e56c5c192a4f6db8606118eef1f2c081",
+      "images": {
+        "front": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/mona-p150-assembled-front.jpg",
+          "bytes": 77557,
+          "sha256": "b3b38e0089716f9c4aaaa16a09ef995026f83a7a24e3e486daab255923f1699a",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_front"
+        },
+        "three_quarter": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/mona-p150-assembled-three_quarter.jpg",
+          "bytes": 103729,
+          "sha256": "cb8c2c90f541cbe406fb4230635660db9128549a87563de88f1c47aed4ac8471",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_three_quarter"
+        }
+      },
+      "tradeoff": "この案では口の黒い色境界が平たく不均一な線になり、初期Cや1xの笑口より表情が後退して見える。目の内側や鼻にも格子への転写ずれが残る。部品数増を外観向上と断定しない。",
+      "assets": {
+        "cg": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150/mona-p150-cad-scene-animation-public.zip",
+            "filename": "mona-p150-cad-scene-animation-public.zip",
+            "bytes": 100561257,
+            "sha256": "ab822a7d0c6e37ceaf1a0d6ddd3405afda1f63b7d24dd2ff0880d92c4a070563",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "still",
+              "blender"
+            ]
+          }
+        ],
+        "native_cad": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150/mona-p150-cad-scene-animation-public.zip",
+            "filename": "mona-p150-cad-scene-animation-public.zip",
+            "bytes": 100561257,
+            "sha256": "ab822a7d0c6e37ceaf1a0d6ddd3405afda1f63b7d24dd2ff0880d92c4a070563",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "freecad_assembly",
+              "linked_libraries",
+              "stl",
+              "step"
+            ]
+          }
+        ],
+        "assembly": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150/mona-p150-cad-scene-animation-public.zip",
+            "filename": "mona-p150-cad-scene-animation-public.zip",
+            "bytes": 100561257,
+            "sha256": "ab822a7d0c6e37ceaf1a0d6ddd3405afda1f63b7d24dd2ff0880d92c4a070563",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "bom",
+              "ordered_ids",
+              "instructions"
+            ]
+          }
+        ],
+        "animations": {
+          "turntable": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150/mona-p150-assembly-motion.mp4",
+            "bytes": 1954452,
+            "sha256": "fd812ffcd181a621fa41f5221380c55184521006acfd34c34a82a15073b00935",
+            "start_seconds": 0,
+            "end_seconds": 3
+          },
+          "radial_explode": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150/mona-p150-assembly-motion.mp4",
+            "bytes": 1954452,
+            "sha256": "fd812ffcd181a621fa41f5221380c55184521006acfd34c34a82a15073b00935",
+            "start_seconds": 3,
+            "end_seconds": 6
+          },
+          "bottom_up": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150/mona-p150-assembly-motion.mp4",
+            "bytes": 1954452,
+            "sha256": "fd812ffcd181a621fa41f5221380c55184521006acfd34c34a82a15073b00935",
+            "start_seconds": 6,
+            "end_seconds": 12
+          }
+        }
+      }
     },
     {
       "id": "mona-p200",

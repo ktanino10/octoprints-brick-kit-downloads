@@ -67,13 +67,26 @@ Geometry-only 3MF files remain **NOT_SLICED**, not configured Bambu Studio proje
 **[Representative Mona 1.2× actual 3D guide](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-guide.html?case=mona-p120)** /
 **[Actual CG, Blender, animation and native CAD package](https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/tag/part-count-matrix-20260921-mona-p120)**.
 
-Currently **only Mona 1.2× is available: one of fifteen cases**. The other fourteen and native/CG presentations of the new 1× baselines are in progress.
+**New requirement: Mona whiskers must need neither external supports nor temporary assembly pedestals.**
+The published Mona 1.2× and 1.5× data are preserved as historical support-dependent designs.
+They do not meet this added requirement and do not count toward completion of the requested fifteen cases.
+Actual data is available for 2/15; **0/15 currently meet the updated delivery requirements**.
+Simply hiding supports in the CG does not qualify. The producer is investigating an actual geometry, root-retention,
+anti-rotation and assembly-order revision, to be introduced as a separate fixed version.
+Slicer-generated print supports are a separate unvalidated condition.
+All three 1× baselines now have separate public CG, native CAD, Blender and three-chapter animation packages linked from their matrix reference cards.
+**The three baselines do not count toward completion of the fifteen multiplier cases.**
+Mona's 1× CAD/images are likewise labeled as the old support-dependent reference. The frozen 12,435 count baseline and targets remain unchanged.
 Baseline counts are Mona 12,435 / Copilot 17,873 / Ducky 9,669, using a consistent initial-Fine-C-adapted 8 mm approach.
 This is a **comparison assumption, not user adoption**; earlier r3 counts of 695/413 are not mixed in.
 Multipliers refer to individual physical parts, not linear dimensions.
 
 The representative Mona targets 14,922 and contains **14,936 parts (+14; actual ratio 1.201126×), 118 types,
 439.8 × 359.8 × 397.0 mm**. Three actual temporary supports are separate from the figure count.
+The additional Mona 1.5× targets 18,653 and contains **18,675 parts (+22; actual ratio 1.501809×), 129 types,
+487.8 × 391.8 × 425.8 mm**, with four separate temporary supports.
+Its mouth appears flatter and less even than initial C/the 1× smile, with inner-eye and nose color-transfer shifts.
+This visual regression is disclosed; a larger count is not an appearance pass.
 The guide uses native meshes for all-direction radial separation, empty-to-bottom-up part/course/stage playback,
 type/color BOMs, all matching-part destinations and selected-part underside inspection. Motion is not a collision-free disassembly simulation.
 

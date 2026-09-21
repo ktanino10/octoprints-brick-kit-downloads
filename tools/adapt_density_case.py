@@ -44,8 +44,11 @@ def main():
     light = stage / "light"
     source = Path(receipt["source_root"]).parents[3]
     native_root = stage / "native/artifacts/studies" / STUDY
-    case_id = receipt["case_id"]
-    summary = json.loads((light / receipt["case_summary_path"]).read_text())
+    stage_review = json.loads((stage / "source-review.json").read_text())
+    case_id = stage_review["case_id"]
+    if case_id not in receipt.get("case_ids", [receipt.get("case_id")]) or stage_review["source_commit"] != receipt["source_commit"]:
+        raise ValueError("Staged case is not authorized by this fixed READY receipt")
+    summary = json.loads((light / receipt.get("case_summary_path", f"cases/{case_id}-summary.json")).read_text())
     compressed_file = summary["manifest"]["path"]
     payload = json.loads(gzip.decompress((light / compressed_file).read_bytes()))
     private_files = receipt["read_only_verification_files"]
@@ -70,7 +73,8 @@ def main():
     audit = json.loads(proof_bytes(f"/cases/{case_id}/saved-scene-audit.json"))
     native = json.loads(proof_bytes(f"/portable/cases/{case_id}/native-complete.json"))
     if (payload["candidate_id"] != case_id or payload["motion"] != motion
-            or evidence["counted_instances"] != receipt["actual_count"]
+            or evidence["counted_instances"] != summary["metrics"]["part_count"]
+            or ("actual_count" in receipt and evidence["counted_instances"] != receipt["actual_count"])
             or evidence["manifest_sha256"] != summary["provenance"]["source_manifest_sha256"]
             or evidence["bom_sha256"] != summary["provenance"]["bom_sha256"]
             or audit["result"] != "PASS" or not audit["roundtrip_absolute_no_drift"] or not audit["empty_to_final_all_instances"]
@@ -183,7 +187,15 @@ def main():
                         "animations": animations}}
     raw_matrix = json.loads((light / "matrix.json").read_text())
     baselines = {}
+    existing_catalog_path = ROOT / PREFIX.lstrip("/") / "catalog.json"
+    existing_catalog = json.loads(existing_catalog_path.read_text()) if existing_catalog_path.exists() else None
     for row in raw_matrix["baseline_rows"]:
+        if existing_catalog:
+            current = existing_catalog["baselines"][row["character"]]
+            if current["manifest_sha256"] != row["source_manifest_sha256"] or current["metrics"]["part_count"] != row["actual_count"]:
+                raise ValueError("The fixed baseline changed between sealed case packets")
+            baselines[row["character"]] = current
+            continue
         end = ("/mona-fine-c360/manifest-edge-refined.json" if row["character"] == "mona"
                else f"/baselines/{row['candidate_id']}/manifest.json")
         bom_end = "/mona-fine-c360/edge-finished/bom.csv" if row["character"] == "mona" else f"/baselines/{row['candidate_id']}/bom.csv"

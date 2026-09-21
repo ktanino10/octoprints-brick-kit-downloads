@@ -17,7 +17,7 @@ args = parser.parse_args()
 scope = args.root.resolve()
 if not scope.is_relative_to(ROOT / ".archive-work") or not args.report.resolve().is_relative_to(ROOT / ".archive-work"):
     raise ValueError("Read-only native auditing must stay in owned relocated staging")
-if not re.fullmatch(r"(mona|copilot|ducky)-p(120|150|200|300|400)", args.case):
+if not re.fullmatch(r"(mona|copilot|ducky)-(p(120|150|200|300|400)|fine8-base)", args.case):
     raise ValueError("Invalid matrix case")
 case = scope / "artifacts/studies/part-count-matrix-20260921/cases" / args.case
 manifest = json.loads((case / "manifest.json").read_text())

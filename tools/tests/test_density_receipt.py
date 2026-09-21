@@ -6,6 +6,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "tools"))
 from make_density_receipt import BASE, STUDY, public_asset_records, receipt_for
+from verify_density_publication import browser_coverage
 
 
 class DensityReceiptTests(unittest.TestCase):
@@ -20,9 +21,18 @@ class DensityReceiptTests(unittest.TestCase):
                 cases.append({"id": f"{character}-p{percentage}", "character": character,
                               "count_percentage": percentage, "state": "READY", "metrics": {"part_count": target},
                               "target_count": target, "actual_ratio": target / count,
+                              "source_manifest_sha256": "e" * 64,
+                              **({"whisker_support": {
+                                  "external_aid_count": 0, "assembly_aid_count": 0,
+                                  "status": "DIGITAL_SELF_SUPPORTING_UNTESTED", "physical_validation": "UNKNOWN",
+                                  "geometry_revision": "unit-only-support-free", "manifest_sha256": "e" * 64,
+                                  "attachment_evidence_sha256": "f" * 64, "sequence_evidence_sha256": "1" * 64,
+                                  "all_categories_geometry_match": True,
+                              }} if character == "mona" else {}),
                               "assets": {"cg": [asset], "native_cad": [asset], "assembly": [asset],
                                          "animations": {key: asset for key in ["turntable", "radial_explode", "bottom_up"]}}})
-        return {"study_id": STUDY, "baselines": {key: {"state": "READY", "metrics": {"part_count": value}}
+        return {"study_id": STUDY, "baselines": {key: {"state": "READY", "metrics": {"part_count": value},
+                                                       "assets": copy.deepcopy(cases[0]["assets"])}
                                                for key, value in baselines.items()}, "cases": cases}
 
     def reports(self, catalog):
@@ -41,6 +51,8 @@ class DensityReceiptTests(unittest.TestCase):
         self.assertEqual(result["public_commit"], {"record": "archive/deployment.json", "field": "commit"})
         self.assertEqual(result["verified_content_commit"], "c" * 40)
         self.assertEqual(len(result["cases"]), 15)
+        self.assertEqual(len(result["baseline_references"]), 3)
+        self.assertTrue(all(not entry["counts_toward_multiplier_cases"] for entry in result["baseline_references"].values()))
 
     def test_no_partial_missing_wrong_or_unaudited_case_can_mark_all_complete(self):
         catalog = self.fixture()
@@ -67,6 +79,46 @@ class DensityReceiptTests(unittest.TestCase):
         changed["cases"][0]["assets"]["cg"][0] = {**changed["cases"][0]["assets"]["cg"][0], "sha256": "d" * 64}
         with self.assertRaises(ValueError):
             public_asset_records(changed)
+
+    def test_supported_mona_history_does_not_count_as_new_requirement_completion(self):
+        catalog = self.fixture()
+        for case in catalog["cases"]:
+            if case["character"] == "mona":
+                del case["whisker_support"]
+        result = receipt_for(catalog)
+        self.assertEqual(result["state"], "PARTIAL")
+        self.assertEqual(result["requested_delivery"]["data_ready_case_count"], 15)
+        self.assertEqual(result["requested_delivery"]["requirement_ready_case_count"], 10)
+        for case in result["cases"][:5]:
+            self.assertEqual(case["source_status"], "READY")
+            self.assertEqual(case["status"], "REQUIRES_WHISKER_REVISION")
+        browser, downloads = self.reports(catalog)
+        with self.assertRaises(ValueError):
+            receipt_for(catalog, browser=browser, downloads=downloads, catalog_sha256="b" * 64)
+
+    def test_incremental_browser_scope_requires_every_changed_case_and_baseline(self):
+        previous = self.fixture()
+        catalog = copy.deepcopy(previous)
+        catalog["cases"][0]["source_commit"] = "c" * 40
+        catalog["baselines"]["mona"]["source_commit"] = "c" * 40
+        case = catalog["cases"][0]
+        browser = {"base": BASE, "input_wait": False, "errors": [], "cases": [case["id"]],
+                   "media": [{"case_id": case["id"], "chapter": chapter, "played": True, "url": file["url"]}
+                             for chapter, file in case["assets"]["animations"].items()],
+                   "baseline_media": [{"character": "mona", "chapter": chapter, "played": True, "url": file["url"]}
+                                      for chapter, file in catalog["baselines"]["mona"]["assets"]["animations"].items()]}
+        result = browser_coverage(catalog, browser, previous)
+        self.assertEqual(result["browser_media_delivery"], "PASS_CHANGED_CASES_AND_BASELINES")
+        self.assertEqual(len(result["unchanged_cases_not_retested"]), 14)
+        for key in ["cases", "media", "baseline_media"]:
+            missing = copy.deepcopy(browser)
+            missing[key] = missing[key][:-1]
+            with self.assertRaises(ValueError):
+                browser_coverage(catalog, missing, previous)
+        wrong = copy.deepcopy(browser)
+        wrong["media"][0]["url"] = "https://example.invalid/another.mp4"
+        with self.assertRaises(ValueError):
+            browser_coverage(catalog, wrong, previous)
 
 
 if __name__ == "__main__":

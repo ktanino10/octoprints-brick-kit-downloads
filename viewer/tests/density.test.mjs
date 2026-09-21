@@ -5,7 +5,7 @@ import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import {
   DENSITY_ID, DENSITY_FLAGS, COUNT_PERCENTAGES, targetPartCount, countTargetResult,
-  validateDensityPointer, validateDensityCatalog, densityPath,
+  validateDensityPointer, validateDensityCatalog, densityPath, densityDeliveryStatus,
 } from '../../assets/density-data.js';
 import {
   validateGuideManifest, guideIndex, radialPosition, courseBoundary, stageRange,
@@ -21,6 +21,14 @@ const pending = { schema_version: 1, study_id: DENSITY_ID, state: 'INPUT_WAIT', 
 const pointer = { ...pending, state: 'READY', catalog: file('catalog.json') };
 const metrics = (count) => ({ part_count: count, unique_types: 1, one_by_one_exceptions: 0,
   grip_long_ge_15_8_count: count, dimensions_mm: [100, 100, 180], minimum_part_mm: [15.8, 15.8, 3.2] });
+const assetFixture = () => ({
+  cg: [{ ...file('cg.zip'), contents: ['still', 'blender'] }],
+  native_cad: [{ ...file('cad.zip'), contents: ['freecad_assembly', 'linked_libraries', 'stl', 'step'] }],
+  assembly: [{ ...file('assembly.zip'), contents: ['bom', 'ordered_ids', 'instructions'] }],
+  animations: Object.fromEntries(['turntable', 'radial_explode', 'bottom_up'].map((name, index) => [
+    name, { ...file('movie.mp4'), start_seconds: index * 6, end_seconds: (index + 1) * 6 },
+  ])),
+});
 
 function catalogFixture() {
   const baselines = { mona: 12435, copilot: 17873, ducky: 9669 };
@@ -30,7 +38,7 @@ function catalogFixture() {
     baselines: Object.fromEntries(Object.entries(baselines).map(([character, count]) => [character, {
       state: 'READY', candidate_id: `${character}-unit-baseline`, pitch_mm: 8, basis: 'INITIAL_FINE_C_ADAPTED_8MM',
       manifest_sha256: character === 'mona' ? '5556e329521b5706a366c5dad2aa6c7b13eca9d7d74323338773d5e2b20b2b4c' : 'b'.repeat(64),
-      metrics: metrics(count), images: images(character, character + '-baseline'),
+      metrics: metrics(count), images: images(character, character + '-baseline'), assets: assetFixture(),
     }])),
     cases: Object.entries(baselines).flatMap(([character, baseline]) => COUNT_PERCENTAGES.map((percentage) => {
       const target = targetPartCount(baseline, percentage);
@@ -39,12 +47,13 @@ function catalogFixture() {
         target_count: target, target_difference: 0, actual_ratio: target / baseline, manifest: file(id + '.json.gz'),
         images: images(character, id), tradeoff: 'Synthetic unit fixture; not a real case.',
         source_manifest_sha256: 'c'.repeat(64), source_bom_sha256: 'd'.repeat(64), source_commit: 'e'.repeat(40),
-        assets: { cg: [{ ...file('cg.zip'), contents: ['still', 'blender'] }],
-          native_cad: [{ ...file('cad.zip'), contents: ['freecad_assembly', 'linked_libraries', 'stl', 'step'] }],
-          assembly: [{ ...file('assembly.zip'), contents: ['bom', 'ordered_ids', 'instructions'] }],
-          animations: Object.fromEntries(['turntable', 'radial_explode', 'bottom_up'].map((name, index) => [
-            name, { ...file('movie.mp4'), start_seconds: index * 6, end_seconds: (index + 1) * 6 },
-          ])) },
+        ...(character === 'mona' ? { whisker_support: {
+          external_aid_count: 0, assembly_aid_count: 0, status: 'DIGITAL_SELF_SUPPORTING_UNTESTED',
+          physical_validation: 'UNKNOWN', geometry_revision: 'unit-only-no-aids',
+          manifest_sha256: 'c'.repeat(64), attachment_evidence_sha256: '7'.repeat(64),
+          sequence_evidence_sha256: '8'.repeat(64), all_categories_geometry_match: true,
+        } } : {}),
+        assets: assetFixture(),
       };
     })),
   };
@@ -84,6 +93,28 @@ test('round-half-up count targets use consistent actual baselines, never linear 
   assert.equal(countTargetResult(12435, 120, 14922 + 150).within_tolerance, false);
   assert.equal(countTargetResult(1, 120, 2).within_tolerance, true);
   for (const value of ['12435', NaN, 0, Infinity, -1]) assert.throws(() => targetPartCount(value, 150));
+});
+
+test('historical supported Mona data remains viewable but cannot complete the support-free request', () => {
+  const catalog = catalogFixture();
+  const item = catalog.cases.find((entry) => entry.id === 'mona-p120');
+  assert.equal(densityDeliveryStatus(item), 'READY');
+  for (const mutate of [
+    (entry) => { delete entry.whisker_support; },
+    (entry) => { entry.whisker_support.assembly_aid_count = 1; },
+    (entry) => { entry.whisker_support.external_aid_count = 3; },
+    (entry) => { delete entry.whisker_support.sequence_evidence_sha256; },
+    (entry) => { entry.whisker_support.manifest_sha256 = 'f'.repeat(64); },
+    (entry) => { entry.whisker_support.all_categories_geometry_match = false; },
+    (entry) => { entry.whisker_support.physical_validation = 'PASS'; },
+  ]) {
+    const changed = structuredClone(item); mutate(changed);
+    assert.equal(densityDeliveryStatus(changed), 'REQUIRES_WHISKER_REVISION');
+  }
+  delete item.whisker_support;
+  assert.equal(validateDensityCatalog(catalog, { ...pointer, state: 'PARTIAL' }), catalog);
+  assert.throws(() => validateDensityCatalog(catalog, pointer));
+  assert.equal(densityDeliveryStatus(catalog.cases.find((entry) => entry.character === 'copilot')), 'READY');
 });
 
 test('pending and partial cases cannot masquerade as all fifteen complete', () => {

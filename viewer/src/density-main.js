@@ -1,9 +1,9 @@
 import { assetURL, setLanguageContext } from '../../assets/i18n.js';
 import { getJSON as readJSON } from './network.js';
 import {
-  DENSITY_POINTER, validateDensityPointer, validateDensityCatalog, densityAssert as check,
+  DENSITY_POINTER, validateDensityPointer, validateDensityCatalog, densityAssert as check, densityDeliveryStatus,
 } from '../../assets/density-data.js';
-import { studyElement as element, formatStudyNumber as number } from '../../assets/study-ui.js';
+import { studyElement as element, formatStudyNumber as number, studyVideo } from '../../assets/study-ui.js';
 import { verifiedJSON, loadNativeLibraries } from './density-assets.js';
 import {
   validateGuideManifest, guideIndex, AssemblyPlayback, courseBoundary, stageRange,
@@ -203,11 +203,8 @@ function renderDownloads() {
   section.append(element('h3', '旋回・放射分解・底から組立の動画'));
   for (const [key, label] of [['turntable', '旋回'], ['radial_explode', '360度放射分解'], ['bottom_up', '底から組立']]) {
     const clip = candidate.assets.animations[key];
-    const video = element('video');
-    video.controls = true; video.playsInline = true; video.preload = 'none';
-    video.setAttribute('aria-label', label);
-    video.src = `${downloadURL(clip)}#t=${clip.start_seconds},${clip.end_seconds}`;
-    video.addEventListener('error', () => showError('公開動画を読み込めません。動画の取得リンクから確認してください。'));
+    const video = studyVideo(`${downloadURL(clip)}#t=${clip.start_seconds},${clip.end_seconds}`, label,
+      () => showError('公開動画を読み込めません。動画の取得リンクから確認してください。'));
     section.append(element('h4', label), video, link(clip, '元の動画を取得 ↗'));
   }
   host.append(section);
@@ -225,6 +222,8 @@ async function selectCandidate(id, params = null) {
   $('#guide-error').hidden = true;
   $('#guide-parts').replaceChildren(); $('#guide-bom').replaceChildren(); $('#guide-selection').replaceChildren();
   $('#guide-downloads').replaceChildren();
+  $('#guide-case-warning').textContent = '';
+  $('#guide-whisker-status').hidden = true;
   $('#guide-loading').hidden = false;
   $('#guide-loading').textContent = '実ID・配置・共有ネイティブ形状を読み込み、ハッシュを照合しています。';
   if (item.state === 'INPUT_WAIT') {
@@ -238,6 +237,11 @@ async function selectCandidate(id, params = null) {
     const libraries = await loadNativeLibraries(next.geometry_files, signal);
     if (current !== generation) return;
     manifest = next; index = guideIndex(next);
+    $('#guide-case-warning').textContent = item.tradeoff;
+    const whiskerRevisionRequired = densityDeliveryStatus(item) === 'REQUIRES_WHISKER_REVISION';
+    $('#guide-whisker-status').hidden = !whiskerRevisionRequired;
+    if (whiskerRevisionRequired) $('#guide-whisker-status').textContent =
+      '表示中は外付け・組立仮支台が必要な旧Mona設計です。支台を非表示にして新要件達成とは扱いません。ヒゲ支台なしの実改訂を待っており、今回の完了件数から除外しています。';
     $('#guide-target-status').textContent = item.state === 'TARGET_MISSED'
       ? '個数目標の許容差を未達。15案の完成には数えていません。'
       : `目標 ${number(item.target_count, 0)} / 実数 ${number(item.metrics.part_count, 0)} / 実倍率 ${number(item.actual_ratio, 4)}倍`;

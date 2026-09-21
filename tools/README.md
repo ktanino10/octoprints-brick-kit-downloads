@@ -243,6 +243,8 @@ STL/STEP/BOM/手順は版別Releaseから公開します。`.FCStd`相対layout�
 動画だけはHTML mediaとしてGitHubとrelease-assetsのCSPを許可し、実公開のRange/MIME/章再生を検証します。
 GitHub ReleaseのCDNは、upload時がvideo/mp4でも配信時にapplication/octet-streamを返すことがあります。
 この場合は実MP4のftyp・全SHA・206 Rangeと、実ブラウザーで全章がdecode/playできることを別々に確認します。
+WebKitではCDNの汎用MIMEだけでは再生を拒否する場合があるため、
+実検証済みの動画に `<source type="video/mp4">` を明示します。メタデータ読込だけでなく各章の実再生を検証します。
 
 `check_density.mjs` / `validate_density.py` が実数・0/全ID・工程・放射roundtrip、版不変、容量を検査します。
 `browser_density.py --expect-input-wait` は未受領UIだけを検証し、READY後はフラグなしで
@@ -260,6 +262,9 @@ GitHub ReleaseのCDNは、upload時がvideo/mp4でも配信時にapplication/oct
 PARTIALのままにします。commit自己参照は `archive/deployment.json` の実commitを参照し、
 検査済み内容のcommitは別フィールドに保存します。`verify_density_publication.py` は
 変更したPagesファイルと新matrixのRelease assetsだけを匿名照合し、旧大型履歴を再ダウンロードしません。
+増分browser受入は `--case` で今回の実案に限定できます。配信検査は直前の公開catalogと比較して
+変更案・変更baselineの全動画章を必須にし、未変更案を再検査しなかった場合は
+`PASS_CHANGED_CASES_AND_BASELINES` と明示します。この部分検査を全15案完了の証拠には使えません。
 
 `density_release.py` は明示された公開copyのhash一覧、Blenderのgeometry/material/animation保存照合、
 FreeCAD移動reopen記録がすべて一致した場合だけRelease専用ZIPを作ります。
@@ -267,3 +272,21 @@ FreeCAD移動reopen記録がすべて一致した場合だけRelease専用ZIPを
 パッケージ内で解決できることを検査します。圧縮時はファイルをstream転送し、100 MBのGit制限を
 Release資産へ誤適用しません。ただし単一Release assetの2 GB上限は超えられません。
 既存ZIPの上書き、未記録のnative文書、未確認のanimation変更、機械pathの混入は拒否します。
+
+1倍の参照3体は `stage_density_baselines.py` / `install_density_baselines.py` で別の固定READY packetとして扱います。
+64 MiBチャンクで保存された元ZIPは、固定commit内の再構築記録・各chunk・連結後SHAを照合し、
+公開Releaseには分割チャンクではなく全ZIPを置きます。`prepare_density_native_copy.py` と
+`finalize_density_package.py` は同じmetadata-only/reopen/motion検査を参照にも適用します。
+`COUNTED` から `READY` へ進めるのは参照のCG/native/mediaだけで、15倍率案の件数は増えません。
+親向けreceiptの `baseline_references` は `counts_toward_multiplier_cases:false` を必須とします。
+
+### 追加条件：Monaのヒゲ支台なし
+
+歴史的な `case.state:READY` は実ファイル完成を表すだけで、現在の要求への適合は
+`densityDeliveryStatus()` / `density_requirements.delivery_status()` が別に判定します。
+支台が必要な旧Monaは `REQUIRES_WHISKER_REVISION` とし、CGや支台配列を隠して成功へ昇格しません。
+新Monaの `whisker_support` は外部/組立支台数0、`DIGITAL_SELF_SUPPORTING_UNTESTED`、
+physical UNKNOWN、新geometry revision、実manifestSHAと根元・順序検査SHA、全カテゴリのgeometry一致を要求します。
+配信receiptは `source_status` と `status`、データ公開数と新要件適合数を分離します。
+Copilot/DuckyにはMona固有の条件を適用せず、旧MonaのURL/画像/Releaseは残します。
+新revisionの実native・順序・CG・動画を同producerから受領するまで、適合判定を進めません。

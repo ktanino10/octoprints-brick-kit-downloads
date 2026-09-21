@@ -28,3 +28,31 @@ def uncropped_image(image):
     }""")
     assert abs(measurements["height"] - measurements["expected"]) <= 1, measurements
     assert measurements["fit"] == "contain", measurements
+
+
+def play_actual_chapter(video, clip):
+    return video.evaluate("""async (video, clip) => {
+      video.muted = true;
+      if (video.readyState < 1) {
+        await new Promise((resolve, reject) => {
+          const timeout = setTimeout(() => reject(new Error('video metadata timeout')), 60000);
+          video.addEventListener('loadedmetadata', () => { clearTimeout(timeout); resolve(); }, {once:true});
+          video.addEventListener('error', () => { clearTimeout(timeout); reject(new Error('video decode failed')); }, {once:true});
+          video.preload = 'auto'; video.load();
+        });
+      }
+      if (!Number.isFinite(video.duration) || video.duration + .1 < clip.end_seconds) throw new Error('chapter exceeds actual movie');
+      video.currentTime = clip.start_seconds;
+      await video.play();
+      await new Promise((resolve, reject) => {
+        const timeout = setTimeout(() => reject(new Error('video playback timeout')), 30000);
+        const check = () => {
+          if (video.currentTime > clip.start_seconds + .12) {
+            clearTimeout(timeout); video.removeEventListener('timeupdate', check); resolve();
+          }
+        };
+        video.addEventListener('timeupdate', check); check();
+      });
+      video.pause();
+      return {url: video.currentSrc.split('#')[0], duration: video.duration, current_time: video.currentTime, played: true};
+    }""", clip)

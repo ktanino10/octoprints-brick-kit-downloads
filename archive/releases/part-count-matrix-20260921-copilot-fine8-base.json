@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "study_id": "part-count-matrix-20260921",
+  "case_id": "copilot-fine8-base",
+  "kind": "BASELINE_REFERENCE_NOT_MULTIPLIER_CASE",
+  "tag": "part-count-matrix-20260921-copilot-fine8-base",
+  "source_commit": "d8eadae855c504b3fabdf22ed6617edb1b79e993",
+  "assets": [
+    {
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-fine8-base/copilot-fine8-base-cad-scene-animation-public.zip",
+      "bytes": 113578433,
+      "sha256": "1eeecb3ea5a4cd0eabf1d6fbb53622ce645859affb3ef0e0c03056121a169020"
+    },
+    {
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-fine8-base/copilot-fine8-base-assembly-motion.mp4",
+      "bytes": 1803960,
+      "sha256": "8db5c41302dab18ba61396ec2ce332d38055c16eb3e133b96f1f8c89c758e703"
+    }
+  ],
+  "status": "UNSELECTED_DIGITAL_REFERENCE_NOT_SLICED",
+  "physical_fit": "UNKNOWN",
+  "full_print": "ON_HOLD"
+}

@@ -1,0 +1,1498 @@
+{
+  "case_id": "ducky-fine8-base",
+  "candidate_id": "ducky-fine8-base",
+  "character": "ducky",
+  "metrics": {
+    "physical_piece_count": 9669,
+    "part_count": 9669,
+    "unique_types": 85,
+    "target_count": 9669,
+    "baseline_count": 9669,
+    "target_ratio": 1.0,
+    "actual_ratio": 1.0,
+    "count_difference": 0,
+    "count_tolerance": 96.69,
+    "count_within_tolerance": true,
+    "one_by_one_exceptions": 5,
+    "grip_long_ge_15_8_mm": 9664,
+    "minimum_xy_short_mm": 7.8,
+    "minimum_xy_long_mm": 7.8,
+    "minimum_body_height_mm": 3.2,
+    "width_mm": 295.8,
+    "depth_mm": 423.8,
+    "height_mm": 368.20000000000005,
+    "bounds_mm": [
+      [
+        -147.9,
+        -211.9,
+        0.0
+      ],
+      [
+        147.9,
+        211.9,
+        368.20000000000005
+      ]
+    ],
+    "actual_size_mm": [
+      295.8,
+      423.8,
+      368.20000000000005
+    ],
+    "layer_count": 77,
+    "assembly_step_count": 9669,
+    "foundation_parts": 75,
+    "temporary_aid_count": 0,
+    "new_native_types": 24,
+    "common_rectangular_parts": 8956,
+    "body_height_families": [
+      {
+        "body_height_mm": 3.2,
+        "part_count": 75,
+        "unique_types": 5
+      },
+      {
+        "body_height_mm": 4.8,
+        "part_count": 9594,
+        "unique_types": 80
+      }
+    ],
+    "grip_long_ge_15_8_fraction": 0.9994828834419278
+  },
+  "manifest": {
+    "path": "cases/ducky-fine8-base.json.gz",
+    "sha256": "da021ec3a5213a1073a04520c201d672f4e15b2a4de938fe38d854c900944ac1",
+    "bytes": 351020
+  },
+  "descriptive_pattern_metrics": {
+    "case_id": "ducky-fine8-base",
+    "manifest_sha256": "684d5914d023a40a0b25676503b5fdc2bcd2dfeb48a0e1ff7fcaf3189f2157a6",
+    "method": "REGISTERED_LATTICE_DIAGNOSTIC_NOT_NATIVE_PIXEL_SILHOUETTE",
+    "scope": "Occupied8mm/4.8mm source sample andwhole-part palette projectedonto the same normalizedbody. Excludes studs,gaps,chamfers andsupports; realCGmustbeviewed separately.",
+    "front": {
+      "intersection_over_union": 1.0,
+      "reference_visible_pixels": 352870,
+      "candidate_visible_pixels": 352870,
+      "silhouette_symmetric_mean_distance_fraction_of_body_height": 0.0,
+      "silhouette_symmetric_p95_distance_fraction_of_body_height": 0.0,
+      "interpretation": "Descriptive projected geometry overlap/boundary distance; no aesthetic or mechanical pass threshold"
+    },
+    "side": {
+      "intersection_over_union": 1.0,
+      "reference_visible_pixels": 382435,
+      "candidate_visible_pixels": 382435,
+      "silhouette_symmetric_mean_distance_fraction_of_body_height": 0.0,
+      "silhouette_symmetric_p95_distance_fraction_of_body_height": 0.0,
+      "interpretation": "Descriptive projected geometry overlap/boundary distance; no aesthetic or mechanical pass threshold"
+    },
+    "painted_feature_region": {
+      "face_roi_box_px": [
+        311,
+        399,
+        713,
+        588
+      ],
+      "matching_visible_label_fraction": 1.0,
+      "colors": {
+        "purple": {
+          "intersection_over_union": 1.0,
+          "reference_pixels": 41478,
+          "candidate_pixels": 41478
+        },
+        "white": {
+          "intersection_over_union": 1.0,
+          "reference_pixels": 18954,
+          "candidate_pixels": 18954
+        },
+        "black": {
+          "intersection_over_union": 1.0,
+          "reference_pixels": 15546,
+          "candidate_pixels": 15546
+        },
+        "pink": {
+          "intersection_over_union": null,
+          "reference_pixels": 0,
+          "candidate_pixels": 0
+        }
+      },
+      "interpretation": "Nearest source palette labels on actual registered visible surfaces. Face pose, color regions and gaps influence this statistic; it does not declare likeness approval."
+    },
+    "region_definition": "Tight reference-front bbox of all non-base colorcells plus5pixels; not automatic anatomical landmark detection.",
+    "cell_count": 65505,
+    "reference_C_cell_count": 65505,
+    "aesthetic_pass": null,
+    "physical_fit": "UNKNOWN",
+    "interpretation": "Differences are descriptive. Morepieces are not a validated likeness percentage or mechanical completion."
+  },
+  "images": [
+    {
+      "view": "assembled-front",
+      "path": "images/ducky-fine8-base-assembled-front.jpg",
+      "bytes": 56855,
+      "sha256": "fc77a4a7b5c6c3a9d43834f2c8c48ee30fcdebcf17d9dfc14442691d18e4b71a"
+    },
+    {
+      "view": "assembled-three_quarter",
+      "path": "images/ducky-fine8-base-assembled-three_quarter.jpg",
+      "bytes": 75171,
+      "sha256": "1f11faeec158fc1f66302a6dbc7e6fb73c42fc4dedddc9c4dc8b884b210c3f46"
+    },
+    {
+      "view": "radial-exploded",
+      "path": "images/ducky-fine8-base-radial-exploded.jpg",
+      "bytes": 153035,
+      "sha256": "71102211f1f6d988840aa2eadc3360d64b4c83a5e5b6ffda78f236b4e85f3830"
+    },
+    {
+      "view": "registered-face",
+      "path": "images/ducky-fine8-base-registered-face.jpg",
+      "bytes": 54587,
+      "sha256": "dc734ee88fca9dfb9a31ae6eb9ee3cb57c6504716c0faf64040e3139a565b19f"
+    }
+  ],
+  "geometry": {
+    "BR-01x01-H048": {
+      "path": "geometry/BR-01x01-H048.mesh.gz",
+      "bytes": 4774,
+      "sha256": "f352b4bad37cac38ed37a68f21080173d4970aef4bd5ef2c281bf55f0406756f",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 388,
+      "face_count": 772,
+      "float32_mesh_sha256": "9d075952e568e9534ecc8cd5ca2aa153946ffa18dc4026133cc2a1abdf3f3383",
+      "maximum_coordinate_rounding_error_mm": 4.98443597507503e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-01x01-H048-EDGE-C020": {
+      "path": "geometry/BR-01x01-H048-EDGE-C020.mesh.gz",
+      "bytes": 4868,
+      "sha256": "0cb78f230108712f5c3d6d625d10227ba3081f244d30e58bc0b11ae736c96011",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 392,
+      "face_count": 780,
+      "float32_mesh_sha256": "af812d15a8df8c8ea224bf4d78bff868d658c57419ac13c10f3e7aba2fe06653",
+      "maximum_coordinate_rounding_error_mm": 4.98443597507503e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-01x02-H048": {
+      "path": "geometry/BR-01x02-H048.mesh.gz",
+      "bytes": 14176,
+      "sha256": "c53ccb06221763d52c3e0651b1b70dc2349bfd8916dd92d518d31c318a6ab972",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1139,
+      "face_count": 2274,
+      "float32_mesh_sha256": "e1468f627fadc7c8ea93e4381f94c2a405065867c49daf18160cc40d66a3991d",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-01x02-H048-EDGE-C020": {
+      "path": "geometry/BR-01x02-H048-EDGE-C020.mesh.gz",
+      "bytes": 14299,
+      "sha256": "bab51969f30e35a87d1c5d3b6d8a53f278ca9fd32e22bb131e8afe5b1705a02d",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1143,
+      "face_count": 2282,
+      "float32_mesh_sha256": "8ee28933753d8acf0982891f003ee505015c63cc9cdbe75acf4b608e71b3a6f9",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-01x03-H048": {
+      "path": "geometry/BR-01x03-H048.mesh.gz",
+      "bytes": 23606,
+      "sha256": "0c836f3dba87cf4b6a435a88a74e6fe0ec06e60b69855e0c7c1d84d4fcb30f67",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1890,
+      "face_count": 3776,
+      "float32_mesh_sha256": "76025c1adef8877e7fe08aee4bd32d879dd7ceec6f648459c7819cc4d6b8c90b",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-01x03-H048-EDGE-C020": {
+      "path": "geometry/BR-01x03-H048-EDGE-C020.mesh.gz",
+      "bytes": 23723,
+      "sha256": "75f4e03951715cfd3ebc781b0020707859cb5b9fc5a622da88304e479cf76f77",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1894,
+      "face_count": 3784,
+      "float32_mesh_sha256": "4ec3b76720adf4d7e8cc21059c7f2fb65a4266973eca5e3c012c09f2710335ab",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-01x04-H048": {
+      "path": "geometry/BR-01x04-H048.mesh.gz",
+      "bytes": 32716,
+      "sha256": "0ca47c5937d86eb6713ec522bf1f0113136302d344b4ab505647e9d395d549d1",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2641,
+      "face_count": 5278,
+      "float32_mesh_sha256": "add2c2c799eceb68fd9c0ebbd4a3a3739ad1b10ac35b5eb519e5333d54ea00e3",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-01x04-H048-EDGE-C020": {
+      "path": "geometry/BR-01x04-H048-EDGE-C020.mesh.gz",
+      "bytes": 32835,
+      "sha256": "488742ce473399e46dfd41a0b1fd0e6213231d9a1f403e1dfaa1184e98a09b34",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2645,
+      "face_count": 5286,
+      "float32_mesh_sha256": "aa789ac94a069badf3625281dbe17e89e866aa574eed68816e964360cdc8883e",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-01x05-H048": {
+      "path": "geometry/BR-01x05-H048.mesh.gz",
+      "bytes": 41391,
+      "sha256": "2bb186d27ba23f2ce6f3c780dbb06f2db6b24ed385ddacfa7db204f179b7f1f5",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3392,
+      "face_count": 6780,
+      "float32_mesh_sha256": "79d69c3c77f666ecf35f4f1a95d444884f41d75237b4f76501ecdc0b71884c53",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-01x05-H048-EDGE-C020": {
+      "path": "geometry/BR-01x05-H048-EDGE-C020.mesh.gz",
+      "bytes": 41470,
+      "sha256": "568e6071cd156242f6d9f3da2281ec445f6378d3816fc3aae14a022a60346078",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3396,
+      "face_count": 6788,
+      "float32_mesh_sha256": "79f35ea4a602d28511dd0c491bb9f8af997cd3aef2d59d7afa17b3468b345f62",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-01x06-H048-EDGE-C020": {
+      "path": "geometry/BR-01x06-H048-EDGE-C020.mesh.gz",
+      "bytes": 50022,
+      "sha256": "d0b56e7718c550065f1eda1a3fe6f3529ff63c183af92fc599644d5441daf3a8",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4147,
+      "face_count": 8290,
+      "float32_mesh_sha256": "07de4c02e74ce1c554ffa0296ec20cfbad84e38cabaf9a5c84ff763357d11838",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-02x02-H048": {
+      "path": "geometry/BR-02x02-H048.mesh.gz",
+      "bytes": 24814,
+      "sha256": "9006b9dab8a852bac7595635715408069698bf5e64554833b7fd1a4fd34992be",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2045,
+      "face_count": 4086,
+      "float32_mesh_sha256": "68dcde39d696218f5923ec33252e2ef333dc363f5b1f7b6684519bbb78f28cc6",
+      "maximum_coordinate_rounding_error_mm": 4.9462891560381195e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-02x02-H048-EDGE-C020": {
+      "path": "geometry/BR-02x02-H048-EDGE-C020.mesh.gz",
+      "bytes": 24968,
+      "sha256": "5213c4e348e11fd15a961364dd85a2a52c17e92574423010f583b1409d3019e4",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2049,
+      "face_count": 4094,
+      "float32_mesh_sha256": "84efbec113e306f5d5473aafa0acc102a7e9667fe4e3a8c27434c4575035686e",
+      "maximum_coordinate_rounding_error_mm": 4.9462891560381195e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-02x03-H048": {
+      "path": "geometry/BR-02x03-H048.mesh.gz",
+      "bytes": 40274,
+      "sha256": "7a587fddf141861715c63150d3899293b0437cea744dd022b7a28d70db98cd0a",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3326,
+      "face_count": 6648,
+      "float32_mesh_sha256": "edf3cd5db0d90e4ca77b3a6dfdc2ced46916c8d4d6fd30ac2353e1e2bd87b6ef",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-02x03-H048-EDGE-C020": {
+      "path": "geometry/BR-02x03-H048-EDGE-C020.mesh.gz",
+      "bytes": 40281,
+      "sha256": "5057902aa43844b0fe318aacf523f6023ae6b0ebb7b65469cdba7a42810b59f5",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3330,
+      "face_count": 6656,
+      "float32_mesh_sha256": "1304e63fb5db24c994e3ece9dae9365fd76df5262b97f9035fe6998f95e4b3e9",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-02x04-H048": {
+      "path": "geometry/BR-02x04-H048.mesh.gz",
+      "bytes": 54768,
+      "sha256": "60b06c6fae27879a36e7fce7bd7cc93964ef9e9603ae8ef3121b15fbf073b338",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4607,
+      "face_count": 9210,
+      "float32_mesh_sha256": "b765441b67f47a10d348316f29b8aece61636d7d21a5f6d100c6e2473c11b437",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-02x04-H048-EDGE-C020": {
+      "path": "geometry/BR-02x04-H048-EDGE-C020.mesh.gz",
+      "bytes": 54627,
+      "sha256": "4f1815b1fa57a7b1f6f62535279ed122f2f9adbec23d91d5b5bf5daa50010106",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4611,
+      "face_count": 9218,
+      "float32_mesh_sha256": "73f1ba85beada7dbadde615b4d92b6e6f8c51af15ca3403898bc7440a7b25a07",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-02x05-H048-EDGE-C020": {
+      "path": "geometry/BR-02x05-H048-EDGE-C020.mesh.gz",
+      "bytes": 68601,
+      "sha256": "d818a5bc7c2b980512631e856ecc1813f573fe98d1732f8951056e57daa038be",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5892,
+      "face_count": 11780,
+      "float32_mesh_sha256": "0be231cdf3879b7d85cc4e2660df7a767c640490c051291fa432267ebadf549c",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-03x04-H048-EDGE-C020": {
+      "path": "geometry/BR-03x04-H048-EDGE-C020.mesh.gz",
+      "bytes": 89906,
+      "sha256": "9531a5c424df529571ce01c192b35ceb9421fa43fc7c412e335790b95048005c",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 7702,
+      "face_count": 15400,
+      "float32_mesh_sha256": "b48d149ec584ca2c924f0e7c99e9188e417d0dff0c6c710e52339a8ba4b8a260",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-04x04-H048-EDGE-C020": {
+      "path": "geometry/BR-04x04-H048-EDGE-C020.mesh.gz",
+      "bytes": 124227,
+      "sha256": "83f83872295619833a8bc53d804a3081af6ecff2bcdd19c3b36d28dbdc7230a3",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 10793,
+      "face_count": 21582,
+      "float32_mesh_sha256": "46587283ae1c717491a0f9de751acee8c9a231689a34ce608e0d23a9657eaefd",
+      "maximum_coordinate_rounding_error_mm": 4.992676494453008e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-03C-H048-c1d6f05dcc": {
+      "path": "geometry/CT-03C-H048-c1d6f05dcc.mesh.gz",
+      "bytes": 14277,
+      "sha256": "6cb111902fa18a3061c32e3a12420253b297e24c73b18dead6975815e16ffacf",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1158,
+      "face_count": 2312,
+      "float32_mesh_sha256": "c1ae884b0e673e4be5d10a9fa30ad55f10f6e80d3ec4cd2ab17577a1b7efe377",
+      "maximum_coordinate_rounding_error_mm": 4.9462891560381195e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-03C-H048-c1d6f05dcc-EDGE-C020": {
+      "path": "geometry/CT-03C-H048-c1d6f05dcc-EDGE-C020.mesh.gz",
+      "bytes": 14404,
+      "sha256": "e5959b09b2ef358f48c20cb1ef2721f6a55afad5a15f84ab6149b6c81a86dd01",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1164,
+      "face_count": 2324,
+      "float32_mesh_sha256": "20b0b5ddaa04afed2a7a9a0b0673883e69c57257656c507f368eed2fbee7bc71",
+      "maximum_coordinate_rounding_error_mm": 4.9462891560381195e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-04C-H048-15e33fd0c4": {
+      "path": "geometry/CT-04C-H048-15e33fd0c4.mesh.gz",
+      "bytes": 19089,
+      "sha256": "70e11c81eafae3e8ac813bdb98a7f4edb5ba55557696deab7894e984324be10c",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1540,
+      "face_count": 3076,
+      "float32_mesh_sha256": "031e93d87f70b3fae580b1034221161653738a6423a439c9ab04223e31ef3fa4",
+      "maximum_coordinate_rounding_error_mm": 4.98443597507503e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-04C-H048-15e33fd0c4-EDGE-C020": {
+      "path": "geometry/CT-04C-H048-15e33fd0c4-EDGE-C020.mesh.gz",
+      "bytes": 19282,
+      "sha256": "81eba109c046d619fb529b3851b43b625a484a7cafd6dc4802fea5098c4a6b78",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1546,
+      "face_count": 3088,
+      "float32_mesh_sha256": "49f4c81d7e6141f871ca7abbb274d744575f58ba88096cd41f0864c32648c768",
+      "maximum_coordinate_rounding_error_mm": 4.98443597507503e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-04C-H048-8e241044a8": {
+      "path": "geometry/CT-04C-H048-8e241044a8.mesh.gz",
+      "bytes": 18996,
+      "sha256": "e357e289af8fb54c114d77c0e56f5a1e88958e5f3f1063aeb637b4083a01b5aa",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1540,
+      "face_count": 3076,
+      "float32_mesh_sha256": "42d5742a0fa44c8d9135cbdffda6cb5a5318de87b6accc33b850e5f4efcd138f",
+      "maximum_coordinate_rounding_error_mm": 4.98443597507503e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-04C-H048-8e241044a8-EDGE-C020": {
+      "path": "geometry/CT-04C-H048-8e241044a8-EDGE-C020.mesh.gz",
+      "bytes": 19126,
+      "sha256": "d9ed2e3c8eaabefb2edc49c737a2144a7c4b491807d5b5a4c1d56b3074f5ab32",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1546,
+      "face_count": 3088,
+      "float32_mesh_sha256": "0409cabdd44d31b4b2423b0bec253ee72eaff11b49b615a9e4695e163ace879e",
+      "maximum_coordinate_rounding_error_mm": 4.98443597507503e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-05C-H048-0c01f34f97-EDGE-C020": {
+      "path": "geometry/CT-05C-H048-0c01f34f97-EDGE-C020.mesh.gz",
+      "bytes": 24823,
+      "sha256": "1f6343106d217b55d901c55ec9d63484ab9fdb09a80b193afba70ce6eb8663d0",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1943,
+      "face_count": 3882,
+      "float32_mesh_sha256": "98fc8bbc5148e6c3b101a4424ba8dd297de10c47c1cfd730fdad2f579697e827",
+      "maximum_coordinate_rounding_error_mm": 4.9462891560381195e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-05C-H048-1898941840-EDGE-C020": {
+      "path": "geometry/CT-05C-H048-1898941840-EDGE-C020.mesh.gz",
+      "bytes": 23878,
+      "sha256": "5d5264fc6515c6e491a968f7530e05be8a37f41f8733b0ad9b6a001781477e91",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1933,
+      "face_count": 3862,
+      "float32_mesh_sha256": "f482935404b239dfcd488419dcc27e85a5536b0954bb979b452cba33728f1361",
+      "maximum_coordinate_rounding_error_mm": 4.9462891560381195e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-05C-H048-73f76289ae": {
+      "path": "geometry/CT-05C-H048-73f76289ae.mesh.gz",
+      "bytes": 23565,
+      "sha256": "5c67f2502d28614047e5da5e173baecc338320e715ca84d2cafc90b97c6bf99a",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1927,
+      "face_count": 3850,
+      "float32_mesh_sha256": "74ebc53c9dd0dd9e67fd1a576e84988589c9e2b060cc49470c6b92eb36a5102f",
+      "maximum_coordinate_rounding_error_mm": 4.9462891560381195e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-05C-H048-73f76289ae-EDGE-C020": {
+      "path": "geometry/CT-05C-H048-73f76289ae-EDGE-C020.mesh.gz",
+      "bytes": 23700,
+      "sha256": "7e4ffb26a4b84899647c33263bf650ec1fba6d72df0dea8043b73e70b4b21515",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1933,
+      "face_count": 3862,
+      "float32_mesh_sha256": "02e5d7a67416039ee75b91d1f8019e0befdc6ed74bbfb3f9508ff6d5ba25771a",
+      "maximum_coordinate_rounding_error_mm": 4.9462891560381195e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-05C-H048-7ede4fdf04": {
+      "path": "geometry/CT-05C-H048-7ede4fdf04.mesh.gz",
+      "bytes": 30866,
+      "sha256": "85e0d1c7fc22d9402975b690930b239283ac2c14058e5e14186d2857559a3a2e",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2446,
+      "face_count": 4888,
+      "float32_mesh_sha256": "2c6079f6e60372a2620cf7f43ccb037e349918fbd1dce137c32253331331c548",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-05C-H048-7ede4fdf04-EDGE-C020": {
+      "path": "geometry/CT-05C-H048-7ede4fdf04-EDGE-C020.mesh.gz",
+      "bytes": 30939,
+      "sha256": "984c49ca423a105d3e382ad8041d2d040447e5c30f0ca9f4a9ec0e1f4fdba489",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2452,
+      "face_count": 4900,
+      "float32_mesh_sha256": "f21d1e01ce6d75671b5b41a85233705f03cf1d075d3aa51c90f5a836ce15c899",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-05C-H048-c6044b9b36-EDGE-C020": {
+      "path": "geometry/CT-05C-H048-c6044b9b36-EDGE-C020.mesh.gz",
+      "bytes": 24026,
+      "sha256": "f9ca1c42eaf3d376dc829b6fd2eb9f7e9c714b4d42639d477595b9f9d9666307",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1933,
+      "face_count": 3862,
+      "float32_mesh_sha256": "fa0721b2f478288cef0210ee5857f1d35fbb5de08f90fa3c8426cd42ac6b9cb4",
+      "maximum_coordinate_rounding_error_mm": 4.98443597507503e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-05C-H048-c763985811": {
+      "path": "geometry/CT-05C-H048-c763985811.mesh.gz",
+      "bytes": 30679,
+      "sha256": "e7a48bcca71ffa4bda694845af9c492a3965b4a3cc8b02135bc8ba5dd5c75696",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2446,
+      "face_count": 4888,
+      "float32_mesh_sha256": "d4cf2dff502c73534fa5867b5f4848833cbdd6fd09de1847fb5201a59606b825",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-05C-H048-c763985811-EDGE-C020": {
+      "path": "geometry/CT-05C-H048-c763985811-EDGE-C020.mesh.gz",
+      "bytes": 30837,
+      "sha256": "cf2efacecd1dfa67a7420527bfe2f1b04ae73f88a664583ae0027a991b45809c",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2452,
+      "face_count": 4900,
+      "float32_mesh_sha256": "861684ae383f080227d0f8c60e2ccfb76a0061fe85af5493c8f1d908da89f873",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-06C-H048-1f09483782-EDGE-C020": {
+      "path": "geometry/CT-06C-H048-1f09483782-EDGE-C020.mesh.gz",
+      "bytes": 35637,
+      "sha256": "22003d29d41fdde818041732fe6e8dde54cd51d1de3e55f63c4192614f3389bd",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2839,
+      "face_count": 5674,
+      "float32_mesh_sha256": "d568f686d1577006e6c726ab91b7f41fda9883a41a56d487363bb1f54ba896ec",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-06C-H048-31129ef203-EDGE-C020": {
+      "path": "geometry/CT-06C-H048-31129ef203-EDGE-C020.mesh.gz",
+      "bytes": 35377,
+      "sha256": "b70eea676d1890fb048ef5a22a904035799c2559d71a86a20e72a1f3c645bc20",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2837,
+      "face_count": 5670,
+      "float32_mesh_sha256": "45e3a1e09c3b1cc6f85e8b5df48307fb3ef9a7c352bdf0cedf750fd8390f92e1",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-06C-H048-7e0a0c4a1a-EDGE-C020": {
+      "path": "geometry/CT-06C-H048-7e0a0c4a1a-EDGE-C020.mesh.gz",
+      "bytes": 34446,
+      "sha256": "80b76610799da24a795c26b61727e8182d715656024f0d02c254d144ef28384d",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2848,
+      "face_count": 5692,
+      "float32_mesh_sha256": "23fbaefd1c99487129b41f860a74aaadf90978baf821a9ae99cf2ec1f0813338",
+      "maximum_coordinate_rounding_error_mm": 4.9462891560381195e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-06C-H048-adaaf29086-EDGE-C020": {
+      "path": "geometry/CT-06C-H048-adaaf29086-EDGE-C020.mesh.gz",
+      "bytes": 35554,
+      "sha256": "f23e6d8ec7231fd2c8f2c68e9090ed5e4d3ff12507d7a5a18ae4c32838c845ce",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2838,
+      "face_count": 5672,
+      "float32_mesh_sha256": "5e103a5f3f75c829ca527e0347879c14ce2aae8b9d04e485e02e519582aff829",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-19b018b623": {
+      "path": "geometry/CT-07C-H048-19b018b623.mesh.gz",
+      "bytes": 45897,
+      "sha256": "710a250d9e13adaa4680137332a8d0ed37eadfe5969c31fecd899a672003b7c2",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3737,
+      "face_count": 7470,
+      "float32_mesh_sha256": "6242cdd7dbed74cf59893436f213ea9f99425234a4b1f000c9aa4330b47963d3",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-19b018b623-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-19b018b623-EDGE-C020.mesh.gz",
+      "bytes": 45833,
+      "sha256": "8dc35f6bc44964cd8b1eb8efeca3f42a39290f7f0d047d6c46096e644a41b71f",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3743,
+      "face_count": 7482,
+      "float32_mesh_sha256": "acb82f0d8ef2a249dfc9e91c1cb6c022618b728faf5939020e64ba84f03a57b1",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-24c8ab7d30-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-24c8ab7d30-EDGE-C020.mesh.gz",
+      "bytes": 32765,
+      "sha256": "5dc34d8ead151356a6e8dc176aa178f8b880755ff69659b00035d6dec25b883b",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2703,
+      "face_count": 5402,
+      "float32_mesh_sha256": "ba8016ad1d73cff5147ba05c358a23fcffcf2db4219a601188ad9b9bb33215dc",
+      "maximum_coordinate_rounding_error_mm": 4.946290488305749e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-47687fad65-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-47687fad65-EDGE-C020.mesh.gz",
+      "bytes": 40066,
+      "sha256": "a510e926591400ab0ce2567b1cf1e08c91c8385b467c35d9bdb6d476d3647e8b",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3223,
+      "face_count": 6442,
+      "float32_mesh_sha256": "23181b33d46a1d41628abd7fdebe1dda7c5460502b3774c3ddccdcfd257c1831",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-48e06b5e1e": {
+      "path": "geometry/CT-07C-H048-48e06b5e1e.mesh.gz",
+      "bytes": 45676,
+      "sha256": "14a399007f5240fb14f35421055ac415ae0a244d8a702e8435d973353b97d0bd",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3736,
+      "face_count": 7468,
+      "float32_mesh_sha256": "1a1b06bb2559ecfbdfb785f7271b95447c8d60c894b6d00568bbf25a05bef0f7",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-48e06b5e1e-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-48e06b5e1e-EDGE-C020.mesh.gz",
+      "bytes": 45729,
+      "sha256": "b204ebdb3145ae0b7b3bf0ecbc52bbdb8451166de0ff8dd8a4d1729ccc381e8b",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3742,
+      "face_count": 7480,
+      "float32_mesh_sha256": "6c271e4b2a0754569e970183399e7d481fa166029ab25ade987e051ebc0128f7",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-6da108573e-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-6da108573e-EDGE-C020.mesh.gz",
+      "bytes": 39791,
+      "sha256": "1a8e6fb280ef3224ff7249a7338db1c4bf0d8442e1887eff745a81544392a32e",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3223,
+      "face_count": 6442,
+      "float32_mesh_sha256": "c6d2edec1092b5a9a1cd909e1d30678d3d2e2453933cf89b0ad548fd2d2e60fc",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-8318c74da8-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-8318c74da8-EDGE-C020.mesh.gz",
+      "bytes": 32843,
+      "sha256": "561821b99c8213a030588017c630d1dea25ecfead4e477d8d6589675f229be79",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2713,
+      "face_count": 5422,
+      "float32_mesh_sha256": "173d51444d7cb84b439e2de7ca18e070538e35ed83ac0e0a3535b69ddf57ae69",
+      "maximum_coordinate_rounding_error_mm": 4.946290488305749e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-8db0b03e41-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-8db0b03e41-EDGE-C020.mesh.gz",
+      "bytes": 45254,
+      "sha256": "924a4246fc122dd924771571ca8060de183bf7d95ddb398665f3d1814371a9da",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3734,
+      "face_count": 7464,
+      "float32_mesh_sha256": "3890396dc8837db8cc2d9d89b987d9344f870cef4aa4ad08e42fa3a81a653b38",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-9088f6a05f-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-9088f6a05f-EDGE-C020.mesh.gz",
+      "bytes": 34380,
+      "sha256": "2a036130f4e71262be74e433546db848bc6ead7f886b0b309c1d544717dbbf0d",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2713,
+      "face_count": 5422,
+      "float32_mesh_sha256": "5a4be7e6af077e54dfac9a17d92822678b0cabfb4a589aa305dd7f8898ae5e2c",
+      "maximum_coordinate_rounding_error_mm": 4.946290488305749e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-9fe7fee271-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-9fe7fee271-EDGE-C020.mesh.gz",
+      "bytes": 45365,
+      "sha256": "3fb8c30ce50e30bbfd0a60dc346b8bf5963b76a284b6e079dcd9b82bb5d3672b",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3734,
+      "face_count": 7464,
+      "float32_mesh_sha256": "afda9a94e6a509e6e7051d7aab708627cc220c22974e1b410d6d4845670fe6ea",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-e42e91e2b8-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-e42e91e2b8-EDGE-C020.mesh.gz",
+      "bytes": 39682,
+      "sha256": "ff1698286a58bab2e662eee5af06a249e146ccad157b5982584e1117eddfd4aa",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3224,
+      "face_count": 6444,
+      "float32_mesh_sha256": "7583c6b5c78b7a978ae5a14b66c0ca2a8729f200ef2d8a82b6946d7d8c61f49e",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-08C-H048-40c07caec4-EDGE-C020": {
+      "path": "geometry/CT-08C-H048-40c07caec4-EDGE-C020.mesh.gz",
+      "bytes": 50490,
+      "sha256": "68c07381d7bbf18c5e02c79a94d8da4cb6293345f039fa1b45660487b1ae6a53",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4128,
+      "face_count": 8252,
+      "float32_mesh_sha256": "afd0b162eb3d3ce8071fce647c76d459203c0db1cee2b65f3d25ee1f7d228ed1",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-08C-H048-9f7a65e972-EDGE-C020": {
+      "path": "geometry/CT-08C-H048-9f7a65e972-EDGE-C020.mesh.gz",
+      "bytes": 51228,
+      "sha256": "4169ff04cfb1cef5e822a407857ad9241734d0ffc62cb2e5920b7f032c78299e",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4139,
+      "face_count": 8274,
+      "float32_mesh_sha256": "be214588e13c46165d9e013d879ab77ea2dda384384d817811dfa9af23239bf4",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-08C-H048-c97240b548-EDGE-C020": {
+      "path": "geometry/CT-08C-H048-c97240b548-EDGE-C020.mesh.gz",
+      "bytes": 38423,
+      "sha256": "f509a10aa808df37e73a26275b1ea883f8ec5811c2d83f499316a99b65353dfb",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3097,
+      "face_count": 6190,
+      "float32_mesh_sha256": "b87d2e03d37bcea4dd9ff44dea572b4f09be0629ef79ec0216fa707eabcbdb75",
+      "maximum_coordinate_rounding_error_mm": 4.98443597507503e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-08C-H048-d8a33e9319-EDGE-C020": {
+      "path": "geometry/CT-08C-H048-d8a33e9319-EDGE-C020.mesh.gz",
+      "bytes": 50883,
+      "sha256": "bde9ee9a16570f561416871c153928c79c111826966d799340ae2eb7388817fd",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4128,
+      "face_count": 8252,
+      "float32_mesh_sha256": "ffa2727d97a675fbb39f78c4d98b03052a7f82a1402b27cf96c173ca8a999ae3",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-08C-H048-e64f5ce8c6-EDGE-C020": {
+      "path": "geometry/CT-08C-H048-e64f5ce8c6-EDGE-C020.mesh.gz",
+      "bytes": 50201,
+      "sha256": "967a2e66f4fdbef273b8afc201ecf270fcb745027415955025667b32f6cdbfde",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4128,
+      "face_count": 8252,
+      "float32_mesh_sha256": "f3094c623d165d2ad91fcf31e53b4496c6ccabfd7a0cc01ae69a808b443c0a86",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-09C-H048-10fa964061-EDGE-C020": {
+      "path": "geometry/CT-09C-H048-10fa964061-EDGE-C020.mesh.gz",
+      "bytes": 60134,
+      "sha256": "7ef2e3aacab6c11a652ba49a51238ee1480f8dea9d19c225ab253e4edafc86b7",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5035,
+      "face_count": 10066,
+      "float32_mesh_sha256": "25ecc9cf6b4a89ee323a76caee58015de846c25815384abf2ce1818d85b60e2a",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-09C-H048-2942373b3f-EDGE-C020": {
+      "path": "geometry/CT-09C-H048-2942373b3f-EDGE-C020.mesh.gz",
+      "bytes": 59579,
+      "sha256": "c5e47fdd9a47816e9a3dec249e3bbb4e677c0e854e1725646aa7625ae7212d52",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5023,
+      "face_count": 10042,
+      "float32_mesh_sha256": "0fec732a9ecf823eb58bf448637487b64d5da57cc03133fec53770bdcd0aa096",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-09C-H048-5ba1c77317-EDGE-C020": {
+      "path": "geometry/CT-09C-H048-5ba1c77317-EDGE-C020.mesh.gz",
+      "bytes": 59810,
+      "sha256": "a3e413be206b8854e5582f76c563e63a5c793f42e58e968d6fd683eea7971e56",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5023,
+      "face_count": 10042,
+      "float32_mesh_sha256": "fe289e29244352167b43b44322fbea316462219fc6e391b38869739685e6eb26",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-09C-H048-5eb32c5359-EDGE-C020": {
+      "path": "geometry/CT-09C-H048-5eb32c5359-EDGE-C020.mesh.gz",
+      "bytes": 59861,
+      "sha256": "0c1de04a6bff79a4a6664fc6d3e108c34c075876a0d5adba84c6efbb55257ecf",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5033,
+      "face_count": 10062,
+      "float32_mesh_sha256": "1899856c57434044c1207a47575b9c4222daee09a4703650d86fe79a20c332b3",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-09C-H048-619cfdedda-EDGE-C020": {
+      "path": "geometry/CT-09C-H048-619cfdedda-EDGE-C020.mesh.gz",
+      "bytes": 60615,
+      "sha256": "c586bc5ae5749e383dc39a4fe25b4c2dedb80da8d533db34c28c59ed284cc84e",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5033,
+      "face_count": 10062,
+      "float32_mesh_sha256": "d8afd624bcea5258abe9e8227092abaf6c913c9e9da0076422984eb10da82332",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-09C-H048-792fee37ed-EDGE-C020": {
+      "path": "geometry/CT-09C-H048-792fee37ed-EDGE-C020.mesh.gz",
+      "bytes": 55041,
+      "sha256": "9f6ddc31367d90367ad3fb3dd94f28ea3d459647ef9e0381ff93e57f8ef32436",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4513,
+      "face_count": 9022,
+      "float32_mesh_sha256": "7750f6403abedbb3afa30b9638ea5a72e522762f5bfe6c288a783a7fdce10ad6",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-09C-H048-b5fbbd2821-EDGE-C020": {
+      "path": "geometry/CT-09C-H048-b5fbbd2821-EDGE-C020.mesh.gz",
+      "bytes": 41138,
+      "sha256": "524d003ad0aa0460653aa917b05fa1d085a5f787e68e176af733734c90ef3706",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3484,
+      "face_count": 6964,
+      "float32_mesh_sha256": "cc3d79adf150b0c2162cf450767077dff9f2fff65c87462ed9722099bcdd7b72",
+      "maximum_coordinate_rounding_error_mm": 4.98443597507503e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-09C-H048-f0f5e236bd-EDGE-C020": {
+      "path": "geometry/CT-09C-H048-f0f5e236bd-EDGE-C020.mesh.gz",
+      "bytes": 54737,
+      "sha256": "1e26e2da93fd2099112e09de6978d84fc38b1551bf073f0914fe775f74d20062",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4513,
+      "face_count": 9022,
+      "float32_mesh_sha256": "14352812b438e70f21ae05162ec68ab31876a4dd586dae1909882df270d12107",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-10C-H048-71024a1453-EDGE-C020": {
+      "path": "geometry/CT-10C-H048-71024a1453-EDGE-C020.mesh.gz",
+      "bytes": 70108,
+      "sha256": "310ae59382f8abbde794a6e7ae04ea326bb6b46fec28c2258253cf0994f2a199",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5928,
+      "face_count": 11852,
+      "float32_mesh_sha256": "0a41e3ac613f162fc871221db7293c055268bfd7d768b50c4acd6637907716c5",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-10C-H048-d4ef8cf0e8-EDGE-C020": {
+      "path": "geometry/CT-10C-H048-d4ef8cf0e8-EDGE-C020.mesh.gz",
+      "bytes": 58511,
+      "sha256": "a3532f576dd2462eb108c195942487c1946996f88127a70758a1dd60ef35f8cf",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4897,
+      "face_count": 9790,
+      "float32_mesh_sha256": "45320ee5817015aff2bcf7a4b75da54f96e1a061d9c3f2fc82e2a60cb4b96705",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-10C-H048-d6324c8a56-EDGE-C020": {
+      "path": "geometry/CT-10C-H048-d6324c8a56-EDGE-C020.mesh.gz",
+      "bytes": 64461,
+      "sha256": "6faeff7bf6da87ef47f7373046e0e31652c40266f0d048ee4144379abda9ab93",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5418,
+      "face_count": 10832,
+      "float32_mesh_sha256": "090ed7b55e29c350ef7013e671d1d483d85d27e93af7df075d6af59e289bec17",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-10C-H048-e13752c9a5-EDGE-C020": {
+      "path": "geometry/CT-10C-H048-e13752c9a5-EDGE-C020.mesh.gz",
+      "bytes": 70403,
+      "sha256": "49cbbc6a4ca296082476491a68dbf37191f3d9e1aa581623636c291ddf049fe7",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5928,
+      "face_count": 11852,
+      "float32_mesh_sha256": "5b35325d7a2819281749806f2c3f22ccdbd4d091e581f58c405620ccf7e6f507",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-11C-H048-4aaaca6928-EDGE-C020": {
+      "path": "geometry/CT-11C-H048-4aaaca6928-EDGE-C020.mesh.gz",
+      "bytes": 70151,
+      "sha256": "de55e3803744772b85c6d4f575a6fc1c88a5d259d58624342fd97a0f258a3b36",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5796,
+      "face_count": 11588,
+      "float32_mesh_sha256": "90934ef6f603838d48be650651dea311846e43732004898786976fa0f9d7ee56",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-11C-H048-51645b78fc-EDGE-C020": {
+      "path": "geometry/CT-11C-H048-51645b78fc-EDGE-C020.mesh.gz",
+      "bytes": 68811,
+      "sha256": "6df967654a7e6acf16ce04feb8f721ea126e56ddb36fc39362e377d1a9cb7923",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5796,
+      "face_count": 11588,
+      "float32_mesh_sha256": "f35abd03bd660ce47d546360c245f488338755f29112812517db394613ad6624",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-11C-H048-6914ea5a07-EDGE-C020": {
+      "path": "geometry/CT-11C-H048-6914ea5a07-EDGE-C020.mesh.gz",
+      "bytes": 80638,
+      "sha256": "2b6cf05174dd208e64863289fa05d1eed8e6a3fee1f65be2a8be59d325590b4f",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 6833,
+      "face_count": 13662,
+      "float32_mesh_sha256": "d5647a197951b621d292083b04ad33ffc38ad859df41f5493859b886b8238320",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-11C-H048-7d45da0666-EDGE-C020": {
+      "path": "geometry/CT-11C-H048-7d45da0666-EDGE-C020.mesh.gz",
+      "bytes": 69201,
+      "sha256": "b8f271fe5b8c31bb961ae68f6da538d3603e7a30c19d54a2738bf23d0ac1e35a",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5803,
+      "face_count": 11602,
+      "float32_mesh_sha256": "fe120ecb9940def1e6ae180c83737259ef3410ab39e8a5e3ec3330561d4f3f99",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-11C-H048-b0163edc7f-EDGE-C020": {
+      "path": "geometry/CT-11C-H048-b0163edc7f-EDGE-C020.mesh.gz",
+      "bytes": 80608,
+      "sha256": "6afe942132b1af2e1ba9e50dd44756850290b988ffca84092dd181be5b497abc",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 6833,
+      "face_count": 13662,
+      "float32_mesh_sha256": "c44637bc9046a2f2e535ccb7b9827e9b62de38914e783c50305a796b0dc5ed9b",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-11C-H048-edb64752f3-EDGE-C020": {
+      "path": "geometry/CT-11C-H048-edb64752f3-EDGE-C020.mesh.gz",
+      "bytes": 57218,
+      "sha256": "d24d48d6a1110bbbfe4a045668380b26f49e39002046a2634340f8db5b5df03f",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4768,
+      "face_count": 9532,
+      "float32_mesh_sha256": "4bc7343daca3c4d656a807a06eefa51631e854e6397f7d25c30de70d33235b6b",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-12C-H048-959c66415b-EDGE-C020": {
+      "path": "geometry/CT-12C-H048-959c66415b-EDGE-C020.mesh.gz",
+      "bytes": 62067,
+      "sha256": "b794a3a1c8ffe46b2f6f2432a0172d3d24655f749d8cfcfed78a48e20dad9525",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5161,
+      "face_count": 10318,
+      "float32_mesh_sha256": "85ee3dbdc5fc62f85440d63f622d0c4bb497aaf2ddca54e5dd6cd4a7bce6dd64",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-13C-H048-b63f416bd3-EDGE-C020": {
+      "path": "geometry/CT-13C-H048-b63f416bd3-EDGE-C020.mesh.gz",
+      "bytes": 78701,
+      "sha256": "4b3a7a45ff59851a9529f34603725ee4463854e78057473ab2af9054c68ff75c",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 6572,
+      "face_count": 13140,
+      "float32_mesh_sha256": "f7e8aab5f037d5e269f6cd29860427d5e32ca54378f8e25d48252e6e51dcd413",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-13C-H048-e03fd0ee86-EDGE-C020": {
+      "path": "geometry/CT-13C-H048-e03fd0ee86-EDGE-C020.mesh.gz",
+      "bytes": 82804,
+      "sha256": "155f502cfff97d19b08b3b375d9e88e5ec5766b69109d33fdcba023821189289",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 7092,
+      "face_count": 14180,
+      "float32_mesh_sha256": "ebbf4219f4773447133b2ef713c682452be8d886dcf21e7adef04ee8203d8b9d",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-14C-H048-4639d10900-EDGE-C020": {
+      "path": "geometry/CT-14C-H048-4639d10900-EDGE-C020.mesh.gz",
+      "bytes": 73290,
+      "sha256": "54a1b9005094b26e9aa4fa79f8a6de9ca934ac942dba6e3cd1c0f034b63c1cd5",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 6463,
+      "face_count": 12922,
+      "float32_mesh_sha256": "1c24a453e0fe4ed210bccb1b5ddaf112f8e9e1ce6a6882b1a5ccdfcd243b18b0",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-17C-H048-45f368492f-EDGE-C020": {
+      "path": "geometry/CT-17C-H048-45f368492f-EDGE-C020.mesh.gz",
+      "bytes": 121988,
+      "sha256": "7f1ada5fdef8230d7b0c8cd15255d4b882326e4d7594440b8d15c80c0b8e0e4a",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 10193,
+      "face_count": 20382,
+      "float32_mesh_sha256": "09cc90c129e63535243ac02532aa535ef0634acba00167b2a5b5846a0ff49019",
+      "maximum_coordinate_rounding_error_mm": 4.992676494453008e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-23C-H048-f604565f66-EDGE-C020": {
+      "path": "geometry/CT-23C-H048-f604565f66-EDGE-C020.mesh.gz",
+      "bytes": 103003,
+      "sha256": "fde761518ec6666e2cd0d918c11608eb39de68048e0eba6a1567ce46156a6c51",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 8854,
+      "face_count": 17704,
+      "float32_mesh_sha256": "73fe6b844e2af730bbbf7fa9b41160ac7fdabc9284874847abd2b24d358399f9",
+      "maximum_coordinate_rounding_error_mm": 4.973143674646963e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "PL-01x02-H032": {
+      "path": "geometry/PL-01x02-H032.mesh.gz",
+      "bytes": 14194,
+      "sha256": "8e577eda54e970bdc9f73bdfbd7ee6527b61202585f8024ed937aed5b4e36d4d",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1139,
+      "face_count": 2274,
+      "float32_mesh_sha256": "7200d1c0cde8bc0a6714b46b757130823ead753eb61ae964f254bd015d0d33c8",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "PL-01x08-H032": {
+      "path": "geometry/PL-01x08-H032.mesh.gz",
+      "bytes": 65676,
+      "sha256": "740281ba1bd1d210213a4d544fa57ba91d28c71cff6b68047644f98783435519",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5645,
+      "face_count": 11286,
+      "float32_mesh_sha256": "e47354942dc728b3f69a5f348df7ccd2fdc66cb6b5cf2df4cba4a267063ff04e",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "PL-02x02-H032": {
+      "path": "geometry/PL-02x02-H032.mesh.gz",
+      "bytes": 24802,
+      "sha256": "1c7a954e2bce1b9b15aa6a8bc313893a25905c92afc2944ecac27bedb5a433e0",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2045,
+      "face_count": 4086,
+      "float32_mesh_sha256": "5f555cc7795e22dd26ed0f370d008cfa6a9041a3d35444d2bc4e77aa3707c6db",
+      "maximum_coordinate_rounding_error_mm": 4.9462891560381195e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "PL-02x04-H032": {
+      "path": "geometry/PL-02x04-H032.mesh.gz",
+      "bytes": 54744,
+      "sha256": "70f79c58185d0d98c9e32112f52eca2d85d15860b5fa0868fc4bb6e56e275109",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4607,
+      "face_count": 9210,
+      "float32_mesh_sha256": "9b49496229f12237c1e2fc960cc874b4df9586002db97537f8642aace734ef7c",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "PL-02x08-H032": {
+      "path": "geometry/PL-02x08-H032.mesh.gz",
+      "bytes": 111426,
+      "sha256": "fe5e67baa085972113749e8f521bc89cd46fa20f7b26c5b1daf749e39cc33816",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 9731,
+      "face_count": 19458,
+      "float32_mesh_sha256": "3892f0c8f142b2327c873a0f8c492efd9be5a93b60d8e0b830af061c470c193b",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    }
+  },
+  "assembly_aid_geometry": {},
+  "animation": {
+    "version": "radial-bottom-up-v1",
+    "fps": 12,
+    "frame_count": 144,
+    "duration_seconds": 12.0,
+    "width": 640,
+    "height": 640,
+    "chapters": [
+      {
+        "kind": "turntable",
+        "start_frame": 1,
+        "end_frame": 36,
+        "start_seconds": 0,
+        "end_seconds": 3,
+        "description": "Completed actualmodel,360degreecameraorbit"
+      },
+      {
+        "kind": "radial-explosion",
+        "start_frame": 37,
+        "end_frame": 72,
+        "start_seconds": 3,
+        "end_seconds": 6,
+        "description": "Wholeparts translate radially inall3axes,thenreturn;notphysicaldisassembly"
+      },
+      {
+        "kind": "bottom-up-assembly",
+        "start_frame": 73,
+        "end_frame": 144,
+        "start_seconds": 6,
+        "end_seconds": 12,
+        "description": "Emptythroughascendingactualcourses;eachnewcourse movesdown35mmtoitsactualpose"
+      }
+    ],
+    "geometry": "ACTUAL_NATIVE_INSTANCES",
+    "manifest_sha256": "684d5914d023a40a0b25676503b5fdc2bcd2dfeb48a0e1ff7fcaf3189f2157a6",
+    "radial_vectors_sha256": "136d696336affa11162d265ea717b5e3e6a1c85f202e0009769c2958d546749a",
+    "physical_disassembly_validation": "NOT_CLAIMED",
+    "assembly_empty_final_coverage": true
+  },
+  "camera_conditions": {
+    "front": {
+      "group_id": "part-count-matrix-20260921-normalized-front",
+      "role": "ducky-fine8-base",
+      "view": "front",
+      "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+      "projection": "ORTHOGRAPHIC",
+      "position_mm": [
+        0.0,
+        -1472.7999996,
+        184.09999995
+      ],
+      "target_mm": [
+        0.0,
+        0.0,
+        184.09999995
+      ],
+      "ortho_scale_mm": 511.38888875000004,
+      "image_size_px": [
+        1200,
+        1200
+      ],
+      "pixels_per_mm": 2.3465507882527294,
+      "actual_projected_height_mm": 368.1999999,
+      "rendered_model_height_px": 864.0,
+      "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+      "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+      "direction_world": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "right_world": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "up_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "camera_matrix_world_m": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654e-07,
+          -1.0,
+          -1.4728001356124878
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654e-07,
+          0.18410001695156097
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "three_quarter": {
+      "group_id": "part-count-matrix-20260921-normalized-three_quarter",
+      "role": "ducky-fine8-base",
+      "view": "three_quarter",
+      "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+      "projection": "ORTHOGRAPHIC",
+      "position_mm": [
+        559.22134192,
+        -1285.44292138,
+        796.74734709
+      ],
+      "target_mm": [
+        10.35625378,
+        7.60219504,
+        171.32883347
+      ],
+      "ortho_scale_mm": 533.9061769208543,
+      "image_size_px": [
+        1200,
+        1200
+      ],
+      "pixels_per_mm": 2.247585909046126,
+      "actual_projected_height_mm": 384.41244738301504,
+      "rendered_model_height_px": 864.0,
+      "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+      "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+      "direction_world": [
+        0.3569506476,
+        -0.8409230276,
+        0.4067366431
+      ],
+      "right_world": [
+        0.9205048535,
+        0.3907311285,
+        -0.0
+      ],
+      "up_world": [
+        -0.1589246675,
+        0.374403054,
+        0.9135454576
+      ],
+      "camera_matrix_world_m": [
+        [
+          0.9205048680305481,
+          -0.15892457962036133,
+          0.35695070028305054,
+          0.5592213273048401
+        ],
+        [
+          0.39073115587234497,
+          0.3744029402732849,
+          -0.8409230709075928,
+          -1.2854429483413696
+        ],
+        [
+          -4.176478540784956e-08,
+          0.913545548915863,
+          0.40673649311065674,
+          0.7967473864555359
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  },
+  "downloads": [
+    {
+      "file": "ducky-fine8-base-cad-scene-animation.zip",
+      "bytes": 65359629,
+      "sha256": "e49706bebdb44b543eb2aff35e3f481230d0c2ea72299e59cb2fd969f386db2c",
+      "kind": "PORTABLE_NATIVE_CAD_BLENDER_ANIMATION_BUNDLE"
+    }
+  ],
+  "provenance": {
+    "source_manifest_sha256": "684d5914d023a40a0b25676503b5fdc2bcd2dfeb48a0e1ff7fcaf3189f2157a6",
+    "bom_sha256": "ddf3d62a09a8a8a707466e6f94307f8326ef49e8be9b2b83938f23a5da2185ca",
+    "native_assembly_sha256": "7e85baddf63ec528c1dd20a9838813af2347460a3e0f6ec7c0bcc7cf88947887",
+    "render_scene_sha256": "0193411f018157616bd54078715baa4c948961bd0da074a92cca2aa9228ac5fd"
+  },
+  "status": {
+    "selection": "NOT_SELECTED",
+    "visual_approval": "PENDING",
+    "physical_fit": "UNKNOWN",
+    "retention_strength": "UNKNOWN",
+    "whole_figure_stability": "UNKNOWN",
+    "slicer_status": "NOT_SLICED",
+    "full_print": "ON_HOLD",
+    "printmap": "NOT_GENERATED",
+    "cg": "READY",
+    "native_cad": "READY",
+    "animation": "READY",
+    "assembly": "READY"
+  },
+  "limitations_ja": [
+    "倍率は実部品数で、寸法倍率ではありません。比較1xは本人不在時の暫定前提です。",
+    "完成サイズ増加で元形状の相対格子解像度を上げていますが、色境界は初期C参照で、美観改善の保証ではありません。",
+    "放射状分解は説明図。物理的に衝突せず分解できる保証ではありません。下からの順序は公称支持の検査で、保持力は未確認です。"
+  ],
+  "limitations_en": [
+    "The multiplier is actual physicalpiececount, not linearsize. The1xbaseline is a provisional creator assumption while the user was unavailable.",
+    "Larger fixed-pitch sampling increases relative contour resolution; colors reference initialC. More parts do not guarantee better appearance.",
+    "Radial explosion is explanatory, not collision-free physical disassembly. Bottom-up order has nominal support checks, not verified retention."
+  ],
+  "visual_review": {
+    "images_actually_inspected": true,
+    "comparison_ready": true,
+    "user_visual_approval": "PENDING",
+    "role": "ONE_X_REFERENCE_NOT_ONE_OF_THE_FIFTEEN_MULTIPLIER_CASES",
+    "observations_ja": [
+      "実9669部品の正面・斜めを閲覧。初期FineCの黄色い丸い頭胴、左右の黒目、橙色のくちばしと側部・尾の段階形状を確認した。",
+      "これは初期FineCの実セル/配色を8mm系へ適合した新1x基準であり、旧413部品のr3ではない。輪郭や色が連続曲面になったと主張しない。",
+      "額と頬に階段状の段差、露出スタッド、目の周りとくちばしの離散色境界が残る。数や3D動画が揃っていることと美観合格は別である。",
+      "実nativeassembly/保存sceneのID・姿勢・単色・空から最終までの動作が照合済み。基準の完成を15倍率案の完成数に足さず、現物嵌合・保持・転倒は未確認とする。"
+    ],
+    "observations_en": [
+      "Actual9669-piece front and three-quarter images were inspected: the initialFineC yellow rounded head/body, black eyes, orange beak and stepped side/tail features are visible.",
+      "This new1x reference adapts actualFineC cells/colors to the8mm family; it is not the old413-piece r3. No continuous-surface equivalence is claimed.",
+      "Forehead/cheek steps, exposed studs and discrete eye/beak color boundaries remain. Complete assets and counts are separate from aesthetic acceptance.",
+      "Actual nativeassembly/savedscene identity, poses, single colors and empty-to-final motion were checked. This reference is not counted among the15multiplier designs; fit, retention and tipping remain untested."
+    ],
+    "selection": "NOT_SELECTED",
+    "physical_fit": "UNKNOWN",
+    "retention_strength": "UNKNOWN",
+    "slicer_status": "NOT_SLICED",
+    "full_print": "ON_HOLD"
+  }
+}

@@ -5,6 +5,7 @@ import hashlib
 import json
 from pathlib import Path
 
+from density_requirements import MONA_WHISKER_REQUIREMENT, delivery_status
 ROOT = Path(__file__).resolve().parents[1]
 STUDY = "part-count-matrix-20260921"
 BASE = "https://ktanino10.github.io/octoprints-brick-kit-downloads/"
@@ -17,9 +18,11 @@ def file_url(file):
 
 def public_asset_records(catalog):
     files = {}
-    for case in catalog["cases"]:
-        if case["state"] == "INPUT_WAIT":
-            continue
+    entries = [case for case in catalog["cases"] if case["state"] != "INPUT_WAIT"]
+    entries.extend(baseline for baseline in catalog["baselines"].values() if baseline["state"] == "READY")
+    for case in entries:
+        if "assets" not in case:
+            raise ValueError("A READY case or baseline has no actual public downloads")
         for group in ["cg", "native_cad", "assembly"]:
             for file in case["assets"][group]:
                 url = file_url(file)
@@ -61,7 +64,8 @@ def receipt_for(catalog, *, browser=None, downloads=None, catalog_sha256=None):
             "multiplier": case["count_percentage"] / 100,
             "target_count": case.get("target_count"),
             "actual_count": case["metrics"]["part_count"] if ready else None,
-            "actual_ratio": case.get("actual_ratio"), "status": case["state"],
+            "actual_ratio": case.get("actual_ratio"), "status": delivery_status(case),
+            "source_status": case["state"], "whisker_support": case.get("whisker_support"),
             "cg_url": file_url(case["assets"]["cg"][0]) if ready else None,
             "animation_url": file_url(case["assets"]["animations"]["turntable"]) if ready else None,
             "animation_urls": {key: file_url(file) for key, file in case["assets"]["animations"].items()} if ready else {},
@@ -97,10 +101,23 @@ def receipt_for(catalog, *, browser=None, downloads=None, catalog_sha256=None):
         "baseline_counts": {name: row["metrics"]["part_count"] if row["state"] != "INPUT_WAIT" else None
                             for name, row in catalog["baselines"].items()},
         "baseline_assumption": "INITIAL_FINE_C_ADAPTED_8MM_COMPARISON_ASSUMPTION_NOT_USER_SELECTION",
+        "baseline_references": {name: {
+            "status": baseline["state"],
+            "cad_url": file_url(baseline["assets"]["native_cad"][0]) if baseline["state"] == "READY" else None,
+            "animation_url": file_url(baseline["assets"]["animations"]["turntable"]) if baseline["state"] == "READY" else None,
+            "counts_toward_multiplier_cases": False,
+        } for name, baseline in catalog["baselines"].items()},
         "public_commit": {"record": "archive/deployment.json", "field": "commit"},
         "verified_content_commit": downloads.get("deployment", {}).get("commit") if downloads else None,
         "catalog_sha256": catalog_sha256, "cases": cases,
         "verification": {"public_browser_passed": browser_passed, "anonymous_downloads_passed": downloads_passed},
+        "requested_delivery": {
+            "mona_whisker_requirement": MONA_WHISKER_REQUIREMENT,
+            "physical_validation": "UNKNOWN",
+            "slicer_print_supports": "SEPARATE_UNVALIDATED_CONDITION",
+            "data_ready_case_count": sum(case["source_status"] == "READY" for case in cases),
+            "requirement_ready_case_count": sum(case["status"] == "READY" for case in cases),
+        },
     }
 
 

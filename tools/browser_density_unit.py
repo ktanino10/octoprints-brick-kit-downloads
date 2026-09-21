@@ -68,9 +68,9 @@ image = {**dummy, "framing_rule": "MATCHED_SCREEN_HEIGHT", "condition_id": "unit
 baseline_metrics = {"part_count": 12435, "unique_types": 121, "one_by_one_exceptions": 31,
                     "grip_long_ge_15_8_count": 12404, "dimensions_mm": [423.8, 343.8, 368.2], "minimum_part_mm": [7.8, 7.8, 3.2]}
 catalog = {"schema_version": 1, "study_id": manifest["study_id"], "kind": "ACTUAL_PART_COUNT_MATRIX", **flags,
-    "baselines": {"mona": {"state": "READY", "candidate_id": "unit-baseline", "pitch_mm": 8, "basis": "INITIAL_FINE_C_ADAPTED_8MM",
+    "baselines": {"mona": {"state": "COUNTED", "native_media_status": "PENDING", "candidate_id": "unit-baseline", "pitch_mm": 8, "basis": "INITIAL_FINE_C_ADAPTED_8MM",
         "manifest_sha256": "5556e329521b5706a366c5dad2aa6c7b13eca9d7d74323338773d5e2b20b2b4c",
-        "metrics": baseline_metrics, "images": {"front": image, "three_quarter": image}},
+        "metrics": baseline_metrics},
         "copilot": {"state": "INPUT_WAIT"}, "ducky": {"state": "INPUT_WAIT"}},
     "cases": [{"id": f"{character}-p{percent}", "character": character, "count_percentage": percent, "state": "INPUT_WAIT"}
               for character in ["mona", "copilot", "ducky"] for percent in [120, 150, 200, 300, 400]]}

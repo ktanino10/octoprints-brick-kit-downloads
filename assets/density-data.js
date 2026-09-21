@@ -9,6 +9,7 @@ export const DENSITY_FLAGS = Object.freeze({
   retention_strength: 'UNKNOWN', whole_figure_stability: 'UNKNOWN',
   slicer_status: 'NOT_SLICED', full_print: 'ON_HOLD',
 });
+export const MONA_WHISKER_REQUIREMENT = 'NO_EXTERNAL_OR_ASSEMBLY_AIDS';
 export const isObject = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
 export const isHash = (value) => typeof value === 'string' && /^[0-9a-f]{64}$/.test(value);
 export const isCount = (value) => Number.isSafeInteger(value) && value >= 0;
@@ -54,6 +55,19 @@ export function countTargetResult(baseline, percentage, actual) {
     within_tolerance: Math.abs(difference) <= Math.max(1, target * 0.01) };
 }
 
+export function densityDeliveryStatus(item) {
+  if (item.state !== 'READY') return item.state;
+  if (item.character !== 'mona') return 'READY';
+  const support = item.whisker_support;
+  return isObject(support) && support.external_aid_count === 0 && support.assembly_aid_count === 0
+    && support.status === 'DIGITAL_SELF_SUPPORTING_UNTESTED' && support.physical_validation === 'UNKNOWN'
+    && typeof support.geometry_revision === 'string' && support.geometry_revision.length > 0
+    && support.manifest_sha256 === item.source_manifest_sha256
+    && isHash(support.attachment_evidence_sha256) && isHash(support.sequence_evidence_sha256)
+    && support.all_categories_geometry_match === true
+    ? 'READY' : 'REQUIRES_WHISKER_REVISION';
+}
+
 export function validateDensityPointer(pointer) {
   densityAssert(isObject(pointer) && pointer.schema_version === 1 && pointer.study_id === DENSITY_ID
     && ['INPUT_WAIT', 'PARTIAL', 'READY'].includes(pointer.state)
@@ -73,6 +87,27 @@ function validateMetrics(metrics) {
     && isVector(metrics.dimensions_mm) && metrics.dimensions_mm.every((value) => value > 0)
     && isVector(metrics.minimum_part_mm) && metrics.minimum_part_mm.every((value) => value > 0),
   '実部品数・型数・小部品・寸法の記録が不正です。');
+}
+
+function validateAssetGroups(assets) {
+  densityAssert(isObject(assets), '全案にCG・ネイティブCAD・組立データの公開配布が必要です。');
+  for (const key of ['cg', 'native_cad', 'assembly']) {
+    densityAssert(Array.isArray(assets[key]) && assets[key].length > 0,
+      '全案にCG・ネイティブCAD・組立データの公開配布が必要です。');
+    assets[key].forEach((file) => validateDensityFile(file, { download: true }));
+    const required = { cg: ['still', 'blender'], native_cad: ['freecad_assembly', 'linked_libraries', 'stl', 'step'],
+      assembly: ['bom', 'ordered_ids', 'instructions'] }[key];
+    const contents = new Set(assets[key].flatMap((file) => Array.isArray(file.contents) ? file.contents : []));
+    densityAssert(required.every((kind) => contents.has(kind)),
+      '公開パッケージに必要な実CG・CAD形式・組立記録がそろっていません。');
+  }
+  densityAssert(isObject(assets.animations), '旋回・放射分解・底から組立の実動画が必要です。');
+  for (const key of ['turntable', 'radial_explode', 'bottom_up']) {
+    const animation = validateDensityFile(assets.animations[key], { download: true });
+    densityAssert(Number.isFinite(animation.start_seconds) && animation.start_seconds >= 0
+      && Number.isFinite(animation.end_seconds) && animation.end_seconds > animation.start_seconds,
+    '動画の章・実時間範囲がありません。');
+  }
 }
 
 export function validateDensityCatalog(catalog, pointer) {
@@ -96,6 +131,7 @@ export function validateDensityCatalog(catalog, pointer) {
       'Monaの1倍基準が前回の最終12,435部品から変わっています。');
       if (baseline.state === 'READY') {
         for (const view of ['front', 'three_quarter']) validateDensityFile(baseline.images[view]);
+        validateAssetGroups(baseline.assets);
       } else densityAssert(baseline.images === undefined && baseline.native_media_status === 'PENDING',
         '個数だけが確定した基準を、CG・CAD完成として扱うことはできません。');
     } else {
@@ -136,26 +172,10 @@ export function validateDensityCatalog(catalog, pointer) {
       && isObject(item.assets) && isHash(item.source_manifest_sha256)
       && isHash(item.source_bom_sha256) && /^[0-9a-f]{40}$/.test(item.source_commit),
     '実案の出典・作業負担・配布記録がありません。');
-    for (const key of ['cg', 'native_cad', 'assembly']) {
-      densityAssert(Array.isArray(item.assets[key]) && item.assets[key].length > 0,
-        '全案にCG・ネイティブCAD・組立データの公開配布が必要です。');
-      item.assets[key].forEach((file) => validateDensityFile(file, { download: true }));
-      const required = { cg: ['still', 'blender'], native_cad: ['freecad_assembly', 'linked_libraries', 'stl', 'step'],
-        assembly: ['bom', 'ordered_ids', 'instructions'] }[key];
-      const contents = new Set(item.assets[key].flatMap((file) => Array.isArray(file.contents) ? file.contents : []));
-      densityAssert(required.every((kind) => contents.has(kind)),
-        '公開パッケージに必要な実CG・CAD形式・組立記録がそろっていません。');
-    }
-    densityAssert(isObject(item.assets.animations), '旋回・放射分解・底から組立の実動画が必要です。');
-    for (const key of ['turntable', 'radial_explode', 'bottom_up']) {
-      const animation = validateDensityFile(item.assets.animations[key], { download: true });
-      densityAssert(Number.isFinite(animation.start_seconds) && animation.start_seconds >= 0
-        && Number.isFinite(animation.end_seconds) && animation.end_seconds > animation.start_seconds,
-      '動画の章・実時間範囲がありません。');
-    }
+    validateAssetGroups(item.assets);
   }
   densityAssert(combinations.size === 15, '3体×5倍率の15枠をすべて明示する必要があります。');
-  if (pointer.state === 'READY') densityAssert(catalog.cases.every((item) => item.state === 'READY')
+  if (pointer.state === 'READY') densityAssert(catalog.cases.every((item) => densityDeliveryStatus(item) === 'READY')
     && Object.values(catalog.baselines).every((baseline) => baseline.state === 'READY'),
     '未完成・目標未達の案が残るため、15案すべて完了とは表示できません。');
   return catalog;
