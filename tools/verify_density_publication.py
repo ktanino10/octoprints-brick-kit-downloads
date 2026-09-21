@@ -56,9 +56,12 @@ def main():
     video_ranges = []
     for address in sorted({file["url"] for file in public_asset_records(catalog) if file["url"].endswith(".mp4")}):
         with urlopen(Request(address, headers={**HEADERS, "Range": "bytes=0-1023"}), timeout=60) as response:
-            if response.status != 206 or response.headers.get_content_type() != "video/mp4" or len(response.read()) != 1024:
+            sample = response.read()
+            mime = response.headers.get_content_type()
+            if response.status != 206 or mime not in {"video/mp4", "application/octet-stream"} or len(sample) != 1024 or sample[4:8] != b"ftyp":
                 raise ValueError("Actual published animation does not provide MP4 byte ranges")
             video_ranges.append({"url": address, "status": 206, "content_range": response.headers.get("Content-Range"),
+                                 "content_type": mime, "mp4_ftyp_verified": True,
                                  "final_host": response.url.split("/")[2]})
     report = {"study_id": STUDY, "deployment": deployment, "catalog_sha256": catalog_file["sha256"],
               "changed_site_files": site, "assets": assets, "animation_range_checks": video_ranges,

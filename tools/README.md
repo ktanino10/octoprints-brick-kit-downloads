@@ -241,6 +241,8 @@ Pagesには小画像・catalog・圧縮geometry/placementsだけを置き、追�
 STL/STEP/BOM/手順は版別Releaseから公開します。`.FCStd`相対layoutはパッケージ全展開後に
 別ディレクトリーで再open確認します。ReleaseへのJS fetchを前提にせず、ガイドmeshはPagesから取得します。
 動画だけはHTML mediaとしてGitHubとrelease-assetsのCSPを許可し、実公開のRange/MIME/章再生を検証します。
+GitHub ReleaseのCDNは、upload時がvideo/mp4でも配信時にapplication/octet-streamを返すことがあります。
+この場合は実MP4のftyp・全SHA・206 Rangeと、実ブラウザーで全章がdecode/playできることを別々に確認します。
 
 `check_density.mjs` / `validate_density.py` が実数・0/全ID・工程・放射roundtrip、版不変、容量を検査します。
 `browser_density.py --expect-input-wait` は未受領UIだけを検証し、READY後はフラグなしで
