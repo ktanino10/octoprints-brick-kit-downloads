@@ -6,7 +6,7 @@ import unittest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from install_density_case import STUDY, merge_catalog
 from density_requirements import case_identity, logical_case_id
-from adapt_density_case import revision_fields
+from adapt_density_case import revision_fields, verify_portable_identity, verify_light_parts
 
 
 class IncrementalDensityTests(unittest.TestCase):
@@ -124,6 +124,48 @@ class IncrementalDensityTests(unittest.TestCase):
         self.assertEqual(merged["cases"][:2], incoming["cases"][:2])
         self.assertEqual(merged["historical_cases"], previous["cases"][:2])
         self.assertEqual(sum(case["state"] == "READY" for case in merged["cases"]), 1)
+
+    def test_portable_compact_convention_keeps_exact_source_parts_without_private_metadata(self):
+        source = {
+            "candidate_id": "mona-p120-root-v2", "units": "mm", "position_origin": "body-bottom-center",
+            "frame": {"up": "+Z", "front": "-Y", "handedness": "right"}, "palette": {"unit": {"hex": "#888888"}},
+            "types": {"unit": {"body_mm": [15.8, 15.8, 4.8], "body_height_mm": 4.8, "pitch_mm": 8,
+                               "stud_diameter_mm": 4.8, "private_provenance": "not exported"}},
+            "parts": [{"id": "UNIT", "type_id": "unit", "color_id": "unit", "position_mm": [0, 0, 0],
+                       "rotation_z_deg": 0, "layer": 0, "step": 1, "support_ids": [], "required_aids": [],
+                       "assembly_course": 0, "assembly_stage_z_mm": 0, "insertion_predecessor_ids": [],
+                       "radial_offset_mm": [1, 0, 0]}],
+        }
+        compact = copy.deepcopy(source)
+        compact["origin"] = compact.pop("position_origin")
+        del compact["frame"]
+        del compact["types"]["unit"]["private_provenance"]
+        self.assertTrue(verify_portable_identity(source, compact))
+        for change in [
+            lambda model: model.update(origin="wrong-origin"),
+            lambda model: model.update(frame={"up": "-Z"}),
+            lambda model: model["parts"][0]["position_mm"].__setitem__(0, 8),
+            lambda model: model["parts"][0].update(assembly_stage_z_mm=8),
+            lambda model: model["types"]["unit"].update(body_mm=[31.8, 15.8, 4.8]),
+        ]:
+            changed = copy.deepcopy(compact); change(changed)
+            with self.assertRaises(ValueError):
+                verify_portable_identity(source, changed)
+
+    def test_only_explicit_self_provenance_can_be_added_to_unchanged_source_parts(self):
+        source = {"UNIT": {"id": "UNIT", "step": 1}, "ROOT": {
+            "id": "ROOT", "step": 2, "source_part_ids": ["OLD-1", "OLD-2"]}}
+        exported = [{**source["UNIT"], "source_part_ids": ["UNIT"]}, copy.deepcopy(source["ROOT"])]
+        verify_light_parts(source, exported)
+        for change in [
+            lambda rows: rows[0].update(source_part_ids=["OTHER"]),
+            lambda rows: rows[1].update(source_part_ids=["ROOT"]),
+            lambda rows: rows[0].update(unverified_field=True),
+            lambda rows: rows.append(copy.deepcopy(rows[0])),
+        ]:
+            changed = copy.deepcopy(exported); change(changed)
+            with self.assertRaises(ValueError):
+                verify_light_parts(source, changed)
 
 
 if __name__ == "__main__":

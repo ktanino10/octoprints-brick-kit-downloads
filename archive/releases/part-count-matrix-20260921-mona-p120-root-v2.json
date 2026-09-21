@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "study_id": "part-count-matrix-20260921",
+  "case_id": "mona-p120-root-v2",
+  "tag": "part-count-matrix-20260921-mona-p120-root-v2",
+  "source_commit": "233563b20327a6a99157ca70e58ac5b94c1ff524",
+  "status": "UNSELECTED_DIGITAL_CASE_NOT_SLICED",
+  "assets": [
+    {
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p120-root-v2/mona-p120-root-v2-cad-scene-animation-public.zip",
+      "bytes": 95570052,
+      "sha256": "55bc41fd18283a890755682b8b16a5b4224898c0009ddcd7ae9037344a6218f4"
+    },
+    {
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p120-root-v2/mona-p120-root-v2-assembly-motion.mp4",
+      "bytes": 1904628,
+      "sha256": "9f94be6f50700d98c10f06a7d875686cdc48bb80ec5155fbf0be6d7de65279d6"
+    }
+  ],
+  "case_categories": [
+    "cg",
+    "animation",
+    "native_cad",
+    "assembly"
+  ],
+  "physical_fit": "UNKNOWN",
+  "full_print": "ON_HOLD"
+}

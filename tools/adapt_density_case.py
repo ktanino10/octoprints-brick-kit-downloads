@@ -40,6 +40,57 @@ def revision_fields(identifier, *records):
     return {"logical_case_id": logical, "geometry_revision": revision}
 
 
+def verify_portable_identity(source, portable):
+    for key in ["candidate_id", "units", "palette"]:
+        if portable.get(key) != source.get(key):
+            raise ValueError("Portable CAD manifest changed its source identity, frame or palette")
+    if (source.get("frame") != {"up": "+Z", "front": "-Y", "handedness": "right"}
+            or portable.get("position_origin", portable.get("origin")) != source.get("position_origin")
+            or ("frame" in portable and portable["frame"] != source["frame"])):
+        raise ValueError("Portable CAD manifest changed its declared source coordinate convention")
+    original = {part["id"]: part for part in source["parts"]}
+    exported = {part["id"]: part for part in portable["parts"]}
+    if original.keys() != exported.keys() or len(exported) != len(portable["parts"]):
+        raise ValueError("Portable CAD manifest does not cover the actual source IDs once")
+    fields = ["type_id", "color_id", "position_mm", "rotation_z_deg", "layer", "step",
+              "support_ids", "required_aids", "assembly_course", "radial_offset_mm"]
+    for identifier, part in original.items():
+        keys = fields + [key for key in ["assembly_stage_z_mm", "insertion_predecessor_ids"] if key in part]
+        if any(key not in exported[identifier] or exported[identifier][key] != part[key] for key in keys):
+            raise ValueError("Portable CAD manifest changed an actual source pose, color or assembly dependency")
+    used = {part["type_id"] for part in original.values()}
+    if not used <= portable["types"].keys():
+        raise ValueError("Portable CAD manifest omitted an actual source type")
+    required = {"body_mm", "body_height_mm", "pitch_mm", "stud_diameter_mm"}
+    for identifier in used:
+        spec = portable["types"][identifier]
+        if not required <= spec.keys():
+            raise ValueError("Portable native type lacks its actual dimensions")
+        for key, value in spec.items():
+            if key.endswith("_mm") or key in {"cells", "footprint_cells", "stud_cells", "kind", "origin", "body_slices"}:
+                if value != source["types"][identifier].get(key):
+                    raise ValueError("Portable native type changed retained source geometry metadata")
+    return True
+
+
+def verify_light_parts(original, exported):
+    if len(exported) != len(original) or len({part["id"] for part in exported}) != len(original):
+        raise ValueError("Lightweight instance count or ID coverage differs")
+    for part in exported:
+        if part["id"] not in original:
+            raise ValueError("Lightweight placement contains an unknown source ID")
+        source = original[part["id"]]
+        for key, value in part.items():
+            if key == "source_part_ids" and key not in source:
+                expected = [part["id"]]
+            elif key in source:
+                expected = source[key]
+            else:
+                raise ValueError("Lightweight placement has an unverified source field: " + key)
+            if value != expected:
+                raise ValueError("Lightweight placement changed an actual source part")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--receipt", type=Path, required=True)
@@ -79,6 +130,7 @@ def main():
 
     mb, bb = proof_bytes(f"/cases/{case_id}/manifest.json"), proof_bytes(f"/cases/{case_id}/bom.csv")
     full = json.loads(mb)
+    verify_portable_identity(full, json.loads((native_root / "cases" / case_id / "manifest.json").read_text()))
     revision = revision_fields(case_id, payload, full, summary)
     evidence = verify_manifest_bom(mb, bb)
     motion_bytes = proof_bytes(f"/cases/{case_id}/motion.json")
@@ -86,6 +138,16 @@ def main():
     validation = json.loads(proof_bytes(f"/cases/{case_id}/validation.json"))
     audit = json.loads(proof_bytes(f"/cases/{case_id}/saved-scene-audit.json"))
     native = json.loads(proof_bytes(f"/portable/cases/{case_id}/native-complete.json"))
+    sequence_valid = (
+        validation.get("result") == "PASS_LIMITED_NATIVE_ROOT_AND_BODY_FIRST_SEQUENCE"
+        and validation.get("manifest_sha256") == sha(mb)
+        and validation.get("case_id") == case_id
+        and validation.get("geometry_revision") == revision["geometry_revision"]
+        and validation.get("body_first_all_steps_supported") is True
+        and validation.get("floating_seed_steps") == 0 and validation.get("blocked_vertical_body_columns") == 0
+    ) if revision else (
+        validation.get("bottom_up_all_ids_once") is True and validation.get("radial_absolute_pose_roundtrip") is True
+    )
     if (payload["candidate_id"] != case_id or payload["motion"] != motion
             or evidence["counted_instances"] != summary["metrics"]["part_count"]
             or ("actual_count" in receipt and evidence["counted_instances"] != receipt["actual_count"])
@@ -93,14 +155,10 @@ def main():
             or evidence["bom_sha256"] != summary["provenance"]["bom_sha256"]
             or audit["result"] != "PASS" or not audit["roundtrip_absolute_no_drift"] or not audit["empty_to_final_all_instances"]
             or native["state"] != "COMPLETE_NATIVE_CAD"
-            or not validation["bottom_up_all_ids_once"] or not validation["radial_absolute_pose_roundtrip"]):
+            or not sequence_valid):
         raise ValueError("Actual case count, BOM, motion or native evidence mismatch")
     parts = {part["id"]: part for part in full["parts"]}
-    for part in payload["parts"]:
-        if any(part[key] != parts[part["id"]][key] for key in part):
-            raise ValueError("Lightweight placement changed an actual source part")
-    if len(payload["parts"]) != len(parts):
-        raise ValueError("Lightweight instance count differs")
+    verify_light_parts(parts, payload["parts"])
     source_motion = audit["saved_scene_binding"]
     if (source_motion["actual_instance_count"] != len(parts)
             or source_motion["used_native_types"] != evidence["metrics"]["unique_types"]

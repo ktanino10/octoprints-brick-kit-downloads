@@ -30,8 +30,9 @@ class RootEvidenceTests(unittest.TestCase):
         manifest = {
             "candidate_id": case, "case_id": case, "logical_case_id": "mona-p120",
             "geometry_revision": "whisker-root-v2", "assembly_aids": [], "parts": parts,
+            "assembly": {"assembly_aids": [], "temporary_support_part_ids": [], "temporary_support_part_count": 0},
             "types": {"UNIT-TYPE": {"unit_only": True}}, "palette": {"unit": {"name": "試験専用"}},
-            "motion": {"sequence_mode": "BODY_FIRST_ROOT_ANCHORED", "stages": [
+            "motion": {"sequence_mode": "BODY_FIRST_ROOT_ANCHORED", "temporary_supports": "NONE", "stages": [
                 {"stage_id": "unit-base", "start_step": 1, "end_step": 3, "support_z_mm": 0}]},
             "whisker_load_cases": {"UNIT-ROOT": ["UNIT-PAYLOAD"]},
         }
@@ -69,8 +70,15 @@ class RootEvidenceTests(unittest.TestCase):
                          "actual_body_support_ids": ["UNIT-BODY"], "root_contact_sites": [[0, 0]]}],
             "gravity_balance": {"result": BALANCE_PASS, "physical_mass_measured": False,
                                 "modules": [{"part_id": "UNIT-ROOT", **copy.deepcopy(balance)}]},
+            "root_structural_sections": [{
+                "part_id": "UNIT-ROOT", "type_id": "UNIT-TYPE", "native_single_solid": True,
+                "minimum_true_root_roof_mm": 1.6, "section_count": 1, "minimum_effective_section_area_mm2": 5,
+                "actual_brep_sections": [{"plane_x_mm": 0, "finite_slice_width_mm": 0.1, "effective_solid_area_mm2": 5}],
+                "material_strength_infill_layer_orientation": "UNMEASURED", "note": "UNIT ONLY. No physical strength claim.",
+            }],
             "geometry_sequence_identity_sha256": geometry_sequence_identity(manifest),
             "native_root_contact_evidence_sha256": canonical_sha(native),
+            "actual_native_root_checks": copy.deepcopy(native),
         }
         return manifest, {"whisker_root_native_validation": native}, proof
 
@@ -89,6 +97,7 @@ class RootEvidenceTests(unittest.TestCase):
         manifest, native, proof = self.fixture()
         result = validate_root_evidence(proof, manifest, native)
         self.assertEqual(result["checked_root_modules"], 1)
+        self.assertEqual(result["checked_actual_brep_sections"], 1)
         self.assertEqual(result["physical_validation"], "UNKNOWN")
         self.assertFalse(result["physical_mass_measured"])
         for field in ["position_mm", "radial_offset_mm"]:
@@ -116,6 +125,7 @@ class RootEvidenceTests(unittest.TestCase):
             report = native["whisker_root_native_validation"]
             change(report["modules"][0]["gravity_balance"])
             proof["native_root_contact_evidence_sha256"] = canonical_sha(report)
+            proof["actual_native_root_checks"] = copy.deepcopy(report)
             proof["gravity_balance"]["modules"] = [{"part_id": "UNIT-ROOT", **copy.deepcopy(report["modules"][0]["gravity_balance"])}]
             with self.assertRaises(ValueError):
                 validate_root_evidence(proof, manifest, native)
@@ -136,6 +146,20 @@ class RootEvidenceTests(unittest.TestCase):
         changed["parts"][1]["required_aids"] = ["hidden-support"]
         with self.assertRaises(ValueError):
             root_validation_path(manifest["candidate_id"], summary, changed, {path: raw})
+
+    def test_actual_sections_and_native_clearance_cannot_be_replaced_by_a_status_flag(self):
+        for change in [
+            lambda native, proof: proof["root_structural_sections"].clear(),
+            lambda native, proof: proof["root_structural_sections"][0].update(minimum_effective_section_area_mm2=10),
+            lambda native, proof: proof["root_structural_sections"][0]["actual_brep_sections"][0].update(effective_solid_area_mm2=0),
+            lambda native, proof: native["whisker_root_native_validation"]["modules"][0]["body_supports"][0].update(nominal_volume_overlap_mm3=1),
+        ]:
+            manifest, native, proof = self.fixture()
+            change(native, proof)
+            proof["native_root_contact_evidence_sha256"] = canonical_sha(native["whisker_root_native_validation"])
+            proof["actual_native_root_checks"] = copy.deepcopy(native["whisker_root_native_validation"])
+            with self.assertRaises(ValueError):
+                validate_root_evidence(proof, manifest, native)
 
 
 if __name__ == "__main__":

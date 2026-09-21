@@ -67,19 +67,24 @@ Geometry-only 3MF files remain **NOT_SLICED**, not configured Bambu Studio proje
 **[Copilot 1.2× actual 3D guide](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-guide.html?case=copilot-p120)** /
 **[Copilot CG, Blender, animation and native CAD package](https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/tag/part-count-matrix-20260921-copilot-p120)**.
 
-Actual data satisfying the current delivery requirements is available for **Copilot 1.2× and 1.5×: two of fifteen cases**.
+Actual data satisfying the current delivery requirements is available for **Mona's new 1.2× revision and Copilot 1.2×, 1.5× and 2×: four of fifteen cases**.
 The 1.2× case contains **21,388 parts versus target 21,448 (−60; actual ratio 1.196665×), 155 types,
 519.8 × 439.8 × 397.0 mm**. The 1.5× case contains **26,690 parts versus target 26,810 (−120; actual ratio 1.493314×),
-162 types, 567.8 × 487.8 × 425.8 mm**. Each has one separate, visible temporary support.
+162 types, 567.8 × 487.8 × 425.8 mm**. The 2× case has **35,648 parts versus target 35,746 (−98; actual ratio 1.994517×),
+182 types, 631.8 × 535.8 × 469.0 mm**. Each Copilot case has one separate, visible temporary support.
 The Mona-specific no-stand condition is not extended to Copilot. Crown/cheek steps and asymmetric lime regions remain;
 neither aesthetic nor manufacturing approval is implied.
 
 **New requirement: Mona whiskers must need neither external supports nor temporary assembly pedestals.**
 The published Mona 1.2× and 1.5× data are preserved as historical support-dependent designs.
 They do not meet this added requirement and do not count toward completion of the requested fifteen cases.
-The two old Mona cases are historical records, separate from the fifteen current comparison slots. All five new Mona cases remain incomplete.
-Simply hiding supports in the CG does not qualify. The producer is investigating an actual geometry, root-retention,
-anti-rotation and assembly-order revision, to be introduced as a separate fixed version.
+The two old Mona cases remain separate historical records. Simply hiding supports in the CG does not qualify.
+[Mona's new 1.2× revision](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-guide.html?case=mona-p120-root-v2)
+has **14,913 parts (target 14,922; −9), 118 types and zero external/temporary assembly aids**.
+Two actual one-piece modules connect the whiskers into the cheek body. Evidence covers native contacts, 49 material sections,
+support-stage sequencing and all 28/30 nominal CAD load-prefix checks. Printed mass, PLA retention and strength remain unmeasured.
+Actual tip-bottom heights of 83.2/88 mm are preserved while insertion uses the 92.8 mm support stage.
+Old URLs are not silently replaced. The other four new Mona multiplier cases remain incomplete.
 Slicer-generated print supports are a separate unvalidated condition.
 All three 1× baselines now have separate public CG, native CAD, Blender and three-chapter animation packages linked from their matrix reference cards.
 **The three baselines do not count toward completion of the fifteen multiplier cases.**

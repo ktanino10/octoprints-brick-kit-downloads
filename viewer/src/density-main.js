@@ -87,7 +87,9 @@ function updateProgress() {
   const active = progress.mode === 'assembly' ? index.ordered[progress.steps] ?? null : null;
   $('#guide-active').textContent = active ? `${active.id} · ${active.type_id} · ${manifest.palette[active.color_id].name}`
     : count === manifest.parts.length ? '全IDを表示中（実物組立の承認ではありません）' : '次に配置する部品を確認してください。';
-  $('#guide-current-course').textContent = active ? `次：配置層 ${active.assembly_course} / 底面Z ${number(active.position_mm[2])} mm` : '';
+  $('#guide-current-course').textContent = !active ? '' : manifest.animation_contract.sequence_mode === 'BODY_FIRST_ROOT_ANCHORED'
+    ? `次：支持段 ${active.assembly_course} / 支持高さZ ${number(active.assembly_stage_z_mm)} mm / 実部品底面Z ${number(active.position_mm[2])} mm`
+    : `次：配置層 ${active.assembly_course} / 底面Z ${number(active.position_mm[2])} mm`;
   $('#guide-required-aids').textContent = active?.required_aids.length
     ? `先に置く仮支持台：${active.required_aids.join(', ')}。実保持力を確認する前に撤去しないでください。` : '';
   const parts = active ? manifest.types[active.type_id].files ?? {} : {};
@@ -249,7 +251,12 @@ async function selectCandidate(id, params = null) {
     return;
   }
   try {
-    const next = validateGuideManifest(await verifiedJSON(item.manifest, signal), id);
+    const data = await verifiedJSON(item.manifest, signal);
+    const rootProof = data.root_validation ? await verifiedJSON(data.root_validation, signal) : null;
+    const next = validateGuideManifest(data, id, rootProof);
+    if (rootProof) check(item.whisker_support?.sequence_evidence_sha256 === next.root_validation.sha256
+      && item.whisker_support?.manifest_sha256 === next.source_manifest_sha256,
+    '根元改訂の証拠が実ID・形状・組立順・支台数と一致しません。');
     check(next.metrics.part_count === item.metrics.part_count && next.metrics.unique_types === item.metrics.unique_types,
       'カタログと実3Dの部品数・使用型が一致しません。');
     const libraries = await loadNativeLibraries(next.geometry_files, signal);
@@ -259,7 +266,13 @@ async function selectCandidate(id, params = null) {
     const whiskerRevisionRequired = densityDeliveryStatus(item) === 'REQUIRES_WHISKER_REVISION';
     $('#guide-whisker-status').hidden = !whiskerRevisionRequired;
     if (whiskerRevisionRequired) $('#guide-whisker-status').textContent =
-      '表示中は外付け・組立仮支台が必要な旧Mona設計です。支台を非表示にして新要件達成とは扱いません。ヒゲ支台なしの実改訂を待っており、今回の完了件数から除外しています。';
+      '表示中は外付け・組立仮支台が必要な旧Mona設計です。支台を非表示にして新要件達成とは扱いません。ヒゲ支台なしの新版とは別の履歴で、今回の完了件数から除外しています。';
+    if (rootProof) {
+      $('#guide-whisker-status').hidden = false;
+      $('#guide-whisker-status').replaceChildren(element('p',
+        'この改訂は実一体ヒゲ部品と支持段の順序を使い、外付け支え・組立仮支台は0個です。CAD接触・断面・公称重心を検査済みですが、実物の質量・保持力・強度は未検証です。実部品の底面Zと支持高さは区別して表示します。'),
+      link(next.root_validation, '根元・順序・公称CAD重心の検査記録 ↗'));
+    }
     $('#guide-target-status').textContent = item.state === 'TARGET_MISSED'
       ? '個数目標の許容差を未達。15案の完成には数えていません。'
       : `目標 ${number(item.target_count, 0)} / 実数 ${number(item.metrics.part_count, 0)} / 実倍率 ${number(item.actual_ratio, 4)}倍`;

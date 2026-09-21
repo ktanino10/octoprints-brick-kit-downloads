@@ -53,7 +53,77 @@ export function validateRootAnchoredStructure(manifest) {
   return manifest;
 }
 
-export function validateGuideManifest(manifest, candidateId) {
+function validateRootEvidenceBinding(manifest, proof) {
+  check(isObject(proof), '新版の取付順は、実形状に結び付いた工程検査記録を確認するまで表示できません。');
+  validateDensityFile(manifest.root_validation);
+  const support = manifest.whisker_support;
+  check(isObject(support) && support.external_aid_count === 0 && support.assembly_aid_count === 0
+    && support.status === 'DIGITAL_SELF_SUPPORTING_UNTESTED' && support.physical_validation === 'UNKNOWN'
+    && support.geometry_revision === manifest.geometry_revision && support.all_categories_geometry_match === true
+    && isHash(manifest.source_manifest_sha256) && support.manifest_sha256 === manifest.source_manifest_sha256
+    && manifest.root_validation.path === `/artifacts/studies/${DENSITY_ID}/validation/${manifest.candidate_id}-whisker-support.json`
+    && manifest.root_validation.sha256 === support.sequence_evidence_sha256
+    && support.assembly_validation_ref?.sha256 === manifest.root_validation.sha256
+    && isHash(manifest.geometry_sequence_identity_sha256) && isHash(manifest.native_root_contact_evidence_sha256)
+    && support.geometry_sequence_identity_sha256 === manifest.geometry_sequence_identity_sha256
+    && support.attachment_evidence_sha256 === manifest.native_root_contact_evidence_sha256
+    && proof.schema_version === 1 && proof.case_id === manifest.candidate_id
+    && proof.logical_case_id === manifest.logical_case_id && proof.geometry_revision === manifest.geometry_revision
+    && proof.geometry_sequence_identity_sha256 === manifest.geometry_sequence_identity_sha256
+    && proof.native_root_contact_evidence_sha256 === manifest.native_root_contact_evidence_sha256
+    && proof.status === support.status && proof.physical_validation === 'UNKNOWN'
+    && proof.external_aid_count === 0 && proof.assembly_aid_count === 0
+    && proof.actual_parts === manifest.parts.length && proof.actual_types === manifest.metrics.unique_types
+    && proof.floating_seed_steps === 0 && proof.blocked_vertical_body_columns === 0
+    && proof.source_occupied_cells_unchanged === true && proof.source_visible_colors_unchanged === true
+    && proof.body_first_all_steps_supported === true
+    && proof.slicer_supports === 'UNKNOWN_SEPARATE_FROM_NO_ASSEMBLY_STANDS',
+  '根元改訂の証拠が実ID・形状・組立順・支台数と一致しません。');
+  const native = proof.actual_native_root_checks, gravity = proof.gravity_balance;
+  check(native?.result === 'PASS_ACTUAL_BODY_ROOT_BREP_CONTACTS'
+    && native.gravity_balance_result === 'PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS'
+    && native.external_aid_count === 0 && native.assembly_aid_count === 0
+    && gravity?.result === native.gravity_balance_result && gravity.physical_mass_measured === false
+    && Array.isArray(proof.modules) && proof.modules.length > 0
+    && Array.isArray(native.modules) && native.modules.length === proof.modules.length
+    && Array.isArray(gravity.modules) && gravity.modules.length === proof.modules.length
+    && Array.isArray(proof.root_structural_sections) && proof.root_structural_sections.length === proof.modules.length,
+  '根元の実CAD接触・断面・組立途中の重心検査が未完了です。');
+  const byId = new Map(manifest.parts.map((part) => [part.id, part])), seen = new Set();
+  for (const module of proof.modules) {
+    const part = byId.get(module.part_id);
+    const body = native.modules.find((item) => item.part_id === module.part_id);
+    const balance = gravity.modules.find((item) => item.part_id === module.part_id);
+    const section = proof.root_structural_sections.find((item) => item.part_id === module.part_id);
+    check(part && !seen.has(part.id) && module.type_id === part.type_id && module.step === part.step
+      && module.physical_bottom_z_mm === part.position_mm[2] && module.receiving_body_stage_z_mm === part.assembly_stage_z_mm
+      && Array.isArray(module.actual_body_support_ids) && module.actual_body_support_ids.length > 0
+      && module.actual_body_support_ids.every((id) => part.support_ids.includes(id))
+      && body?.actual_single_solid === true && body.native_root_type === part.type_id && body.module_insertion_step === part.step
+      && section?.native_single_solid === true && section.type_id === part.type_id
+      && finite(section.minimum_effective_section_area_mm2) && section.minimum_effective_section_area_mm2 > 0
+      && section.material_strength_infill_layer_orientation === 'UNMEASURED'
+      && balance?.result === 'PASS_NOMINAL_CAD_STATIC_MOMENT_BOUND'
+      && finite(balance.required_margin_mm) && balance.required_margin_mm >= 1
+      && finite(balance.minimum_support_margin_mm) && balance.minimum_support_margin_mm >= balance.required_margin_mm
+      && Array.isArray(balance.downstream_payloads) && Array.isArray(balance.assembly_prefix_checks)
+      && balance.assembly_prefix_checks.length === balance.downstream_payloads.length + 1,
+    '根元の実CAD接触・断面・組立途中の重心検査が未完了です。');
+    const expected = [part.id, ...balance.downstream_payloads.map((item) => item.part_id)];
+    check(new Set(expected).size === expected.length, '根元改訂の証拠が実ID・形状・組立順・支台数と一致しません。');
+    for (const [index, id] of expected.entries()) {
+      const item = balance.assembly_prefix_checks[index], payload = byId.get(id);
+      check(payload && item.after_step === payload.step
+        && (item.added_part_id === id || (index === 0 && item.added_part_id === null))
+        && (index === 0 || payload.step > byId.get(expected[index - 1]).step)
+        && finite(item.minimum_support_margin_mm) && item.minimum_support_margin_mm >= balance.required_margin_mm,
+      '根元の実CAD接触・断面・組立途中の重心検査が未完了です。');
+    }
+    seen.add(part.id);
+  }
+}
+
+export function validateGuideManifest(manifest, candidateId, rootEvidence = null) {
   const identity = densityCaseIdentity(candidateId);
   check(isObject(manifest) && manifest.schema_version === 1 && manifest.study_id === DENSITY_ID
     && manifest.candidate_id === candidateId
@@ -129,12 +199,17 @@ export function validateGuideManifest(manifest, candidateId) {
     && contract.disassembly_validation === 'NOT_SIMULATED'
     && contract.physical_assembly === 'UNKNOWN' && isVector(contract.radial_center_mm),
   '放射分解・底からの組立の表示契約がありません。');
-  check(contract.sequence_mode === undefined || contract.sequence_mode === 'BOTTOM_UP_SOURCE_ORDER',
-    '新版の取付順は、実形状に結び付いた工程検査記録を確認するまで表示できません。');
+  const rootAnchored = contract.sequence_mode === 'BODY_FIRST_ROOT_ANCHORED';
+  if (identity.revision || rootAnchored) {
+    check(rootAnchored, '新版の取付順は、実形状に結び付いた工程検査記録を確認するまで表示できません。');
+    validateRootEvidenceBinding(manifest, rootEvidence);
+    validateRootAnchoredStructure(manifest);
+  } else check(contract.sequence_mode === undefined || contract.sequence_mode === 'BOTTOM_UP_SOURCE_ORDER',
+    '放射分解・底からの組立の表示契約がありません。');
   const ordered = [...manifest.parts].sort((a, b) => a.step - b.step);
   for (let index = 0; index < ordered.length; index++) {
     const part = ordered[index], before = ordered[index - 1];
-    check(part.step === index + 1 && (!before || (part.position_mm[2] >= before.position_mm[2] - 1e-7
+    check(part.step === index + 1 && (rootAnchored || !before || (part.position_mm[2] >= before.position_mm[2] - 1e-7
       && part.assembly_course >= before.assembly_course)), '組立順が底から順に並んでいません。');
     for (const support of part.support_ids) {
       check(ids.has(support) && ids.get(support).step < part.step, '必要な支持部品より先に組み立てる順序になっています。');
@@ -178,7 +253,8 @@ export function guideIndex(manifest) {
     groups.get(key).parts.push(part);
     let course = courses.at(-1);
     if (!course || course.id !== part.assembly_course) {
-      course = { id: part.assembly_course, bottom_z_mm: part.position_mm[2], start: part.step - 1, end: part.step };
+      course = { id: part.assembly_course, bottom_z_mm: part.position_mm[2],
+        support_z_mm: part.assembly_stage_z_mm ?? part.position_mm[2], start: part.step - 1, end: part.step };
       courses.push(course);
     }
     course.end = part.step;

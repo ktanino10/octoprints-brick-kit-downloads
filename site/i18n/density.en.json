@@ -1,4 +1,11 @@
 {
+  "支台ありMonaは旧設計として保存し、この要件を満たす完成案には数えません。実形状・根元保持・組立順を改訂した新版は、全ての制作物と検査記録がそろった案だけ追加します。CGから支台を消すだけでは達成しません。実物の保持力や、スライサーの印刷用サポート要否は未検証です。": "Support-dependent Mona designs are preserved as history and do not fulfill this requirement. A revised geometry, root and assembly sequence is added only when all actual assets and evidence are complete. Hiding supports in the CG does not qualify. Physical retention and slicer-generated print supports remain unvalidated.",
+  "表示中は外付け・組立仮支台が必要な旧Mona設計です。支台を非表示にして新要件達成とは扱いません。ヒゲ支台なしの新版とは別の履歴で、今回の完了件数から除外しています。": "The displayed historical Mona needs external or temporary assembly supports. Hiding them would not meet the new requirement. This is a different historical geometry version from the support-free revision and is excluded from the requested completion count.",
+  "根元改訂の証拠が実ID・形状・組立順・支台数と一致しません。": "Root-revision evidence does not match the actual IDs, geometry, sequence or aid counts.",
+  "根元の実CAD接触・断面・組立途中の重心検査が未完了です。": "Actual root CAD contact, section or assembly-prefix balance checks are incomplete.",
+  "次：支持段 {0} / 支持高さZ {1} mm / 実部品底面Z {2} mm": "Next: support course {0} / support height Z {1} mm / actual part-bottom Z {2} mm",
+  "この改訂は実一体ヒゲ部品と支持段の順序を使い、外付け支え・組立仮支台は0個です。CAD接触・断面・公称重心を検査済みですが、実物の質量・保持力・強度は未検証です。実部品の底面Zと支持高さは区別して表示します。": "This revision uses real one-piece whisker modules and support-stage ordering, with zero external or temporary assembly aids. CAD contacts, sections and nominal balance were checked; physical mass, retention and strength remain unvalidated. Actual part-bottom Z and support height are shown separately.",
+  "根元・順序・公称CAD重心の検査記録 ↗": "Root, sequence and nominal CAD balance evidence ↗",
   "支持段による取付順は、検証対象のMona根元改訂だけに限定します。": "Support-stage installation order is restricted to the specified Mona root revision.",
   "支台なしの取付順に、外付け・組立仮支台が含まれています。": "The support-free sequence contains external or temporary assembly aids.",
   "根元改訂の支持段・工程番号が底側からの順序と一致しません。": "The root revision's support stages or course numbers do not follow bottom-up order.",

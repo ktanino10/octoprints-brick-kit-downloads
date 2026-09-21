@@ -302,15 +302,26 @@ Copilot/DuckyにはMona固有の条件を適用せず、旧MonaのURL/画像/Rel
 
 新版の実一体ヒゲmoduleは低い実底面と高い取付支持段を持ち得ます。
 制作元の `BODY_FIRST_ROOT_ANCHORED` は本体を下から積み、受け側支持段でmoduleを取付ける契約です。
-実 `position_mm` は改変しません。この新modeは形状・native・差込み・全順序の固定検査証拠を受領するまで
-明示エラーにし、既存のbody-bottom-Z非減少検査を無条件に緩めたり、旧順序へ戻したりしません。
+実 `position_mm` は改変しません。新modeは同じcase/logical/revision・全ID・形状/sequence SHAに結び付いた
+公開証拠JSONを別途SHA照合して取得できた場合だけ有効にします。欠落/不一致は明示エラーです。
+支持段/course非減少、support/insertion先行ID、工程区分、0aid、実root接触/断面/重心prefixを検査し、
+旧caseのbody-bottom-Z非減少guardはそのまま維持します。単なるmetadata例外や旧順序へのfallbackはありません。
+実guideでは支持高さと本当の部品底面を分けて表示し、根元部品の直前/直後、裏面と0aidを実ブラウザーで確認します。
 
 `density_root_evidence.py` は、固定された実source manifestの全型・palette・parts・motion_stages・
 whisker_load_casesから指定のASCII-escaped compact JSONを作り、geometry/sequence SHAを検算します。
 元native-completeの根元接触reportも同じcanonical SHAで公開小証拠へ結びます。module単体の重心と実支持凸包、
 各組立prefixの1 mm以上の公称CAD margin、後続部品の実ID/順序、native bearingと差込みsampleを確認します。
 これは均一密度のCAD静モーメントの証拠で、印刷質量やPLA保持力の実測ではありません。
-新modeの実案を有効にするには、さらに公開ガイドの同じ証拠参照と新順序の受入を完了する必要があります。
+private full sourceは `assembly.assembly_aids`、portable/light形式はtop-level `assembly_aids` を使います。
+portable形式の `origin` はfull sourceの `position_origin` と同じ意味です。フィールドを黙って無視せず、
+実sourceの全ID/type/color/pose/step/dependenciesをportable manifestにも照合します。
+通常部品へ補われる `source_part_ids:[自身のID]` だけは明示的な自己参照として許容し、
+結合部品のsource ID一覧を変更・捏造することは拒否します。
+`verify_blender_matrix_animation.py --frame 89 --frame 91` は通常6サンプルに実取付境界を追加します。
+
+増分browserの `--case` は複数指定できます。`--skip-baseline-media` は変更していない参照動画だけを省略し、
+配信検査が直前の公開catalogと比較してその範囲を再検証します。390pxは指定scope内の最大実caseを使います。
 
 大きい公開ZIPの最終化は既存依存を入れた `.venv/bin/python tools/finalize_density_package.py ...` で実行します。
 Blender 5系の圧縮scene検査には既存のzstandard依存が必要です。Releaseのdraftはタグ参照APIで404になる場合があり、

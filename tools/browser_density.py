@@ -13,7 +13,7 @@ parser.add_argument("--url", required=True)
 parser.add_argument("--browser", required=True)
 parser.add_argument("--engine", choices=["chromium", "webkit"], default="chromium")
 parser.add_argument("--expect-input-wait", action="store_true")
-parser.add_argument("--case", help="A specific actual READY case for incremental acceptance")
+parser.add_argument("--case", action="append", help="A specific actual READY case; repeat for an incremental batch")
 parser.add_argument("--skip-baseline-media", action="store_true",
                     help="For unchanged baseline assets only; the publication verifier independently checks this scope")
 parser.add_argument("--output", type=Path, default=Path(".archive-work/density-browser"))
@@ -71,7 +71,7 @@ with sync_playwright() as playwright:
             assert pointer["state"] in ["PARTIAL", "READY"]
             catalog = context.request.get(urljoin(base, pointer["catalog"]["path"].lstrip("/"))).json()
             cases = [entry for entry in catalog["cases"] if entry["state"] == "READY"
-                     and (not args.case or entry["id"] == args.case)]
+                     and (not args.case or entry["id"] in args.case)]
             assert cases
             for locale in ["ja", "en"]:
                 page.goto(urljoin(base, f"{locale}/density-matrix.html"), wait_until="networkidle")
@@ -105,6 +105,33 @@ with sync_playwright() as playwright:
                 expect(page.locator("#guide-error")).to_be_hidden()
                 expect(page.locator("#density-canvas")).to_have_attribute("data-visible-parts", str(entry["metrics"]["part_count"]))
                 english(page)
+                root_reference = entry.get("whisker_support", {}).get("assembly_validation_ref")
+                if root_reference:
+                    root_proof = context.request.get(urljoin(base, root_reference["path"].lstrip("/"))).json()
+                    assert page.evaluate("window.__densityGuide.diagnostics().actual_aids") == 0
+                    page.locator("#guide-mode").select_option("assembly")
+                    expect(page.locator("#density-canvas")).to_have_attribute("data-visible-parts", "0")
+                    for module in root_proof["modules"]:
+                        before = module["step"] - 1
+                        page.locator("#guide-step").evaluate(
+                            "(input, step) => { input.value = step; input.dispatchEvent(new Event('input', {bubbles:true})); }", str(before))
+                        expect(page.locator("#guide-active")).to_contain_text(module["part_id"])
+                        expect(page.locator("#guide-current-course")).to_contain_text("support height")
+                        expect(page.locator("#guide-current-course")).to_contain_text(str(module["receiving_body_stage_z_mm"]))
+                        expect(page.locator("#guide-current-course")).to_contain_text(str(module["physical_bottom_z_mm"]).removesuffix(".0"))
+                        page.locator('[data-guide-action="part-next"]').click()
+                        expect(page.locator("#density-canvas")).to_have_attribute("data-visible-parts", str(module["step"]))
+                        page.locator("#guide-search").fill(module["part_id"])
+                        page.locator("#guide-parts button").first.click()
+                        expect(page.locator("#guide-selection strong")).to_have_text(module["part_id"])
+                        page.locator('[data-guide-action="part-bottom"]').click()
+                        expect(page.locator("#guide-part-preview canvas")).to_be_visible()
+                        page.locator("#guide-part-preview").screenshot(
+                            path=str(args.output / f'{module["part_id"]}-native-underside.png'))
+                        assert page.evaluate("window.__densityGuide.diagnostics().matrix_elements_mismatched") == 0
+                    page.locator("#guide-search").fill("")
+                    page.locator('[data-guide-action="complete"]').click()
+                    checked("actual support-free root modules enter after their receivers, retain low physical origins and expose native undersides")
                 page.locator("#guide-mode").select_option("radial")
                 for value in ["100", "0", "100", "0"]:
                     page.locator("#guide-explode").evaluate("(input, value) => { input.value = value; input.dispatchEvent(new Event('input', {bubbles:true})); }", value)
@@ -172,8 +199,10 @@ with sync_playwright() as playwright:
         phone_context = browser.new_context(viewport={"width": 390, "height": 844}, is_mobile=True,
                                             has_touch=True, locale="ja-JP", reduced_motion="reduce")
         phone = phone_context.new_page()
+        mobile_case = None if args.expect_input_wait else max(cases, key=lambda entry: entry["metrics"]["part_count"])["id"]
+        report["mobile_case"] = mobile_case
         for route in ["density-matrix.html", "density-guide.html"]:
-            suffix = f'?case={args.case}' if args.case and route == "density-guide.html" else ""
+            suffix = f'?case={mobile_case}' if mobile_case and route == "density-guide.html" else ""
             phone.goto(urljoin(base, f"en/{route}{suffix}"), wait_until="domcontentloaded")
             if not args.expect_input_wait and route == "density-guide.html":
                 expect(phone.locator("#density-canvas")).to_have_attribute("data-ready", "true", timeout=180000)
@@ -215,6 +244,20 @@ with sync_playwright() as playwright:
             english(broken_geometry)
             broken_geometry_context.close()
             checked("failed actual images or native meshes show explicit errors without replacement geometry")
+            root_entry = next((entry for entry in cases if entry.get("whisker_support", {}).get("assembly_validation_ref")), None)
+            if root_entry:
+                proof_context = browser.new_context()
+                proof_page = proof_context.new_page()
+                evidence = root_entry["whisker_support"]["assembly_validation_ref"]
+                proof_page.route(urljoin(base, evidence["path"].lstrip("/")),
+                                 lambda route: route.fulfill(status=503, body="missing actual root evidence"))
+                proof_page.goto(urljoin(base, f'en/density-guide.html?case={root_entry["id"]}'), wait_until="domcontentloaded")
+                expect(proof_page.locator("#guide-error")).to_be_visible()
+                expect(proof_page.locator("#density-canvas")).to_have_attribute("data-ready", "false")
+                expect(proof_page.locator("#density-canvas canvas")).to_have_count(0)
+                english(proof_page)
+                proof_context.close()
+                checked("missing support-free root evidence blocks native guide loading instead of weakening sequence guards")
         assert not report["errors"], report["errors"]
     except Exception as error:
         report["failure"] = str(error)

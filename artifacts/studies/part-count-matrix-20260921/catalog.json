@@ -425,7 +425,139 @@
       "geometry_revision": "whisker-root-v2",
       "character": "mona",
       "count_percentage": 120,
-      "state": "INPUT_WAIT"
+      "state": "READY",
+      "metrics": {
+        "part_count": 14913,
+        "unique_types": 118,
+        "one_by_one_exceptions": 38,
+        "layer_count": 83,
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "grip_long_ge_15_8_count": 14875,
+        "dimensions_mm": [
+          439.8,
+          359.8,
+          397.0
+        ]
+      },
+      "target_count": 14922,
+      "target_difference": -9,
+      "actual_ratio": 1.1992762364294332,
+      "manifest": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/cases/mona-p120-root-v2-guide.json.gz",
+        "bytes": 670203,
+        "sha256": "3a5b667e20f766fe721c584041e756fe892b592de70f419caeee15165733a580"
+      },
+      "source_manifest_sha256": "ee3f8121f1ba46fff973952a6cd9a4fc5f6d868a8cb4e9924d068d01d7828b88",
+      "source_bom_sha256": "eb92c1bf364b041ab7659eab9fa74fdfee79d4efc6ad48dddd27eb88fecf98bf",
+      "source_commit": "233563b20327a6a99157ca70e58ac5b94c1ff524",
+      "images": {
+        "front": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/mona-p120-root-v2-assembled-front.jpg",
+          "bytes": 73179,
+          "sha256": "a67ddc431a82418c024581199bd62234057c02e0e4eeebe60d9e4e4d9d9ba8a6",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_front"
+        },
+        "three_quarter": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/mona-p120-root-v2-assembled-three_quarter.jpg",
+          "bytes": 98332,
+          "sha256": "aa886a3f15a5feebaac2c50aa532b2ef707ae9601e21aecc173cf3960ae0fb98",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_three_quarter"
+        }
+      },
+      "tradeoff": "実14913部品の正面・斜めと実動画フレーム1/54/73/89/91/108/144を確認。外付け柱・仮支持台は描画にも実部品定義にもなく、ヒゲの先端と輪郭は残っている。 frame89では受け側の下部本体を先に組み、frame91で根元と先端が連続したヒゲ部品が入る。実root2部品の受け側はすべて早いcourse18/19に存在し、rootはcourse20。単に支台を非表示にした旧順序ではない。 根元は同色の既存頬内部部品まで実際に広げた。最大root寸法207.8x63.8x14.4mmで、元の外形セルと見える色は変えず、内部の継ぎ目と一部ヒゲの部品境界が減った。 以前の支台依存案14936個から23個減り、固定目標14922との差は-9。数量のためのダミーや追加重りはなく、実際に一体化した構造部品を一つずつ数えている。 実nativeの着座・差込み・断面と全body-first順序を検証。CAD一様密度の根元単体と後続荷重28/30prefixの静モーメントでは、支持域の最小幾何余裕は19.76/15.18mm。これは実PLA重量/インフィル/保持力の実測でも強度保証でもない。 顔の目内縁・鼻・口の離散色境界は元の1.2倍案の課題として残る。部品数倍率や支台不要の設計検証を、美観の承認に読み替えない。 印刷時のサポート材が要るかは別問題。スライス・材料・積層方向・クリープ・実保持力・全体の転倒は未確認のまま。",
+      "assets": {
+        "cg": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p120-root-v2/mona-p120-root-v2-cad-scene-animation-public.zip",
+            "filename": "mona-p120-root-v2-cad-scene-animation-public.zip",
+            "bytes": 95570052,
+            "sha256": "55bc41fd18283a890755682b8b16a5b4224898c0009ddcd7ae9037344a6218f4",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "still",
+              "blender"
+            ]
+          }
+        ],
+        "native_cad": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p120-root-v2/mona-p120-root-v2-cad-scene-animation-public.zip",
+            "filename": "mona-p120-root-v2-cad-scene-animation-public.zip",
+            "bytes": 95570052,
+            "sha256": "55bc41fd18283a890755682b8b16a5b4224898c0009ddcd7ae9037344a6218f4",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "freecad_assembly",
+              "linked_libraries",
+              "stl",
+              "step"
+            ]
+          }
+        ],
+        "assembly": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p120-root-v2/mona-p120-root-v2-cad-scene-animation-public.zip",
+            "filename": "mona-p120-root-v2-cad-scene-animation-public.zip",
+            "bytes": 95570052,
+            "sha256": "55bc41fd18283a890755682b8b16a5b4224898c0009ddcd7ae9037344a6218f4",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "bom",
+              "ordered_ids",
+              "instructions"
+            ]
+          }
+        ],
+        "animations": {
+          "turntable": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p120-root-v2/mona-p120-root-v2-assembly-motion.mp4",
+            "bytes": 1904628,
+            "sha256": "9f94be6f50700d98c10f06a7d875686cdc48bb80ec5155fbf0be6d7de65279d6",
+            "start_seconds": 0,
+            "end_seconds": 3
+          },
+          "radial_explode": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p120-root-v2/mona-p120-root-v2-assembly-motion.mp4",
+            "bytes": 1904628,
+            "sha256": "9f94be6f50700d98c10f06a7d875686cdc48bb80ec5155fbf0be6d7de65279d6",
+            "start_seconds": 3,
+            "end_seconds": 6
+          },
+          "bottom_up": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p120-root-v2/mona-p120-root-v2-assembly-motion.mp4",
+            "bytes": 1904628,
+            "sha256": "9f94be6f50700d98c10f06a7d875686cdc48bb80ec5155fbf0be6d7de65279d6",
+            "start_seconds": 6,
+            "end_seconds": 12
+          }
+        }
+      },
+      "whisker_support": {
+        "external_aid_count": 0,
+        "assembly_aid_count": 0,
+        "status": "DIGITAL_SELF_SUPPORTING_UNTESTED",
+        "physical_validation": "UNKNOWN",
+        "geometry_revision": "whisker-root-v2",
+        "manifest_sha256": "ee3f8121f1ba46fff973952a6cd9a4fc5f6d868a8cb4e9924d068d01d7828b88",
+        "attachment_evidence_sha256": "9b5b2165ffa1f9b06cb03df75de66f845517a8ad444645bed2a0c942c6bab97d",
+        "sequence_evidence_sha256": "884841f7ddaa6d67994899b958f736e0cfce8c7068e9784b61324f3bd20f2674",
+        "motion_sha256": "628d5b73fac3b817429a7c00d46a3df94df7f3e367b50610d1544b4afba846c7",
+        "geometry_sequence_identity_sha256": "77f2ecbdb116ab35d9843026fb6158a9add22d5e99c1f4f8b91c4c7508850457",
+        "all_categories_geometry_match": true,
+        "assembly_validation_ref": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/validation/mona-p120-root-v2-whisker-support.json",
+          "bytes": 95718,
+          "sha256": "884841f7ddaa6d67994899b958f736e0cfce8c7068e9784b61324f3bd20f2674"
+        },
+        "gravity_balance_result": "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS",
+        "physical_mass_measured": false
+      }
     },
     {
       "id": "mona-p150-root-v2",
@@ -699,7 +831,119 @@
       "id": "copilot-p200",
       "character": "copilot",
       "count_percentage": 200,
-      "state": "INPUT_WAIT"
+      "state": "READY",
+      "metrics": {
+        "part_count": 35648,
+        "unique_types": 182,
+        "one_by_one_exceptions": 57,
+        "layer_count": 98,
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "grip_long_ge_15_8_count": 35591,
+        "dimensions_mm": [
+          631.8,
+          535.8,
+          469.0
+        ]
+      },
+      "target_count": 35746,
+      "target_difference": -98,
+      "actual_ratio": 1.99451686902031,
+      "manifest": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/cases/copilot-p200-guide.json.gz",
+        "bytes": 1316660,
+        "sha256": "268f567ced9183dbecf108afe68cb3564499bd8921e9bfb7b8526471cc19f652"
+      },
+      "source_manifest_sha256": "f9d4f8f43b4391314e436a39e2228cff8b36fdd94d574c8923a00ee804a8a26c",
+      "source_bom_sha256": "c8684609650efbac880cb9a6b68dba0bc4abcb6882e3114dc1f25d1871db1903",
+      "source_commit": "1cdefd83e3988504fe9c7887ca3097ce284ed5d3",
+      "images": {
+        "front": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/copilot-p200-assembled-front.jpg",
+          "bytes": 82207,
+          "sha256": "18f40bfd5a1869292fcff01920bf2bc65dec6653201a0714541f7894b3800935",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_front"
+        },
+        "three_quarter": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/copilot-p200-assembled-three_quarter.jpg",
+          "bytes": 106693,
+          "sha256": "a9cef1a8e1b0fa125db5ed42e81a2cc6153d78694d66f37d96c56bea43812336",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_three_quarter"
+        }
+      },
+      "tradeoff": "実35648部品、固定目標35746との差-98で許容内。完成正面・斜めと実動画フレーム1/18/54/73/108/144を確認した。 ゴーグルの紫枠・青い面、頭頂から後頭部の丸みと左右の出っ張りが実ブロックとして維持されている。全体を同じ画面高さに収めても、1xより相対的に細かい段差が見える。 実631.8x535.8x469.0mm、実倍率1.994517。8mm部品の寸法は固定で、線寸法を2倍にした案ではない。 黄緑の特徴色の縁と下側の青い頬には離散的な形の偏りや溝が残る。輪郭の密度増加を表情や美観の合格点に換算しない。 1x1例外57個、長辺15.8mm以上35591個。底部の仮支持1個は別数量で実映像に示し、Monaだけに適用された支台なし要件とは分離している。 実nativeの保存/移動再open、全35648ID/type/color/pose/step、分解後の復帰と0から全数までの動作を照合済み。現物の嵌合・保持・荷重・転倒や印刷は未検証のまま。",
+      "assets": {
+        "cg": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p200/copilot-p200-cad-scene-animation-public.zip",
+            "filename": "copilot-p200-cad-scene-animation-public.zip",
+            "bytes": 152580995,
+            "sha256": "36bdb5841ac90f890338106ccbb41edd4a0d56d993eb2b5e7a7400cc780b990d",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "still",
+              "blender"
+            ]
+          }
+        ],
+        "native_cad": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p200/copilot-p200-cad-scene-animation-public.zip",
+            "filename": "copilot-p200-cad-scene-animation-public.zip",
+            "bytes": 152580995,
+            "sha256": "36bdb5841ac90f890338106ccbb41edd4a0d56d993eb2b5e7a7400cc780b990d",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "freecad_assembly",
+              "linked_libraries",
+              "stl",
+              "step"
+            ]
+          }
+        ],
+        "assembly": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p200/copilot-p200-cad-scene-animation-public.zip",
+            "filename": "copilot-p200-cad-scene-animation-public.zip",
+            "bytes": 152580995,
+            "sha256": "36bdb5841ac90f890338106ccbb41edd4a0d56d993eb2b5e7a7400cc780b990d",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "bom",
+              "ordered_ids",
+              "instructions"
+            ]
+          }
+        ],
+        "animations": {
+          "turntable": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p200/copilot-p200-assembly-motion.mp4",
+            "bytes": 1863943,
+            "sha256": "9205cfdcdaef1ad3c92ab30cc77c5dca497ab5c275a45b7b2300391395a59ce6",
+            "start_seconds": 0,
+            "end_seconds": 3
+          },
+          "radial_explode": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p200/copilot-p200-assembly-motion.mp4",
+            "bytes": 1863943,
+            "sha256": "9205cfdcdaef1ad3c92ab30cc77c5dca497ab5c275a45b7b2300391395a59ce6",
+            "start_seconds": 3,
+            "end_seconds": 6
+          },
+          "bottom_up": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p200/copilot-p200-assembly-motion.mp4",
+            "bytes": 1863943,
+            "sha256": "9205cfdcdaef1ad3c92ab30cc77c5dca497ab5c275a45b7b2300391395a59ce6",
+            "start_seconds": 6,
+            "end_seconds": 12
+          }
+        }
+      }
     },
     {
       "id": "copilot-p300",

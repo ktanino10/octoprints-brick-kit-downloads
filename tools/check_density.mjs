@@ -34,7 +34,9 @@ if (pointer.state === 'INPUT_WAIT') {
   const checkedGeometry = new Set();
   for (const entry of allDensityCases(catalog)) {
     if (entry.state === 'INPUT_WAIT') continue;
-    const manifest = validateGuideManifest(await load(entry.manifest), entry.id);
+    const data = await load(entry.manifest);
+    const proof = data.root_validation ? await load(data.root_validation) : null;
+    const manifest = validateGuideManifest(data, entry.id, proof);
     for (const file of Object.values(entry.images)) await verified(file);
     for (const file of manifest.geometry_files) {
       if (checkedGeometry.has(file.sha256)) continue;

@@ -172,7 +172,7 @@ test('revised geometry occupies one logical slot while old actual IDs remain exp
   const guide = guideFixture();
   Object.assign(guide, { candidate_id: revised.id, logical_case_id: revised.logical_case_id,
     geometry_revision: revised.geometry_revision });
-  assert.equal(validateGuideManifest(guide, revised.id), guide);
+  assert.throws(() => validateGuideManifest(guide, revised.id), /工程検査記録/);
   assert.throws(() => validateGuideManifest(guide, original.id));
   guide.animation_contract.sequence_mode = 'BODY_FIRST_ROOT_ANCHORED';
   assert.throws(() => validateGuideManifest(guide, revised.id), /工程検査記録/);
@@ -214,6 +214,73 @@ test('root-anchored structural checks preserve real low origins and require actu
     const changed = structuredClone(manifest); change(changed);
     assert.throws(() => validateRootAnchoredStructure(changed));
   }
+});
+
+test('only bound root evidence enables support-stage ordering; old Z-order guards stay strict', () => {
+  const manifest = guideFixture();
+  const id = 'mona-p120-root-v2', revision = 'whisker-root-v2';
+  const reference = { ...file('proof.json'), path: `/artifacts/studies/${DENSITY_ID}/validation/${id}-whisker-support.json` };
+  Object.assign(manifest, { candidate_id: id, logical_case_id: 'mona-p120', geometry_revision: revision,
+    source_manifest_sha256: 'b'.repeat(64), geometry_sequence_identity_sha256: 'c'.repeat(64),
+    native_root_contact_evidence_sha256: 'd'.repeat(64), root_validation: reference });
+  manifest.whisker_support = {
+    external_aid_count: 0, assembly_aid_count: 0, status: 'DIGITAL_SELF_SUPPORTING_UNTESTED',
+    physical_validation: 'UNKNOWN', geometry_revision: revision, all_categories_geometry_match: true,
+    manifest_sha256: manifest.source_manifest_sha256, sequence_evidence_sha256: reference.sha256,
+    assembly_validation_ref: reference, geometry_sequence_identity_sha256: manifest.geometry_sequence_identity_sha256,
+    attachment_evidence_sha256: manifest.native_root_contact_evidence_sha256,
+  };
+  manifest.animation_contract.sequence_mode = 'BODY_FIRST_ROOT_ANCHORED';
+  for (const part of manifest.parts) {
+    part.assembly_stage_z_mm = part.position_mm[2];
+    part.insertion_predecessor_ids = [...part.support_ids];
+  }
+  manifest.parts[4].position_mm[2] = -2;
+  for (const stage of manifest.animation_contract.stages) stage.support_z_mm = manifest.parts[stage.start_step - 1].assembly_stage_z_mm;
+  const root = manifest.parts[4];
+  const proof = {
+    schema_version: 1, case_id: id, logical_case_id: manifest.logical_case_id, geometry_revision: revision,
+    status: 'DIGITAL_SELF_SUPPORTING_UNTESTED', physical_validation: 'UNKNOWN',
+    external_aid_count: 0, assembly_aid_count: 0, actual_parts: 8, actual_types: 1,
+    floating_seed_steps: 0, blocked_vertical_body_columns: 0, source_occupied_cells_unchanged: true,
+    source_visible_colors_unchanged: true, body_first_all_steps_supported: true,
+    slicer_supports: 'UNKNOWN_SEPARATE_FROM_NO_ASSEMBLY_STANDS',
+    geometry_sequence_identity_sha256: manifest.geometry_sequence_identity_sha256,
+    native_root_contact_evidence_sha256: manifest.native_root_contact_evidence_sha256,
+    modules: [{ part_id: root.id, type_id: root.type_id, step: root.step, physical_bottom_z_mm: -2,
+      receiving_body_stage_z_mm: 4.8, actual_body_support_ids: root.support_ids }],
+    actual_native_root_checks: {
+      result: 'PASS_ACTUAL_BODY_ROOT_BREP_CONTACTS', gravity_balance_result: 'PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS',
+      external_aid_count: 0, assembly_aid_count: 0,
+      modules: [{ part_id: root.id, actual_single_solid: true, native_root_type: root.type_id, module_insertion_step: root.step }],
+    },
+    root_structural_sections: [{ part_id: root.id, native_single_solid: true, type_id: root.type_id,
+      minimum_effective_section_area_mm2: 5, material_strength_infill_layer_orientation: 'UNMEASURED' }],
+    gravity_balance: {
+      result: 'PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS', physical_mass_measured: false,
+      modules: [{ part_id: root.id, result: 'PASS_NOMINAL_CAD_STATIC_MOMENT_BOUND', required_margin_mm: 1,
+        minimum_support_margin_mm: 2, downstream_payloads: [],
+        assembly_prefix_checks: [{ added_part_id: root.id, after_step: root.step, minimum_support_margin_mm: 2 }] }],
+    },
+  };
+  assert.equal(validateGuideManifest(manifest, id, proof), manifest);
+  for (const change of [
+    (data) => { data.actual_parts--; },
+    (data) => { data.geometry_sequence_identity_sha256 = 'f'.repeat(64); },
+    (data) => { data.modules[0].physical_bottom_z_mm = 4.8; },
+    (data) => { data.modules[0].receiving_body_stage_z_mm = -2; },
+    (data) => { data.actual_native_root_checks.result = 'PENDING'; },
+    (data) => { data.gravity_balance.physical_mass_measured = true; },
+    (data) => { data.gravity_balance.modules[0].assembly_prefix_checks[0].minimum_support_margin_mm = 0.9; },
+  ]) {
+    const changed = structuredClone(proof); change(changed);
+    assert.throws(() => validateGuideManifest(manifest, id, changed));
+  }
+  const legacy = guideFixture();
+  legacy.parts[4].position_mm[2] = -2;
+  assert.throws(() => validateGuideManifest(legacy, 'mona-p120'), /底から順/);
+  legacy.animation_contract.sequence_mode = 'BODY_FIRST_ROOT_ANCHORED';
+  assert.throws(() => validateGuideManifest(legacy, 'mona-p120', proof));
 });
 
 test('radial explosion is absolute, all-directional and exactly reversible for every pose', () => {
@@ -331,12 +398,20 @@ test('installed actual guide cases retain source fingerprint counts and absolute
   const bytes = await readFile(new URL(densityPath(publication.catalog.path).slice(1), root));
   assert.equal(createHash('sha256').update(bytes).digest('hex'), publication.catalog.sha256);
   const catalog = validateDensityCatalog(JSON.parse(bytes), publication);
-  for (const item of catalog.cases.filter((entry) => entry.state !== 'INPUT_WAIT')) {
+  for (const item of allDensityCases(catalog).filter((entry) => entry.state !== 'INPUT_WAIT')) {
     const source = await readFile(new URL(densityPath(item.manifest.path).slice(1), root));
     assert.equal(source.length, item.manifest.bytes);
     assert.equal(createHash('sha256').update(source).digest('hex'), item.manifest.sha256);
     const { gunzipSync } = await import('node:zlib');
-    const guide = validateGuideManifest(JSON.parse(gunzipSync(source)), item.id);
+    const data = JSON.parse(gunzipSync(source));
+    let proof = null;
+    if (data.root_validation) {
+      const evidence = await readFile(new URL(densityPath(data.root_validation.path).slice(1), root));
+      assert.equal(evidence.length, data.root_validation.bytes);
+      assert.equal(createHash('sha256').update(evidence).digest('hex'), data.root_validation.sha256);
+      proof = JSON.parse(evidence);
+    }
+    const guide = validateGuideManifest(data, item.id, proof);
     assert.equal(guide.parts.length, item.metrics.part_count);
     assert.equal(guide.metrics.unique_types, item.metrics.unique_types);
     assert.equal(guide.source_manifest_sha256, item.source_manifest_sha256);

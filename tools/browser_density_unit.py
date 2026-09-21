@@ -93,9 +93,8 @@ catalog["cases"][0].update({
 catalog["historical_cases"] = [copy.deepcopy(catalog["cases"][0])]
 revised_id = "mona-p120-root-v2"
 revision = {"logical_case_id": "mona-p120", "geometry_revision": "whisker-root-v2"}
-revised_manifest = {**manifest, **revision, "candidate_id": revised_id}
-revised_file = resource("UNIT-ONLY-root-v2.json.gz", gzip.compress(encoded(revised_manifest), mtime=0), "application/gzip")
-catalog["cases"][0].update(id=revised_id, manifest=revised_file, **revision)
+catalog["cases"][0] = {"id": revised_id, "character": "mona", "count_percentage": 120,
+                       "state": "INPUT_WAIT", **revision}
 catalog_file = resource("UNIT-ONLY-catalog.json", encoded(catalog))
 pointer = {"schema_version": 1, "study_id": manifest["study_id"], "state": "PARTIAL", **flags, "catalog": catalog_file}
 report = {"scope": "LABELED_UNIT_FIXTURE_ONLY_NOT_REAL_CANDIDATE_ACCEPTANCE",
@@ -113,7 +112,7 @@ with sync_playwright() as playwright:
     page = context.new_page()
     page.on("pageerror", lambda error: report["errors"].append(str(error)))
     try:
-        page.goto(urljoin(base, f"en/density-guide.html?case={revised_id}"), wait_until="domcontentloaded")
+        page.goto(urljoin(base, "en/density-guide.html?case=mona-p120"), wait_until="domcontentloaded")
         expect(page.locator("#density-canvas")).to_have_attribute("data-ready", "true", timeout=60000)
         expect(page.locator("#guide-error")).to_be_hidden()
         expect(page.locator("#density-canvas")).to_have_attribute("data-visible-parts", "8")
@@ -144,7 +143,15 @@ with sync_playwright() as playwright:
         expect(page.locator("#density-canvas")).to_have_attribute("data-ready", "true", timeout=60000)
         expect(page.locator("#guide-selection strong")).to_have_text("UNIT-TEST-0")
         expect(page.locator("#guide-error")).to_be_hidden()
-        assert parse_qs(urlparse(page.url).query)["case"] == [revised_id]
+        assert parse_qs(urlparse(page.url).query)["case"] == ["mona-p120"]
+        page.locator("#guide-case").select_option(revised_id)
+        expect(page.locator("#density-canvas")).to_have_attribute("data-ready", "false")
+        expect(page.locator("#guide-target-status")).to_have_text("")
+        expect(page.locator("#guide-loading")).to_be_visible()
+        assert parse_qs(urlparse(page.url).query) == {"case": [revised_id]}
+        page.reload(wait_until="networkidle")
+        expect(page.locator("#density-canvas canvas")).to_have_count(0)
+        expect(page.locator("#guide-error")).to_be_hidden()
         page.locator("#guide-case").select_option("mona-p120")
         expect(page.locator("#density-canvas")).to_have_attribute("data-ready", "true", timeout=60000)
         expect(page.locator("#guide-error")).to_be_hidden()
@@ -163,7 +170,7 @@ with sync_playwright() as playwright:
         report["checks"] = ["real WebGL/packed mesh path", "radial slider roundtrip", "zero/one/course/stage/final",
                             "standalone underside", "type/color destinations", "language/shared reload",
                             "target-missed unit fixture never counted as a completed case",
-                            "explicit revision URL and immutable historical URL survive selection and reload",
+                            "unverified root revision stays empty while immutable history survives selection and reload",
                             "history remains linked separately from the fifteen comparison slots"]
         print("PASS: isolated 8-part UNIT FIXTURE mechanics; not production-case acceptance.")
     except Exception as error:

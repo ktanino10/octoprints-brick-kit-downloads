@@ -130,7 +130,11 @@ def validate_root_evidence(proof, manifest, native_complete):
     require(all(proof.get(key) is True for key in [
         "source_occupied_cells_unchanged", "source_visible_colors_unchanged", "body_first_all_steps_supported"]),
         "The root revision has not preserved its source occupancy, colors and supported sequence")
-    require(manifest.get("assembly_aids") == [] and all(part.get("required_aids") == [] for part in parts.values()),
+    assembly = manifest.get("assembly", {})
+    require(assembly.get("assembly_aids") == [] and assembly.get("temporary_support_part_ids") == []
+            and type(assembly.get("temporary_support_part_count")) is int and assembly["temporary_support_part_count"] == 0
+            and manifest["motion"].get("temporary_supports") == "NONE"
+            and all(part.get("required_aids") == [] for part in parts.values()),
             "The actual source manifest still requires assembly aids")
     identity = geometry_sequence_identity(manifest)
     require(proof.get("geometry_sequence_identity_sha256") == identity,
@@ -142,6 +146,8 @@ def validate_root_evidence(proof, manifest, native_complete):
             "The actual native root-contact or CAD static-balance checks have not passed")
     require(proof.get("native_root_contact_evidence_sha256") == canonical_sha(native),
             "Public root evidence differs from its fixed actual native check report")
+    require(proof.get("actual_native_root_checks") == native,
+            "Public actual-root checks differ from the canonical native report")
     modules = native.get("modules")
     public_modules = proof.get("modules")
     require(isinstance(modules, list) and bool(modules) and isinstance(public_modules, list),
@@ -157,11 +163,33 @@ def validate_root_evidence(proof, manifest, native_complete):
     gravity_by_id = {item["part_id"]: item for item in gravity["modules"]}
     require(len(gravity_by_id) == len(gravity["modules"]) == len(modules),
             "The public gravity record omits or duplicates a root module")
+    sections = proof.get("root_structural_sections")
+    require(isinstance(sections, list), "Actual BRep root-section evidence is missing")
+    sections_by_id = {item["part_id"]: item for item in sections}
+    require(len(sections_by_id) == len(sections) == len(modules),
+            "Actual root-section evidence omits or duplicates a module")
     for module in modules:
         part_id = module["part_id"]
-        require(part_id in parts and part_id in by_id and part_id in gravity_by_id,
+        require(part_id in parts and part_id in by_id and part_id in gravity_by_id and part_id in sections_by_id,
                 "Native root evidence names an unknown actual part")
         part, public = parts[part_id], by_id[part_id]
+        section = sections_by_id[part_id]
+        slices = section.get("actual_brep_sections")
+        require(section.get("type_id") == part["type_id"] and section.get("native_single_solid") is True
+                and finite(section.get("minimum_true_root_roof_mm")) and section["minimum_true_root_roof_mm"] > 0
+                and isinstance(slices, list) and bool(slices) and section.get("section_count") == len(slices)
+                and section.get("material_strength_infill_layer_orientation") == "UNMEASURED"
+                and isinstance(section.get("note"), str) and bool(section["note"].strip()),
+                "A root lacks actual continuous BRep sections or overstates physical strength")
+        for sample in slices:
+            require(finite(sample.get("plane_x_mm")) and finite(sample.get("finite_slice_width_mm"))
+                    and sample["finite_slice_width_mm"] > 0 and finite(sample.get("effective_solid_area_mm2"))
+                    and sample["effective_solid_area_mm2"] > 0,
+                    "An actual BRep root section is empty or invalid")
+        require(finite(section.get("minimum_effective_section_area_mm2"))
+                and math.isclose(section["minimum_effective_section_area_mm2"],
+                                 min(sample["effective_solid_area_mm2"] for sample in slices), abs_tol=1e-6, rel_tol=0),
+                "The reported minimum root section differs from the actual slice records")
         require(module.get("actual_single_solid") is True and module.get("native_root_type") == part["type_id"]
                 and module.get("module_insertion_step") == part["step"]
                 and public.get("type_id") == part["type_id"] and public.get("step") == part["step"]
@@ -178,7 +206,7 @@ def validate_root_evidence(proof, manifest, native_complete):
             offsets = support.get("insertion_offsets_mm")
             require(lower in parts and parts[lower]["step"] < part["step"]
                     and finite(support.get("native_bearing_mm2")) and support["native_bearing_mm2"] > 0
-                    and finite(support.get("nominal_volume_overlap_mm3")) and support["nominal_volume_overlap_mm3"] >= 0
+                    and finite(support.get("nominal_volume_overlap_mm3")) and 0 <= support["nominal_volume_overlap_mm3"] <= 1e-5
                     and isinstance(offsets, list) and bool(offsets) and all(finite(offset) and offset >= 0 for offset in offsets)
                     and any(offset > 0 for offset in offsets),
                     "A root support lacks actual positive bearing or upward-clearance samples")
@@ -196,6 +224,8 @@ def validate_root_evidence(proof, manifest, native_complete):
         "geometry_sequence_identity_sha256": identity,
         "native_root_contact_evidence_sha256": canonical_sha(native),
         "checked_root_modules": len(modules),
+        "checked_actual_brep_sections": sum(len(item["actual_brep_sections"]) for item in sections),
+        "nominal_body_overlap_tolerance_mm3": 1e-5,
         "gravity_balance_result": BALANCE_PASS,
         "physical_validation": "UNKNOWN",
         "physical_mass_measured": False,
