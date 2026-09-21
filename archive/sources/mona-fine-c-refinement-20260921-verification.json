@@ -1,0 +1,100 @@
+{
+  "study_id": "mona-fine-c-refinement-20260921",
+  "source_commit": "02918d3bffd4db065656f5ffe7e037da1b0754d8",
+  "public_source_files": 21,
+  "public_source_bytes": 4465276,
+  "private_inputs_read_only": 14,
+  "private_inputs_copied": 0,
+  "native_assets_copied": 0,
+  "native_contract_sha256": "06704d9aa619e06b3710563a69047c35a7c546c685e04c64c7c9ea145aab2978",
+  "native_binding_report_sha256": "09495d32943a46528166ce5a716f84042fe94e38bd8c335e55018007c50d0987",
+  "rows": [
+    {
+      "candidate_id": "mona-fine",
+      "manifest_sha256": "93fd37f62bfaa588a016f1c748a97912d41e72f7719a094734ccbb12277ce552",
+      "bom_sha256": "3d3ca01d8f0fa3fcaf58abb25cd09ce239e089d379d18c32f2c95337ef078aaa",
+      "counted_instances": 13837,
+      "bom_ids_match": true,
+      "bom_types_colors_poses_steps_match": true,
+      "identity_projection_sha256": "21afd937f3e3592d6b88432b1d295d5654ad2d79bc44040b39221b2a22e2ddb4",
+      "reference_identity_verified": true,
+      "geometry_sha256": "6b100a0e9904ffcaaae86cb8f84561365cb3607a6a8ea26cec14d8b7c455d3e1",
+      "native_geometry_source_hashes": [
+        {
+          "sha256": "6b100a0e9904ffcaaae86cb8f84561365cb3607a6a8ea26cec14d8b7c455d3e1"
+        }
+      ],
+      "used_native_geometry_report_sha256": "92a74e04c53cbee217e09b4cbe5efe38a336c2c510d728951c1841a7b062ff6b",
+      "native_scene_binding_report_sha256": "09495d32943a46528166ce5a716f84042fe94e38bd8c335e55018007c50d0987",
+      "render_stats_sha256": "5c64463f255bc8253016c43f06604d544469514902c25513bde8f50b62d9272d",
+      "depth_evidence_sha256": "f30274d3ecaba10d20cd5724f48fd99de8d8d9659b4acf2836673c3d6dc14fb0",
+      "whole_part_colors_verified": true,
+      "render_instances_match_manifest": true,
+      "native_binding_basis": "HASH_VERIFIED_SOURCE_SAVED_SCENE_REPORT_AND_INDEPENDENT_MANIFEST_BOM_CHECK"
+    },
+    {
+      "candidate_id": "mona-dense360",
+      "manifest_sha256": "c0cdfc713492f106023afceffa2fec347bba795be4a3f06fdf70823525884c31",
+      "bom_sha256": "75286040e3633736d4327bdfdf6c33bf80d5605235c9a3701186f28f569a796b",
+      "counted_instances": 10908,
+      "bom_ids_match": true,
+      "bom_types_colors_poses_steps_match": true,
+      "identity_projection_sha256": "bb1f0479cea61efba01aa583c4be0ab565385ae748dc7c4a92d658bdb5bcb228",
+      "reference_identity_verified": true,
+      "geometry_sha256": "40b970cf670a0c3351e40f12cc2b8edbd12bd0e9bd6aad0a2fb0658d501ada80",
+      "native_geometry_source_hashes": [
+        {
+          "sha256": "c11e40d506e6326584dd2c4410b9869c1e541688ec37db5819d247bcef812cdb"
+        },
+        {
+          "sha256": "43a6ab45801566ee5c5b3fc9dbf3cf16695e2b2f1e731c0ac575bbdf0d437cf3"
+        },
+        {
+          "sha256": "40b970cf670a0c3351e40f12cc2b8edbd12bd0e9bd6aad0a2fb0658d501ada80"
+        }
+      ],
+      "used_native_geometry_report_sha256": "8c53cf7ae4d8118699eb424247980293e052cd1386a8c8d52d7f047c70a16626",
+      "native_scene_binding_report_sha256": "09495d32943a46528166ce5a716f84042fe94e38bd8c335e55018007c50d0987",
+      "render_stats_sha256": "add04a974a2ae0d939b0f2a129e9cfd9759c9e53343cc25843a8d9400577d26c",
+      "depth_evidence_sha256": "8ec501c780af56c386aa94f1e3a6eecbfbebb92d5f95811d16c0cbcae0d36cb7",
+      "whole_part_colors_verified": true,
+      "render_instances_match_manifest": true,
+      "native_binding_basis": "HASH_VERIFIED_SOURCE_SAVED_SCENE_REPORT_AND_INDEPENDENT_MANIFEST_BOM_CHECK"
+    },
+    {
+      "candidate_id": "mona-fine-c360",
+      "manifest_sha256": "5556e329521b5706a366c5dad2aa6c7b13eca9d7d74323338773d5e2b20b2b4c",
+      "bom_sha256": "655133f47a8ed4bd5e9a103c2d67dc1585b6d1e9a47b99ba4391e29e0e354fc9",
+      "counted_instances": 12435,
+      "bom_ids_match": true,
+      "bom_types_colors_poses_steps_match": true,
+      "identity_projection_sha256": "0e24e37dd8ff9366fb64ba8f126d728467a058f26d3b23b6429a2ca972977ac7",
+      "geometry_sha256": "fff2c4172184d5f8cfca81fe1ad67d7b1ae53ce8c6cff6d0221884b59b276e4f",
+      "native_geometry_source_hashes": [
+        {
+          "sha256": "c11e40d506e6326584dd2c4410b9869c1e541688ec37db5819d247bcef812cdb"
+        },
+        {
+          "sha256": "43a6ab45801566ee5c5b3fc9dbf3cf16695e2b2f1e731c0ac575bbdf0d437cf3"
+        },
+        {
+          "sha256": "40b970cf670a0c3351e40f12cc2b8edbd12bd0e9bd6aad0a2fb0658d501ada80"
+        },
+        {
+          "sha256": "54ba05729e1db5225e1b6349dedba99b18b1dcad902b59a703446e0433212287"
+        },
+        {
+          "sha256": "fff2c4172184d5f8cfca81fe1ad67d7b1ae53ce8c6cff6d0221884b59b276e4f"
+        }
+      ],
+      "used_native_geometry_report_sha256": "778e86f702b9a6698d61018ce05378b6a35766d1d9aeb2ca1f0f90a05efa8a6c",
+      "native_scene_binding_report_sha256": "09495d32943a46528166ce5a716f84042fe94e38bd8c335e55018007c50d0987",
+      "render_stats_sha256": "71233dd91f2ea82ccecb6f56feb7cd27d9f90d334d9d9938d501afdceb9490fb",
+      "depth_evidence_sha256": "944ebc1bf768125bc7cd50e41c8ec001698957e27465a8ecea14ac7efca5fa49",
+      "whole_part_colors_verified": true,
+      "render_instances_match_manifest": true,
+      "native_binding_basis": "HASH_VERIFIED_SOURCE_SAVED_SCENE_REPORT_AND_INDEPENDENT_MANIFEST_BOM_CHECK"
+    }
+  ],
+  "files": []
+}

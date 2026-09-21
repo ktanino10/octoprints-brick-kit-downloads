@@ -201,3 +201,12 @@ READY後は同フラグなしで実数・高さfamily・全画像・顔優先の
 共通表示コードの変更時は `browser_mona_study.py` で既存4列比較も回帰確認します。
 公開後は `verify_publication.py --study mona-fine-c-refinement-20260921` で変更分だけを匿名照合します。
 本体CAD・Blender・大規模mesh・プリントデータはこの比較の公開範囲外です。
+
+`import_mona_refinement.py --handoff <private-ready-receipt>` は固定commit
+`02918d3bffd4db065656f5ffe7e037da1b0754d8` の21許可ファイルを元バイトでコピーします。
+14件の実manifest/BOM・render-stats・depth-camera・native-scene-binding・小native-contractは
+明示されたものだけを読み取り、コピーしません。最終入力は `manifest-edge-refined.json` と
+`edge-finished/bom.csv` で、保存された中間の `manifest.json` ではありません。
+全35入力のGitblob/サイズ/SHAを確認し、12,435配置・121使用型・実高さfamily・単色・保存sceneの対応を照合します。
+native検証記録はsource担当の再open結果として扱い、publisherが私有sceneを再生成したとは主張しません。
+公開proofには入力パス・実行コマンド・ログを残さず、必要なSHA・実数・判定根拠だけを保存します。

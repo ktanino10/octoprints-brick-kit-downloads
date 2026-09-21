@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "study_id": "mona-fine-c-refinement-20260921",
-  "state": "INPUT_WAIT",
+  "state": "READY",
   "current_revision_unchanged": "r3-8mm-20260920",
   "previous_study_unchanged": "mona-likeness-360-20260921",
   "selection": "NOT_SELECTED",
@@ -9,5 +9,8 @@
   "physical_fit": "UNKNOWN",
   "retention_strength": "UNKNOWN",
   "slicer_status": "NOT_SLICED",
-  "full_print": "ON_HOLD"
+  "full_print": "ON_HOLD",
+  "source_commit": "02918d3bffd4db065656f5ffe7e037da1b0754d8",
+  "data_url": "/artifacts/studies/mona-fine-c-refinement-20260921/public-study.json",
+  "data_sha256": "74dbac0aa520a6ffa4cf1550bf90be3400e216d153c1813277bc734b86e5ef87"
 }

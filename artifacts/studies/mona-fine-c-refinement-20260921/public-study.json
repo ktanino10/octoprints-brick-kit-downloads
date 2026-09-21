@@ -1,0 +1,2474 @@
+{
+  "schema_version": 1,
+  "study_id": "mona-fine-c-refinement-20260921",
+  "kind": "MONA_FINE_C_REFINEMENT_COMPARISON",
+  "source_kind": "MONA_FINE_C_PATTERN_REFINEMENT",
+  "source_commit": "02918d3bffd4db065656f5ffe7e037da1b0754d8",
+  "source_study_sha256": "a3ed17cd5c0f48f493cef94261be96380cb0d79abddebe3c81a9fcc2306e7a92",
+  "current_revision_unchanged": "r3-8mm-20260920",
+  "previous_study_unchanged": "mona-likeness-360-20260921",
+  "selection": "NOT_SELECTED",
+  "visual_approval": "PENDING",
+  "physical_fit": "UNKNOWN",
+  "retention_strength": "UNKNOWN",
+  "slicer_status": "NOT_SLICED",
+  "full_print": "ON_HOLD",
+  "rows": [
+    {
+      "role": "fine-c",
+      "source_role": "phase1-fine-c",
+      "candidate_id": "mona-fine",
+      "pitch_mm": 4,
+      "stud_diameter_mm": 4.8,
+      "open_underside": false,
+      "color_mode": "WHOLE_PART_SINGLE_COLOR",
+      "metrics": {
+        "part_count": 13837,
+        "unique_types": 7,
+        "one_by_one_exceptions": 1766,
+        "layer_count": 75,
+        "minimum_part_mm": [
+          3.82,
+          3.82,
+          2.28
+        ],
+        "grip_long_ge_15_8_count": 9162,
+        "body_height_families": [
+          {
+            "body_height_mm": 2.28,
+            "part_count": 13837,
+            "unique_types": 7
+          }
+        ],
+        "dimensions_mm": [
+          211.82,
+          171.82,
+          180.71
+        ]
+      },
+      "evidence": {
+        "manifest_sha256": "93fd37f62bfaa588a016f1c748a97912d41e72f7719a094734ccbb12277ce552",
+        "bom_sha256": "3d3ca01d8f0fa3fcaf58abb25cd09ce239e089d379d18c32f2c95337ef078aaa",
+        "counted_instances": 13837,
+        "bom_ids_match": true,
+        "bom_types_colors_poses_steps_match": true,
+        "identity_projection_sha256": "21afd937f3e3592d6b88432b1d295d5654ad2d79bc44040b39221b2a22e2ddb4",
+        "reference_identity_verified": true,
+        "geometry_sha256": "6b100a0e9904ffcaaae86cb8f84561365cb3607a6a8ea26cec14d8b7c455d3e1",
+        "native_geometry_source_hashes": [
+          {
+            "sha256": "6b100a0e9904ffcaaae86cb8f84561365cb3607a6a8ea26cec14d8b7c455d3e1"
+          }
+        ],
+        "used_native_geometry_report_sha256": "92a74e04c53cbee217e09b4cbe5efe38a336c2c510d728951c1841a7b062ff6b",
+        "native_scene_binding_report_sha256": "09495d32943a46528166ce5a716f84042fe94e38bd8c335e55018007c50d0987",
+        "render_stats_sha256": "5c64463f255bc8253016c43f06604d544469514902c25513bde8f50b62d9272d",
+        "depth_evidence_sha256": "f30274d3ecaba10d20cd5724f48fd99de8d8d9659b4acf2836673c3d6dc14fb0",
+        "whole_part_colors_verified": true,
+        "render_instances_match_manifest": true,
+        "native_binding_basis": "HASH_VERIFIED_SOURCE_SAVED_SCENE_REPORT_AND_INDEPENDENT_MANIFEST_BOM_CHECK"
+      }
+    },
+    {
+      "role": "previous-360",
+      "source_role": "dense360-pilot",
+      "candidate_id": "mona-dense360",
+      "pitch_mm": 8,
+      "stud_diameter_mm": 4.8,
+      "open_underside": true,
+      "color_mode": "WHOLE_PART_SINGLE_COLOR",
+      "metrics": {
+        "part_count": 10908,
+        "unique_types": 137,
+        "one_by_one_exceptions": 32,
+        "layer_count": 112,
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "grip_long_ge_15_8_count": 10876,
+        "body_height_families": [
+          {
+            "body_height_mm": 3.2,
+            "part_count": 10572,
+            "unique_types": 117
+          },
+          {
+            "body_height_mm": 9.6,
+            "part_count": 336,
+            "unique_types": 20
+          }
+        ],
+        "dimensions_mm": [
+          407.8,
+          343.8,
+          360.2
+        ]
+      },
+      "evidence": {
+        "manifest_sha256": "c0cdfc713492f106023afceffa2fec347bba795be4a3f06fdf70823525884c31",
+        "bom_sha256": "75286040e3633736d4327bdfdf6c33bf80d5605235c9a3701186f28f569a796b",
+        "counted_instances": 10908,
+        "bom_ids_match": true,
+        "bom_types_colors_poses_steps_match": true,
+        "identity_projection_sha256": "bb1f0479cea61efba01aa583c4be0ab565385ae748dc7c4a92d658bdb5bcb228",
+        "reference_identity_verified": true,
+        "geometry_sha256": "40b970cf670a0c3351e40f12cc2b8edbd12bd0e9bd6aad0a2fb0658d501ada80",
+        "native_geometry_source_hashes": [
+          {
+            "sha256": "c11e40d506e6326584dd2c4410b9869c1e541688ec37db5819d247bcef812cdb"
+          },
+          {
+            "sha256": "43a6ab45801566ee5c5b3fc9dbf3cf16695e2b2f1e731c0ac575bbdf0d437cf3"
+          },
+          {
+            "sha256": "40b970cf670a0c3351e40f12cc2b8edbd12bd0e9bd6aad0a2fb0658d501ada80"
+          }
+        ],
+        "used_native_geometry_report_sha256": "8c53cf7ae4d8118699eb424247980293e052cd1386a8c8d52d7f047c70a16626",
+        "native_scene_binding_report_sha256": "09495d32943a46528166ce5a716f84042fe94e38bd8c335e55018007c50d0987",
+        "render_stats_sha256": "add04a974a2ae0d939b0f2a129e9cfd9759c9e53343cc25843a8d9400577d26c",
+        "depth_evidence_sha256": "8ec501c780af56c386aa94f1e3a6eecbfbebb92d5f95811d16c0cbcae0d36cb7",
+        "whole_part_colors_verified": true,
+        "render_instances_match_manifest": true,
+        "native_binding_basis": "HASH_VERIFIED_SOURCE_SAVED_SCENE_REPORT_AND_INDEPENDENT_MANIFEST_BOM_CHECK"
+      }
+    },
+    {
+      "role": "refined-360",
+      "source_role": "fine-c-refined360",
+      "candidate_id": "mona-fine-c360",
+      "pitch_mm": 8,
+      "stud_diameter_mm": 4.8,
+      "open_underside": true,
+      "color_mode": "WHOLE_PART_SINGLE_COLOR",
+      "metrics": {
+        "part_count": 12435,
+        "unique_types": 121,
+        "one_by_one_exceptions": 31,
+        "layer_count": 77,
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "grip_long_ge_15_8_count": 12404,
+        "body_height_families": [
+          {
+            "body_height_mm": 3.2,
+            "part_count": 50,
+            "unique_types": 6
+          },
+          {
+            "body_height_mm": 4.8,
+            "part_count": 12359,
+            "unique_types": 110
+          },
+          {
+            "body_height_mm": 9.6,
+            "part_count": 26,
+            "unique_types": 5
+          }
+        ],
+        "dimensions_mm": [
+          423.8,
+          343.8,
+          368.2
+        ]
+      },
+      "evidence": {
+        "manifest_sha256": "5556e329521b5706a366c5dad2aa6c7b13eca9d7d74323338773d5e2b20b2b4c",
+        "bom_sha256": "655133f47a8ed4bd5e9a103c2d67dc1585b6d1e9a47b99ba4391e29e0e354fc9",
+        "counted_instances": 12435,
+        "bom_ids_match": true,
+        "bom_types_colors_poses_steps_match": true,
+        "identity_projection_sha256": "0e24e37dd8ff9366fb64ba8f126d728467a058f26d3b23b6429a2ca972977ac7",
+        "geometry_sha256": "fff2c4172184d5f8cfca81fe1ad67d7b1ae53ce8c6cff6d0221884b59b276e4f",
+        "native_geometry_source_hashes": [
+          {
+            "sha256": "c11e40d506e6326584dd2c4410b9869c1e541688ec37db5819d247bcef812cdb"
+          },
+          {
+            "sha256": "43a6ab45801566ee5c5b3fc9dbf3cf16695e2b2f1e731c0ac575bbdf0d437cf3"
+          },
+          {
+            "sha256": "40b970cf670a0c3351e40f12cc2b8edbd12bd0e9bd6aad0a2fb0658d501ada80"
+          },
+          {
+            "sha256": "54ba05729e1db5225e1b6349dedba99b18b1dcad902b59a703446e0433212287"
+          },
+          {
+            "sha256": "fff2c4172184d5f8cfca81fe1ad67d7b1ae53ce8c6cff6d0221884b59b276e4f"
+          }
+        ],
+        "used_native_geometry_report_sha256": "778e86f702b9a6698d61018ce05378b6a35766d1d9aeb2ca1f0f90a05efa8a6c",
+        "native_scene_binding_report_sha256": "09495d32943a46528166ce5a716f84042fe94e38bd8c335e55018007c50d0987",
+        "render_stats_sha256": "71233dd91f2ea82ccecb6f56feb7cd27d9f90d334d9d9938d501afdceb9490fb",
+        "depth_evidence_sha256": "944ebc1bf768125bc7cd50e41c8ec001698957e27465a8ecea14ac7efca5fa49",
+        "whole_part_colors_verified": true,
+        "render_instances_match_manifest": true,
+        "native_binding_basis": "HASH_VERIFIED_SOURCE_SAVED_SCENE_REPORT_AND_INDEPENDENT_MANIFEST_BOM_CHECK"
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "shape-front",
+      "kind": "shape",
+      "view": "front",
+      "framing_rule": "MATCHED_SCREEN_HEIGHT",
+      "conditions_sha256": "352f2cb89b4e27a718a2fc67f39342d21262a086e4936dacbe4f89ab71d6cbe1",
+      "method_note": "3案の実頂点投影を同じ画面上高さへそろえています。実寸比ではありません。",
+      "images": [
+        {
+          "path": "/artifacts/studies/mona-fine-c-refinement-20260921/phase1-fine-c-front.jpg",
+          "sha256": "87a3f16cc2653cc88c128e58718f7cd8c6fe302ea1a3540508d4edd61e31898f",
+          "bytes": 267324,
+          "width": 1200,
+          "height": 1200,
+          "role": "fine-c",
+          "conditions_sha256": "352f2cb89b4e27a718a2fc67f39342d21262a086e4936dacbe4f89ab71d6cbe1",
+          "projected_subject_height_px": 864.0,
+          "source_camera": {
+            "group_id": "mona-likeness-360-20260921-normalized-front",
+            "role": "phase1-fine-c",
+            "view": "front",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -722.85333292,
+              90.35666662
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              90.35666662
+            ],
+            "ortho_scale_mm": 250.9907405972222,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 4.7810528673075705,
+            "actual_projected_height_mm": 180.71333323,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+            "direction_world": [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            "right_world": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "up_world": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "camera_matrix_world_m": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                7.549790126404332e-08,
+                -1.0,
+                -0.7228533625602722
+              ],
+              [
+                0.0,
+                1.0,
+                7.549790126404332e-08,
+                0.09035667032003403
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "path": "/artifacts/studies/mona-fine-c-refinement-20260921/dense360-pilot-front.jpg",
+          "sha256": "0627d35c965df02b3464b91542d2da5917755937f71a26dbbe65acbb3dbfe6cf",
+          "bytes": 202035,
+          "width": 1200,
+          "height": 1200,
+          "role": "previous-360",
+          "conditions_sha256": "352f2cb89b4e27a718a2fc67f39342d21262a086e4936dacbe4f89ab71d6cbe1",
+          "projected_subject_height_px": 864.0,
+          "source_camera": {
+            "group_id": "mona-likeness-360-20260921-normalized-front",
+            "role": "dense360-pilot",
+            "view": "front",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -1440.8,
+              180.1
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              180.1
+            ],
+            "ortho_scale_mm": 500.27777777777777,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 2.3986674069961134,
+            "actual_projected_height_mm": 360.2,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+            "direction_world": [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            "right_world": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "up_world": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "camera_matrix_world_m": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                -1.6292068494294654e-07,
+                -1.0,
+                -1.4408000707626343
+              ],
+              [
+                0.0,
+                1.0,
+                -1.6292068494294654e-07,
+                0.18010000884532928
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "path": "/artifacts/studies/mona-fine-c-refinement-20260921/fine-c-refined360-front.jpg",
+          "sha256": "1fbd8ec53b18629e012d0ed734047797c10ca9fd28946255d455de46766a3f63",
+          "bytes": 225722,
+          "width": 1200,
+          "height": 1200,
+          "role": "refined-360",
+          "conditions_sha256": "352f2cb89b4e27a718a2fc67f39342d21262a086e4936dacbe4f89ab71d6cbe1",
+          "projected_subject_height_px": 864.0,
+          "source_camera": {
+            "group_id": "mona-likeness-360-20260921-normalized-front",
+            "role": "fine-c-refined360",
+            "view": "front",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              -9.5e-07,
+              -1472.7999996,
+              184.09999995
+            ],
+            "target_mm": [
+              -9.5e-07,
+              0.0,
+              184.09999995
+            ],
+            "ortho_scale_mm": 511.38888875000004,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 2.3465507882527294,
+            "actual_projected_height_mm": 368.1999999,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "Three C-target comparison roles use equal projected screen height, not real-size scaling.",
+            "direction_world": [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            "right_world": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "up_world": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "camera_matrix_world_m": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                -9.500000786033524e-10
+              ],
+              [
+                0.0,
+                -1.6292068494294654e-07,
+                -1.0,
+                -1.4728001356124878
+              ],
+              [
+                0.0,
+                1.0,
+                -1.6292068494294654e-07,
+                0.18410001695156097
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "shape-three-quarter",
+      "kind": "shape",
+      "view": "three-quarter",
+      "framing_rule": "MATCHED_SCREEN_HEIGHT",
+      "conditions_sha256": "95e7fac00cea9bdfddb67c9a969a78a9e16b6691f5795ec49842969ddc25e77a",
+      "method_note": "3案の実頂点投影を同じ画面上高さへそろえています。実寸比ではありません。",
+      "images": [
+        {
+          "path": "/artifacts/studies/mona-fine-c-refinement-20260921/phase1-fine-c-three_quarter.jpg",
+          "sha256": "688cfaebb3d0277361b412381ff011b311575035269df287140f8d1625d5ce97",
+          "bytes": 303005,
+          "width": 1200,
+          "height": 1200,
+          "role": "fine-c",
+          "conditions_sha256": "95e7fac00cea9bdfddb67c9a969a78a9e16b6691f5795ec49842969ddc25e77a",
+          "projected_subject_height_px": 864.0,
+          "source_camera": {
+            "group_id": "mona-likeness-360-20260921-normalized-three_quarter",
+            "role": "phase1-fine-c",
+            "view": "three_quarter",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              270.91099602,
+              -661.7848345,
+              405.77101255
+            ],
+            "target_mm": [
+              -9.73999019,
+              -0.61254467,
+              85.97599109
+            ],
+            "ortho_scale_mm": 273.0020515654853,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 4.3955713633608156,
+            "actual_projected_height_mm": 196.5614771271494,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+            "direction_world": [
+              0.3569506476,
+              -0.8409230276,
+              0.4067366431
+            ],
+            "right_world": [
+              0.9205048535,
+              0.3907311285,
+              -0.0
+            ],
+            "up_world": [
+              -0.1589246675,
+              0.374403054,
+              0.9135454576
+            ],
+            "camera_matrix_world_m": [
+              [
+                0.9205048084259033,
+                -0.1589246243238449,
+                0.3569508194923401,
+                0.2709110379219055
+              ],
+              [
+                0.39073124527931213,
+                0.3744029104709625,
+                -0.840923011302948,
+                -0.6617848873138428
+              ],
+              [
+                -4.669232112064492e-08,
+                0.913545548915863,
+                0.40673649311065674,
+                0.40577104687690735
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "path": "/artifacts/studies/mona-fine-c-refinement-20260921/dense360-pilot-three_quarter.jpg",
+          "sha256": "11ac821de42c0eb068066e0f549e9aeedd9d003a95d6d6bdf1f06115da6efaa3",
+          "bytes": 256391,
+          "width": 1200,
+          "height": 1200,
+          "role": "previous-360",
+          "conditions_sha256": "95e7fac00cea9bdfddb67c9a969a78a9e16b6691f5795ec49842969ddc25e77a",
+          "projected_subject_height_px": 864.0,
+          "source_camera": {
+            "group_id": "mona-likeness-360-20260921-normalized-three_quarter",
+            "role": "dense360-pilot",
+            "view": "three_quarter",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              529.18192974,
+              -1289.79154841,
+              796.80706557
+            ],
+            "target_mm": [
+              -17.93046754,
+              -0.8755129,
+              173.38570086
+            ],
+            "ortho_scale_mm": 532.2012543512802,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 2.254786117448604,
+            "actual_projected_height_mm": 383.18490313292176,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+            "direction_world": [
+              0.3569506476,
+              -0.8409230276,
+              0.4067366431
+            ],
+            "right_world": [
+              0.9205048535,
+              0.3907311285,
+              -0.0
+            ],
+            "up_world": [
+              -0.1589246675,
+              0.374403054,
+              0.9135454576
+            ],
+            "camera_matrix_world_m": [
+              [
+                0.9205048680305481,
+                -0.15892457962036133,
+                0.35695070028305054,
+                0.529181957244873
+              ],
+              [
+                0.39073115587234497,
+                0.3744029402732849,
+                -0.8409230709075928,
+                -1.2897915840148926
+              ],
+              [
+                -4.176478540784956e-08,
+                0.913545548915863,
+                0.40673649311065674,
+                0.7968071103096008
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "path": "/artifacts/studies/mona-fine-c-refinement-20260921/fine-c-refined360-three_quarter.jpg",
+          "sha256": "7bdedfa8d903a174ae88520df7e9d7e4565b329d810912c6b37033bae1d6fa71",
+          "bytes": 290021,
+          "width": 1200,
+          "height": 1200,
+          "role": "refined-360",
+          "conditions_sha256": "95e7fac00cea9bdfddb67c9a969a78a9e16b6691f5795ec49842969ddc25e77a",
+          "projected_subject_height_px": 864.0,
+          "source_camera": {
+            "group_id": "mona-likeness-360-20260921-normalized-three_quarter",
+            "role": "fine-c-refined360",
+            "view": "three_quarter",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              548.50452191,
+              -1339.31272456,
+              823.68949397
+            ],
+            "target_mm": [
+              -19.20600068,
+              -1.87054682,
+              176.79706289
+            ],
+            "ortho_scale_mm": 552.2379930166614,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 2.172976171821983,
+            "actual_projected_height_mm": 397.61135497199626,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "Three C-target comparison roles use equal projected screen height, not real-size scaling.",
+            "direction_world": [
+              0.3569506476,
+              -0.8409230276,
+              0.4067366431
+            ],
+            "right_world": [
+              0.9205048535,
+              0.3907311285,
+              -0.0
+            ],
+            "up_world": [
+              -0.1589246675,
+              0.374403054,
+              0.9135454576
+            ],
+            "camera_matrix_world_m": [
+              [
+                0.9205048680305481,
+                -0.15892471373081207,
+                0.3569505214691162,
+                0.5485045313835144
+              ],
+              [
+                0.3907310366630554,
+                0.3744032382965088,
+                -0.840923011302948,
+                -1.3393127918243408
+              ],
+              [
+                1.3379438890126494e-08,
+                0.9135453701019287,
+                0.406736820936203,
+                0.8236895799636841
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "face-front",
+      "kind": "face",
+      "view": "front",
+      "framing_rule": "MATCHED_NORMALIZED_FACE_REGION",
+      "conditions_sha256": "8e19920498a7f7574aafa669d1bf24c6d9a802b50aa207ad3ae7d80b72797c91",
+      "normalized_face_region": [
+        -0.4,
+        0.15,
+        0.4,
+        1.015
+      ],
+      "method_note": "土台を除く原型の体高に登録した、同じ顔領域です。",
+      "images": [
+        {
+          "path": "/artifacts/studies/mona-fine-c-refinement-20260921/phase1-fine-c-face.jpg",
+          "sha256": "3f9426522110ed3d7dda5607fcdd35d35e07de5fedcea0678688ecc64e8fa9d2",
+          "bytes": 128016,
+          "width": 564,
+          "height": 611,
+          "role": "fine-c",
+          "conditions_sha256": "8e19920498a7f7574aafa669d1bf24c6d9a802b50aa207ad3ae7d80b72797c91",
+          "normalized_face_region": [
+            -0.4,
+            0.15,
+            0.4,
+            1.015
+          ],
+          "source_registration": {
+            "group_id": "mona-likeness-360-20260921-registered-character-front",
+            "role": "phase1-fine-c",
+            "view": "front",
+            "mode": "REGISTERED_BODY_FOR_DESCRIPTIVE_METRICS",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -720.0,
+              90.0
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              90.0
+            ],
+            "ortho_scale_mm": 261.0,
+            "image_size_px": [
+              1024,
+              1024
+            ],
+            "pixels_per_mm": 3.9233716475095783,
+            "body_height_mm": 180,
+            "body_bottom_z_mm": 0,
+            "registered_body_height_px": 706.2068965517242,
+            "exclude_foundation": true,
+            "scope": "Original-source XY origin and body-normalized height. Excludes added foundations; includes actual studs/seams. Not a mechanical or aesthetic pass criterion.",
+            "actual_blender_depth_camera_matrix_world_m": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                -1.6292068494294654e-07,
+                -1.0,
+                -0.7200000286102295
+              ],
+              [
+                0.0,
+                1.0,
+                -1.6292068494294654e-07,
+                0.09000000357627869
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "path": "/artifacts/studies/mona-fine-c-refinement-20260921/dense360-pilot-face.jpg",
+          "sha256": "3d193a7cba747abebf27c4f3adcc718c2dcb1cf90c9cfda40975f88510e11955",
+          "bytes": 96377,
+          "width": 564,
+          "height": 611,
+          "role": "previous-360",
+          "conditions_sha256": "8e19920498a7f7574aafa669d1bf24c6d9a802b50aa207ad3ae7d80b72797c91",
+          "normalized_face_region": [
+            -0.4,
+            0.15,
+            0.4,
+            1.015
+          ],
+          "source_registration": {
+            "group_id": "mona-likeness-360-20260921-registered-character-front",
+            "role": "dense360-pilot",
+            "view": "front",
+            "mode": "REGISTERED_BODY_FOR_DESCRIPTIVE_METRICS",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -1408.0,
+              182.4
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              182.4
+            ],
+            "ortho_scale_mm": 510.4,
+            "image_size_px": [
+              1024,
+              1024
+            ],
+            "pixels_per_mm": 2.0062695924764893,
+            "body_height_mm": 352,
+            "body_bottom_z_mm": 6.4,
+            "registered_body_height_px": 706.2068965517242,
+            "exclude_foundation": true,
+            "scope": "Original-source XY origin and body-normalized height. Excludes added foundations; includes actual studs/seams. Not a mechanical or aesthetic pass criterion.",
+            "actual_blender_depth_camera_matrix_world_m": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                7.549790126404332e-08,
+                -1.0,
+                -1.408000111579895
+              ],
+              [
+                0.0,
+                1.0,
+                7.549790126404332e-08,
+                0.18240000307559967
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        {
+          "path": "/artifacts/studies/mona-fine-c-refinement-20260921/fine-c-refined360-face.jpg",
+          "sha256": "bdb9ff22524f15c184631f863a062693dba59a7923cd4b84a262f0f177708031",
+          "bytes": 107249,
+          "width": 564,
+          "height": 611,
+          "role": "refined-360",
+          "conditions_sha256": "8e19920498a7f7574aafa669d1bf24c6d9a802b50aa207ad3ae7d80b72797c91",
+          "normalized_face_region": [
+            -0.4,
+            0.15,
+            0.4,
+            1.015
+          ],
+          "source_registration": {
+            "group_id": "mona-likeness-360-20260921-registered-character-front",
+            "role": "fine-c-refined360",
+            "view": "front",
+            "mode": "REGISTERED_BODY_FOR_DESCRIPTIVE_METRICS",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -1440.0,
+              186.4
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              186.4
+            ],
+            "ortho_scale_mm": 522.0,
+            "image_size_px": [
+              1024,
+              1024
+            ],
+            "pixels_per_mm": 1.9616858237547892,
+            "body_height_mm": 360,
+            "body_bottom_z_mm": 6.4,
+            "registered_body_height_px": 706.2068965517242,
+            "exclude_foundation": true,
+            "scope": "Original-source XY origin and body-normalized height. Excludes added foundations; includes actual studs/seams. Not a mechanical or aesthetic pass criterion.",
+            "actual_blender_depth_camera_matrix_world_m": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                -1.6292068494294654e-07,
+                -1.0,
+                -1.440000057220459
+              ],
+              [
+                0.0,
+                1.0,
+                -1.6292068494294654e-07,
+                0.18639999628067017
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "detail_comparisons": [
+    {
+      "path": "/artifacts/studies/mona-fine-c-refinement-20260921/forehead-detail.jpg",
+      "sha256": "df1237598f67eb939f438b00988d37759b56306a333721301d20ee27be48eb9f",
+      "bytes": 178761,
+      "width": 2280,
+      "height": 473,
+      "region": "forehead",
+      "crop_rule": {
+        "x": [
+          -0.28,
+          0.28
+        ],
+        "z": [
+          0.52,
+          0.72
+        ]
+      }
+    },
+    {
+      "path": "/artifacts/studies/mona-fine-c-refinement-20260921/eye_rims-detail.jpg",
+      "sha256": "2784142352054d2b03f041beffad0c1178cc224441e3333f34b0eda5c1b32a01",
+      "bytes": 230527,
+      "width": 2280,
+      "height": 524,
+      "region": "eye_rims",
+      "crop_rule": {
+        "x": [
+          -0.33,
+          0.33
+        ],
+        "z": [
+          0.32,
+          0.6
+        ]
+      }
+    },
+    {
+      "path": "/artifacts/studies/mona-fine-c-refinement-20260921/mouth-detail.jpg",
+      "sha256": "36fac94f111a93ab746f9eff6ba903bea34b918a1e88f38de9ea1402c36495c8",
+      "bytes": 148882,
+      "width": 2280,
+      "height": 485,
+      "region": "mouth",
+      "crop_rule": {
+        "x": [
+          -0.13,
+          0.14
+        ],
+        "z": [
+          0.21,
+          0.31
+        ]
+      }
+    }
+  ],
+  "appearance_limit": "面取りで細い明るい縁も出る。初期Cの暗い上下の隙間とは同一ではなく、黒目の面や小さな鼻の影・輪郭にも違いは残る。全て同じクオリティになったと断言しない。",
+  "assembly_tradeoff": "初期Cの体高360mmに基礎6.4mmとスタッドを加え、実高さは368.2mm（前案より+8.0mm）。同画面高さの比較は実寸比ではありません。 1×1例外は31個。長い把持延長なしの位置/IDを公開し、扱いやすさは未試験です。各最小寸法は別部品由来の場合があります。 仮支持台2個は本体個数から除外。実保持力・全体荷重/転倒を確認するまで撤去しません。",
+  "assembly_layer_note": "1.6mmは高さを整数管理する単位で、薄い印刷部品やFDM層高ではありません。実本体高さは各行のfamily実数をご覧ください。",
+  "changes": [
+    "初期Cの実セル位置・色境界を8mmXY/4.8mmZへ写し、額/頬の段差、白い目縁、口、耳・ひげのパターンを優先しました。原型へのIoU最適化とは別です。",
+    "大きい面を再サンプルしてまとめ直すのではなく、Cの実部品分割から把持・支持に必要な変更だけを加えました。顔の模様はすべて単色の実部品です。",
+    "4.8mmは新しい半高ファミリー（屋根1.6mm・下面空間3.2mm）。8mmピッチ/直径4.8mm・高さ1.8mmスタッド/開いた下面の接合は固定です。",
+    "露出スタッドの高さは、前案の表面段間隔に対して約56%でした。新案では約38%となり、初期Cの約35%に近づきます。色だけでなく額や口元の段差の見え方も比較します。",
+    "実native小片で目地差を確認し、外側の3,763部品だけに上外周0.20mmの面取りを追加。内部の半高8,596部品の座面は無変更です。部品数は増やさず、実形状の型を区別します。"
+  ],
+  "remaining_differences": [
+    "Cを単純に2倍にした弱い旧ピンではありません。そのためCの2倍相当よりスタッド径が大きく、0.2mmの横隙間・上下の座面接触・屋根露出も異なります。",
+    "初期Cの体高360mmに基礎6.4mmとスタッドを加え、実高さは368.2mm（前案より+8.0mm）。同画面高さの比較は実寸比ではありません。",
+    "1×1例外は31個。長い把持延長なしの位置/IDを公開し、扱いやすさは未試験です。各最小寸法は別部品由来の場合があります。",
+    "仮支持台2個は本体個数から除外。実保持力・全体荷重/転倒を確認するまで撤去しません。",
+    "本人による前案の方向性への肯定は、この新案の最終採用や現物印刷の承認ではありません。形状比較だけで、全プレート/スライス/G-code/新trialは作っていません。",
+    "原型への投影IoUと初期Cへの近さは別指標です。初期Cを優先した結果、原型へのIoUが下がる場合も隠さず別に記録します。",
+    "面取りはCの空いた上下目地と同一ではなく、細い明るい縁も出ます。中空部上の屋根は1.6mm、外周帯の中空高さ基準からの残り高さは1.4mmです。一部の座面面積は減るため、形が閉じていることを強度・保持力の合格に読み替えません。",
+    "新案の白い目縁と黒い目の外形、笑口、耳・ひげの段階パターンは、前36cm案より初期Cへ近づいている。原型へのIoUの高さを代理の合格基準にはしていない。",
+    "最初の4.8mm native比較では額の大きな同色面が残ったため、実形状2部品の検討を追加した。外側3763部品だけの上外周0.20mm面取りで、額のコース境界を見えるようにした。内部8596個の半高部品は変更していない。",
+    "面取りで細い明るい縁も出る。初期Cの暗い上下の隙間とは同一ではなく、黒目の面や小さな鼻の影・輪郭にも違いは残る。全て同じクオリティになったと断言しない。",
+    "C基準の正面輪郭IoU、白い目縁/黒い口の色面IoUと額の実native奥行差は改善した。鼻の狭い領域も別に確認した。これらは美観や現物精度/強度の自動合格ではない。",
+    "原型への正面IoUは前案約0.95474から約0.94882へ下がった。今回の優先目標が初期Cであることと、この別指標の低下を隠さない。",
+    "実高さ368.2mm、幅423.8mmと12435部品の組立負担、31個の1x1例外、別途2仮支持台、追加の仕上げ型の区別が必要になる。",
+    "面取り後の同一外形組み合わせの座面面積は元の約81.6-93.2%。中空部上の屋根1.6mmと外周帯の基準高さ1.4mmを区別する。保持力/荷重/転倒や支持台撤去は現物未確認のまま。"
+  ],
+  "quality_comparison": [
+    {
+      "id": "c-front-outline",
+      "before": 0.9506120947827458,
+      "after": 0.9810368137591702,
+      "unit": "IoU",
+      "label": "初期Cとの正面投影輪郭IoU"
+    },
+    {
+      "id": "c-white-eye-rims",
+      "before": 0.5818918497740377,
+      "after": 0.9592542064574807,
+      "unit": "IoU",
+      "label": "目領域の白い色面IoU"
+    },
+    {
+      "id": "c-black-smile",
+      "before": 0.4129273504273504,
+      "after": 0.9783845278725825,
+      "unit": "IoU",
+      "label": "口領域の黒い色面IoU"
+    },
+    {
+      "id": "c-forehead-depth",
+      "before": 0.01129136048257351,
+      "after": 0.0008177079726010561,
+      "unit": "body-height fraction",
+      "label": "額の描画面の平均奥行差（体高比）"
+    },
+    {
+      "id": "original-front-outline",
+      "label": "原型との正面投影輪郭IoU（別の比較目標）",
+      "before": 0.9547447534512367,
+      "after": 0.9488154683936515,
+      "unit": "IoU"
+    }
+  ],
+  "metric_caution": "数値は同じ領域に登録した実形状の描画比較です。『何%似ている』という美観点数でも、現物の寸法精度/強度でもありません。",
+  "original_source_tradeoff": "初期Cへの近さを優先した結果、原型との正面IoUは低下しています。別の比較目標の変化を隠さず示します。",
+  "small_part_exceptions": [
+    {
+      "part_id": "MON-C360-00559",
+      "color_id": "c0",
+      "position_mm": [
+        -48,
+        -128,
+        40.0
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-00651"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-00720",
+      "color_id": "c0",
+      "position_mm": [
+        -8,
+        -144,
+        44.8
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-00878"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-00758",
+      "color_id": "c0",
+      "position_mm": [
+        64,
+        -120,
+        44.8
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-00921"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-01478",
+      "color_id": "c3",
+      "position_mm": [
+        120,
+        -112,
+        64.0
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-01732"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-01513",
+      "color_id": "c3",
+      "position_mm": [
+        -112,
+        -128,
+        68.8
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-01788"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-01912",
+      "color_id": "c3",
+      "position_mm": [
+        -112,
+        -136,
+        78.4
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-02207"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-01894",
+      "color_id": "c3",
+      "position_mm": [
+        -136,
+        -104,
+        78.4
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-02231"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-02074",
+      "color_id": "c3",
+      "position_mm": [
+        136,
+        -104,
+        78.4
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-02234"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-02330",
+      "color_id": "c3",
+      "position_mm": [
+        -128,
+        -120,
+        88.0
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-02689"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-02715",
+      "color_id": "c3",
+      "position_mm": [
+        120,
+        -128,
+        92.8
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-03082"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-02949",
+      "color_id": "c3",
+      "position_mm": [
+        120,
+        -128,
+        97.6
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-03174"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-02774",
+      "color_id": "c3",
+      "position_mm": [
+        -128,
+        -120,
+        97.6
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-03175"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-03031",
+      "color_id": "c3",
+      "position_mm": [
+        -104,
+        -144,
+        102.4
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-03436"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-03233",
+      "color_id": "c3",
+      "position_mm": [
+        -120,
+        -128,
+        107.2
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-03668"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-04141",
+      "color_id": "c3",
+      "position_mm": [
+        -128,
+        -112,
+        126.4
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-04687"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-05064",
+      "color_id": "c1",
+      "position_mm": [
+        -96,
+        -128,
+        145.6
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-05658"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-05910",
+      "color_id": "c3",
+      "position_mm": [
+        136,
+        -96,
+        160.0
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-06593"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-06413",
+      "color_id": "c1",
+      "position_mm": [
+        -104,
+        -120,
+        174.4
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-07148"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-06698",
+      "color_id": "c3",
+      "position_mm": [
+        -40,
+        -144,
+        179.2
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-07466"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-06865",
+      "color_id": "c1",
+      "position_mm": [
+        -96,
+        -128,
+        184.0
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-07625"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-07206",
+      "color_id": "c1",
+      "position_mm": [
+        64,
+        -136,
+        188.8
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-08011"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-07698",
+      "color_id": "c3",
+      "position_mm": [
+        136,
+        -96,
+        198.4
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-08548"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-07891",
+      "color_id": "c3",
+      "position_mm": [
+        104,
+        -120,
+        203.2
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-08602"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-08575",
+      "color_id": "c3",
+      "position_mm": [
+        -128,
+        -104,
+        222.4
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-09537"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-08778",
+      "color_id": "c3",
+      "position_mm": [
+        -144,
+        -72,
+        227.2
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-09734"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-09389",
+      "color_id": "c3",
+      "position_mm": [
+        -112,
+        -112,
+        241.6
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-10427"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-09584",
+      "color_id": "c3",
+      "position_mm": [
+        -128,
+        -88,
+        246.4
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-10628"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-09984",
+      "color_id": "c3",
+      "position_mm": [
+        -96,
+        -120,
+        256.0
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-11071"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-10288",
+      "color_id": "c3",
+      "position_mm": [
+        112,
+        -96,
+        260.8
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-11277"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-10950",
+      "color_id": "c3",
+      "position_mm": [
+        152,
+        -16,
+        280.0
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-12045"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    },
+    {
+      "part_id": "MON-C360-12162",
+      "color_id": "c3",
+      "position_mm": [
+        96,
+        -32,
+        328.0
+      ],
+      "body_mm": [
+        7.8,
+        7.8,
+        4.8
+      ],
+      "fine_c_source_part_ids": [
+        "MON-F-13449"
+      ],
+      "extended_grip": false,
+      "nominal_support_stud_sites": 1,
+      "temporary_aid_ids": [],
+      "handling_status": "ONE_CELL_EXCEPTION_NO_EXTENDED_GRIP_NOT_PHYSICALLY_TESTED",
+      "reason_ja": "初期Cの境界色/輪郭を変えずに隠れた把持延長を付けられなかった例外。",
+      "reason_en": "A hidden grip extension could not be added without changing the retained C boundary colors/envelope."
+    }
+  ],
+  "surface_edge_treatment": {
+    "size_mm": 0.2,
+    "part_count": 3763,
+    "used_derivative_types": 89,
+    "unmodified_internal_half_height_parts": 8596,
+    "true_roof_over_cavity_mm": 1.6,
+    "outer_cap_above_cavity_datum_mm": 1.4,
+    "meaning": "A real native upper perimeter finish on whole exterior parts; the outer-cap datum is not the cavity-roof minimum. No extra pieces or face texture.",
+    "physical_strength": "UNKNOWN"
+  },
+  "pattern_provenance": {
+    "primary_manifest_sha256": "93fd37f62bfaa588a016f1c748a97912d41e72f7719a094734ccbb12277ce552",
+    "c_occupied_cells": 82357,
+    "c_boundary_cells": 8627,
+    "occupied_cell_changes": 0,
+    "boundary_color_changes": 0,
+    "hidden_grip_backing_cells": 288,
+    "single_color_per_actual_part": true,
+    "source_pattern_scale": 2,
+    "legacy_pins_or_sockets_scaled": false,
+    "slopes_or_curved_masks": false
+  },
+  "render_conditions": {
+    "study_id": "mona-fine-c-refinement-20260921",
+    "roles": {
+      "phase1-fine-c": {
+        "normalization": {
+          "front": {
+            "group_id": "mona-likeness-360-20260921-normalized-front",
+            "role": "phase1-fine-c",
+            "view": "front",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -722.85333292,
+              90.35666662
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              90.35666662
+            ],
+            "ortho_scale_mm": 250.9907405972222,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 4.7810528673075705,
+            "actual_projected_height_mm": 180.71333323,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+            "direction_world": [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            "right_world": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "up_world": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          "three_quarter": {
+            "group_id": "mona-likeness-360-20260921-normalized-three_quarter",
+            "role": "phase1-fine-c",
+            "view": "three_quarter",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              270.91099602,
+              -661.7848345,
+              405.77101255
+            ],
+            "target_mm": [
+              -9.73999019,
+              -0.61254467,
+              85.97599109
+            ],
+            "ortho_scale_mm": 273.0020515654853,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 4.3955713633608156,
+            "actual_projected_height_mm": 196.5614771271494,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+            "direction_world": [
+              0.3569506476,
+              -0.8409230276,
+              0.4067366431
+            ],
+            "right_world": [
+              0.9205048535,
+              0.3907311285,
+              -0.0
+            ],
+            "up_world": [
+              -0.1589246675,
+              0.374403054,
+              0.9135454576
+            ]
+          }
+        },
+        "registration": {
+          "front": {
+            "group_id": "mona-likeness-360-20260921-registered-character-front",
+            "role": "phase1-fine-c",
+            "view": "front",
+            "mode": "REGISTERED_BODY_FOR_DESCRIPTIVE_METRICS",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -720.0,
+              90.0
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              90.0
+            ],
+            "ortho_scale_mm": 261.0,
+            "image_size_px": [
+              1024,
+              1024
+            ],
+            "pixels_per_mm": 3.9233716475095783,
+            "body_height_mm": 180,
+            "body_bottom_z_mm": 0,
+            "registered_body_height_px": 706.2068965517242,
+            "exclude_foundation": true,
+            "scope": "Original-source XY origin and body-normalized height. Excludes added foundations; includes actual studs/seams. Not a mechanical or aesthetic pass criterion."
+          },
+          "side": {
+            "group_id": "mona-likeness-360-20260921-registered-character-side",
+            "role": "phase1-fine-c",
+            "view": "side",
+            "mode": "REGISTERED_BODY_FOR_DESCRIPTIVE_METRICS",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              720.0,
+              -0.0,
+              90.0
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              90.0
+            ],
+            "ortho_scale_mm": 261.0,
+            "image_size_px": [
+              1024,
+              1024
+            ],
+            "pixels_per_mm": 3.9233716475095783,
+            "body_height_mm": 180,
+            "body_bottom_z_mm": 0,
+            "registered_body_height_px": 706.2068965517242,
+            "exclude_foundation": true,
+            "scope": "Original-source XY origin and body-normalized height. Excludes added foundations; includes actual studs/seams. Not a mechanical or aesthetic pass criterion."
+          }
+        },
+        "physical_scale": {
+          "group_id": "mona-likeness-360-20260921-physical-front",
+          "role": "phase1-fine-c",
+          "view": "front",
+          "mode": "PHYSICAL_SCALE_SAME_PIXELS_PER_MM",
+          "projection": "ORTHOGRAPHIC",
+          "position_mm": [
+            0,
+            -2000,
+            180
+          ],
+          "target_mm": [
+            0,
+            0,
+            180
+          ],
+          "ortho_scale_mm": 480.0,
+          "image_size_px": [
+            1200,
+            1200
+          ],
+          "pixels_per_mm": 2.5,
+          "actual_overall_height_mm": 180.71,
+          "note": "Identical2.5px/mm and sharedground plane for initialC and newpilot; models are not independently fit to frame."
+        },
+        "body_height_mm": 180,
+        "body_z0_mm": 0,
+        "overall_height_mm": 180.71
+      },
+      "dense360-pilot": {
+        "normalization": {
+          "front": {
+            "group_id": "mona-likeness-360-20260921-normalized-front",
+            "role": "dense360-pilot",
+            "view": "front",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -1440.8,
+              180.1
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              180.1
+            ],
+            "ortho_scale_mm": 500.27777777777777,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 2.3986674069961134,
+            "actual_projected_height_mm": 360.2,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+            "direction_world": [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            "right_world": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "up_world": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          "three_quarter": {
+            "group_id": "mona-likeness-360-20260921-normalized-three_quarter",
+            "role": "dense360-pilot",
+            "view": "three_quarter",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              529.18192974,
+              -1289.79154841,
+              796.80706557
+            ],
+            "target_mm": [
+              -17.93046754,
+              -0.8755129,
+              173.38570086
+            ],
+            "ortho_scale_mm": 532.2012543512802,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 2.254786117448604,
+            "actual_projected_height_mm": 383.18490313292176,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+            "direction_world": [
+              0.3569506476,
+              -0.8409230276,
+              0.4067366431
+            ],
+            "right_world": [
+              0.9205048535,
+              0.3907311285,
+              -0.0
+            ],
+            "up_world": [
+              -0.1589246675,
+              0.374403054,
+              0.9135454576
+            ]
+          }
+        },
+        "registration": {
+          "front": {
+            "group_id": "mona-likeness-360-20260921-registered-character-front",
+            "role": "dense360-pilot",
+            "view": "front",
+            "mode": "REGISTERED_BODY_FOR_DESCRIPTIVE_METRICS",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -1408.0,
+              182.4
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              182.4
+            ],
+            "ortho_scale_mm": 510.4,
+            "image_size_px": [
+              1024,
+              1024
+            ],
+            "pixels_per_mm": 2.0062695924764893,
+            "body_height_mm": 352,
+            "body_bottom_z_mm": 6.4,
+            "registered_body_height_px": 706.2068965517242,
+            "exclude_foundation": true,
+            "scope": "Original-source XY origin and body-normalized height. Excludes added foundations; includes actual studs/seams. Not a mechanical or aesthetic pass criterion."
+          },
+          "side": {
+            "group_id": "mona-likeness-360-20260921-registered-character-side",
+            "role": "dense360-pilot",
+            "view": "side",
+            "mode": "REGISTERED_BODY_FOR_DESCRIPTIVE_METRICS",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              1408.0,
+              -0.0,
+              182.4
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              182.4
+            ],
+            "ortho_scale_mm": 510.4,
+            "image_size_px": [
+              1024,
+              1024
+            ],
+            "pixels_per_mm": 2.0062695924764893,
+            "body_height_mm": 352,
+            "body_bottom_z_mm": 6.4,
+            "registered_body_height_px": 706.2068965517242,
+            "exclude_foundation": true,
+            "scope": "Original-source XY origin and body-normalized height. Excludes added foundations; includes actual studs/seams. Not a mechanical or aesthetic pass criterion."
+          }
+        },
+        "physical_scale": {
+          "group_id": "mona-likeness-360-20260921-physical-front",
+          "role": "dense360-pilot",
+          "view": "front",
+          "mode": "PHYSICAL_SCALE_SAME_PIXELS_PER_MM",
+          "projection": "ORTHOGRAPHIC",
+          "position_mm": [
+            0,
+            -2000,
+            180
+          ],
+          "target_mm": [
+            0,
+            0,
+            180
+          ],
+          "ortho_scale_mm": 480.0,
+          "image_size_px": [
+            1200,
+            1200
+          ],
+          "pixels_per_mm": 2.5,
+          "actual_overall_height_mm": 360.2,
+          "note": "Identical2.5px/mm and sharedground plane for initialC and newpilot; models are not independently fit to frame."
+        },
+        "body_height_mm": 352,
+        "body_z0_mm": 6.4,
+        "overall_height_mm": 360.2
+      },
+      "fine-c-refined360": {
+        "normalization": {
+          "front": {
+            "group_id": "mona-likeness-360-20260921-normalized-front",
+            "role": "fine-c-refined360",
+            "view": "front",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              -9.5e-07,
+              -1472.7999996,
+              184.09999995
+            ],
+            "target_mm": [
+              -9.5e-07,
+              0.0,
+              184.09999995
+            ],
+            "ortho_scale_mm": 511.38888875000004,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 2.3465507882527294,
+            "actual_projected_height_mm": 368.1999999,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "Three C-target comparison roles use equal projected screen height, not real-size scaling.",
+            "direction_world": [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            "right_world": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "up_world": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          "three_quarter": {
+            "group_id": "mona-likeness-360-20260921-normalized-three_quarter",
+            "role": "fine-c-refined360",
+            "view": "three_quarter",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              548.50452191,
+              -1339.31272456,
+              823.68949397
+            ],
+            "target_mm": [
+              -19.20600068,
+              -1.87054682,
+              176.79706289
+            ],
+            "ortho_scale_mm": 552.2379930166614,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 2.172976171821983,
+            "actual_projected_height_mm": 397.61135497199626,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "Three C-target comparison roles use equal projected screen height, not real-size scaling.",
+            "direction_world": [
+              0.3569506476,
+              -0.8409230276,
+              0.4067366431
+            ],
+            "right_world": [
+              0.9205048535,
+              0.3907311285,
+              -0.0
+            ],
+            "up_world": [
+              -0.1589246675,
+              0.374403054,
+              0.9135454576
+            ]
+          }
+        },
+        "registration": {
+          "front": {
+            "group_id": "mona-likeness-360-20260921-registered-character-front",
+            "role": "fine-c-refined360",
+            "view": "front",
+            "mode": "REGISTERED_BODY_FOR_DESCRIPTIVE_METRICS",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -1440.0,
+              186.4
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              186.4
+            ],
+            "ortho_scale_mm": 522.0,
+            "image_size_px": [
+              1024,
+              1024
+            ],
+            "pixels_per_mm": 1.9616858237547892,
+            "body_height_mm": 360,
+            "body_bottom_z_mm": 6.4,
+            "registered_body_height_px": 706.2068965517242,
+            "exclude_foundation": true,
+            "scope": "Original-source XY origin and body-normalized height. Excludes added foundations; includes actual studs/seams. Not a mechanical or aesthetic pass criterion."
+          },
+          "side": {
+            "group_id": "mona-likeness-360-20260921-registered-character-side",
+            "role": "fine-c-refined360",
+            "view": "side",
+            "mode": "REGISTERED_BODY_FOR_DESCRIPTIVE_METRICS",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              1440.0,
+              -0.0,
+              186.4
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              186.4
+            ],
+            "ortho_scale_mm": 522.0,
+            "image_size_px": [
+              1024,
+              1024
+            ],
+            "pixels_per_mm": 1.9616858237547892,
+            "body_height_mm": 360,
+            "body_bottom_z_mm": 6.4,
+            "registered_body_height_px": 706.2068965517242,
+            "exclude_foundation": true,
+            "scope": "Original-source XY origin and body-normalized height. Excludes added foundations; includes actual studs/seams. Not a mechanical or aesthetic pass criterion."
+          }
+        },
+        "body_height_mm": 360,
+        "body_z0_mm": 6.4,
+        "overall_height_mm": 368.2
+      }
+    },
+    "source_palette": {
+      "c0": {
+        "hex": "#5E43B7",
+        "name": "Purple",
+        "source": "3MF filament_colour[0]"
+      },
+      "c1": {
+        "hex": "#FFFFFF",
+        "name": "Jade white",
+        "source": "3MF filament_colour[1]"
+      },
+      "c2": {
+        "hex": "#000000",
+        "name": "Black",
+        "source": "3MF filament_colour[2]"
+      },
+      "c3": {
+        "hex": "#F5547C",
+        "name": "Hot pink",
+        "source": "3MF filament_colour[3]"
+      }
+    },
+    "presentation": {
+      "world_rgba": [
+        0.68,
+        0.76,
+        0.86,
+        1
+      ],
+      "world_strength": 0.35,
+      "view_transform": "AgX",
+      "look": "AgX - Medium High Contrast",
+      "exposure": -0.3,
+      "material_roughness": 0.65,
+      "specular_ior_level": 0.0,
+      "light_scaling": "Same positions/size divided by modelheight; light power scales with height squared. Same angular lighting on different actual sizes."
+    },
+    "face_region": {
+      "reference": "Original-source character-body registration, not foundation/whole-assembly height",
+      "x_fraction_of_body_height": [
+        -0.4,
+        0.4
+      ],
+      "z_fraction_of_body_height": [
+        0.15,
+        1.015
+      ],
+      "mode": "IDENTICAL_NORMALIZED_HEAD_FACE_REGION",
+      "quantitative_face_region": {
+        "x_fraction": [
+          -0.29,
+          0.29
+        ],
+        "z_fraction": [
+          0.2,
+          0.58
+        ]
+      }
+    },
+    "reference_reuse": "Two frozen native renders retain their recorded geometry, matte/light/palette and cameras. Only the new role is rendered anew.",
+    "shared_condition_id_note": "The previous normal/registered camera condition IDs are intentionally retained: the same recipe, angles, screen-height and face registration apply to all3roles."
+  },
+  "source_row_metrics": [
+    {
+      "physical_piece_count": 13837,
+      "unique_types": 7,
+      "delta_from_primary_fine_c": 0,
+      "delta_from_previous_pilot": 2929,
+      "one_by_one_exceptions": 1766,
+      "minimum_xy_short_mm": 3.82,
+      "minimum_xy_long_mm": 3.82,
+      "minimum_body_height_mm": 2.28,
+      "grip_long_ge_15_8_mm": 9162,
+      "actual_size_mm": [
+        211.82,
+        171.82,
+        180.71
+      ],
+      "actual_height_mm": 180.71,
+      "layer_count": 75,
+      "assembly_step_count": 13837,
+      "body_height_families": [
+        {
+          "body_height_mm": 2.28,
+          "part_count": 13837,
+          "unique_types": 7
+        }
+      ],
+      "common_rectangular_parts": 13837,
+      "orthogonal_carrier_parts": 0,
+      "foundation_parts": 0,
+      "temporary_aid_count": 0,
+      "count_basis": "One actual assembly instance and matching BOM row per physical piece, including foundation/internal structure; temporary aids/stage excluded.",
+      "minima_note": "Independent minima; not necessarily one part's XYZ dimensions.",
+      "layer_note": "Distinct part-bottom Z positions, not FDM slicing layers.",
+      "surface_placement_course_mm": 2.4,
+      "stud_height_mm": 0.8333333333333333,
+      "stud_height_fraction_of_surface_course": 0.3472222222222222
+    },
+    {
+      "physical_piece_count": 10908,
+      "unique_types": 137,
+      "delta_from_primary_fine_c": -2929,
+      "delta_from_previous_pilot": 0,
+      "one_by_one_exceptions": 32,
+      "minimum_xy_short_mm": 7.8,
+      "minimum_xy_long_mm": 7.8,
+      "minimum_body_height_mm": 3.2,
+      "grip_long_ge_15_8_mm": 10876,
+      "actual_size_mm": [
+        407.8,
+        343.8,
+        360.2
+      ],
+      "actual_height_mm": 360.2,
+      "layer_count": 112,
+      "assembly_step_count": 10908,
+      "body_height_families": [
+        {
+          "body_height_mm": 3.2,
+          "part_count": 10572,
+          "unique_types": 117
+        },
+        {
+          "body_height_mm": 9.6,
+          "part_count": 336,
+          "unique_types": 20
+        }
+      ],
+      "common_rectangular_parts": 10111,
+      "orthogonal_carrier_parts": 797,
+      "foundation_parts": 44,
+      "temporary_aid_count": 2,
+      "count_basis": "One actual assembly instance and matching BOM row per physical piece, including foundation/internal structure; temporary aids/stage excluded.",
+      "minima_note": "Independent minima; not necessarily one part's XYZ dimensions.",
+      "layer_note": "Distinct part-bottom Z positions, not FDM slicing layers.",
+      "surface_placement_course_mm": 3.2,
+      "stud_height_mm": 1.8,
+      "stud_height_fraction_of_surface_course": 0.5625
+    },
+    {
+      "physical_piece_count": 12435,
+      "unique_types": 121,
+      "delta_from_primary_fine_c": -1402,
+      "delta_from_previous_pilot": 1527,
+      "one_by_one_exceptions": 31,
+      "minimum_xy_short_mm": 7.8,
+      "minimum_xy_long_mm": 7.8,
+      "minimum_body_height_mm": 3.2,
+      "grip_long_ge_15_8_mm": 12404,
+      "actual_size_mm": [
+        423.8,
+        343.8,
+        368.2
+      ],
+      "actual_height_mm": 368.2,
+      "layer_count": 77,
+      "assembly_step_count": 12435,
+      "body_height_families": [
+        {
+          "body_height_mm": 3.2,
+          "part_count": 50,
+          "unique_types": 6
+        },
+        {
+          "body_height_mm": 4.8,
+          "part_count": 12359,
+          "unique_types": 110
+        },
+        {
+          "body_height_mm": 9.6,
+          "part_count": 26,
+          "unique_types": 5
+        }
+      ],
+      "common_rectangular_parts": 11699,
+      "orthogonal_carrier_parts": 736,
+      "foundation_parts": 50,
+      "temporary_aid_count": 2,
+      "count_basis": "One actual assembly instance and matching BOM row per physical piece, including foundation/internal structure; temporary aids/stage excluded.",
+      "minima_note": "Independent minima; not necessarily one part's XYZ dimensions.",
+      "layer_note": "Distinct part-bottom Z positions, not FDM slicing layers.",
+      "surface_placement_course_mm": 4.8,
+      "stud_height_mm": 1.8,
+      "stud_height_fraction_of_surface_course": 0.375
+    }
+  ]
+}

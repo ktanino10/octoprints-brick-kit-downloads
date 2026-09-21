@@ -1,0 +1,4 @@
+role,candidate_id,physical_piece_count,delta_from_primary_fine_c,delta_from_previous_pilot,unique_types,one_by_one_exceptions,actual_height_mm,layer_count,assembly_step_count,minimum_xy_short_mm,minimum_xy_long_mm,minimum_body_height_mm,body_height_families
+phase1-fine-c,mona-fine,13837,0,2929,7,1766,180.71,75,13837,3.82,3.82,2.28,"[{""body_height_mm"":2.28,""part_count"":13837,""unique_types"":7}]"
+dense360-pilot,mona-dense360,10908,-2929,0,137,32,360.2,112,10908,7.8,7.8,3.2,"[{""body_height_mm"":3.2,""part_count"":10572,""unique_types"":117},{""body_height_mm"":9.6,""part_count"":336,""unique_types"":20}]"
+fine-c-refined360,mona-fine-c360,12435,-1402,1527,121,31,368.2,77,12435,7.8,7.8,3.2,"[{""body_height_mm"":3.2,""part_count"":50,""unique_types"":6},{""body_height_mm"":4.8,""part_count"":12359,""unique_types"":110},{""body_height_mm"":9.6,""part_count"":26,""unique_types"":5}]"

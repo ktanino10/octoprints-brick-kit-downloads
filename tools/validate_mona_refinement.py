@@ -29,7 +29,7 @@ def main():
     if not summary.resolve().is_relative_to(FOLDER):
         raise ValueError("Refinement summary escapes its independent study")
     data = json.loads(summary.read_text())
-    images = []
+    images = list(data["detail_comparisons"])
     for group in data["comparisons"]:
         images.extend([group["sheet"]] if group["kind"] == "scale" else group["images"])
     for image in images:

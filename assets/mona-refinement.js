@@ -1,7 +1,7 @@
 import { assetURL, setLanguageContext } from './i18n.js';
 import { readJSON } from './site.js';
 import {
-  studyElement as create, formatStudyNumber as format, renderStudyPanels,
+  studyElement as create, formatStudyNumber as format, renderStudyPanels, studyImage,
   comparisonKinds as kinds, comparisonViews as views, comparisonRules as rules,
 } from './study-ui.js';
 import {
@@ -76,6 +76,38 @@ function renderMetrics() {
   $('#refine-tradeoff').textContent = study.assembly_tradeoff;
   $('#refine-changes').replaceChildren(...study.changes.map((text) => create('li', text)));
   $('#refine-differences').replaceChildren(...study.remaining_differences.map((text) => create('li', text)));
+  const details = $('#refine-details');
+  const detailNames = { forehead: '額の境界', eye_rims: '目の白い縁', mouth: '口の形' };
+  details.replaceChildren();
+  for (const item of study.detail_comparisons) {
+    const figure = create('figure', undefined, 'mona-scale-sheet');
+    figure.dataset.region = item.region;
+    figure.append(create('h3', detailNames[item.region]),
+      studyImage(item, `${detailNames[item.region]} · 初期C / 前の36 cm / 改良案`, imageError),
+      create('figcaption', '同じ登録領域を比較しています。左から初期C、前の36 cm案、改良案です。'));
+    details.append(figure);
+  }
+  $('#refine-metric-caution').textContent = study.metric_caution;
+  $('#refine-original-tradeoff').textContent = study.original_source_tradeoff;
+  $('#refine-quality').replaceChildren();
+  for (const metric of study.quality_comparison) {
+    const row = create('tr');
+    row.dataset.metric = metric.id;
+    const label = create('th', metric.label);
+    label.scope = 'row';
+    row.append(label, create('td', format(metric.before, 6)), create('td', format(metric.after, 6)),
+      create('td', metric.unit === 'IoU' ? 'IoU' : '体高に対する比率'));
+    $('#refine-quality').append(row);
+  }
+  $('#refine-small-parts').replaceChildren();
+  for (const part of study.small_part_exceptions) {
+    const row = create('tr');
+    const id = create('th', part.part_id);
+    id.scope = 'row';
+    row.append(id, create('td', part.position_mm.map((value) => format(value, 3)).join(' / ')),
+      create('td', part.body_mm.map((value) => format(value, 3)).join(' × ')), create('td', part.reason_ja));
+    $('#refine-small-parts').append(row);
+  }
   const proof = $('#refine-provenance');
   proof.replaceChildren();
   for (const row of study.rows) {

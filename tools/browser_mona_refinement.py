@@ -81,6 +81,18 @@ with sync_playwright() as playwright:
                     delta = refined["metrics"]["part_count"] - baseline
                     signed = ("+" if delta > 0 else "") + f"{delta:,}"
                     expect(page.locator("#refine-deltas p").nth(index)).to_contain_text(signed)
+                expect(page.locator("#refine-small-parts tr")).to_have_count(refined["metrics"]["one_by_one_exceptions"])
+                for metric in study["quality_comparison"]:
+                    cells = page.locator(f'#refine-quality tr[data-metric="{metric["id"]}"] td')
+                    expect(cells.nth(0)).to_have_text(f'{metric["before"]:,.6f}'.rstrip("0").rstrip("."))
+                    expect(cells.nth(1)).to_have_text(f'{metric["after"]:,.6f}'.rstrip("0").rstrip("."))
+                expect(page.locator("#refine-original-tradeoff")).not_to_be_empty()
+                details = page.locator("#refine-details").locator("..")
+                details.locator("summary").click()
+                for image in page.locator("#refine-details img").all():
+                    expect(image).to_be_visible()
+                    uncropped_image(image)
+                details.locator("summary").click()
                 for group in study["comparisons"]:
                     button = page.locator(f'[data-refinement-comparison="{group["id"]}"]')
                     button.focus()

@@ -5,5 +5,6 @@
 .refine-height-card h3{font-size:16px}.refine-height-card p{font-size:13px}
 .refine-notes{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin:30px 0}
 .refine-notes h3{font-size:20px}.refine-notes li{font-size:13px;margin-bottom:10px}
+#refine-details .mona-scale-sheet h3{padding:18px 20px;margin:0;font-size:18px}
 @media(max-width:1000px){.mona-refinement-page .mona-image-grid{grid-template-columns:1fr}.refine-heights{grid-template-columns:1fr}}
 @media(max-width:700px){.refine-notes{grid-template-columns:1fr}}

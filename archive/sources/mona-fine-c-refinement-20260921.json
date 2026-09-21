@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "revision": "mona-fine-c-refinement-20260921",
+  "source_revision": "02918d3bffd4db065656f5ffe7e037da1b0754d8",
+  "source_public_study_sha256": "a3ed17cd5c0f48f493cef94261be96380cb0d79abddebe3c81a9fcc2306e7a92",
+  "files": [
+    {
+      "path": "artifacts/studies/mona-fine-c-refinement-20260921/ATTRIBUTION.md",
+      "bytes": 698,
+      "sha256": "1f02aacb54b1c0890f7645cf615228204d32356c20571078fbb5f98f3de3c588"
+    },
+    {
+      "path": "artifacts/studies/mona-fine-c-refinement-20260921/LICENSE",
+      "bytes": 19346,
+      "sha256": "3711f963c05d0be80d53e5923308a6dee31b203da23435c9cfb7c7b6e4dd5e19"
+    },
+    {
+      "path": "artifacts/studies/mona-fine-c-refinement-20260921/comparison-en.html",
+      "bytes": 5721,
+      "sha256": "541da206f2031e487a0a023395a949e85f1428d7e282e49f644593a7ec5a1272"
+    },
+    {
+      "path": "artifacts/studies/mona-fine-c-refinement-20260921/comparison-ja.html",
+      "bytes": 6045,
+      "sha256": "e31521c41b2cb9c07cee716442d7d016f2174d906704e653326222c74144e39a"
+    },
+    {
+      "path": "artifacts/studies/mona-fine-c-refinement-20260921/comparison.csv",
+      "bytes": 899,
+      "sha256": "cd13caf43a915240100dc53b82753d73b32642e1ef6e179e27bca8bc68d1e221"
+    },
+    {
+      "path": "artifacts/studies/mona-fine-c-refinement-20260921/dense360-pilot-face.jpg",
+      "bytes": 96377,
+      "sha256": "3d193a7cba747abebf27c4f3adcc718c2dcb1cf90c9cfda40975f88510e11955"
+    },
+    {
+      "path": "artifacts/studies/mona-fine-c-refinement-20260921/dense360-pilot-front.jpg",
+      "bytes": 202035,
+      "sha256": "0627d35c965df02b3464b91542d2da5917755937f71a26dbbe65acbb3dbfe6cf"
+    },
+    {
+      "path": "artifacts/studies/mona-fine-c-refinement-20260921/dense360-pilot-three_quarter.jpg",
+      "bytes": 256391,
+      "sha256": "11ac821de42c0eb068066e0f549e9aeedd9d003a95d6d6bdf1f06115da6efaa3"
+    },
+    {
+      "path": "artifacts/studies/mona-fine-c-refinement-20260921/eye_rims-detail.jpg",
+      "bytes": 230527,
+      "sha256": "2784142352054d2b03f041beffad0c1178cc224441e3333f34b0eda5c1b32a01"
+    },
+    {
+      "path": "artifacts/studies/mona-fine-c-refinement-20260921/face-comparison.jpg",
+      "bytes": 550792,
+      "sha256": "44ff6396ab5dfaae8f323fb2459891f32c412162fadf833466618f4a937dc44a"
+    },
+    {
+      "path": "artifacts/studies/mona-fine-c-refinement-20260921/fine-c-refined360-face.jpg",
+      "bytes": 107249,
+      "sha256": "bdb9ff22524f15c184631f863a062693dba59a7923cd4b84a262f0f177708031"
+    },
+    {
+      "path": "artifacts/studies/mona-fine-c-refinement-20260921/fine-c-refined360-front.jpg",
+      "bytes": 225722,
+      "sha256": "1fbd8ec53b18629e012d0ed734047797c10ca9fd28946255d455de46766a3f63"
+    },
+    {
+      "path": "artifacts/studies/mona-fine-c-refinement-20260921/fine-c-refined360-three_quarter.jpg",
+      "bytes": 290021,
+      "sha256": "7bdedfa8d903a174ae88520df7e9d7e4565b329d810912c6b37033bae1d6fa71"
+    },
+    {
+      "path": "artifacts/studies/mona-fine-c-refinement-20260921/forehead-detail.jpg",
+      "bytes": 178761,
+      "sha256": "df1237598f67eb939f438b00988d37759b56306a333721301d20ee27be48eb9f"
+    },
+    {
+      "path": "artifacts/studies/mona-fine-c-refinement-20260921/front-comparison.jpg",
+      "bytes": 619678,
+      "sha256": "4fcf5dde8f9a2a2a73c953971ee75181ee74ea1ff43f9a9bc362d5f31a0804cc"
+    },
+    {
+      "path": "artifacts/studies/mona-fine-c-refinement-20260921/mouth-detail.jpg",
+      "bytes": 148882,
+      "sha256": "36fac94f111a93ab746f9eff6ba903bea34b918a1e88f38de9ea1402c36495c8"
+    },
+    {
+      "path": "artifacts/studies/mona-fine-c-refinement-20260921/phase1-fine-c-face.jpg",
+      "bytes": 128016,
+      "sha256": "3f9426522110ed3d7dda5607fcdd35d35e07de5fedcea0678688ecc64e8fa9d2"
+    },
+    {
+      "path": "artifacts/studies/mona-fine-c-refinement-20260921/phase1-fine-c-front.jpg",
+      "bytes": 267324,
+      "sha256": "87a3f16cc2653cc88c128e58718f7cd8c6fe302ea1a3540508d4edd61e31898f"
+    },
+    {
+      "path": "artifacts/studies/mona-fine-c-refinement-20260921/phase1-fine-c-three_quarter.jpg",
+      "bytes": 303005,
+      "sha256": "688cfaebb3d0277361b412381ff011b311575035269df287140f8d1625d5ce97"
+    },
+    {
+      "path": "artifacts/studies/mona-fine-c-refinement-20260921/study.json",
+      "bytes": 124756,
+      "sha256": "a3ed17cd5c0f48f493cef94261be96380cb0d79abddebe3c81a9fcc2306e7a92"
+    },
+    {
+      "path": "artifacts/studies/mona-fine-c-refinement-20260921/three-quarter-comparison.jpg",
+      "bytes": 703031,
+      "sha256": "8788a8f43c5659e4fc5c88c45f610fd3bc8000bb74ff8ab1d9a7fed40e0998a6"
+    }
+  ]
+}

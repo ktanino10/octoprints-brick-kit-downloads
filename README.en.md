@@ -61,7 +61,32 @@ The small-part handling and blocked-hole feedback belongs to the earlier r2 4 mm
 Those holes were blocked **before** ultrasonic cleaning. The cause, actual slicer settings and condition-specific retention remain unresolved.
 Geometry-only 3MF files remain **NOT_SLICED**, not configured Bambu Studio projects or G-code.
 
-## Mona likeness, size and actual quantities
+## Further Mona refinement toward initial Fine C
+
+The **[actual refinement image and count comparison](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/mona-refinement.html?comparison=face-front)**
+compares initial Fine C, the previous 36 cm pilot and the refinement in matched face, front and three-quarter views,
+with additional forehead, eye-rim and mouth close-ups.
+
+The refinement has **12,435 parts using 121 types, at 423.8 × 343.8 × 368.2 mm**:
+**+1,527** against the previous 10,908 parts and **−1,402** against initial C's 13,837.
+Neither reference is a ceiling, and neither a higher nor a lower count is a success criterion by itself.
+
+The 8 mm XY interface is retained while C's actual cells, single-color boundaries and course pattern guide a new
+**4.8 mm half-height body family**. Actual families are 3.2 mm: 50 parts/6 types; 4.8 mm: 12,359 parts/110 types;
+and 9.6 mm: 26 parts/5 types. There are 77 placement layers. The 1.6 mm bookkeeping unit is not a thin part or an FDM layer height.
+A real native 0.20 mm upper-perimeter chamfer affects only 3,763 exterior parts; this is not a rendering-texture change.
+
+**The result is not identical to initial C; user visual approval remains pending.**
+Fine bright edges, dark-eye surfaces and small nose/shadow/outline differences remain. The finish is not C's dark open vertical seam.
+C-target render metrics improve, but the separate front IoU against the original source decreases from about 0.95474 to 0.94882,
+which is also disclosed. These are not perceived-likeness percentages or printed accuracy/strength pass values.
+
+The total includes 31 one-cell exceptions and 50 foundation parts, but excludes two temporary pedestals.
+Retention, load, tipping stability and safe pedestal removal remain unverified.
+This is **NOT_SELECTED / NOT_SLICED, with full-kit printing on hold**—not a new complete kit, plate set, trial or print job.
+The first 36 cm URLs/images/counts, current r3, historical artifacts and all seven existing release ZIPs are preserved.
+
+## First 36 cm pilot: Mona likeness, size and actual quantities
 
 The **[Mona comparison against initial Fine C](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/mona-likeness.html)**
 shows the original, initial C, published r3 and the new approximately 36 cm pilot.

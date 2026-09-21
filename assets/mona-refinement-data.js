@@ -1,4 +1,4 @@
-import { validateStudyComparisons, chooseStudyComparison } from './study-comparisons.js';
+import { validateStudyComparisons, validateStudyImage, chooseStudyComparison } from './study-comparisons.js';
 export { countDelta } from './shape-options-data.js';
 
 export const REFINEMENT_ID = 'mona-fine-c-refinement-20260921';
@@ -114,6 +114,24 @@ export function validateRefinementStudy(study, pointer) {
     requireThat(group.images.filter((image) => image.role !== 'refined-360').every((image) => image.sha256 !== next.sha256),
       '初期Cや前36 cmの画像を、新改良の画像として代用できません。');
   }
+  requireThat(Array.isArray(study.detail_comparisons) && study.detail_comparisons.length === 3
+    && new Set(study.detail_comparisons.map((item) => item.region)).size === 3
+    && study.detail_comparisons.every((item) => ['forehead', 'eye_rims', 'mouth'].includes(item.region))
+    && text(study.metric_caution) && text(study.original_source_tradeoff)
+    && Array.isArray(study.quality_comparison) && study.quality_comparison.length > 0
+    && study.quality_comparison.every((item) => object(item) && text(item.label)
+      && ['IoU', 'body-height fraction'].includes(item.unit)
+      && Number.isFinite(item.before) && Number.isFinite(item.after)
+      && item.before >= 0 && item.after >= 0 && item.before <= 1 && item.after <= 1)
+    && study.quality_comparison.some((item) => item.id === 'original-front-outline')
+    && Array.isArray(study.small_part_exceptions)
+    && study.small_part_exceptions.length === improved.metrics.one_by_one_exceptions
+    && new Set(study.small_part_exceptions.map((item) => item.part_id)).size === study.small_part_exceptions.length
+    && study.small_part_exceptions.every((item) => text(item.part_id) && Array.isArray(item.position_mm)
+      && item.position_mm.length === 3 && item.position_mm.every(Number.isFinite)
+      && dimensions(item.body_mm) && item.extended_grip === false && text(item.reason_ja)),
+  '改良比較の拡大図・参考指標・小部品の記録が不正です。');
+  for (const item of study.detail_comparisons) validateStudyImage(item, refinementPath);
   return study;
 }
 

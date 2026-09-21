@@ -23,6 +23,14 @@ function fixture() {
     assembly_tradeoff: 'Synthetic test fixture, not a published candidate.',
     assembly_layer_note: 'Synthetic body families are not FDM layers.',
     changes: ['Unit-only change.'], remaining_differences: ['Unit-only remaining difference.'],
+    detail_comparisons: ['forehead', 'eye_rims', 'mouth'].map((region) => ({
+      region, path: `/artifacts/studies/${REFINEMENT_ID}/unit-only-${region}.jpg`,
+      sha256: 'c'.repeat(64), bytes: 1, width: 1200, height: 300,
+    })),
+    metric_caution: 'Unit-only descriptive metrics, not approval.', original_source_tradeoff: 'Unit-only separate target.',
+    quality_comparison: [{ id: 'original-front-outline', label: 'Unit-only original comparison', unit: 'IoU', before: 0.5, after: 0.4 }],
+    small_part_exceptions: [{ part_id: 'unit-only-part', position_mm: [-8, 0, 0], body_mm: [7.8, 7.8, 4.8],
+      extended_grip: false, reason_ja: 'Synthetic exception only.' }],
     rows: REFINEMENT_ROLES.map((role, index) => ({
       role, source_role: ['phase1-fine-c', 'dense360-pilot', 'fine-c-refined360'][index],
       candidate_id: ['mona-fine', 'mona-dense360', 'mona-fine-c360'][index],
@@ -140,5 +148,36 @@ test('the first pilot source files, pointer, summary and source proofs stay byte
     const bytes = await readFile(new URL(entry.path, root));
     assert.equal(bytes.length, entry.bytes, entry.path);
     assert.equal(createHash('sha256').update(bytes).digest('hex'), entry.sha256, entry.path);
+  }
+  const publication = validateRefinementPointer(JSON.parse(await readFile(new URL('archive/mona-refinement.json', root), 'utf8')));
+  if (publication.state === 'READY') {
+    const bytes = await readFile(new URL(refinementPath(publication.data_url).slice(1), root));
+    assert.equal(createHash('sha256').update(bytes).digest('hex'), publication.data_sha256);
+    const actual = validateRefinementStudy(JSON.parse(bytes), publication);
+    const sourceBytes = await readFile(new URL(`artifacts/studies/${REFINEMENT_ID}/study.json`, root));
+    assert.equal(createHash('sha256').update(sourceBytes).digest('hex'), actual.source_study_sha256);
+    const source = JSON.parse(sourceBytes);
+    for (const row of actual.rows) {
+      const original = source.rows.find((item) => item.role === row.source_role);
+      assert.equal(row.candidate_id, original.candidate_id);
+      assert.equal(row.metrics.part_count, original.metrics.physical_piece_count);
+      assert.equal(row.metrics.unique_types, original.metrics.unique_types);
+      assert.deepEqual(row.metrics.dimensions_mm, original.metrics.actual_size_mm);
+      assert.deepEqual(row.metrics.body_height_families, original.metrics.body_height_families);
+      assert.equal(row.evidence.manifest_sha256, original.provenance.manifest_sha256);
+      assert.equal(row.evidence.bom_sha256, original.provenance.bom_sha256);
+      for (const [view, key] of [['front', 'front'], ['three-quarter', 'three_quarter']]) {
+        const image = actual.comparisons.find((item) => item.kind === 'shape' && item.view === view).images.find((item) => item.role === row.role);
+        assert.equal(image.sha256, original.images[key].sha256);
+        assert.deepEqual(image.source_camera, original.images[key].normalization);
+        assert.equal(image.projected_subject_height_px, 864);
+      }
+    }
+    assert.deepEqual(actual.pattern_provenance, source.pattern_provenance);
+    assert.deepEqual(actual.surface_edge_treatment, source.surface_edge_treatment);
+    assert.deepEqual(actual.small_part_exceptions, source.small_part_exceptions);
+    const metric = actual.quality_comparison.find((item) => item.id === 'original-front-outline');
+    assert.equal(metric.before, source.c_target_metrics.secondary_original_source_comparison.previous_360.silhouette.front.intersection_over_union);
+    assert.equal(metric.after, source.c_target_metrics.secondary_original_source_comparison.refined.silhouette.front.intersection_over_union);
   }
 });
