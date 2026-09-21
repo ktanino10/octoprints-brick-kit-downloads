@@ -143,6 +143,19 @@ def verify_manifest_bom(manifest_bytes, bom_bytes):
     }
 
 
+def body_height_families(manifest):
+    actual_metrics(manifest)
+    families = {}
+    for part in manifest["parts"]:
+        spec = manifest["types"][part["type_id"]]
+        height = spec.get("body_height_mm", spec["body_mm"][2])
+        family = families.setdefault(height, {"part_count": 0, "type_ids": set()})
+        family["part_count"] += 1
+        family["type_ids"].add(part["type_id"])
+    return [{"body_height_mm": height, "part_count": family["part_count"],
+             "unique_types": len(family["type_ids"])} for height, family in sorted(families.items())]
+
+
 def verify_reference_identity(manifest, reference):
     require(identity_projection(manifest) == identity_projection(reference),
             "The comparison changes reference IDs, types, colors, poses, layers or sequence")

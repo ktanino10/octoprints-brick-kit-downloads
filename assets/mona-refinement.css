@@ -1,0 +1,9 @@
+.mona-refinement-page .mona-image-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.mona-image-card[data-role="refined-360"]{border-top-color:#267c75}
+.refine-heights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:24px 0}
+.refine-height-card{border:1px solid var(--line);border-radius:6px;background:white;padding:20px}
+.refine-height-card h3{font-size:16px}.refine-height-card p{font-size:13px}
+.refine-notes{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin:30px 0}
+.refine-notes h3{font-size:20px}.refine-notes li{font-size:13px;margin-bottom:10px}
+@media(max-width:1000px){.mona-refinement-page .mona-image-grid{grid-template-columns:1fr}.refine-heights{grid-template-columns:1fr}}
+@media(max-width:700px){.refine-notes{grid-template-columns:1fr}}

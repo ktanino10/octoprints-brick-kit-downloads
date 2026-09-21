@@ -93,6 +93,16 @@
       "status": "ARCHIVE_RECORD"
     },
     {
+      "path": "archive/mona-refinement.json",
+      "group": "design",
+      "revision": "r2-20260919",
+      "format": "JSON",
+      "bytes": 398,
+      "sha256": "428ea1d80a8c82d634368551852fba199c20832a2d0b6ac164d52bf2dc64fbd8",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/mona-refinement.json",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
       "path": "archive/mona-study.json",
       "group": "design",
       "revision": "r2-20260919",
@@ -18247,12 +18257,42 @@
       "status": "ARCHIVE_RECORD"
     },
     {
+      "path": "assets/mona-refinement-data.js",
+      "group": "site",
+      "revision": "public-archive-2026-09-19",
+      "format": "JS",
+      "bytes": 8308,
+      "sha256": "2caeab5ccf7c1e7255e0e7b102a74ec80165260d45626fe89a3c7e30b4832673",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/mona-refinement-data.js",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
+      "path": "assets/mona-refinement.css",
+      "group": "site",
+      "revision": "public-archive-2026-09-19",
+      "format": "CSS",
+      "bytes": 792,
+      "sha256": "df90f305fca10a4314765dbd1b2db0d135cdb49651cd2f55c67880aa64088cb9",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/mona-refinement.css",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
+      "path": "assets/mona-refinement.js",
+      "group": "site",
+      "revision": "public-archive-2026-09-19",
+      "format": "JS",
+      "bytes": 6686,
+      "sha256": "9212b1130fc2477d140e0e062dc7c0b6c30798e9169cbeaaea97e6cf1c8953ed",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/mona-refinement.js",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
       "path": "assets/mona-study-data.js",
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "JS",
-      "bytes": 11947,
-      "sha256": "7f8315122061f501be0ab3a2135972dd02183aa2e76625fc566b78cdf4c4dc36",
+      "bytes": 7847,
+      "sha256": "0b0cf1aa4d82332a0e40e1bd0b3c7a99a4acb9350ce66aa0fe18dd0453366b07",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/mona-study-data.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -18271,8 +18311,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "JS",
-      "bytes": 9727,
-      "sha256": "c2bf374da53c8af97dbfb99f7ee4b59b79bb22cde0ba2b2e1f361cfa47ae79ee",
+      "bytes": 7681,
+      "sha256": "051c8516883a7fb45effb09b808dd6ff4443f46f73794dfa4abdd70c03567611",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/mona-study.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -18334,6 +18374,26 @@
       "bytes": 13858,
       "sha256": "d406897a7383d1f61d08cea5dd972b8e7b623c8db2cdb90c41e15d0c7dbcb653",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/site.js",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
+      "path": "assets/study-comparisons.js",
+      "group": "site",
+      "revision": "public-archive-2026-09-19",
+      "format": "JS",
+      "bytes": 5360,
+      "sha256": "4a0dd5c447de246eb2cd42da75860ac3adb3fe38a9f8b6fc1d696cee8e0aa724",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/study-comparisons.js",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
+      "path": "assets/study-ui.js",
+      "group": "site",
+      "revision": "public-archive-2026-09-19",
+      "format": "JS",
+      "bytes": 2804,
+      "sha256": "f3554f79fdf19177647744271841d3737bc449010f73d549126a80f92bc095e0",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/study-ui.js",
       "status": "ARCHIVE_RECORD"
     },
     {
@@ -18485,8 +18545,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "JS",
-      "bytes": 342458,
-      "sha256": "29bf3f794462ef2c952f49d7b41a963157517c9776ada4ef0213be4b585a0f2d",
+      "bytes": 358125,
+      "sha256": "13f8e6aab4a653b9787fa806b4ef6002f68a8e81430b4aa4cf007d0b3850aca4",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/translations.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -18644,8 +18704,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "HTML",
-      "bytes": 17691,
-      "sha256": "3ba1f3e44a05197b36c052576f5236c18f3b974800e177c157a7567e646adf9c",
+      "bytes": 17870,
+      "sha256": "4a9b61d3068075f105d274c984ea500af9b2ee7d3e5eb049f6c2df3eb8029510",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/en/index.html",
       "status": "ARCHIVE_RECORD"
     },
@@ -18664,9 +18724,19 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "HTML",
-      "bytes": 9440,
-      "sha256": "adc83f7ba226c2cc2d5ee6f8398420fa641c42a15581f3e1330b94cfe77b55ac",
+      "bytes": 9795,
+      "sha256": "d0026c46104f4d3bd15032659545738a2e3ba5b4a6684e75679f48247dd0f229",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/en/mona-likeness.html",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
+      "path": "en/mona-refinement.html",
+      "group": "site",
+      "revision": "public-archive-2026-09-19",
+      "format": "HTML",
+      "bytes": 9887,
+      "sha256": "721b3210c50a3cacccc5b6d57e2f75cf19395304f455d7f738fa256647f5a091",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/en/mona-refinement.html",
       "status": "ARCHIVE_RECORD"
     },
     {
@@ -18874,8 +18944,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "HTML",
-      "bytes": 17864,
-      "sha256": "1c305d776783c55d991aa2d5ce4cc4a672c5d54894c51716ad2ca808504b00bd",
+      "bytes": 18043,
+      "sha256": "8847bb49386f130d2da36b2ac2970aacffd0e32680a89b1c74bcf86b18b231fb",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/index.html",
       "status": "ARCHIVE_RECORD"
     },
@@ -18944,8 +19014,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "HTML",
-      "bytes": 17832,
-      "sha256": "6875b7be281a96640dc7758a621a6ca02f49437b6440c3829034dbc198dd7392",
+      "bytes": 18008,
+      "sha256": "9247539eacd1255d43b17f633da10d8d3d741bbfb2344fc2de31eef9dea5d582",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/index.html",
       "status": "ARCHIVE_RECORD"
     },
@@ -18964,9 +19034,19 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "HTML",
-      "bytes": 9531,
-      "sha256": "0375ca4dd39c1ec3f27281a82a131375359cd0153193509bac1a299ccef9d240",
+      "bytes": 9895,
+      "sha256": "38a4719087ea2c893b67a1f7f2c8ac2bd26d0aaeaa55f73ce8e30536676308e8",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/mona-likeness.html",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
+      "path": "ja/mona-refinement.html",
+      "group": "site",
+      "revision": "public-archive-2026-09-19",
+      "format": "HTML",
+      "bytes": 9825,
+      "sha256": "05f5d835768bce71e62c2ba71201d84a3e05828e73e6821f31fce7c4acdbeca3",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/mona-refinement.html",
       "status": "ARCHIVE_RECORD"
     },
     {
@@ -19004,9 +19084,19 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "HTML",
-      "bytes": 9536,
-      "sha256": "66e317ba99f54ac126eaf95a70be436e885cbc84532711095a41ea51e0ff183f",
+      "bytes": 9903,
+      "sha256": "0da9a73607161550e66bc8b76d58c61011457aab6e5d5c90e3c2378661ace426",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/mona-likeness.html",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
+      "path": "mona-refinement.html",
+      "group": "site",
+      "revision": "public-archive-2026-09-19",
+      "format": "HTML",
+      "bytes": 9830,
+      "sha256": "aaa26b30fd56cb2d2d519388b27b5b0049ec7134985bc1ad1b45127f2c4b7ce7",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/mona-refinement.html",
       "status": "ARCHIVE_RECORD"
     },
     {
@@ -19074,8 +19164,8 @@
       "group": "viewer",
       "revision": "public-viewer-2026-09-19",
       "format": "JS",
-      "bytes": 1203646,
-      "sha256": "ccdc9d1d0d7d64a5a92d3071a646b9ec1f6e4d5c16d37725b5eb1f57d0b09a77",
+      "bytes": 1228081,
+      "sha256": "ace40fd7ff27bfa8145311a6830ebffe4c5e0826d1cd0066ee2e773510e9da19",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/viewer/assets/studio.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -19091,11 +19181,11 @@
     }
   ],
   "totals": {
-    "files": 1489,
-    "bytes": 816048342,
+    "files": 1498,
+    "bytes": 816137808,
     "groups": {
-      "site": 51,
-      "design": 22,
+      "site": 59,
+      "design": 23,
       "phase1": 149,
       "common": 561,
       "common-trial": 24,

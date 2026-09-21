@@ -1,0 +1,30 @@
+{
+  "public_commit": "6c3cf78b943f585bc46925646c647d1d7c02a6b3",
+  "files": [
+    {
+      "path": "site/mona-study-baseline.json",
+      "bytes": 1131,
+      "sha256": "81eaf44c195f21a3908b1be83d53c6e3cfba70cb4cd851ac6a58ecdd0788d72e"
+    },
+    {
+      "path": "archive/mona-study.json",
+      "bytes": 557,
+      "sha256": "58082454543b67329fffefde628dafa5db350101e5525dcbe392ff111d060c90"
+    },
+    {
+      "path": "archive/sources/mona-likeness-360-20260921.json",
+      "bytes": 5054,
+      "sha256": "3d629d97369c7ed421ca9e75c358cac373dd8befaa68b8d82c4e9d083c3166bb"
+    },
+    {
+      "path": "archive/sources/mona-likeness-360-20260921-verification.json",
+      "bytes": 2950,
+      "sha256": "5f7b766327a18286056f098a10a0f771e3adc3fd864d3d30441fe8f4b5640096"
+    },
+    {
+      "path": "artifacts/studies/mona-likeness-360-20260921/public-study.json",
+      "bytes": 77175,
+      "sha256": "4cef8558af7da4c78ac35efbbdee2478bf40f5cddbe2d0054abda040aab81841"
+    }
+  ]
+}

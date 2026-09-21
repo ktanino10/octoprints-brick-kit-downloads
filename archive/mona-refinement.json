@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "study_id": "mona-fine-c-refinement-20260921",
+  "state": "INPUT_WAIT",
+  "current_revision_unchanged": "r3-8mm-20260920",
+  "previous_study_unchanged": "mona-likeness-360-20260921",
+  "selection": "NOT_SELECTED",
+  "visual_approval": "PENDING",
+  "physical_fit": "UNKNOWN",
+  "retention_strength": "UNKNOWN",
+  "slicer_status": "NOT_SLICED",
+  "full_print": "ON_HOLD"
+}

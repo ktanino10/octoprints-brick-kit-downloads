@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Monaをさらに初期細密Cへ近づける比較。初期C・前の36 cm案・新改良の同画面高と顔領域をそろえ、実部品数・本体高さ仕様・色と形の変更を日英で確認します。">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Monaをさらに初期細密Cへ — Octoprints</title>
+  <link rel="icon" href="viewer/assets/mark.svg">
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/mona-study.css">
+  <link rel="stylesheet" href="assets/mona-refinement.css">
+  <script type="module" src="assets/mona-refinement.js"></script>
+</head>
+<body class="mona-refinement-page">
+<a class="skip" href="#main">本文へ</a>
+<header class="header wrap"><a class="brand" href="./">octoprints<span>MONA / FINE-C REFINEMENT</span></a><nav aria-label="メイン"><a href="./">ホーム</a><a href="mona-likeness.html?comparison=face-front">前の36 cm比較</a><a href="models.html">現行3体</a><a href="downloads.html">ダウンロード</a></nav></header>
+<div class="status-strip"><div class="wrap"><strong>追加改良の比較・未採用</strong><span>実物未検証・全数印刷は保留</span></div></div>
+<main id="main" class="wrap content-page">
+  <div class="page-heading"><p class="eyebrow">INITIAL FINE C / PREVIOUS 36 cm / ONE REFINEMENT</p><h1>初期Cへ、<br>もう一段近づける。</h1><p>約36 cmの方向を保ち、額の同色面・目の白い縁・段階的な口を初期細密Cへさらに近づけるための比較です。部品数を増やしてもよいという方針で、低い部品数を目標にはしません。</p></div>
+  <aside class="mona-priority"><strong>方向性への肯定と、完成・製造の承認は別です。</strong><p>前の36 cm案の方向は肯定され、さらに初期Cらしい顔と輪郭にする依頼を受けました。新しい比較案の外観判断・嵌合・保持力・全体の荷重や転倒は、まだ承認されていません。</p><p>8 mmのXY接合規格と開いた下面を保ちます。本体高さの種類は実際の構成から表示し、前の3.2 mm・9.6 mmと同じだと決めつけません。描画テクスチャだけで色を変えた案ではなく、実部品の単色とBOMに対応する比較を扱います。</p></aside>
+  <p id="refine-status" role="status" class="quiet">Mona改良比較の公開状態を確認しています。</p>
+  <div id="refine-pending" class="revision-wait" hidden><h2>改良案の実画像・実数量を受領待ちです。</h2><p>新しい部品数・型数・本体高さ・完成寸法は、制作担当の確定した実データを待っています。前の10,908部品の画像や推定値を、新改良として表示しません。</p><a class="text-link" href="mona-likeness.html?comparison=face-front">変更していない前の36 cm比較を見る →</a></div>
+  <div id="refine-error" class="error" role="alert" hidden></div>
+  <section id="refine-results" hidden aria-labelledby="refine-comparison-title">
+    <div id="refine-controls" class="mona-controls" role="group" aria-label="Mona改良の比較条件"></div>
+    <h2 id="refine-comparison-title"></h2>
+    <p id="refine-rule" class="mona-comparison-rule"></p>
+    <p id="refine-method" class="quiet"></p>
+    <div id="refine-images"></div>
+    <p id="refine-limit" class="note"></p>
+    <div class="refine-notes"><section><h3>変えたところ。</h3><ul id="refine-changes"></ul></section><section><h3>初期Cと、まだ違うところ。</h3><ul id="refine-differences"></ul></section></div>
+    <h2>実部品数と、前の案からの増減。</h2>
+    <p>初期Cの13,837部品と前の36 cm案の10,908部品を、別々の比較基準として使います。部品数の増加だけで、似方や組み立てやすさの合格とはしません。</p>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Mona改良の実数量と寸法の表"><table class="mona-metrics"><thead><tr><th scope="col">比較するモデル</th><th scope="col">実部品数</th><th scope="col">型数</th><th scope="col">1×1例外</th><th scope="col">幅 × 奥行 × 高さ / mm</th><th scope="col">配置層数</th><th scope="col">各最小値：短辺 / 長辺 / 厚み / mm</th><th scope="col">長辺15.8 mm以上の部品</th></tr></thead><tbody id="refine-metrics"></tbody></table></div>
+    <p class="quiet">短辺・長辺・厚みの最小値は別々の部品に由来する場合があります。長辺15.8 mm以上という数値は、実物で握りやすいという合格判定ではありません。</p>
+    <div id="refine-deltas" class="mona-deltas" aria-label="初期Cと前36 cm案それぞれに対する増減"></div>
+    <h2>本体高さの種類も、実データから。</h2>
+    <div id="refine-height-families" class="refine-heights"></div>
+    <p id="refine-layer-note" class="note"></p>
+    <p class="quiet">本体高・組付けのZ間隔・FDM印刷の層高は別の値です。型数は使用する形状の種類、部品数は配置された実体の数です。</p>
+    <p id="refine-tradeoff" class="note"></p>
+    <h2>実部品・単色・画像の対応記録。</h2>
+    <div id="refine-provenance" class="mona-provenance"></div>
+    <div id="refine-source" class="quiet"></div>
+  </section>
+  <section class="prose"><h2>前の比較と配布物は、そのまま残します。</h2><p>前の36 cmモデルの画像・数量・共有URLを上書きせず、別の比較記録として追加します。現行r3、既存の試験・プレート・Releaseは変更しません。他の2体や一体造形版、新しい印刷キットへ自動で展開しません。</p><p><strong>新案はNOT_SELECTED・NOT_SLICED、実物未検証・全数印刷保留です。</strong>見た目の改善を、物理的な合格や製造の承認に読み替えません。</p><p><a href="mona-likeness.html?comparison=face-front">前の36 cm案と初期Cの顔を見る →</a> / <a href="shape-options.html">以前のA/B比較</a> / <a href="models.html">公開中r3（8 mm）</a></p></section>
+  <noscript><p class="note">改良比較にはJavaScriptが必要です。<a href="archive/mona-refinement.json">公開状態の記録</a>と<a href="mona-likeness.html">前の比較</a>は直接確認できます。</p></noscript>
+</main>
+<footer class="footer wrap"><div><a class="brand" href="./">octoprints<span>制作物と、改善の記録を公開。</span></a><p><a href="ATTRIBUTION.md">出典・改変・第三者の権利</a> / <a href="LICENSE">CC BY-NC 4.0</a>。実物写真・動画は提供者所有で、一律のCC許諾ではありません。</p></div><div><a href="https://github.com/ktanino10/octoprints-brick-kit-downloads">公開リポジトリ ↗</a></div></footer>
+<dialog id="image-dialog" aria-label="Mona比較の実画像を拡大"><button class="dialog-close" type="button" aria-label="拡大画像を閉じる">閉じる ×</button><img alt=""><p></p><a class="text-link" download>実画像を取得 ↓</a></dialog>
+</body></html>

@@ -25,6 +25,10 @@ STUDY_PUBLICATIONS = {
         "filename": "mona-study.json", "baseline_field": "current_revision_unchanged", "selection": "NOT_SELECTED",
         "visual_approval": "PENDING",
     },
+    "mona-fine-c-refinement-20260921": {
+        "filename": "mona-refinement.json", "baseline_field": "current_revision_unchanged", "selection": "NOT_SELECTED",
+        "visual_approval": "PENDING", "previous_study_unchanged": "mona-likeness-360-20260921",
+    },
 }
 
 def request_url(url):
@@ -67,8 +71,9 @@ def validate_live_study(study_id, revision, study, expected_study):
         raise ValueError("The live study record is stale or differs from its checked inputs")
     flags = {"state": "READY", "selection": profile["selection"], "physical_fit": "UNKNOWN",
              "retention_strength": "UNKNOWN", "slicer_status": "NOT_SLICED", "full_print": "ON_HOLD"}
-    if "visual_approval" in profile:
-        flags["visual_approval"] = profile["visual_approval"]
+    for key in ["visual_approval", "previous_study_unchanged"]:
+        if key in profile:
+            flags[key] = profile[key]
     for key, value in flags.items():
         if study.get(key) != value:
             raise ValueError(f"Incorrect study publication or physical gate: {key}")

@@ -1,5 +1,9 @@
-import { assetURL, numberLocale, setLanguageContext } from './i18n.js';
+import { assetURL, setLanguageContext } from './i18n.js';
 import { readJSON } from './site.js';
+import {
+  studyElement as create, formatStudyNumber as format, studyImage, renderStudyPanels,
+  comparisonKinds as kinds, comparisonViews as views, comparisonRules as rules,
+} from './study-ui.js';
 import {
   MONA_STUDY_URL, MONA_ROLES, MONA_REFERENCE_COUNTS, countDelta,
   validateMonaPointer, validateMonaStudy, chooseMonaComparison,
@@ -8,39 +12,13 @@ import {
 const $ = (selector) => document.querySelector(selector);
 const names = { original: '原型Mona（無分割）', 'fine-c': '初期細密C（4 mm）',
   'current-r3': '公開中r3（8 mm）', 'pilot-360': '新しい約36 cm案（8 mm）' };
-const kinds = { shape: '形の比較', face: '顔の拡大', scale: '実寸比' };
-const views = { front: '正面', 'three-quarter': '斜め（3/4）' };
-const rules = {
-  shape: '画面上の高さをそろえた形の比較です。実寸比ではありません。大きく表示したことを再現度の向上と扱いません。',
-  face: '同じ顔領域を切り出した拡大比較です。完成サイズやブロックの実寸比を示す画像ではありません。',
-  scale: '全モデルを同じpx/mmで表示した実寸比です。大きく見えることと、顔・体形・丸みが似ていることは別です。',
-};
-const format = (value, digits = 2) => new Intl.NumberFormat(numberLocale(), { maximumFractionDigits: digits }).format(value);
-const create = (tag, text, className) => {
-  const node = document.createElement(tag);
-  if (text !== undefined) node.textContent = String(text);
-  if (className) node.className = className;
-  return node;
-};
 let study = null, comparison = null;
 
-function actualImage(image, caption) {
-  const link = create('a', undefined, 'image-link');
-  link.href = assetURL(image.path);
-  link.dataset.lightbox = '';
-  link.dataset.caption = caption;
-  const img = create('img');
-  img.src = link.href;
-  img.alt = caption;
-  img.width = image.width;
-  img.height = image.height;
-  img.addEventListener('error', () => {
-    $('#mona-error').hidden = false;
-    $('#mona-error').textContent = 'Monaの実比較画像を読み込めません。旧画像や推定の画像で代用していません。';
-  });
-  link.append(img, create('span', '画像を拡大 ＋', 'zoom-hint'));
-  return link;
+function imageError() {
+  $('#mona-error').hidden = false;
+  $('#mona-error').textContent = 'Monaの実比較画像を読み込めません。旧画像や推定の画像で代用していません。';
 }
+const actualImage = (image, caption) => studyImage(image, caption, imageError);
 
 function showComparison() {
   if (!study || !comparison) return;
@@ -53,29 +31,9 @@ function showComparison() {
   $('#mona-comparison-title').textContent = `${kinds[comparison.kind]} · ${views[comparison.view]}`;
   $('#mona-comparison-rule').textContent = rules[comparison.kind];
   $('#mona-method').textContent = comparison.method_note;
-  const host = $('#mona-images');
-  host.replaceChildren();
-  host.classList.toggle('mona-image-grid', comparison.kind !== 'scale');
-  if (comparison.kind === 'scale') {
-    const figure = create('figure', undefined, 'mona-scale-sheet');
-    figure.append(actualImage(comparison.sheet, `${kinds.scale} · ${views[comparison.view]} · ${study.study_id}`),
-      create('figcaption', comparison.method_note));
-    host.append(figure);
-  } else {
-    for (const role of MONA_ROLES) {
-      const row = study.rows.find((item) => item.role === role);
-      const image = comparison.images.find((item) => item.role === role);
-      const figure = create('figure', undefined, 'mona-image-card');
-      figure.dataset.role = role;
-      figure.dataset.candidate = row.candidate_id;
-      figure.append(create('h3', names[role]),
-        actualImage(image, `${names[role]} · ${kinds[comparison.kind]} · ${views[comparison.view]}`));
-      const caption = role === 'original' ? 'ブロック数は対象外・無分割の原型'
-        : `${format(row.metrics.part_count, 0)}部品 · 実高 ${format(row.metrics.dimensions_mm[2])} mm`;
-      figure.append(create('figcaption', caption));
-      host.append(figure);
-    }
-  }
+  renderStudyPanels({ host: $('#mona-images'), comparison, study, roles: MONA_ROLES, names, onError: imageError,
+    captionFor: (row) => row.role === 'original' ? 'ブロック数は対象外・無分割の原型'
+      : `${format(row.metrics.part_count, 0)}部品 · 実高 ${format(row.metrics.dimensions_mm[2])} mm` });
 }
 
 function renderMetrics() {

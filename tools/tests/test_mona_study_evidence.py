@@ -7,7 +7,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "tools"))
-from mona_study_evidence import actual_metrics, verify_manifest_bom, verify_reference_identity
+from mona_study_evidence import actual_metrics, body_height_families, verify_manifest_bom, verify_reference_identity
 
 
 class MonaEvidenceTests(unittest.TestCase):
@@ -81,6 +81,23 @@ class MonaEvidenceTests(unittest.TestCase):
         bad["parts"][0]["position_mm"][2] = float("nan")
         with self.assertRaisesRegex(ValueError, "placement"):
             actual_metrics(bad)
+
+    def test_body_height_families_are_measured_from_used_parts_without_fixed_height_assumptions(self):
+        fine = json.loads(self.references["fine-c"][0])
+        self.assertEqual(body_height_families(fine), [
+            {"body_height_mm": 2.28, "part_count": 13837, "unique_types": 7},
+        ])
+        current = json.loads(self.references["current-r3"][0])
+        families = body_height_families(current)
+        self.assertEqual([family["body_height_mm"] for family in families], [3.2, 9.6])
+        self.assertEqual(sum(family["part_count"] for family in families), 519)
+        self.assertEqual(sum(family["unique_types"] for family in families), 68)
+        synthetic = json.loads(self.references["current-r3"][0])
+        for spec in synthetic["types"].values():
+            if spec["body_mm"][2] == 3.2:
+                spec["body_mm"][2] = spec["body_height_mm"] = 4.8
+        self.assertEqual([family["body_height_mm"] for family in body_height_families(synthetic)], [4.8, 9.6])
+        self.assertEqual(body_height_families(current), families)
 
 
 if __name__ == "__main__":

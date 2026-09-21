@@ -52,8 +52,8 @@ ZIPの中身を変更するときは新しい版・Releaseを使用し、既存�
 
 ## 日英ページの保守
 
-`site/templates/` が11ページの共通HTML、`site/routes.json` が既存URLと `/ja/`・`/en/` の対応です。
-ルートの既存日本語ページを含む33個の薄いHTMLを生成し、画像・動画・CAD・モデルJSONは共有します。
+`site/templates/` が12ページの共通HTML、`site/routes.json` が既存URLと `/ja/`・`/en/` の対応です。
+ルートの既存日本語ページを含む36個の薄いHTMLを生成し、画像・動画・CAD・モデルJSONは共有します。
 生成されたHTMLや `assets/translations.js` を直接編集せず、テンプレートと `site/i18n/*.en.json` を更新してください。
 
 日本語の原文をメッセージIDとするカタログです。動的テキストはASTから抽出し、`{0}` 等の変数を
@@ -176,3 +176,28 @@ Pagesの実commitと今回変更した実ファイルを匿名照合します。
 Blender実camera行列には単精度誤差があるため、宣言したbasis/位置を1e-6の絶対許容差で確認します。
 形比較の投影高さは864 px、実寸比は各モデル2.5 px/mm。顔領域は画像内0〜1ではなく、
 土台を除く原型体高を単位とするX/Z領域であり、負のXや1を超えるZを正しく保持します。
+
+## 初期Cへ近づける追加Mona比較
+
+`mona-refinement.html` / `archive/mona-refinement.json` は独立した
+`mona-fine-c-refinement-20260921` の3行比較です。初期C 13,837と前の36 cm案10,908を別々の基準にします。
+元の `mona-likeness.html?comparison=...` は同じ最初の36 cmモデルを表示し続けます。
+`site/mona-refinement-baseline.json` が最初の23入力、公開summary、pointer、出典・照合記録を保護します。
+
+画像表示・正規化条件の検証は `assets/study-ui.js` / `assets/study-comparisons.js` を最初の比較と共有します。
+追加比較は既定で顔拡大を選び、3案すべての同画面高・同顔領域を要求します。
+新案の画像hashを旧2案と区別し、実ID/type/pose/単色の構成とレンダーの一致を要求します。
+描画テクスチャだけの変更、同じ旧構成の別名化、全体の物理合格への繰上げを受け付けません。
+
+`body_height_families` は `body_height_mm` / `part_count` / `unique_types` の配列です。
+実manifestの使用型から `body_height_families()` で再集計し、部品・型の合計を照合します。
+新しい高さの種類を3.2/9.6 mmへ丸めず、そのまま表示します。初期Cの本体2.28 mmと配置Z間隔2.4 mmも区別します。
+高さfamilyはFDM印刷層高ではありません。実部品数の上限や「多ければ美観合格」という条件は設けません。
+
+`check_mona_refinement.mjs` と `validate_mona_refinement.py` は、入力待ちで実データが存在するように
+見せないこと、前版不変、READY後の画像hashと60 MB以内の軽量公開を検証します。
+`browser_mona_refinement.py --expect-input-wait` は未受領の無画像・無数量・日英・390px・エラーを確認し、
+READY後は同フラグなしで実数・高さfamily・全画像・顔優先の共有状態・非切抜き・欠損時の表示を確認します。
+共通表示コードの変更時は `browser_mona_study.py` で既存4列比較も回帰確認します。
+公開後は `verify_publication.py --study mona-fine-c-refinement-20260921` で変更分だけを匿名照合します。
+本体CAD・Blender・大規模mesh・プリントデータはこの比較の公開範囲外です。

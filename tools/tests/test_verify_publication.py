@@ -67,8 +67,9 @@ class PublicVerificationTests(unittest.TestCase):
                 "physical_fit": "UNKNOWN", "retention_strength": "UNKNOWN", "slicer_status": "NOT_SLICED",
                 "full_print": "ON_HOLD",
             }
-            if "visual_approval" in profile:
-                data["visual_approval"] = profile["visual_approval"]
+            for key in ["visual_approval", "previous_study_unchanged"]:
+                if key in profile:
+                    data[key] = profile[key]
             validate_live_study(study_id, "r3-8mm-20260920", data, dict(data))
             for key, wrong in [
                 ("state", "INPUT_WAIT"), ("selection", "SELECTED"), ("full_print", "APPROVED"),
@@ -84,6 +85,10 @@ class PublicVerificationTests(unittest.TestCase):
                 approved = {**data, "visual_approval": "APPROVED"}
                 with self.assertRaisesRegex(ValueError, "visual_approval"):
                     validate_live_study(study_id, "r3-8mm-20260920", approved, dict(approved))
+            if "previous_study_unchanged" in profile:
+                changed = {**data, "previous_study_unchanged": "replaced"}
+                with self.assertRaisesRegex(ValueError, "previous_study_unchanged"):
+                    validate_live_study(study_id, "r3-8mm-20260920", changed, dict(changed))
 
 
 if __name__ == "__main__":

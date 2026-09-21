@@ -110,7 +110,7 @@ def required_messages():
             paths.append(ROOT / revision["bundle_index_url"].lstrip("/"))
     for path in paths:
         collect(json.loads(path.read_text()))
-    for filename in ["shape-study.json", "mona-study.json"]:
+    for filename in ["shape-study.json", "mona-study.json", "mona-refinement.json"]:
         comparison_pointer = ROOT / "archive" / filename
         if comparison_pointer.is_file():
             pointer = json.loads(comparison_pointer.read_text())
