@@ -17,6 +17,15 @@ BASE = "https://ktanino10.github.io/octoprints-brick-kit-downloads/"
 RELEASE_BASE = "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/"
 HEADERS = {"User-Agent": "Octoprints-public-revision-verifier/1.0",
            "Accept-Encoding": "identity", "Cache-Control": "no-cache"}
+STUDY_PUBLICATIONS = {
+    "shape-study-20260920": {
+        "filename": "shape-study.json", "baseline_field": "baseline_revision", "selection": "UNSELECTED",
+    },
+    "mona-likeness-360-20260921": {
+        "filename": "mona-study.json", "baseline_field": "current_revision_unchanged", "selection": "NOT_SELECTED",
+        "visual_approval": "PENDING",
+    },
+}
 
 def request_url(url):
     parsed = urlsplit(url)
@@ -52,12 +61,25 @@ def require_unchanged_catalog(previous, inventory, path):
         raise ValueError("A shape-only publication must preserve the existing release catalog")
 
 
+def validate_live_study(study_id, revision, study, expected_study):
+    profile = STUDY_PUBLICATIONS[study_id]
+    if study != expected_study or study.get("study_id") != study_id or study.get(profile["baseline_field"]) != revision:
+        raise ValueError("The live study record is stale or differs from its checked inputs")
+    flags = {"state": "READY", "selection": profile["selection"], "physical_fit": "UNKNOWN",
+             "retention_strength": "UNKNOWN", "slicer_status": "NOT_SLICED", "full_print": "ON_HOLD"}
+    if "visual_approval" in profile:
+        flags["visual_approval"] = profile["visual_approval"]
+    for key, value in flags.items():
+        if study.get(key) != value:
+            raise ValueError(f"Incorrect study publication or physical gate: {key}")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--revision", required=True)
     parser.add_argument("--expected-commit", required=True)
     parser.add_argument("--before", required=True, help="Exact public commit before this publication")
-    parser.add_argument("--study", choices=["shape-study-20260920"],
+    parser.add_argument("--study", choices=sorted(STUDY_PUBLICATIONS),
                         help="Verify a lightweight study while requiring existing releases to remain unchanged")
     parser.add_argument("--report", type=Path, required=True)
     args = parser.parse_args()
@@ -99,14 +121,10 @@ def main():
         if original["current_revision"] != args.revision:
             raise ValueError("A comparison must retain the previously adopted current revision")
         require_unchanged_catalog(previous, inventory, current["bundle_index_url"].lstrip("/"))
-        study = get_json(BASE + "archive/shape-study.json")
-        expected_study = json.loads((ROOT / "archive/shape-study.json").read_text())
-        if study != expected_study or study["study_id"] != args.study or study["baseline_revision"] != args.revision:
-            raise ValueError("The live study record is stale or differs from its checked inputs")
-        for key, value in {"state": "READY", "selection": "UNSELECTED", "physical_fit": "UNKNOWN",
-                           "retention_strength": "UNKNOWN", "slicer_status": "NOT_SLICED", "full_print": "ON_HOLD"}.items():
-            if study.get(key) != value:
-                raise ValueError(f"Incorrect study publication or physical gate: {key}")
+        path = "archive/" + STUDY_PUBLICATIONS[args.study]["filename"]
+        study = get_json(BASE + path)
+        expected_study = json.loads((ROOT / path).read_text())
+        validate_live_study(args.study, args.revision, study, expected_study)
     changed = [entry for entry in inventory["files"] if previous.get(entry["path"]) != entry["sha256"]]
     with ThreadPoolExecutor(max_workers=4) as pool:
         futures = [pool.submit(verify_bytes, entry["url"], entry["bytes"], entry["sha256"]) for entry in changed]

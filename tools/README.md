@@ -159,3 +159,5 @@ READY受領時のadapterはsource schemaに合わせ、実manifest/BOM・許可�
 `browser_mona_study.py --expect-input-wait` は未受領時の無画像・無数量・日英・390px・エラー表示を確認します。
 READY後は同フラグなしで原型N/A・実数・4列・顔・実寸比・実画像・言語/共有URLを確認します。
 現行r3のregistry、試験片、33プレート、正式Releaseは変更しません。
+`verify_publication.py --study mona-likeness-360-20260921` はMona固有のpointer・未採用・見た目承認待ちを検査し、
+Pagesの実commitと今回変更した実ファイルを匿名照合します。既存の大型Releaseを再ダウンロードしません。

@@ -6,7 +6,7 @@ import unittest
 from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from verify_publication import BASE, request_url, require_unchanged_catalog, verify_bytes
+from verify_publication import BASE, STUDY_PUBLICATIONS, request_url, require_unchanged_catalog, validate_live_study, verify_bytes
 
 
 class PublicVerificationTests(unittest.TestCase):
@@ -58,6 +58,32 @@ class PublicVerificationTests(unittest.TestCase):
         ]:
             with self.assertRaisesRegex(ValueError, "preserve the existing release catalog"):
                 require_unchanged_catalog(previous, current, path)
+
+    def test_each_study_keeps_its_own_baseline_and_unselected_gate(self):
+        for study_id, profile in STUDY_PUBLICATIONS.items():
+            data = {
+                "study_id": study_id, profile["baseline_field"]: "r3-8mm-20260920",
+                "state": "READY", "selection": profile["selection"],
+                "physical_fit": "UNKNOWN", "retention_strength": "UNKNOWN", "slicer_status": "NOT_SLICED",
+                "full_print": "ON_HOLD",
+            }
+            if "visual_approval" in profile:
+                data["visual_approval"] = profile["visual_approval"]
+            validate_live_study(study_id, "r3-8mm-20260920", data, dict(data))
+            for key, wrong in [
+                ("state", "INPUT_WAIT"), ("selection", "SELECTED"), ("full_print", "APPROVED"),
+                ("physical_fit", "PASS"), ("slicer_status", "SLICED"),
+                (profile["baseline_field"], "another-revision"),
+            ]:
+                changed = {**data, key: wrong}
+                with self.assertRaises(ValueError):
+                    validate_live_study(study_id, "r3-8mm-20260920", changed, dict(changed))
+            with self.assertRaisesRegex(ValueError, "stale"):
+                validate_live_study(study_id, "r3-8mm-20260920", {**data, "source_commit": "stale"}, data)
+            if "visual_approval" in profile:
+                approved = {**data, "visual_approval": "APPROVED"}
+                with self.assertRaisesRegex(ValueError, "visual_approval"):
+                    validate_live_study(study_id, "r3-8mm-20260920", approved, dict(approved))
 
 
 if __name__ == "__main__":
