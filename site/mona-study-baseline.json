@@ -1,0 +1,35 @@
+{
+  "public_commit": "ea78a420b8ec4dd5830c54bf1ea3c071cf1d3671",
+  "files": [
+    {
+      "path": "site/immutable-artifacts.json",
+      "bytes": 149694,
+      "sha256": "62c49b074a24c30bcbfab0c524e2bdfbb5eb94aca1cb93b8bb6b0acf673ce808"
+    },
+    {
+      "path": "site/shape-study-baseline.json",
+      "bytes": 122561,
+      "sha256": "3375a83af8e4ebf456ece302859d882b20aa0ad6716dcd942b7464b382a926da"
+    },
+    {
+      "path": "archive/shape-study.json",
+      "bytes": 502,
+      "sha256": "f3abb1adae430bef56c3392ad2441df45c636d6e4665a0920abe423b77ab2c31"
+    },
+    {
+      "path": "archive/sources/shape-study-20260920.json",
+      "bytes": 6918,
+      "sha256": "c9b083a0cbebbf089063205fcda2d5ed60e4a650b9e97ec5ca32f2a03f357e52"
+    },
+    {
+      "path": "archive/sources/shape-study-20260920-verification.json",
+      "bytes": 6473,
+      "sha256": "90f5350b3c8fe68f47a39e1d53f11974b4a6a205377818d52d02e56bddcbe715"
+    },
+    {
+      "path": "artifacts/studies/shape-study-20260920/public-study.json",
+      "bytes": 46588,
+      "sha256": "21192b2860440568272d708fbf029d7ebb7e3b038304f5df3b85019f9b233446"
+    }
+  ]
+}

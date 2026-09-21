@@ -52,8 +52,8 @@ ZIPの中身を変更するときは新しい版・Releaseを使用し、既存�
 
 ## 日英ページの保守
 
-`site/templates/` が10ページの共通HTML、`site/routes.json` が既存URLと `/ja/`・`/en/` の対応です。
-ルートの既存日本語ページを含む30個の薄いHTMLを生成し、画像・動画・CAD・モデルJSONは共有します。
+`site/templates/` が11ページの共通HTML、`site/routes.json` が既存URLと `/ja/`・`/en/` の対応です。
+ルートの既存日本語ページを含む33個の薄いHTMLを生成し、画像・動画・CAD・モデルJSONは共有します。
 生成されたHTMLや `assets/translations.js` を直接編集せず、テンプレートと `site/i18n/*.en.json` を更新してください。
 
 日本語の原文をメッセージIDとするカタログです。動的テキストはASTから抽出し、`{0}` 等の変数を
@@ -135,3 +135,27 @@ receiptや絶対パスは公開せず、パスなしの照合記録を `archive/
 新しい比較のREADY/未採用/未検証状態を匿名で確認します。現在版と既存Releaseカタログに変更があれば失敗し、
 不変の大型ZIPを再ダウンロードせず、今回追加・変更した画像・summary・UIだけを全件hash照合します。
 比較を追加するだけの場合、現行registryや正式Releaseを更新しません。
+
+## Monaの再現度・サイズ比較
+
+`mona-likeness.html` と `archive/mona-study.json` は、Mona1体の別スタディ
+`mona-likeness-360-20260921` を扱います。初期細密Cの顔・体形・丸みを基準とし、
+約360 mmは目標、部品数は実構成の結果です。低い部品数や大きな表示を品質合格と扱いません。
+`INPUT_WAIT` の間は新しい画像・数量の参照先を持たず、候補の代理画像も表示しません。
+
+公開用の小さな表示schemaは `assets/mona-study-data.js` が検証します。原型の部品・型・配置層は
+`NOT_APPLICABLE` と `null`、初期Cとr3は実ID/配置の同一性、新案は原型からの再サンプリング証跡を要求します。
+原型に架空の0部品を割り当てません。sourceのcandidate IDを保存し、表示用roleだけを独立させます。
+READY受領時のadapterはsource schemaに合わせ、実manifest/BOM・許可画像・小summary以外を公開しません。
+
+比較条件は `shape`（同じ画面上高さ）、`face`（同じ正規化顔領域）、`scale`（同px/mmの実寸比）を分離します。
+前2種類は4列の画像を同じ表示寸法で扱い、実寸比はsourceの一枚図を再配置・個別リサイズせず表示します。
+画像にCSS拡大や切り抜きを加えず、比較条件の説明と証跡hashを保持します。
+`comparison` クエリー、言語切替、再読み込み、戻る/進むは同じ条件を維持します。
+
+`check_mona_study.mjs` が表示schemaと状態を、`validate_mona_study.py` が画像hash・80 MB以内の
+軽量入力と以前の32比較ファイルの不変を確認します。`site/mona-study-baseline.json` は
+旧版/R3の不変snapshot自体、以前のA/B summary・出典・pointerを固定します。
+`browser_mona_study.py --expect-input-wait` は未受領時の無画像・無数量・日英・390px・エラー表示を確認します。
+READY後は同フラグなしで原型N/A・実数・4列・顔・実寸比・実画像・言語/共有URLを確認します。
+現行r3のregistry、試験片、33プレート、正式Releaseは変更しません。

@@ -34,6 +34,7 @@ jobs:
           node --check assets/i18n.js
           node --check assets/assembly.js
           node --check assets/shape-options.js
+          node --check assets/mona-study.js
       - name: Build both languages from shared templates
         run: |
           node viewer/scripts/extract-i18n.mjs
@@ -51,6 +52,8 @@ jobs:
           node tools/check_revision.mjs --revision r3-8mm-20260920
           python3 tools/validate_revision.py
           python3 tools/validate_shape_study.py
+          node tools/check_mona_study.mjs
+          python3 tools/validate_mona_study.py
       - name: Stage only the audited public payload
         run: python3 tools/build_site.py
       - name: Upload Pages artifact

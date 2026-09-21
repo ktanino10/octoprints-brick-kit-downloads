@@ -3,6 +3,7 @@
   "models": {"template": "models.html", "legacy": "models.html", "localized": "models.html"},
   "assembly": {"template": "assembly.html", "legacy": "assembly.html", "localized": "assembly.html"},
   "shape-options": {"template": "shape-options.html", "legacy": "shape-options.html", "localized": "shape-options.html"},
+  "mona-likeness": {"template": "mona-likeness.html", "legacy": "mona-likeness.html", "localized": "mona-likeness.html"},
   "downloads": {"template": "downloads.html", "legacy": "downloads.html", "localized": "downloads.html"},
   "feedback": {"template": "feedback.html", "legacy": "feedback.html", "localized": "feedback.html"},
   "history": {"template": "history.html", "legacy": "history.html", "localized": "history.html"},

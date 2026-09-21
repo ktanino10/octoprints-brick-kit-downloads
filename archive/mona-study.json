@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "study_id": "mona-likeness-360-20260921",
+  "state": "INPUT_WAIT",
+  "current_revision_unchanged": "r3-8mm-20260920",
+  "selection": "NOT_SELECTED",
+  "visual_approval": "PENDING",
+  "physical_fit": "UNKNOWN",
+  "retention_strength": "UNKNOWN",
+  "slicer_status": "NOT_SLICED",
+  "full_print": "ON_HOLD"
+}
