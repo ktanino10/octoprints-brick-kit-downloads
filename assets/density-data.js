@@ -10,11 +10,24 @@ export const DENSITY_FLAGS = Object.freeze({
   slicer_status: 'NOT_SLICED', full_print: 'ON_HOLD',
 });
 export const MONA_WHISKER_REQUIREMENT = 'NO_EXTERNAL_OR_ASSEMBLY_AIDS';
+export const MONA_GEOMETRY_REVISION = 'whisker-root-v2';
 export const isObject = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
 export const isHash = (value) => typeof value === 'string' && /^[0-9a-f]{64}$/.test(value);
 export const isCount = (value) => Number.isSafeInteger(value) && value >= 0;
 export const isVector = (value) => Array.isArray(value) && value.length === 3 && value.every(Number.isFinite);
 export function densityAssert(condition, message) { if (!condition) throw new Error(message); }
+
+export function densityCaseIdentity(id) {
+  if (typeof id !== 'string') return null;
+  const match = /^((mona|copilot|ducky)-p(120|150|200|300|400))(-root-v2)?$/.exec(id);
+  if (!match || (match[4] && match[2] !== 'mona')) return null;
+  return { logicalId: match[1], character: match[2], percentage: Number(match[3]),
+    revision: match[4] ? MONA_GEOMETRY_REVISION : null };
+}
+
+export function allDensityCases(catalog) {
+  return [...catalog.cases, ...(catalog.historical_cases ?? [])];
+}
 
 export function densityPath(value) {
   densityAssert(typeof value === 'string' && !value.includes('\\') && !/%(?:2e|2f|5c)/i.test(value),
@@ -62,7 +75,8 @@ export function densityDeliveryStatus(item) {
   return isObject(support) && support.external_aid_count === 0 && support.assembly_aid_count === 0
     && support.status === 'DIGITAL_SELF_SUPPORTING_UNTESTED' && support.physical_validation === 'UNKNOWN'
     && typeof support.geometry_revision === 'string' && support.geometry_revision.length > 0
-    && support.manifest_sha256 === item.source_manifest_sha256
+    && (item.geometry_revision === undefined || support.geometry_revision === item.geometry_revision)
+    && isHash(support.manifest_sha256) && support.manifest_sha256 === item.source_manifest_sha256
     && isHash(support.attachment_evidence_sha256) && isHash(support.sequence_evidence_sha256)
     && support.all_categories_geometry_match === true
     ? 'READY' : 'REQUIRES_WHISKER_REVISION';
@@ -139,14 +153,22 @@ export function validateDensityCatalog(catalog, pointer) {
         '未確定のCopilot・Ducky基準に旧r3の個数や画像を代用できません。');
     }
   }
-  const combinations = new Set();
-  for (const item of catalog.cases) {
+  densityAssert(catalog.historical_cases === undefined || Array.isArray(catalog.historical_cases),
+    '旧版の記録は比較の15枠と分けて保持する必要があります。');
+  const combinations = new Set(), actualIds = new Set();
+  for (const [index, item] of allDensityCases(catalog).entries()) {
+    const identity = densityCaseIdentity(item?.id), historical = index >= catalog.cases.length;
     densityAssert(isObject(item) && DENSITY_CHARACTERS.includes(item.character)
       && COUNT_PERCENTAGES.includes(item.count_percentage)
-      && item.id === `${item.character}-p${item.count_percentage}`
-      && !combinations.has(item.id) && ['INPUT_WAIT', 'READY', 'TARGET_MISSED'].includes(item.state),
+      && identity?.logicalId === `${item.character}-p${item.count_percentage}`
+      && (item.logical_case_id === undefined || item.logical_case_id === identity.logicalId)
+      && (!identity.revision || (item.logical_case_id === identity.logicalId && item.geometry_revision === identity.revision))
+      && !actualIds.has(item.id) && (historical || !combinations.has(identity.logicalId))
+      && ['INPUT_WAIT', 'READY', 'TARGET_MISSED'].includes(item.state)
+      && (!historical || item.state !== 'INPUT_WAIT'),
     '比較案のキャラクター・個数倍率・IDが不正です。');
-    combinations.add(item.id);
+    actualIds.add(item.id);
+    if (!historical) combinations.add(identity.logicalId);
     const baseline = catalog.baselines[item.character];
     if (item.state === 'INPUT_WAIT') {
       densityAssert(item.metrics === undefined && item.manifest === undefined && item.images === undefined,

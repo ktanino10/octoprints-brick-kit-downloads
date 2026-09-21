@@ -5,7 +5,7 @@ import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import {
   DENSITY_ID, DENSITY_FLAGS, COUNT_PERCENTAGES, targetPartCount, countTargetResult,
-  validateDensityPointer, validateDensityCatalog, densityPath, densityDeliveryStatus,
+  validateDensityPointer, validateDensityCatalog, densityPath, densityDeliveryStatus, allDensityCases,
 } from '../../assets/density-data.js';
 import {
   validateGuideManifest, guideIndex, radialPosition, courseBoundary, stageRange,
@@ -146,6 +146,36 @@ test('pending and partial cases cannot masquerade as all fifteen complete', () =
     const changed = catalogFixture(); change(changed);
     assert.throws(() => validateDensityCatalog(changed, pointer));
   }
+});
+
+test('revised geometry occupies one logical slot while old actual IDs remain explicitly addressable', () => {
+  const catalog = catalogFixture(), original = structuredClone(catalog.cases[0]);
+  const revised = catalog.cases[0];
+  Object.assign(revised, { id: 'mona-p120-root-v2', logical_case_id: 'mona-p120', geometry_revision: 'whisker-root-v2' });
+  revised.whisker_support.geometry_revision = 'whisker-root-v2';
+  delete original.whisker_support;
+  catalog.historical_cases = [original];
+  assert.equal(validateDensityCatalog(catalog, pointer), catalog);
+  assert.equal(catalog.cases.length, 15);
+  assert.equal(allDensityCases(catalog).length, 16);
+  assert.equal(allDensityCases(catalog).find((item) => item.id === 'mona-p120'), original);
+  for (const mutate of [
+    (data) => { data.cases[0].logical_case_id = 'mona-p150'; },
+    (data) => { data.cases[0].geometry_revision = 'different'; },
+    (data) => { data.cases[0].whisker_support.geometry_revision = 'different'; },
+    (data) => { data.historical_cases.push(structuredClone(data.historical_cases[0])); },
+    (data) => { data.historical_cases[0].state = 'INPUT_WAIT'; },
+  ]) {
+    const changed = structuredClone(catalog); mutate(changed);
+    assert.throws(() => validateDensityCatalog(changed, pointer));
+  }
+  const guide = guideFixture();
+  Object.assign(guide, { candidate_id: revised.id, logical_case_id: revised.logical_case_id,
+    geometry_revision: revised.geometry_revision });
+  assert.equal(validateGuideManifest(guide, revised.id), guide);
+  assert.throws(() => validateGuideManifest(guide, original.id));
+  guide.animation_contract.sequence_mode = 'BODY_FIRST_ROOT_ANCHORED';
+  assert.throws(() => validateGuideManifest(guide, revised.id), /工程検査記録/);
 });
 
 test('radial explosion is absolute, all-directional and exactly reversible for every pose', () => {

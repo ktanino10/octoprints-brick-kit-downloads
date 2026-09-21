@@ -37,6 +37,7 @@
   "cases": [
     {
       "case_id": "mona-p120",
+      "logical_case_id": "mona-p120",
       "character": "mona",
       "multiplier": 1.2,
       "target_count": 14922,
@@ -59,6 +60,7 @@
     },
     {
       "case_id": "mona-p150",
+      "logical_case_id": "mona-p150",
       "character": "mona",
       "multiplier": 1.5,
       "target_count": 18653,
@@ -81,6 +83,7 @@
     },
     {
       "case_id": "mona-p200",
+      "logical_case_id": "mona-p200",
       "character": "mona",
       "multiplier": 2.0,
       "target_count": null,
@@ -99,6 +102,7 @@
     },
     {
       "case_id": "mona-p300",
+      "logical_case_id": "mona-p300",
       "character": "mona",
       "multiplier": 3.0,
       "target_count": null,
@@ -117,6 +121,7 @@
     },
     {
       "case_id": "mona-p400",
+      "logical_case_id": "mona-p400",
       "character": "mona",
       "multiplier": 4.0,
       "target_count": null,
@@ -135,6 +140,7 @@
     },
     {
       "case_id": "copilot-p120",
+      "logical_case_id": "copilot-p120",
       "character": "copilot",
       "multiplier": 1.2,
       "target_count": null,
@@ -153,6 +159,7 @@
     },
     {
       "case_id": "copilot-p150",
+      "logical_case_id": "copilot-p150",
       "character": "copilot",
       "multiplier": 1.5,
       "target_count": null,
@@ -171,6 +178,7 @@
     },
     {
       "case_id": "copilot-p200",
+      "logical_case_id": "copilot-p200",
       "character": "copilot",
       "multiplier": 2.0,
       "target_count": null,
@@ -189,6 +197,7 @@
     },
     {
       "case_id": "copilot-p300",
+      "logical_case_id": "copilot-p300",
       "character": "copilot",
       "multiplier": 3.0,
       "target_count": null,
@@ -207,6 +216,7 @@
     },
     {
       "case_id": "copilot-p400",
+      "logical_case_id": "copilot-p400",
       "character": "copilot",
       "multiplier": 4.0,
       "target_count": null,
@@ -225,6 +235,7 @@
     },
     {
       "case_id": "ducky-p120",
+      "logical_case_id": "ducky-p120",
       "character": "ducky",
       "multiplier": 1.2,
       "target_count": null,
@@ -243,6 +254,7 @@
     },
     {
       "case_id": "ducky-p150",
+      "logical_case_id": "ducky-p150",
       "character": "ducky",
       "multiplier": 1.5,
       "target_count": null,
@@ -261,6 +273,7 @@
     },
     {
       "case_id": "ducky-p200",
+      "logical_case_id": "ducky-p200",
       "character": "ducky",
       "multiplier": 2.0,
       "target_count": null,
@@ -279,6 +292,7 @@
     },
     {
       "case_id": "ducky-p300",
+      "logical_case_id": "ducky-p300",
       "character": "ducky",
       "multiplier": 3.0,
       "target_count": null,
@@ -297,6 +311,7 @@
     },
     {
       "case_id": "ducky-p400",
+      "logical_case_id": "ducky-p400",
       "character": "ducky",
       "multiplier": 4.0,
       "target_count": null,
@@ -314,6 +329,7 @@
       "viewer_url_en": null
     }
   ],
+  "historical_cases": [],
   "verification": {
     "public_browser_passed": false,
     "anonymous_downloads_passed": false

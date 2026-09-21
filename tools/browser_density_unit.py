@@ -1,11 +1,13 @@
 """Exercise guide mechanics with a labeled eight-part unit fixture, never a published candidate."""
 
 import argparse
+import base64
+import copy
 import gzip
 import hashlib
 import json
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import parse_qs, urljoin, urlparse
 
 from playwright.sync_api import expect, sync_playwright
 from pack_density_meshes import pack_meshes
@@ -14,6 +16,7 @@ from browser_study_helpers import english
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--url", required=True)
 parser.add_argument("--browser", required=True)
+parser.add_argument("--engine", choices=["chromium", "webkit"], default="chromium")
 parser.add_argument("--output", type=Path, default=Path(".archive-work/density-unit-browser.json"))
 args = parser.parse_args()
 base = args.url.rstrip("/") + "/"
@@ -64,7 +67,9 @@ manifest = {
 }
 manifest_file = resource("UNIT-ONLY-manifest.json.gz", gzip.compress(encoded(manifest), mtime=0), "application/gzip")
 dummy = resource("UNIT-ONLY-download.bin", b"not a real production artifact", "application/octet-stream")
-image = {**dummy, "framing_rule": "MATCHED_SCREEN_HEIGHT", "condition_id": "unit-mona"}
+pixel = resource("UNIT-ONLY-image.png", base64.b64decode(
+    "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/l3sAAAAASUVORK5CYII="), "image/png")
+image = {**pixel, "framing_rule": "MATCHED_SCREEN_HEIGHT", "condition_id": "unit-mona"}
 baseline_metrics = {"part_count": 12435, "unique_types": 121, "one_by_one_exceptions": 31,
                     "grip_long_ge_15_8_count": 12404, "dimensions_mm": [423.8, 343.8, 368.2], "minimum_part_mm": [7.8, 7.8, 3.2]}
 catalog = {"schema_version": 1, "study_id": manifest["study_id"], "kind": "ACTUAL_PART_COUNT_MATRIX", **flags,
@@ -85,13 +90,22 @@ catalog["cases"][0].update({
                "animations": {key: {**dummy, "start_seconds": 0, "end_seconds": 1}
                               for key in ["turntable", "radial_explode", "bottom_up"]}},
 })
+catalog["historical_cases"] = [copy.deepcopy(catalog["cases"][0])]
+revised_id = "mona-p120-root-v2"
+revision = {"logical_case_id": "mona-p120", "geometry_revision": "whisker-root-v2"}
+revised_manifest = {**manifest, **revision, "candidate_id": revised_id}
+revised_file = resource("UNIT-ONLY-root-v2.json.gz", gzip.compress(encoded(revised_manifest), mtime=0), "application/gzip")
+catalog["cases"][0].update(id=revised_id, manifest=revised_file, **revision)
 catalog_file = resource("UNIT-ONLY-catalog.json", encoded(catalog))
 pointer = {"schema_version": 1, "study_id": manifest["study_id"], "state": "PARTIAL", **flags, "catalog": catalog_file}
-report = {"scope": "LABELED_UNIT_FIXTURE_ONLY_NOT_REAL_CANDIDATE_ACCEPTANCE", "checks": [], "errors": []}
+report = {"scope": "LABELED_UNIT_FIXTURE_ONLY_NOT_REAL_CANDIDATE_ACCEPTANCE",
+          "engine": args.engine, "checks": [], "errors": []}
 
 with sync_playwright() as playwright:
-    browser = playwright.chromium.launch(executable_path=args.browser, headless=True,
-                                        args=["--no-first-run", "--disable-background-networking", "--disable-sync"])
+    launch = {"executable_path": args.browser, "headless": True}
+    if args.engine == "chromium":
+        launch["args"] = ["--no-first-run", "--disable-background-networking", "--disable-sync"]
+    browser = getattr(playwright, args.engine).launch(**launch)
     context = browser.new_context(viewport={"width": 1440, "height": 1000}, reduced_motion="reduce")
     context.route("**/archive/density-study.json", lambda route: route.fulfill(status=200, body=encoded(pointer), content_type="application/json"))
     for address, (data, content_type) in files.items():
@@ -99,7 +113,7 @@ with sync_playwright() as playwright:
     page = context.new_page()
     page.on("pageerror", lambda error: report["errors"].append(str(error)))
     try:
-        page.goto(urljoin(base, "en/density-guide.html?case=mona-p120"), wait_until="domcontentloaded")
+        page.goto(urljoin(base, f"en/density-guide.html?case={revised_id}"), wait_until="domcontentloaded")
         expect(page.locator("#density-canvas")).to_have_attribute("data-ready", "true", timeout=60000)
         expect(page.locator("#guide-error")).to_be_hidden()
         expect(page.locator("#density-canvas")).to_have_attribute("data-visible-parts", "8")
@@ -130,13 +144,31 @@ with sync_playwright() as playwright:
         expect(page.locator("#density-canvas")).to_have_attribute("data-ready", "true", timeout=60000)
         expect(page.locator("#guide-selection strong")).to_have_text("UNIT-TEST-0")
         expect(page.locator("#guide-error")).to_be_hidden()
+        assert parse_qs(urlparse(page.url).query)["case"] == [revised_id]
+        page.locator("#guide-case").select_option("mona-p120")
+        expect(page.locator("#density-canvas")).to_have_attribute("data-ready", "true", timeout=60000)
+        expect(page.locator("#guide-error")).to_be_hidden()
+        assert parse_qs(urlparse(page.url).query)["case"] == ["mona-p120"]
+        page.reload(wait_until="domcontentloaded")
+        expect(page.locator("#density-canvas")).to_have_attribute("data-ready", "true", timeout=60000)
+        expect(page.locator("#guide-case")).to_have_value("mona-p120")
+        page.goto(urljoin(base, "en/density-matrix.html"), wait_until="networkidle")
+        assert not page.locator("#matrix-error").is_visible(), page.locator("#matrix-error").inner_text()
+        expect(page.locator("#matrix-history")).to_be_visible()
+        expect(page.locator("#matrix-table tr")).to_have_count(15)
+        expect(page.locator("#matrix-history-links a")).to_have_attribute(
+            "href", urljoin(base, "en/density-guide.html?case=mona-p120"))
+        english(page)
         assert not report["errors"], report["errors"]
         report["checks"] = ["real WebGL/packed mesh path", "radial slider roundtrip", "zero/one/course/stage/final",
                             "standalone underside", "type/color destinations", "language/shared reload",
-                            "target-missed unit fixture never counted as a completed case"]
+                            "target-missed unit fixture never counted as a completed case",
+                            "explicit revision URL and immutable historical URL survive selection and reload",
+                            "history remains linked separately from the fifteen comparison slots"]
         print("PASS: isolated 8-part UNIT FIXTURE mechanics; not production-case acceptance.")
     except Exception as error:
         report["failure"] = str(error)
+        report["visible_errors"] = page.locator("#matrix-error:visible, #guide-error:visible").all_text_contents()
         raise
     finally:
         browser.close()

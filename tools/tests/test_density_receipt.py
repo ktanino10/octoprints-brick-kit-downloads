@@ -120,6 +120,21 @@ class DensityReceiptTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             browser_coverage(catalog, wrong, previous)
 
+    def test_historical_geometry_keeps_downloads_but_does_not_add_comparison_slots(self):
+        catalog = self.fixture()
+        original = copy.deepcopy(catalog["cases"][0])
+        catalog["cases"][0].update(id="mona-p120-root-v2", logical_case_id="mona-p120",
+                                   geometry_revision="whisker-root-v2")
+        catalog["cases"][0]["whisker_support"]["geometry_revision"] = "whisker-root-v2"
+        catalog["historical_cases"] = [original]
+        result = receipt_for(catalog)
+        self.assertEqual(len(result["cases"]), 15)
+        self.assertEqual(result["cases"][0]["logical_case_id"], "mona-p120")
+        self.assertEqual(result["cases"][0]["case_id"], "mona-p120-root-v2")
+        self.assertEqual(result["requested_delivery"]["data_ready_case_count"], 15)
+        self.assertFalse(result["historical_cases"][0]["counts_toward_requested_delivery"])
+        self.assertTrue(result["historical_cases"][0]["viewer_url"].endswith("?case=mona-p120"))
+
 
 if __name__ == "__main__":
     unittest.main()

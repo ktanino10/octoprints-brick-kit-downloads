@@ -1,5 +1,5 @@
 import {
-  DENSITY_ID, DENSITY_CHARACTERS, COUNT_PERCENTAGES, densityAssert as check,
+  DENSITY_ID, densityCaseIdentity, densityAssert as check,
   isObject, isVector, isHash, isCount, validateDensityFile,
 } from '../../assets/density-data.js';
 
@@ -14,9 +14,11 @@ export function radialPosition(part, amount, out = [0, 0, 0]) {
 }
 
 export function validateGuideManifest(manifest, candidateId) {
+  const identity = densityCaseIdentity(candidateId);
   check(isObject(manifest) && manifest.schema_version === 1 && manifest.study_id === DENSITY_ID
     && manifest.candidate_id === candidateId
-    && DENSITY_CHARACTERS.some((character) => COUNT_PERCENTAGES.some((percent) => candidateId === `${character}-p${percent}`))
+    && identity && (!identity.revision || (manifest.logical_case_id === identity.logicalId
+      && manifest.geometry_revision === identity.revision))
     && manifest.units === 'mm' && manifest.position_origin === 'body-bottom-center'
     && manifest.frame?.up === '+Z' && manifest.frame.front === '-Y' && manifest.frame.handedness === 'right',
   '実組立ガイドの案・単位・原点・座標系が一致しません。');
@@ -87,6 +89,8 @@ export function validateGuideManifest(manifest, candidateId) {
     && contract.disassembly_validation === 'NOT_SIMULATED'
     && contract.physical_assembly === 'UNKNOWN' && isVector(contract.radial_center_mm),
   '放射分解・底からの組立の表示契約がありません。');
+  check(contract.sequence_mode === undefined || contract.sequence_mode === 'BOTTOM_UP_SOURCE_ORDER',
+    '新版の取付順は、実形状に結び付いた工程検査記録を確認するまで表示できません。');
   const ordered = [...manifest.parts].sort((a, b) => a.step - b.step);
   for (let index = 0; index < ordered.length; index++) {
     const part = ordered[index], before = ordered[index - 1];

@@ -1,7 +1,7 @@
 import { assetURL, setLanguageContext } from '../../assets/i18n.js';
 import { getJSON as readJSON } from './network.js';
 import {
-  DENSITY_POINTER, validateDensityPointer, validateDensityCatalog, densityAssert as check, densityDeliveryStatus,
+  DENSITY_POINTER, validateDensityPointer, validateDensityCatalog, densityAssert as check, densityDeliveryStatus, allDensityCases,
 } from '../../assets/density-data.js';
 import { studyElement as element, formatStudyNumber as number, studyVideo } from '../../assets/study-ui.js';
 import { verifiedJSON, loadNativeLibraries } from './density-assets.js';
@@ -210,7 +210,7 @@ function renderDownloads() {
   host.append(section);
 }
 async function selectCandidate(id, params = null) {
-  const item = catalog.cases.find((entry) => entry.id === id);
+  const item = allDensityCases(catalog).find((entry) => entry.id === id);
   check(item, '指定した倍率案がカタログにありません。');
   request?.abort(); request = new AbortController();
   const current = ++generation, signal = request.signal;
@@ -346,8 +346,11 @@ try {
     $('#guide-loading').textContent = '15案の実ネイティブ形状・順序・動画を受領待ちです。表示用の仮モデルは作成していません。';
   } else {
     catalog = validateDensityCatalog(await verifiedJSON(pointer.catalog), pointer);
-    $('#guide-case').replaceChildren(...catalog.cases.map((item) => {
-      const option = element('option', `${item.id} · ${item.state === 'INPUT_WAIT' ? '入力待ち' : `${number(item.metrics.part_count, 0)}部品`}`);
+    $('#guide-case').replaceChildren(...allDensityCases(catalog).map((item) => {
+      const historical = (catalog.historical_cases ?? []).some((old) => old.id === item.id);
+      const label = historical ? `${item.id} · 履歴 · ${number(item.metrics.part_count, 0)}部品`
+        : `${item.id} · ${item.state === 'INPUT_WAIT' ? '入力待ち' : `${number(item.metrics.part_count, 0)}部品`}`;
+      const option = element('option', label);
       option.value = item.id; return option;
     }));
     const id = originalParams.get('case') ?? catalog.cases.find((item) => item.state === 'READY')?.id;

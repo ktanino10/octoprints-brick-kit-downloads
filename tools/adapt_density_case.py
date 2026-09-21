@@ -10,6 +10,7 @@ import struct
 import subprocess
 
 from mona_study_evidence import verify_manifest_bom, body_height_families
+from density_requirements import case_identity
 from validate_archive import privacy
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -26,6 +27,16 @@ def sha(data):
 
 def encoded(data):
     return json.dumps(data, ensure_ascii=False, separators=(",", ":")).encode() + b"\n"
+
+
+def revision_fields(identifier, *records):
+    logical, revision = case_identity(identifier)
+    if revision is None:
+        return {}
+    if not records or any(record.get("logical_case_id") != logical or record.get("geometry_revision") != revision
+                          for record in records):
+        raise ValueError("Revised case sources disagree on the logical slot or actual geometry revision")
+    return {"logical_case_id": logical, "geometry_revision": revision}
 
 
 def main():
@@ -67,6 +78,7 @@ def main():
 
     mb, bb = proof_bytes(f"/cases/{case_id}/manifest.json"), proof_bytes(f"/cases/{case_id}/bom.csv")
     full = json.loads(mb)
+    revision = revision_fields(case_id, payload, full, summary)
     evidence = verify_manifest_bom(mb, bb)
     motion = json.loads(proof_bytes(f"/cases/{case_id}/motion.json"))
     validation = json.loads(proof_bytes(f"/cases/{case_id}/validation.json"))
@@ -133,7 +145,7 @@ def main():
         aids.append({"id": aid["id"], "type_id": aid["id"], "position_mm": aid["assembly_position_mm"],
                      "rotation_z_deg": 0, "required_before_step": min(parts[id]["step"] for id in aid["supported_part_ids"]),
                      "retention_validation": "UNKNOWN", "show_during_preparation": True})
-    guide = {"schema_version": 1, "study_id": STUDY, "candidate_id": case_id, "units": "mm",
+    guide = {"schema_version": 1, "study_id": STUDY, "candidate_id": case_id, "units": "mm", **revision,
              "position_origin": payload["origin"], "frame": full["frame"], "status": payload["status"],
              "types": types, "palette": payload["palette"], "parts": payload["parts"], "aids": aids,
              "geometry_files": geometry_files, "metrics": {"part_count": len(parts), "unique_types": evidence["metrics"]["unique_types"]},
@@ -142,6 +154,8 @@ def main():
                 "stages": [{"id": item["stage_id"], "label": item["label_ja"], "start_step": item["start_step"],
                             "end_step": item["end_step"]} for item in motion["stages"]]},
              "source_manifest_sha256": sha(mb), "source_bom_sha256": sha(bb)}
+    if "sequence_mode" in motion:
+        guide["animation_contract"]["sequence_mode"] = motion["sequence_mode"]
     if (motion["absolute_pose_rule"] != "position_mm + amount*radial_offset_mm" or motion["assembly_step_zero"] != "EMPTY"
             or motion["assembly_final_step"] != len(parts) or not motion["orientation_unchanged"] or not motion["zero_exact_return"]):
         raise ValueError("Source animation contract was not absolute and empty-to-full")
@@ -175,7 +189,7 @@ def main():
             raise ValueError("Actual shape comparison does not use normalized projected height")
         image_records[view] = checked_image(item, framing_rule="MATCHED_SCREEN_HEIGHT",
                                            condition_id="ACTUAL_PROJECTED_HEIGHT864_" + view)
-    entry = {"id": case_id, "character": payload["character"], "count_percentage": int(round(summary["metrics"]["target_ratio"] * 100)),
+    entry = {"id": case_id, **revision, "character": payload["character"], "count_percentage": int(round(summary["metrics"]["target_ratio"] * 100)),
              "state": "READY", "metrics": normalized_metrics, "target_count": summary["metrics"]["target_count"],
              "target_difference": summary["metrics"]["count_difference"], "actual_ratio": summary["metrics"]["actual_ratio"],
              "manifest": {"path": PREFIX + guide_name, "bytes": len(guide_bytes), "sha256": sha(guide_bytes)},
@@ -216,7 +230,8 @@ def main():
     catalog = {"schema_version": 1, "study_id": STUDY, "kind": "ACTUAL_PART_COUNT_MATRIX", **FLAGS,
                "baselines": baselines, "appearance_references": reference_rows,
                "cases": [entry if row["case_id"] == case_id else {
-                   "id": row["case_id"], "character": row["character"], "count_percentage": int(round(row["target_ratio"] * 100)),
+                   "id": row["case_id"], **revision_fields(row["case_id"], row),
+                   "character": row["character"], "count_percentage": int(round(row["target_ratio"] * 100)),
                    "state": "INPUT_WAIT"} for row in raw_matrix["cases"]]}
     (output / "catalog.json").write_bytes(encoded(catalog))
     translations = {row["note_ja"]: row["note_en"] for row in references["rows"]}

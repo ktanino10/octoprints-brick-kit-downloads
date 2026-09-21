@@ -5,7 +5,7 @@ import hashlib
 import json
 from pathlib import Path
 
-from density_requirements import MONA_WHISKER_REQUIREMENT, delivery_status
+from density_requirements import MONA_WHISKER_REQUIREMENT, all_cases, delivery_status, logical_case_id
 ROOT = Path(__file__).resolve().parents[1]
 STUDY = "part-count-matrix-20260921"
 BASE = "https://ktanino10.github.io/octoprints-brick-kit-downloads/"
@@ -18,7 +18,7 @@ def file_url(file):
 
 def public_asset_records(catalog):
     files = {}
-    entries = [case for case in catalog["cases"] if case["state"] != "INPUT_WAIT"]
+    entries = [case for case in all_cases(catalog) if case["state"] != "INPUT_WAIT"]
     entries.extend(baseline for baseline in catalog["baselines"].values() if baseline["state"] == "READY")
     for case in entries:
         if "assets" not in case:
@@ -60,7 +60,7 @@ def receipt_for(catalog, *, browser=None, downloads=None, catalog_sha256=None):
             if (case["state"] == "READY") != within:
                 raise ValueError("A missed target cannot become a completed receipt case")
         cases.append({
-            "case_id": case["id"], "character": case["character"],
+            "case_id": case["id"], "logical_case_id": logical_case_id(case), "character": case["character"],
             "multiplier": case["count_percentage"] / 100,
             "target_count": case.get("target_count"),
             "actual_count": case["metrics"]["part_count"] if ready else None,
@@ -110,6 +110,13 @@ def receipt_for(catalog, *, browser=None, downloads=None, catalog_sha256=None):
         "public_commit": {"record": "archive/deployment.json", "field": "commit"},
         "verified_content_commit": downloads.get("deployment", {}).get("commit") if downloads else None,
         "catalog_sha256": catalog_sha256, "cases": cases,
+        "historical_cases": [{
+            "case_id": case["id"], "logical_case_id": logical_case_id(case),
+            "counts_toward_requested_delivery": False,
+            "viewer_url": BASE + "ja/density-guide.html?case=" + case["id"],
+            "viewer_url_en": BASE + "en/density-guide.html?case=" + case["id"],
+            "cad_url": file_url(case["assets"]["native_cad"][0]),
+        } for case in catalog.get("historical_cases", [])],
         "verification": {"public_browser_passed": browser_passed, "anonymous_downloads_passed": downloads_passed},
         "requested_delivery": {
             "mona_whisker_requirement": MONA_WHISKER_REQUIREMENT,

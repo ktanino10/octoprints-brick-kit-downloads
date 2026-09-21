@@ -2,7 +2,7 @@ import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { gunzipSync } from 'node:zlib';
 import {
-  DENSITY_ID, validateDensityPointer, validateDensityCatalog, densityPath,
+  DENSITY_ID, validateDensityPointer, validateDensityCatalog, densityPath, allDensityCases,
 } from '../assets/density-data.js';
 import { validateGuideManifest, guideIndex, radialPosition } from '../viewer/src/density-state.js';
 
@@ -32,7 +32,7 @@ if (pointer.state === 'INPUT_WAIT') {
   for (const reference of catalog.appearance_references ?? []) for (const file of reference.images) await verified(file);
   const cases = [];
   const checkedGeometry = new Set();
-  for (const entry of catalog.cases) {
+  for (const entry of allDensityCases(catalog)) {
     if (entry.state === 'INPUT_WAIT') continue;
     const manifest = validateGuideManifest(await load(entry.manifest), entry.id);
     for (const file of Object.values(entry.images)) await verified(file);
@@ -52,12 +52,13 @@ if (pointer.state === 'INPUT_WAIT') {
       const zero = radialPosition(part, 0);
       if (zero.some((n, axis) => !Object.is(n, part.position_mm[axis]))) throw new Error('Radial pose does not return exactly');
     }
-    cases.push({ id: entry.id, actual: manifest.parts.length, target: entry.target_count,
+    cases.push({ id: entry.id, historical: (catalog.historical_cases ?? []).some((old) => old.id === entry.id),
+      actual: manifest.parts.length, target: entry.target_count,
       difference: entry.target_difference, ratio: entry.actual_ratio, steps: index.ordered.length,
       courses: index.courses.length, status: entry.state });
   }
   if (receipt.state === 'READY') {
-    if (pointer.state !== 'READY' || receipt.study_id !== DENSITY_ID || cases.length !== 15
+    if (pointer.state !== 'READY' || receipt.study_id !== DENSITY_ID || cases.filter((item) => !item.historical).length !== 15
       || !receipt.verification.public_browser_passed || !receipt.verification.anonymous_downloads_passed) {
       throw new Error('READY receipt requires every actual case and completed public verification');
     }

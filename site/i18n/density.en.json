@@ -1,4 +1,9 @@
 {
+  "旧版の記録は比較の15枠と分けて保持する必要があります。": "Historical records must remain separate from the fifteen comparison slots.",
+  "新版の取付順は、実形状に結び付いた工程検査記録を確認するまで表示できません。": "The revised installation order cannot be shown until its sequence evidence is verified against the actual geometry.",
+  "{0} · 履歴 · {1}部品": "{0} · historical · {1} parts",
+  "同じ比較枠の旧版。": "Earlier versions of the same comparison slots.",
+  "旧版の実データと共有URLは残します。新版とは別の形状で、今回の15案完了には重複計上しません。": "Earlier actual data and shared URLs are preserved. These are different geometry versions and are not counted again toward completion of the fifteen cases.",
   "0は元の実配置。繰り返しても元位置から絶対計算し、ずれを累積しません。": "Zero restores the exact original placement. Every update uses absolute source positions, so repeated movement does not accumulate drift.",
   "15案のカタログと公開状態が一致しません。": "The fifteen-case catalog does not match its publication status.",
   "15案の実データは受領待ちです。": "Awaiting actual data for the fifteen cases.",

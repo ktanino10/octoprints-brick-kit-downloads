@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 
 from make_density_receipt import receipt_for
-from density_requirements import delivery_status
+from density_requirements import all_cases, delivery_status, logical_case_id
 from validate_archive import privacy
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -35,24 +35,39 @@ def merge_catalog(previous, incoming, accepted_case):
     merged = copy.deepcopy(incoming)
     if previous["study_id"] != STUDY or merged["study_id"] != STUDY:
         raise ValueError("Cannot merge different matrix studies")
+    old_slots = {logical_case_id(entry): entry for entry in previous["cases"]}
+    new_slots = {logical_case_id(entry): entry for entry in merged["cases"]}
+    old_by_id = {entry["id"]: entry for entry in all_cases(previous)}
     by_id = {entry["id"]: entry for entry in merged["cases"]}
-    if len(by_id) != len(merged["cases"]) or accepted_case not in by_id:
+    if (len(by_id) != len(merged["cases"]) or accepted_case not in by_id
+            or len(old_slots) != len(previous["cases"]) or len(new_slots) != len(merged["cases"])
+            or old_slots.keys() != new_slots.keys() or len(old_by_id) != len(all_cases(previous))):
         raise ValueError("Duplicate or missing case in incremental catalog")
-    previously_ready = {entry["id"] for entry in previous["cases"] if entry["state"] != "INPUT_WAIT"}
-    if any(entry["state"] != "INPUT_WAIT" and entry["id"] not in previously_ready | {accepted_case}
-           for entry in incoming["cases"]):
-        raise ValueError("An incremental receipt cannot promote other unreviewed cases")
-    for item in previous["cases"]:
-        if item["state"] == "INPUT_WAIT":
-            continue
-        if item["id"] not in by_id:
-            raise ValueError("An incremental handoff removed a published case")
+    history = {entry["id"]: copy.deepcopy(entry) for entry in previous.get("historical_cases", [])}
+    if accepted_case in history:
+        raise ValueError("An incremental receipt cannot reactivate historical geometry")
+    for item in incoming.get("historical_cases", []):
+        if item["id"] not in old_by_id or item != old_by_id[item["id"]] or item["state"] == "INPUT_WAIT":
+            raise ValueError("An incremental receipt cannot add or alter unreviewed history")
+    for slot, item in new_slots.items():
+        old = old_slots[slot]
         if item["id"] == accepted_case:
-            if item != by_id[item["id"]]:
+            if old["id"] == item["id"] and old["state"] != "INPUT_WAIT" and old != item:
                 raise ValueError("A previously installed case changed")
+            if item["state"] == "INPUT_WAIT":
+                raise ValueError("The accepted case must contain actual reviewed data")
+            if old["id"] != item["id"] and old["state"] != "INPUT_WAIT":
+                history[old["id"]] = copy.deepcopy(old)
         else:
-            by_id[item["id"]] = copy.deepcopy(item)
-    merged["cases"] = [by_id[item["id"]] for item in merged["cases"]]
+            if item["state"] != "INPUT_WAIT" and item != old:
+                raise ValueError("An incremental receipt cannot promote other unreviewed cases")
+            if old["state"] != "INPUT_WAIT":
+                new_slots[slot] = copy.deepcopy(old)
+    merged["cases"] = [new_slots[logical_case_id(item)] for item in merged["cases"]]
+    if history:
+        merged["historical_cases"] = list(history.values())
+    else:
+        merged.pop("historical_cases", None)
     for name, old in previous["baselines"].items():
         new = merged["baselines"].get(name)
         if new is None or old.get("manifest_sha256") != new.get("manifest_sha256"):

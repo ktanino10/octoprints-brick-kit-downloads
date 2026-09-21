@@ -127,6 +127,17 @@ function renderTable() {
     host.append(tr);
   }
 }
+function renderHistory() {
+  const cases = catalog.historical_cases ?? [];
+  $('#matrix-history').hidden = cases.length === 0;
+  const host = $('#matrix-history-links'); host.replaceChildren();
+  for (const item of cases) {
+    const row = element('li');
+    const link = element('a', `${item.id} · 履歴 · ${number(item.metrics.part_count, 0)}部品`);
+    link.href = localizedURL(`density-guide.html?case=${item.id}`);
+    row.append(link); host.append(row);
+  }
+}
 setLanguageContext((url) => { url.searchParams.set('character', character); url.searchParams.set('view', view); return url; });
 document.querySelectorAll('[data-density-character]').forEach((button) => button.addEventListener('click', () => { character = button.dataset.densityCharacter; render(); }));
 document.querySelectorAll('[data-density-view]').forEach((button) => button.addEventListener('click', () => { view = button.dataset.densityView; render(); }));
@@ -141,7 +152,7 @@ try {
     const ready = catalog.cases.filter((item) => item.state === 'READY').length;
     const eligible = catalog.cases.filter((item) => densityDeliveryStatus(item) === 'READY').length;
     $('#matrix-status').textContent = `追加要件適合 ${number(eligible, 0)} / 15案。旧設計を含む実データ公開 ${number(ready, 0)} / 15案。実物合格ではありません。`;
-    $('#matrix-results').hidden = false; render(); renderTable();
+    $('#matrix-results').hidden = false; render(); renderTable(); renderHistory();
   }
 } catch (error) {
   $('#matrix-results').hidden = true;

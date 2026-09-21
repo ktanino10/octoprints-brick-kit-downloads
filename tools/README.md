@@ -290,3 +290,15 @@ physical UNKNOWN、新geometry revision、実manifestSHAと根元・順序検査
 配信receiptは `source_status` と `status`、データ公開数と新要件適合数を分離します。
 Copilot/DuckyにはMona固有の条件を適用せず、旧MonaのURL/画像/Releaseは残します。
 新revisionの実native・順序・CG・動画を同producerから受領するまで、適合判定を進めません。
+
+比較の15枠は `logical_case_id`、実ファイル/ガイドのIDは `id` / `candidate_id` で区別します。
+新版は `mona-p120-root-v2` など、`geometry_revision:whisker-root-v2` を使います。
+固定READY受入時だけ同じ比較枠へ切替え、旧実案は `historical_cases` へそのまま移します。
+旧 `?case=mona-p120` は旧形状を解決し続け、新版へ暗黙転送しません。履歴は15案へ重複計上せず、
+別案の増分receiptによる履歴改変・再採用・未検証案の同時昇格も拒否します。
+新版manifest/instance/summary間の論理枠とgeometry revisionを一致させ、既存バイトは上書きしません。
+
+新版の実一体ヒゲmoduleは低い実底面と高い取付支持段を持ち得ます。
+制作元の `BODY_FIRST_ROOT_ANCHORED` は本体を下から積み、受け側支持段でmoduleを取付ける契約です。
+実 `position_mm` は改変しません。この新modeは形状・native・差込み・全順序の固定検査証拠を受領するまで
+明示エラーにし、既存のbody-bottom-Z非減少検査を無条件に緩めたり、旧順序へ戻したりしません。

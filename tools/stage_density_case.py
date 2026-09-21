@@ -8,6 +8,7 @@ from pathlib import Path, PurePosixPath
 import re
 import subprocess
 import zipfile
+from density_requirements import case_identity
 
 from validate_archive import privacy
 
@@ -76,8 +77,7 @@ def main():
     case = args.case or (case_ids[0] if len(case_ids) == 1 else None)
     if case is None or case not in case_ids:
         raise ValueError("Select an explicitly authorized case from this READY packet")
-    if not re.fullmatch(r"(mona|copilot|ducky)-p(120|150|200|300|400)", case):
-        raise ValueError("Invalid matrix case ID")
+    case_identity(case)
     commit = receipt["source_commit"]
     if not re.fullmatch(r"[0-9a-f]{40}", commit):
         raise ValueError("A fixed source commit is required")
