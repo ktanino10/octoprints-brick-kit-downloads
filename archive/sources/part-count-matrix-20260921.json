@@ -164,6 +164,20 @@
       "source_commit": "0943f2af21a2c380e47fac21150347f6d8dc6dc5"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/mona-p150-root-v2-summary.json",
+      "bytes": 107753,
+      "sha256": "59dd0bb55eab4f6fb7f93beb860c5e788afe9b438d82e1736630321e253cd258",
+      "source_relative_path": "cases/mona-p150-root-v2-summary.json",
+      "source_commit": "e1fa20d28944a09a9523bb7f0712a21640c882c9"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/mona-p150-root-v2.json.gz",
+      "bytes": 833290,
+      "sha256": "b4604daed2451bf8cde360cc248bc878761316e946db2ab9fbefd45705dce2ca",
+      "source_relative_path": "cases/mona-p150-root-v2.json.gz",
+      "source_commit": "e1fa20d28944a09a9523bb7f0712a21640c882c9"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/cases/mona-p150-summary.json",
       "bytes": 96420,
       "sha256": "a26a26f062c827bdfb3dd01ba4699efd512aeab0d7bdc2da442ae7af02068a82",
@@ -3258,6 +3272,20 @@
       "source_commit": "233563b20327a6a99157ca70e58ac5b94c1ff524"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/WR-18bbe8c5db1f841f.mesh.gz",
+      "bytes": 825840,
+      "sha256": "a7f96cf77b0cf5d746800a409ebea21f92e571b417902fdf59ded0de0740c90b",
+      "source_relative_path": "geometry/WR-18bbe8c5db1f841f.mesh.gz",
+      "source_commit": "e1fa20d28944a09a9523bb7f0712a21640c882c9"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/WR-9a5f870fb99ca288.mesh.gz",
+      "bytes": 499500,
+      "sha256": "82ce90fc12039ebaa65d34fb908dc50ab62477bd175c085716ccd5759ccc27a0",
+      "source_relative_path": "geometry/WR-9a5f870fb99ca288.mesh.gz",
+      "source_commit": "e1fa20d28944a09a9523bb7f0712a21640c882c9"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/WR-c5de3bad26942259.mesh.gz",
       "bytes": 990133,
       "sha256": "84b9fdedb40e6f725fac50127490a8d057c15d387cd967df040ea34856dc5afd",
@@ -3685,6 +3713,34 @@
       "source_commit": "c02a11b4e56c5c192a4f6db8606118eef1f2c081"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/mona-p150-root-v2-assembled-front.jpg",
+      "bytes": 75399,
+      "sha256": "05151ab50c7118d4a2ff2d04184040db8447148ecdace4c5dcc7f025bc78d6b5",
+      "source_relative_path": "images/mona-p150-root-v2-assembled-front.jpg",
+      "source_commit": "e1fa20d28944a09a9523bb7f0712a21640c882c9"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/mona-p150-root-v2-assembled-three_quarter.jpg",
+      "bytes": 101170,
+      "sha256": "9e1a949d8c144865a60c65b0b20075b1901f9e6b9e561126d4d75e5032f918c2",
+      "source_relative_path": "images/mona-p150-root-v2-assembled-three_quarter.jpg",
+      "source_commit": "e1fa20d28944a09a9523bb7f0712a21640c882c9"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/mona-p150-root-v2-radial-exploded.jpg",
+      "bytes": 193082,
+      "sha256": "224e5cc39b6c9bfa2b117931020fbf03f8eb37e1b221a3f52ec6feb36241d0c1",
+      "source_relative_path": "images/mona-p150-root-v2-radial-exploded.jpg",
+      "source_commit": "e1fa20d28944a09a9523bb7f0712a21640c882c9"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/mona-p150-root-v2-registered-face.jpg",
+      "bytes": 72477,
+      "sha256": "ba63acf666e2b7916947a57bebbb062d0df23bee389d0feb5af784393b3afcc9",
+      "source_relative_path": "images/mona-p150-root-v2-registered-face.jpg",
+      "source_commit": "e1fa20d28944a09a9523bb7f0712a21640c882c9"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/references/copilot-initial-fine-legacy_three_quarter.jpg",
       "bytes": 115584,
       "sha256": "66735d96a3fa62e8167b7b45f243209c683e9cb392878ce84b05d554891d864b",
@@ -3839,6 +3895,20 @@
       "source_commit": "d8eadae855c504b3fabdf22ed6617edb1b79e993"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/source-records/e1fa20d28944a09a9523bb7f0712a21640c882c9-matrix.json",
+      "bytes": 7690,
+      "sha256": "6772ff0707f790f8b210749c72005717bbe4568b538b78539a2c170a442f750a",
+      "source_relative_path": "matrix.json",
+      "source_commit": "e1fa20d28944a09a9523bb7f0712a21640c882c9"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/source-records/e1fa20d28944a09a9523bb7f0712a21640c882c9-references.json",
+      "bytes": 3778,
+      "sha256": "cbe3d556e049853665c263e4da2269b852df933f1ce0728df774f82b609e6ded",
+      "source_relative_path": "references.json",
+      "source_commit": "e1fa20d28944a09a9523bb7f0712a21640c882c9"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/validation/mona-fine8-base-root-v2-whisker-support.json",
       "bytes": 122881,
       "sha256": "b75838effa669df25f4ef40b72b23797d3801c9dd55086f816cc872341dbcb32",
@@ -3851,7 +3921,14 @@
       "sha256": "884841f7ddaa6d67994899b958f736e0cfce8c7068e9784b61324f3bd20f2674",
       "source_relative_path": "validation/mona-p120-root-v2-whisker-support.json",
       "source_commit": "233563b20327a6a99157ca70e58ac5b94c1ff524"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/validation/mona-p150-root-v2-whisker-support.json",
+      "bytes": 106014,
+      "sha256": "625f4530d0ac51ceb6f0f3a7e84a08af7ec89b8dd5c6aba159ddbab5446e3042",
+      "source_relative_path": "validation/mona-p150-root-v2-whisker-support.json",
+      "source_commit": "e1fa20d28944a09a9523bb7f0712a21640c882c9"
     }
   ],
-  "source_revision": "659eb738fea7f33e58c28567664832c883ddf9d7"
+  "source_revision": "e1fa20d28944a09a9523bb7f0712a21640c882c9"
 }

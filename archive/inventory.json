@@ -67,8 +67,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "MD",
-      "bytes": 26081,
-      "sha256": "441a2cbb6dcae3a6183468ec469e07d96b8511775ab9f0a9c7fe38ef0bb29d9f",
+      "bytes": 26468,
+      "sha256": "147d1cb7a7dc69c721ebf4b58397c31bf7f659fe35e48f4246581f6c5d0757c8",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/README.en.md",
       "status": "ARCHIVE_RECORD"
     },
@@ -77,8 +77,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "MD",
-      "bytes": 26337,
-      "sha256": "1f9333eba13a89d94191ae67b17c3fa4672b74e2531107dcbbfac60f9c1f46fc",
+      "bytes": 26723,
+      "sha256": "f22ae81f5ad02931ed9fd6e82deb77dc7494ae8565a31eec9b6585d34cc43324",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/README.md",
       "status": "ARCHIVE_RECORD"
     },
@@ -87,8 +87,8 @@
       "group": "design",
       "revision": "r2-20260919",
       "format": "JSON",
-      "bytes": 19888,
-      "sha256": "6c3b4d2e89760e064f94936ad9052c3df88655814b23d6e1bd70f4dd64535839",
+      "bytes": 22497,
+      "sha256": "780d9afb5c545dd50e0b18a3016aa3a97c0a080dc965dd5c0ad463057d02957a",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/block-budget-matrix.json",
       "status": "ARCHIVE_RECORD"
     },
@@ -108,7 +108,7 @@
       "revision": "r2-20260919",
       "format": "JSON",
       "bytes": 629,
-      "sha256": "472c61a828196dc9367f30edb39151551f87ba97edfac827d4b4779d6f7a8e78",
+      "sha256": "f19430bbc740cef7cebf83b912985c3ffe1a44ead090dd30edfc42398734378c",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/density-study.json",
       "status": "ARCHIVE_RECORD"
     },
@@ -250,6 +250,16 @@
       "bytes": 994,
       "sha256": "9e06a895114e064044998b2b1a90672d339df233b3d4340970d52fa2d794e5e1",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/releases/part-count-matrix-20260921-mona-p120.json",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
+      "path": "archive/releases/part-count-matrix-20260921-mona-p150-root-v2.json",
+      "group": "design",
+      "revision": "r2-20260919",
+      "format": "JSON",
+      "bytes": 1043,
+      "sha256": "52b573f29b7d778be6e10996d7f53bb2aa1a5b7c9b2b8a8da00a840f57be163a",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/releases/part-count-matrix-20260921-mona-p150-root-v2.json",
       "status": "ARCHIVE_RECORD"
     },
     {
@@ -443,6 +453,16 @@
       "status": "ARCHIVE_RECORD"
     },
     {
+      "path": "archive/sources/part-count-matrix-20260921-mona-p150-root-v2-verification.json",
+      "group": "design",
+      "revision": "r2-20260919",
+      "format": "JSON",
+      "bytes": 2720,
+      "sha256": "8d3b581501f88147f880ec9d888b24c0ef0cacd0769069b58710e95e9b259897",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/sources/part-count-matrix-20260921-mona-p150-root-v2-verification.json",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
       "path": "archive/sources/part-count-matrix-20260921-mona-p150-verification.json",
       "group": "design",
       "revision": "r2-20260919",
@@ -457,8 +477,8 @@
       "group": "design",
       "revision": "r2-20260919",
       "format": "JSON",
-      "bytes": 205336,
-      "sha256": "9463d0234c2cee0bda59574e6c4eab86c5c053a8da929b0bb25b9c7fc07fdd94",
+      "bytes": 209351,
+      "sha256": "930b60bacb39014adcd25e78add22420f54ed2666e39573286cfe134d232705e",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/sources/part-count-matrix-20260921.json",
       "status": "ARCHIVE_RECORD"
     },
@@ -18693,6 +18713,42 @@
       "status": "UNSELECTED_DIGITAL_STUDY"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/mona-p150-root-v2-guide.json.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 837136,
+      "sha256": "52b8262362625b68213e92034ca3f75e5651595d9a011cc32252eecfd7d6cb52",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/cases/mona-p150-root-v2-guide.json.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/mona-p150-root-v2-summary.json",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JSON",
+      "bytes": 107753,
+      "sha256": "59dd0bb55eab4f6fb7f93beb860c5e788afe9b438d82e1736630321e253cd258",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/cases/mona-p150-root-v2-summary.json",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "59dd0bb55eab4f6fb7f93beb860c5e788afe9b438d82e1736630321e253cd258",
+      "source_bytes": 107753,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/mona-p150-root-v2.json.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 833290,
+      "sha256": "b4604daed2451bf8cde360cc248bc878761316e946db2ab9fbefd45705dce2ca",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/cases/mona-p150-root-v2.json.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "b4604daed2451bf8cde360cc248bc878761316e946db2ab9fbefd45705dce2ca",
+      "source_bytes": 833290,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/cases/mona-p150-summary.json",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -18723,8 +18779,8 @@
       "group": "study",
       "revision": "part-count-matrix-20260921",
       "format": "JSON",
-      "bytes": 72776,
-      "sha256": "f1458236cbe3f0281d5b211992e4348f1a64113eb9345b492e3712bf95277b5c",
+      "bytes": 80192,
+      "sha256": "13b32b26f4452d1f21d7f5acd7a4dc18cb8d00ccc7684e5182c514c783556118",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/catalog.json",
       "status": "UNSELECTED_DIGITAL_STUDY"
     },
@@ -18733,8 +18789,8 @@
       "group": "study",
       "revision": "part-count-matrix-20260921",
       "format": "JSON",
-      "bytes": 8513,
-      "sha256": "78f0033467bb613790198dd454cc05103352036de6ad7c4b0127736dd5a829aa",
+      "bytes": 10077,
+      "sha256": "0671e1f6652fcdce878c1b7037bbb9e5597923db02227759ca081ead7dc2beda",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/display/case-performance.json",
       "status": "UNSELECTED_DIGITAL_STUDY"
     },
@@ -18743,8 +18799,8 @@
       "group": "study",
       "revision": "part-count-matrix-20260921",
       "format": "JSON",
-      "bytes": 1077744,
-      "sha256": "55f56c7fa310b23c64ae65f77b7d4425fb5d0a72d8dd95a93f2e4d2e93b802b6",
+      "bytes": 1187386,
+      "sha256": "e9892b21b33a2a69655f38948f0abe74713cf76058c92aa2425f6b7729ffec5a",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/display/catalog.json",
       "status": "UNSELECTED_DIGITAL_STUDY"
     },
@@ -24919,6 +24975,32 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/WR-18bbe8c5db1f841f.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 825840,
+      "sha256": "a7f96cf77b0cf5d746800a409ebea21f92e571b417902fdf59ded0de0740c90b",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/WR-18bbe8c5db1f841f.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "a7f96cf77b0cf5d746800a409ebea21f92e571b417902fdf59ded0de0740c90b",
+      "source_bytes": 825840,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/WR-9a5f870fb99ca288.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 499500,
+      "sha256": "82ce90fc12039ebaa65d34fb908dc50ab62477bd175c085716ccd5759ccc27a0",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/WR-9a5f870fb99ca288.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "82ce90fc12039ebaa65d34fb908dc50ab62477bd175c085716ccd5759ccc27a0",
+      "source_bytes": 499500,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/WR-c5de3bad26942259.mesh.gz",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -25712,6 +25794,58 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/mona-p150-root-v2-assembled-front.jpg",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JPG",
+      "bytes": 75399,
+      "sha256": "05151ab50c7118d4a2ff2d04184040db8447148ecdace4c5dcc7f025bc78d6b5",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/images/mona-p150-root-v2-assembled-front.jpg",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "05151ab50c7118d4a2ff2d04184040db8447148ecdace4c5dcc7f025bc78d6b5",
+      "source_bytes": 75399,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/mona-p150-root-v2-assembled-three_quarter.jpg",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JPG",
+      "bytes": 101170,
+      "sha256": "9e1a949d8c144865a60c65b0b20075b1901f9e6b9e561126d4d75e5032f918c2",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/images/mona-p150-root-v2-assembled-three_quarter.jpg",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "9e1a949d8c144865a60c65b0b20075b1901f9e6b9e561126d4d75e5032f918c2",
+      "source_bytes": 101170,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/mona-p150-root-v2-radial-exploded.jpg",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JPG",
+      "bytes": 193082,
+      "sha256": "224e5cc39b6c9bfa2b117931020fbf03f8eb37e1b221a3f52ec6feb36241d0c1",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/images/mona-p150-root-v2-radial-exploded.jpg",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "224e5cc39b6c9bfa2b117931020fbf03f8eb37e1b221a3f52ec6feb36241d0c1",
+      "source_bytes": 193082,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/mona-p150-root-v2-registered-face.jpg",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JPG",
+      "bytes": 72477,
+      "sha256": "ba63acf666e2b7916947a57bebbb062d0df23bee389d0feb5af784393b3afcc9",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/images/mona-p150-root-v2-registered-face.jpg",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "ba63acf666e2b7916947a57bebbb062d0df23bee389d0feb5af784393b3afcc9",
+      "source_bytes": 72477,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/references/copilot-initial-fine-legacy_three_quarter.jpg",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -25998,6 +26132,32 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/source-records/e1fa20d28944a09a9523bb7f0712a21640c882c9-matrix.json",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JSON",
+      "bytes": 7690,
+      "sha256": "6772ff0707f790f8b210749c72005717bbe4568b538b78539a2c170a442f750a",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/source-records/e1fa20d28944a09a9523bb7f0712a21640c882c9-matrix.json",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "6772ff0707f790f8b210749c72005717bbe4568b538b78539a2c170a442f750a",
+      "source_bytes": 7690,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/source-records/e1fa20d28944a09a9523bb7f0712a21640c882c9-references.json",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JSON",
+      "bytes": 3778,
+      "sha256": "cbe3d556e049853665c263e4da2269b852df933f1ce0728df774f82b609e6ded",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/source-records/e1fa20d28944a09a9523bb7f0712a21640c882c9-references.json",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "cbe3d556e049853665c263e4da2269b852df933f1ce0728df774f82b609e6ded",
+      "source_bytes": 3778,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/validation/mona-fine8-base-root-v2-whisker-support.json",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -26021,6 +26181,19 @@
       "status": "UNSELECTED_DIGITAL_STUDY",
       "source_sha256": "884841f7ddaa6d67994899b958f736e0cfce8c7068e9784b61324f3bd20f2674",
       "source_bytes": 95718,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/validation/mona-p150-root-v2-whisker-support.json",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JSON",
+      "bytes": 106014,
+      "sha256": "625f4530d0ac51ceb6f0f3a7e84a08af7ec89b8dd5c6aba159ddbab5446e3042",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/validation/mona-p150-root-v2-whisker-support.json",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "625f4530d0ac51ceb6f0f3a7e84a08af7ec89b8dd5c6aba159ddbab5446e3042",
+      "source_bytes": 106014,
       "relation": "BYTE_IDENTICAL"
     },
     {
@@ -26838,8 +27011,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "JS",
-      "bytes": 533061,
-      "sha256": "c02face01225ac476d927391a180e1627eb012f18284224019c2ed54037e4cf0",
+      "bytes": 541576,
+      "sha256": "570c6bba49a5c3a106598ccf63e98afbbdb43d5ef21d32202656b728ca0b02f4",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/translations.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -27497,8 +27670,8 @@
       "group": "viewer",
       "revision": "public-viewer-2026-09-19",
       "format": "JS",
-      "bytes": 1438679,
-      "sha256": "8915b4f180eaec0fddbd05336720822e2d1286e8c2d404912a41c1443aa0c280",
+      "bytes": 1451700,
+      "sha256": "d367e36ce63ab881fd436d2eea92a539a048e3ac5b71ff5fb858756ca63ac831",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/viewer/assets/density-guide.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -27527,8 +27700,8 @@
       "group": "viewer",
       "revision": "public-viewer-2026-09-19",
       "format": "JS",
-      "bytes": 1497900,
-      "sha256": "711981ad1aa7566ed63a952b59e2c2d5f21ef0e20fa4b1be2b61f6397bde8cff",
+      "bytes": 1510921,
+      "sha256": "22bc90a1ab41983204586d4a91aeaee67f14ed65473ecca1edf89d6886d4e15b",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/viewer/assets/studio.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -27544,17 +27717,17 @@
     }
   ],
   "totals": {
-    "files": 2163,
-    "bytes": 885933218,
+    "files": 2177,
+    "bytes": 889760686,
     "groups": {
       "site": 68,
-      "design": 50,
+      "design": 52,
       "phase1": 149,
       "common": 561,
       "common-trial": 24,
       "selected": 544,
       "trial": 60,
-      "study": 685,
+      "study": 697,
       "feedback": 16,
       "viewer": 6
     }

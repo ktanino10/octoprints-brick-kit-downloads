@@ -1,0 +1,3759 @@
+{
+  "schema_version": 1,
+  "case_id": "mona-p150-root-v2",
+  "logical_case_id": "mona-p150",
+  "geometry_revision": "whisker-root-v2",
+  "status": "DIGITAL_SELF_SUPPORTING_UNTESTED",
+  "external_aid_count": 0,
+  "assembly_aid_count": 0,
+  "actual_parts": 18649,
+  "actual_types": 128,
+  "geometry_sequence_identity_sha256": "f7189c90718a68688536f90a819a080d965ad2e36c6940af7ec89faeada9b378",
+  "native_root_contact_evidence_sha256": "2c100aafe6d61eadfac97995b411f71ad5ecd6ab86b96a45658974a8d852ab8c",
+  "actual_native_root_checks": {
+    "result": "PASS_ACTUAL_BODY_ROOT_BREP_CONTACTS",
+    "modules": [
+      {
+        "part_id": "MONA-P150-ROOT-V2-ROOT-01",
+        "native_root_type": "WR-18bbe8c5db1f841f",
+        "actual_single_solid": true,
+        "anchor_role": "WHISKER_ROOT_MODULE",
+        "body_supports": [
+          {
+            "lower_part_id": "MONA-P150-003034",
+            "native_bearing_mm2": 22.764799999999966,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003037",
+            "native_bearing_mm2": 146.51353263221085,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003038",
+            "native_bearing_mm2": 164.86088820330784,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003059",
+            "native_bearing_mm2": 161.38638377920878,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003060",
+            "native_bearing_mm2": 161.38638377920853,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003085",
+            "native_bearing_mm2": 161.38638377920913,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003086",
+            "native_bearing_mm2": 161.38638377920876,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003108",
+            "native_bearing_mm2": 83.61649311837033,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003109",
+            "native_bearing_mm2": 80.14198869427192,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003110",
+            "native_bearing_mm2": 157.91187935511064,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003111",
+            "native_bearing_mm2": 161.38638377920864,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003132",
+            "native_bearing_mm2": 83.6164931183694,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003133",
+            "native_bearing_mm2": 80.14198869427094,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003134",
+            "native_bearing_mm2": 80.14198869427092,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003135",
+            "native_bearing_mm2": 83.61649311836968,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          }
+        ],
+        "root_stud_count": 89,
+        "root_xy_span_mm": [
+          144,
+          56
+        ],
+        "body_mm": [
+          215.8,
+          63.8,
+          14.4
+        ],
+        "module_position_mm": [
+          -136,
+          -108,
+          88.0
+        ],
+        "module_insertion_step": 3365,
+        "gravity_balance": {
+          "result": "PASS_NOMINAL_CAD_STATIC_MOMENT_BOUND",
+          "minimum_support_margin_mm": 15.244732602601099,
+          "required_margin_mm": 1.0,
+          "actual_bearing_hull_xy_mm": [
+            [
+              -179.7,
+              -99.7
+            ],
+            [
+              -171.7,
+              -107.7
+            ],
+            [
+              -59.9,
+              -139.9
+            ],
+            [
+              -28.1,
+              -139.9
+            ],
+            [
+              -28.1,
+              -76.1
+            ],
+            [
+              -171.9,
+              -76.1
+            ],
+            [
+              -179.7,
+              -92.1
+            ]
+          ],
+          "root_cad_volume_mm3": 28912.51134138597,
+          "root_cad_centroid_mm": [
+            -131.9288610083589,
+            -95.99095089573272,
+            100.00918338997447
+          ],
+          "downstream_payloads": [
+            {
+              "part_id": "MONA-P150-003673",
+              "cad_volume_mm3": 1750.878853007216,
+              "cad_centroid_mm": [
+                -68.0,
+                -140.0,
+                105.72956723480019
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003697",
+              "cad_volume_mm3": 1750.8788530072156,
+              "cad_centroid_mm": [
+                -36.0,
+                -140.0,
+                105.7295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003674",
+              "cad_volume_mm3": 1750.8788530072152,
+              "cad_centroid_mm": [
+                -68.0,
+                -124.0,
+                105.7295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003698",
+              "cad_volume_mm3": 1750.878853007215,
+              "cad_centroid_mm": [
+                -36.0,
+                -124.0,
+                105.7295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003621",
+              "cad_volume_mm3": 1750.8788530072152,
+              "cad_centroid_mm": [
+                -132.0,
+                -108.0,
+                105.72956723480019
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003649",
+              "cad_volume_mm3": 1750.8788530072143,
+              "cad_centroid_mm": [
+                -100.0,
+                -108.0,
+                105.7295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003675",
+              "cad_volume_mm3": 1750.878853007216,
+              "cad_centroid_mm": [
+                -68.0,
+                -108.0,
+                105.72956723480019
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003699",
+              "cad_volume_mm3": 1750.8788530072152,
+              "cad_centroid_mm": [
+                -36.0,
+                -108.0,
+                105.72956723480019
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003584",
+              "cad_volume_mm3": 944.9500997948164,
+              "cad_centroid_mm": [
+                -196.0,
+                -104.0,
+                105.57156726587931
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003600",
+              "cad_volume_mm3": 944.9500997948163,
+              "cad_centroid_mm": [
+                -164.0,
+                -104.0,
+                105.57156726587931
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003583",
+              "cad_volume_mm3": 479.4687951734614,
+              "cad_centroid_mm": [
+                -220.0,
+                -96.0,
+                105.53842798859503
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003585",
+              "cad_volume_mm3": 944.950099794816,
+              "cad_centroid_mm": [
+                -196.0,
+                -96.0,
+                105.57156726587931
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003601",
+              "cad_volume_mm3": 1750.8788530072138,
+              "cad_centroid_mm": [
+                -164.0,
+                -92.0,
+                105.7295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003622",
+              "cad_volume_mm3": 1750.8788530072147,
+              "cad_centroid_mm": [
+                -132.0,
+                -92.0,
+                105.7295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003650",
+              "cad_volume_mm3": 1750.8788530072143,
+              "cad_centroid_mm": [
+                -100.0,
+                -92.0,
+                105.7295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003676",
+              "cad_volume_mm3": 1750.8788530072154,
+              "cad_centroid_mm": [
+                -68.0,
+                -92.0,
+                105.72956723480019
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003700",
+              "cad_volume_mm3": 1750.8788530072147,
+              "cad_centroid_mm": [
+                -36.0,
+                -92.0,
+                105.7295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003582",
+              "cad_volume_mm3": 712.2094474841388,
+              "cad_centroid_mm": [
+                -224.0,
+                -88.0,
+                105.56041236656665
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003586",
+              "cad_volume_mm3": 479.46879517346144,
+              "cad_centroid_mm": [
+                -204.0,
+                -88.0,
+                105.53842798859503
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003602",
+              "cad_volume_mm3": 1750.8788530072145,
+              "cad_centroid_mm": [
+                -164.0,
+                -76.0,
+                105.7295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003623",
+              "cad_volume_mm3": 1750.8788530072152,
+              "cad_centroid_mm": [
+                -132.0,
+                -76.0,
+                105.72956723480019
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003651",
+              "cad_volume_mm3": 1750.8788530072138,
+              "cad_centroid_mm": [
+                -100.0,
+                -76.0,
+                105.7295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003677",
+              "cad_volume_mm3": 1750.8788530072159,
+              "cad_centroid_mm": [
+                -68.0,
+                -76.0,
+                105.72956723480019
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003701",
+              "cad_volume_mm3": 1750.8788530072154,
+              "cad_centroid_mm": [
+                -36.0,
+                -76.0,
+                105.72956723480019
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003879",
+              "cad_volume_mm3": 889.4381725972278,
+              "cad_centroid_mm": [
+                -188.0,
+                -100.0,
+                110.48851979842972
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003894",
+              "cad_volume_mm3": 944.9500997948167,
+              "cad_centroid_mm": [
+                -168.0,
+                -100.0,
+                110.3715672658793
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003896",
+              "cad_volume_mm3": 1534.0415356650028,
+              "cad_centroid_mm": [
+                -155.4439359007221,
+                -98.31313305190243,
+                110.52464964872883
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003907",
+              "cad_volume_mm3": 1750.8788530072138,
+              "cad_centroid_mm": [
+                -140.0,
+                -100.0,
+                110.5295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003920",
+              "cad_volume_mm3": 1750.8788530072131,
+              "cad_centroid_mm": [
+                -124.0,
+                -100.0,
+                110.5295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003933",
+              "cad_volume_mm3": 1750.8788530072145,
+              "cad_centroid_mm": [
+                -108.0,
+                -100.0,
+                110.5295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003945",
+              "cad_volume_mm3": 1750.8788530072143,
+              "cad_centroid_mm": [
+                -92.0,
+                -100.0,
+                110.5295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003957",
+              "cad_volume_mm3": 1750.878853007214,
+              "cad_centroid_mm": [
+                -76.0,
+                -100.0,
+                110.5295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003969",
+              "cad_volume_mm3": 1750.878853007215,
+              "cad_centroid_mm": [
+                -60.0,
+                -100.0,
+                110.5295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003875",
+              "cad_volume_mm3": 712.2094474841389,
+              "cad_centroid_mm": [
+                -200.0,
+                -96.0,
+                110.36041236656665
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003885",
+              "cad_volume_mm3": 885.5372114511372,
+              "cad_centroid_mm": [
+                -178.07631929235654,
+                -94.07631929235654,
+                110.49041478563036
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003873",
+              "cad_volume_mm3": 479.46879517346144,
+              "cad_centroid_mm": [
+                -216.0,
+                -92.0,
+                110.33842798859503
+              ]
+            },
+            {
+              "part_id": "MONA-P150-003874",
+              "cad_volume_mm3": 479.46879517346144,
+              "cad_centroid_mm": [
+                -208.0,
+                -92.0,
+                110.33842798859503
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004178",
+              "cad_volume_mm3": 944.9500997948161,
+              "cad_centroid_mm": [
+                -172.0,
+                -96.0,
+                115.1715672658793
+              ]
+            }
+          ],
+          "assembly_prefix_checks": [
+            {
+              "after_step": 3365,
+              "added_part_id": "MONA-P150-ROOT-V2-ROOT-01",
+              "minimum_support_margin_mm": 19.89095089573273
+            },
+            {
+              "after_step": 3604,
+              "added_part_id": "MONA-P150-003673",
+              "minimum_support_margin_mm": 19.89095089573273
+            },
+            {
+              "after_step": 3605,
+              "added_part_id": "MONA-P150-003697",
+              "minimum_support_margin_mm": 19.89095089573273
+            },
+            {
+              "after_step": 3617,
+              "added_part_id": "MONA-P150-003674",
+              "minimum_support_margin_mm": 19.89095089573273
+            },
+            {
+              "after_step": 3618,
+              "added_part_id": "MONA-P150-003698",
+              "minimum_support_margin_mm": 19.89095089573273
+            },
+            {
+              "after_step": 3628,
+              "added_part_id": "MONA-P150-003621",
+              "minimum_support_margin_mm": 19.89095089573273
+            },
+            {
+              "after_step": 3629,
+              "added_part_id": "MONA-P150-003649",
+              "minimum_support_margin_mm": 19.89095089573273
+            },
+            {
+              "after_step": 3630,
+              "added_part_id": "MONA-P150-003675",
+              "minimum_support_margin_mm": 19.89095089573273
+            },
+            {
+              "after_step": 3631,
+              "added_part_id": "MONA-P150-003699",
+              "minimum_support_margin_mm": 19.89095089573273
+            },
+            {
+              "after_step": 3637,
+              "added_part_id": "MONA-P150-003584",
+              "minimum_support_margin_mm": 19.89095089573273
+            },
+            {
+              "after_step": 3638,
+              "added_part_id": "MONA-P150-003600",
+              "minimum_support_margin_mm": 19.89095089573273
+            },
+            {
+              "after_step": 3639,
+              "added_part_id": "MONA-P150-003583",
+              "minimum_support_margin_mm": 19.803557684715727
+            },
+            {
+              "after_step": 3640,
+              "added_part_id": "MONA-P150-003585",
+              "minimum_support_margin_mm": 19.803557684715727
+            },
+            {
+              "after_step": 3641,
+              "added_part_id": "MONA-P150-003601",
+              "minimum_support_margin_mm": 19.803557684715727
+            },
+            {
+              "after_step": 3642,
+              "added_part_id": "MONA-P150-003622",
+              "minimum_support_margin_mm": 19.803557684715727
+            },
+            {
+              "after_step": 3643,
+              "added_part_id": "MONA-P150-003650",
+              "minimum_support_margin_mm": 19.803557684715727
+            },
+            {
+              "after_step": 3644,
+              "added_part_id": "MONA-P150-003676",
+              "minimum_support_margin_mm": 19.803557684715727
+            },
+            {
+              "after_step": 3645,
+              "added_part_id": "MONA-P150-003700",
+              "minimum_support_margin_mm": 19.803557684715727
+            },
+            {
+              "after_step": 3648,
+              "added_part_id": "MONA-P150-003582",
+              "minimum_support_margin_mm": 19.803557684715727
+            },
+            {
+              "after_step": 3649,
+              "added_part_id": "MONA-P150-003586",
+              "minimum_support_margin_mm": 19.803557684715727
+            },
+            {
+              "after_step": 3651,
+              "added_part_id": "MONA-P150-003602",
+              "minimum_support_margin_mm": 18.749468073613336
+            },
+            {
+              "after_step": 3652,
+              "added_part_id": "MONA-P150-003623",
+              "minimum_support_margin_mm": 17.731301198023367
+            },
+            {
+              "after_step": 3653,
+              "added_part_id": "MONA-P150-003651",
+              "minimum_support_margin_mm": 16.817491362332625
+            },
+            {
+              "after_step": 3654,
+              "added_part_id": "MONA-P150-003677",
+              "minimum_support_margin_mm": 15.992776588741357
+            },
+            {
+              "after_step": 3655,
+              "added_part_id": "MONA-P150-003701",
+              "minimum_support_margin_mm": 15.244732602601099
+            },
+            {
+              "after_step": 3914,
+              "added_part_id": "MONA-P150-003879",
+              "minimum_support_margin_mm": 15.244732602601099
+            },
+            {
+              "after_step": 3915,
+              "added_part_id": "MONA-P150-003894",
+              "minimum_support_margin_mm": 15.244732602601099
+            },
+            {
+              "after_step": 3916,
+              "added_part_id": "MONA-P150-003896",
+              "minimum_support_margin_mm": 15.244732602601099
+            },
+            {
+              "after_step": 3917,
+              "added_part_id": "MONA-P150-003907",
+              "minimum_support_margin_mm": 15.244732602601099
+            },
+            {
+              "after_step": 3918,
+              "added_part_id": "MONA-P150-003920",
+              "minimum_support_margin_mm": 15.244732602601099
+            },
+            {
+              "after_step": 3919,
+              "added_part_id": "MONA-P150-003933",
+              "minimum_support_margin_mm": 15.244732602601099
+            },
+            {
+              "after_step": 3920,
+              "added_part_id": "MONA-P150-003945",
+              "minimum_support_margin_mm": 15.244732602601099
+            },
+            {
+              "after_step": 3921,
+              "added_part_id": "MONA-P150-003957",
+              "minimum_support_margin_mm": 15.244732602601099
+            },
+            {
+              "after_step": 3922,
+              "added_part_id": "MONA-P150-003969",
+              "minimum_support_margin_mm": 15.244732602601099
+            },
+            {
+              "after_step": 3937,
+              "added_part_id": "MONA-P150-003875",
+              "minimum_support_margin_mm": 15.244732602601099
+            },
+            {
+              "after_step": 3938,
+              "added_part_id": "MONA-P150-003885",
+              "minimum_support_margin_mm": 15.244732602601099
+            },
+            {
+              "after_step": 3940,
+              "added_part_id": "MONA-P150-003873",
+              "minimum_support_margin_mm": 15.244732602601099
+            },
+            {
+              "after_step": 3941,
+              "added_part_id": "MONA-P150-003874",
+              "minimum_support_margin_mm": 15.244732602601099
+            },
+            {
+              "after_step": 4222,
+              "added_part_id": "MONA-P150-004178",
+              "minimum_support_margin_mm": 15.244732602601099
+            }
+          ],
+          "assumptions": "Uniform-density native CADvolume,notmeasuredPLA/infillmass. Perhullside include100percent ofdestabilizing exclusive-root/firstshared-receiverpayload,ignorestabilizingpayload. No creditforunknownstudpullouttension.",
+          "not_validated": "Printedmaterial/infilldistribution,creep,yield,impact,dynamicassemblyloads,retentionandwholefiguretipping."
+        },
+        "load_path": "Continuous stepped material from tip to this native multi-point seated body root; no floor/stand member.",
+        "physical_retention": "UNKNOWN",
+        "physical_strength": "UNKNOWN"
+      },
+      {
+        "part_id": "MONA-P150-ROOT-V2-ROOT-02",
+        "native_root_type": "WR-9a5f870fb99ca288",
+        "actual_single_solid": true,
+        "anchor_role": "WHISKER_ROOT_MODULE",
+        "body_supports": [
+          {
+            "lower_part_id": "MONA-P150-003270",
+            "native_bearing_mm2": 22.764800000000072,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003271",
+            "native_bearing_mm2": 35.72800000000013,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003284",
+            "native_bearing_mm2": 22.76479999999998,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003445",
+            "native_bearing_mm2": 22.92254225967094,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003446",
+            "native_bearing_mm2": 79.75154446803334,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003447",
+            "native_bearing_mm2": 22.922542259670834,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003457",
+            "native_bearing_mm2": 39.608037835572404,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003458",
+            "native_bearing_mm2": 161.0019282472422,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003459",
+            "native_bearing_mm2": 39.60803783557219,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003470",
+            "native_bearing_mm2": 22.922542259671058,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003471",
+            "native_bearing_mm2": 113.72094201050231,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003472",
+            "native_bearing_mm2": 22.922542259671083,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003484",
+            "native_bearing_mm2": 80.34995085869912,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003497",
+            "native_bearing_mm2": 80.34995085869912,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003508",
+            "native_bearing_mm2": 80.34995085869912,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003521",
+            "native_bearing_mm2": 80.34995085869912,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003534",
+            "native_bearing_mm2": 80.34995085869912,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003545",
+            "native_bearing_mm2": 80.34995085869912,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003558",
+            "native_bearing_mm2": 80.34995085869912,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MONA-P150-003565",
+            "native_bearing_mm2": 42.14724220201085,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          }
+        ],
+        "root_stud_count": 60,
+        "root_xy_span_mm": [
+          168,
+          40
+        ],
+        "body_mm": [
+          231.8,
+          47.8,
+          14.4
+        ],
+        "module_position_mm": [
+          128,
+          -92,
+          92.8
+        ],
+        "module_insertion_step": 3647,
+        "gravity_balance": {
+          "result": "PASS_NOMINAL_CAD_STATIC_MOMENT_BOUND",
+          "minimum_support_margin_mm": 14.12740721153965,
+          "required_margin_mm": 1.0,
+          "actual_bearing_hull_xy_mm": [
+            [
+              12.1,
+              -115.9
+            ],
+            [
+              43.9,
+              -115.9
+            ],
+            [
+              179.7,
+              -99.7
+            ],
+            [
+              187.7,
+              -83.7
+            ],
+            [
+              187.7,
+              -76.1
+            ],
+            [
+              43.9,
+              -68.1
+            ],
+            [
+              12.1,
+              -68.1
+            ]
+          ],
+          "root_cad_volume_mm3": 22914.97421883186,
+          "root_cad_centroid_mm": [
+            137.93323138920334,
+            -89.28634515665748,
+            104.30534615202427
+          ],
+          "downstream_payloads": [
+            {
+              "part_id": "MONA-P150-003862",
+              "cad_volume_mm3": 889.4381725972282,
+              "cad_centroid_mm": [
+                180.0,
+                -76.0,
+                105.68851979842972
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004035",
+              "cad_volume_mm3": 1750.878853007214,
+              "cad_centroid_mm": [
+                20.0,
+                -100.0,
+                110.5295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004049",
+              "cad_volume_mm3": 1750.8788530072136,
+              "cad_centroid_mm": [
+                36.0,
+                -100.0,
+                110.5295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004063",
+              "cad_volume_mm3": 1750.8788530072143,
+              "cad_centroid_mm": [
+                52.0,
+                -100.0,
+                110.5295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004075",
+              "cad_volume_mm3": 1750.8788530072145,
+              "cad_centroid_mm": [
+                68.0,
+                -100.0,
+                110.5295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004087",
+              "cad_volume_mm3": 1750.878853007214,
+              "cad_centroid_mm": [
+                84.0,
+                -100.0,
+                110.5295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004099",
+              "cad_volume_mm3": 1750.8788530072143,
+              "cad_centroid_mm": [
+                100.0,
+                -100.0,
+                110.5295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004111",
+              "cad_volume_mm3": 1750.8788530072145,
+              "cad_centroid_mm": [
+                116.0,
+                -100.0,
+                110.5295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004124",
+              "cad_volume_mm3": 1750.8788530072136,
+              "cad_centroid_mm": [
+                132.0,
+                -100.0,
+                110.5295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004136",
+              "cad_volume_mm3": 1750.8788530072125,
+              "cad_centroid_mm": [
+                148.0,
+                -100.0,
+                110.5295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004145",
+              "cad_volume_mm3": 944.9500997948164,
+              "cad_centroid_mm": [
+                160.0,
+                -100.0,
+                110.3715672658793
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004152",
+              "cad_volume_mm3": 712.2094474841389,
+              "cad_centroid_mm": [
+                168.0,
+                -96.0,
+                110.36041236656665
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004153",
+              "cad_volume_mm3": 889.4381725972282,
+              "cad_centroid_mm": [
+                180.0,
+                -92.0,
+                110.48851979842972
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004160",
+              "cad_volume_mm3": 889.4381725972282,
+              "cad_centroid_mm": [
+                196.0,
+                -92.0,
+                110.48851979842972
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004167",
+              "cad_volume_mm3": 889.4381725972287,
+              "cad_centroid_mm": [
+                212.0,
+                -92.0,
+                110.48851979842972
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004168",
+              "cad_volume_mm3": 672.6008552550192,
+              "cad_centroid_mm": [
+                226.7336539670894,
+                -82.7336539670894,
+                110.464070829704
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004166",
+              "cad_volume_mm3": 712.2094474841388,
+              "cad_centroid_mm": [
+                208.0,
+                -80.0,
+                110.36041236656665
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004036",
+              "cad_volume_mm3": 1750.8788530072154,
+              "cad_centroid_mm": [
+                20.0,
+                -68.0,
+                110.5295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004050",
+              "cad_volume_mm3": 1750.878853007215,
+              "cad_centroid_mm": [
+                36.0,
+                -68.0,
+                110.5295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004321",
+              "cad_volume_mm3": 1750.878853007214,
+              "cad_centroid_mm": [
+                20.0,
+                -116.0,
+                115.3295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004345",
+              "cad_volume_mm3": 1750.878853007214,
+              "cad_centroid_mm": [
+                52.0,
+                -116.0,
+                115.3295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004322",
+              "cad_volume_mm3": 1750.8788530072136,
+              "cad_centroid_mm": [
+                20.0,
+                -100.0,
+                115.3295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004346",
+              "cad_volume_mm3": 1750.8788530072136,
+              "cad_centroid_mm": [
+                52.0,
+                -100.0,
+                115.3295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004449",
+              "cad_volume_mm3": 479.4687951734612,
+              "cad_centroid_mm": [
+                204.0,
+                -96.0,
+                115.13842798859503
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004448",
+              "cad_volume_mm3": 885.5372114511365,
+              "cad_centroid_mm": [
+                185.92368070764346,
+                -93.92368070764346,
+                115.29041478563036
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004450",
+              "cad_volume_mm3": 712.2094474841392,
+              "cad_centroid_mm": [
+                208.0,
+                -88.0,
+                115.16041236656665
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004323",
+              "cad_volume_mm3": 1750.8788530072134,
+              "cad_centroid_mm": [
+                20.0,
+                -84.0,
+                115.3295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004347",
+              "cad_volume_mm3": 1750.8788530072134,
+              "cad_centroid_mm": [
+                52.0,
+                -84.0,
+                115.3295672348002
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004436",
+              "cad_volume_mm3": 1319.211846135554,
+              "cad_centroid_mm": [
+                176.0,
+                -83.99999999999999,
+                115.31472247113366
+              ]
+            },
+            {
+              "part_id": "MONA-P150-004730",
+              "cad_volume_mm3": 672.6008552550192,
+              "cad_centroid_mm": [
+                170.7336539670894,
+                -98.7336539670894,
+                120.064070829704
+              ]
+            }
+          ],
+          "assembly_prefix_checks": [
+            {
+              "after_step": 3647,
+              "added_part_id": "MONA-P150-ROOT-V2-ROOT-02",
+              "minimum_support_margin_mm": 15.28774677756526
+            },
+            {
+              "after_step": 3661,
+              "added_part_id": "MONA-P150-003862",
+              "minimum_support_margin_mm": 15.28774677756526
+            },
+            {
+              "after_step": 3927,
+              "added_part_id": "MONA-P150-004035",
+              "minimum_support_margin_mm": 15.28774677756526
+            },
+            {
+              "after_step": 3928,
+              "added_part_id": "MONA-P150-004049",
+              "minimum_support_margin_mm": 15.28774677756526
+            },
+            {
+              "after_step": 3929,
+              "added_part_id": "MONA-P150-004063",
+              "minimum_support_margin_mm": 15.28774677756526
+            },
+            {
+              "after_step": 3930,
+              "added_part_id": "MONA-P150-004075",
+              "minimum_support_margin_mm": 15.28774677756526
+            },
+            {
+              "after_step": 3931,
+              "added_part_id": "MONA-P150-004087",
+              "minimum_support_margin_mm": 15.28774677756526
+            },
+            {
+              "after_step": 3932,
+              "added_part_id": "MONA-P150-004099",
+              "minimum_support_margin_mm": 15.28774677756526
+            },
+            {
+              "after_step": 3933,
+              "added_part_id": "MONA-P150-004111",
+              "minimum_support_margin_mm": 15.28774677756526
+            },
+            {
+              "after_step": 3934,
+              "added_part_id": "MONA-P150-004124",
+              "minimum_support_margin_mm": 15.28774677756526
+            },
+            {
+              "after_step": 3935,
+              "added_part_id": "MONA-P150-004136",
+              "minimum_support_margin_mm": 15.28774677756526
+            },
+            {
+              "after_step": 3936,
+              "added_part_id": "MONA-P150-004145",
+              "minimum_support_margin_mm": 15.28774677756526
+            },
+            {
+              "after_step": 3939,
+              "added_part_id": "MONA-P150-004152",
+              "minimum_support_margin_mm": 15.28774677756526
+            },
+            {
+              "after_step": 3942,
+              "added_part_id": "MONA-P150-004153",
+              "minimum_support_margin_mm": 15.28774677756526
+            },
+            {
+              "after_step": 3943,
+              "added_part_id": "MONA-P150-004160",
+              "minimum_support_margin_mm": 15.28774677756526
+            },
+            {
+              "after_step": 3944,
+              "added_part_id": "MONA-P150-004167",
+              "minimum_support_margin_mm": 15.28774677756526
+            },
+            {
+              "after_step": 3945,
+              "added_part_id": "MONA-P150-004168",
+              "minimum_support_margin_mm": 15.28774677756526
+            },
+            {
+              "after_step": 3946,
+              "added_part_id": "MONA-P150-004166",
+              "minimum_support_margin_mm": 15.28774677756526
+            },
+            {
+              "after_step": 3960,
+              "added_part_id": "MONA-P150-004036",
+              "minimum_support_margin_mm": 15.28774677756526
+            },
+            {
+              "after_step": 3961,
+              "added_part_id": "MONA-P150-004050",
+              "minimum_support_margin_mm": 15.28774677756526
+            },
+            {
+              "after_step": 4204,
+              "added_part_id": "MONA-P150-004321",
+              "minimum_support_margin_mm": 15.28774677756526
+            },
+            {
+              "after_step": 4205,
+              "added_part_id": "MONA-P150-004345",
+              "minimum_support_margin_mm": 14.12740721153965
+            },
+            {
+              "after_step": 4216,
+              "added_part_id": "MONA-P150-004322",
+              "minimum_support_margin_mm": 14.12740721153965
+            },
+            {
+              "after_step": 4217,
+              "added_part_id": "MONA-P150-004346",
+              "minimum_support_margin_mm": 14.12740721153965
+            },
+            {
+              "after_step": 4223,
+              "added_part_id": "MONA-P150-004449",
+              "minimum_support_margin_mm": 14.12740721153965
+            },
+            {
+              "after_step": 4224,
+              "added_part_id": "MONA-P150-004448",
+              "minimum_support_margin_mm": 14.12740721153965
+            },
+            {
+              "after_step": 4225,
+              "added_part_id": "MONA-P150-004450",
+              "minimum_support_margin_mm": 14.12740721153965
+            },
+            {
+              "after_step": 4232,
+              "added_part_id": "MONA-P150-004323",
+              "minimum_support_margin_mm": 14.12740721153965
+            },
+            {
+              "after_step": 4233,
+              "added_part_id": "MONA-P150-004347",
+              "minimum_support_margin_mm": 14.12740721153965
+            },
+            {
+              "after_step": 4237,
+              "added_part_id": "MONA-P150-004436",
+              "minimum_support_margin_mm": 14.12740721153965
+            },
+            {
+              "after_step": 4512,
+              "added_part_id": "MONA-P150-004730",
+              "minimum_support_margin_mm": 14.12740721153965
+            }
+          ],
+          "assumptions": "Uniform-density native CADvolume,notmeasuredPLA/infillmass. Perhullside include100percent ofdestabilizing exclusive-root/firstshared-receiverpayload,ignorestabilizingpayload. No creditforunknownstudpullouttension.",
+          "not_validated": "Printedmaterial/infilldistribution,creep,yield,impact,dynamicassemblyloads,retentionandwholefiguretipping."
+        },
+        "load_path": "Continuous stepped material from tip to this native multi-point seated body root; no floor/stand member.",
+        "physical_retention": "UNKNOWN",
+        "physical_strength": "UNKNOWN"
+      }
+    ],
+    "external_aid_count": 0,
+    "assembly_aid_count": 0,
+    "gravity_balance_result": "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS",
+    "physical_validation": "UNKNOWN",
+    "slicer_supports": "UNKNOWN"
+  },
+  "gravity_balance": {
+    "result": "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS",
+    "modules": [
+      {
+        "part_id": "MONA-P150-ROOT-V2-ROOT-01",
+        "result": "PASS_NOMINAL_CAD_STATIC_MOMENT_BOUND",
+        "minimum_support_margin_mm": 15.244732602601099,
+        "required_margin_mm": 1.0,
+        "actual_bearing_hull_xy_mm": [
+          [
+            -179.7,
+            -99.7
+          ],
+          [
+            -171.7,
+            -107.7
+          ],
+          [
+            -59.9,
+            -139.9
+          ],
+          [
+            -28.1,
+            -139.9
+          ],
+          [
+            -28.1,
+            -76.1
+          ],
+          [
+            -171.9,
+            -76.1
+          ],
+          [
+            -179.7,
+            -92.1
+          ]
+        ],
+        "root_cad_volume_mm3": 28912.51134138597,
+        "root_cad_centroid_mm": [
+          -131.9288610083589,
+          -95.99095089573272,
+          100.00918338997447
+        ],
+        "downstream_payloads": [
+          {
+            "part_id": "MONA-P150-003673",
+            "cad_volume_mm3": 1750.878853007216,
+            "cad_centroid_mm": [
+              -68.0,
+              -140.0,
+              105.72956723480019
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003697",
+            "cad_volume_mm3": 1750.8788530072156,
+            "cad_centroid_mm": [
+              -36.0,
+              -140.0,
+              105.7295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003674",
+            "cad_volume_mm3": 1750.8788530072152,
+            "cad_centroid_mm": [
+              -68.0,
+              -124.0,
+              105.7295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003698",
+            "cad_volume_mm3": 1750.878853007215,
+            "cad_centroid_mm": [
+              -36.0,
+              -124.0,
+              105.7295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003621",
+            "cad_volume_mm3": 1750.8788530072152,
+            "cad_centroid_mm": [
+              -132.0,
+              -108.0,
+              105.72956723480019
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003649",
+            "cad_volume_mm3": 1750.8788530072143,
+            "cad_centroid_mm": [
+              -100.0,
+              -108.0,
+              105.7295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003675",
+            "cad_volume_mm3": 1750.878853007216,
+            "cad_centroid_mm": [
+              -68.0,
+              -108.0,
+              105.72956723480019
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003699",
+            "cad_volume_mm3": 1750.8788530072152,
+            "cad_centroid_mm": [
+              -36.0,
+              -108.0,
+              105.72956723480019
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003584",
+            "cad_volume_mm3": 944.9500997948164,
+            "cad_centroid_mm": [
+              -196.0,
+              -104.0,
+              105.57156726587931
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003600",
+            "cad_volume_mm3": 944.9500997948163,
+            "cad_centroid_mm": [
+              -164.0,
+              -104.0,
+              105.57156726587931
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003583",
+            "cad_volume_mm3": 479.4687951734614,
+            "cad_centroid_mm": [
+              -220.0,
+              -96.0,
+              105.53842798859503
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003585",
+            "cad_volume_mm3": 944.950099794816,
+            "cad_centroid_mm": [
+              -196.0,
+              -96.0,
+              105.57156726587931
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003601",
+            "cad_volume_mm3": 1750.8788530072138,
+            "cad_centroid_mm": [
+              -164.0,
+              -92.0,
+              105.7295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003622",
+            "cad_volume_mm3": 1750.8788530072147,
+            "cad_centroid_mm": [
+              -132.0,
+              -92.0,
+              105.7295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003650",
+            "cad_volume_mm3": 1750.8788530072143,
+            "cad_centroid_mm": [
+              -100.0,
+              -92.0,
+              105.7295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003676",
+            "cad_volume_mm3": 1750.8788530072154,
+            "cad_centroid_mm": [
+              -68.0,
+              -92.0,
+              105.72956723480019
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003700",
+            "cad_volume_mm3": 1750.8788530072147,
+            "cad_centroid_mm": [
+              -36.0,
+              -92.0,
+              105.7295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003582",
+            "cad_volume_mm3": 712.2094474841388,
+            "cad_centroid_mm": [
+              -224.0,
+              -88.0,
+              105.56041236656665
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003586",
+            "cad_volume_mm3": 479.46879517346144,
+            "cad_centroid_mm": [
+              -204.0,
+              -88.0,
+              105.53842798859503
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003602",
+            "cad_volume_mm3": 1750.8788530072145,
+            "cad_centroid_mm": [
+              -164.0,
+              -76.0,
+              105.7295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003623",
+            "cad_volume_mm3": 1750.8788530072152,
+            "cad_centroid_mm": [
+              -132.0,
+              -76.0,
+              105.72956723480019
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003651",
+            "cad_volume_mm3": 1750.8788530072138,
+            "cad_centroid_mm": [
+              -100.0,
+              -76.0,
+              105.7295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003677",
+            "cad_volume_mm3": 1750.8788530072159,
+            "cad_centroid_mm": [
+              -68.0,
+              -76.0,
+              105.72956723480019
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003701",
+            "cad_volume_mm3": 1750.8788530072154,
+            "cad_centroid_mm": [
+              -36.0,
+              -76.0,
+              105.72956723480019
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003879",
+            "cad_volume_mm3": 889.4381725972278,
+            "cad_centroid_mm": [
+              -188.0,
+              -100.0,
+              110.48851979842972
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003894",
+            "cad_volume_mm3": 944.9500997948167,
+            "cad_centroid_mm": [
+              -168.0,
+              -100.0,
+              110.3715672658793
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003896",
+            "cad_volume_mm3": 1534.0415356650028,
+            "cad_centroid_mm": [
+              -155.4439359007221,
+              -98.31313305190243,
+              110.52464964872883
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003907",
+            "cad_volume_mm3": 1750.8788530072138,
+            "cad_centroid_mm": [
+              -140.0,
+              -100.0,
+              110.5295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003920",
+            "cad_volume_mm3": 1750.8788530072131,
+            "cad_centroid_mm": [
+              -124.0,
+              -100.0,
+              110.5295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003933",
+            "cad_volume_mm3": 1750.8788530072145,
+            "cad_centroid_mm": [
+              -108.0,
+              -100.0,
+              110.5295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003945",
+            "cad_volume_mm3": 1750.8788530072143,
+            "cad_centroid_mm": [
+              -92.0,
+              -100.0,
+              110.5295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003957",
+            "cad_volume_mm3": 1750.878853007214,
+            "cad_centroid_mm": [
+              -76.0,
+              -100.0,
+              110.5295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003969",
+            "cad_volume_mm3": 1750.878853007215,
+            "cad_centroid_mm": [
+              -60.0,
+              -100.0,
+              110.5295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003875",
+            "cad_volume_mm3": 712.2094474841389,
+            "cad_centroid_mm": [
+              -200.0,
+              -96.0,
+              110.36041236656665
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003885",
+            "cad_volume_mm3": 885.5372114511372,
+            "cad_centroid_mm": [
+              -178.07631929235654,
+              -94.07631929235654,
+              110.49041478563036
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003873",
+            "cad_volume_mm3": 479.46879517346144,
+            "cad_centroid_mm": [
+              -216.0,
+              -92.0,
+              110.33842798859503
+            ]
+          },
+          {
+            "part_id": "MONA-P150-003874",
+            "cad_volume_mm3": 479.46879517346144,
+            "cad_centroid_mm": [
+              -208.0,
+              -92.0,
+              110.33842798859503
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004178",
+            "cad_volume_mm3": 944.9500997948161,
+            "cad_centroid_mm": [
+              -172.0,
+              -96.0,
+              115.1715672658793
+            ]
+          }
+        ],
+        "assembly_prefix_checks": [
+          {
+            "after_step": 3365,
+            "added_part_id": "MONA-P150-ROOT-V2-ROOT-01",
+            "minimum_support_margin_mm": 19.89095089573273
+          },
+          {
+            "after_step": 3604,
+            "added_part_id": "MONA-P150-003673",
+            "minimum_support_margin_mm": 19.89095089573273
+          },
+          {
+            "after_step": 3605,
+            "added_part_id": "MONA-P150-003697",
+            "minimum_support_margin_mm": 19.89095089573273
+          },
+          {
+            "after_step": 3617,
+            "added_part_id": "MONA-P150-003674",
+            "minimum_support_margin_mm": 19.89095089573273
+          },
+          {
+            "after_step": 3618,
+            "added_part_id": "MONA-P150-003698",
+            "minimum_support_margin_mm": 19.89095089573273
+          },
+          {
+            "after_step": 3628,
+            "added_part_id": "MONA-P150-003621",
+            "minimum_support_margin_mm": 19.89095089573273
+          },
+          {
+            "after_step": 3629,
+            "added_part_id": "MONA-P150-003649",
+            "minimum_support_margin_mm": 19.89095089573273
+          },
+          {
+            "after_step": 3630,
+            "added_part_id": "MONA-P150-003675",
+            "minimum_support_margin_mm": 19.89095089573273
+          },
+          {
+            "after_step": 3631,
+            "added_part_id": "MONA-P150-003699",
+            "minimum_support_margin_mm": 19.89095089573273
+          },
+          {
+            "after_step": 3637,
+            "added_part_id": "MONA-P150-003584",
+            "minimum_support_margin_mm": 19.89095089573273
+          },
+          {
+            "after_step": 3638,
+            "added_part_id": "MONA-P150-003600",
+            "minimum_support_margin_mm": 19.89095089573273
+          },
+          {
+            "after_step": 3639,
+            "added_part_id": "MONA-P150-003583",
+            "minimum_support_margin_mm": 19.803557684715727
+          },
+          {
+            "after_step": 3640,
+            "added_part_id": "MONA-P150-003585",
+            "minimum_support_margin_mm": 19.803557684715727
+          },
+          {
+            "after_step": 3641,
+            "added_part_id": "MONA-P150-003601",
+            "minimum_support_margin_mm": 19.803557684715727
+          },
+          {
+            "after_step": 3642,
+            "added_part_id": "MONA-P150-003622",
+            "minimum_support_margin_mm": 19.803557684715727
+          },
+          {
+            "after_step": 3643,
+            "added_part_id": "MONA-P150-003650",
+            "minimum_support_margin_mm": 19.803557684715727
+          },
+          {
+            "after_step": 3644,
+            "added_part_id": "MONA-P150-003676",
+            "minimum_support_margin_mm": 19.803557684715727
+          },
+          {
+            "after_step": 3645,
+            "added_part_id": "MONA-P150-003700",
+            "minimum_support_margin_mm": 19.803557684715727
+          },
+          {
+            "after_step": 3648,
+            "added_part_id": "MONA-P150-003582",
+            "minimum_support_margin_mm": 19.803557684715727
+          },
+          {
+            "after_step": 3649,
+            "added_part_id": "MONA-P150-003586",
+            "minimum_support_margin_mm": 19.803557684715727
+          },
+          {
+            "after_step": 3651,
+            "added_part_id": "MONA-P150-003602",
+            "minimum_support_margin_mm": 18.749468073613336
+          },
+          {
+            "after_step": 3652,
+            "added_part_id": "MONA-P150-003623",
+            "minimum_support_margin_mm": 17.731301198023367
+          },
+          {
+            "after_step": 3653,
+            "added_part_id": "MONA-P150-003651",
+            "minimum_support_margin_mm": 16.817491362332625
+          },
+          {
+            "after_step": 3654,
+            "added_part_id": "MONA-P150-003677",
+            "minimum_support_margin_mm": 15.992776588741357
+          },
+          {
+            "after_step": 3655,
+            "added_part_id": "MONA-P150-003701",
+            "minimum_support_margin_mm": 15.244732602601099
+          },
+          {
+            "after_step": 3914,
+            "added_part_id": "MONA-P150-003879",
+            "minimum_support_margin_mm": 15.244732602601099
+          },
+          {
+            "after_step": 3915,
+            "added_part_id": "MONA-P150-003894",
+            "minimum_support_margin_mm": 15.244732602601099
+          },
+          {
+            "after_step": 3916,
+            "added_part_id": "MONA-P150-003896",
+            "minimum_support_margin_mm": 15.244732602601099
+          },
+          {
+            "after_step": 3917,
+            "added_part_id": "MONA-P150-003907",
+            "minimum_support_margin_mm": 15.244732602601099
+          },
+          {
+            "after_step": 3918,
+            "added_part_id": "MONA-P150-003920",
+            "minimum_support_margin_mm": 15.244732602601099
+          },
+          {
+            "after_step": 3919,
+            "added_part_id": "MONA-P150-003933",
+            "minimum_support_margin_mm": 15.244732602601099
+          },
+          {
+            "after_step": 3920,
+            "added_part_id": "MONA-P150-003945",
+            "minimum_support_margin_mm": 15.244732602601099
+          },
+          {
+            "after_step": 3921,
+            "added_part_id": "MONA-P150-003957",
+            "minimum_support_margin_mm": 15.244732602601099
+          },
+          {
+            "after_step": 3922,
+            "added_part_id": "MONA-P150-003969",
+            "minimum_support_margin_mm": 15.244732602601099
+          },
+          {
+            "after_step": 3937,
+            "added_part_id": "MONA-P150-003875",
+            "minimum_support_margin_mm": 15.244732602601099
+          },
+          {
+            "after_step": 3938,
+            "added_part_id": "MONA-P150-003885",
+            "minimum_support_margin_mm": 15.244732602601099
+          },
+          {
+            "after_step": 3940,
+            "added_part_id": "MONA-P150-003873",
+            "minimum_support_margin_mm": 15.244732602601099
+          },
+          {
+            "after_step": 3941,
+            "added_part_id": "MONA-P150-003874",
+            "minimum_support_margin_mm": 15.244732602601099
+          },
+          {
+            "after_step": 4222,
+            "added_part_id": "MONA-P150-004178",
+            "minimum_support_margin_mm": 15.244732602601099
+          }
+        ],
+        "assumptions": "Uniform-density native CADvolume,notmeasuredPLA/infillmass. Perhullside include100percent ofdestabilizing exclusive-root/firstshared-receiverpayload,ignorestabilizingpayload. No creditforunknownstudpullouttension.",
+        "not_validated": "Printedmaterial/infilldistribution,creep,yield,impact,dynamicassemblyloads,retentionandwholefiguretipping."
+      },
+      {
+        "part_id": "MONA-P150-ROOT-V2-ROOT-02",
+        "result": "PASS_NOMINAL_CAD_STATIC_MOMENT_BOUND",
+        "minimum_support_margin_mm": 14.12740721153965,
+        "required_margin_mm": 1.0,
+        "actual_bearing_hull_xy_mm": [
+          [
+            12.1,
+            -115.9
+          ],
+          [
+            43.9,
+            -115.9
+          ],
+          [
+            179.7,
+            -99.7
+          ],
+          [
+            187.7,
+            -83.7
+          ],
+          [
+            187.7,
+            -76.1
+          ],
+          [
+            43.9,
+            -68.1
+          ],
+          [
+            12.1,
+            -68.1
+          ]
+        ],
+        "root_cad_volume_mm3": 22914.97421883186,
+        "root_cad_centroid_mm": [
+          137.93323138920334,
+          -89.28634515665748,
+          104.30534615202427
+        ],
+        "downstream_payloads": [
+          {
+            "part_id": "MONA-P150-003862",
+            "cad_volume_mm3": 889.4381725972282,
+            "cad_centroid_mm": [
+              180.0,
+              -76.0,
+              105.68851979842972
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004035",
+            "cad_volume_mm3": 1750.878853007214,
+            "cad_centroid_mm": [
+              20.0,
+              -100.0,
+              110.5295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004049",
+            "cad_volume_mm3": 1750.8788530072136,
+            "cad_centroid_mm": [
+              36.0,
+              -100.0,
+              110.5295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004063",
+            "cad_volume_mm3": 1750.8788530072143,
+            "cad_centroid_mm": [
+              52.0,
+              -100.0,
+              110.5295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004075",
+            "cad_volume_mm3": 1750.8788530072145,
+            "cad_centroid_mm": [
+              68.0,
+              -100.0,
+              110.5295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004087",
+            "cad_volume_mm3": 1750.878853007214,
+            "cad_centroid_mm": [
+              84.0,
+              -100.0,
+              110.5295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004099",
+            "cad_volume_mm3": 1750.8788530072143,
+            "cad_centroid_mm": [
+              100.0,
+              -100.0,
+              110.5295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004111",
+            "cad_volume_mm3": 1750.8788530072145,
+            "cad_centroid_mm": [
+              116.0,
+              -100.0,
+              110.5295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004124",
+            "cad_volume_mm3": 1750.8788530072136,
+            "cad_centroid_mm": [
+              132.0,
+              -100.0,
+              110.5295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004136",
+            "cad_volume_mm3": 1750.8788530072125,
+            "cad_centroid_mm": [
+              148.0,
+              -100.0,
+              110.5295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004145",
+            "cad_volume_mm3": 944.9500997948164,
+            "cad_centroid_mm": [
+              160.0,
+              -100.0,
+              110.3715672658793
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004152",
+            "cad_volume_mm3": 712.2094474841389,
+            "cad_centroid_mm": [
+              168.0,
+              -96.0,
+              110.36041236656665
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004153",
+            "cad_volume_mm3": 889.4381725972282,
+            "cad_centroid_mm": [
+              180.0,
+              -92.0,
+              110.48851979842972
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004160",
+            "cad_volume_mm3": 889.4381725972282,
+            "cad_centroid_mm": [
+              196.0,
+              -92.0,
+              110.48851979842972
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004167",
+            "cad_volume_mm3": 889.4381725972287,
+            "cad_centroid_mm": [
+              212.0,
+              -92.0,
+              110.48851979842972
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004168",
+            "cad_volume_mm3": 672.6008552550192,
+            "cad_centroid_mm": [
+              226.7336539670894,
+              -82.7336539670894,
+              110.464070829704
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004166",
+            "cad_volume_mm3": 712.2094474841388,
+            "cad_centroid_mm": [
+              208.0,
+              -80.0,
+              110.36041236656665
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004036",
+            "cad_volume_mm3": 1750.8788530072154,
+            "cad_centroid_mm": [
+              20.0,
+              -68.0,
+              110.5295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004050",
+            "cad_volume_mm3": 1750.878853007215,
+            "cad_centroid_mm": [
+              36.0,
+              -68.0,
+              110.5295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004321",
+            "cad_volume_mm3": 1750.878853007214,
+            "cad_centroid_mm": [
+              20.0,
+              -116.0,
+              115.3295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004345",
+            "cad_volume_mm3": 1750.878853007214,
+            "cad_centroid_mm": [
+              52.0,
+              -116.0,
+              115.3295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004322",
+            "cad_volume_mm3": 1750.8788530072136,
+            "cad_centroid_mm": [
+              20.0,
+              -100.0,
+              115.3295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004346",
+            "cad_volume_mm3": 1750.8788530072136,
+            "cad_centroid_mm": [
+              52.0,
+              -100.0,
+              115.3295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004449",
+            "cad_volume_mm3": 479.4687951734612,
+            "cad_centroid_mm": [
+              204.0,
+              -96.0,
+              115.13842798859503
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004448",
+            "cad_volume_mm3": 885.5372114511365,
+            "cad_centroid_mm": [
+              185.92368070764346,
+              -93.92368070764346,
+              115.29041478563036
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004450",
+            "cad_volume_mm3": 712.2094474841392,
+            "cad_centroid_mm": [
+              208.0,
+              -88.0,
+              115.16041236656665
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004323",
+            "cad_volume_mm3": 1750.8788530072134,
+            "cad_centroid_mm": [
+              20.0,
+              -84.0,
+              115.3295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004347",
+            "cad_volume_mm3": 1750.8788530072134,
+            "cad_centroid_mm": [
+              52.0,
+              -84.0,
+              115.3295672348002
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004436",
+            "cad_volume_mm3": 1319.211846135554,
+            "cad_centroid_mm": [
+              176.0,
+              -83.99999999999999,
+              115.31472247113366
+            ]
+          },
+          {
+            "part_id": "MONA-P150-004730",
+            "cad_volume_mm3": 672.6008552550192,
+            "cad_centroid_mm": [
+              170.7336539670894,
+              -98.7336539670894,
+              120.064070829704
+            ]
+          }
+        ],
+        "assembly_prefix_checks": [
+          {
+            "after_step": 3647,
+            "added_part_id": "MONA-P150-ROOT-V2-ROOT-02",
+            "minimum_support_margin_mm": 15.28774677756526
+          },
+          {
+            "after_step": 3661,
+            "added_part_id": "MONA-P150-003862",
+            "minimum_support_margin_mm": 15.28774677756526
+          },
+          {
+            "after_step": 3927,
+            "added_part_id": "MONA-P150-004035",
+            "minimum_support_margin_mm": 15.28774677756526
+          },
+          {
+            "after_step": 3928,
+            "added_part_id": "MONA-P150-004049",
+            "minimum_support_margin_mm": 15.28774677756526
+          },
+          {
+            "after_step": 3929,
+            "added_part_id": "MONA-P150-004063",
+            "minimum_support_margin_mm": 15.28774677756526
+          },
+          {
+            "after_step": 3930,
+            "added_part_id": "MONA-P150-004075",
+            "minimum_support_margin_mm": 15.28774677756526
+          },
+          {
+            "after_step": 3931,
+            "added_part_id": "MONA-P150-004087",
+            "minimum_support_margin_mm": 15.28774677756526
+          },
+          {
+            "after_step": 3932,
+            "added_part_id": "MONA-P150-004099",
+            "minimum_support_margin_mm": 15.28774677756526
+          },
+          {
+            "after_step": 3933,
+            "added_part_id": "MONA-P150-004111",
+            "minimum_support_margin_mm": 15.28774677756526
+          },
+          {
+            "after_step": 3934,
+            "added_part_id": "MONA-P150-004124",
+            "minimum_support_margin_mm": 15.28774677756526
+          },
+          {
+            "after_step": 3935,
+            "added_part_id": "MONA-P150-004136",
+            "minimum_support_margin_mm": 15.28774677756526
+          },
+          {
+            "after_step": 3936,
+            "added_part_id": "MONA-P150-004145",
+            "minimum_support_margin_mm": 15.28774677756526
+          },
+          {
+            "after_step": 3939,
+            "added_part_id": "MONA-P150-004152",
+            "minimum_support_margin_mm": 15.28774677756526
+          },
+          {
+            "after_step": 3942,
+            "added_part_id": "MONA-P150-004153",
+            "minimum_support_margin_mm": 15.28774677756526
+          },
+          {
+            "after_step": 3943,
+            "added_part_id": "MONA-P150-004160",
+            "minimum_support_margin_mm": 15.28774677756526
+          },
+          {
+            "after_step": 3944,
+            "added_part_id": "MONA-P150-004167",
+            "minimum_support_margin_mm": 15.28774677756526
+          },
+          {
+            "after_step": 3945,
+            "added_part_id": "MONA-P150-004168",
+            "minimum_support_margin_mm": 15.28774677756526
+          },
+          {
+            "after_step": 3946,
+            "added_part_id": "MONA-P150-004166",
+            "minimum_support_margin_mm": 15.28774677756526
+          },
+          {
+            "after_step": 3960,
+            "added_part_id": "MONA-P150-004036",
+            "minimum_support_margin_mm": 15.28774677756526
+          },
+          {
+            "after_step": 3961,
+            "added_part_id": "MONA-P150-004050",
+            "minimum_support_margin_mm": 15.28774677756526
+          },
+          {
+            "after_step": 4204,
+            "added_part_id": "MONA-P150-004321",
+            "minimum_support_margin_mm": 15.28774677756526
+          },
+          {
+            "after_step": 4205,
+            "added_part_id": "MONA-P150-004345",
+            "minimum_support_margin_mm": 14.12740721153965
+          },
+          {
+            "after_step": 4216,
+            "added_part_id": "MONA-P150-004322",
+            "minimum_support_margin_mm": 14.12740721153965
+          },
+          {
+            "after_step": 4217,
+            "added_part_id": "MONA-P150-004346",
+            "minimum_support_margin_mm": 14.12740721153965
+          },
+          {
+            "after_step": 4223,
+            "added_part_id": "MONA-P150-004449",
+            "minimum_support_margin_mm": 14.12740721153965
+          },
+          {
+            "after_step": 4224,
+            "added_part_id": "MONA-P150-004448",
+            "minimum_support_margin_mm": 14.12740721153965
+          },
+          {
+            "after_step": 4225,
+            "added_part_id": "MONA-P150-004450",
+            "minimum_support_margin_mm": 14.12740721153965
+          },
+          {
+            "after_step": 4232,
+            "added_part_id": "MONA-P150-004323",
+            "minimum_support_margin_mm": 14.12740721153965
+          },
+          {
+            "after_step": 4233,
+            "added_part_id": "MONA-P150-004347",
+            "minimum_support_margin_mm": 14.12740721153965
+          },
+          {
+            "after_step": 4237,
+            "added_part_id": "MONA-P150-004436",
+            "minimum_support_margin_mm": 14.12740721153965
+          },
+          {
+            "after_step": 4512,
+            "added_part_id": "MONA-P150-004730",
+            "minimum_support_margin_mm": 14.12740721153965
+          }
+        ],
+        "assumptions": "Uniform-density native CADvolume,notmeasuredPLA/infillmass. Perhullside include100percent ofdestabilizing exclusive-root/firstshared-receiverpayload,ignorestabilizingpayload. No creditforunknownstudpullouttension.",
+        "not_validated": "Printedmaterial/infilldistribution,creep,yield,impact,dynamicassemblyloads,retentionandwholefiguretipping."
+      }
+    ],
+    "physical_mass_measured": false
+  },
+  "root_structural_sections": [
+    {
+      "part_id": "MONA-P150-ROOT-V2-ROOT-01",
+      "type_id": "WR-18bbe8c5db1f841f",
+      "native_single_solid": true,
+      "minimum_true_root_roof_mm": 1.6000000000000014,
+      "section_count": 26,
+      "minimum_effective_section_area_mm2": 37.43999999999789,
+      "actual_brep_sections": [
+        {
+          "plane_x_mm": -100.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 37.43999999999789,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -92.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 227.5199999999869,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -84.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 151.67999999999125,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -76.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 151.67999999999122,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -68.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 75.83999999999564,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -60.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 75.8400000000028,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -52.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 75.840000000001,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -44.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 75.840000000001,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -36.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 66.02000000000076,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -28.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979307372,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -20.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979307377,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -12.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979307114,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -4.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979307316,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 4.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979307117,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 12.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979307284,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 20.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979307577,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 28.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.5256897487293,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 36.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.525686080951,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 44.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568974873272,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 52.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979307932,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 60.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979307921,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 68.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979306123,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 76.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979306105,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 84.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 202.3999428504878,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 92.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 202.39994285051316,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 100.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 202.399942850488,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        }
+      ],
+      "load_path": "Each previously floating seed is now material-continuous through a stepped same-color beam into body-root walls/tubes/posts. Multiple spaced stud/cavity sites and bearing faces resist translation and rotation geometrically.",
+      "material_strength_infill_layer_orientation": "UNMEASURED",
+      "note": "Positive material sections and CAD static balance are not an allowable bending/torsion strength or pullout test."
+    },
+    {
+      "part_id": "MONA-P150-ROOT-V2-ROOT-02",
+      "type_id": "WR-9a5f870fb99ca288",
+      "native_single_solid": true,
+      "minimum_true_root_roof_mm": 1.6000000000000014,
+      "section_count": 28,
+      "minimum_effective_section_area_mm2": 37.439999999997866,
+      "actual_brep_sections": [
+        {
+          "plane_x_mm": -108.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 152.46281632177067,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -100.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 152.46281632180745,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -92.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 152.4628163217707,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -84.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.588563264355,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -76.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.588563264354995,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -68.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856326435503,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -60.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.588563264358726,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -52.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856326435872,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -44.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.588563242627494,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -36.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856201068357,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -28.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856324262437,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -20.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.588563264357525,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -12.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856326435684,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -4.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.588563264357205,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 4.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856326435666,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 12.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.588563264356445,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 20.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.588563264364495,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 28.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856326436449,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 36.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856326435629,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 44.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 75.8399999999991,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 52.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 103.45999999999928,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 60.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 75.84000000000088,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 68.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 75.83999999998831,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 76.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 75.83999999998831,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 84.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 190.07999999998407,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 92.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 151.6799999999912,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 100.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 189.11999999998906,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 108.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 37.439999999997866,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        }
+      ],
+      "load_path": "Each previously floating seed is now material-continuous through a stepped same-color beam into body-root walls/tubes/posts. Multiple spaced stud/cavity sites and bearing faces resist translation and rotation geometrically.",
+      "material_strength_infill_layer_orientation": "UNMEASURED",
+      "note": "Positive material sections and CAD static balance are not an allowable bending/torsion strength or pullout test."
+    }
+  ],
+  "modules": [
+    {
+      "part_id": "MONA-P150-ROOT-V2-ROOT-01",
+      "type_id": "WR-18bbe8c5db1f841f",
+      "step": 3365,
+      "physical_bottom_z_mm": 88.0,
+      "receiving_body_stage_z_mm": 97.6,
+      "actual_body_support_ids": [
+        "MONA-P150-003034",
+        "MONA-P150-003037",
+        "MONA-P150-003038",
+        "MONA-P150-003059",
+        "MONA-P150-003060",
+        "MONA-P150-003085",
+        "MONA-P150-003086",
+        "MONA-P150-003108",
+        "MONA-P150-003109",
+        "MONA-P150-003110",
+        "MONA-P150-003111",
+        "MONA-P150-003132",
+        "MONA-P150-003133",
+        "MONA-P150-003134",
+        "MONA-P150-003135"
+      ],
+      "root_contact_sites": [
+        [
+          -22,
+          -12,
+          61
+        ],
+        [
+          -21,
+          -13,
+          61
+        ],
+        [
+          -21,
+          -12,
+          61
+        ],
+        [
+          -21,
+          -11,
+          61
+        ],
+        [
+          -21,
+          -10,
+          61
+        ],
+        [
+          -20,
+          -13,
+          61
+        ],
+        [
+          -20,
+          -12,
+          61
+        ],
+        [
+          -20,
+          -11,
+          61
+        ],
+        [
+          -20,
+          -10,
+          61
+        ],
+        [
+          -19,
+          -13,
+          61
+        ],
+        [
+          -19,
+          -12,
+          61
+        ],
+        [
+          -19,
+          -11,
+          61
+        ],
+        [
+          -19,
+          -10,
+          61
+        ],
+        [
+          -18,
+          -13,
+          61
+        ],
+        [
+          -18,
+          -12,
+          61
+        ],
+        [
+          -18,
+          -11,
+          61
+        ],
+        [
+          -18,
+          -10,
+          61
+        ],
+        [
+          -17,
+          -13,
+          61
+        ],
+        [
+          -17,
+          -12,
+          61
+        ],
+        [
+          -17,
+          -11,
+          61
+        ],
+        [
+          -17,
+          -10,
+          61
+        ],
+        [
+          -16,
+          -13,
+          61
+        ],
+        [
+          -16,
+          -12,
+          61
+        ],
+        [
+          -16,
+          -11,
+          61
+        ],
+        [
+          -16,
+          -10,
+          61
+        ],
+        [
+          -15,
+          -13,
+          61
+        ],
+        [
+          -15,
+          -12,
+          61
+        ],
+        [
+          -15,
+          -11,
+          61
+        ],
+        [
+          -15,
+          -10,
+          61
+        ],
+        [
+          -14,
+          -13,
+          61
+        ],
+        [
+          -14,
+          -12,
+          61
+        ],
+        [
+          -14,
+          -11,
+          61
+        ],
+        [
+          -14,
+          -10,
+          61
+        ],
+        [
+          -13,
+          -13,
+          61
+        ],
+        [
+          -13,
+          -12,
+          61
+        ],
+        [
+          -13,
+          -11,
+          61
+        ],
+        [
+          -13,
+          -10,
+          61
+        ],
+        [
+          -12,
+          -13,
+          61
+        ],
+        [
+          -12,
+          -12,
+          61
+        ],
+        [
+          -12,
+          -11,
+          61
+        ],
+        [
+          -12,
+          -10,
+          61
+        ],
+        [
+          -11,
+          -13,
+          61
+        ],
+        [
+          -11,
+          -12,
+          61
+        ],
+        [
+          -11,
+          -11,
+          61
+        ],
+        [
+          -11,
+          -10,
+          61
+        ],
+        [
+          -10,
+          -13,
+          61
+        ],
+        [
+          -10,
+          -12,
+          61
+        ],
+        [
+          -10,
+          -11,
+          61
+        ],
+        [
+          -10,
+          -10,
+          61
+        ],
+        [
+          -9,
+          -13,
+          61
+        ],
+        [
+          -9,
+          -12,
+          61
+        ],
+        [
+          -9,
+          -11,
+          61
+        ],
+        [
+          -9,
+          -10,
+          61
+        ],
+        [
+          -8,
+          -13,
+          61
+        ],
+        [
+          -8,
+          -12,
+          61
+        ],
+        [
+          -8,
+          -11,
+          61
+        ],
+        [
+          -8,
+          -10,
+          61
+        ],
+        [
+          -7,
+          -17,
+          61
+        ],
+        [
+          -7,
+          -16,
+          61
+        ],
+        [
+          -7,
+          -15,
+          61
+        ],
+        [
+          -7,
+          -14,
+          61
+        ],
+        [
+          -7,
+          -13,
+          61
+        ],
+        [
+          -7,
+          -12,
+          61
+        ],
+        [
+          -7,
+          -11,
+          61
+        ],
+        [
+          -7,
+          -10,
+          61
+        ],
+        [
+          -6,
+          -17,
+          61
+        ],
+        [
+          -6,
+          -16,
+          61
+        ],
+        [
+          -6,
+          -15,
+          61
+        ],
+        [
+          -6,
+          -14,
+          61
+        ],
+        [
+          -6,
+          -13,
+          61
+        ],
+        [
+          -6,
+          -12,
+          61
+        ],
+        [
+          -6,
+          -11,
+          61
+        ],
+        [
+          -6,
+          -10,
+          61
+        ],
+        [
+          -5,
+          -17,
+          61
+        ],
+        [
+          -5,
+          -16,
+          61
+        ],
+        [
+          -5,
+          -15,
+          61
+        ],
+        [
+          -5,
+          -14,
+          61
+        ],
+        [
+          -5,
+          -13,
+          61
+        ],
+        [
+          -5,
+          -12,
+          61
+        ],
+        [
+          -5,
+          -11,
+          61
+        ],
+        [
+          -5,
+          -10,
+          61
+        ],
+        [
+          -4,
+          -17,
+          61
+        ],
+        [
+          -4,
+          -16,
+          61
+        ],
+        [
+          -4,
+          -15,
+          61
+        ],
+        [
+          -4,
+          -14,
+          61
+        ],
+        [
+          -4,
+          -13,
+          61
+        ],
+        [
+          -4,
+          -12,
+          61
+        ],
+        [
+          -4,
+          -11,
+          61
+        ],
+        [
+          -4,
+          -10,
+          61
+        ]
+      ]
+    },
+    {
+      "part_id": "MONA-P150-ROOT-V2-ROOT-02",
+      "type_id": "WR-9a5f870fb99ca288",
+      "step": 3647,
+      "physical_bottom_z_mm": 92.8,
+      "receiving_body_stage_z_mm": 102.4,
+      "actual_body_support_ids": [
+        "MONA-P150-003270",
+        "MONA-P150-003271",
+        "MONA-P150-003284",
+        "MONA-P150-003445",
+        "MONA-P150-003446",
+        "MONA-P150-003447",
+        "MONA-P150-003457",
+        "MONA-P150-003458",
+        "MONA-P150-003459",
+        "MONA-P150-003470",
+        "MONA-P150-003471",
+        "MONA-P150-003472",
+        "MONA-P150-003484",
+        "MONA-P150-003497",
+        "MONA-P150-003508",
+        "MONA-P150-003521",
+        "MONA-P150-003534",
+        "MONA-P150-003545",
+        "MONA-P150-003558",
+        "MONA-P150-003565"
+      ],
+      "root_contact_sites": [
+        [
+          22,
+          -12,
+          61
+        ],
+        [
+          22,
+          -11,
+          61
+        ],
+        [
+          22,
+          -10,
+          61
+        ],
+        [
+          23,
+          -10,
+          61
+        ],
+        [
+          2,
+          -14,
+          64
+        ],
+        [
+          2,
+          -13,
+          64
+        ],
+        [
+          2,
+          -12,
+          64
+        ],
+        [
+          2,
+          -11,
+          64
+        ],
+        [
+          2,
+          -10,
+          64
+        ],
+        [
+          2,
+          -9,
+          64
+        ],
+        [
+          3,
+          -14,
+          64
+        ],
+        [
+          3,
+          -13,
+          64
+        ],
+        [
+          3,
+          -12,
+          64
+        ],
+        [
+          3,
+          -11,
+          64
+        ],
+        [
+          3,
+          -10,
+          64
+        ],
+        [
+          3,
+          -9,
+          64
+        ],
+        [
+          4,
+          -14,
+          64
+        ],
+        [
+          4,
+          -13,
+          64
+        ],
+        [
+          4,
+          -12,
+          64
+        ],
+        [
+          4,
+          -11,
+          64
+        ],
+        [
+          4,
+          -10,
+          64
+        ],
+        [
+          4,
+          -9,
+          64
+        ],
+        [
+          5,
+          -14,
+          64
+        ],
+        [
+          5,
+          -13,
+          64
+        ],
+        [
+          5,
+          -12,
+          64
+        ],
+        [
+          5,
+          -11,
+          64
+        ],
+        [
+          5,
+          -10,
+          64
+        ],
+        [
+          5,
+          -9,
+          64
+        ],
+        [
+          6,
+          -12,
+          64
+        ],
+        [
+          6,
+          -11,
+          64
+        ],
+        [
+          7,
+          -12,
+          64
+        ],
+        [
+          7,
+          -11,
+          64
+        ],
+        [
+          8,
+          -12,
+          64
+        ],
+        [
+          8,
+          -11,
+          64
+        ],
+        [
+          9,
+          -12,
+          64
+        ],
+        [
+          9,
+          -11,
+          64
+        ],
+        [
+          10,
+          -12,
+          64
+        ],
+        [
+          10,
+          -11,
+          64
+        ],
+        [
+          11,
+          -12,
+          64
+        ],
+        [
+          11,
+          -11,
+          64
+        ],
+        [
+          12,
+          -12,
+          64
+        ],
+        [
+          12,
+          -11,
+          64
+        ],
+        [
+          13,
+          -12,
+          64
+        ],
+        [
+          13,
+          -11,
+          64
+        ],
+        [
+          14,
+          -12,
+          64
+        ],
+        [
+          14,
+          -11,
+          64
+        ],
+        [
+          15,
+          -12,
+          64
+        ],
+        [
+          15,
+          -11,
+          64
+        ],
+        [
+          16,
+          -12,
+          64
+        ],
+        [
+          16,
+          -11,
+          64
+        ],
+        [
+          17,
+          -12,
+          64
+        ],
+        [
+          17,
+          -11,
+          64
+        ],
+        [
+          18,
+          -12,
+          64
+        ],
+        [
+          18,
+          -11,
+          64
+        ],
+        [
+          19,
+          -12,
+          64
+        ],
+        [
+          19,
+          -11,
+          64
+        ],
+        [
+          20,
+          -12,
+          64
+        ],
+        [
+          20,
+          -11,
+          64
+        ],
+        [
+          21,
+          -12,
+          64
+        ],
+        [
+          21,
+          -11,
+          64
+        ]
+      ]
+    }
+  ],
+  "source_occupied_cells_unchanged": true,
+  "source_visible_colors_unchanged": true,
+  "body_first_all_steps_supported": true,
+  "floating_seed_steps": 0,
+  "blocked_vertical_body_columns": 0,
+  "native_bounds_mm": [
+    [
+      -243.900002,
+      -195.9,
+      0.0
+    ],
+    [
+      243.900002,
+      195.9,
+      425.8
+    ]
+  ],
+  "sequence_method": "Complete receiving-body-first dependency order with explicit multi-heightmodule support stages. All previously unsupportedtips travel with a continuousroot, not placed before theirconnection.",
+  "insertion_scope": "All actual module/body cell columns and exact native root/support BRep samples at2.1/1/.3/0mm; unchanged monotone interface profiles. Hand access, print deformation, real friction and extraction are not validated.",
+  "physical_validation": "UNKNOWN",
+  "slicer_supports": "UNKNOWN_SEPARATE_FROM_NO_ASSEMBLY_STANDS"
+}

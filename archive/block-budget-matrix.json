@@ -44,7 +44,7 @@
     "field": "commit"
   },
   "verified_content_commit": null,
-  "catalog_sha256": "f1458236cbe3f0281d5b211992e4348f1a64113eb9345b492e3712bf95277b5c",
+  "catalog_sha256": "13b32b26f4452d1f21d7f5acd7a4dc18cb8d00ccc7684e5182c514c783556118",
   "cases": [
     {
       "case_id": "mona-p120-root-v2",
@@ -93,19 +93,42 @@
       "logical_case_id": "mona-p150",
       "character": "mona",
       "multiplier": 1.5,
-      "target_count": null,
-      "actual_count": null,
-      "actual_ratio": null,
-      "status": "INPUT_WAIT",
-      "source_status": "INPUT_WAIT",
-      "whisker_support": null,
-      "cg_url": null,
-      "animation_url": null,
-      "animation_urls": {},
-      "cad_url": null,
-      "assembly_url": null,
-      "viewer_url": null,
-      "viewer_url_en": null
+      "target_count": 18653,
+      "actual_count": 18649,
+      "actual_ratio": 1.499718536389224,
+      "status": "READY",
+      "source_status": "READY",
+      "whisker_support": {
+        "external_aid_count": 0,
+        "assembly_aid_count": 0,
+        "status": "DIGITAL_SELF_SUPPORTING_UNTESTED",
+        "physical_validation": "UNKNOWN",
+        "geometry_revision": "whisker-root-v2",
+        "manifest_sha256": "cf4dd304ff6eac6c18e2fed28a797e0d3853ffd07de1011de4ae329f9bfe5f9f",
+        "attachment_evidence_sha256": "2c100aafe6d61eadfac97995b411f71ad5ecd6ab86b96a45658974a8d852ab8c",
+        "sequence_evidence_sha256": "625f4530d0ac51ceb6f0f3a7e84a08af7ec89b8dd5c6aba159ddbab5446e3042",
+        "motion_sha256": "216a7136be6c7c8674d60afbe2f11170ed7231d50dee38f117e17e8cc1a51feb",
+        "geometry_sequence_identity_sha256": "f7189c90718a68688536f90a819a080d965ad2e36c6940af7ec89faeada9b378",
+        "all_categories_geometry_match": true,
+        "assembly_validation_ref": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/validation/mona-p150-root-v2-whisker-support.json",
+          "bytes": 106014,
+          "sha256": "625f4530d0ac51ceb6f0f3a7e84a08af7ec89b8dd5c6aba159ddbab5446e3042"
+        },
+        "gravity_balance_result": "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS",
+        "physical_mass_measured": false
+      },
+      "cg_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150-root-v2/mona-p150-root-v2-cad-scene-animation-public.zip",
+      "animation_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150-root-v2/mona-p150-root-v2-assembly-motion.mp4",
+      "animation_urls": {
+        "turntable": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150-root-v2/mona-p150-root-v2-assembly-motion.mp4",
+        "radial_explode": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150-root-v2/mona-p150-root-v2-assembly-motion.mp4",
+        "bottom_up": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150-root-v2/mona-p150-root-v2-assembly-motion.mp4"
+      },
+      "cad_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150-root-v2/mona-p150-root-v2-cad-scene-animation-public.zip",
+      "assembly_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150-root-v2/mona-p150-root-v2-cad-scene-animation-public.zip",
+      "viewer_url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case=mona-p150-root-v2",
+      "viewer_url_en": "https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-guide.html?case=mona-p150-root-v2"
     },
     {
       "case_id": "mona-p200-root-v2",
@@ -403,8 +426,8 @@
     "mona_whisker_requirement": "NO_EXTERNAL_OR_ASSEMBLY_AIDS",
     "physical_validation": "UNKNOWN",
     "slicer_print_supports": "SEPARATE_UNVALIDATED_CONDITION",
-    "data_ready_case_count": 5,
-    "requirement_ready_case_count": 5,
+    "data_ready_case_count": 6,
+    "requirement_ready_case_count": 6,
     "historical_data_case_count": 2
   }
 }

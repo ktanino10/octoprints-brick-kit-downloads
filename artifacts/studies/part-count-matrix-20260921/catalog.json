@@ -565,7 +565,139 @@
       "geometry_revision": "whisker-root-v2",
       "character": "mona",
       "count_percentage": 150,
-      "state": "INPUT_WAIT"
+      "state": "READY",
+      "metrics": {
+        "part_count": 18649,
+        "unique_types": 128,
+        "one_by_one_exceptions": 50,
+        "layer_count": 89,
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "grip_long_ge_15_8_count": 18599,
+        "dimensions_mm": [
+          487.8,
+          391.8,
+          425.8
+        ]
+      },
+      "target_count": 18653,
+      "target_difference": -4,
+      "actual_ratio": 1.499718536389224,
+      "manifest": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/cases/mona-p150-root-v2-guide.json.gz",
+        "bytes": 837136,
+        "sha256": "52b8262362625b68213e92034ca3f75e5651595d9a011cc32252eecfd7d6cb52"
+      },
+      "source_manifest_sha256": "cf4dd304ff6eac6c18e2fed28a797e0d3853ffd07de1011de4ae329f9bfe5f9f",
+      "source_bom_sha256": "7e9cabc0c3b5455a1547de85064a413d05c2c0b3b2738659a0a7151f44adec5c",
+      "source_commit": "e1fa20d28944a09a9523bb7f0712a21640c882c9",
+      "images": {
+        "front": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/mona-p150-root-v2-assembled-front.jpg",
+          "bytes": 75399,
+          "sha256": "05151ab50c7118d4a2ff2d04184040db8447148ecdace4c5dcc7f025bc78d6b5",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_front"
+        },
+        "three_quarter": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/mona-p150-root-v2-assembled-three_quarter.jpg",
+          "bytes": 101170,
+          "sha256": "9e1a949d8c144865a60c65b0b20075b1901f9e6b9e561126d4d75e5032f918c2",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_three_quarter"
+        }
+      },
+      "tradeoff": "実18649部品、固定目標18653との差-4。完成正面・斜めと実動画1/54/73/89/90/91/92/108/144を閲覧した。 ヒゲ先端と外形を残し、柱や仮支持台は実geometry/CG/動画とも0。受け側本体を先に組み、course20の受け側→左root21、course20/21の受け側→右root22の順で一体部品が入る。 同色の既存内部部品を根元へ連続させたため、旧支台依存18675部品から26個少なくなった。数量を増やすためのダミーや追加重りは使っていない。 実nativeの接触・差込み・断面・全順序と、CAD一様密度による単体＋後続39/31段階の静荷重を確認し、最小幾何余裕15.24/14.13mm。実PLA/インフィル/保持力や曲げ強度の実測ではない。 実487.8x391.8x425.8mm、1x1例外50個。平たく不均一な口、目内縁と鼻の色転写差は以前の1.5倍案と同じく残る。支台不要の設計と美観の合格は別である。 保存native/sceneの全18649ID/type/color/pose/stepと、放射状の元位置復帰・本体0から全数までを照合済み。印刷時のサポート材要否と現物強度・転倒は未確認、NOT_SLICEDを維持する。",
+      "assets": {
+        "cg": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150-root-v2/mona-p150-root-v2-cad-scene-animation-public.zip",
+            "filename": "mona-p150-root-v2-cad-scene-animation-public.zip",
+            "bytes": 110101586,
+            "sha256": "314e1e571bcc2b15f9e750753f6f43a54fa6da9d2570cfc017ca9aa0a919c89c",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "still",
+              "blender"
+            ]
+          }
+        ],
+        "native_cad": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150-root-v2/mona-p150-root-v2-cad-scene-animation-public.zip",
+            "filename": "mona-p150-root-v2-cad-scene-animation-public.zip",
+            "bytes": 110101586,
+            "sha256": "314e1e571bcc2b15f9e750753f6f43a54fa6da9d2570cfc017ca9aa0a919c89c",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "freecad_assembly",
+              "linked_libraries",
+              "stl",
+              "step"
+            ]
+          }
+        ],
+        "assembly": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150-root-v2/mona-p150-root-v2-cad-scene-animation-public.zip",
+            "filename": "mona-p150-root-v2-cad-scene-animation-public.zip",
+            "bytes": 110101586,
+            "sha256": "314e1e571bcc2b15f9e750753f6f43a54fa6da9d2570cfc017ca9aa0a919c89c",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "bom",
+              "ordered_ids",
+              "instructions"
+            ]
+          }
+        ],
+        "animations": {
+          "turntable": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150-root-v2/mona-p150-root-v2-assembly-motion.mp4",
+            "bytes": 1939586,
+            "sha256": "19003d1464050e503103f1e2fb02d5998df01d09d1bcb1bf117686e904a350e6",
+            "start_seconds": 0,
+            "end_seconds": 3
+          },
+          "radial_explode": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150-root-v2/mona-p150-root-v2-assembly-motion.mp4",
+            "bytes": 1939586,
+            "sha256": "19003d1464050e503103f1e2fb02d5998df01d09d1bcb1bf117686e904a350e6",
+            "start_seconds": 3,
+            "end_seconds": 6
+          },
+          "bottom_up": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p150-root-v2/mona-p150-root-v2-assembly-motion.mp4",
+            "bytes": 1939586,
+            "sha256": "19003d1464050e503103f1e2fb02d5998df01d09d1bcb1bf117686e904a350e6",
+            "start_seconds": 6,
+            "end_seconds": 12
+          }
+        }
+      },
+      "whisker_support": {
+        "external_aid_count": 0,
+        "assembly_aid_count": 0,
+        "status": "DIGITAL_SELF_SUPPORTING_UNTESTED",
+        "physical_validation": "UNKNOWN",
+        "geometry_revision": "whisker-root-v2",
+        "manifest_sha256": "cf4dd304ff6eac6c18e2fed28a797e0d3853ffd07de1011de4ae329f9bfe5f9f",
+        "attachment_evidence_sha256": "2c100aafe6d61eadfac97995b411f71ad5ecd6ab86b96a45658974a8d852ab8c",
+        "sequence_evidence_sha256": "625f4530d0ac51ceb6f0f3a7e84a08af7ec89b8dd5c6aba159ddbab5446e3042",
+        "motion_sha256": "216a7136be6c7c8674d60afbe2f11170ed7231d50dee38f117e17e8cc1a51feb",
+        "geometry_sequence_identity_sha256": "f7189c90718a68688536f90a819a080d965ad2e36c6940af7ec89faeada9b378",
+        "all_categories_geometry_match": true,
+        "assembly_validation_ref": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/validation/mona-p150-root-v2-whisker-support.json",
+          "bytes": 106014,
+          "sha256": "625f4530d0ac51ceb6f0f3a7e84a08af7ec89b8dd5c6aba159ddbab5446e3042"
+        },
+        "gravity_balance_result": "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS",
+        "physical_mass_measured": false
+      }
     },
     {
       "id": "mona-p200-root-v2",
@@ -1485,7 +1617,7 @@
   ],
   "display_catalog": {
     "path": "/artifacts/studies/part-count-matrix-20260921/display/catalog.json",
-    "bytes": 1077744,
-    "sha256": "55f56c7fa310b23c64ae65f77b7d4425fb5d0a72d8dd95a93f2e4d2e93b802b6"
+    "bytes": 1187386,
+    "sha256": "e9892b21b33a2a69655f38948f0abe74713cf76058c92aa2425f6b7729ffec5a"
   }
 }

@@ -399,6 +399,84 @@
         "display_triangles": 92660696,
         "radial_to_finished_frame_ms": 188
       }
+    ],
+    "mona-p150-root-v2": [
+      {
+        "width": 1440,
+        "height": 1000,
+        "load_ms": 1712.6524589839391,
+        "frames_ms": [
+          149,
+          129,
+          66,
+          49,
+          47.00000000000023
+        ],
+        "input_handler_ms": [
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        "event_loop_yield_ms": [
+          2,
+          1,
+          0,
+          1,
+          1
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 84.76649998920038,
+        "pause_ui_response_ms": 90.12095897924155,
+        "actual_instances": 18649,
+        "display_triangles": 31607816,
+        "radial_to_finished_frame_ms": 203
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "load_ms": 1180.885625013616,
+        "frames_ms": [
+          131,
+          67,
+          68,
+          38,
+          24
+        ],
+        "input_handler_ms": [
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "event_loop_yield_ms": [
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "gpu_finish_wait_ms": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 102.20008302712813,
+        "pause_ui_response_ms": 100.41154199279845,
+        "actual_instances": 18649,
+        "display_triangles": 31607816,
+        "radial_to_finished_frame_ms": 154
+      }
     ]
   }
 }
