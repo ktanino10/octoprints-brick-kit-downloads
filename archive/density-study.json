@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "study_id": "part-count-matrix-20260921",
-  "state": "INPUT_WAIT",
+  "state": "PARTIAL",
   "current_revision_unchanged": "r3-8mm-20260920",
   "baseline_choice": "COMPARISON_ASSUMPTION_NOT_USER_SELECTION",
   "selection": "NOT_SELECTED",
@@ -10,5 +10,10 @@
   "retention_strength": "UNKNOWN",
   "whole_figure_stability": "UNKNOWN",
   "slicer_status": "NOT_SLICED",
-  "full_print": "ON_HOLD"
+  "full_print": "ON_HOLD",
+  "catalog": {
+    "path": "/artifacts/studies/part-count-matrix-20260921/catalog.json",
+    "bytes": 11763,
+    "sha256": "1044e610ecb919cc735141a2e4cc79cddfbce4df21f2dd96de91200fe067805a"
+  }
 }

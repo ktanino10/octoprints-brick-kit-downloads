@@ -57,6 +57,27 @@ Mona・Copilot・Duckyを約180 mmの独立ブリックで組み立てる、非�
 穴詰まりは超音波洗浄の前から発生。原因・実際のスライス条件・条件別保持力は未確定です。
 形状3MFは **NOT_SLICED**。Bambu Studioの機種設定入りプロジェクトやG-codeではありません。
 
+## 3体×5個数倍率・実3D組立ガイド（部分公開）
+
+**[日英の個数倍率一覧](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-matrix.html)** /
+**[代表Mona 1.2倍の実3D](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case=mona-p120)** /
+**[代表案のCG・Blender・動画・ネイティブCAD一式](https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/tag/part-count-matrix-20260921-mona-p120)**。
+
+現時点では **Mona 1.2倍の1案のみ**です。残り14案と新しい1倍基準のCG・ネイティブ表示は制作中で、全15案の完了ではありません。
+1倍の個数はMona 12,435 / Copilot 17,873 / Ducky 9,669。3体を初期Fine Cに近い8 mm共通ブロックへそろえる
+**比較前提であってユーザーの採用ではなく**、旧r3の695/413を混ぜていません。倍率は物理個別部品数で、線形の寸法倍率ではありません。
+
+代表Monaは目標14,922に対し **14,936個（差+14、実1.201126倍）・118型、439.8 × 359.8 × 397.0 mm**。
+本体と別に3つの実仮支持台を含むガイドを用意し、支台は本体個数から除外します。
+ガイドは実ネイティブメッシュを使い、前後左右への360度放射分解、空から底側順の部品・層・工程再生、
+型色別BOM、同じ部品の全配置先、選択部品の裏面を確認できます。動きは衝突なし実物解体のシミュレーションではありません。
+
+公開ZIPには相対リンク付きFreeCAD組立・共有masters/元parametric authoring、STL/STEP、Blender、完成/分解CG、
+BOMとmotion、12秒の旋回・放射分解・底から組立動画を含みます。すべて展開して相対ディレクトリー構造を保ってください。
+印刷plate/slot・スライス・G-codeは未生成です。目内縁・鼻・口の局所的な配色ずれも残り、「多いほど似る」とは主張しません。
+**NOT_SELECTED / NOT_SLICED / 実物嵌合・保持力・荷重・転倒はUNKNOWN、全数印刷保留**です。
+[機械可読の受領記録](archive/block-budget-matrix.json) の `PARTIAL` を全15案の成功と読み替えないでください。
+
 ## 初期細密Cへ近づける追加Mona比較
 
 **[追加改良の実画像・数量比較](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/mona-refinement.html?comparison=face-front)**

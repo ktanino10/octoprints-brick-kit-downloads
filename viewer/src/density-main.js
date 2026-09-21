@@ -32,7 +32,7 @@ function downloadURL(file) {
   return file.url?.startsWith('https://') ? file.url : assetURL(file.path ?? file.url);
 }
 function link(file, label) {
-  const node = element('a', label);
+  const node = element('a', file.member_path ? `${label}（ZIP内：${file.member_path}）` : label);
   node.href = downloadURL(file);
   return node;
 }
@@ -75,6 +75,9 @@ function updateProgress() {
   $('#guide-step').disabled = progress.mode !== 'assembly';
   $('#guide-progress').textContent = `${number(count, 0)} / ${number(manifest.parts.length, 0)}部品`;
   $('#guide-empty').hidden = count !== 0;
+  $('#guide-empty').textContent = manifest.aids.length
+    ? '本体部品は0個です。仮支持台は別の準備物として表示し、本体個数には含めません。'
+    : 'まだ何も配置していません。次の部品から底側の組立を始めます。';
   const active = progress.mode === 'assembly' ? index.ordered[progress.steps] ?? null : null;
   $('#guide-active').textContent = active ? `${active.id} · ${active.type_id} · ${manifest.palette[active.color_id].name}`
     : count === manifest.parts.length ? '全IDを表示中（実物組立の承認ではありません）' : '次に配置する部品を確認してください。';

@@ -61,6 +61,29 @@ The small-part handling and blocked-hole feedback belongs to the earlier r2 4 mm
 Those holes were blocked **before** ultrasonic cleaning. The cause, actual slicer settings and condition-specific retention remain unresolved.
 Geometry-only 3MF files remain **NOT_SLICED**, not configured Bambu Studio projects or G-code.
 
+## Three characters × five count multipliers and actual 3D guides — partial publication
+
+**[Bilingual count matrix](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-matrix.html)** /
+**[Representative Mona 1.2× actual 3D guide](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-guide.html?case=mona-p120)** /
+**[Actual CG, Blender, animation and native CAD package](https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/tag/part-count-matrix-20260921-mona-p120)**.
+
+Currently **only Mona 1.2× is available: one of fifteen cases**. The other fourteen and native/CG presentations of the new 1× baselines are in progress.
+Baseline counts are Mona 12,435 / Copilot 17,873 / Ducky 9,669, using a consistent initial-Fine-C-adapted 8 mm approach.
+This is a **comparison assumption, not user adoption**; earlier r3 counts of 695/413 are not mixed in.
+Multipliers refer to individual physical parts, not linear dimensions.
+
+The representative Mona targets 14,922 and contains **14,936 parts (+14; actual ratio 1.201126×), 118 types,
+439.8 × 359.8 × 397.0 mm**. Three actual temporary supports are separate from the figure count.
+The guide uses native meshes for all-direction radial separation, empty-to-bottom-up part/course/stage playback,
+type/color BOMs, all matching-part destinations and selected-part underside inspection. Motion is not a collision-free disassembly simulation.
+
+The public ZIP includes a relatively linked FreeCAD assembly, shared masters and original parametric authoring documents,
+STL/STEP, Blender, assembled/exploded CG, BOM/motion and a 12-second turntable/radial/bottom-up movie.
+Extract everything and preserve relative directories. Print plates/slots, slicing and G-code are not generated.
+Local eye-rim, nose and smile color-transfer differences remain; more parts do not guarantee better likeness.
+**NOT_SELECTED / NOT_SLICED; physical fit, retention, loads and tipping UNKNOWN; full-kit printing on hold.**
+Do not read the [machine-readable receipt](archive/block-budget-matrix.json)'s `PARTIAL` state as completion of all fifteen.
+
 ## Further Mona refinement toward initial Fine C
 
 The **[actual refinement image and count comparison](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/mona-refinement.html?comparison=face-front)**

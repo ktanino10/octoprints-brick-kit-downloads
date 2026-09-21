@@ -97,6 +97,12 @@ test('pending and partial cases cannot masquerade as all fifteen complete', () =
   catalog.cases[0] = { id: 'mona-p120', character: 'mona', count_percentage: 120, state: 'INPUT_WAIT' };
   assert.throws(() => validateDensityCatalog(catalog, pointer));
   assert.equal(validateDensityCatalog(catalog, { ...pointer, state: 'PARTIAL' }), catalog);
+  const counted = catalogFixture();
+  for (const baseline of Object.values(counted.baselines)) {
+    baseline.state = 'COUNTED'; baseline.native_media_status = 'PENDING'; delete baseline.images;
+  }
+  assert.equal(validateDensityCatalog(counted, { ...pointer, state: 'PARTIAL' }), counted);
+  assert.throws(() => validateDensityCatalog(counted, pointer));
   for (const change of [
     (c) => { c.cases.pop(); },
     (c) => { c.baselines.copilot.metrics.part_count = 695; },
@@ -216,5 +222,28 @@ test('matrix work preserves the previous refinement archive and all pinned basel
     const bytes = await readFile(new URL(entry.path, root));
     assert.equal(bytes.length, entry.bytes, entry.path);
     assert.equal(createHash('sha256').update(bytes).digest('hex'), entry.sha256, entry.path);
+  }
+});
+
+test('installed actual guide cases retain source fingerprint counts and absolute radial poses', async () => {
+  const root = new URL('../../', import.meta.url);
+  const publication = validateDensityPointer(JSON.parse(await readFile(new URL('archive/density-study.json', root))));
+  if (publication.state === 'INPUT_WAIT') return;
+  const bytes = await readFile(new URL(densityPath(publication.catalog.path).slice(1), root));
+  assert.equal(createHash('sha256').update(bytes).digest('hex'), publication.catalog.sha256);
+  const catalog = validateDensityCatalog(JSON.parse(bytes), publication);
+  for (const item of catalog.cases.filter((entry) => entry.state !== 'INPUT_WAIT')) {
+    const source = await readFile(new URL(densityPath(item.manifest.path).slice(1), root));
+    assert.equal(source.length, item.manifest.bytes);
+    assert.equal(createHash('sha256').update(source).digest('hex'), item.manifest.sha256);
+    const { gunzipSync } = await import('node:zlib');
+    const guide = validateGuideManifest(JSON.parse(gunzipSync(source)), item.id);
+    assert.equal(guide.parts.length, item.metrics.part_count);
+    assert.equal(guide.metrics.unique_types, item.metrics.unique_types);
+    assert.equal(guide.source_manifest_sha256, item.source_manifest_sha256);
+    assert.equal(guide.source_bom_sha256, item.source_bom_sha256);
+    const original = guide.parts.map((part) => [...part.position_mm]);
+    guide.parts.forEach((part) => { radialPosition(part, 1); radialPosition(part, 0.5); });
+    assert.deepEqual(guide.parts.map((part) => radialPosition(part, 0)), original);
   }
 });

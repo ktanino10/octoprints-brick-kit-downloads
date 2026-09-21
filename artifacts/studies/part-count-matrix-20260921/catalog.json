@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "study_id": "part-count-matrix-20260921",
+  "kind": "ACTUAL_PART_COUNT_MATRIX",
+  "current_revision_unchanged": "r3-8mm-20260920",
+  "baseline_choice": "COMPARISON_ASSUMPTION_NOT_USER_SELECTION",
+  "selection": "NOT_SELECTED",
+  "visual_approval": "PENDING",
+  "physical_fit": "UNKNOWN",
+  "retention_strength": "UNKNOWN",
+  "whole_figure_stability": "UNKNOWN",
+  "slicer_status": "NOT_SLICED",
+  "full_print": "ON_HOLD",
+  "baselines": {
+    "mona": {
+      "state": "COUNTED",
+      "native_media_status": "PENDING",
+      "candidate_id": "mona-fine8-base",
+      "pitch_mm": 8,
+      "basis": "INITIAL_FINE_C_ADAPTED_8MM",
+      "manifest_sha256": "5556e329521b5706a366c5dad2aa6c7b13eca9d7d74323338773d5e2b20b2b4c",
+      "metrics": {
+        "part_count": 12435,
+        "unique_types": 121,
+        "one_by_one_exceptions": 31,
+        "layer_count": 77,
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "grip_long_ge_15_8_count": 12404,
+        "dimensions_mm": [
+          423.8,
+          343.8,
+          368.2
+        ]
+      }
+    },
+    "copilot": {
+      "state": "COUNTED",
+      "native_media_status": "PENDING",
+      "candidate_id": "copilot-fine8-base",
+      "pitch_mm": 8,
+      "basis": "INITIAL_FINE_C_ADAPTED_8MM",
+      "manifest_sha256": "5253cbb755fc1069e745dfda69026e0475904abe5e2d76bd7312852672189d7b",
+      "metrics": {
+        "part_count": 17873,
+        "unique_types": 148,
+        "one_by_one_exceptions": 34,
+        "layer_count": 77,
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "grip_long_ge_15_8_count": 17839,
+        "dimensions_mm": [
+          487.8,
+          423.8,
+          368.20000000000005
+        ]
+      }
+    },
+    "ducky": {
+      "state": "COUNTED",
+      "native_media_status": "PENDING",
+      "candidate_id": "ducky-fine8-base",
+      "pitch_mm": 8,
+      "basis": "INITIAL_FINE_C_ADAPTED_8MM",
+      "manifest_sha256": "fd5f65d03fb85bea911ec1945e2e8339909dafea2b63c6627523c34b2334d267",
+      "metrics": {
+        "part_count": 9669,
+        "unique_types": 85,
+        "one_by_one_exceptions": 5,
+        "layer_count": 77,
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "grip_long_ge_15_8_count": 9664,
+        "dimensions_mm": [
+          295.8,
+          423.8,
+          368.20000000000005
+        ]
+      }
+    }
+  },
+  "appearance_references": [
+    {
+      "character": "mona",
+      "candidate_id": "mona-fine",
+      "note": "初期細密Cの実画像。Copilot/Duckyの旧カメラ・照明は今回と異なり、同画角比較とは扱いません。",
+      "images": [
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/references/mona-initial-fine-front.jpg",
+          "bytes": 98413,
+          "sha256": "bfa77e3f7e0c9d6207f370a9ca7fa5b9422f0bfda6196873f1878b5f76d2cf50",
+          "view": "front",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_OF1200_SAME_NORMALIZED_ANGLES_AND_MATTE_RECIPE"
+        },
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/references/mona-initial-fine-three_quarter.jpg",
+          "bytes": 112263,
+          "sha256": "9b6d2fb6c5fb6bf12d4cbfce5c504f98d70fcaaeb616f3e95fba6bf6ffacfafd",
+          "view": "three_quarter",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_OF1200_SAME_NORMALIZED_ANGLES_AND_MATTE_RECIPE"
+        }
+      ]
+    },
+    {
+      "character": "copilot",
+      "candidate_id": "copilot-fine",
+      "note": "初期細密Cの実画像。Copilot/Duckyの旧カメラ・照明は今回と異なり、同画角比較とは扱いません。",
+      "images": [
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/references/copilot-initial-fine-legacy_three_quarter.jpg",
+          "bytes": 115584,
+          "sha256": "66735d96a3fa62e8167b7b45f243209c683e9cb392878ce84b05d554891d864b",
+          "view": "legacy_three_quarter",
+          "condition_id": "LEGACY_PHASE1_CAMERA_LIGHTING_DIFFERENT_NOT_A_DIRECT_NORMALIZED_COMPARISON"
+        }
+      ]
+    },
+    {
+      "character": "ducky",
+      "candidate_id": "ducky-fine",
+      "note": "初期細密Cの実画像。Copilot/Duckyの旧カメラ・照明は今回と異なり、同画角比較とは扱いません。",
+      "images": [
+        {
+          "path": "/artifacts/studies/part-count-matrix-20260921/references/ducky-initial-fine-legacy_three_quarter.jpg",
+          "bytes": 77386,
+          "sha256": "6a04f0a34827019d3641cce759e0c9e885e7e35c6a59b5623c525599cff68dae",
+          "view": "legacy_three_quarter",
+          "condition_id": "LEGACY_PHASE1_CAMERA_LIGHTING_DIFFERENT_NOT_A_DIRECT_NORMALIZED_COMPARISON"
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "mona-p120",
+      "character": "mona",
+      "count_percentage": 120,
+      "state": "READY",
+      "metrics": {
+        "part_count": 14936,
+        "unique_types": 118,
+        "one_by_one_exceptions": 38,
+        "layer_count": 83,
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "grip_long_ge_15_8_count": 14898,
+        "dimensions_mm": [
+          439.8,
+          359.8,
+          397.0
+        ]
+      },
+      "target_count": 14922,
+      "target_difference": 14,
+      "actual_ratio": 1.201125854443104,
+      "manifest": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/cases/mona-p120-guide.json.gz",
+        "bytes": 549782,
+        "sha256": "de71dd1f2538175e75b2a3cccda930c1817e07d80e66c3f56d0a9d8649e14bde"
+      },
+      "source_manifest_sha256": "98825ef02dff2ca237e131aff7f51c56a3aea968a54d9378a39bf2e97b78dd8e",
+      "source_bom_sha256": "412e71cccdfe70952286a267dcf076bd569cc5313b3525b14cd83bffb3be5875",
+      "source_commit": "0943f2af21a2c380e47fac21150347f6d8dc6dc5",
+      "images": {
+        "front": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/mona-p120-assembled-front.jpg",
+          "bytes": 75100,
+          "sha256": "aa929d8258ae75ba7b0cfb385a0d906219bd56d59e6738e5a069e365c1fd4633",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_front"
+        },
+        "three_quarter": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/mona-p120-assembled-three_quarter.jpg",
+          "bytes": 100597,
+          "sha256": "564bc0d3e4b9aae5bbfc89e4b76efc33d52801a13ddc73a605d098217f505b42",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_three_quarter"
+        }
+      },
+      "tradeoff": "目の内縁や鼻・口の段階形状は1xと同一ではない。色境界をCから新しい格子へ移す際の局所的なずれが残り、部品数が多いほど必ず似るとは言わない。",
+      "assets": {
+        "cg": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p120/mona-p120-cad-scene-animation-public.zip",
+            "filename": "mona-p120-cad-scene-animation-public.zip",
+            "bytes": 87928338,
+            "sha256": "a458381601fc0a70a548ad94e42fb6657b9e61d880df35f15719f799c88e4321",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "still",
+              "blender"
+            ]
+          }
+        ],
+        "native_cad": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p120/mona-p120-cad-scene-animation-public.zip",
+            "filename": "mona-p120-cad-scene-animation-public.zip",
+            "bytes": 87928338,
+            "sha256": "a458381601fc0a70a548ad94e42fb6657b9e61d880df35f15719f799c88e4321",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "freecad_assembly",
+              "linked_libraries",
+              "stl",
+              "step"
+            ]
+          }
+        ],
+        "assembly": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p120/mona-p120-cad-scene-animation-public.zip",
+            "filename": "mona-p120-cad-scene-animation-public.zip",
+            "bytes": 87928338,
+            "sha256": "a458381601fc0a70a548ad94e42fb6657b9e61d880df35f15719f799c88e4321",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "bom",
+              "ordered_ids",
+              "instructions"
+            ]
+          }
+        ],
+        "animations": {
+          "turntable": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p120/mona-p120-assembly-motion.mp4",
+            "bytes": 1928997,
+            "sha256": "90249afba037fbf446e647655624f99a63bc1acd1732b500b4ed7663e00e52b5",
+            "start_seconds": 0,
+            "end_seconds": 3
+          },
+          "radial_explode": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p120/mona-p120-assembly-motion.mp4",
+            "bytes": 1928997,
+            "sha256": "90249afba037fbf446e647655624f99a63bc1acd1732b500b4ed7663e00e52b5",
+            "start_seconds": 3,
+            "end_seconds": 6
+          },
+          "bottom_up": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p120/mona-p120-assembly-motion.mp4",
+            "bytes": 1928997,
+            "sha256": "90249afba037fbf446e647655624f99a63bc1acd1732b500b4ed7663e00e52b5",
+            "start_seconds": 6,
+            "end_seconds": 12
+          }
+        }
+      }
+    },
+    {
+      "id": "mona-p150",
+      "character": "mona",
+      "count_percentage": 150,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "mona-p200",
+      "character": "mona",
+      "count_percentage": 200,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "mona-p300",
+      "character": "mona",
+      "count_percentage": 300,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "mona-p400",
+      "character": "mona",
+      "count_percentage": 400,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "copilot-p120",
+      "character": "copilot",
+      "count_percentage": 120,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "copilot-p150",
+      "character": "copilot",
+      "count_percentage": 150,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "copilot-p200",
+      "character": "copilot",
+      "count_percentage": 200,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "copilot-p300",
+      "character": "copilot",
+      "count_percentage": 300,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "copilot-p400",
+      "character": "copilot",
+      "count_percentage": 400,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "ducky-p120",
+      "character": "ducky",
+      "count_percentage": 120,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "ducky-p150",
+      "character": "ducky",
+      "count_percentage": 150,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "ducky-p200",
+      "character": "ducky",
+      "count_percentage": 200,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "ducky-p300",
+      "character": "ducky",
+      "count_percentage": 300,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "ducky-p400",
+      "character": "ducky",
+      "count_percentage": 400,
+      "state": "INPUT_WAIT"
+    }
+  ]
+}

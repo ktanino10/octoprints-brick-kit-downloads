@@ -28,7 +28,7 @@ export function validateGuideManifest(manifest, candidateId) {
     && manifest.status.full_print === 'ON_HOLD', '実3Dの未採用・物理未検証・印刷保留の状態が不正です。');
   for (const [id, type] of Object.entries(manifest.types)) {
     check(isObject(type) && isVector(type.body_mm) && type.body_mm.every((n) => n > 0)
-      && type.pitch_mm === 8 && type.stud_diameter_mm === 4.8
+      && type.pitch_mm === 8 && (type.kind === 'temporary_support' ? type.stud_diameter_mm === null : type.stud_diameter_mm === 4.8)
       && finite(type.body_height_mm) && type.body_height_mm > 0
       && type.body_mm[2] === type.body_height_mm && isHash(type.geometry_sha256),
     `実部品型 ${id} の8 mm規格・高さ・メッシュ指紋が不正です。`);

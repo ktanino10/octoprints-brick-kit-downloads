@@ -33,7 +33,17 @@ function render() {
       actualImage(baseline.images[view], `${names[character]} · 1倍基準 · ${number(baseline.metrics.part_count, 0)}部品`),
       element('p', `${number(baseline.metrics.part_count, 0)}部品 / ${number(baseline.metrics.unique_types, 0)}型`),
       element('p', baseline.metrics.dimensions_mm.map((n) => number(n, 3)).join(' × ') + ' mm', 'quiet'));
+  } else if (baseline.state === 'COUNTED') {
+    reference.append(element('h3', `${names[character]} · 1倍の比較基準`),
+      element('p', `${number(baseline.metrics.part_count, 0)}部品 / ${number(baseline.metrics.unique_types, 0)}型`),
+      element('p', '1倍の実個数は固定済みです。基準のネイティブCAD・CGは準備中で、完成画像は代用していません。'));
   } else reference.append(element('p', 'このキャラクターのFine C適合8 mm基準は、実データ確定待ちです。旧r3の個数で代用しません。'));
+  const initial = catalog.appearance_references?.find((item) => item.character === character);
+  if (initial) {
+    const sourceImage = initial.images.find((item) => item.view === view) ?? initial.images[0];
+    reference.append(element('h3', '初期Fine Cの外観参照'), actualImage(sourceImage, `${names[character]} · Fine C`),
+      element('p', initial.note, 'quiet'));
+  }
   const host = $('#matrix-cards'); host.replaceChildren();
   for (const percentage of COUNT_PERCENTAGES) {
     const item = catalog.cases.find((entry) => entry.character === character && entry.count_percentage === percentage);
@@ -43,7 +53,7 @@ function render() {
     card.append(element('p', `${number(percentage / 100)}× / PIECE COUNT`, 'eyebrow'));
     if (item.state === 'INPUT_WAIT') {
       card.append(element('h3', '入力待ち'), element('p', '実CG・動画・CAD・組立データはまだ公開していません。'));
-      if (baseline.state === 'READY') card.append(element('p', `目標：${number(targetPartCount(baseline.metrics.part_count, percentage), 0)}部品（実数ではありません）`));
+      if (baseline.state !== 'INPUT_WAIT') card.append(element('p', `目標：${number(targetPartCount(baseline.metrics.part_count, percentage), 0)}部品（実数ではありません）`));
     } else {
       card.append(actualImage(item.images[view], `${item.id} · ${number(item.metrics.part_count, 0)}部品`),
         element('h3', `${number(item.metrics.part_count, 0)}部品`),
@@ -77,7 +87,7 @@ function renderTable() {
     tr.append(label);
     const baseline = catalog.baselines[item.character];
     const values = item.state === 'INPUT_WAIT'
-      ? [baseline.state === 'READY' ? number(targetPartCount(baseline.metrics.part_count, item.count_percentage), 0) : '未確定',
+      ? [baseline.state !== 'INPUT_WAIT' ? number(targetPartCount(baseline.metrics.part_count, item.count_percentage), 0) : '未確定',
         '入力待ち', '—', '—', '—', '入力待ち']
       : [number(item.target_count, 0), number(item.metrics.part_count, 0), number(item.actual_ratio, 4),
         `${item.target_difference > 0 ? '+' : ''}${number(item.target_difference, 0)}`, number(item.metrics.unique_types, 0),

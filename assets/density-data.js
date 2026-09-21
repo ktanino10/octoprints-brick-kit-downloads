@@ -84,9 +84,9 @@ export function validateDensityCatalog(catalog, pointer) {
   '15案のカタログと公開状態が一致しません。');
   for (const character of DENSITY_CHARACTERS) {
     const baseline = catalog.baselines[character];
-    densityAssert(isObject(baseline) && ['INPUT_WAIT', 'READY'].includes(baseline.state),
+    densityAssert(isObject(baseline) && ['INPUT_WAIT', 'COUNTED', 'READY'].includes(baseline.state),
       '3体の同じ方針による1倍基準が必要です。');
-    if (baseline.state === 'READY') {
+    if (baseline.state !== 'INPUT_WAIT') {
       validateMetrics(baseline.metrics);
       densityAssert(typeof baseline.candidate_id === 'string' && isHash(baseline.manifest_sha256)
         && baseline.pitch_mm === 8 && baseline.basis === 'INITIAL_FINE_C_ADAPTED_8MM',
@@ -94,7 +94,10 @@ export function validateDensityCatalog(catalog, pointer) {
       if (character === 'mona') densityAssert(baseline.metrics.part_count === 12435
         && baseline.manifest_sha256 === '5556e329521b5706a366c5dad2aa6c7b13eca9d7d74323338773d5e2b20b2b4c',
       'Monaの1倍基準が前回の最終12,435部品から変わっています。');
-      for (const view of ['front', 'three_quarter']) validateDensityFile(baseline.images[view]);
+      if (baseline.state === 'READY') {
+        for (const view of ['front', 'three_quarter']) validateDensityFile(baseline.images[view]);
+      } else densityAssert(baseline.images === undefined && baseline.native_media_status === 'PENDING',
+        '個数だけが確定した基準を、CG・CAD完成として扱うことはできません。');
     } else {
       densityAssert(baseline.metrics === undefined && baseline.images === undefined,
         '未確定のCopilot・Ducky基準に旧r3の個数や画像を代用できません。');
@@ -114,7 +117,7 @@ export function validateDensityCatalog(catalog, pointer) {
         '制作中の案を実際の画像・部品数がある完成案として表示できません。');
       continue;
     }
-    densityAssert(baseline.state === 'READY', '1倍基準を固定する前に倍率案を公開できません。');
+    densityAssert(baseline.state !== 'INPUT_WAIT', '1倍基準を固定する前に倍率案を公開できません。');
     validateMetrics(item.metrics);
     const actual = countTargetResult(baseline.metrics.part_count, item.count_percentage, item.metrics.part_count);
     densityAssert(item.target_count === actual.target && item.target_difference === actual.difference
@@ -126,7 +129,7 @@ export function validateDensityCatalog(catalog, pointer) {
       validateDensityFile(item.images[view]);
       densityAssert(item.images[view].framing_rule === 'MATCHED_SCREEN_HEIGHT'
         && typeof item.images[view].condition_id === 'string'
-        && item.images[view].condition_id === baseline.images[view].condition_id,
+        && (baseline.state !== 'READY' || item.images[view].condition_id === baseline.images[view].condition_id),
       '比較画像の同方向・同画面高さの条件が一致しません。');
     }
     densityAssert(typeof item.tradeoff === 'string' && item.tradeoff.length > 0
@@ -152,7 +155,8 @@ export function validateDensityCatalog(catalog, pointer) {
     }
   }
   densityAssert(combinations.size === 15, '3体×5倍率の15枠をすべて明示する必要があります。');
-  if (pointer.state === 'READY') densityAssert(catalog.cases.every((item) => item.state === 'READY'),
+  if (pointer.state === 'READY') densityAssert(catalog.cases.every((item) => item.state === 'READY')
+    && Object.values(catalog.baselines).every((baseline) => baseline.state === 'READY'),
     '未完成・目標未達の案が残るため、15案すべて完了とは表示できません。');
   return catalog;
 }

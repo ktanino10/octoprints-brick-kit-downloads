@@ -51,7 +51,7 @@ def receipt_for(catalog, *, browser=None, downloads=None, catalog_sha256=None):
             baseline = catalog["baselines"][case["character"]]
             target = (baseline["metrics"]["part_count"] * case["count_percentage"] + 50) // 100
             actual = case["metrics"]["part_count"]
-            if baseline["state"] != "READY" or target != case["target_count"] or actual <= 0:
+            if baseline["state"] not in {"COUNTED", "READY"} or target != case["target_count"] or actual <= 0:
                 raise ValueError("Receipt contains a missing baseline or incorrect actual count target")
             within = abs(actual - target) <= max(1, target * 0.01)
             if (case["state"] == "READY") != within:
@@ -70,7 +70,9 @@ def receipt_for(catalog, *, browser=None, downloads=None, catalog_sha256=None):
             "viewer_url": BASE + "ja/density-guide.html?case=" + case["id"] if ready else None,
             "viewer_url_en": BASE + "en/density-guide.html?case=" + case["id"] if ready else None,
         })
-    all_ready = len(cases) == 15 and len({case["case_id"] for case in cases}) == 15 and all(case["status"] == "READY" for case in cases)
+    all_ready = (len(cases) == 15 and len({case["case_id"] for case in cases}) == 15
+                 and all(case["status"] == "READY" for case in cases)
+                 and all(row["state"] == "READY" for row in catalog["baselines"].values()))
     browser_passed = downloads_passed = False
     if browser is not None or downloads is not None:
         if browser is None or downloads is None or not all_ready:
@@ -92,7 +94,7 @@ def receipt_for(catalog, *, browser=None, downloads=None, catalog_sha256=None):
     return {
         "schema_version": 1, "study_id": STUDY,
         "state": "READY" if all_ready and browser_passed and downloads_passed else "PARTIAL",
-        "baseline_counts": {name: row["metrics"]["part_count"] if row["state"] == "READY" else None
+        "baseline_counts": {name: row["metrics"]["part_count"] if row["state"] != "INPUT_WAIT" else None
                             for name, row in catalog["baselines"].items()},
         "baseline_assumption": "INITIAL_FINE_C_ADAPTED_8MM_COMPARISON_ASSUMPTION_NOT_USER_SELECTION",
         "public_commit": {"record": "archive/deployment.json", "field": "commit"},

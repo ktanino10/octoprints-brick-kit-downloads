@@ -1,0 +1,66 @@
+{
+  "case_id": "mona-p120",
+  "source_commit": "0943f2af21a2c380e47fac21150347f6d8dc6dc5",
+  "metrics": {
+    "part_count": 14936,
+    "unique_types": 118,
+    "one_by_one_exceptions": 38,
+    "layer_count": 83,
+    "minimum_part_mm": [
+      7.8,
+      7.8,
+      3.2
+    ],
+    "grip_long_ge_15_8_count": 14898
+  },
+  "manifest_sha256": "98825ef02dff2ca237e131aff7f51c56a3aea968a54d9378a39bf2e97b78dd8e",
+  "bom_sha256": "412e71cccdfe70952286a267dcf076bd569cc5313b3525b14cd83bffb3be5875",
+  "counted_instances": 14936,
+  "bom_ids_match": true,
+  "bom_types_colors_poses_steps_match": true,
+  "identity_projection_sha256": "c8bd13ef5d11486ab9df31db8bb9c4b8a476c592565beeb51ccb34c033e50054",
+  "body_height_families": [
+    {
+      "body_height_mm": 3.2,
+      "part_count": 60,
+      "unique_types": 8
+    },
+    {
+      "body_height_mm": 4.8,
+      "part_count": 14876,
+      "unique_types": 110
+    }
+  ],
+  "public_native_assembly": {
+    "path": "artifacts/studies/part-count-matrix-20260921/cases/mona-p120/assembly.FCStd",
+    "document_objects": 136,
+    "native_links_resolved": 136,
+    "link_instances": 14936,
+    "valid_single_solid_targets_checked": 118,
+    "proxy_free": true,
+    "opened": true,
+    "recomputed": false,
+    "saved": false,
+    "sha256": "f9929549cd2c5ae2e6eaf95779c1198becca0a7a57d88164b9a65079fd44cfd5"
+  },
+  "public_blender_motion_preserved": true,
+  "source_saved_scene_binding": "2f09e3f6324732910bcebcb26af875f6fa9876f30b1a1df514e0d762384d2d37",
+  "source_native_reopen": {
+    "result": "PASS_REOPENED_RELATIVE_NATIVE_LINK_ARRAYS",
+    "actual_instance_count": 14936,
+    "all_ids_types_colors_poses_steps": true,
+    "all_sources_inside_bundle": true
+  },
+  "private_inputs_copied": 0,
+  "public_native_id_pose_check": {
+    "case_id": "mona-p120",
+    "assembly_sha256": "f9929549cd2c5ae2e6eaf95779c1198becca0a7a57d88164b9a65079fd44cfd5",
+    "actual_instances": 14936,
+    "array_count": 136,
+    "all_ids_types_colors_poses_steps": "MATCH",
+    "relocated_reopen": true,
+    "saved": false,
+    "recomputed": false
+  },
+  "files": []
+}

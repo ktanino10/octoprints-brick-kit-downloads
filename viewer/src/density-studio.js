@@ -152,7 +152,7 @@ export class DensityStudio extends BrickStudio {
       if (progress.mode === 'assembly') batch.mesh.material.color.lerp(new THREE.Color('#eef2f7'), 0.62);
       visible += count;
     }
-    for (const { mesh, aid } of this.aidMeshes) mesh.visible = progress.mode !== 'assembly'
+    for (const { mesh, aid } of this.aidMeshes) mesh.visible = aid.show_during_preparation === true || progress.mode !== 'assembly'
       || (threshold > 0 && threshold + 1 >= aid.required_before_step);
     if (changedExplosion) {
       this.fitBounds.copy(progress.explosion === 0 ? this.baseBounds : this.boundsAt(progress.explosion));
