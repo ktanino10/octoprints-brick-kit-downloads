@@ -44,6 +44,7 @@
   "原型Mona（無分割）": "Original Mona (unsubdivided)",
   "各最小値：短辺 / 長辺 / 厚み / mm": "Separate minima: short side / long side / thickness / mm",
   "同じ顔領域を切り出した拡大比較です。完成サイズやブロックの実寸比を示す画像ではありません。": "This close-up compares the same facial region. It does not show the actual scale of the completed models or their blocks.",
+  "同じ画面上高さを確認する、各モデルの投影範囲がありません。": "Each model needs recorded projected bounds to verify matched on-screen height.",
   "変更していない公開中r3を見る →": "View the unchanged published r3 →",
   "実ブロック数と、大きさ。": "Actual part counts and size.",
   "実寸比": "True scale",
@@ -54,6 +55,7 @@
   "対象外（無分割）": "Not applicable (unsubdivided)",
   "幅 × 奥行 × 高さ / mm": "Width × depth × height / mm",
   "形の比較": "Shape comparison",
+  "形の比較でモデルの画面上高さが揃っていません。": "The shape comparison does not match the models' on-screen heights.",
   "形の比較は4案の画面上高さ、顔比較は同じ領域の条件をそろえる必要があります。": "Shape comparisons must match all four on-screen heights; face comparisons must use the same region rule.",
   "形・顔・実寸比の比較条件": "Shape, face and true-scale comparison conditions",
   "新しい約36 cm案（8 mm）": "New approximately 36 cm study (8 mm)",
@@ -78,5 +80,6 @@
   "配置層数": "Placement layers",
   "長辺15.8 mm以上の部品": "Parts with a long side of at least 15.8 mm",
   "顔の拡大": "Facial close-up",
+  "顔の拡大で、同じ正規化領域を使った記録が一致しません。": "The facial close-up records do not use the same normalized region.",
   "顔・体形・丸みの再現を優先する約36 cm案は、別の未採用スタディです。現行r3の拡大コピーや正式な新版キットではありません。": "The approximately 36 cm approach prioritizing face, proportions and roundness is a separate unselected study, not an enlarged r3 copy or a formally adopted new kit."
 }

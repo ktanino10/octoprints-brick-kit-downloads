@@ -47,11 +47,15 @@ function fixture() {
       ...[['shape', 'front'], ['shape', 'three-quarter'], ['face', 'front']].map(([kind, view]) => ({
         id: `${kind}-${view}`, kind, view, conditions_sha256: 'd'.repeat(64), method_note: 'Unit-only conditions.',
         framing_rule: kind === 'shape' ? 'MATCHED_SCREEN_HEIGHT' : 'MATCHED_NORMALIZED_FACE_REGION',
-        images: MONA_ROLES.map((role) => ({ ...image(`${kind}-${view}-${role}`), role })),
+        ...(kind === 'face' ? { normalized_face_region: [0.1, 0.1, 0.9, 0.5] } : {}),
+        images: MONA_ROLES.map((role) => ({ ...image(`${kind}-${view}-${role}`), role,
+          ...(kind === 'shape' ? { subject_bounds_px: [100, 100, 900, 900] }
+            : { normalized_face_region: [0.1, 0.1, 0.9, 0.5] }) })),
       })),
       { id: 'scale-front', kind: 'scale', view: 'front', conditions_sha256: 'd'.repeat(64),
         method_note: 'Unit-only physical scale.', framing_rule: 'SHARED_PIXELS_PER_MM',
-        pixels_per_mm: 2, row_roles: ['fine-c', 'current-r3', 'pilot-360'], sheet: image('scale-front') },
+        pixels_per_mm: 2, row_roles: ['fine-c', 'current-r3', 'pilot-360'],
+        row_pixels_per_mm: { 'fine-c': 2, 'current-r3': 2, 'pilot-360': 2 }, sheet: image('scale-front') },
     ],
   };
 }
@@ -84,9 +88,14 @@ test('Mona shape normalization, face crops and physical scale remain different c
     (data) => { data.comparisons[3].framing_rule = 'MATCHED_SCREEN_HEIGHT'; },
     (data) => { data.comparisons[3].pixels_per_mm = NaN; },
     (data) => { data.comparisons[3].row_roles = ['pilot-360']; },
+    (data) => { data.comparisons[3].row_pixels_per_mm['pilot-360'] = 1; },
     (data) => { data.comparisons[0].images[1].conditions_sha256 = 'f'.repeat(64); },
     (data) => { data.comparisons[0].images[1].role = 'original'; },
     (data) => { data.comparisons[0].images[1].width = 999; },
+    (data) => { data.comparisons[0].images[1].subject_bounds_px[3] = 950; },
+    (data) => { delete data.comparisons[0].images[1].subject_bounds_px; },
+    (data) => { data.comparisons[2].images[1].normalized_face_region = [0.1, 0.1, 0.8, 0.5]; },
+    (data) => { data.comparisons[2].normalized_face_region = [0, 0, 2, 2]; },
     (data) => { data.comparisons[0].images[1].path = data.comparisons[0].images[0].path; },
     (data) => { data.comparisons.splice(1, 1); },
     (data) => { data.comparisons[1].view = 'front'; },

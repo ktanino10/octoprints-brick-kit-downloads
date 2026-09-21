@@ -17922,8 +17922,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "JS",
-      "bytes": 9218,
-      "sha256": "e1db6c840edb764061d2694ab662630e6b4ee2c50841b6a3e3072809c06a188b",
+      "bytes": 10632,
+      "sha256": "bba26f58a7a1b710a823c9edb21f757777a4a839d8a16af8ccafe2e4eeee13a1",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/mona-study-data.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -18156,8 +18156,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "JS",
-      "bytes": 328810,
-      "sha256": "1ec544f0e5d6de8c319aa1993931547907dadc1119cd5320f3d63c4418c7ac92",
+      "bytes": 329578,
+      "sha256": "1666d44c7d41ab74031202b030d2442192dc16e863e51fd4b2332be576ccecbd",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/translations.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -18745,8 +18745,8 @@
       "group": "viewer",
       "revision": "public-viewer-2026-09-19",
       "format": "JS",
-      "bytes": 1181681,
-      "sha256": "fee097d51b9247c9b63e03a7eeb22757e09bc7f00a0f005043146b057359b8f5",
+      "bytes": 1182921,
+      "sha256": "83102a9a54f3588355009300787c40b007949507e1603531403781ceb8b62520",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/viewer/assets/studio.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -18763,7 +18763,7 @@
   ],
   "totals": {
     "files": 1463,
-    "bytes": 811925829,
+    "bytes": 811929251,
     "groups": {
       "site": 51,
       "design": 20,

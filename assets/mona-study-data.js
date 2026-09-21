@@ -12,6 +12,9 @@ const object = (value) => value !== null && typeof value === 'object' && !Array.
 const hash = (value) => typeof value === 'string' && /^[0-9a-f]{64}$/.test(value);
 const count = (value) => Number.isSafeInteger(value) && value >= 0;
 const dimensions = (value) => Array.isArray(value) && value.length === 3 && value.every((n) => Number.isFinite(n) && n > 0);
+const bounds = (value, width, height) => Array.isArray(value) && value.length === 4
+  && value.every(Number.isFinite) && value[0] >= 0 && value[1] >= 0
+  && value[2] > value[0] && value[3] > value[1] && value[2] <= width && value[3] <= height;
 const text = (value) => typeof value === 'string' && value.trim().length > 0;
 const requireThat = (condition, message) => { if (!condition) throw new Error(message); };
 
@@ -113,7 +116,10 @@ export function validateMonaStudy(study, pointer) {
       requireThat(group.framing_rule === 'SHARED_PIXELS_PER_MM'
         && Number.isFinite(group.pixels_per_mm) && group.pixels_per_mm > 0
         && Array.isArray(group.row_roles) && ['fine-c', 'pilot-360'].every((role) => group.row_roles.includes(role))
-        && group.row_roles.every((role) => MONA_ROLES.includes(role)),
+        && group.row_roles.every((role) => MONA_ROLES.includes(role))
+        && object(group.row_pixels_per_mm)
+        && group.row_roles.every((role) => Number.isFinite(group.row_pixels_per_mm[role])
+          && Math.abs(group.row_pixels_per_mm[role] - group.pixels_per_mm) < 1e-8),
       '実寸比は18 cm基準と新案を同じpx/mmで示す必要があります。');
       validateImage(group.sheet);
       requireThat(!images.has(group.sheet.path), '別の比較条件に同じMona画像を流用できません。');
@@ -131,6 +137,19 @@ export function validateMonaStudy(study, pointer) {
         'Mona比較の画像と同方向・同じ表示条件の記録が一致しません。');
         requireThat(!images.has(image.path), '別の比較条件に同じMona画像を流用できません。');
         images.add(image.path);
+      }
+      if (group.kind === 'shape') {
+        requireThat(group.images.every((image) => bounds(image.subject_bounds_px, image.width, image.height)),
+          '同じ画面上高さを確認する、各モデルの投影範囲がありません。');
+        const heights = group.images.map((image) => image.subject_bounds_px[3] - image.subject_bounds_px[1]);
+        requireThat(Math.max(...heights) - Math.min(...heights) <= 1,
+          '形の比較でモデルの画面上高さが揃っていません。');
+      } else {
+        requireThat(bounds(group.normalized_face_region, 1, 1)
+          && group.images.every((image) => Array.isArray(image.normalized_face_region)
+            && image.normalized_face_region.length === 4
+            && image.normalized_face_region.every((value, index) => value === group.normalized_face_region[index])),
+        '顔の拡大で、同じ正規化領域を使った記録が一致しません。');
       }
     }
   }
