@@ -16,16 +16,31 @@ if (pointer.state === 'INPUT_WAIT') {
   }
   console.log('Matrix INPUT_WAIT: no actual cases or public-verification success is implied.');
 } else {
-  const load = async (file) => {
+  const verified = async (file) => {
     const bytes = await readFile(new URL(densityPath(file.path ?? file.url).slice(1), root));
     if (bytes.length !== file.bytes || createHash('sha256').update(bytes).digest('hex') !== file.sha256) throw new Error('Density data hash mismatch');
+    return bytes;
+  };
+  const load = async (file) => {
+    const bytes = await verified(file);
     return JSON.parse(bytes[0] === 0x1f && bytes[1] === 0x8b ? gunzipSync(bytes) : bytes);
   };
   const catalog = validateDensityCatalog(await load(pointer.catalog), pointer);
+  for (const baseline of Object.values(catalog.baselines)) {
+    if (baseline.state === 'READY') for (const file of Object.values(baseline.images)) await verified(file);
+  }
+  for (const reference of catalog.appearance_references ?? []) for (const file of reference.images) await verified(file);
   const cases = [];
+  const checkedGeometry = new Set();
   for (const entry of catalog.cases) {
     if (entry.state === 'INPUT_WAIT') continue;
     const manifest = validateGuideManifest(await load(entry.manifest), entry.id);
+    for (const file of Object.values(entry.images)) await verified(file);
+    for (const file of manifest.geometry_files) {
+      if (checkedGeometry.has(file.sha256)) continue;
+      await verified(file);
+      checkedGeometry.add(file.sha256);
+    }
     if (manifest.metrics.part_count !== entry.metrics.part_count || manifest.metrics.unique_types !== entry.metrics.unique_types) {
       throw new Error('Actual catalog and guide counts differ');
     }

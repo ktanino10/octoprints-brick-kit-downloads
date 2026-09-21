@@ -1,6 +1,7 @@
 """Install one reviewed case's lightweight bytes; merge prior cases without replacing them."""
 
 import argparse
+import copy
 import hashlib
 import json
 from pathlib import Path
@@ -29,6 +30,41 @@ def immutable_write(path, data):
         path.write_bytes(data)
 
 
+def merge_catalog(previous, incoming, accepted_case):
+    merged = copy.deepcopy(incoming)
+    if previous["study_id"] != STUDY or merged["study_id"] != STUDY:
+        raise ValueError("Cannot merge different matrix studies")
+    by_id = {entry["id"]: entry for entry in merged["cases"]}
+    if len(by_id) != len(merged["cases"]) or accepted_case not in by_id:
+        raise ValueError("Duplicate or missing case in incremental catalog")
+    previously_ready = {entry["id"] for entry in previous["cases"] if entry["state"] != "INPUT_WAIT"}
+    if any(entry["state"] != "INPUT_WAIT" and entry["id"] not in previously_ready | {accepted_case}
+           for entry in incoming["cases"]):
+        raise ValueError("An incremental receipt cannot promote other unreviewed cases")
+    for item in previous["cases"]:
+        if item["state"] == "INPUT_WAIT":
+            continue
+        if item["id"] not in by_id:
+            raise ValueError("An incremental handoff removed a published case")
+        if item["id"] == accepted_case:
+            if item != by_id[item["id"]]:
+                raise ValueError("A previously installed case changed")
+        else:
+            by_id[item["id"]] = copy.deepcopy(item)
+    merged["cases"] = [by_id[item["id"]] for item in merged["cases"]]
+    for name, old in previous["baselines"].items():
+        new = merged["baselines"].get(name)
+        if new is None or old.get("manifest_sha256") != new.get("manifest_sha256"):
+            raise ValueError("Fixed baseline changed between case handoffs")
+        if old.get("metrics") != new.get("metrics"):
+            raise ValueError("Fixed baseline metrics changed between case handoffs")
+        if old["state"] == "READY":
+            if new["state"] == "READY" and new != old:
+                raise ValueError("Published baseline media changed")
+            merged["baselines"][name] = copy.deepcopy(old)
+    return merged
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--stage", type=Path, required=True)
@@ -48,19 +84,7 @@ def main():
     catalog_path = ROOT / PREFIX / "catalog.json"
     if catalog_path.exists():
         previous = json.loads(catalog_path.read_text())
-        for item in previous["cases"]:
-            if item["state"] == "INPUT_WAIT":
-                continue
-            if item["id"] == case and item != next_case:
-                raise ValueError("A previously installed case changed")
-            if item["id"] != case:
-                position = next(index for index, entry in enumerate(incoming["cases"]) if entry["id"] == item["id"])
-                incoming["cases"][position] = item
-        for name, baseline in previous["baselines"].items():
-            if baseline["state"] == "READY":
-                incoming["baselines"][name] = baseline
-            elif baseline.get("manifest_sha256") != incoming["baselines"][name].get("manifest_sha256"):
-                raise ValueError("Fixed baseline changed between case handoffs")
+        incoming = merge_catalog(previous, incoming, case)
     source_path = ROOT / "archive/sources" / f"{STUDY}.json"
     source_index = json.loads(source_path.read_text()) if source_path.exists() else {
         "schema_version": 1, "revision": STUDY, "files": [],
