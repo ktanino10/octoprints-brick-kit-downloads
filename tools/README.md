@@ -326,3 +326,30 @@ portable形式の `origin` はfull sourceの `position_origin` と同じ意味�
 大きい公開ZIPの最終化は既存依存を入れた `.venv/bin/python tools/finalize_density_package.py ...` で実行します。
 Blender 5系の圧縮scene検査には既存のzstandard依存が必要です。Releaseのdraftはタグ参照APIで404になる場合があり、
 draftのasset検査はrelease IDで行います。検査コマンド失敗後にpublishを続行してはいけません。
+
+### 改訂1x参照と固定分母
+
+`stage_density_case.py --reference` は `multiplier_cases_newly_ready:0` の
+`mona-fine8-base-root-v2` だけを参照として受けます。通常のcase ID検査を1xまで広げません。
+`reference_revisions` に実12,411部品のCG・CAD・動画・ガイドを追加し、`baselines.mona` の12,435、
+元SHA、旧画像/ZIPおよび5つのtargetは不変にします。次の倍率案のhandoffでも参照は保持します。
+表示と受領recordは固定基準・実数・差−24を分離し、旧1xは独立した履歴で取得できます。
+参照guide/videoのQAは `reference_guides` / `reference_media` へ記録し、15案へ加算しません。
+
+### 原形不変の表示用LOD
+
+`node tools/build_density_display.mjs` は公開済み実OBMのBR/PL矩形ブロックだけから、
+別の `display/geometry/` ファイルを作ります。dev-onlyの固定meshoptimizer 1.2.0（MIT）を使い、
+元頂点の再配置・sloppy・component pruningをしません。0.04 mmは推定簡略誤差であり、
+製造公差やHausdorff保証ではありません。全meshでEuler特性、境界/非多様体辺数、stud top-cap数、
+bounds、volume差2%以内を検査し、満たさなければ生成は失敗します。根元・特殊形状・支持台は原形のままです。
+原形SHAと実guideのSHAへ結ぶ別catalogを作り、実counts/ID/pose/CSV/CAD/STL/Blender/CG/支持証拠は触りません。
+
+実3Dの表示品質から原形へ戻せます。原形ライブラリーも検証して保持し、選択部品previewは常に原形を使います。
+UIに軽量表示を明記し、切替前後の同視点画像・全instance行列・選択部品の原形SHAを検証します。
+新caseを受けた後はdisplay builderを再実行し、過去の固定display meshが同SHAであることも確認します。
+
+`browser_density_performance.py --detail native|light` は入力handler、event-loop yield、描画完了、
+実pointer dragとplay/pauseを分けて測ります。gl.finishの追加待ちが0でも描画負荷ゼロとは読みません。
+`display/performance.json` にCP2の実測と端末/負荷条件を記録しています。390pxはdesktop上のviewportで、
+実スマートフォンや全端末の滑らかさを保証しません。受領済み各実caseと最終最大案で再測定します。

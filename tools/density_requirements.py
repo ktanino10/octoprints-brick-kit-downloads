@@ -4,6 +4,7 @@ import re
 
 MONA_WHISKER_REQUIREMENT = "NO_EXTERNAL_OR_ASSEMBLY_AIDS"
 MONA_GEOMETRY_REVISION = "whisker-root-v2"
+MONA_ROOT_REFERENCE_ID = "mona-fine8-base-root-v2"
 
 
 def case_identity(identifier):
@@ -11,6 +12,12 @@ def case_identity(identifier):
     if not match or (match[4] and match[2] != "mona"):
         raise ValueError("Invalid actual matrix case identity")
     return match[1], MONA_GEOMETRY_REVISION if match[4] else None
+
+
+def artifact_identity(identifier):
+    if identifier == MONA_ROOT_REFERENCE_ID:
+        return "mona-fine8-base", MONA_GEOMETRY_REVISION
+    return case_identity(identifier)
 
 
 def logical_case_id(case):

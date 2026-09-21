@@ -29,6 +29,19 @@ function prefixCount(parts, step) {
   return low;
 }
 
+function geometryFromPrototype(prototype) {
+  if (!(prototype.positions instanceof Float32Array)) return prototypeGeometry(prototype);
+  const geometry = new THREE.BufferGeometry();
+  geometry.setAttribute('position', new THREE.BufferAttribute(prototype.positions, 3));
+  geometry.setIndex(new THREE.BufferAttribute(prototype.indices, 1));
+  geometry.computeVertexNormals();
+  geometry.computeBoundingBox();
+  geometry.computeBoundingSphere();
+  geometry.userData.geometrySha256 = prototype.geometry_sha256;
+  geometry.userData.originalNative = !prototype.source_geometry_sha256;
+  return geometry;
+}
+
 export class DensityStudio extends BrickStudio {
   constructor(host, callbacks) {
     super(host, callbacks);
@@ -47,38 +60,55 @@ export class DensityStudio extends BrickStudio {
     this.preview = null;
     this.aidMeshes = [];
     this.aidMaterial = new THREE.MeshStandardMaterial({ color: '#9aaac0', transparent: true, opacity: 0.6, roughness: 0.85 });
+    this.nativeGeometries = new Map();
+    this.controls.addEventListener('start', () => { this.manualCamera = true; });
+    this.controls.addEventListener('change', () => {
+      if (!this.manualCamera) return;
+      clearTimeout(this.cameraCommitTimer);
+      this.cameraCommitTimer = setTimeout(() => {
+        this.manualCamera = false;
+        this.onViewChange(null);
+      }, 150);
+    });
+    this.controls.addEventListener('end', () => this.onViewChange(null));
   }
 
   geometryFor(id) {
     if (!this.geometries.has(id)) {
       const prototype = this.prototypes.types[id];
       check(prototype, `実部品型 ${id} の形状がありません。箱で代用しません。`);
-      let geometry;
-      if (prototype.positions instanceof Float32Array) {
-        geometry = new THREE.BufferGeometry();
-        geometry.setAttribute('position', new THREE.BufferAttribute(prototype.positions, 3));
-        geometry.setIndex(new THREE.BufferAttribute(prototype.indices, 1));
-        geometry.computeVertexNormals();
-        geometry.computeBoundingBox();
-        geometry.computeBoundingSphere();
-      } else geometry = prototypeGeometry(prototype);
-      this.geometries.set(id, geometry);
+      this.geometries.set(id, geometryFromPrototype(prototype));
     }
     return this.geometries.get(id);
   }
 
-  load(manifest, prototypes, index) {
+  nativeGeometryFor(id) {
+    const prototype = this.nativePrototypes.types[id];
+    check(prototype?.geometry_sha256 === this.manifest.types[id].geometry_sha256,
+      `実部品型 ${id} の共有形状と配置の指紋が一致しません。`);
+    if (!this.nativeGeometries.has(id)) this.nativeGeometries.set(id, geometryFromPrototype(prototype));
+    return this.nativeGeometries.get(id);
+  }
+
+  load(manifest, prototypes, index, nativePrototypes = prototypes) {
     this.clear();
     for (const id of new Set([...manifest.parts, ...manifest.aids].map((part) => part.type_id))) {
-      check(prototypes.types[id]?.geometry_sha256 === manifest.types[id].geometry_sha256,
+      const shape = prototypes.types[id];
+      check(shape && (shape.source_geometry_sha256 ?? shape.geometry_sha256) === manifest.types[id].geometry_sha256
+        && nativePrototypes.types[id]?.geometry_sha256 === manifest.types[id].geometry_sha256,
         `実部品型 ${id} の共有形状と配置の指紋が一致しません。`);
     }
     if (this.prototypes !== prototypes) {
       this.geometries.forEach((geometry) => geometry.dispose());
       this.geometries.clear();
     }
+    if (this.nativePrototypes !== nativePrototypes) {
+      this.nativeGeometries.forEach((geometry) => geometry.dispose());
+      this.nativeGeometries.clear();
+    }
     this.manifest = manifest;
     this.prototypes = prototypes;
+    this.nativePrototypes = nativePrototypes;
     this.index = index;
     this.progress = { explosion: -1, steps: 0, mode: 'assembled' };
     const materials = new Map();
@@ -233,10 +263,14 @@ export class DensityStudio extends BrickStudio {
     return { ready: true, candidate: this.manifest.candidate_id, actual_instances: checked,
       matrix_elements_mismatched: mismatches, visible_instances: visible, explosion: this.progress.explosion,
       draw_calls: this.renderer.info.render.calls, triangles: this.renderer.info.render.triangles,
-      shared_geometries: this.geometries.size, instance_batches: this.batches.length, actual_aids: this.aidMeshes.length };
+      shared_geometries: this.geometries.size, instance_batches: this.batches.length, actual_aids: this.aidMeshes.length,
+      display_mode: this.prototypes.mode, selected_part_native_geometry: true,
+      camera: [...this.camera.position.toArray(), ...this.controls.target.toArray()] };
   }
 
   clear() {
+    clearTimeout(this.cameraCommitTimer);
+    this.manualCamera = false;
     this.aidMeshes?.forEach(({ mesh }) => this.model.remove(mesh));
     this.aidMeshes = [];
     super.clear();
@@ -248,6 +282,8 @@ export class DensityStudio extends BrickStudio {
   }
 
   dispose() {
+    this.nativeGeometries.forEach((geometry) => geometry.dispose());
+    this.nativeGeometries.clear();
     this.movingMaterial.dispose();
     this.aidMaterial.dispose();
     super.dispose();

@@ -1,6 +1,7 @@
 """Normalize an approved staged case into the public matrix/guide contract without changing poses."""
 
 import argparse
+import copy
 import gzip
 import hashlib
 import json
@@ -10,7 +11,7 @@ import struct
 import subprocess
 
 from mona_study_evidence import verify_manifest_bom, body_height_families
-from density_requirements import case_identity
+from density_requirements import MONA_ROOT_REFERENCE_ID, artifact_identity
 from density_root_evidence import validate_root_evidence
 from validate_archive import privacy
 
@@ -31,7 +32,7 @@ def encoded(data):
 
 
 def revision_fields(identifier, *records):
-    logical, revision = case_identity(identifier)
+    logical, revision = artifact_identity(identifier)
     if revision is None:
         return {}
     if not records or any(record.get("logical_case_id") != logical or record.get("geometry_revision") != revision
@@ -109,6 +110,9 @@ def main():
     native_root = stage / "native/artifacts/studies" / STUDY
     stage_review = json.loads((stage / "source-review.json").read_text())
     case_id = stage_review["case_id"]
+    is_reference = stage_review.get("kind") == "BASELINE_REFERENCE_NOT_MULTIPLIER_CASE"
+    if is_reference and (case_id != MONA_ROOT_REFERENCE_ID or receipt.get("multiplier_cases_newly_ready") != 0):
+        raise ValueError("A reference cannot be accepted as a multiplier case")
     if case_id not in receipt.get("case_ids", [receipt.get("case_id")]) or stage_review["source_commit"] != receipt["source_commit"]:
         raise ValueError("Staged case is not authorized by this fixed READY receipt")
     summary = json.loads((light / receipt.get("case_summary_path", f"cases/{case_id}-summary.json")).read_text())
@@ -298,6 +302,11 @@ def main():
                         "animations": animations}}
     if whisker_support:
         entry["whisker_support"] = whisker_support
+    if is_reference:
+        entry.pop("count_percentage")
+        entry.update(kind="BASELINE_REFERENCE_NOT_MULTIPLIER_CASE", counts_toward_multiplier_cases=False,
+                     fixed_count_baseline=summary["metrics"]["baseline_count"],
+                     actual_count_difference_from_fixed=summary["metrics"]["count_difference"])
     raw_matrix = json.loads((light / "matrix.json").read_text())
     baselines = {}
     existing_catalog_path = ROOT / PREFIX.lstrip("/") / "catalog.json"
@@ -332,6 +341,13 @@ def main():
                    "id": row["case_id"], **revision_fields(row["case_id"], row),
                    "character": row["character"], "count_percentage": int(round(row["target_ratio"] * 100)),
                    "state": "INPUT_WAIT"} for row in raw_matrix["cases"]]}
+    if is_reference:
+        if not existing_catalog or entry["fixed_count_baseline"] != existing_catalog["baselines"]["mona"]["metrics"]["part_count"]:
+            raise ValueError("The revised reference cannot change the frozen multiplier denominator")
+        catalog = copy.deepcopy(existing_catalog)
+        catalog.setdefault("reference_revisions", {})["mona"] = entry
+    elif existing_catalog and "reference_revisions" in existing_catalog:
+        catalog["reference_revisions"] = copy.deepcopy(existing_catalog["reference_revisions"])
     (output / "catalog.json").write_bytes(encoded(catalog))
     translations = {row["note_ja"]: row["note_en"] for row in references["rows"]}
     for stem in ["observations"]:

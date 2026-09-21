@@ -22,7 +22,7 @@ base = args.url.rstrip("/") + "/"
 args.output.mkdir(parents=True, exist_ok=True)
 report = {"base": base, "engine": args.engine, "browser_executable": args.browser,
           "input_wait": args.expect_input_wait, "checks": [], "errors": [], "cases": [],
-          "media": [], "baseline_media": []}
+          "media": [], "baseline_media": [], "reference_guides": [], "reference_media": [], "display_modes": []}
 
 
 def checked(message):
@@ -70,7 +70,8 @@ with sync_playwright() as playwright:
         else:
             assert pointer["state"] in ["PARTIAL", "READY"]
             catalog = context.request.get(urljoin(base, pointer["catalog"]["path"].lstrip("/"))).json()
-            cases = [entry for entry in catalog["cases"] if entry["state"] == "READY"
+            available = catalog["cases"] + (list(catalog.get("reference_revisions", {}).values()) if args.case else [])
+            cases = [entry for entry in available if entry["state"] == "READY"
                      and (not args.case or entry["id"] in args.case)]
             assert cases
             for locale in ["ja", "en"]:
@@ -86,11 +87,15 @@ with sync_playwright() as playwright:
                         for image in page.locator("#matrix-cards img").all():
                             expect(image).not_to_have_js_property("naturalWidth", 0)
                             uncropped_image(image)
-                    baseline = catalog["baselines"][character]
+                    baseline = catalog.get("reference_revisions", {}).get(character, catalog["baselines"][character])
+                    if character in catalog.get("reference_revisions", {}):
+                        distinction = page.locator(f'[data-reference-count-distinction="{character}"]')
+                        expect(distinction).to_contain_text(f'{catalog["baselines"][character]["metrics"]["part_count"]:,}')
+                        expect(distinction).to_contain_text(f'{baseline["metrics"]["part_count"]:,}')
                     if baseline["state"] == "READY" and locale == "en" and not args.skip_baseline_media:
                         expect(page.locator(f'[data-baseline-download="{character}"]')).to_have_attribute(
                             "href", baseline["assets"]["native_cad"][0]["url"])
-                        videos = page.locator("#matrix-reference details")
+                        videos = page.locator("#matrix-reference details.media-disclosure")
                         videos.locator("summary").click()
                         for chapter in ["turntable", "radial_explode", "bottom_up"]:
                             result = play_actual_chapter(page.locator(f'[data-baseline-chapter="{chapter}"]'),
@@ -105,6 +110,24 @@ with sync_playwright() as playwright:
                 expect(page.locator("#guide-error")).to_be_hidden()
                 expect(page.locator("#density-canvas")).to_have_attribute("data-visible-parts", str(entry["metrics"]["part_count"]))
                 english(page)
+                if catalog.get("display_catalog") and page.locator("#guide-detail").input_value() == "light":
+                    initial = page.evaluate("window.__densityGuide.diagnostics()")
+                    expect(page.locator("#guide-mesh-mode")).to_contain_text("Lightweight display model")
+                    page.locator("#guide-detail").select_option("native")
+                    expect(page.locator("#density-canvas")).to_have_attribute("data-ready", "true", timeout=180000)
+                    expect(page.locator("#density-canvas")).to_have_attribute("data-geometry-mode", "NATIVE_FLOAT32")
+                    page.locator("#density-canvas canvas").screenshot(path=str(args.output / f'{entry["id"]}-original-native.png'))
+                    native_view = page.evaluate("window.__densityGuide.diagnostics()")
+                    page.locator("#guide-detail").select_option("light")
+                    expect(page.locator("#density-canvas")).to_have_attribute("data-ready", "true", timeout=180000)
+                    expect(page.locator("#density-canvas")).to_have_attribute("data-geometry-mode", "NATIVE_PREVIEW_TESSELLATION")
+                    page.locator("#density-canvas canvas").screenshot(path=str(args.output / f'{entry["id"]}-display-light.png'))
+                    light_view = page.evaluate("window.__densityGuide.diagnostics()")
+                    assert native_view["actual_instances"] == light_view["actual_instances"] == entry["metrics"]["part_count"]
+                    assert native_view["matrix_elements_mismatched"] == light_view["matrix_elements_mismatched"] == 0
+                    assert all(abs(left - right) < 1e-4 for left, right in zip(initial["camera"], light_view["camera"]))
+                    assert light_view["triangles"] < native_view["triangles"]
+                    report["display_modes"].append({"case_id": entry["id"], "original": native_view, "lightweight": light_view})
                 root_reference = entry.get("whisker_support", {}).get("assembly_validation_ref")
                 if root_reference:
                     root_proof = context.request.get(urljoin(base, root_reference["path"].lstrip("/"))).json()
@@ -117,7 +140,7 @@ with sync_playwright() as playwright:
                             "(input, step) => { input.value = step; input.dispatchEvent(new Event('input', {bubbles:true})); }", str(before))
                         expect(page.locator("#guide-active")).to_contain_text(module["part_id"])
                         expect(page.locator("#guide-current-course")).to_contain_text("support height")
-                        expect(page.locator("#guide-current-course")).to_contain_text(str(module["receiving_body_stage_z_mm"]))
+                        expect(page.locator("#guide-current-course")).to_contain_text(str(module["receiving_body_stage_z_mm"]).removesuffix(".0"))
                         expect(page.locator("#guide-current-course")).to_contain_text(str(module["physical_bottom_z_mm"]).removesuffix(".0"))
                         page.locator('[data-guide-action="part-next"]').click()
                         expect(page.locator("#density-canvas")).to_have_attribute("data-visible-parts", str(module["step"]))
@@ -126,6 +149,9 @@ with sync_playwright() as playwright:
                         expect(page.locator("#guide-selection strong")).to_have_text(module["part_id"])
                         page.locator('[data-guide-action="part-bottom"]').click()
                         expect(page.locator("#guide-part-preview canvas")).to_be_visible()
+                        expect(page.locator("#guide-part-preview")).to_have_attribute("data-original-native", "true")
+                        native_part_sha = page.locator("#guide-part-preview").get_attribute("data-geometry-sha256")
+                        assert native_part_sha and len(native_part_sha) == 64
                         page.locator("#guide-part-preview").screenshot(
                             path=str(args.output / f'{module["part_id"]}-native-underside.png'))
                         assert page.evaluate("window.__densityGuide.diagnostics().matrix_elements_mismatched") == 0
@@ -171,9 +197,10 @@ with sync_playwright() as playwright:
                     clip = entry["assets"]["animations"][name]
                     video = page.locator("#guide-downloads video").nth(position)
                     result = play_actual_chapter(video, clip)
-                    report["media"].append({"case_id": entry["id"], "chapter": name, **result})
+                    media_kind = "reference_media" if entry.get("kind") == "BASELINE_REFERENCE_NOT_MULTIPLIER_CASE" else "media"
+                    report[media_kind].append({"case_id": entry["id"], "chapter": name, **result})
                 page.screenshot(path=str(args.output / f'{entry["id"]}.png'), full_page=True)
-                report["cases"].append(entry["id"])
+                report["reference_guides" if entry.get("kind") == "BASELINE_REFERENCE_NOT_MULTIPLIER_CASE" else "cases"].append(entry["id"])
             checked("actual cases support radial cycling, all views, empty/part/course/full assembly, selection and shared reload")
             checked("actual Release/Pages videos decode and play every declared chapter through the page CSP")
             pending = next((entry for entry in catalog["cases"] if entry["state"] == "INPUT_WAIT"), None)
@@ -229,7 +256,10 @@ with sync_playwright() as playwright:
             missing_image.goto(urljoin(base, f'en/density-matrix.html?character={entry["character"]}&view=front'),
                                wait_until="networkidle")
             expect(missing_image.locator("#matrix-error")).to_be_visible()
-            expect(missing_image.locator(f'.density-card[data-case="{entry["id"]}"] img')).to_have_js_property("naturalWidth", 0)
+            image_selector = "#matrix-reference img" if entry.get("kind") == "BASELINE_REFERENCE_NOT_MULTIPLIER_CASE" else f'.density-card[data-case="{entry["id"]}"] img'
+            failed_images = missing_image.locator(image_selector)
+            assert any(image.evaluate("(img) => img.currentSrc") == image_url and image.evaluate("(img) => img.naturalWidth") == 0
+                       for image in failed_images.all())
             english(missing_image)
             missing_image_context.close()
             broken_geometry_context = browser.new_context()

@@ -98,7 +98,14 @@ export async function decodeNativeType(input, file) {
   const digest = [...new Uint8Array(await crypto.subtle.digest('SHA-256', bytes.subarray(12)))]
     .map((byte) => byte.toString(16).padStart(2, '0')).join('');
   check(digest === file.geometry_sha256, '型別の頂点・面が記録された実メッシュと一致しません。');
-  return { mode: 'NATIVE_FLOAT32', types: { [file.type_id]: { positions, indices, geometry_sha256: digest } } };
+  const lightweight = file.mode === 'NATIVE_PREVIEW_TESSELLATION';
+  if (lightweight) check(isHash(file.source_geometry_sha256)
+    && file.quality?.original_vertex_positions_retained === true && file.quality?.manufacturing_geometry_modified === false
+    && Number.isFinite(file.quality.approximate_error_mm) && file.quality.approximate_error_mm <= 0.040001,
+  '表示用軽量形状の原形指紋・誤差・変更範囲が不正です。');
+  return { mode: lightweight ? 'NATIVE_PREVIEW_TESSELLATION' : 'NATIVE_FLOAT32',
+    types: { [file.type_id]: { positions, indices, geometry_sha256: digest,
+      ...(lightweight ? { source_geometry_sha256: file.source_geometry_sha256 } : {}) } } };
 }
 
 export async function loadNativeLibraries(files, signal) {

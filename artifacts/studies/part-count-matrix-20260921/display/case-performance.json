@@ -1,0 +1,404 @@
+{
+  "schema_version": 1,
+  "study_id": "part-count-matrix-20260921",
+  "scope": "ACTUAL_CASE_DISPLAY_ONLY_MEASUREMENTS_NOT_A_DEVICE_OR_PHYSICAL_GUARANTEE",
+  "environment": {
+    "host": "macOS desktop",
+    "engine": "Playwright-pinned WebKit 2203",
+    "renderer": "WebKit WebGL; underlying hardware/software backend not disclosed",
+    "mobile": "390px viewport on the same desktop host, not a phone",
+    "conditions": "Local preview; concurrent workloads vary. Raw rendering completion, handler, event-loop, drag and pause values are distinct."
+  },
+  "cases": {
+    "mona-p120-root-v2": [
+      {
+        "width": 1440,
+        "height": 1000,
+        "load_ms": 591.3985419902019,
+        "frames_ms": [
+          74,
+          40.000000000000114,
+          28.999999999999886,
+          33,
+          34
+        ],
+        "input_handler_ms": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "event_loop_yield_ms": [
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 49.495667044539005,
+        "pause_ui_response_ms": 45.62483303016052,
+        "actual_instances": 14913,
+        "display_triangles": 25113748,
+        "radial_to_finished_frame_ms": 62
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "load_ms": 543.8161669881083,
+        "frames_ms": [
+          74,
+          36,
+          37,
+          29,
+          32
+        ],
+        "input_handler_ms": [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "event_loop_yield_ms": [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 56.82558298576623,
+        "pause_ui_response_ms": 64.97258297167718,
+        "actual_instances": 14913,
+        "display_triangles": 25113748,
+        "radial_to_finished_frame_ms": 77
+      }
+    ],
+    "copilot-p120": [
+      {
+        "width": 1440,
+        "height": 1000,
+        "load_ms": 745.7872920203954,
+        "frames_ms": [
+          78,
+          71,
+          26,
+          35,
+          34
+        ],
+        "input_handler_ms": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "event_loop_yield_ms": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 53.84758400032297,
+        "pause_ui_response_ms": 77.14779098751023,
+        "actual_instances": 21388,
+        "display_triangles": 37361204,
+        "radial_to_finished_frame_ms": 82.00000000000023
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "load_ms": 659.1645420412533,
+        "frames_ms": [
+          59,
+          32,
+          32,
+          34,
+          33
+        ],
+        "input_handler_ms": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "event_loop_yield_ms": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 52.02574998838827,
+        "pause_ui_response_ms": 99.9005000339821,
+        "actual_instances": 21388,
+        "display_triangles": 37361204,
+        "radial_to_finished_frame_ms": 71
+      }
+    ],
+    "copilot-p150": [
+      {
+        "width": 1440,
+        "height": 1000,
+        "load_ms": 780.0918749999255,
+        "frames_ms": [
+          103.00000000000011,
+          61.999999999999886,
+          37,
+          33.000000000000114,
+          32.999999999999886
+        ],
+        "input_handler_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "event_loop_yield_ms": [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 54.18187496252358,
+        "pause_ui_response_ms": 64.45187499048188,
+        "actual_instances": 26690,
+        "display_triangles": 46642278,
+        "radial_to_finished_frame_ms": 98
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "load_ms": 727.572291973047,
+        "frames_ms": [
+          100.00000000000011,
+          42.999999999999886,
+          46,
+          49,
+          48
+        ],
+        "input_handler_ms": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "event_loop_yield_ms": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 60.01279200427234,
+        "pause_ui_response_ms": 71.09270803630352,
+        "actual_instances": 26690,
+        "display_triangles": 46642278,
+        "radial_to_finished_frame_ms": 106.00000000000023
+      }
+    ],
+    "copilot-p200": [
+      {
+        "width": 1440,
+        "height": 1000,
+        "load_ms": 2197.6632499718107,
+        "frames_ms": [
+          211,
+          113,
+          51,
+          50,
+          50
+        ],
+        "input_handler_ms": [
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "event_loop_yield_ms": [
+          2.0000000000004547,
+          1,
+          1,
+          1,
+          1
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 116.73000000882894,
+        "pause_ui_response_ms": 188.15429200185463,
+        "actual_instances": 35648,
+        "display_triangles": 62163672,
+        "radial_to_finished_frame_ms": 315.00000000000045
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "load_ms": 1990.7134579843841,
+        "frames_ms": [
+          124,
+          106,
+          95,
+          62,
+          114
+        ],
+        "input_handler_ms": [
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "event_loop_yield_ms": [
+          2.0000000000004547,
+          1,
+          2,
+          1,
+          1
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 193.73800000175834,
+        "pause_ui_response_ms": 163.0940829636529,
+        "actual_instances": 35648,
+        "display_triangles": 62163672,
+        "radial_to_finished_frame_ms": 88.00000000000045
+      }
+    ],
+    "copilot-p300": [
+      {
+        "width": 1440,
+        "height": 1000,
+        "load_ms": 1218.941833009012,
+        "frames_ms": [
+          135,
+          66,
+          63,
+          68,
+          68
+        ],
+        "input_handler_ms": [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "event_loop_yield_ms": [
+          1.0000000000002274,
+          0,
+          1,
+          0,
+          0
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 100.52816703682765,
+        "pause_ui_response_ms": 88.00983295077458,
+        "actual_instances": 53350,
+        "display_triangles": 92660696,
+        "radial_to_finished_frame_ms": 201
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "load_ms": 1179.2595000006258,
+        "frames_ms": [
+          119,
+          58,
+          66,
+          67,
+          53
+        ],
+        "input_handler_ms": [
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "event_loop_yield_ms": [
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 83.5680830059573,
+        "pause_ui_response_ms": 84.38662503613159,
+        "actual_instances": 53350,
+        "display_triangles": 92660696,
+        "radial_to_finished_frame_ms": 188
+      }
+    ]
+  }
+}

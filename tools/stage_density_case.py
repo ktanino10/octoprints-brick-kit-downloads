@@ -8,7 +8,7 @@ from pathlib import Path, PurePosixPath
 import re
 import subprocess
 import zipfile
-from density_requirements import case_identity
+from density_requirements import MONA_ROOT_REFERENCE_ID, artifact_identity, case_identity
 
 from validate_archive import privacy
 
@@ -30,7 +30,7 @@ def safe_relative(value):
 
 
 def root_validation_path(case, summary, model, payload):
-    logical, revision = case_identity(case)
+    logical, revision = artifact_identity(case)
     if revision is None:
         return None
     if any(record.get("logical_case_id") != logical or record.get("geometry_revision") != revision
@@ -96,6 +96,7 @@ def main():
     parser.add_argument("--receipt", type=Path, required=True)
     parser.add_argument("--receipt-sha256", required=True)
     parser.add_argument("--case", help="Select one exact case from a multi-case READY packet")
+    parser.add_argument("--reference", action="store_true", help="Accept only the explicitly separate support-free 1x reference")
     args = parser.parse_args()
     receipt_bytes = args.receipt.read_bytes()
     if sha(receipt_bytes) != args.receipt_sha256:
@@ -110,7 +111,11 @@ def main():
     case = args.case or (case_ids[0] if len(case_ids) == 1 else None)
     if case is None or case not in case_ids:
         raise ValueError("Select an explicitly authorized case from this READY packet")
-    case_identity(case)
+    if args.reference:
+        if case != MONA_ROOT_REFERENCE_ID or receipt.get("multiplier_cases_newly_ready") != 0:
+            raise ValueError("A reference-only packet must not promote any multiplier case")
+    else:
+        case_identity(case)
     commit = receipt["source_commit"]
     if not re.fullmatch(r"[0-9a-f]{40}", commit):
         raise ValueError("A fixed source commit is required")
@@ -189,6 +194,7 @@ def main():
             package.extractall(native_root)
     (stage / "source-review.json").write_text(json.dumps({
         "study_id": STUDY, "case_id": case, "source_commit": commit, "source_light_files": files,
+        "kind": "BASELINE_REFERENCE_NOT_MULTIPLIER_CASE" if args.reference else "ACTUAL_MULTIPLIER_CASE",
         "private_verification_inputs_read": len(proof), "private_inputs_copied": 0,
         "source_release_files": [{key: item[key] for key in ["bytes", "sha256"]} | {"filename": Path(item["path"]).name}
                                  for item in releases],

@@ -135,6 +135,23 @@ class DensityReceiptTests(unittest.TestCase):
         self.assertFalse(result["historical_cases"][0]["counts_toward_requested_delivery"])
         self.assertTrue(result["historical_cases"][0]["viewer_url"].endswith("?case=mona-p120"))
 
+    def test_reference_actual_count_never_replaces_the_frozen_denominator(self):
+        catalog = self.fixture()
+        reference = copy.deepcopy(catalog["cases"][0])
+        reference.update(id="mona-fine8-base-root-v2", kind="BASELINE_REFERENCE_NOT_MULTIPLIER_CASE",
+                         counts_toward_multiplier_cases=False, fixed_count_baseline=12435,
+                         actual_count_difference_from_fixed=-24, metrics={"part_count": 12411})
+        catalog["reference_revisions"] = {"mona": reference}
+        result = receipt_for(catalog)
+        self.assertEqual(result["baseline_counts"]["mona"], 12435)
+        self.assertEqual(result["reference_revisions"]["mona"]["actual_count"], 12411)
+        self.assertEqual(result["reference_revisions"]["mona"]["difference_from_fixed"], -24)
+        self.assertEqual(len(result["cases"]), 15)
+        self.assertEqual(result["requested_delivery"]["requirement_ready_case_count"], 15)
+        reference["fixed_count_baseline"] = 12411
+        with self.assertRaises(ValueError):
+            receipt_for(catalog)
+
 
 if __name__ == "__main__":
     unittest.main()

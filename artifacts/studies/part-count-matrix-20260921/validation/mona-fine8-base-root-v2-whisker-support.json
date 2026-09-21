@@ -1,0 +1,4427 @@
+{
+  "schema_version": 1,
+  "case_id": "mona-fine8-base-root-v2",
+  "logical_case_id": "mona-fine8-base",
+  "geometry_revision": "whisker-root-v2",
+  "status": "DIGITAL_SELF_SUPPORTING_UNTESTED",
+  "external_aid_count": 0,
+  "assembly_aid_count": 0,
+  "actual_parts": 12411,
+  "actual_types": 121,
+  "geometry_sequence_identity_sha256": "19e0e5c4f812e099122665b397fed2a1b3ae52d2128348aa1e4a520cddf48689",
+  "native_root_contact_evidence_sha256": "3f3a3276ef7fa674f5b4a3306873ebb6675cd070d66d1702f498b2de5bbdbfa2",
+  "actual_native_root_checks": {
+    "result": "PASS_ACTUAL_BODY_ROOT_BREP_CONTACTS",
+    "modules": [
+      {
+        "part_id": "MONA-FINE8-BASE-ROOT-V2-ROOT-01",
+        "native_root_type": "WR-d41191a5d910218e",
+        "actual_single_solid": true,
+        "anchor_role": "WHISKER_ROOT_MODULE",
+        "body_supports": [
+          {
+            "lower_part_id": "MON-C360-01884",
+            "native_bearing_mm2": 22.764799999999966,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-01887",
+            "native_bearing_mm2": 77.26088642824928,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-01895",
+            "native_bearing_mm2": 80.34995085869912,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-01906",
+            "native_bearing_mm2": 80.34995085869912,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-01916",
+            "native_bearing_mm2": 80.34995085869912,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-01927",
+            "native_bearing_mm2": 80.34995085869912,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-01936",
+            "native_bearing_mm2": 22.92254225967089,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-01937",
+            "native_bearing_mm2": 113.72094201050176,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-01938",
+            "native_bearing_mm2": 63.06604889213176,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-01947",
+            "native_bearing_mm2": 39.608037835572404,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-01948",
+            "native_bearing_mm2": 161.00192824724232,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-01949",
+            "native_bearing_mm2": 120.67593955297073,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-01958",
+            "native_bearing_mm2": 22.922542259671214,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-01959",
+            "native_bearing_mm2": 79.75154446803387,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-01960",
+            "native_bearing_mm2": 63.06604889213225,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          }
+        ],
+        "root_stud_count": 55,
+        "root_xy_span_mm": [
+          120,
+          56
+        ],
+        "body_mm": [
+          175.8,
+          63.8,
+          9.6
+        ],
+        "module_position_mm": [
+          -124,
+          -68,
+          78.4
+        ],
+        "module_insertion_step": 2152,
+        "gravity_balance": {
+          "result": "PASS_NOMINAL_CAD_STATIC_MOMENT_BOUND",
+          "minimum_support_margin_mm": 16.095921476485756,
+          "required_margin_mm": 1.0,
+          "actual_bearing_hull_xy_mm": [
+            [
+              -163.7,
+              -75.7
+            ],
+            [
+              -155.7,
+              -83.9
+            ],
+            [
+              -67.9,
+              -99.9
+            ],
+            [
+              -36.1,
+              -99.9
+            ],
+            [
+              -36.1,
+              -36.1
+            ],
+            [
+              -67.9,
+              -36.1
+            ],
+            [
+              -163.7,
+              -68.1
+            ]
+          ],
+          "root_cad_volume_mm3": 16714.97902942319,
+          "root_cad_centroid_mm": [
+            -109.97073024716073,
+            -72.8627058579219,
+            85.91730073668411
+          ],
+          "downstream_payloads": [
+            {
+              "part_id": "MON-C360-02309",
+              "cad_volume_mm3": 889.4381725972286,
+              "cad_centroid_mm": [
+                -172.0,
+                -84.0,
+                91.28851979842972
+              ]
+            },
+            {
+              "part_id": "MON-C360-02322",
+              "cad_volume_mm3": 1748.985519673884,
+              "cad_centroid_mm": [
+                -140.0,
+                -84.0,
+                91.32804771429021
+              ]
+            },
+            {
+              "part_id": "MON-C360-02332",
+              "cad_volume_mm3": 1750.8788530072181,
+              "cad_centroid_mm": [
+                -124.0,
+                -84.0,
+                91.32956723480018
+              ]
+            },
+            {
+              "part_id": "MON-C360-02343",
+              "cad_volume_mm3": 1750.8788530072195,
+              "cad_centroid_mm": [
+                -108.0,
+                -84.0,
+                91.32956723480018
+              ]
+            },
+            {
+              "part_id": "MON-C360-02355",
+              "cad_volume_mm3": 1750.8788530072193,
+              "cad_centroid_mm": [
+                -92.0,
+                -84.0,
+                91.32956723480018
+              ]
+            },
+            {
+              "part_id": "MON-C360-02365",
+              "cad_volume_mm3": 1750.878853007219,
+              "cad_centroid_mm": [
+                -76.0,
+                -84.0,
+                91.32956723480018
+              ]
+            },
+            {
+              "part_id": "MON-C360-02376",
+              "cad_volume_mm3": 1750.87885300722,
+              "cad_centroid_mm": [
+                -60.0,
+                -84.0,
+                91.32956723480018
+              ]
+            },
+            {
+              "part_id": "MON-C360-02387",
+              "cad_volume_mm3": 1750.8788530072184,
+              "cad_centroid_mm": [
+                -44.0,
+                -84.0,
+                91.32956723480018
+              ]
+            },
+            {
+              "part_id": "MON-C360-02308",
+              "cad_volume_mm3": 712.209447484139,
+              "cad_centroid_mm": [
+                -184.0,
+                -80.0,
+                91.16041236656665
+              ]
+            },
+            {
+              "part_id": "MON-C360-02315",
+              "cad_volume_mm3": 1319.2118461355556,
+              "cad_centroid_mm": [
+                -156.0,
+                -80.0,
+                91.31472247113365
+              ]
+            },
+            {
+              "part_id": "MON-C360-02306",
+              "cad_volume_mm3": 479.4687951734614,
+              "cad_centroid_mm": [
+                -200.0,
+                -76.0,
+                91.13842798859503
+              ]
+            },
+            {
+              "part_id": "MON-C360-02307",
+              "cad_volume_mm3": 479.4687951734613,
+              "cad_centroid_mm": [
+                -192.0,
+                -76.0,
+                91.13842798859503
+              ]
+            },
+            {
+              "part_id": "MON-C360-02377",
+              "cad_volume_mm3": 1750.878853007219,
+              "cad_centroid_mm": [
+                -60.0,
+                -52.0,
+                91.32956723480018
+              ]
+            },
+            {
+              "part_id": "MON-C360-02388",
+              "cad_volume_mm3": 1750.8788530072177,
+              "cad_centroid_mm": [
+                -44.0,
+                -52.0,
+                91.32956723480018
+              ]
+            },
+            {
+              "part_id": "MON-C360-02592",
+              "cad_volume_mm3": 1750.8788530072131,
+              "cad_centroid_mm": [
+                -60.0,
+                -100.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02613",
+              "cad_volume_mm3": 1750.8788530072131,
+              "cad_centroid_mm": [
+                -28.0,
+                -100.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02593",
+              "cad_volume_mm3": 1750.8788530072136,
+              "cad_centroid_mm": [
+                -60.0,
+                -84.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02614",
+              "cad_volume_mm3": 1750.8788530072134,
+              "cad_centroid_mm": [
+                -28.000000000000004,
+                -84.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02526",
+              "cad_volume_mm3": 712.2094474841384,
+              "cad_centroid_mm": [
+                -184.0,
+                -80.0,
+                95.96041236656664
+              ]
+            },
+            {
+              "part_id": "MON-C360-02594",
+              "cad_volume_mm3": 1750.878853007214,
+              "cad_centroid_mm": [
+                -60.0,
+                -68.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02615",
+              "cad_volume_mm3": 1750.8788530072138,
+              "cad_centroid_mm": [
+                -28.0,
+                -68.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02595",
+              "cad_volume_mm3": 1750.8788530072136,
+              "cad_centroid_mm": [
+                -60.0,
+                -52.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02616",
+              "cad_volume_mm3": 1750.878853007213,
+              "cad_centroid_mm": [
+                -28.0,
+                -52.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02596",
+              "cad_volume_mm3": 1750.8788530072136,
+              "cad_centroid_mm": [
+                -60.0,
+                -36.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02617",
+              "cad_volume_mm3": 1750.8788530072134,
+              "cad_centroid_mm": [
+                -28.0,
+                -36.0,
+                96.12956723480019
+              ]
+            }
+          ],
+          "assembly_prefix_checks": [
+            {
+              "after_step": 2152,
+              "added_part_id": "MONA-FINE8-BASE-ROOT-V2-ROOT-01",
+              "minimum_support_margin_mm": 19.056805357505908
+            },
+            {
+              "after_step": 2347,
+              "added_part_id": "MON-C360-02309",
+              "minimum_support_margin_mm": 17.941373730760397
+            },
+            {
+              "after_step": 2348,
+              "added_part_id": "MON-C360-02322",
+              "minimum_support_margin_mm": 17.941373730760397
+            },
+            {
+              "after_step": 2349,
+              "added_part_id": "MON-C360-02332",
+              "minimum_support_margin_mm": 17.941373730760397
+            },
+            {
+              "after_step": 2350,
+              "added_part_id": "MON-C360-02343",
+              "minimum_support_margin_mm": 17.941373730760397
+            },
+            {
+              "after_step": 2351,
+              "added_part_id": "MON-C360-02355",
+              "minimum_support_margin_mm": 17.941373730760397
+            },
+            {
+              "after_step": 2352,
+              "added_part_id": "MON-C360-02365",
+              "minimum_support_margin_mm": 17.941373730760397
+            },
+            {
+              "after_step": 2353,
+              "added_part_id": "MON-C360-02376",
+              "minimum_support_margin_mm": 17.941373730760397
+            },
+            {
+              "after_step": 2354,
+              "added_part_id": "MON-C360-02387",
+              "minimum_support_margin_mm": 17.941373730760397
+            },
+            {
+              "after_step": 2366,
+              "added_part_id": "MON-C360-02308",
+              "minimum_support_margin_mm": 17.19566429333859
+            },
+            {
+              "after_step": 2367,
+              "added_part_id": "MON-C360-02315",
+              "minimum_support_margin_mm": 17.19566429333859
+            },
+            {
+              "after_step": 2368,
+              "added_part_id": "MON-C360-02306",
+              "minimum_support_margin_mm": 16.75268196486619
+            },
+            {
+              "after_step": 2369,
+              "added_part_id": "MON-C360-02307",
+              "minimum_support_margin_mm": 16.75268196486619
+            },
+            {
+              "after_step": 2376,
+              "added_part_id": "MON-C360-02377",
+              "minimum_support_margin_mm": 16.75268196486619
+            },
+            {
+              "after_step": 2377,
+              "added_part_id": "MON-C360-02388",
+              "minimum_support_margin_mm": 16.75268196486619
+            },
+            {
+              "after_step": 2547,
+              "added_part_id": "MON-C360-02592",
+              "minimum_support_margin_mm": 16.75268196486619
+            },
+            {
+              "after_step": 2548,
+              "added_part_id": "MON-C360-02613",
+              "minimum_support_margin_mm": 16.75268196486619
+            },
+            {
+              "after_step": 2560,
+              "added_part_id": "MON-C360-02593",
+              "minimum_support_margin_mm": 16.75268196486619
+            },
+            {
+              "after_step": 2561,
+              "added_part_id": "MON-C360-02614",
+              "minimum_support_margin_mm": 16.75268196486619
+            },
+            {
+              "after_step": 2568,
+              "added_part_id": "MON-C360-02526",
+              "minimum_support_margin_mm": 16.095921476485756
+            },
+            {
+              "after_step": 2575,
+              "added_part_id": "MON-C360-02594",
+              "minimum_support_margin_mm": 16.095921476485756
+            },
+            {
+              "after_step": 2576,
+              "added_part_id": "MON-C360-02615",
+              "minimum_support_margin_mm": 16.095921476485756
+            },
+            {
+              "after_step": 2587,
+              "added_part_id": "MON-C360-02595",
+              "minimum_support_margin_mm": 16.095921476485756
+            },
+            {
+              "after_step": 2588,
+              "added_part_id": "MON-C360-02616",
+              "minimum_support_margin_mm": 16.095921476485756
+            },
+            {
+              "after_step": 2598,
+              "added_part_id": "MON-C360-02596",
+              "minimum_support_margin_mm": 16.095921476485756
+            },
+            {
+              "after_step": 2599,
+              "added_part_id": "MON-C360-02617",
+              "minimum_support_margin_mm": 16.095921476485756
+            }
+          ],
+          "assumptions": "Uniform-density native CADvolume,notmeasuredPLA/infillmass. Perhullside include100percent ofdestabilizing exclusive-root/firstshared-receiverpayload,ignorestabilizingpayload. No creditforunknownstudpullouttension.",
+          "not_validated": "Printedmaterial/infilldistribution,creep,yield,impact,dynamicassemblyloads,retentionandwholefiguretipping."
+        },
+        "load_path": "Continuous stepped material from tip to this native multi-point seated body root; no floor/stand member.",
+        "physical_retention": "UNKNOWN",
+        "physical_strength": "UNKNOWN"
+      },
+      {
+        "part_id": "MONA-FINE8-BASE-ROOT-V2-ROOT-02",
+        "native_root_type": "WR-c5de3bad26942259",
+        "actual_single_solid": true,
+        "anchor_role": "WHISKER_ROOT_MODULE",
+        "body_supports": [
+          {
+            "lower_part_id": "MON-C360-02067",
+            "native_bearing_mm2": 46.38055331623042,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-02076",
+            "native_bearing_mm2": 78.20332863026036,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-02082",
+            "native_bearing_mm2": 40.66724220201102,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-02179",
+            "native_bearing_mm2": 87.09099754246868,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-02180",
+            "native_bearing_mm2": 80.34995085869919,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-02181",
+            "native_bearing_mm2": 80.34995085869917,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-02182",
+            "native_bearing_mm2": 80.34995085869917,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-02183",
+            "native_bearing_mm2": 76.87544643460099,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-02184",
+            "native_bearing_mm2": 83.61649311837009,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-02204",
+            "native_bearing_mm2": 161.38638377920887,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-02205",
+            "native_bearing_mm2": 161.3863837792084,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-02226",
+            "native_bearing_mm2": 161.38638377920893,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-02227",
+            "native_bearing_mm2": 161.38638377920842,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-02246",
+            "native_bearing_mm2": 161.38638377920887,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-02247",
+            "native_bearing_mm2": 161.38638377920842,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-02267",
+            "native_bearing_mm2": 161.38638377920887,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-02268",
+            "native_bearing_mm2": 161.38638377920853,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-02284",
+            "native_bearing_mm2": 84.43204422623833,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-02286",
+            "native_bearing_mm2": 164.86088820330724,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "MON-C360-02287",
+            "native_bearing_mm2": 164.86088820330707,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          }
+        ],
+        "root_stud_count": 116,
+        "root_xy_span_mm": [
+          168,
+          88
+        ],
+        "body_mm": [
+          231.8,
+          95.8,
+          9.6
+        ],
+        "module_position_mm": [
+          96,
+          -84,
+          83.2
+        ],
+        "module_insertion_step": 2362,
+        "gravity_balance": {
+          "result": "PASS_NOMINAL_CAD_STATIC_MOMENT_BOUND",
+          "minimum_support_margin_mm": 21.243556106172417,
+          "required_margin_mm": 1.0,
+          "actual_bearing_hull_xy_mm": [
+            [
+              -19.9,
+              -131.9
+            ],
+            [
+              -4.1,
+              -131.9
+            ],
+            [
+              139.9,
+              -99.7
+            ],
+            [
+              155.7,
+              -83.7
+            ],
+            [
+              155.9,
+              -67.9
+            ],
+            [
+              155.9,
+              -36.1
+            ],
+            [
+              -19.9,
+              -36.1
+            ]
+          ],
+          "root_cad_volume_mm3": 33746.48210765063,
+          "root_cad_centroid_mm": [
+            92.6536380402975,
+            -64.82215957821631,
+            90.68362926162989
+          ],
+          "downstream_payloads": [
+            {
+              "part_id": "MON-C360-02513",
+              "cad_volume_mm3": 944.9500997948159,
+              "cad_centroid_mm": [
+                144.0,
+                -84.0,
+                91.1715672658793
+              ]
+            },
+            {
+              "part_id": "MON-C360-02611",
+              "cad_volume_mm3": 1750.8788530072136,
+              "cad_centroid_mm": [
+                -28.000000000000004,
+                -132.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02632",
+              "cad_volume_mm3": 1750.8788530072136,
+              "cad_centroid_mm": [
+                3.999999999999998,
+                -132.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02612",
+              "cad_volume_mm3": 1750.878853007214,
+              "cad_centroid_mm": [
+                -28.000000000000004,
+                -116.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02633",
+              "cad_volume_mm3": 1750.8788530072136,
+              "cad_centroid_mm": [
+                3.9999999999999987,
+                -116.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02613",
+              "cad_volume_mm3": 1750.8788530072131,
+              "cad_centroid_mm": [
+                -28.0,
+                -100.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02634",
+              "cad_volume_mm3": 1750.878853007213,
+              "cad_centroid_mm": [
+                3.9999999999999987,
+                -100.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02717",
+              "cad_volume_mm3": 673.854188588352,
+              "cad_centroid_mm": [
+                122.73410978334725,
+                -98.73410978334725,
+                96.06680331682749
+              ]
+            },
+            {
+              "part_id": "MON-C360-02733",
+              "cad_volume_mm3": 479.46879517346156,
+              "cad_centroid_mm": [
+                140.0,
+                -96.0,
+                95.93842798859502
+              ]
+            },
+            {
+              "part_id": "MON-C360-02614",
+              "cad_volume_mm3": 1750.8788530072134,
+              "cad_centroid_mm": [
+                -28.000000000000004,
+                -84.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02635",
+              "cad_volume_mm3": 1750.878853007213,
+              "cad_centroid_mm": [
+                3.9999999999999987,
+                -84.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02718",
+              "cad_volume_mm3": 1750.8788530072138,
+              "cad_centroid_mm": [
+                132.0,
+                -84.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02734",
+              "cad_volume_mm3": 1319.211846135555,
+              "cad_centroid_mm": [
+                160.0,
+                -84.0,
+                96.11472247113365
+              ]
+            },
+            {
+              "part_id": "MON-C360-02746",
+              "cad_volume_mm3": 712.2094474841384,
+              "cad_centroid_mm": [
+                184.0,
+                -80.0,
+                95.96041236656664
+              ]
+            },
+            {
+              "part_id": "MON-C360-02735",
+              "cad_volume_mm3": 944.9500997948165,
+              "cad_centroid_mm": [
+                164.0,
+                -72.0,
+                95.9715672658793
+              ]
+            },
+            {
+              "part_id": "MON-C360-02747",
+              "cad_volume_mm3": 712.2094474841385,
+              "cad_centroid_mm": [
+                192.0,
+                -72.0,
+                95.96041236656664
+              ]
+            },
+            {
+              "part_id": "MON-C360-02615",
+              "cad_volume_mm3": 1750.8788530072138,
+              "cad_centroid_mm": [
+                -28.0,
+                -68.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02636",
+              "cad_volume_mm3": 1750.8788530072138,
+              "cad_centroid_mm": [
+                3.9999999999999987,
+                -68.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02658",
+              "cad_volume_mm3": 1750.8788530072143,
+              "cad_centroid_mm": [
+                36.0,
+                -68.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02679",
+              "cad_volume_mm3": 1750.878853007215,
+              "cad_centroid_mm": [
+                68.0,
+                -68.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02700",
+              "cad_volume_mm3": 1750.8788530072138,
+              "cad_centroid_mm": [
+                100.0,
+                -68.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02719",
+              "cad_volume_mm3": 1750.8788530072138,
+              "cad_centroid_mm": [
+                132.0,
+                -68.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02736",
+              "cad_volume_mm3": 479.4687951734613,
+              "cad_centroid_mm": [
+                156.0,
+                -64.0,
+                95.93842798859502
+              ]
+            },
+            {
+              "part_id": "MON-C360-02748",
+              "cad_volume_mm3": 479.4687951734612,
+              "cad_centroid_mm": [
+                196.0,
+                -64.0,
+                95.93842798859502
+              ]
+            },
+            {
+              "part_id": "MON-C360-02616",
+              "cad_volume_mm3": 1750.878853007213,
+              "cad_centroid_mm": [
+                -28.0,
+                -52.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02637",
+              "cad_volume_mm3": 1750.878853007213,
+              "cad_centroid_mm": [
+                3.9999999999999982,
+                -52.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02659",
+              "cad_volume_mm3": 1750.8788530072134,
+              "cad_centroid_mm": [
+                36.0,
+                -52.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02680",
+              "cad_volume_mm3": 1750.878853007214,
+              "cad_centroid_mm": [
+                68.0,
+                -52.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02701",
+              "cad_volume_mm3": 1750.8788530072134,
+              "cad_centroid_mm": [
+                100.0,
+                -52.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02720",
+              "cad_volume_mm3": 1750.878853007214,
+              "cad_centroid_mm": [
+                132.0,
+                -52.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02737",
+              "cad_volume_mm3": 1102.3745287933455,
+              "cad_centroid_mm": [
+                158.44055296158282,
+                -51.22735385974784,
+                96.1049592919803
+              ]
+            },
+            {
+              "part_id": "MON-C360-02617",
+              "cad_volume_mm3": 1750.8788530072134,
+              "cad_centroid_mm": [
+                -28.0,
+                -36.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02638",
+              "cad_volume_mm3": 1750.878853007213,
+              "cad_centroid_mm": [
+                3.9999999999999987,
+                -36.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02660",
+              "cad_volume_mm3": 1750.8788530072134,
+              "cad_centroid_mm": [
+                36.0,
+                -36.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02681",
+              "cad_volume_mm3": 1750.8788530072143,
+              "cad_centroid_mm": [
+                68.0,
+                -36.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02702",
+              "cad_volume_mm3": 1750.8788530072134,
+              "cad_centroid_mm": [
+                100.0,
+                -36.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02721",
+              "cad_volume_mm3": 1750.878853007214,
+              "cad_centroid_mm": [
+                132.0,
+                -36.0,
+                96.12956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02738",
+              "cad_volume_mm3": 1319.2118461355544,
+              "cad_centroid_mm": [
+                160.0,
+                -35.99999999999999,
+                96.11472247113365
+              ]
+            },
+            {
+              "part_id": "MON-C360-02966",
+              "cad_volume_mm3": 889.4381725972285,
+              "cad_centroid_mm": [
+                156.0,
+                -84.0,
+                100.88851979842971
+              ]
+            },
+            {
+              "part_id": "MON-C360-02973",
+              "cad_volume_mm3": 672.6008552550195,
+              "cad_centroid_mm": [
+                173.2663460329106,
+                -77.2663460329106,
+                100.86407082970399
+              ]
+            },
+            {
+              "part_id": "MON-C360-02977",
+              "cad_volume_mm3": 479.46879517346144,
+              "cad_centroid_mm": [
+                184.0,
+                -76.0,
+                100.73842798859502
+              ]
+            },
+            {
+              "part_id": "MON-C360-02861",
+              "cad_volume_mm3": 1750.878853007216,
+              "cad_centroid_mm": [
+                -4.000000000000001,
+                -60.0,
+                100.92956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02873",
+              "cad_volume_mm3": 1750.878853007216,
+              "cad_centroid_mm": [
+                12.0,
+                -60.0,
+                100.92956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02884",
+              "cad_volume_mm3": 1750.8788530072156,
+              "cad_centroid_mm": [
+                28.0,
+                -60.0,
+                100.92956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02897",
+              "cad_volume_mm3": 1750.8788530072156,
+              "cad_centroid_mm": [
+                44.0,
+                -60.0,
+                100.92956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02909",
+              "cad_volume_mm3": 1750.8788530072168,
+              "cad_centroid_mm": [
+                60.0,
+                -60.0,
+                100.92956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02920",
+              "cad_volume_mm3": 1750.8788530072163,
+              "cad_centroid_mm": [
+                76.0,
+                -60.0,
+                100.92956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02930",
+              "cad_volume_mm3": 1750.878853007216,
+              "cad_centroid_mm": [
+                92.0,
+                -60.0,
+                100.92956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02940",
+              "cad_volume_mm3": 1750.8788530072163,
+              "cad_centroid_mm": [
+                108.0,
+                -60.0,
+                100.92956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02951",
+              "cad_volume_mm3": 1750.8788530072159,
+              "cad_centroid_mm": [
+                124.0,
+                -60.0,
+                100.92956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02960",
+              "cad_volume_mm3": 1750.8788530072168,
+              "cad_centroid_mm": [
+                140.0,
+                -60.0,
+                100.92956723480019
+              ]
+            },
+            {
+              "part_id": "MON-C360-02967",
+              "cad_volume_mm3": 1748.985519673885,
+              "cad_centroid_mm": [
+                156.0,
+                -60.0,
+                100.9280477142902
+              ]
+            },
+            {
+              "part_id": "MON-C360-03186",
+              "cad_volume_mm3": 1748.9855196738836,
+              "cad_centroid_mm": [
+                156.0,
+                -75.99999999999999,
+                105.72804771429021
+              ]
+            },
+            {
+              "part_id": "MON-C360-03197",
+              "cad_volume_mm3": 1315.310884989462,
+              "cad_centroid_mm": [
+                188.0,
+                -68.00000000000001,
+                105.7160759893854
+              ]
+            },
+            {
+              "part_id": "MON-C360-03432",
+              "cad_volume_mm3": 712.2094474841389,
+              "cad_centroid_mm": [
+                176.0,
+                -72.0,
+                110.36041236656665
+              ]
+            },
+            {
+              "part_id": "MON-C360-03435",
+              "cad_volume_mm3": 479.4687951734612,
+              "cad_centroid_mm": [
+                184.0,
+                -68.0,
+                110.33842798859503
+              ]
+            },
+            {
+              "part_id": "MON-C360-03436",
+              "cad_volume_mm3": 1532.1482023316685,
+              "cad_centroid_mm": [
+                197.7559681347573,
+                -62.88816835931634,
+                110.5229090011894
+              ]
+            },
+            {
+              "part_id": "MON-C360-03661",
+              "cad_volume_mm3": 479.46879517346133,
+              "cad_centroid_mm": [
+                172.0,
+                -80.0,
+                115.13842798859503
+              ]
+            },
+            {
+              "part_id": "MON-C360-03662",
+              "cad_volume_mm3": 944.9500997948161,
+              "cad_centroid_mm": [
+                180.0,
+                -72.0,
+                115.1715672658793
+              ]
+            },
+            {
+              "part_id": "MON-C360-03671",
+              "cad_volume_mm3": 479.46879517346133,
+              "cad_centroid_mm": [
+                200.0,
+                -68.0,
+                115.13842798859503
+              ]
+            },
+            {
+              "part_id": "MON-C360-03669",
+              "cad_volume_mm3": 712.2094474841389,
+              "cad_centroid_mm": [
+                184.0,
+                -64.0,
+                115.16041236656665
+              ]
+            },
+            {
+              "part_id": "MON-C360-03670",
+              "cad_volume_mm3": 712.2094474841386,
+              "cad_centroid_mm": [
+                200.0,
+                -56.0,
+                115.16041236656665
+              ]
+            },
+            {
+              "part_id": "MON-C360-03894",
+              "cad_volume_mm3": 672.6008552550195,
+              "cad_centroid_mm": [
+                181.2663460329106,
+                -69.2663460329106,
+                120.06407082970398
+              ]
+            },
+            {
+              "part_id": "MON-C360-03895",
+              "cad_volume_mm3": 479.46879517346116,
+              "cad_centroid_mm": [
+                196.0,
+                -64.0,
+                119.93842798859502
+              ]
+            }
+          ],
+          "assembly_prefix_checks": [
+            {
+              "after_step": 2362,
+              "added_part_id": "MONA-FINE8-BASE-ROOT-V2-ROOT-02",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2365,
+              "added_part_id": "MON-C360-02513",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2523,
+              "added_part_id": "MON-C360-02611",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2524,
+              "added_part_id": "MON-C360-02632",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2535,
+              "added_part_id": "MON-C360-02612",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2536,
+              "added_part_id": "MON-C360-02633",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2548,
+              "added_part_id": "MON-C360-02613",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2549,
+              "added_part_id": "MON-C360-02634",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2553,
+              "added_part_id": "MON-C360-02717",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2555,
+              "added_part_id": "MON-C360-02733",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2561,
+              "added_part_id": "MON-C360-02614",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2562,
+              "added_part_id": "MON-C360-02635",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2566,
+              "added_part_id": "MON-C360-02718",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2567,
+              "added_part_id": "MON-C360-02734",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2569,
+              "added_part_id": "MON-C360-02746",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2570,
+              "added_part_id": "MON-C360-02735",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2571,
+              "added_part_id": "MON-C360-02747",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2576,
+              "added_part_id": "MON-C360-02615",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2577,
+              "added_part_id": "MON-C360-02636",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2578,
+              "added_part_id": "MON-C360-02658",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2579,
+              "added_part_id": "MON-C360-02679",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2580,
+              "added_part_id": "MON-C360-02700",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2581,
+              "added_part_id": "MON-C360-02719",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2582,
+              "added_part_id": "MON-C360-02736",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2583,
+              "added_part_id": "MON-C360-02748",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2588,
+              "added_part_id": "MON-C360-02616",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2589,
+              "added_part_id": "MON-C360-02637",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2590,
+              "added_part_id": "MON-C360-02659",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2591,
+              "added_part_id": "MON-C360-02680",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2592,
+              "added_part_id": "MON-C360-02701",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2593,
+              "added_part_id": "MON-C360-02720",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2594,
+              "added_part_id": "MON-C360-02737",
+              "minimum_support_margin_mm": 28.722159578216313
+            },
+            {
+              "after_step": 2599,
+              "added_part_id": "MON-C360-02617",
+              "minimum_support_margin_mm": 27.300529678477336
+            },
+            {
+              "after_step": 2600,
+              "added_part_id": "MON-C360-02638",
+              "minimum_support_margin_mm": 26.012549139927373
+            },
+            {
+              "after_step": 2601,
+              "added_part_id": "MON-C360-02660",
+              "minimum_support_margin_mm": 24.840217260379497
+            },
+            {
+              "after_step": 2602,
+              "added_part_id": "MON-C360-02681",
+              "minimum_support_margin_mm": 23.768627035876644
+            },
+            {
+              "after_step": 2603,
+              "added_part_id": "MON-C360-02702",
+              "minimum_support_margin_mm": 22.785327916089795
+            },
+            {
+              "after_step": 2604,
+              "added_part_id": "MON-C360-02721",
+              "minimum_support_margin_mm": 21.879839840237114
+            },
+            {
+              "after_step": 2605,
+              "added_part_id": "MON-C360-02738",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 2797,
+              "added_part_id": "MON-C360-02966",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 2798,
+              "added_part_id": "MON-C360-02973",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 2799,
+              "added_part_id": "MON-C360-02977",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 2810,
+              "added_part_id": "MON-C360-02861",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 2811,
+              "added_part_id": "MON-C360-02873",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 2812,
+              "added_part_id": "MON-C360-02884",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 2813,
+              "added_part_id": "MON-C360-02897",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 2814,
+              "added_part_id": "MON-C360-02909",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 2815,
+              "added_part_id": "MON-C360-02920",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 2816,
+              "added_part_id": "MON-C360-02930",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 2817,
+              "added_part_id": "MON-C360-02940",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 2818,
+              "added_part_id": "MON-C360-02951",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 2819,
+              "added_part_id": "MON-C360-02960",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 2820,
+              "added_part_id": "MON-C360-02967",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 3023,
+              "added_part_id": "MON-C360-03186",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 3025,
+              "added_part_id": "MON-C360-03197",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 3248,
+              "added_part_id": "MON-C360-03432",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 3271,
+              "added_part_id": "MON-C360-03435",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 3272,
+              "added_part_id": "MON-C360-03436",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 3478,
+              "added_part_id": "MON-C360-03661",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 3480,
+              "added_part_id": "MON-C360-03662",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 3493,
+              "added_part_id": "MON-C360-03671",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 3494,
+              "added_part_id": "MON-C360-03669",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 3495,
+              "added_part_id": "MON-C360-03670",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 3726,
+              "added_part_id": "MON-C360-03894",
+              "minimum_support_margin_mm": 21.243556106172417
+            },
+            {
+              "after_step": 3727,
+              "added_part_id": "MON-C360-03895",
+              "minimum_support_margin_mm": 21.243556106172417
+            }
+          ],
+          "assumptions": "Uniform-density native CADvolume,notmeasuredPLA/infillmass. Perhullside include100percent ofdestabilizing exclusive-root/firstshared-receiverpayload,ignorestabilizingpayload. No creditforunknownstudpullouttension.",
+          "not_validated": "Printedmaterial/infilldistribution,creep,yield,impact,dynamicassemblyloads,retentionandwholefiguretipping."
+        },
+        "load_path": "Continuous stepped material from tip to this native multi-point seated body root; no floor/stand member.",
+        "physical_retention": "UNKNOWN",
+        "physical_strength": "UNKNOWN"
+      }
+    ],
+    "external_aid_count": 0,
+    "assembly_aid_count": 0,
+    "gravity_balance_result": "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS",
+    "physical_validation": "UNKNOWN",
+    "slicer_supports": "UNKNOWN"
+  },
+  "gravity_balance": {
+    "result": "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS",
+    "modules": [
+      {
+        "part_id": "MONA-FINE8-BASE-ROOT-V2-ROOT-01",
+        "result": "PASS_NOMINAL_CAD_STATIC_MOMENT_BOUND",
+        "minimum_support_margin_mm": 16.095921476485756,
+        "required_margin_mm": 1.0,
+        "actual_bearing_hull_xy_mm": [
+          [
+            -163.7,
+            -75.7
+          ],
+          [
+            -155.7,
+            -83.9
+          ],
+          [
+            -67.9,
+            -99.9
+          ],
+          [
+            -36.1,
+            -99.9
+          ],
+          [
+            -36.1,
+            -36.1
+          ],
+          [
+            -67.9,
+            -36.1
+          ],
+          [
+            -163.7,
+            -68.1
+          ]
+        ],
+        "root_cad_volume_mm3": 16714.97902942319,
+        "root_cad_centroid_mm": [
+          -109.97073024716073,
+          -72.8627058579219,
+          85.91730073668411
+        ],
+        "downstream_payloads": [
+          {
+            "part_id": "MON-C360-02309",
+            "cad_volume_mm3": 889.4381725972286,
+            "cad_centroid_mm": [
+              -172.0,
+              -84.0,
+              91.28851979842972
+            ]
+          },
+          {
+            "part_id": "MON-C360-02322",
+            "cad_volume_mm3": 1748.985519673884,
+            "cad_centroid_mm": [
+              -140.0,
+              -84.0,
+              91.32804771429021
+            ]
+          },
+          {
+            "part_id": "MON-C360-02332",
+            "cad_volume_mm3": 1750.8788530072181,
+            "cad_centroid_mm": [
+              -124.0,
+              -84.0,
+              91.32956723480018
+            ]
+          },
+          {
+            "part_id": "MON-C360-02343",
+            "cad_volume_mm3": 1750.8788530072195,
+            "cad_centroid_mm": [
+              -108.0,
+              -84.0,
+              91.32956723480018
+            ]
+          },
+          {
+            "part_id": "MON-C360-02355",
+            "cad_volume_mm3": 1750.8788530072193,
+            "cad_centroid_mm": [
+              -92.0,
+              -84.0,
+              91.32956723480018
+            ]
+          },
+          {
+            "part_id": "MON-C360-02365",
+            "cad_volume_mm3": 1750.878853007219,
+            "cad_centroid_mm": [
+              -76.0,
+              -84.0,
+              91.32956723480018
+            ]
+          },
+          {
+            "part_id": "MON-C360-02376",
+            "cad_volume_mm3": 1750.87885300722,
+            "cad_centroid_mm": [
+              -60.0,
+              -84.0,
+              91.32956723480018
+            ]
+          },
+          {
+            "part_id": "MON-C360-02387",
+            "cad_volume_mm3": 1750.8788530072184,
+            "cad_centroid_mm": [
+              -44.0,
+              -84.0,
+              91.32956723480018
+            ]
+          },
+          {
+            "part_id": "MON-C360-02308",
+            "cad_volume_mm3": 712.209447484139,
+            "cad_centroid_mm": [
+              -184.0,
+              -80.0,
+              91.16041236656665
+            ]
+          },
+          {
+            "part_id": "MON-C360-02315",
+            "cad_volume_mm3": 1319.2118461355556,
+            "cad_centroid_mm": [
+              -156.0,
+              -80.0,
+              91.31472247113365
+            ]
+          },
+          {
+            "part_id": "MON-C360-02306",
+            "cad_volume_mm3": 479.4687951734614,
+            "cad_centroid_mm": [
+              -200.0,
+              -76.0,
+              91.13842798859503
+            ]
+          },
+          {
+            "part_id": "MON-C360-02307",
+            "cad_volume_mm3": 479.4687951734613,
+            "cad_centroid_mm": [
+              -192.0,
+              -76.0,
+              91.13842798859503
+            ]
+          },
+          {
+            "part_id": "MON-C360-02377",
+            "cad_volume_mm3": 1750.878853007219,
+            "cad_centroid_mm": [
+              -60.0,
+              -52.0,
+              91.32956723480018
+            ]
+          },
+          {
+            "part_id": "MON-C360-02388",
+            "cad_volume_mm3": 1750.8788530072177,
+            "cad_centroid_mm": [
+              -44.0,
+              -52.0,
+              91.32956723480018
+            ]
+          },
+          {
+            "part_id": "MON-C360-02592",
+            "cad_volume_mm3": 1750.8788530072131,
+            "cad_centroid_mm": [
+              -60.0,
+              -100.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02613",
+            "cad_volume_mm3": 1750.8788530072131,
+            "cad_centroid_mm": [
+              -28.0,
+              -100.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02593",
+            "cad_volume_mm3": 1750.8788530072136,
+            "cad_centroid_mm": [
+              -60.0,
+              -84.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02614",
+            "cad_volume_mm3": 1750.8788530072134,
+            "cad_centroid_mm": [
+              -28.000000000000004,
+              -84.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02526",
+            "cad_volume_mm3": 712.2094474841384,
+            "cad_centroid_mm": [
+              -184.0,
+              -80.0,
+              95.96041236656664
+            ]
+          },
+          {
+            "part_id": "MON-C360-02594",
+            "cad_volume_mm3": 1750.878853007214,
+            "cad_centroid_mm": [
+              -60.0,
+              -68.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02615",
+            "cad_volume_mm3": 1750.8788530072138,
+            "cad_centroid_mm": [
+              -28.0,
+              -68.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02595",
+            "cad_volume_mm3": 1750.8788530072136,
+            "cad_centroid_mm": [
+              -60.0,
+              -52.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02616",
+            "cad_volume_mm3": 1750.878853007213,
+            "cad_centroid_mm": [
+              -28.0,
+              -52.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02596",
+            "cad_volume_mm3": 1750.8788530072136,
+            "cad_centroid_mm": [
+              -60.0,
+              -36.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02617",
+            "cad_volume_mm3": 1750.8788530072134,
+            "cad_centroid_mm": [
+              -28.0,
+              -36.0,
+              96.12956723480019
+            ]
+          }
+        ],
+        "assembly_prefix_checks": [
+          {
+            "after_step": 2152,
+            "added_part_id": "MONA-FINE8-BASE-ROOT-V2-ROOT-01",
+            "minimum_support_margin_mm": 19.056805357505908
+          },
+          {
+            "after_step": 2347,
+            "added_part_id": "MON-C360-02309",
+            "minimum_support_margin_mm": 17.941373730760397
+          },
+          {
+            "after_step": 2348,
+            "added_part_id": "MON-C360-02322",
+            "minimum_support_margin_mm": 17.941373730760397
+          },
+          {
+            "after_step": 2349,
+            "added_part_id": "MON-C360-02332",
+            "minimum_support_margin_mm": 17.941373730760397
+          },
+          {
+            "after_step": 2350,
+            "added_part_id": "MON-C360-02343",
+            "minimum_support_margin_mm": 17.941373730760397
+          },
+          {
+            "after_step": 2351,
+            "added_part_id": "MON-C360-02355",
+            "minimum_support_margin_mm": 17.941373730760397
+          },
+          {
+            "after_step": 2352,
+            "added_part_id": "MON-C360-02365",
+            "minimum_support_margin_mm": 17.941373730760397
+          },
+          {
+            "after_step": 2353,
+            "added_part_id": "MON-C360-02376",
+            "minimum_support_margin_mm": 17.941373730760397
+          },
+          {
+            "after_step": 2354,
+            "added_part_id": "MON-C360-02387",
+            "minimum_support_margin_mm": 17.941373730760397
+          },
+          {
+            "after_step": 2366,
+            "added_part_id": "MON-C360-02308",
+            "minimum_support_margin_mm": 17.19566429333859
+          },
+          {
+            "after_step": 2367,
+            "added_part_id": "MON-C360-02315",
+            "minimum_support_margin_mm": 17.19566429333859
+          },
+          {
+            "after_step": 2368,
+            "added_part_id": "MON-C360-02306",
+            "minimum_support_margin_mm": 16.75268196486619
+          },
+          {
+            "after_step": 2369,
+            "added_part_id": "MON-C360-02307",
+            "minimum_support_margin_mm": 16.75268196486619
+          },
+          {
+            "after_step": 2376,
+            "added_part_id": "MON-C360-02377",
+            "minimum_support_margin_mm": 16.75268196486619
+          },
+          {
+            "after_step": 2377,
+            "added_part_id": "MON-C360-02388",
+            "minimum_support_margin_mm": 16.75268196486619
+          },
+          {
+            "after_step": 2547,
+            "added_part_id": "MON-C360-02592",
+            "minimum_support_margin_mm": 16.75268196486619
+          },
+          {
+            "after_step": 2548,
+            "added_part_id": "MON-C360-02613",
+            "minimum_support_margin_mm": 16.75268196486619
+          },
+          {
+            "after_step": 2560,
+            "added_part_id": "MON-C360-02593",
+            "minimum_support_margin_mm": 16.75268196486619
+          },
+          {
+            "after_step": 2561,
+            "added_part_id": "MON-C360-02614",
+            "minimum_support_margin_mm": 16.75268196486619
+          },
+          {
+            "after_step": 2568,
+            "added_part_id": "MON-C360-02526",
+            "minimum_support_margin_mm": 16.095921476485756
+          },
+          {
+            "after_step": 2575,
+            "added_part_id": "MON-C360-02594",
+            "minimum_support_margin_mm": 16.095921476485756
+          },
+          {
+            "after_step": 2576,
+            "added_part_id": "MON-C360-02615",
+            "minimum_support_margin_mm": 16.095921476485756
+          },
+          {
+            "after_step": 2587,
+            "added_part_id": "MON-C360-02595",
+            "minimum_support_margin_mm": 16.095921476485756
+          },
+          {
+            "after_step": 2588,
+            "added_part_id": "MON-C360-02616",
+            "minimum_support_margin_mm": 16.095921476485756
+          },
+          {
+            "after_step": 2598,
+            "added_part_id": "MON-C360-02596",
+            "minimum_support_margin_mm": 16.095921476485756
+          },
+          {
+            "after_step": 2599,
+            "added_part_id": "MON-C360-02617",
+            "minimum_support_margin_mm": 16.095921476485756
+          }
+        ],
+        "assumptions": "Uniform-density native CADvolume,notmeasuredPLA/infillmass. Perhullside include100percent ofdestabilizing exclusive-root/firstshared-receiverpayload,ignorestabilizingpayload. No creditforunknownstudpullouttension.",
+        "not_validated": "Printedmaterial/infilldistribution,creep,yield,impact,dynamicassemblyloads,retentionandwholefiguretipping."
+      },
+      {
+        "part_id": "MONA-FINE8-BASE-ROOT-V2-ROOT-02",
+        "result": "PASS_NOMINAL_CAD_STATIC_MOMENT_BOUND",
+        "minimum_support_margin_mm": 21.243556106172417,
+        "required_margin_mm": 1.0,
+        "actual_bearing_hull_xy_mm": [
+          [
+            -19.9,
+            -131.9
+          ],
+          [
+            -4.1,
+            -131.9
+          ],
+          [
+            139.9,
+            -99.7
+          ],
+          [
+            155.7,
+            -83.7
+          ],
+          [
+            155.9,
+            -67.9
+          ],
+          [
+            155.9,
+            -36.1
+          ],
+          [
+            -19.9,
+            -36.1
+          ]
+        ],
+        "root_cad_volume_mm3": 33746.48210765063,
+        "root_cad_centroid_mm": [
+          92.6536380402975,
+          -64.82215957821631,
+          90.68362926162989
+        ],
+        "downstream_payloads": [
+          {
+            "part_id": "MON-C360-02513",
+            "cad_volume_mm3": 944.9500997948159,
+            "cad_centroid_mm": [
+              144.0,
+              -84.0,
+              91.1715672658793
+            ]
+          },
+          {
+            "part_id": "MON-C360-02611",
+            "cad_volume_mm3": 1750.8788530072136,
+            "cad_centroid_mm": [
+              -28.000000000000004,
+              -132.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02632",
+            "cad_volume_mm3": 1750.8788530072136,
+            "cad_centroid_mm": [
+              3.999999999999998,
+              -132.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02612",
+            "cad_volume_mm3": 1750.878853007214,
+            "cad_centroid_mm": [
+              -28.000000000000004,
+              -116.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02633",
+            "cad_volume_mm3": 1750.8788530072136,
+            "cad_centroid_mm": [
+              3.9999999999999987,
+              -116.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02613",
+            "cad_volume_mm3": 1750.8788530072131,
+            "cad_centroid_mm": [
+              -28.0,
+              -100.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02634",
+            "cad_volume_mm3": 1750.878853007213,
+            "cad_centroid_mm": [
+              3.9999999999999987,
+              -100.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02717",
+            "cad_volume_mm3": 673.854188588352,
+            "cad_centroid_mm": [
+              122.73410978334725,
+              -98.73410978334725,
+              96.06680331682749
+            ]
+          },
+          {
+            "part_id": "MON-C360-02733",
+            "cad_volume_mm3": 479.46879517346156,
+            "cad_centroid_mm": [
+              140.0,
+              -96.0,
+              95.93842798859502
+            ]
+          },
+          {
+            "part_id": "MON-C360-02614",
+            "cad_volume_mm3": 1750.8788530072134,
+            "cad_centroid_mm": [
+              -28.000000000000004,
+              -84.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02635",
+            "cad_volume_mm3": 1750.878853007213,
+            "cad_centroid_mm": [
+              3.9999999999999987,
+              -84.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02718",
+            "cad_volume_mm3": 1750.8788530072138,
+            "cad_centroid_mm": [
+              132.0,
+              -84.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02734",
+            "cad_volume_mm3": 1319.211846135555,
+            "cad_centroid_mm": [
+              160.0,
+              -84.0,
+              96.11472247113365
+            ]
+          },
+          {
+            "part_id": "MON-C360-02746",
+            "cad_volume_mm3": 712.2094474841384,
+            "cad_centroid_mm": [
+              184.0,
+              -80.0,
+              95.96041236656664
+            ]
+          },
+          {
+            "part_id": "MON-C360-02735",
+            "cad_volume_mm3": 944.9500997948165,
+            "cad_centroid_mm": [
+              164.0,
+              -72.0,
+              95.9715672658793
+            ]
+          },
+          {
+            "part_id": "MON-C360-02747",
+            "cad_volume_mm3": 712.2094474841385,
+            "cad_centroid_mm": [
+              192.0,
+              -72.0,
+              95.96041236656664
+            ]
+          },
+          {
+            "part_id": "MON-C360-02615",
+            "cad_volume_mm3": 1750.8788530072138,
+            "cad_centroid_mm": [
+              -28.0,
+              -68.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02636",
+            "cad_volume_mm3": 1750.8788530072138,
+            "cad_centroid_mm": [
+              3.9999999999999987,
+              -68.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02658",
+            "cad_volume_mm3": 1750.8788530072143,
+            "cad_centroid_mm": [
+              36.0,
+              -68.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02679",
+            "cad_volume_mm3": 1750.878853007215,
+            "cad_centroid_mm": [
+              68.0,
+              -68.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02700",
+            "cad_volume_mm3": 1750.8788530072138,
+            "cad_centroid_mm": [
+              100.0,
+              -68.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02719",
+            "cad_volume_mm3": 1750.8788530072138,
+            "cad_centroid_mm": [
+              132.0,
+              -68.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02736",
+            "cad_volume_mm3": 479.4687951734613,
+            "cad_centroid_mm": [
+              156.0,
+              -64.0,
+              95.93842798859502
+            ]
+          },
+          {
+            "part_id": "MON-C360-02748",
+            "cad_volume_mm3": 479.4687951734612,
+            "cad_centroid_mm": [
+              196.0,
+              -64.0,
+              95.93842798859502
+            ]
+          },
+          {
+            "part_id": "MON-C360-02616",
+            "cad_volume_mm3": 1750.878853007213,
+            "cad_centroid_mm": [
+              -28.0,
+              -52.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02637",
+            "cad_volume_mm3": 1750.878853007213,
+            "cad_centroid_mm": [
+              3.9999999999999982,
+              -52.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02659",
+            "cad_volume_mm3": 1750.8788530072134,
+            "cad_centroid_mm": [
+              36.0,
+              -52.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02680",
+            "cad_volume_mm3": 1750.878853007214,
+            "cad_centroid_mm": [
+              68.0,
+              -52.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02701",
+            "cad_volume_mm3": 1750.8788530072134,
+            "cad_centroid_mm": [
+              100.0,
+              -52.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02720",
+            "cad_volume_mm3": 1750.878853007214,
+            "cad_centroid_mm": [
+              132.0,
+              -52.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02737",
+            "cad_volume_mm3": 1102.3745287933455,
+            "cad_centroid_mm": [
+              158.44055296158282,
+              -51.22735385974784,
+              96.1049592919803
+            ]
+          },
+          {
+            "part_id": "MON-C360-02617",
+            "cad_volume_mm3": 1750.8788530072134,
+            "cad_centroid_mm": [
+              -28.0,
+              -36.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02638",
+            "cad_volume_mm3": 1750.878853007213,
+            "cad_centroid_mm": [
+              3.9999999999999987,
+              -36.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02660",
+            "cad_volume_mm3": 1750.8788530072134,
+            "cad_centroid_mm": [
+              36.0,
+              -36.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02681",
+            "cad_volume_mm3": 1750.8788530072143,
+            "cad_centroid_mm": [
+              68.0,
+              -36.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02702",
+            "cad_volume_mm3": 1750.8788530072134,
+            "cad_centroid_mm": [
+              100.0,
+              -36.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02721",
+            "cad_volume_mm3": 1750.878853007214,
+            "cad_centroid_mm": [
+              132.0,
+              -36.0,
+              96.12956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02738",
+            "cad_volume_mm3": 1319.2118461355544,
+            "cad_centroid_mm": [
+              160.0,
+              -35.99999999999999,
+              96.11472247113365
+            ]
+          },
+          {
+            "part_id": "MON-C360-02966",
+            "cad_volume_mm3": 889.4381725972285,
+            "cad_centroid_mm": [
+              156.0,
+              -84.0,
+              100.88851979842971
+            ]
+          },
+          {
+            "part_id": "MON-C360-02973",
+            "cad_volume_mm3": 672.6008552550195,
+            "cad_centroid_mm": [
+              173.2663460329106,
+              -77.2663460329106,
+              100.86407082970399
+            ]
+          },
+          {
+            "part_id": "MON-C360-02977",
+            "cad_volume_mm3": 479.46879517346144,
+            "cad_centroid_mm": [
+              184.0,
+              -76.0,
+              100.73842798859502
+            ]
+          },
+          {
+            "part_id": "MON-C360-02861",
+            "cad_volume_mm3": 1750.878853007216,
+            "cad_centroid_mm": [
+              -4.000000000000001,
+              -60.0,
+              100.92956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02873",
+            "cad_volume_mm3": 1750.878853007216,
+            "cad_centroid_mm": [
+              12.0,
+              -60.0,
+              100.92956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02884",
+            "cad_volume_mm3": 1750.8788530072156,
+            "cad_centroid_mm": [
+              28.0,
+              -60.0,
+              100.92956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02897",
+            "cad_volume_mm3": 1750.8788530072156,
+            "cad_centroid_mm": [
+              44.0,
+              -60.0,
+              100.92956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02909",
+            "cad_volume_mm3": 1750.8788530072168,
+            "cad_centroid_mm": [
+              60.0,
+              -60.0,
+              100.92956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02920",
+            "cad_volume_mm3": 1750.8788530072163,
+            "cad_centroid_mm": [
+              76.0,
+              -60.0,
+              100.92956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02930",
+            "cad_volume_mm3": 1750.878853007216,
+            "cad_centroid_mm": [
+              92.0,
+              -60.0,
+              100.92956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02940",
+            "cad_volume_mm3": 1750.8788530072163,
+            "cad_centroid_mm": [
+              108.0,
+              -60.0,
+              100.92956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02951",
+            "cad_volume_mm3": 1750.8788530072159,
+            "cad_centroid_mm": [
+              124.0,
+              -60.0,
+              100.92956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02960",
+            "cad_volume_mm3": 1750.8788530072168,
+            "cad_centroid_mm": [
+              140.0,
+              -60.0,
+              100.92956723480019
+            ]
+          },
+          {
+            "part_id": "MON-C360-02967",
+            "cad_volume_mm3": 1748.985519673885,
+            "cad_centroid_mm": [
+              156.0,
+              -60.0,
+              100.9280477142902
+            ]
+          },
+          {
+            "part_id": "MON-C360-03186",
+            "cad_volume_mm3": 1748.9855196738836,
+            "cad_centroid_mm": [
+              156.0,
+              -75.99999999999999,
+              105.72804771429021
+            ]
+          },
+          {
+            "part_id": "MON-C360-03197",
+            "cad_volume_mm3": 1315.310884989462,
+            "cad_centroid_mm": [
+              188.0,
+              -68.00000000000001,
+              105.7160759893854
+            ]
+          },
+          {
+            "part_id": "MON-C360-03432",
+            "cad_volume_mm3": 712.2094474841389,
+            "cad_centroid_mm": [
+              176.0,
+              -72.0,
+              110.36041236656665
+            ]
+          },
+          {
+            "part_id": "MON-C360-03435",
+            "cad_volume_mm3": 479.4687951734612,
+            "cad_centroid_mm": [
+              184.0,
+              -68.0,
+              110.33842798859503
+            ]
+          },
+          {
+            "part_id": "MON-C360-03436",
+            "cad_volume_mm3": 1532.1482023316685,
+            "cad_centroid_mm": [
+              197.7559681347573,
+              -62.88816835931634,
+              110.5229090011894
+            ]
+          },
+          {
+            "part_id": "MON-C360-03661",
+            "cad_volume_mm3": 479.46879517346133,
+            "cad_centroid_mm": [
+              172.0,
+              -80.0,
+              115.13842798859503
+            ]
+          },
+          {
+            "part_id": "MON-C360-03662",
+            "cad_volume_mm3": 944.9500997948161,
+            "cad_centroid_mm": [
+              180.0,
+              -72.0,
+              115.1715672658793
+            ]
+          },
+          {
+            "part_id": "MON-C360-03671",
+            "cad_volume_mm3": 479.46879517346133,
+            "cad_centroid_mm": [
+              200.0,
+              -68.0,
+              115.13842798859503
+            ]
+          },
+          {
+            "part_id": "MON-C360-03669",
+            "cad_volume_mm3": 712.2094474841389,
+            "cad_centroid_mm": [
+              184.0,
+              -64.0,
+              115.16041236656665
+            ]
+          },
+          {
+            "part_id": "MON-C360-03670",
+            "cad_volume_mm3": 712.2094474841386,
+            "cad_centroid_mm": [
+              200.0,
+              -56.0,
+              115.16041236656665
+            ]
+          },
+          {
+            "part_id": "MON-C360-03894",
+            "cad_volume_mm3": 672.6008552550195,
+            "cad_centroid_mm": [
+              181.2663460329106,
+              -69.2663460329106,
+              120.06407082970398
+            ]
+          },
+          {
+            "part_id": "MON-C360-03895",
+            "cad_volume_mm3": 479.46879517346116,
+            "cad_centroid_mm": [
+              196.0,
+              -64.0,
+              119.93842798859502
+            ]
+          }
+        ],
+        "assembly_prefix_checks": [
+          {
+            "after_step": 2362,
+            "added_part_id": "MONA-FINE8-BASE-ROOT-V2-ROOT-02",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2365,
+            "added_part_id": "MON-C360-02513",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2523,
+            "added_part_id": "MON-C360-02611",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2524,
+            "added_part_id": "MON-C360-02632",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2535,
+            "added_part_id": "MON-C360-02612",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2536,
+            "added_part_id": "MON-C360-02633",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2548,
+            "added_part_id": "MON-C360-02613",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2549,
+            "added_part_id": "MON-C360-02634",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2553,
+            "added_part_id": "MON-C360-02717",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2555,
+            "added_part_id": "MON-C360-02733",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2561,
+            "added_part_id": "MON-C360-02614",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2562,
+            "added_part_id": "MON-C360-02635",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2566,
+            "added_part_id": "MON-C360-02718",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2567,
+            "added_part_id": "MON-C360-02734",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2569,
+            "added_part_id": "MON-C360-02746",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2570,
+            "added_part_id": "MON-C360-02735",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2571,
+            "added_part_id": "MON-C360-02747",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2576,
+            "added_part_id": "MON-C360-02615",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2577,
+            "added_part_id": "MON-C360-02636",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2578,
+            "added_part_id": "MON-C360-02658",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2579,
+            "added_part_id": "MON-C360-02679",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2580,
+            "added_part_id": "MON-C360-02700",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2581,
+            "added_part_id": "MON-C360-02719",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2582,
+            "added_part_id": "MON-C360-02736",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2583,
+            "added_part_id": "MON-C360-02748",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2588,
+            "added_part_id": "MON-C360-02616",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2589,
+            "added_part_id": "MON-C360-02637",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2590,
+            "added_part_id": "MON-C360-02659",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2591,
+            "added_part_id": "MON-C360-02680",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2592,
+            "added_part_id": "MON-C360-02701",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2593,
+            "added_part_id": "MON-C360-02720",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2594,
+            "added_part_id": "MON-C360-02737",
+            "minimum_support_margin_mm": 28.722159578216313
+          },
+          {
+            "after_step": 2599,
+            "added_part_id": "MON-C360-02617",
+            "minimum_support_margin_mm": 27.300529678477336
+          },
+          {
+            "after_step": 2600,
+            "added_part_id": "MON-C360-02638",
+            "minimum_support_margin_mm": 26.012549139927373
+          },
+          {
+            "after_step": 2601,
+            "added_part_id": "MON-C360-02660",
+            "minimum_support_margin_mm": 24.840217260379497
+          },
+          {
+            "after_step": 2602,
+            "added_part_id": "MON-C360-02681",
+            "minimum_support_margin_mm": 23.768627035876644
+          },
+          {
+            "after_step": 2603,
+            "added_part_id": "MON-C360-02702",
+            "minimum_support_margin_mm": 22.785327916089795
+          },
+          {
+            "after_step": 2604,
+            "added_part_id": "MON-C360-02721",
+            "minimum_support_margin_mm": 21.879839840237114
+          },
+          {
+            "after_step": 2605,
+            "added_part_id": "MON-C360-02738",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 2797,
+            "added_part_id": "MON-C360-02966",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 2798,
+            "added_part_id": "MON-C360-02973",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 2799,
+            "added_part_id": "MON-C360-02977",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 2810,
+            "added_part_id": "MON-C360-02861",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 2811,
+            "added_part_id": "MON-C360-02873",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 2812,
+            "added_part_id": "MON-C360-02884",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 2813,
+            "added_part_id": "MON-C360-02897",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 2814,
+            "added_part_id": "MON-C360-02909",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 2815,
+            "added_part_id": "MON-C360-02920",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 2816,
+            "added_part_id": "MON-C360-02930",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 2817,
+            "added_part_id": "MON-C360-02940",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 2818,
+            "added_part_id": "MON-C360-02951",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 2819,
+            "added_part_id": "MON-C360-02960",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 2820,
+            "added_part_id": "MON-C360-02967",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 3023,
+            "added_part_id": "MON-C360-03186",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 3025,
+            "added_part_id": "MON-C360-03197",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 3248,
+            "added_part_id": "MON-C360-03432",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 3271,
+            "added_part_id": "MON-C360-03435",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 3272,
+            "added_part_id": "MON-C360-03436",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 3478,
+            "added_part_id": "MON-C360-03661",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 3480,
+            "added_part_id": "MON-C360-03662",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 3493,
+            "added_part_id": "MON-C360-03671",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 3494,
+            "added_part_id": "MON-C360-03669",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 3495,
+            "added_part_id": "MON-C360-03670",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 3726,
+            "added_part_id": "MON-C360-03894",
+            "minimum_support_margin_mm": 21.243556106172417
+          },
+          {
+            "after_step": 3727,
+            "added_part_id": "MON-C360-03895",
+            "minimum_support_margin_mm": 21.243556106172417
+          }
+        ],
+        "assumptions": "Uniform-density native CADvolume,notmeasuredPLA/infillmass. Perhullside include100percent ofdestabilizing exclusive-root/firstshared-receiverpayload,ignorestabilizingpayload. No creditforunknownstudpullouttension.",
+        "not_validated": "Printedmaterial/infilldistribution,creep,yield,impact,dynamicassemblyloads,retentionandwholefiguretipping."
+      }
+    ],
+    "physical_mass_measured": false
+  },
+  "root_structural_sections": [
+    {
+      "part_id": "MONA-FINE8-BASE-ROOT-V2-ROOT-01",
+      "type_id": "WR-d41191a5d910218e",
+      "native_single_solid": true,
+      "minimum_true_root_roof_mm": 1.6000000000000014,
+      "section_count": 21,
+      "minimum_effective_section_area_mm2": 37.43999999999788,
+      "actual_brep_sections": [
+        {
+          "plane_x_mm": -80.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 37.43999999999788,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -72.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 151.67999999999142,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -64.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 113.28000000000345,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -56.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 37.440000000001426,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -48.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 37.440000000000985,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -40.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 37.44000000000098,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -32.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 66.02000000000132,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -24.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.588563264358136,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -16.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856326435749,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -8.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856326435749,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 0.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.5885632643571,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 8.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856326435774,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 16.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856326265875,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 24.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.5885622757556,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 32.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.588563262656876,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 40.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856326436071,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 48.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.588563264360886,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 56.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.588563264359074,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 64.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 202.39994285048104,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 72.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 202.39994285053157,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 80.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 202.39994285048093,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        }
+      ],
+      "load_path": "Each previously floating seed is now material-continuous through a stepped same-color beam into body-root walls/tubes/posts. Multiple spaced stud/cavity sites and bearing faces resist translation and rotation geometrically.",
+      "material_strength_infill_layer_orientation": "UNMEASURED",
+      "note": "Positive material sections and CAD static balance are not an allowable bending/torsion strength or pullout test."
+    },
+    {
+      "part_id": "MONA-FINE8-BASE-ROOT-V2-ROOT-02",
+      "type_id": "WR-c5de3bad26942259",
+      "native_single_solid": true,
+      "minimum_true_root_roof_mm": 1.5999999999999996,
+      "section_count": 28,
+      "minimum_effective_section_area_mm2": 37.43999999999785,
+      "actual_brep_sections": [
+        {
+          "plane_x_mm": -108.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 302.2741959079144,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -100.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.5256897930684,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -92.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979306818,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -84.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979306837,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -76.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979306837,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -68.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979306841,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -60.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979307573,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -52.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979307559,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -44.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979308194,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -36.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979307931,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -28.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568732669418,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -20.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979307324,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -12.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979307469,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": -4.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979307259,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 4.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979307168,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 12.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979307114,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 20.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979308755,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 28.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979308734,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 36.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 285.4628163217862,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 44.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 155.11425305743356,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 52.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 155.11425305742722,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 60.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 75.84000000000287,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 68.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 37.43999999999785,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 76.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 75.83999999999565,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 84.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 75.83999999999565,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 92.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 113.27999999999352,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 100.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 151.67999999999134,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        },
+        {
+          "plane_x_mm": 108.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 74.87999999999569,
+          "definition": "Actual BRep thin-slice solid area through steppedbeam/root. Descriptive loadpath section, not allowable force or PLAstrength."
+        }
+      ],
+      "load_path": "Each previously floating seed is now material-continuous through a stepped same-color beam into body-root walls/tubes/posts. Multiple spaced stud/cavity sites and bearing faces resist translation and rotation geometrically.",
+      "material_strength_infill_layer_orientation": "UNMEASURED",
+      "note": "Positive material sections and CAD static balance are not an allowable bending/torsion strength or pullout test."
+    }
+  ],
+  "modules": [
+    {
+      "part_id": "MONA-FINE8-BASE-ROOT-V2-ROOT-01",
+      "type_id": "WR-d41191a5d910218e",
+      "step": 2152,
+      "physical_bottom_z_mm": 78.4,
+      "receiving_body_stage_z_mm": 83.2,
+      "actual_body_support_ids": [
+        "MON-C360-01884",
+        "MON-C360-01887",
+        "MON-C360-01895",
+        "MON-C360-01906",
+        "MON-C360-01916",
+        "MON-C360-01927",
+        "MON-C360-01936",
+        "MON-C360-01937",
+        "MON-C360-01938",
+        "MON-C360-01947",
+        "MON-C360-01948",
+        "MON-C360-01949",
+        "MON-C360-01958",
+        "MON-C360-01959",
+        "MON-C360-01960"
+      ],
+      "root_contact_sites": [
+        [
+          -20,
+          -9,
+          52
+        ],
+        [
+          -19,
+          -10,
+          52
+        ],
+        [
+          -19,
+          -9,
+          52
+        ],
+        [
+          -18,
+          -10,
+          52
+        ],
+        [
+          -18,
+          -9,
+          52
+        ],
+        [
+          -17,
+          -10,
+          52
+        ],
+        [
+          -17,
+          -9,
+          52
+        ],
+        [
+          -16,
+          -10,
+          52
+        ],
+        [
+          -16,
+          -9,
+          52
+        ],
+        [
+          -15,
+          -10,
+          52
+        ],
+        [
+          -15,
+          -9,
+          52
+        ],
+        [
+          -14,
+          -10,
+          52
+        ],
+        [
+          -14,
+          -9,
+          52
+        ],
+        [
+          -13,
+          -10,
+          52
+        ],
+        [
+          -13,
+          -9,
+          52
+        ],
+        [
+          -12,
+          -10,
+          52
+        ],
+        [
+          -12,
+          -9,
+          52
+        ],
+        [
+          -11,
+          -10,
+          52
+        ],
+        [
+          -11,
+          -9,
+          52
+        ],
+        [
+          -10,
+          -10,
+          52
+        ],
+        [
+          -10,
+          -9,
+          52
+        ],
+        [
+          -9,
+          -10,
+          52
+        ],
+        [
+          -9,
+          -9,
+          52
+        ],
+        [
+          -8,
+          -12,
+          52
+        ],
+        [
+          -8,
+          -11,
+          52
+        ],
+        [
+          -8,
+          -10,
+          52
+        ],
+        [
+          -8,
+          -9,
+          52
+        ],
+        [
+          -8,
+          -8,
+          52
+        ],
+        [
+          -8,
+          -7,
+          52
+        ],
+        [
+          -8,
+          -6,
+          52
+        ],
+        [
+          -8,
+          -5,
+          52
+        ],
+        [
+          -7,
+          -12,
+          52
+        ],
+        [
+          -7,
+          -11,
+          52
+        ],
+        [
+          -7,
+          -10,
+          52
+        ],
+        [
+          -7,
+          -9,
+          52
+        ],
+        [
+          -7,
+          -8,
+          52
+        ],
+        [
+          -7,
+          -7,
+          52
+        ],
+        [
+          -7,
+          -6,
+          52
+        ],
+        [
+          -7,
+          -5,
+          52
+        ],
+        [
+          -6,
+          -12,
+          52
+        ],
+        [
+          -6,
+          -11,
+          52
+        ],
+        [
+          -6,
+          -10,
+          52
+        ],
+        [
+          -6,
+          -9,
+          52
+        ],
+        [
+          -6,
+          -8,
+          52
+        ],
+        [
+          -6,
+          -7,
+          52
+        ],
+        [
+          -6,
+          -6,
+          52
+        ],
+        [
+          -6,
+          -5,
+          52
+        ],
+        [
+          -5,
+          -12,
+          52
+        ],
+        [
+          -5,
+          -11,
+          52
+        ],
+        [
+          -5,
+          -10,
+          52
+        ],
+        [
+          -5,
+          -9,
+          52
+        ],
+        [
+          -5,
+          -8,
+          52
+        ],
+        [
+          -5,
+          -7,
+          52
+        ],
+        [
+          -5,
+          -6,
+          52
+        ],
+        [
+          -5,
+          -5,
+          52
+        ]
+      ]
+    },
+    {
+      "part_id": "MONA-FINE8-BASE-ROOT-V2-ROOT-02",
+      "type_id": "WR-c5de3bad26942259",
+      "step": 2362,
+      "physical_bottom_z_mm": 83.2,
+      "receiving_body_stage_z_mm": 88.0,
+      "actual_body_support_ids": [
+        "MON-C360-02067",
+        "MON-C360-02076",
+        "MON-C360-02082",
+        "MON-C360-02179",
+        "MON-C360-02180",
+        "MON-C360-02181",
+        "MON-C360-02182",
+        "MON-C360-02183",
+        "MON-C360-02184",
+        "MON-C360-02204",
+        "MON-C360-02205",
+        "MON-C360-02226",
+        "MON-C360-02227",
+        "MON-C360-02246",
+        "MON-C360-02247",
+        "MON-C360-02267",
+        "MON-C360-02268",
+        "MON-C360-02284",
+        "MON-C360-02286",
+        "MON-C360-02287"
+      ],
+      "root_contact_sites": [
+        [
+          16,
+          -10,
+          52
+        ],
+        [
+          16,
+          -9,
+          52
+        ],
+        [
+          17,
+          -10,
+          52
+        ],
+        [
+          17,
+          -9,
+          52
+        ],
+        [
+          18,
+          -10,
+          52
+        ],
+        [
+          18,
+          -9,
+          52
+        ],
+        [
+          19,
+          -10,
+          52
+        ],
+        [
+          19,
+          -9,
+          52
+        ],
+        [
+          -2,
+          -16,
+          55
+        ],
+        [
+          -2,
+          -15,
+          55
+        ],
+        [
+          -2,
+          -14,
+          55
+        ],
+        [
+          -2,
+          -13,
+          55
+        ],
+        [
+          -2,
+          -12,
+          55
+        ],
+        [
+          -2,
+          -11,
+          55
+        ],
+        [
+          -2,
+          -10,
+          55
+        ],
+        [
+          -2,
+          -9,
+          55
+        ],
+        [
+          -2,
+          -8,
+          55
+        ],
+        [
+          -2,
+          -7,
+          55
+        ],
+        [
+          -2,
+          -6,
+          55
+        ],
+        [
+          -2,
+          -5,
+          55
+        ],
+        [
+          -1,
+          -16,
+          55
+        ],
+        [
+          -1,
+          -15,
+          55
+        ],
+        [
+          -1,
+          -14,
+          55
+        ],
+        [
+          -1,
+          -13,
+          55
+        ],
+        [
+          -1,
+          -12,
+          55
+        ],
+        [
+          -1,
+          -11,
+          55
+        ],
+        [
+          -1,
+          -10,
+          55
+        ],
+        [
+          -1,
+          -9,
+          55
+        ],
+        [
+          -1,
+          -8,
+          55
+        ],
+        [
+          -1,
+          -7,
+          55
+        ],
+        [
+          -1,
+          -6,
+          55
+        ],
+        [
+          -1,
+          -5,
+          55
+        ],
+        [
+          0,
+          -8,
+          55
+        ],
+        [
+          0,
+          -7,
+          55
+        ],
+        [
+          0,
+          -6,
+          55
+        ],
+        [
+          0,
+          -5,
+          55
+        ],
+        [
+          1,
+          -8,
+          55
+        ],
+        [
+          1,
+          -7,
+          55
+        ],
+        [
+          1,
+          -6,
+          55
+        ],
+        [
+          1,
+          -5,
+          55
+        ],
+        [
+          2,
+          -8,
+          55
+        ],
+        [
+          2,
+          -7,
+          55
+        ],
+        [
+          2,
+          -6,
+          55
+        ],
+        [
+          2,
+          -5,
+          55
+        ],
+        [
+          3,
+          -8,
+          55
+        ],
+        [
+          3,
+          -7,
+          55
+        ],
+        [
+          3,
+          -6,
+          55
+        ],
+        [
+          3,
+          -5,
+          55
+        ],
+        [
+          4,
+          -8,
+          55
+        ],
+        [
+          4,
+          -7,
+          55
+        ],
+        [
+          4,
+          -6,
+          55
+        ],
+        [
+          4,
+          -5,
+          55
+        ],
+        [
+          5,
+          -8,
+          55
+        ],
+        [
+          5,
+          -7,
+          55
+        ],
+        [
+          5,
+          -6,
+          55
+        ],
+        [
+          5,
+          -5,
+          55
+        ],
+        [
+          6,
+          -8,
+          55
+        ],
+        [
+          6,
+          -7,
+          55
+        ],
+        [
+          6,
+          -6,
+          55
+        ],
+        [
+          6,
+          -5,
+          55
+        ],
+        [
+          7,
+          -8,
+          55
+        ],
+        [
+          7,
+          -7,
+          55
+        ],
+        [
+          7,
+          -6,
+          55
+        ],
+        [
+          7,
+          -5,
+          55
+        ],
+        [
+          8,
+          -8,
+          55
+        ],
+        [
+          8,
+          -7,
+          55
+        ],
+        [
+          8,
+          -6,
+          55
+        ],
+        [
+          8,
+          -5,
+          55
+        ],
+        [
+          9,
+          -8,
+          55
+        ],
+        [
+          9,
+          -7,
+          55
+        ],
+        [
+          9,
+          -6,
+          55
+        ],
+        [
+          9,
+          -5,
+          55
+        ],
+        [
+          10,
+          -8,
+          55
+        ],
+        [
+          10,
+          -7,
+          55
+        ],
+        [
+          10,
+          -6,
+          55
+        ],
+        [
+          10,
+          -5,
+          55
+        ],
+        [
+          11,
+          -8,
+          55
+        ],
+        [
+          11,
+          -7,
+          55
+        ],
+        [
+          11,
+          -6,
+          55
+        ],
+        [
+          11,
+          -5,
+          55
+        ],
+        [
+          12,
+          -8,
+          55
+        ],
+        [
+          12,
+          -7,
+          55
+        ],
+        [
+          12,
+          -6,
+          55
+        ],
+        [
+          12,
+          -5,
+          55
+        ],
+        [
+          13,
+          -8,
+          55
+        ],
+        [
+          13,
+          -7,
+          55
+        ],
+        [
+          13,
+          -6,
+          55
+        ],
+        [
+          13,
+          -5,
+          55
+        ],
+        [
+          14,
+          -8,
+          55
+        ],
+        [
+          14,
+          -7,
+          55
+        ],
+        [
+          14,
+          -6,
+          55
+        ],
+        [
+          14,
+          -5,
+          55
+        ],
+        [
+          15,
+          -8,
+          55
+        ],
+        [
+          15,
+          -7,
+          55
+        ],
+        [
+          15,
+          -6,
+          55
+        ],
+        [
+          15,
+          -5,
+          55
+        ],
+        [
+          16,
+          -8,
+          55
+        ],
+        [
+          16,
+          -7,
+          55
+        ],
+        [
+          16,
+          -6,
+          55
+        ],
+        [
+          16,
+          -5,
+          55
+        ],
+        [
+          17,
+          -8,
+          55
+        ],
+        [
+          17,
+          -7,
+          55
+        ],
+        [
+          17,
+          -6,
+          55
+        ],
+        [
+          17,
+          -5,
+          55
+        ],
+        [
+          18,
+          -8,
+          55
+        ],
+        [
+          18,
+          -7,
+          55
+        ],
+        [
+          18,
+          -6,
+          55
+        ],
+        [
+          18,
+          -5,
+          55
+        ],
+        [
+          19,
+          -8,
+          55
+        ],
+        [
+          19,
+          -7,
+          55
+        ],
+        [
+          19,
+          -6,
+          55
+        ],
+        [
+          19,
+          -5,
+          55
+        ],
+        [
+          16,
+          -12,
+          55
+        ],
+        [
+          16,
+          -11,
+          55
+        ],
+        [
+          17,
+          -12,
+          55
+        ],
+        [
+          17,
+          -11,
+          55
+        ]
+      ]
+    }
+  ],
+  "source_occupied_cells_unchanged": true,
+  "source_visible_colors_unchanged": true,
+  "body_first_all_steps_supported": true,
+  "floating_seed_steps": 0,
+  "blocked_vertical_body_columns": 0,
+  "native_bounds_mm": [
+    [
+      -211.900002,
+      -171.9,
+      0.0
+    ],
+    [
+      211.900002,
+      171.9,
+      368.2
+    ]
+  ],
+  "sequence_method": "Complete receiving-body-first dependency order with explicit multi-heightmodule support stages. All previously unsupportedtips travel with a continuousroot, not placed before theirconnection.",
+  "insertion_scope": "All actual module/body cell columns and exact native root/support BRep samples at2.1/1/.3/0mm; unchanged monotone interface profiles. Hand access, print deformation, real friction and extraction are not validated.",
+  "physical_validation": "UNKNOWN",
+  "slicer_supports": "UNKNOWN_SEPARATE_FROM_NO_ASSEMBLY_STANDS"
+}

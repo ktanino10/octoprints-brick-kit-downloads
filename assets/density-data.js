@@ -11,6 +11,7 @@ export const DENSITY_FLAGS = Object.freeze({
 });
 export const MONA_WHISKER_REQUIREMENT = 'NO_EXTERNAL_OR_ASSEMBLY_AIDS';
 export const MONA_GEOMETRY_REVISION = 'whisker-root-v2';
+export const MONA_ROOT_REFERENCE_ID = 'mona-fine8-base-root-v2';
 export const isObject = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
 export const isHash = (value) => typeof value === 'string' && /^[0-9a-f]{64}$/.test(value);
 export const isCount = (value) => Number.isSafeInteger(value) && value >= 0;
@@ -27,6 +28,16 @@ export function densityCaseIdentity(id) {
 
 export function allDensityCases(catalog) {
   return [...catalog.cases, ...(catalog.historical_cases ?? [])];
+}
+
+export function densityArtifactIdentity(id) {
+  return id === MONA_ROOT_REFERENCE_ID
+    ? { logicalId: 'mona-fine8-base', character: 'mona', percentage: 100, revision: MONA_GEOMETRY_REVISION, reference: true }
+    : densityCaseIdentity(id);
+}
+
+export function densityGuideEntries(catalog) {
+  return [...allDensityCases(catalog), ...Object.values(catalog.reference_revisions ?? {})];
 }
 
 export function densityPath(value) {
@@ -197,6 +208,34 @@ export function validateDensityCatalog(catalog, pointer) {
     validateAssetGroups(item.assets);
   }
   densityAssert(combinations.size === 15, '3体×5倍率の15枠をすべて明示する必要があります。');
+  if (catalog.display_catalog !== undefined) validateDensityFile(catalog.display_catalog);
+  densityAssert(catalog.reference_revisions === undefined || isObject(catalog.reference_revisions),
+    '改訂参照は固定された倍率計算基準と分けて記録する必要があります。');
+  for (const [character, reference] of Object.entries(catalog.reference_revisions ?? {})) {
+    const baseline = catalog.baselines[character];
+    densityAssert(character === 'mona' && reference.id === MONA_ROOT_REFERENCE_ID
+      && reference.character === character && reference.logical_case_id === 'mona-fine8-base'
+      && reference.geometry_revision === MONA_GEOMETRY_REVISION && reference.state === 'READY'
+      && reference.kind === 'BASELINE_REFERENCE_NOT_MULTIPLIER_CASE' && reference.counts_toward_multiplier_cases === false
+      && reference.fixed_count_baseline === baseline.metrics.part_count
+      && reference.target_count === baseline.metrics.part_count,
+    '改訂参照が倍率の分母や15案の完成件数を変更しています。');
+    validateMetrics(reference.metrics);
+    const difference = reference.metrics.part_count - baseline.metrics.part_count;
+    densityAssert(reference.actual_count_difference_from_fixed === difference && reference.target_difference === difference
+      && Math.abs(reference.actual_ratio - reference.metrics.part_count / baseline.metrics.part_count) < 1e-10
+      && densityDeliveryStatus(reference) === 'READY' && isHash(reference.source_manifest_sha256)
+      && isHash(reference.source_bom_sha256) && /^[0-9a-f]{40}$/.test(reference.source_commit),
+    '改訂参照の実個数・元基準との差・支台検査記録が一致しません。');
+    validateDensityFile(reference.manifest);
+    validateAssetGroups(reference.assets);
+    for (const view of ['front', 'three_quarter']) {
+      validateDensityFile(reference.images[view]);
+      densityAssert(reference.images[view].framing_rule === 'MATCHED_SCREEN_HEIGHT'
+        && reference.images[view].condition_id === baseline.images[view].condition_id,
+      '比較画像の同方向・同画面高さの条件が一致しません。');
+    }
+  }
   if (pointer.state === 'READY') densityAssert(catalog.cases.every((item) => densityDeliveryStatus(item) === 'READY')
     && Object.values(catalog.baselines).every((baseline) => baseline.state === 'READY'),
     '未完成・目標未達の案が残るため、15案すべて完了とは表示できません。');

@@ -28,12 +28,23 @@
       "counts_toward_multiplier_cases": false
     }
   },
+  "reference_revisions": {
+    "mona": {
+      "case_id": "mona-fine8-base-root-v2",
+      "actual_count": 12411,
+      "fixed_count_baseline": 12435,
+      "difference_from_fixed": -24,
+      "counts_toward_multiplier_cases": false,
+      "cad_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-fine8-base-root-v2/mona-fine8-base-root-v2-cad-scene-animation-public.zip",
+      "viewer_url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case=mona-fine8-base-root-v2"
+    }
+  },
   "public_commit": {
     "record": "archive/deployment.json",
     "field": "commit"
   },
   "verified_content_commit": null,
-  "catalog_sha256": "46b890c73aab9ca80cf6bee5aa97a0bfd03cb8e1956bfa8312700068496379f0",
+  "catalog_sha256": "f1458236cbe3f0281d5b211992e4348f1a64113eb9345b492e3712bf95277b5c",
   "cases": [
     {
       "case_id": "mona-p120-root-v2",
@@ -227,19 +238,23 @@
       "logical_case_id": "copilot-p300",
       "character": "copilot",
       "multiplier": 3.0,
-      "target_count": null,
-      "actual_count": null,
-      "actual_ratio": null,
-      "status": "INPUT_WAIT",
-      "source_status": "INPUT_WAIT",
+      "target_count": 53619,
+      "actual_count": 53350,
+      "actual_ratio": 2.984949364963912,
+      "status": "READY",
+      "source_status": "READY",
       "whisker_support": null,
-      "cg_url": null,
-      "animation_url": null,
-      "animation_urls": {},
-      "cad_url": null,
-      "assembly_url": null,
-      "viewer_url": null,
-      "viewer_url_en": null
+      "cg_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p300/copilot-p300-cad-scene-animation-public.zip",
+      "animation_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p300/copilot-p300-assembly-motion.mp4",
+      "animation_urls": {
+        "turntable": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p300/copilot-p300-assembly-motion.mp4",
+        "radial_explode": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p300/copilot-p300-assembly-motion.mp4",
+        "bottom_up": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p300/copilot-p300-assembly-motion.mp4"
+      },
+      "cad_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p300/copilot-p300-cad-scene-animation-public.zip",
+      "assembly_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p300/copilot-p300-cad-scene-animation-public.zip",
+      "viewer_url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case=copilot-p300",
+      "viewer_url_en": "https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-guide.html?case=copilot-p300"
     },
     {
       "case_id": "copilot-p400",
@@ -388,8 +403,8 @@
     "mona_whisker_requirement": "NO_EXTERNAL_OR_ASSEMBLY_AIDS",
     "physical_validation": "UNKNOWN",
     "slicer_print_supports": "SEPARATE_UNVALIDATED_CONDITION",
-    "data_ready_case_count": 4,
-    "requirement_ready_case_count": 4,
+    "data_ready_case_count": 5,
+    "requirement_ready_case_count": 5,
     "historical_data_case_count": 2
   }
 }

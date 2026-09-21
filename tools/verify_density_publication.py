@@ -21,9 +21,11 @@ def browser_coverage(catalog, browser, previous_catalog):
     current = {case["id"]: case for case in catalog["cases"] if case["state"] == "READY"}
     previous = {case["id"]: case for case in previous_catalog.get("cases", [])}
     required_cases = {identifier for identifier, case in current.items() if previous.get(identifier) != case}
-    baselines = {name: row for name, row in catalog["baselines"].items() if row["state"] == "READY"}
+    baselines = {name: catalog.get("reference_revisions", {}).get(name, row)
+                 for name, row in catalog["baselines"].items() if row["state"] == "READY"}
     required_baselines = {name for name, row in baselines.items()
-                          if previous_catalog.get("baselines", {}).get(name) != row}
+                          if previous_catalog.get("reference_revisions", {}).get(
+                              name, previous_catalog.get("baselines", {}).get(name)) != row}
     tested = set(browser.get("cases", []))
     if (browser.get("base") != BASE or browser.get("input_wait") is not False
             or browser.get("errors") or browser.get("failure")
@@ -43,10 +45,24 @@ def browser_coverage(catalog, browser, previous_catalog):
     if (actual != {(identifier, chapter) for identifier in tested for chapter in chapters}
             or not {(name, chapter) for name in required_baselines for chapter in chapters} <= baseline_actual):
         raise ValueError("Public media checks omit a changed case or baseline chapter")
+    references = {row["id"]: row for row in catalog.get("reference_revisions", {}).values()}
+    tested_references = set(browser.get("reference_guides", []))
+    if not tested_references <= references.keys():
+        raise ValueError("Public reference-guide checks include an unknown actual reference")
+    reference_media = set()
+    for entry in browser.get("reference_media", []):
+        identifier, chapter = entry.get("case_id"), entry.get("chapter")
+        if (identifier not in tested_references or chapter not in chapters or entry.get("played") is not True
+                or entry.get("url") != references[identifier]["assets"]["animations"][chapter]["url"]):
+            raise ValueError("Reference guide media does not match its actual public assets")
+        reference_media.add((identifier, chapter))
+    if reference_media != {(identifier, chapter) for identifier in tested_references for chapter in chapters}:
+        raise ValueError("Reference-guide movie coverage is incomplete")
     complete = tested == current.keys() and baseline_actual == {(name, chapter) for name in baselines for chapter in chapters}
     return {
         "browser_media_delivery": "PASS" if complete else "PASS_CHANGED_CASES_AND_BASELINES",
         "browser_cases_verified": sorted(tested),
+        "browser_reference_guides_verified": sorted(tested_references),
         "unchanged_cases_not_retested": sorted(current.keys() - tested),
         "browser_baseline_chapters_verified": sorted([name, chapter] for name, chapter in baseline_actual),
     }

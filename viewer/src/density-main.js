@@ -1,7 +1,7 @@
 import { assetURL, setLanguageContext } from '../../assets/i18n.js';
 import { getJSON as readJSON } from './network.js';
 import {
-  DENSITY_POINTER, validateDensityPointer, validateDensityCatalog, densityAssert as check, densityDeliveryStatus, allDensityCases,
+  DENSITY_POINTER, validateDensityPointer, validateDensityCatalog, densityAssert as check, densityDeliveryStatus, densityGuideEntries,
 } from '../../assets/density-data.js';
 import { studyElement as element, formatStudyNumber as number, studyVideo } from '../../assets/study-ui.js';
 import { verifiedJSON, loadNativeLibraries } from './density-assets.js';
@@ -14,7 +14,8 @@ import { DensityPartPreview } from './density-part-preview.js';
 import { readDensityView, writeDensityView } from './density-view-state.js';
 
 const $ = (selector) => document.querySelector(selector);
-let catalog = null, candidate = null, manifest = null, index = null, studio = null, preview = null;
+let catalog = null, displayCatalog = null, candidate = null, manifest = null, index = null, studio = null, preview = null;
+let detailMode = 'native';
 let progress = { mode: 'assembled', steps: 0, explosion: 0 };
 let selected = null, playback = null, request = null, generation = 0, animationFrame = null, page = 0;
 let pendingExplosionFrame = null, pendingExplosion = 0;
@@ -48,11 +49,13 @@ function writeURL(url = new URL(location.href)) {
     pending.searchParams.set('case', candidate.id);
     return pending;
   }
-  return writeDensityView(url, {
+  const result = writeDensityView(url, {
     candidate: candidate.id, ...progress, part: selected?.id ?? null,
     query: $('#guide-search').value, same: $('#guide-same').checked,
     camera: studio ? [...studio.camera.position.toArray(), ...studio.controls.target.toArray()] : null,
   });
+  result.searchParams.set('detail', detailMode);
+  return result;
 }
 setLanguageContext(writeURL);
 function saveView() {
@@ -150,7 +153,7 @@ function selectPart(id) {
   else $('#guide-selection').append(element('p', '印刷プレート・slot対応は未生成です。型・色・実組立IDから確認してください。', 'quiet'));
   if (studio) {
     if (!preview) preview = new DensityPartPreview($('#guide-part-preview'));
-    preview.show(studio.geometryFor(selected.type_id), manifest.palette[selected.color_id].hex);
+    preview.show(studio.nativeGeometryFor(selected.type_id), manifest.palette[selected.color_id].hex);
   }
   renderParts(); saveView();
 }
@@ -221,7 +224,7 @@ function renderDownloads() {
   host.append(section);
 }
 async function selectCandidate(id, params = null) {
-  const item = allDensityCases(catalog).find((entry) => entry.id === id);
+  const item = densityGuideEntries(catalog).find((entry) => entry.id === id);
   check(item, '指定した倍率案がカタログにありません。');
   request?.abort(); request = new AbortController();
   const current = ++generation, signal = request.signal;
@@ -229,6 +232,7 @@ async function selectCandidate(id, params = null) {
   manifest = null; index = null; selected = null; page = 0;
   $('#density-canvas').dataset.ready = 'false';
   preview?.clear(); studio?.clear(); setEnabled(false);
+  $('#guide-detail').disabled = true;
   candidate = item; $('#guide-case').value = id;
   if (!params) history.replaceState(history.state, '', writeURL());
   $('#guide-error').hidden = true;
@@ -259,7 +263,23 @@ async function selectCandidate(id, params = null) {
     '根元改訂の証拠が実ID・形状・組立順・支台数と一致しません。');
     check(next.metrics.part_count === item.metrics.part_count && next.metrics.unique_types === item.metrics.unique_types,
       'カタログと実3Dの部品数・使用型が一致しません。');
-    const libraries = await loadNativeLibraries(next.geometry_files, signal);
+    const available = displayCatalog?.cases[id];
+    detailMode = params?.get('detail') ?? (available ? 'light' : 'native');
+    check(['light', 'native'].includes(detailMode), '表示品質の指定が不正です。');
+    if (available) check(available.source_manifest_sha256 === item.manifest.sha256,
+      '表示用軽量形状の原形指紋・誤差・変更範囲が不正です。');
+    check(detailMode !== 'light' || available, 'この実案の表示用軽量モデルはまだありません。原形表示で開いてください。');
+    const lightweightFiles = detailMode === 'light'
+      ? available.geometry_files.filter((file) => file.mode === 'NATIVE_PREVIEW_TESSELLATION') : [];
+    for (const file of lightweightFiles) check(/^(?:BR|PL)-\d+x\d+-H\d+(?:-EDGE-C020)?$/.test(file.type_id)
+      && next.types[file.type_id]?.geometry_sha256 === file.source_geometry_sha256,
+    '表示用軽量形状の原形指紋・誤差・変更範囲が不正です。');
+    const [nativeLibraries, lightweight] = await Promise.all([
+      loadNativeLibraries(next.geometry_files, signal),
+      lightweightFiles.length ? loadNativeLibraries(lightweightFiles, signal) : null,
+    ]);
+    const libraries = lightweight ? { mode: 'NATIVE_PREVIEW_TESSELLATION',
+      types: { ...nativeLibraries.types, ...lightweight.types } } : nativeLibraries;
     if (current !== generation) return;
     manifest = next; index = guideIndex(next);
     $('#guide-case-warning').textContent = item.tradeoff;
@@ -273,13 +293,15 @@ async function selectCandidate(id, params = null) {
         'この改訂は実一体ヒゲ部品と支持段の順序を使い、外付け支え・組立仮支台は0個です。CAD接触・断面・公称重心を検査済みですが、実物の質量・保持力・強度は未検証です。実部品の底面Zと支持高さは区別して表示します。'),
       link(next.root_validation, '根元・順序・公称CAD重心の検査記録 ↗'));
     }
-    $('#guide-target-status').textContent = item.state === 'TARGET_MISSED'
+    $('#guide-target-status').textContent = item.kind === 'BASELINE_REFERENCE_NOT_MULTIPLIER_CASE'
+      ? `倍率計算の固定基準 ${number(item.fixed_count_baseline, 0)}部品 / 支台なし参照の実構成 ${number(item.metrics.part_count, 0)}部品（差 ${number(item.actual_count_difference_from_fixed, 0)}）。15案の完成件数には含めません。`
+      : item.state === 'TARGET_MISSED'
       ? '個数目標の許容差を未達。15案の完成には数えていません。'
       : `目標 ${number(item.target_count, 0)} / 実数 ${number(item.metrics.part_count, 0)} / 実倍率 ${number(item.actual_ratio, 4)}倍`;
     if (!studio) studio = new DensityStudio($('#density-canvas'), {
       onSelect: selectPart, onError: showError, onViewChange: () => { if (manifest) saveView(); },
     });
-    studio.load(manifest, libraries, index);
+    studio.load(manifest, libraries, index, nativeLibraries);
     progress = { mode: 'assembled', steps: manifest.parts.length, explosion: 0 };
     playback = new AssemblyPlayback(manifest.parts.length, (steps) => {
       progress.steps = steps; updateProgress();
@@ -289,8 +311,11 @@ async function selectCandidate(id, params = null) {
       const option = element('option', stage.label); option.value = stage.id; return option;
     }));
     $('#guide-mesh-mode').textContent = libraries.mode === 'NATIVE_PREVIEW_TESSELLATION'
-      ? '軽量ネイティブ近似メッシュ表示。分割数・精度の違いは公開記録を参照し、詳細な原形はCADから確認してください。'
+      ? '表示用軽量モデル：通常の四角形ブロックの面数だけを削減しています。根元・特殊形状と選択部品の裏面は原形です。推定誤差0.04 mmは製造公差ではありません。原形表示へ切り替えられ、CAD・STL・CG・個数・ID・支持検証は変更していません。'
       : '実ネイティブ由来の頂点・面を表示。座標はブラウザーのFloat32表現です。';
+    $('#guide-detail').value = detailMode;
+    $('#guide-detail').querySelector('[value="light"]').disabled = !available;
+    $('#guide-detail').disabled = false;
     $('#guide-search').value = ''; $('#guide-same').checked = false;
     setEnabled(true);
     if (params) {
@@ -317,6 +342,12 @@ async function selectCandidate(id, params = null) {
 }
 
 $('#guide-case').addEventListener('change', () => selectCandidate($('#guide-case').value).catch(showError));
+$('#guide-detail').addEventListener('change', () => {
+  if (!candidate) return;
+  const params = writeURL().searchParams;
+  params.set('detail', $('#guide-detail').value);
+  selectCandidate(candidate.id, params).catch(showError);
+});
 $('#guide-mode').addEventListener('change', () => setMode($('#guide-mode').value));
 $('#guide-explode').addEventListener('input', () => {
   pendingExplosion = Number($('#guide-explode').value) / 100;
@@ -377,9 +408,19 @@ try {
     $('#guide-loading').textContent = '15案の実ネイティブ形状・順序・動画を受領待ちです。表示用の仮モデルは作成していません。';
   } else {
     catalog = validateDensityCatalog(await verifiedJSON(pointer.catalog), pointer);
-    $('#guide-case').replaceChildren(...allDensityCases(catalog).map((item) => {
+    if (catalog.display_catalog) {
+      displayCatalog = await verifiedJSON(catalog.display_catalog);
+      check(displayCatalog.schema_version === 1 && displayCatalog.study_id === catalog.study_id
+        && displayCatalog.mode === 'DISPLAY_ONLY_LIGHTWEIGHT'
+        && displayCatalog.roots_and_non_rectangular_types === 'UNCHANGED_NATIVE'
+        && displayCatalog.selected_part_preview === 'UNCHANGED_NATIVE',
+      '表示用軽量形状の原形指紋・誤差・変更範囲が不正です。');
+    }
+    $('#guide-case').replaceChildren(...densityGuideEntries(catalog).map((item) => {
       const historical = (catalog.historical_cases ?? []).some((old) => old.id === item.id);
-      const label = historical ? `${item.id} · 履歴 · ${number(item.metrics.part_count, 0)}部品`
+      const label = item.kind === 'BASELINE_REFERENCE_NOT_MULTIPLIER_CASE'
+        ? `${item.id} · 参照 · ${number(item.metrics.part_count, 0)}部品`
+        : historical ? `${item.id} · 履歴 · ${number(item.metrics.part_count, 0)}部品`
         : `${item.id} · ${item.state === 'INPUT_WAIT' ? '入力待ち' : `${number(item.metrics.part_count, 0)}部品`}`;
       const option = element('option', label);
       option.value = item.id; return option;

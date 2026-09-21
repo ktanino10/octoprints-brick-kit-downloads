@@ -30,24 +30,37 @@ function render() {
   history.replaceState(history.state, '', url);
   $('#matrix-character').textContent = names[character];
   const baseline = catalog.baselines[character];
+  const revisedReference = catalog.reference_revisions?.[character];
+  const displayedReference = revisedReference ?? baseline;
   const reference = $('#matrix-reference');
   reference.querySelectorAll('video').forEach((video) => video.pause());
   reference.replaceChildren();
-  if (baseline.state === 'READY') {
-    reference.append(element('h3', `${names[character]} · 1倍の比較基準`),
-      actualImage(baseline.images[view], `${names[character]} · 1倍基準 · ${number(baseline.metrics.part_count, 0)}部品`),
-      element('p', `${number(baseline.metrics.part_count, 0)}部品 / ${number(baseline.metrics.unique_types, 0)}型`),
-      element('p', baseline.metrics.dimensions_mm.map((n) => number(n, 3)).join(' × ') + ' mm', 'quiet'));
+  if (displayedReference.state === 'READY') {
+    reference.append(element('h3', revisedReference ? `${names[character]} · 支台なしの追加参照` : `${names[character]} · 1倍の比較基準`),
+      actualImage(displayedReference.images[view], revisedReference
+        ? `${names[character]} · 支台なし参照の実構成 · ${number(displayedReference.metrics.part_count, 0)}部品`
+        : `${names[character]} · 1倍基準 · ${number(baseline.metrics.part_count, 0)}部品`),
+      element('p', `${number(displayedReference.metrics.part_count, 0)}部品 / ${number(displayedReference.metrics.unique_types, 0)}型`),
+      element('p', displayedReference.metrics.dimensions_mm.map((n) => number(n, 3)).join(' × ') + ' mm', 'quiet'));
+    if (revisedReference) {
+      const distinction = element('p',
+        `倍率計算の固定基準 ${number(baseline.metrics.part_count, 0)}部品 / 支台なし参照の実構成 ${number(displayedReference.metrics.part_count, 0)}部品（差 ${number(revisedReference.actual_count_difference_from_fixed, 0)}）。15案の完成件数には含めません。`, 'note');
+      distinction.dataset.referenceCountDistinction = character;
+      reference.append(distinction);
+      const guide = element('a', '参照の実3Dと根元の検査記録 ↗', 'text-link');
+      guide.href = localizedURL(`density-guide.html?case=${revisedReference.id}`);
+      reference.append(guide);
+    }
     const native = element('a', '1倍基準の実CG・動画・CAD・Blender・組立データ', 'text-link');
-    native.href = downloadURL(baseline.assets.native_cad[0]);
+    native.href = downloadURL(displayedReference.assets.native_cad[0]);
     native.dataset.baselineDownload = character;
     reference.append(native, element('p', 'この1倍基準は比較参照です。15倍率案の完了件数には含めません。', 'quiet'));
-    if (character === 'mona') reference.append(element('p',
+    if (character === 'mona' && !revisedReference) reference.append(element('p',
       'このMona 1倍画像・CADは外付け支台が必要な旧参照です。個数基準12,435は固定しますが、ヒゲ支台なしの新版ではありません。', 'note'));
     const videos = element('details', undefined, 'media-disclosure');
     videos.append(element('summary', '1倍基準の実動画を見る（3章）'));
     for (const [key, label] of [['turntable', '旋回'], ['radial_explode', '360度放射分解'], ['bottom_up', '底から組立']]) {
-      const clip = baseline.assets.animations[key];
+      const clip = displayedReference.assets.animations[key];
       const video = studyVideo(`${downloadURL(clip)}#t=${clip.start_seconds},${clip.end_seconds}`,
         `${names[character]} · 1倍基準 · ${label}`,
         () => showError('公開動画を読み込めません。動画の取得リンクから確認してください。'));
@@ -60,6 +73,15 @@ function render() {
       if (!videos.open) videos.querySelectorAll('video').forEach((video) => video.pause());
     });
     reference.append(videos);
+    if (revisedReference) {
+      const history = element('details');
+      history.dataset.baselineHistory = character;
+      history.append(element('summary', '固定基準に使った旧1倍参照（支台あり）'),
+        actualImage(baseline.images[view], `${names[character]} · 1倍基準 · ${number(baseline.metrics.part_count, 0)}部品`));
+      const original = element('a', '旧1倍参照の実ファイルを取得 ↗');
+      original.href = downloadURL(baseline.assets.native_cad[0]);
+      history.append(original); reference.append(history);
+    }
   } else if (baseline.state === 'COUNTED') {
     reference.append(element('h3', `${names[character]} · 1倍の比較基準`),
       element('p', `${number(baseline.metrics.part_count, 0)}部品 / ${number(baseline.metrics.unique_types, 0)}型`),

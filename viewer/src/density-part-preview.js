@@ -55,9 +55,16 @@ export class DensityPartPreview {
     this.mesh.geometry = geometry;
     this.material.color.set(color);
     this.mesh.visible = true;
+    this.host.dataset.geometrySha256 = geometry.userData.geometrySha256 ?? '';
+    this.host.dataset.originalNative = String(geometry.userData.originalNative === true);
+    this.host.dataset.triangles = String(geometry.index ? geometry.index.count / 3 : geometry.attributes.position.count / 3);
     this.view('front');
   }
-  clear() { this.mesh.visible = false; this.mesh.geometry = this.empty; this.render(); }
+  clear() {
+    this.mesh.visible = false; this.mesh.geometry = this.empty;
+    for (const key of ['geometrySha256', 'originalNative', 'triangles']) delete this.host.dataset[key];
+    this.render();
+  }
   view(name) {
     if (!this.mesh.visible) return;
     const direction = name === 'underside' ? new THREE.Vector3(0.4, -0.6, -1).normalize()

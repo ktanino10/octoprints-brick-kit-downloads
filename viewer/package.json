@@ -15,6 +15,7 @@
   "devDependencies": {
     "@babel/parser": "7.28.4",
     "esbuild": "0.25.10",
+    "meshoptimizer": "1.2.0",
     "playwright": "1.55.1"
   }
 }

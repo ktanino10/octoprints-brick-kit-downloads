@@ -5,7 +5,7 @@ import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import {
   DENSITY_ID, DENSITY_FLAGS, COUNT_PERCENTAGES, targetPartCount, countTargetResult,
-  validateDensityPointer, validateDensityCatalog, densityPath, densityDeliveryStatus, allDensityCases,
+  validateDensityPointer, validateDensityCatalog, densityPath, densityDeliveryStatus, allDensityCases, densityGuideEntries,
 } from '../../assets/density-data.js';
 import {
   validateGuideManifest, guideIndex, radialPosition, courseBoundary, stageRange,
@@ -176,6 +176,34 @@ test('revised geometry occupies one logical slot while old actual IDs remain exp
   assert.throws(() => validateGuideManifest(guide, original.id));
   guide.animation_contract.sequence_mode = 'BODY_FIRST_ROOT_ANCHORED';
   assert.throws(() => validateGuideManifest(guide, revised.id), /工程検査記録/);
+});
+
+test('revised 1x geometry keeps actual 12411 separate from frozen 12435 and fifteen-case counts', () => {
+  const catalog = catalogFixture(), reference = structuredClone(catalog.cases[0]);
+  Object.assign(reference, {
+    id: 'mona-fine8-base-root-v2', logical_case_id: 'mona-fine8-base', geometry_revision: 'whisker-root-v2',
+    kind: 'BASELINE_REFERENCE_NOT_MULTIPLIER_CASE', counts_toward_multiplier_cases: false,
+    fixed_count_baseline: 12435, actual_count_difference_from_fixed: -24,
+    target_count: 12435, target_difference: -24, actual_ratio: 12411 / 12435, metrics: metrics(12411),
+  });
+  delete reference.count_percentage;
+  reference.whisker_support.geometry_revision = 'whisker-root-v2';
+  catalog.reference_revisions = { mona: reference };
+  assert.equal(validateDensityCatalog(catalog, pointer), catalog);
+  assert.equal(catalog.baselines.mona.metrics.part_count, 12435);
+  assert.equal(catalog.cases.length, 15);
+  assert.equal(allDensityCases(catalog).length, 15);
+  assert.equal(densityGuideEntries(catalog).length, 16);
+  assert.equal(catalog.cases[0].target_count, 14922);
+  for (const mutate of [
+    (value) => { value.baselines.mona.metrics.part_count = 12411; },
+    (value) => { value.reference_revisions.mona.fixed_count_baseline = 12411; },
+    (value) => { value.reference_revisions.mona.metrics.part_count = 12435; },
+    (value) => { value.reference_revisions.mona.counts_toward_multiplier_cases = true; },
+  ]) {
+    const changed = structuredClone(catalog); mutate(changed);
+    assert.throws(() => validateDensityCatalog(changed, pointer));
+  }
 });
 
 test('root-anchored structural checks preserve real low origins and require actual dependency order', () => {
@@ -398,7 +426,7 @@ test('installed actual guide cases retain source fingerprint counts and absolute
   const bytes = await readFile(new URL(densityPath(publication.catalog.path).slice(1), root));
   assert.equal(createHash('sha256').update(bytes).digest('hex'), publication.catalog.sha256);
   const catalog = validateDensityCatalog(JSON.parse(bytes), publication);
-  for (const item of allDensityCases(catalog).filter((entry) => entry.state !== 'INPUT_WAIT')) {
+  for (const item of densityGuideEntries(catalog).filter((entry) => entry.state !== 'INPUT_WAIT')) {
     const source = await readFile(new URL(densityPath(item.manifest.path).slice(1), root));
     assert.equal(source.length, item.manifest.bytes);
     assert.equal(createHash('sha256').update(source).digest('hex'), item.manifest.sha256);

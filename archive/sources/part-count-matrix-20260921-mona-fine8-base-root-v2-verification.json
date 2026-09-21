@@ -1,0 +1,81 @@
+{
+  "case_id": "mona-fine8-base-root-v2",
+  "source_commit": "2153c31b6347259ce70f90e6a5ed6c85f4486e2d",
+  "metrics": {
+    "part_count": 12411,
+    "unique_types": 121,
+    "one_by_one_exceptions": 31,
+    "layer_count": 77,
+    "minimum_part_mm": [
+      7.8,
+      7.8,
+      3.2
+    ],
+    "grip_long_ge_15_8_count": 12380
+  },
+  "manifest_sha256": "db9c961b6525d3b9b5e3ba43c3973a88fc625e7872aad220653a47f694dea2c4",
+  "bom_sha256": "221ba2f3a2ea0ad898489ac267919c1ef82243801299a728fe01c64f05e60066",
+  "counted_instances": 12411,
+  "bom_ids_match": true,
+  "bom_types_colors_poses_steps_match": true,
+  "identity_projection_sha256": "d2b3db6141b9b3a7d740bc7f41a64ce42f6915d44e67f98ba89367d9cc5b09ba",
+  "body_height_families": [
+    {
+      "body_height_mm": 3.2,
+      "part_count": 50,
+      "unique_types": 6
+    },
+    {
+      "body_height_mm": 4.8,
+      "part_count": 12333,
+      "unique_types": 108
+    },
+    {
+      "body_height_mm": 9.6,
+      "part_count": 28,
+      "unique_types": 7
+    }
+  ],
+  "public_native_assembly": {
+    "path": "artifacts/studies/part-count-matrix-20260921/cases/mona-fine8-base-root-v2/assembly.FCStd",
+    "document_objects": 141,
+    "native_links_resolved": 141,
+    "link_instances": 12411,
+    "valid_single_solid_targets_checked": 121,
+    "proxy_free": true,
+    "opened": true,
+    "recomputed": false,
+    "saved": false,
+    "sha256": "c0f55d8e7060c09c8be42e5d48fd0cf1c353ba83637da83bc96e6ff59723ee3c"
+  },
+  "public_blender_motion_preserved": true,
+  "source_saved_scene_binding": "415377a18bdeee1ccc506e2714165a145933eff97d1c07bd6b6ca398d8214db7",
+  "source_native_reopen": {
+    "result": "PASS_REOPENED_RELATIVE_NATIVE_LINK_ARRAYS",
+    "actual_instance_count": 12411,
+    "all_ids_types_colors_poses_steps": true,
+    "all_sources_inside_bundle": true
+  },
+  "private_inputs_copied": 0,
+  "root_revision_evidence": {
+    "geometry_sequence_identity_sha256": "19e0e5c4f812e099122665b397fed2a1b3ae52d2128348aa1e4a520cddf48689",
+    "native_root_contact_evidence_sha256": "3f3a3276ef7fa674f5b4a3306873ebb6675cd070d66d1702f498b2de5bbdbfa2",
+    "checked_root_modules": 2,
+    "checked_actual_brep_sections": 49,
+    "nominal_body_overlap_tolerance_mm3": 1e-05,
+    "gravity_balance_result": "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS",
+    "physical_validation": "UNKNOWN",
+    "physical_mass_measured": false
+  },
+  "public_native_id_pose_check": {
+    "case_id": "mona-fine8-base-root-v2",
+    "assembly_sha256": "c0f55d8e7060c09c8be42e5d48fd0cf1c353ba83637da83bc96e6ff59723ee3c",
+    "actual_instances": 12411,
+    "array_count": 141,
+    "all_ids_types_colors_poses_steps": "MATCH",
+    "relocated_reopen": true,
+    "saved": false,
+    "recomputed": false
+  },
+  "files": []
+}

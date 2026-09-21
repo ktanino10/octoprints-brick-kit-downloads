@@ -67,11 +67,12 @@ Geometry-only 3MF files remain **NOT_SLICED**, not configured Bambu Studio proje
 **[Copilot 1.2× actual 3D guide](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-guide.html?case=copilot-p120)** /
 **[Copilot CG, Blender, animation and native CAD package](https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/tag/part-count-matrix-20260921-copilot-p120)**.
 
-Actual data satisfying the current delivery requirements is available for **Mona's new 1.2× revision and Copilot 1.2×, 1.5× and 2×: four of fifteen cases**.
+Actual data satisfying the current delivery requirements is available for **Mona's new 1.2× revision and Copilot 1.2×, 1.5×, 2× and 3×: five of fifteen cases**.
 The 1.2× case contains **21,388 parts versus target 21,448 (−60; actual ratio 1.196665×), 155 types,
 519.8 × 439.8 × 397.0 mm**. The 1.5× case contains **26,690 parts versus target 26,810 (−120; actual ratio 1.493314×),
 162 types, 567.8 × 487.8 × 425.8 mm**. The 2× case has **35,648 parts versus target 35,746 (−98; actual ratio 1.994517×),
-182 types, 631.8 × 535.8 × 469.0 mm**. Each Copilot case has one separate, visible temporary support.
+182 types, 631.8 × 535.8 × 469.0 mm**. The 3× case has **53,350 parts versus target 53,619 (−269),
+195 types, 727.8 × 615.8 × 541.0 mm**. Separate visible temporary supports number one for 1.2×/1.5×/2× and two for 3×.
 The Mona-specific no-stand condition is not extended to Copilot. Crown/cheek steps and asymmetric lime regions remain;
 neither aesthetic nor manufacturing approval is implied.
 
@@ -88,7 +89,9 @@ Old URLs are not silently replaced. The other four new Mona multiplier cases rem
 Slicer-generated print supports are a separate unvalidated condition.
 All three 1× baselines now have separate public CG, native CAD, Blender and three-chapter animation packages linked from their matrix reference cards.
 **The three baselines do not count toward completion of the fifteen multiplier cases.**
-Mona's 1× CAD/images are likewise labeled as the old support-dependent reference. The frozen 12,435 count baseline and targets remain unchanged.
+Mona's additional support-free reference is explicitly shown as **12,411 actual parts (−24 after root integration)**.
+The **frozen multiplier denominator remains 12,435**, and all five targets are unchanged. Historical supported 1× assets remain downloadable.
+The additional reference is not counted among the fifteen multiplier cases.
 Baseline counts are Mona 12,435 / Copilot 17,873 / Ducky 9,669, using a consistent initial-Fine-C-adapted 8 mm approach.
 This is a **comparison assumption, not user adoption**; earlier r3 counts of 695/413 are not mixed in.
 Multipliers refer to individual physical parts, not linear dimensions.
@@ -102,6 +105,13 @@ Its mouth appears flatter and less even than initial C/the 1× smile, with inner
 This visual regression is disclosed; a larger count is not an appearance pass.
 The guide uses native meshes for all-direction radial separation, empty-to-bottom-up part/course/stage playback,
 type/color BOMs, all matching-part destinations and selected-part underside inspection. Motion is not a collision-free disassembly simulation.
+
+Heavy cases offer an explicitly labeled **lightweight display model** with an original-native switch.
+Only ordinary rectangular BR/PL meshes lose triangles; retained vertices, root/special geometry and selected-part previews preserve their native originals.
+CAD/STL/Blender/final CG, counts, IDs and support evidence are unchanged. CP2 drops from about 290M to 62M rendered triangles.
+On the measured macOS WebKit host, completed drag frames fell from about 402/408 ms to 117/194 ms at 1440/390px.
+The approximate 0.04 mm simplifier error is not a manufacturing tolerance or a Hausdorff guarantee, and smoothness is not guaranteed on every device.
+[Quality limits, environment and actual timings](artifacts/studies/part-count-matrix-20260921/display/performance.json) are preserved.
 
 The public ZIP includes a relatively linked FreeCAD assembly, shared masters and original parametric authoring documents,
 STL/STEP, Blender, assembled/exploded CG, BOM/motion and a 12-second turntable/radial/bottom-up movie.

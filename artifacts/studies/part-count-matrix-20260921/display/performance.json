@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "study_id": "part-count-matrix-20260921",
+  "scope": "DISPLAY_ONLY_MEASUREMENTS_NOT_A_MANUFACTURING_OR_UNIVERSAL_PERFORMANCE_GUARANTEE",
+  "case_id": "copilot-p200",
+  "actual_instances": 35648,
+  "environment": {
+    "host": "macOS desktop",
+    "browser": "Playwright-pinned WebKit revision 2203",
+    "reported_renderer": "WebKit WebGL",
+    "reported_vendor": "WebKit",
+    "hardware_or_software_backend": "NOT_DISCLOSED_BY_RENDERER",
+    "reduced_motion": true,
+    "mobile_scope": "390px desktop-host viewport emulation; not physical phone testing",
+    "load_conditions": "Local preview with concurrent workloads; not a dedicated hardware benchmark"
+  },
+  "geometry": {
+    "native_triangles_per_frame": 290028480,
+    "lightweight_triangles_per_frame": 62163672,
+    "reduction_factor": 4.6655622274051,
+    "method": "meshoptimizer 1.2.0 simplify, no vertex update, no sloppy simplification, no component pruning",
+    "scope": "Only ordinary rectangular BR/PL blocks; root modules, special shapes and selected-part preview retain original native geometry",
+    "approximate_error_budget_mm": 0.04,
+    "error_limit_note": "An approximate simplifier metric, not a Hausdorff proof or manufacturing tolerance",
+    "checks": [
+      "Every retained vertex equals an original native position",
+      "Euler characteristic and boundary/nonmanifold edge counts unchanged",
+      "Top cap component count unchanged, including eight studs on the dominant 2x4 brick",
+      "Bounding-box deviation within 0.04 mm",
+      "Mesh-volume deviation below 2 percent",
+      "Native CAD, STL, Blender, final CG, IDs, poses and support certificates unchanged",
+      "Original/lightweight toggle preserves counts, camera and assembly state",
+      "Same-view actual original/lightweight images inspected"
+    ]
+  },
+  "measurements": [
+    {
+      "viewport": [1440, 1000],
+      "original": {
+        "rotation_finished_frames_ms": [623, 343, 349, 209, 271],
+        "input_handler_ms": [1, 1, 1, 0, 1],
+        "event_loop_yield_ms": [1, 1, 1, 1, 1],
+        "radial_to_finished_frame_ms": 1486,
+        "drag_to_finished_frame_ms": 401.8643,
+        "pause_ui_response_ms": 497.7957
+      },
+      "lightweight": {
+        "rotation_finished_frames_ms": [211, 113, 51, 50, 50],
+        "input_handler_ms": [1, 1, 1, 1, 0],
+        "event_loop_yield_ms": [2, 1, 1, 1, 1],
+        "radial_to_finished_frame_ms": 315,
+        "drag_to_finished_frame_ms": 116.73,
+        "pause_ui_response_ms": 188.1543
+      }
+    },
+    {
+      "viewport": [390, 844],
+      "original": {
+        "rotation_finished_frames_ms": [611, 404, 362, 304, 394],
+        "input_handler_ms": [1, 1, 0, 1, 0],
+        "event_loop_yield_ms": [2, 1, 1, 1, 0],
+        "radial_to_finished_frame_ms": 1564,
+        "drag_to_finished_frame_ms": 408.3615,
+        "pause_ui_response_ms": 655.1405
+      },
+      "lightweight": {
+        "rotation_finished_frames_ms": [124, 106, 95, 62, 114],
+        "input_handler_ms": [1, 1, 1, 1, 0],
+        "event_loop_yield_ms": [2, 1, 2, 1, 1],
+        "radial_to_finished_frame_ms": 88,
+        "drag_to_finished_frame_ms": 193.738,
+        "pause_ui_response_ms": 163.0941
+      }
+    }
+  ],
+  "interpretation": "Small input-handler/yield values do not make total rendering instantaneous. Frame values include scheduling, render submission/driver work and GPU completion. Final gl.finish calls measured zero additional wait after preceding frame processing; these are not isolated GPU profiler timings.",
+  "remaining": "Measure each newly received actual case, especially the final largest case. Do not extrapolate a smoothness guarantee to all devices."
+}

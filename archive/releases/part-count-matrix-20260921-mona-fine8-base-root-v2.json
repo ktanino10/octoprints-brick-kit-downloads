@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "study_id": "part-count-matrix-20260921",
+  "case_id": "mona-fine8-base-root-v2",
+  "tag": "part-count-matrix-20260921-mona-fine8-base-root-v2",
+  "source_commit": "2153c31b6347259ce70f90e6a5ed6c85f4486e2d",
+  "status": "UNSELECTED_DIGITAL_CASE_NOT_SLICED",
+  "kind": "BASELINE_REFERENCE_NOT_MULTIPLIER_CASE",
+  "counts_toward_multiplier_cases": false,
+  "assets": [
+    {
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-fine8-base-root-v2/mona-fine8-base-root-v2-cad-scene-animation-public.zip",
+      "bytes": 115230176,
+      "sha256": "caa45d2956f60a53cd67b609c13884b033261a2fa345cd00abc6f3fbb9cf48f0"
+    },
+    {
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-fine8-base-root-v2/mona-fine8-base-root-v2-assembly-motion.mp4",
+      "bytes": 1890861,
+      "sha256": "92dbbe343acdb52d12e36a6f425fa6d10b6ee9f206231437202e381d9080d2b5"
+    }
+  ],
+  "case_categories": [
+    "cg",
+    "animation",
+    "native_cad",
+    "assembly"
+  ],
+  "physical_fit": "UNKNOWN",
+  "full_print": "ON_HOLD"
+}

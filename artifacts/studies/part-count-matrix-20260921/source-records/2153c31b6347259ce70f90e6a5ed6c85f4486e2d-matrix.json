@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "study_id": "part-count-matrix-20260921",
+  "state": "PARTIAL_MATRIX_READY",
+  "ready_case_count": 4,
+  "expected_case_count": 15,
+  "baseline_authority": "Creator-selected provisional comparison assumption while the user was unavailable, NOT a user selection: comparable initial-Fine-C-pattern8mm baselines for all3characters.",
+  "target_rounding": "ROUND_HALF_UP(baseline_actual_instances * percent /100)",
+  "baseline_rows": [
+    {
+      "character": "mona",
+      "actual_count": 12435,
+      "source_manifest_sha256": "5556e329521b5706a366c5dad2aa6c7b13eca9d7d74323338773d5e2b20b2b4c",
+      "candidate_id": "mona-fine8-base-root-v2",
+      "state": "READY",
+      "summary_path": "cases/mona-fine8-base-root-v2-summary.json",
+      "historical_reference_id": "mona-fine8-base",
+      "mechanical_requirement": "whisker-root-v2"
+    },
+    {
+      "character": "copilot",
+      "actual_count": 17873,
+      "source_manifest_sha256": "5253cbb755fc1069e745dfda69026e0475904abe5e2d76bd7312852672189d7b",
+      "candidate_id": "copilot-fine8-base",
+      "state": "READY",
+      "summary_path": "cases/copilot-fine8-base-summary.json",
+      "historical_reference_id": null,
+      "mechanical_requirement": "UNCHANGED"
+    },
+    {
+      "character": "ducky",
+      "actual_count": 9669,
+      "source_manifest_sha256": "fd5f65d03fb85bea911ec1945e2e8339909dafea2b63c6627523c34b2334d267",
+      "candidate_id": "ducky-fine8-base",
+      "state": "READY",
+      "summary_path": "cases/ducky-fine8-base-summary.json",
+      "historical_reference_id": null,
+      "mechanical_requirement": "UNCHANGED"
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "mona-p120-root-v2",
+      "character": "mona",
+      "target_ratio": 1.2,
+      "logical_case_id": "mona-p120",
+      "geometry_revision": "whisker-root-v2",
+      "baseline_count": 12435,
+      "target_count": 14922,
+      "state": "READY",
+      "summary_path": "cases/mona-p120-root-v2-summary.json",
+      "historical_support_dependent_case": {
+        "case_id": "mona-p120",
+        "data_ready": true,
+        "meets_requested_mechanical_requirement": false
+      }
+    },
+    {
+      "case_id": "mona-p150-root-v2",
+      "character": "mona",
+      "target_ratio": 1.5,
+      "logical_case_id": "mona-p150",
+      "geometry_revision": "whisker-root-v2",
+      "baseline_count": 12435,
+      "target_count": 18653,
+      "state": "REQUIRES_WHISKER_REVISION",
+      "summary_path": null,
+      "historical_support_dependent_case": {
+        "case_id": "mona-p150",
+        "data_ready": true,
+        "meets_requested_mechanical_requirement": false
+      }
+    },
+    {
+      "case_id": "mona-p200-root-v2",
+      "character": "mona",
+      "target_ratio": 2.0,
+      "logical_case_id": "mona-p200",
+      "geometry_revision": "whisker-root-v2",
+      "baseline_count": 12435,
+      "target_count": 24870,
+      "state": "REQUIRES_WHISKER_REVISION",
+      "summary_path": null,
+      "historical_support_dependent_case": {
+        "case_id": "mona-p200",
+        "data_ready": true,
+        "meets_requested_mechanical_requirement": false
+      }
+    },
+    {
+      "case_id": "mona-p300-root-v2",
+      "character": "mona",
+      "target_ratio": 3.0,
+      "logical_case_id": "mona-p300",
+      "geometry_revision": "whisker-root-v2",
+      "baseline_count": 12435,
+      "target_count": 37305,
+      "state": "REQUIRES_WHISKER_REVISION",
+      "summary_path": null,
+      "historical_support_dependent_case": {
+        "case_id": "mona-p300",
+        "data_ready": false,
+        "meets_requested_mechanical_requirement": false
+      }
+    },
+    {
+      "case_id": "mona-p400-root-v2",
+      "character": "mona",
+      "target_ratio": 4.0,
+      "logical_case_id": "mona-p400",
+      "geometry_revision": "whisker-root-v2",
+      "baseline_count": 12435,
+      "target_count": 49740,
+      "state": "REQUIRES_WHISKER_REVISION",
+      "summary_path": null,
+      "historical_support_dependent_case": {
+        "case_id": "mona-p400",
+        "data_ready": false,
+        "meets_requested_mechanical_requirement": false
+      }
+    },
+    {
+      "case_id": "copilot-p120",
+      "character": "copilot",
+      "target_ratio": 1.2,
+      "logical_case_id": "copilot-p120",
+      "geometry_revision": "original-matrix",
+      "baseline_count": 17873,
+      "target_count": 21448,
+      "state": "READY",
+      "summary_path": "cases/copilot-p120-summary.json"
+    },
+    {
+      "case_id": "copilot-p150",
+      "character": "copilot",
+      "target_ratio": 1.5,
+      "logical_case_id": "copilot-p150",
+      "geometry_revision": "original-matrix",
+      "baseline_count": 17873,
+      "target_count": 26810,
+      "state": "READY",
+      "summary_path": "cases/copilot-p150-summary.json"
+    },
+    {
+      "case_id": "copilot-p200",
+      "character": "copilot",
+      "target_ratio": 2.0,
+      "logical_case_id": "copilot-p200",
+      "geometry_revision": "original-matrix",
+      "baseline_count": 17873,
+      "target_count": 35746,
+      "state": "READY",
+      "summary_path": "cases/copilot-p200-summary.json"
+    },
+    {
+      "case_id": "copilot-p300",
+      "character": "copilot",
+      "target_ratio": 3.0,
+      "logical_case_id": "copilot-p300",
+      "geometry_revision": "original-matrix",
+      "baseline_count": 17873,
+      "target_count": 53619,
+      "state": "PENDING",
+      "summary_path": null
+    },
+    {
+      "case_id": "copilot-p400",
+      "character": "copilot",
+      "target_ratio": 4.0,
+      "logical_case_id": "copilot-p400",
+      "geometry_revision": "original-matrix",
+      "baseline_count": 17873,
+      "target_count": 71492,
+      "state": "PENDING",
+      "summary_path": null
+    },
+    {
+      "case_id": "ducky-p120",
+      "character": "ducky",
+      "target_ratio": 1.2,
+      "logical_case_id": "ducky-p120",
+      "geometry_revision": "original-matrix",
+      "baseline_count": 9669,
+      "target_count": 11603,
+      "state": "PENDING",
+      "summary_path": null
+    },
+    {
+      "case_id": "ducky-p150",
+      "character": "ducky",
+      "target_ratio": 1.5,
+      "logical_case_id": "ducky-p150",
+      "geometry_revision": "original-matrix",
+      "baseline_count": 9669,
+      "target_count": 14504,
+      "state": "PENDING",
+      "summary_path": null
+    },
+    {
+      "case_id": "ducky-p200",
+      "character": "ducky",
+      "target_ratio": 2.0,
+      "logical_case_id": "ducky-p200",
+      "geometry_revision": "original-matrix",
+      "baseline_count": 9669,
+      "target_count": 19338,
+      "state": "PENDING",
+      "summary_path": null
+    },
+    {
+      "case_id": "ducky-p300",
+      "character": "ducky",
+      "target_ratio": 3.0,
+      "logical_case_id": "ducky-p300",
+      "geometry_revision": "original-matrix",
+      "baseline_count": 9669,
+      "target_count": 29007,
+      "state": "PENDING",
+      "summary_path": null
+    },
+    {
+      "case_id": "ducky-p400",
+      "character": "ducky",
+      "target_ratio": 4.0,
+      "logical_case_id": "ducky-p400",
+      "geometry_revision": "original-matrix",
+      "baseline_count": 9669,
+      "target_count": 38676,
+      "state": "PENDING",
+      "summary_path": null
+    }
+  ],
+  "appearance_references": "references.json",
+  "status": {
+    "selection": "NOT_SELECTED",
+    "visual_approval": "PENDING",
+    "physical_fit": "UNKNOWN",
+    "retention_strength": "UNKNOWN",
+    "whole_figure_stability": "UNKNOWN",
+    "slicer_status": "NOT_SLICED",
+    "full_print": "ON_HOLD",
+    "printmap": "NOT_GENERATED"
+  },
+  "prior_current_revision_unchanged": "r3-8mm-20260920",
+  "mechanical_requirement_revision": "whisker-root-v2"
+}

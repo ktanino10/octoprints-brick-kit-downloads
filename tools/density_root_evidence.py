@@ -4,7 +4,7 @@ import hashlib
 import json
 import math
 
-from density_requirements import MONA_GEOMETRY_REVISION, case_identity
+from density_requirements import MONA_GEOMETRY_REVISION, artifact_identity
 
 SEQUENCE_MODE = "BODY_FIRST_ROOT_ANCHORED"
 NATIVE_PASS = "PASS_ACTUAL_BODY_ROOT_BREP_CONTACTS"
@@ -109,7 +109,7 @@ def validate_balance(balance, root, parts):
 
 def validate_root_evidence(proof, manifest, native_complete):
     identifier = manifest["candidate_id"]
-    logical, revision = case_identity(identifier)
+    logical, revision = artifact_identity(identifier)
     require(revision == MONA_GEOMETRY_REVISION and manifest.get("logical_case_id") == logical,
             "Root evidence must belong to its exact revised geometry and logical slot")
     parts = {part["id"]: part for part in manifest["parts"]}

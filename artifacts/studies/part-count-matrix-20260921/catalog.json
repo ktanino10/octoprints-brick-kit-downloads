@@ -440,7 +440,7 @@
         "dimensions_mm": [
           439.8,
           359.8,
-          397.0
+          397
         ]
       },
       "target_count": 14922,
@@ -610,7 +610,7 @@
         "dimensions_mm": [
           519.8,
           439.8,
-          397.0
+          397
         ]
       },
       "target_count": 21448,
@@ -846,7 +846,7 @@
         "dimensions_mm": [
           631.8,
           535.8,
-          469.0
+          469
         ]
       },
       "target_count": 35746,
@@ -949,7 +949,119 @@
       "id": "copilot-p300",
       "character": "copilot",
       "count_percentage": 300,
-      "state": "INPUT_WAIT"
+      "state": "READY",
+      "metrics": {
+        "part_count": 53350,
+        "unique_types": 195,
+        "one_by_one_exceptions": 73,
+        "layer_count": 113,
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "grip_long_ge_15_8_count": 53277,
+        "dimensions_mm": [
+          727.8,
+          615.8,
+          540.9999999999999
+        ]
+      },
+      "target_count": 53619,
+      "target_difference": -269,
+      "actual_ratio": 2.984949364963912,
+      "manifest": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/cases/copilot-p300-guide.json.gz",
+        "bytes": 1969332,
+        "sha256": "50ca194ba0829b923d625b5149a7c5a0572ce4c725afe2e8120ed057a1413a28"
+      },
+      "source_manifest_sha256": "6cc5d2279d5b80db851246fba64e88acca6acc472bdae1738d748193974c7b13",
+      "source_bom_sha256": "2d163053849351e35a65920b1efffabbafaf27bfb24eebb661211eb4a0185085",
+      "source_commit": "659eb738fea7f33e58c28567664832c883ddf9d7",
+      "images": {
+        "front": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/copilot-p300-assembled-front.jpg",
+          "bytes": 81403,
+          "sha256": "43a60d02a3484374d1e5fa89675e3598dd876f5258f9336bc6e52b4c3ffed7d0",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_front"
+        },
+        "three_quarter": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/copilot-p300-assembled-three_quarter.jpg",
+          "bytes": 107247,
+          "sha256": "a602d01fe110de6e8591bbe6784e2f4d3e19688c039f35dd34c3f2eefdaf6dba",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_three_quarter"
+        }
+      },
+      "tradeoff": "実53350部品、固定目標53619との差-269で許容内。完成正面・斜めと実動画1/18/54/73/108/144を閲覧した。 紫のゴーグル枠・青い面・黄緑の特徴色、頭頂/後頭部と左右の丸みを実ブロックで維持している。相対格子は細かくなる一方、額や頬の大きな段階パターンと色境界の離散化は依然見える。 実727.8x615.8x541.0mm、実倍率2.984949。固定8mm部品を用いた大型化であり、寸法をそのまま3倍した案ではない。 2倍案との差は輪郭の段数などに見られるが、黄緑部分の形や青い頬の溝が全て原型に近づくわけではない。数量を外観品質の合格点に変換しない。 1x1例外73個、長辺15.8mm以上53277個。底部の仮支持2個は別数量として残し、frame73の本体ゼロにも準備物として見える。Monaの支台なし条件はCopilotへ混同しない。 保存native/移動再open、全53350ID/type/color/pose/step、実分解位置・復帰・空から全数までを照合済み。これらはデジタル比較の完了であり、現物の嵌合・強度・転倒・印刷の承認ではない。",
+      "assets": {
+        "cg": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p300/copilot-p300-cad-scene-animation-public.zip",
+            "filename": "copilot-p300-cad-scene-animation-public.zip",
+            "bytes": 183422534,
+            "sha256": "d5299c10a8495f13cc328bb0d36843ccedeedc993e11415abdd4fccf4632f147",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "still",
+              "blender"
+            ]
+          }
+        ],
+        "native_cad": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p300/copilot-p300-cad-scene-animation-public.zip",
+            "filename": "copilot-p300-cad-scene-animation-public.zip",
+            "bytes": 183422534,
+            "sha256": "d5299c10a8495f13cc328bb0d36843ccedeedc993e11415abdd4fccf4632f147",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "freecad_assembly",
+              "linked_libraries",
+              "stl",
+              "step"
+            ]
+          }
+        ],
+        "assembly": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p300/copilot-p300-cad-scene-animation-public.zip",
+            "filename": "copilot-p300-cad-scene-animation-public.zip",
+            "bytes": 183422534,
+            "sha256": "d5299c10a8495f13cc328bb0d36843ccedeedc993e11415abdd4fccf4632f147",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "bom",
+              "ordered_ids",
+              "instructions"
+            ]
+          }
+        ],
+        "animations": {
+          "turntable": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p300/copilot-p300-assembly-motion.mp4",
+            "bytes": 1885845,
+            "sha256": "0d3aea2b15d4ee700b30d5660ec94e57e199954fd9741148d1b2b5d66b6690f7",
+            "start_seconds": 0,
+            "end_seconds": 3
+          },
+          "radial_explode": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p300/copilot-p300-assembly-motion.mp4",
+            "bytes": 1885845,
+            "sha256": "0d3aea2b15d4ee700b30d5660ec94e57e199954fd9741148d1b2b5d66b6690f7",
+            "start_seconds": 3,
+            "end_seconds": 6
+          },
+          "bottom_up": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p300/copilot-p300-assembly-motion.mp4",
+            "bytes": 1885845,
+            "sha256": "0d3aea2b15d4ee700b30d5660ec94e57e199954fd9741148d1b2b5d66b6690f7",
+            "start_seconds": 6,
+            "end_seconds": 12
+          }
+        }
+      }
     },
     {
       "id": "copilot-p400",
@@ -988,6 +1100,151 @@
       "state": "INPUT_WAIT"
     }
   ],
+  "reference_revisions": {
+    "mona": {
+      "id": "mona-fine8-base-root-v2",
+      "logical_case_id": "mona-fine8-base",
+      "geometry_revision": "whisker-root-v2",
+      "character": "mona",
+      "state": "READY",
+      "metrics": {
+        "part_count": 12411,
+        "unique_types": 121,
+        "one_by_one_exceptions": 31,
+        "layer_count": 77,
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "grip_long_ge_15_8_count": 12380,
+        "dimensions_mm": [
+          423.8,
+          343.8,
+          368.2
+        ]
+      },
+      "target_count": 12435,
+      "target_difference": -24,
+      "actual_ratio": 0.9980699638118214,
+      "manifest": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/cases/mona-fine8-base-root-v2-guide.json.gz",
+        "bytes": 559992,
+        "sha256": "3160223806569f70f0e18bb97f7d912daa791e75be9e023787af95424fd6b731"
+      },
+      "source_manifest_sha256": "db9c961b6525d3b9b5e3ba43c3973a88fc625e7872aad220653a47f694dea2c4",
+      "source_bom_sha256": "221ba2f3a2ea0ad898489ac267919c1ef82243801299a728fe01c64f05e60066",
+      "source_commit": "2153c31b6347259ce70f90e6a5ed6c85f4486e2d",
+      "images": {
+        "front": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/mona-fine8-base-root-v2-assembled-front.jpg",
+          "bytes": 74214,
+          "sha256": "5e53a49b496bdce4f9dd5e83d75b8257422ae68ad25d23b33c6f4b8ac16ffbaa",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_front"
+        },
+        "three_quarter": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/mona-fine8-base-root-v2-assembled-three_quarter.jpg",
+          "bytes": 98359,
+          "sha256": "f12d4995367fc77698f3b03e98c6300a647d18acfa41da11ce2d181762496b14",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_three_quarter"
+        }
+      },
+      "tradeoff": "実12411部品の正面・斜めと実動画1/54/73/89/90/91/92/108/144を確認。ヒゲを残したまま床へ伸びる柱や仮支持台がなく、受け側本体の後に左右の根元一体部品が入る。 固定された比較の分母は12435のままである。新しい基準表示の実構造は24部品少ない12411であり、旧原本の数量や形状を無言で変更していない。 根元は同色の既存頬内部へつながる実部品として広げた。顔・耳・ヒゲの外形セルと見える色は保持され、一部のヒゲ/内部の部品境界は統合されている。 実根元の支持面とCAD一様密度の荷重計算では、単体から後続26/65段階を通じて最小幾何余裕16.10/21.24mm。これとは別に接触・差込み・断面・全組付け順を検査した。実PLAの重量/インフィル/強度を測った値ではない。 目・口の離散的な形、額・頬の段差やスタッドは残り、初期Cとの完全同一や美観合格とは断言しない。 これは1x比較表示の追加参照であり、15倍率案の完成数へ加えない。現物保持力・全体転倒・印刷サポート要否は未知、NOT_SLICEDを維持する。",
+      "assets": {
+        "cg": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-fine8-base-root-v2/mona-fine8-base-root-v2-cad-scene-animation-public.zip",
+            "filename": "mona-fine8-base-root-v2-cad-scene-animation-public.zip",
+            "bytes": 115230176,
+            "sha256": "caa45d2956f60a53cd67b609c13884b033261a2fa345cd00abc6f3fbb9cf48f0",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "still",
+              "blender"
+            ]
+          }
+        ],
+        "native_cad": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-fine8-base-root-v2/mona-fine8-base-root-v2-cad-scene-animation-public.zip",
+            "filename": "mona-fine8-base-root-v2-cad-scene-animation-public.zip",
+            "bytes": 115230176,
+            "sha256": "caa45d2956f60a53cd67b609c13884b033261a2fa345cd00abc6f3fbb9cf48f0",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "freecad_assembly",
+              "linked_libraries",
+              "stl",
+              "step"
+            ]
+          }
+        ],
+        "assembly": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-fine8-base-root-v2/mona-fine8-base-root-v2-cad-scene-animation-public.zip",
+            "filename": "mona-fine8-base-root-v2-cad-scene-animation-public.zip",
+            "bytes": 115230176,
+            "sha256": "caa45d2956f60a53cd67b609c13884b033261a2fa345cd00abc6f3fbb9cf48f0",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "bom",
+              "ordered_ids",
+              "instructions"
+            ]
+          }
+        ],
+        "animations": {
+          "turntable": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-fine8-base-root-v2/mona-fine8-base-root-v2-assembly-motion.mp4",
+            "bytes": 1890861,
+            "sha256": "92dbbe343acdb52d12e36a6f425fa6d10b6ee9f206231437202e381d9080d2b5",
+            "start_seconds": 0,
+            "end_seconds": 3
+          },
+          "radial_explode": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-fine8-base-root-v2/mona-fine8-base-root-v2-assembly-motion.mp4",
+            "bytes": 1890861,
+            "sha256": "92dbbe343acdb52d12e36a6f425fa6d10b6ee9f206231437202e381d9080d2b5",
+            "start_seconds": 3,
+            "end_seconds": 6
+          },
+          "bottom_up": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-fine8-base-root-v2/mona-fine8-base-root-v2-assembly-motion.mp4",
+            "bytes": 1890861,
+            "sha256": "92dbbe343acdb52d12e36a6f425fa6d10b6ee9f206231437202e381d9080d2b5",
+            "start_seconds": 6,
+            "end_seconds": 12
+          }
+        }
+      },
+      "whisker_support": {
+        "external_aid_count": 0,
+        "assembly_aid_count": 0,
+        "status": "DIGITAL_SELF_SUPPORTING_UNTESTED",
+        "physical_validation": "UNKNOWN",
+        "geometry_revision": "whisker-root-v2",
+        "manifest_sha256": "db9c961b6525d3b9b5e3ba43c3973a88fc625e7872aad220653a47f694dea2c4",
+        "attachment_evidence_sha256": "3f3a3276ef7fa674f5b4a3306873ebb6675cd070d66d1702f498b2de5bbdbfa2",
+        "sequence_evidence_sha256": "b75838effa669df25f4ef40b72b23797d3801c9dd55086f816cc872341dbcb32",
+        "motion_sha256": "e479839f0f3745f847efc228bb66adb8dbb66789c4583619a57fbb93abf8da0b",
+        "geometry_sequence_identity_sha256": "19e0e5c4f812e099122665b397fed2a1b3ae52d2128348aa1e4a520cddf48689",
+        "all_categories_geometry_match": true,
+        "assembly_validation_ref": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/validation/mona-fine8-base-root-v2-whisker-support.json",
+          "bytes": 122881,
+          "sha256": "b75838effa669df25f4ef40b72b23797d3801c9dd55086f816cc872341dbcb32"
+        },
+        "gravity_balance_result": "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS",
+        "physical_mass_measured": false
+      },
+      "kind": "BASELINE_REFERENCE_NOT_MULTIPLIER_CASE",
+      "counts_toward_multiplier_cases": false,
+      "fixed_count_baseline": 12435,
+      "actual_count_difference_from_fixed": -24
+    }
+  },
   "historical_cases": [
     {
       "id": "mona-p120",
@@ -1008,7 +1265,7 @@
         "dimensions_mm": [
           439.8,
           359.8,
-          397.0
+          397
         ]
       },
       "target_count": 14922,
@@ -1225,5 +1482,10 @@
         }
       }
     }
-  ]
+  ],
+  "display_catalog": {
+    "path": "/artifacts/studies/part-count-matrix-20260921/display/catalog.json",
+    "bytes": 1077744,
+    "sha256": "55f56c7fa310b23c64ae65f77b7d4425fb5d0a72d8dd95a93f2e4d2e93b802b6"
+  }
 }

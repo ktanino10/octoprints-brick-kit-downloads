@@ -83,6 +83,12 @@ def merge_catalog(previous, incoming, accepted_case):
             if new["state"] == "READY" and new != old:
                 raise ValueError("Published baseline media changed")
             merged["baselines"][name] = copy.deepcopy(old)
+    if merged.get("reference_revisions", previous.get("reference_revisions", {})) != previous.get("reference_revisions", {}):
+        raise ValueError("A multiplier receipt cannot replace separate reference revisions")
+    if "reference_revisions" in previous:
+        merged["reference_revisions"] = copy.deepcopy(previous["reference_revisions"])
+    if "display_catalog" in previous:
+        merged["display_catalog"] = copy.deepcopy(previous["display_catalog"])
     return merged
 
 
@@ -95,17 +101,27 @@ def main():
         raise ValueError("Install only a reviewed case from owned staging")
     review = json.loads((stage / "source-review.json").read_text())
     case = review["case_id"]
+    reference = review.get("kind") == "BASELINE_REFERENCE_NOT_MULTIPLIER_CASE"
     native = json.loads((stage / "native-pose-verification.json").read_text())
     if native["case_id"] != case or native["all_ids_types_colors_poses_steps"] != "MATCH":
         raise ValueError("Actual relocated native ID/pose verification is missing")
     incoming = json.loads((stage / "derived/catalog.json").read_text())
-    next_case = next(item for item in incoming["cases"] if item["id"] == case)
+    candidates = incoming.get("reference_revisions", {}).values() if reference else incoming["cases"]
+    next_case = next(item for item in candidates if item["id"] == case)
     if native["actual_instances"] != next_case["metrics"]["part_count"]:
         raise ValueError("Installed guide count differs from reopened CAD")
     catalog_path = ROOT / PREFIX / "catalog.json"
     if catalog_path.exists():
         previous = json.loads(catalog_path.read_text())
-        incoming = merge_catalog(previous, incoming, case)
+        if reference:
+            for key in ["cases", "baselines", "historical_cases"]:
+                if incoming.get(key) != previous.get(key):
+                    raise ValueError("A separate reference must not alter multiplier cases or frozen baselines")
+            old = previous.get("reference_revisions", {}).get(next_case["character"])
+            if old is not None and old != next_case:
+                raise ValueError("An immutable actual reference revision cannot be overwritten")
+        else:
+            incoming = merge_catalog(previous, incoming, case)
     source_path = ROOT / "archive/sources" / f"{STUDY}.json"
     source_index = json.loads(source_path.read_text()) if source_path.exists() else {
         "schema_version": 1, "revision": STUDY, "files": [],
@@ -160,6 +176,7 @@ def main():
         "schema_version": 1, "study_id": STUDY, "case_id": case,
         "tag": f"{STUDY}-{case}", "source_commit": review["source_commit"],
         "status": "UNSELECTED_DIGITAL_CASE_NOT_SLICED",
+        **({"kind": "BASELINE_REFERENCE_NOT_MULTIPLIER_CASE", "counts_toward_multiplier_cases": False} if reference else {}),
         "assets": [{key: file[key] for key in ["url", "bytes", "sha256"]} for file in [bundle, movie]],
         "case_categories": ["cg", "animation", "native_cad", "assembly"],
         "physical_fit": "UNKNOWN", "full_print": "ON_HOLD",

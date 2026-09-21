@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "study_id": "part-count-matrix-20260921",
+  "case_id": "copilot-p300",
+  "tag": "part-count-matrix-20260921-copilot-p300",
+  "source_commit": "659eb738fea7f33e58c28567664832c883ddf9d7",
+  "status": "UNSELECTED_DIGITAL_CASE_NOT_SLICED",
+  "assets": [
+    {
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p300/copilot-p300-cad-scene-animation-public.zip",
+      "bytes": 183422534,
+      "sha256": "d5299c10a8495f13cc328bb0d36843ccedeedc993e11415abdd4fccf4632f147"
+    },
+    {
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p300/copilot-p300-assembly-motion.mp4",
+      "bytes": 1885845,
+      "sha256": "0d3aea2b15d4ee700b30d5660ec94e57e199954fd9741148d1b2b5d66b6690f7"
+    }
+  ],
+  "case_categories": [
+    "cg",
+    "animation",
+    "native_cad",
+    "assembly"
+  ],
+  "physical_fit": "UNKNOWN",
+  "full_print": "ON_HOLD"
+}

@@ -19,6 +19,7 @@ def file_url(file):
 def public_asset_records(catalog):
     files = {}
     entries = [case for case in all_cases(catalog) if case["state"] != "INPUT_WAIT"]
+    entries.extend(catalog.get("reference_revisions", {}).values())
     entries.extend(baseline for baseline in catalog["baselines"].values() if baseline["state"] == "READY")
     for case in entries:
         if "assets" not in case:
@@ -42,6 +43,14 @@ def public_asset_records(catalog):
 def receipt_for(catalog, *, browser=None, downloads=None, catalog_sha256=None):
     if catalog["study_id"] != STUDY:
         raise ValueError("Wrong study for matrix receipt")
+    for character, reference in catalog.get("reference_revisions", {}).items():
+        frozen = catalog["baselines"][character]["metrics"]["part_count"]
+        if (reference.get("kind") != "BASELINE_REFERENCE_NOT_MULTIPLIER_CASE"
+                or reference.get("counts_toward_multiplier_cases") is not False
+                or reference.get("fixed_count_baseline") != frozen
+                or reference.get("actual_count_difference_from_fixed") != reference["metrics"]["part_count"] - frozen
+                or delivery_status(reference) != "READY"):
+            raise ValueError("A reference revision changed the frozen denominator or lacks its own actual evidence")
     cases = []
     expected_combinations = {(character, percentage) for character in ["mona", "copilot", "ducky"]
                              for percentage in [120, 150, 200, 300, 400]}
@@ -107,6 +116,14 @@ def receipt_for(catalog, *, browser=None, downloads=None, catalog_sha256=None):
             "animation_url": file_url(baseline["assets"]["animations"]["turntable"]) if baseline["state"] == "READY" else None,
             "counts_toward_multiplier_cases": False,
         } for name, baseline in catalog["baselines"].items()},
+        "reference_revisions": {name: {
+            "case_id": reference["id"], "actual_count": reference["metrics"]["part_count"],
+            "fixed_count_baseline": catalog["baselines"][name]["metrics"]["part_count"],
+            "difference_from_fixed": reference["actual_count_difference_from_fixed"],
+            "counts_toward_multiplier_cases": False,
+            "cad_url": file_url(reference["assets"]["native_cad"][0]),
+            "viewer_url": BASE + "ja/density-guide.html?case=" + reference["id"],
+        } for name, reference in catalog.get("reference_revisions", {}).items()},
         "public_commit": {"record": "archive/deployment.json", "field": "commit"},
         "verified_content_commit": downloads.get("deployment", {}).get("commit") if downloads else None,
         "catalog_sha256": catalog_sha256, "cases": cases,

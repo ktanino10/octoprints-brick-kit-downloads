@@ -1,5 +1,5 @@
 import {
-  DENSITY_ID, densityCaseIdentity, densityAssert as check,
+  DENSITY_ID, densityArtifactIdentity, densityAssert as check,
   isObject, isVector, isHash, isCount, validateDensityFile,
 } from '../../assets/density-data.js';
 
@@ -14,7 +14,7 @@ export function radialPosition(part, amount, out = [0, 0, 0]) {
 }
 
 export function validateRootAnchoredStructure(manifest) {
-  const identity = densityCaseIdentity(manifest.candidate_id);
+  const identity = densityArtifactIdentity(manifest.candidate_id);
   const contract = manifest.animation_contract;
   check(identity?.revision === 'whisker-root-v2' && manifest.geometry_revision === identity.revision
     && manifest.logical_case_id === identity.logicalId && contract?.sequence_mode === 'BODY_FIRST_ROOT_ANCHORED',
@@ -124,7 +124,7 @@ function validateRootEvidenceBinding(manifest, proof) {
 }
 
 export function validateGuideManifest(manifest, candidateId, rootEvidence = null) {
-  const identity = densityCaseIdentity(candidateId);
+  const identity = densityArtifactIdentity(candidateId);
   check(isObject(manifest) && manifest.schema_version === 1 && manifest.study_id === DENSITY_ID
     && manifest.candidate_id === candidateId
     && identity && (!identity.revision || (manifest.logical_case_id === identity.logicalId
