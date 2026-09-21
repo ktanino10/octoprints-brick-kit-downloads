@@ -249,6 +249,11 @@ GitHub ReleaseのCDNは、upload時がvideo/mp4でも配信時にapplication/oct
 実cases・各動画章・部品選択・前後左右/裏面・空から組立・日英共有URL・390pxを確認します。
 `browser_density_unit.py` の8部品は明示された非公開のUNIT FIXTUREで、
 制作案や実nativeケースの受入結果ではありません。テストcontextのroute応答以外へ保存・配信しません。
+`browser_density_performance.py` は指定した実caseについて、初回読込、回転入力からGPU完了まで、
+放射slider入力から全配置matrix更新・GPU完了までを1440pxと390pxで記録します。
+美観や製造の合格指標とは無関係で、測定ホスト上の描画応答の証拠です。
+390pxのエミュレーションを実機スマートフォンの速度保証と読み替えません。最大実caseの測定は、
+そのcaseの正式READY入力がそろった後に実施します。
 
 親向け受領記録は `archive/block-budget-matrix.json` です。
 `make_density_receipt.py` は全15実案と公開browserの全case/動画章、匿名全ダウンロードSHAを受けるまで
