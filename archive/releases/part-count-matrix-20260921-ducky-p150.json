@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "study_id": "part-count-matrix-20260921",
+  "case_id": "ducky-p150",
+  "tag": "part-count-matrix-20260921-ducky-p150",
+  "source_commit": "4a4fab647778bb8006de74bbbd7038c908d95f84",
+  "status": "UNSELECTED_DIGITAL_CASE_NOT_SLICED",
+  "assets": [
+    {
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-p150/ducky-p150-cad-scene-animation-public.zip",
+      "bytes": 79632806,
+      "sha256": "c4a11d9a430cac4e38bde98575ebcf5429bcae0d581e932535548ff01f210a9e"
+    },
+    {
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-p150/ducky-p150-assembly-motion.mp4",
+      "bytes": 1608748,
+      "sha256": "5ac398de05122e52e9da096247849f9b7e914fc0cc2b59f1879fd5ec4a3dca77"
+    }
+  ],
+  "case_categories": [
+    "cg",
+    "animation",
+    "native_cad",
+    "assembly"
+  ],
+  "physical_fit": "UNKNOWN",
+  "full_print": "ON_HOLD"
+}

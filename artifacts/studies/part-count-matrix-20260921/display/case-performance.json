@@ -711,6 +711,474 @@
         "display_triangles": 20175932,
         "radial_to_finished_frame_ms": 82
       }
+    ],
+    "mona-p200-root-v2": [
+      {
+        "width": 1440,
+        "height": 1000,
+        "load_ms": 869.6444160304964,
+        "frames_ms": [
+          113,
+          79,
+          37,
+          34,
+          33
+        ],
+        "input_handler_ms": [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "event_loop_yield_ms": [
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 69.7357919998467,
+        "pause_ui_response_ms": 75.84566599689424,
+        "actual_instances": 24811,
+        "display_triangles": 43279702,
+        "radial_to_finished_frame_ms": 92
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "load_ms": 732.0648750173859,
+        "frames_ms": [
+          81,
+          29,
+          33,
+          34,
+          33.000000000000114
+        ],
+        "input_handler_ms": [
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "event_loop_yield_ms": [
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 54.940042027737945,
+        "pause_ui_response_ms": 55.706750019453466,
+        "actual_instances": 24811,
+        "display_triangles": 43279702,
+        "radial_to_finished_frame_ms": 85
+      }
+    ],
+    "mona-p400-root-v2": [
+      {
+        "width": 1440,
+        "height": 1000,
+        "load_ms": 967.0371670508757,
+        "frames_ms": [
+          172.00000000000023,
+          74.99999999999977,
+          65,
+          73,
+          60
+        ],
+        "input_handler_ms": [
+          0,
+          0.9999999999997726,
+          0,
+          0,
+          0
+        ],
+        "event_loop_yield_ms": [
+          0,
+          0.9999999999997726,
+          0,
+          0,
+          1
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 71.88462500926107,
+        "pause_ui_response_ms": 80.60500002466142,
+        "actual_instances": 49483,
+        "display_triangles": 84465276,
+        "radial_to_finished_frame_ms": 185.00000000000023
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "load_ms": 936.6580829955637,
+        "frames_ms": [
+          80.00000000000011,
+          51.999999999999886,
+          61,
+          49,
+          56
+        ],
+        "input_handler_ms": [
+          1,
+          0.9999999999998863,
+          1,
+          0,
+          1
+        ],
+        "event_loop_yield_ms": [
+          1,
+          0.9999999999998863,
+          1,
+          0,
+          1
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 68.62541701411828,
+        "pause_ui_response_ms": 75.60866698622704,
+        "actual_instances": 49483,
+        "display_triangles": 84465276,
+        "radial_to_finished_frame_ms": 158.99999999999977
+      }
+    ],
+    "ducky-p150": [
+      {
+        "width": 1440,
+        "height": 1000,
+        "load_ms": 522.0397909870371,
+        "frames_ms": [
+          63,
+          104,
+          21,
+          33,
+          36
+        ],
+        "input_handler_ms": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "event_loop_yield_ms": [
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 46.734791016206145,
+        "pause_ui_response_ms": 52.86508298013359,
+        "actual_instances": 14460,
+        "display_triangles": 25368692,
+        "radial_to_finished_frame_ms": 51
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "load_ms": 440.4753749840893,
+        "frames_ms": [
+          51,
+          28,
+          30,
+          32,
+          32
+        ],
+        "input_handler_ms": [
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "event_loop_yield_ms": [
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 48.03629202069715,
+        "pause_ui_response_ms": 59.03383297845721,
+        "actual_instances": 14460,
+        "display_triangles": 25368692,
+        "radial_to_finished_frame_ms": 55.999999999999886
+      }
+    ],
+    "ducky-p200": [
+      {
+        "width": 1440,
+        "height": 1000,
+        "load_ms": 550.2202920033596,
+        "frames_ms": [
+          56,
+          59,
+          33,
+          32,
+          33
+        ],
+        "input_handler_ms": [
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "event_loop_yield_ms": [
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 51.592917006928474,
+        "pause_ui_response_ms": 59.26416697911918,
+        "actual_instances": 19309,
+        "display_triangles": 33700440,
+        "radial_to_finished_frame_ms": 71.00000000000011
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "load_ms": 466.32974996464327,
+        "frames_ms": [
+          56,
+          34,
+          29,
+          31,
+          32
+        ],
+        "input_handler_ms": [
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "event_loop_yield_ms": [
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 48.532833985518664,
+        "pause_ui_response_ms": 41.662000003270805,
+        "actual_instances": 19309,
+        "display_triangles": 33700440,
+        "radial_to_finished_frame_ms": 73
+      }
+    ],
+    "ducky-p300": [
+      {
+        "width": 1440,
+        "height": 1000,
+        "load_ms": 595.4862080398016,
+        "frames_ms": [
+          96,
+          71.00000000000011,
+          47.999999999999886,
+          51,
+          50
+        ],
+        "input_handler_ms": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "event_loop_yield_ms": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "actual_drag_to_finished_frame_ms": 69.77437494788319,
+        "pause_ui_response_ms": 64.63999999687076,
+        "actual_instances": 28932,
+        "display_triangles": 50476026,
+        "radial_to_finished_frame_ms": 95
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "load_ms": 519.4840000476688,
+        "frames_ms": [
+          89,
+          42,
+          48.000000000000114,
+          48.999999999999886,
+          35
+        ],
+        "input_handler_ms": [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "event_loop_yield_ms": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 58.23608301579952,
+        "pause_ui_response_ms": 80.54200001060963,
+        "actual_instances": 28932,
+        "display_triangles": 50476026,
+        "radial_to_finished_frame_ms": 109
+      }
+    ],
+    "ducky-p400": [
+      {
+        "width": 1440,
+        "height": 1000,
+        "load_ms": 667.2366670100018,
+        "frames_ms": [
+          119,
+          72,
+          50,
+          49,
+          52.000000000000114
+        ],
+        "input_handler_ms": [
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "event_loop_yield_ms": [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 75.83566597895697,
+        "pause_ui_response_ms": 75.40020800661296,
+        "actual_instances": 38473,
+        "display_triangles": 67300740,
+        "radial_to_finished_frame_ms": 154.99999999999977
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "load_ms": 583.2084160065278,
+        "frames_ms": [
+          93,
+          49,
+          49,
+          57.000000000000114,
+          54.999999999999886
+        ],
+        "input_handler_ms": [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "event_loop_yield_ms": [
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "gpu_finish_wait_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_drag_to_finished_frame_ms": 65.52866700803861,
+        "pause_ui_response_ms": 105.25487503036857,
+        "actual_instances": 38473,
+        "display_triangles": 67300740,
+        "radial_to_finished_frame_ms": 126
+      }
     ]
   }
 }

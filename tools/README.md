@@ -374,7 +374,7 @@ UIに軽量表示を明記し、切替前後の同視点画像・全instance行�
 これは原画像内のpx/mmであり、responsive表示後の画面を物理定規にする主張ではありません。
 元PNG/render-statsは最終補完receiptの明示read-only入力で照合し、light JPEGやmetadata整理後PNGのSHAと混ぜません。
 
-`density_comparison_evidence.py` はCSVの厳密な18列・15行と実case集合を読み、固定分母、実参照数、
+`density_comparison_evidence.py` はCSVの厳密な17列・15行と実case集合を読み、固定分母、実参照数、
 目標/実数/差、実倍率、寸法、使用型と小部品数を受入catalogから再計算します。参照3行の混入は拒否します。
 最終receiptのREADYには `comparison_assets` のindex/CSV/9枚のsheetすべての公開bytehashと、
 実ブラウザーによる9画像/15行CSVの確認も必要です。Native/mediaが15案揃っただけでは総完了にしません。

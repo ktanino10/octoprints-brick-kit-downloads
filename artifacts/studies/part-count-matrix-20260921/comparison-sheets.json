@@ -1,0 +1,5201 @@
+{
+  "schema_version": 1,
+  "study_id": "part-count-matrix-20260921",
+  "state": "COMPLETE_REAL_SIX_WAY_COMPARISONS",
+  "rows": [
+    {
+      "character": "mona",
+      "images": [
+        {
+          "path": "comparisons/mona-normalized-front.jpg",
+          "sha256": "6fd67498cf070a752a3cfa3bde82a8e6d17c679f42a6dad27594796fbc8cbc13",
+          "bytes": 476598,
+          "mode": "ACTUAL_CG_EQUAL_PROJECTED_SCREEN_HEIGHT_NOT_SIZE_RATIO",
+          "view": "front",
+          "image_size_px": [
+            3600,
+            880
+          ],
+          "source_cases": [
+            "mona-fine8-base-root-v2",
+            "mona-p120-root-v2",
+            "mona-p150-root-v2",
+            "mona-p200-root-v2",
+            "mona-p300-root-v2",
+            "mona-p400-root-v2"
+          ],
+          "conditions": [
+            {
+              "case_id": "mona-fine8-base-root-v2",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "mona-fine8-base-root-v2",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -1472.7999996,
+                  184.09999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  184.09999995
+                ],
+                "ortho_scale_mm": 511.38888875000004,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 2.3465507882527294,
+                "actual_projected_height_mm": 368.1999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -1.4728001356124878
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.18410001695156097
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "7945a834252658b8d86f61b3a477498cba1fcf4104ae45f98f5902c74f99dd63",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "mona-p120-root-v2",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "mona-p120-root-v2",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -1587.9999996,
+                  198.49999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  198.49999995
+                ],
+                "ortho_scale_mm": 551.38888875,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 2.1763224186842125,
+                "actual_projected_height_mm": 396.9999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -1.5880000591278076
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.19850000739097595
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "28c89e659b91626c76a18c5a7d9d2bedca41d173441f8c097a1552fe61fbad35",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "mona-p150-root-v2",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "mona-p150-root-v2",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -1703.1999996,
+                  212.89999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  212.89999995
+                ],
+                "ortho_scale_mm": 591.38888875,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 2.0291216538349275,
+                "actual_projected_height_mm": 425.7999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -1.7031999826431274
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.21289999783039093
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "b41158d21cf77958fa2d0f6b50937843e6612636cb57ff9480cf3127c9d96efa",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "mona-p200-root-v2",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "mona-p200-root-v2",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -1895.1999996,
+                  236.89999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  236.89999995
+                ],
+                "ortho_scale_mm": 658.0555554166667,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.823554242681206,
+                "actual_projected_height_mm": 473.7999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -1.8952000141143799
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.23690000176429749
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "571335a664501b3c29add1bb29e2dc9b4c4b5fe35105726c70325ada519dfb86",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "mona-p300-root-v2",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "mona-p300-root-v2",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -2183.1999996,
+                  272.89999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  272.89999995
+                ],
+                "ortho_scale_mm": 758.0555554166668,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.5829974352478922,
+                "actual_projected_height_mm": 545.7999999000001,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -2.1832001209259033
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.2729000151157379
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "a63a01e6fa34b7b8fef618335ae127606d41b076d3968759d21df261163aeb3a",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "mona-p400-root-v2",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "mona-p400-root-v2",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -2394.3999996,
+                  299.29999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  299.29999995
+                ],
+                "ortho_scale_mm": 831.3888887500001,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.4433678585772414,
+                "actual_projected_height_mm": 598.5999999000001,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -2.394400119781494
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.29930001497268677
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "bd75f55ec8dfade650233cd6fc102dca7d405607741ccb195c7d4a3520a328b6",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            }
+          ]
+        },
+        {
+          "path": "comparisons/mona-normalized-three_quarter.jpg",
+          "sha256": "b5939fec2d810ec223b7494fe7aba00c04e82b4e92804582f6faa1ed24e3f6c6",
+          "bytes": 574138,
+          "mode": "ACTUAL_CG_EQUAL_PROJECTED_SCREEN_HEIGHT_NOT_SIZE_RATIO",
+          "view": "three_quarter",
+          "image_size_px": [
+            3600,
+            880
+          ],
+          "source_cases": [
+            "mona-fine8-base-root-v2",
+            "mona-p120-root-v2",
+            "mona-p150-root-v2",
+            "mona-p200-root-v2",
+            "mona-p300-root-v2",
+            "mona-p400-root-v2"
+          ],
+          "conditions": [
+            {
+              "case_id": "mona-fine8-base-root-v2",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-three_quarter",
+                "role": "mona-fine8-base-root-v2",
+                "view": "three_quarter",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  548.50452189,
+                  -1339.31272457,
+                  823.68949397
+                ],
+                "target_mm": [
+                  -19.20600069,
+                  -1.87054683,
+                  176.79706289
+                ],
+                "ortho_scale_mm": 552.2379930166614,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 2.172976171821983,
+                "actual_projected_height_mm": 397.61135497199626,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.3569506476,
+                  -0.8409230276,
+                  0.4067366431
+                ],
+                "right_world": [
+                  0.9205048535,
+                  0.3907311285,
+                  -0.0
+                ],
+                "up_world": [
+                  -0.1589246675,
+                  0.374403054,
+                  0.9135454576
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    0.9205048680305481,
+                    -0.15892471373081207,
+                    0.3569505214691162,
+                    0.5485045313835144
+                  ],
+                  [
+                    0.3907310366630554,
+                    0.3744032382965088,
+                    -0.840923011302948,
+                    -1.3393127918243408
+                  ],
+                  [
+                    1.3379438890126494e-08,
+                    0.9135453701019287,
+                    0.406736820936203,
+                    0.8236895799636841
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "a5493e2aff212a5ca9edfb925e601c29303f845143f650d2ea5d275ca69661bf",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "mona-p120-root-v2",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-three_quarter",
+                "role": "mona-p120-root-v2",
+                "view": "three_quarter",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  588.08959722,
+                  -1436.56931789,
+                  880.09990824
+                ],
+                "target_mm": [
+                  -20.64822287,
+                  -2.47288424,
+                  186.4578624
+                ],
+                "ortho_scale_mm": 592.1471219379653,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 2.0265234019421863,
+                "actual_projected_height_mm": 426.34592779533494,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.3569506476,
+                  -0.8409230276,
+                  0.4067366431
+                ],
+                "right_world": [
+                  0.9205048535,
+                  0.3907311285,
+                  -0.0
+                ],
+                "up_world": [
+                  -0.1589246675,
+                  0.374403054,
+                  0.9135454576
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    0.9205048680305481,
+                    -0.15892457962036133,
+                    0.35695070028305054,
+                    0.588089644908905
+                  ],
+                  [
+                    0.39073115587234497,
+                    0.3744029402732849,
+                    -0.8409230709075928,
+                    -1.4365694522857666
+                  ],
+                  [
+                    -4.176478540784956e-08,
+                    0.913545548915863,
+                    0.40673649311065674,
+                    0.8800999522209167
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "d0d8a1bb3f9f2fc3e2700c05cb0ae59b1504811846ca456bc984d25b82ad5094",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "mona-p150-root-v2",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-three_quarter",
+                "role": "mona-p150-root-v2",
+                "view": "three_quarter",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  628.66395217,
+                  -1537.57991724,
+                  946.50020427
+                ],
+                "target_mm": [
+                  -23.25446968,
+                  -1.7563608,
+                  203.65490548
+                ],
+                "ortho_scale_mm": 634.1508683901919,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.8922941839474736,
+                "actual_projected_height_mm": 456.58862524093814,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.3569506476,
+                  -0.8409230276,
+                  0.4067366431
+                ],
+                "right_world": [
+                  0.9205048535,
+                  0.3907311285,
+                  -0.0
+                ],
+                "up_world": [
+                  -0.1589246675,
+                  0.374403054,
+                  0.9135454576
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    0.9205048084259033,
+                    -0.1589246243238449,
+                    0.35695070028305054,
+                    0.628663957118988
+                  ],
+                  [
+                    0.39073118567466736,
+                    0.3744029104709625,
+                    -0.8409230709075928,
+                    -1.5375800132751465
+                  ],
+                  [
+                    -1.3665655274053279e-09,
+                    0.913545548915863,
+                    0.40673649311065674,
+                    0.9465002417564392
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "f2228f57bc2dc2856e79adff6bbfb885166ff944ca3b462892c06086c35684f6",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "mona-p200-root-v2",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-three_quarter",
+                "role": "mona-p200-root-v2",
+                "view": "three_quarter",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  697.24959224,
+                  -1703.15755986,
+                  1049.9788022
+                ],
+                "target_mm": [
+                  -25.01638458,
+                  -1.60554962,
+                  226.97416332
+                ],
+                "ortho_scale_mm": 702.5811528838755,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.7079877464323887,
+                "actual_projected_height_mm": 505.8584300763903,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.3569506476,
+                  -0.8409230276,
+                  0.4067366431
+                ],
+                "right_world": [
+                  0.9205048535,
+                  0.3907311285,
+                  -0.0
+                ],
+                "up_world": [
+                  -0.1589246675,
+                  0.374403054,
+                  0.9135454576
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    0.9205048680305481,
+                    -0.1589246243238449,
+                    0.35695070028305054,
+                    0.6972495913505554
+                  ],
+                  [
+                    0.39073115587234497,
+                    0.3744029104709625,
+                    -0.8409230709075928,
+                    -1.703157663345337
+                  ],
+                  [
+                    -5.025940552627617e-09,
+                    0.913545548915863,
+                    0.40673649311065674,
+                    1.0499788522720337
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "d6af9195137552d6725be21ac624f26131e4a0ef8cf7ee62c6ec06c9c52e2fe0",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "mona-p300-root-v2",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-three_quarter",
+                "role": "mona-p300-root-v2",
+                "view": "three_quarter",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  799.9516834,
+                  -1954.53193452,
+                  1205.67629494
+                ],
+                "target_mm": [
+                  -28.93552923,
+                  -1.79603365,
+                  261.1793326
+                ],
+                "ortho_scale_mm": 806.296505927382,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.488286246037728,
+                "actual_projected_height_mm": 580.533484267715,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.3569506476,
+                  -0.8409230276,
+                  0.4067366431
+                ],
+                "right_world": [
+                  0.9205048535,
+                  0.3907311285,
+                  -0.0
+                ],
+                "up_world": [
+                  -0.1589246675,
+                  0.374403054,
+                  0.9135454576
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    0.9205048084259033,
+                    -0.1589246541261673,
+                    0.3569507598876953,
+                    0.7999516725540161
+                  ],
+                  [
+                    0.39073121547698975,
+                    0.3744029104709625,
+                    -0.8409230709075928,
+                    -1.9545320272445679
+                  ],
+                  [
+                    2.292809497816961e-09,
+                    0.913545548915863,
+                    0.40673649311065674,
+                    1.2056763172149658
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "25d6e47a3a3d40b13b15cbfba6b63ce30fa1e4c629c63f5fc94c5b1931ba4d90",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "mona-p400-root-v2",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-three_quarter",
+                "role": "mona-p400-root-v2",
+                "view": "three_quarter",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  874.44622246,
+                  -2136.87688878,
+                  1320.66126021
+                ],
+                "target_mm": [
+                  -31.87051692,
+                  -1.72845411,
+                  287.93522195
+                ],
+                "ortho_scale_mm": 881.6157483139034,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.3611372100543904,
+                "actual_projected_height_mm": 634.7633387860104,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.3569506476,
+                  -0.8409230276,
+                  0.4067366431
+                ],
+                "right_world": [
+                  0.9205048535,
+                  0.3907311285,
+                  -0.0
+                ],
+                "up_world": [
+                  -0.1589246675,
+                  0.374403054,
+                  0.9135454576
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    0.9205048084259033,
+                    -0.1589246243238449,
+                    0.3569508194923401,
+                    0.8744462728500366
+                  ],
+                  [
+                    0.39073124527931213,
+                    0.3744029104709625,
+                    -0.840923011302948,
+                    -2.1368770599365234
+                  ],
+                  [
+                    -4.669232112064492e-08,
+                    0.913545548915863,
+                    0.40673649311065674,
+                    1.3206613063812256
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "a21cb6857fec759a4478b248db6357dad236e933d0e438a53895b8225eed88d1",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            }
+          ]
+        },
+        {
+          "path": "comparisons/mona-physical-size.jpg",
+          "sha256": "afa27d649ce7e2f65841e6a8bcf891a701f940ea850714c13169c43cacf43f58",
+          "bytes": 551033,
+          "mode": "ACTUAL_CG_FIXED_PHYSICAL_PX_PER_MM",
+          "pixels_per_mm": 0.9,
+          "view": "front",
+          "image_size_px": [
+            4800,
+            940
+          ],
+          "method": "Rescale actual orthographic CG from its recordedpx/mm without changing mesh/part geometry; commonground; include actualmodelZheight.",
+          "source_cases": [
+            "mona-fine8-base-root-v2",
+            "mona-p120-root-v2",
+            "mona-p150-root-v2",
+            "mona-p200-root-v2",
+            "mona-p300-root-v2",
+            "mona-p400-root-v2"
+          ],
+          "conditions": [
+            {
+              "case_id": "mona-fine8-base-root-v2",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "mona-fine8-base-root-v2",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -1472.7999996,
+                  184.09999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  184.09999995
+                ],
+                "ortho_scale_mm": 511.38888875000004,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 2.3465507882527294,
+                "actual_projected_height_mm": 368.1999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -1.4728001356124878
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.18410001695156097
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "7945a834252658b8d86f61b3a477498cba1fcf4104ae45f98f5902c74f99dd63",
+              "source_image_size_px": [
+                1200,
+                1200
+              ],
+              "scale_factor": 0.38354166656250005,
+              "source_to_sheet_affine": [
+                0.38354166656250005,
+                0,
+                169.87500006249996,
+                0,
+                0.38354166656250005,
+                354.18500006249997
+              ],
+              "panel_box_px": [
+                0,
+                140,
+                800,
+                750
+              ],
+              "source_model_height_px": 864.000000234655,
+              "sheet_model_height_px": 331.38,
+              "source_ground_y_px": 1032.0000001173275,
+              "sheet_ground_y_px": 750,
+              "pixels_per_mm": 0.9,
+              "resampling": "BICUBIC_UNIFORM_AFFINE_NOT_PER_MODEL_HEIGHT_NORMALIZATION"
+            },
+            {
+              "case_id": "mona-p120-root-v2",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "mona-p120-root-v2",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -1587.9999996,
+                  198.49999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  198.49999995
+                ],
+                "ortho_scale_mm": 551.38888875,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 2.1763224186842125,
+                "actual_projected_height_mm": 396.9999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -1.5880000591278076
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.19850000739097595
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "28c89e659b91626c76a18c5a7d9d2bedca41d173441f8c097a1552fe61fbad35",
+              "source_image_size_px": [
+                1200,
+                1200
+              ],
+              "scale_factor": 0.41354166656249997,
+              "source_to_sheet_affine": [
+                0.41354166656249997,
+                0,
+                951.8750000625,
+                0,
+                0.41354166656249997,
+                323.2250000625
+              ],
+              "panel_box_px": [
+                800,
+                140,
+                1600,
+                750
+              ],
+              "source_model_height_px": 864.0000002176324,
+              "sheet_model_height_px": 357.3,
+              "source_ground_y_px": 1032.0000001088163,
+              "sheet_ground_y_px": 750,
+              "pixels_per_mm": 0.9,
+              "resampling": "BICUBIC_UNIFORM_AFFINE_NOT_PER_MODEL_HEIGHT_NORMALIZATION"
+            },
+            {
+              "case_id": "mona-p150-root-v2",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "mona-p150-root-v2",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -1703.1999996,
+                  212.89999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  212.89999995
+                ],
+                "ortho_scale_mm": 591.38888875,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 2.0291216538349275,
+                "actual_projected_height_mm": 425.7999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -1.7031999826431274
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.21289999783039093
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "b41158d21cf77958fa2d0f6b50937843e6612636cb57ff9480cf3127c9d96efa",
+              "source_image_size_px": [
+                1200,
+                1200
+              ],
+              "scale_factor": 0.44354166656250005,
+              "source_to_sheet_affine": [
+                0.44354166656250005,
+                0,
+                1733.8750000625,
+                0,
+                0.44354166656250005,
+                292.2650000625
+              ],
+              "panel_box_px": [
+                1600,
+                140,
+                2400,
+                750
+              ],
+              "source_model_height_px": 864.0000002029121,
+              "sheet_model_height_px": 383.22,
+              "source_ground_y_px": 1032.000000101456,
+              "sheet_ground_y_px": 750,
+              "pixels_per_mm": 0.9,
+              "resampling": "BICUBIC_UNIFORM_AFFINE_NOT_PER_MODEL_HEIGHT_NORMALIZATION"
+            },
+            {
+              "case_id": "mona-p200-root-v2",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "mona-p200-root-v2",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -1895.1999996,
+                  236.89999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  236.89999995
+                ],
+                "ortho_scale_mm": 658.0555554166667,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.823554242681206,
+                "actual_projected_height_mm": 473.7999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -1.8952000141143799
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.23690000176429749
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "571335a664501b3c29add1bb29e2dc9b4c4b5fe35105726c70325ada519dfb86",
+              "source_image_size_px": [
+                1200,
+                1200
+              ],
+              "scale_factor": 0.49354166656250004,
+              "source_to_sheet_affine": [
+                0.49354166656250004,
+                0,
+                2503.8750000625,
+                0,
+                0.49354166656250004,
+                240.66500006249993
+              ],
+              "panel_box_px": [
+                2400,
+                140,
+                3200,
+                750
+              ],
+              "source_model_height_px": 864.0000001823554,
+              "sheet_model_height_px": 426.42,
+              "source_ground_y_px": 1032.0000000911778,
+              "sheet_ground_y_px": 750,
+              "pixels_per_mm": 0.9,
+              "resampling": "BICUBIC_UNIFORM_AFFINE_NOT_PER_MODEL_HEIGHT_NORMALIZATION"
+            },
+            {
+              "case_id": "mona-p300-root-v2",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "mona-p300-root-v2",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -2183.1999996,
+                  272.89999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  272.89999995
+                ],
+                "ortho_scale_mm": 758.0555554166668,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.5829974352478922,
+                "actual_projected_height_mm": 545.7999999000001,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -2.1832001209259033
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.2729000151157379
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "a63a01e6fa34b7b8fef618335ae127606d41b076d3968759d21df261163aeb3a",
+              "source_image_size_px": [
+                1200,
+                1200
+              ],
+              "scale_factor": 0.5685416665625002,
+              "source_to_sheet_affine": [
+                0.5685416665625002,
+                0,
+                3258.8750000625,
+                0,
+                0.5685416665625002,
+                163.2650000624999
+              ],
+              "panel_box_px": [
+                3200,
+                140,
+                4000,
+                750
+              ],
+              "source_model_height_px": 864.0000001582995,
+              "sheet_model_height_px": 491.21999999999997,
+              "source_ground_y_px": 1032.0000000791497,
+              "sheet_ground_y_px": 750,
+              "pixels_per_mm": 0.9,
+              "resampling": "BICUBIC_UNIFORM_AFFINE_NOT_PER_MODEL_HEIGHT_NORMALIZATION"
+            },
+            {
+              "case_id": "mona-p400-root-v2",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "mona-p400-root-v2",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -2394.3999996,
+                  299.29999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  299.29999995
+                ],
+                "ortho_scale_mm": 831.3888887500001,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.4433678585772414,
+                "actual_projected_height_mm": 598.5999999000001,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -2.394400119781494
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.29930001497268677
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "bd75f55ec8dfade650233cd6fc102dca7d405607741ccb195c7d4a3520a328b6",
+              "source_image_size_px": [
+                1200,
+                1200
+              ],
+              "scale_factor": 0.6235416665625001,
+              "source_to_sheet_affine": [
+                0.6235416665625001,
+                0,
+                4025.8750000625,
+                0,
+                0.6235416665625001,
+                106.5050000624999
+              ],
+              "panel_box_px": [
+                4000,
+                140,
+                4800,
+                750
+              ],
+              "source_model_height_px": 864.0000001443366,
+              "sheet_model_height_px": 538.7399999999999,
+              "source_ground_y_px": 1032.0000000721684,
+              "sheet_ground_y_px": 750,
+              "pixels_per_mm": 0.9,
+              "resampling": "BICUBIC_UNIFORM_AFFINE_NOT_PER_MODEL_HEIGHT_NORMALIZATION"
+            }
+          ]
+        }
+      ],
+      "complete_case_ids": [
+        "mona-fine8-base-root-v2",
+        "mona-p120-root-v2",
+        "mona-p150-root-v2",
+        "mona-p200-root-v2",
+        "mona-p300-root-v2",
+        "mona-p400-root-v2"
+      ],
+      "fixed_count_denominator": 12435,
+      "fixed_count_reference_manifest_sha256": "5556e329521b5706a366c5dad2aa6c7b13eca9d7d74323338773d5e2b20b2b4c",
+      "actual_reference_count": 12411,
+      "columns": [
+        {
+          "column_index": 0,
+          "case_id": "mona-fine8-base-root-v2",
+          "logical_case_id": "mona-fine8-base",
+          "geometry_revision": "whisker-root-v2",
+          "role": "ONE_X_ACTUAL_GEOMETRY_REFERENCE",
+          "fixed_count_denominator": 12435,
+          "actual_reference_count": 12411,
+          "target_ratio": 1,
+          "target_count": 12435,
+          "actual_count": 12411,
+          "actual_ratio": 0.9980699638118214,
+          "actual_size_mm": [
+            423.8,
+            343.8,
+            368.2
+          ],
+          "used_types": 121,
+          "manifest_sha256": "db9c961b6525d3b9b5e3ba43c3973a88fc625e7872aad220653a47f694dea2c4",
+          "bom_sha256": "221ba2f3a2ea0ad898489ac267919c1ef82243801299a728fe01c64f05e60066",
+          "source_render_stats_sha256": "7a5f1486b95714828f2a96529b79f24777a7f983c4f2e21b34b55b18d5f4ce0f"
+        },
+        {
+          "column_index": 1,
+          "case_id": "mona-p120-root-v2",
+          "logical_case_id": "mona-p120",
+          "geometry_revision": "whisker-root-v2",
+          "role": "MULTIPLIER_CASE",
+          "fixed_count_denominator": 12435,
+          "actual_reference_count": 12411,
+          "target_ratio": 1.2,
+          "target_count": 14922,
+          "actual_count": 14913,
+          "actual_ratio": 1.1992762364294332,
+          "actual_size_mm": [
+            439.8,
+            359.8,
+            397.0
+          ],
+          "used_types": 118,
+          "manifest_sha256": "ee3f8121f1ba46fff973952a6cd9a4fc5f6d868a8cb4e9924d068d01d7828b88",
+          "bom_sha256": "eb92c1bf364b041ab7659eab9fa74fdfee79d4efc6ad48dddd27eb88fecf98bf",
+          "source_render_stats_sha256": "2f83f08869e9c4eb6ac63a1ec0817adf1781ee701479ee071057e9921a4ea17d"
+        },
+        {
+          "column_index": 2,
+          "case_id": "mona-p150-root-v2",
+          "logical_case_id": "mona-p150",
+          "geometry_revision": "whisker-root-v2",
+          "role": "MULTIPLIER_CASE",
+          "fixed_count_denominator": 12435,
+          "actual_reference_count": 12411,
+          "target_ratio": 1.5,
+          "target_count": 18653,
+          "actual_count": 18649,
+          "actual_ratio": 1.499718536389224,
+          "actual_size_mm": [
+            487.8,
+            391.8,
+            425.8
+          ],
+          "used_types": 128,
+          "manifest_sha256": "cf4dd304ff6eac6c18e2fed28a797e0d3853ffd07de1011de4ae329f9bfe5f9f",
+          "bom_sha256": "7e9cabc0c3b5455a1547de85064a413d05c2c0b3b2738659a0a7151f44adec5c",
+          "source_render_stats_sha256": "d92ce4629dfe5e99c6d2776742a5fe2ebf962b1bff6d46dfff6e679488904d57"
+        },
+        {
+          "column_index": 3,
+          "case_id": "mona-p200-root-v2",
+          "logical_case_id": "mona-p200",
+          "geometry_revision": "whisker-root-v2",
+          "role": "MULTIPLIER_CASE",
+          "fixed_count_denominator": 12435,
+          "actual_reference_count": 12411,
+          "target_ratio": 2.0,
+          "target_count": 24870,
+          "actual_count": 24811,
+          "actual_ratio": 1.9952553277040612,
+          "actual_size_mm": [
+            535.8,
+            439.8,
+            473.8
+          ],
+          "used_types": 135,
+          "manifest_sha256": "176da3d97a1668a5e2da299719b4590fb7baea4ad5657a6444971a867e026442",
+          "bom_sha256": "abe675e22c0bf03344386ca7535d079545de00ec04f14ebc52c2397615490ac4",
+          "source_render_stats_sha256": "e1bb996199e074e3257d7714d63403756d932ad722dfd398b50fbafeb1e9215f"
+        },
+        {
+          "column_index": 4,
+          "case_id": "mona-p300-root-v2",
+          "logical_case_id": "mona-p300",
+          "geometry_revision": "whisker-root-v2",
+          "role": "MULTIPLIER_CASE",
+          "fixed_count_denominator": 12435,
+          "actual_reference_count": 12411,
+          "target_ratio": 3.0,
+          "target_count": 37305,
+          "actual_count": 37255,
+          "actual_ratio": 2.995979091274628,
+          "actual_size_mm": [
+            615.8,
+            503.8,
+            545.8
+          ],
+          "used_types": 160,
+          "manifest_sha256": "98525666a674023e7ea0412736e163da1a5745bf1d4df21a82063554c2e4e496",
+          "bom_sha256": "569fd6c3a051e305a92b056c288e4b162e8d10fd96190784178bf92013f87db6",
+          "source_render_stats_sha256": "ed4d96ccc478b4790b8fc0c8aedd9c0f5c03251ba3470b7d52b040d6d0a77879"
+        },
+        {
+          "column_index": 5,
+          "case_id": "mona-p400-root-v2",
+          "logical_case_id": "mona-p400",
+          "geometry_revision": "whisker-root-v2",
+          "role": "MULTIPLIER_CASE",
+          "fixed_count_denominator": 12435,
+          "actual_reference_count": 12411,
+          "target_ratio": 4.0,
+          "target_count": 49740,
+          "actual_count": 49483,
+          "actual_ratio": 3.979332529151588,
+          "actual_size_mm": [
+            679.8,
+            551.8,
+            598.5999999999999
+          ],
+          "used_types": 172,
+          "manifest_sha256": "33021b148b3a1006c39e0581030ab324e5570291aadcb46432becd6bde288223",
+          "bom_sha256": "3d19d1e696c3f3174bd594ea959a260b1f8fb6b6c73e970adf8cb6a0bf468a78",
+          "source_render_stats_sha256": "267c9f0d80be57edb70deb8d33791120e7ec86dc7498e1765a17eecbdb668519"
+        }
+      ]
+    },
+    {
+      "character": "copilot",
+      "images": [
+        {
+          "path": "comparisons/copilot-normalized-front.jpg",
+          "sha256": "25d46386d395da2c777a36001f233391d6a2c811ab8a5d4ab7ff999047c4a8a0",
+          "bytes": 504672,
+          "mode": "ACTUAL_CG_EQUAL_PROJECTED_SCREEN_HEIGHT_NOT_SIZE_RATIO",
+          "view": "front",
+          "image_size_px": [
+            3600,
+            880
+          ],
+          "source_cases": [
+            "copilot-fine8-base",
+            "copilot-p120",
+            "copilot-p150",
+            "copilot-p200",
+            "copilot-p300",
+            "copilot-p400"
+          ],
+          "conditions": [
+            {
+              "case_id": "copilot-fine8-base",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "copilot-fine8-base",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -1472.7999996,
+                  184.09999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  184.09999995
+                ],
+                "ortho_scale_mm": 511.38888875000004,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 2.3465507882527294,
+                "actual_projected_height_mm": 368.1999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -1.4728001356124878
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.18410001695156097
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "3ef9b1d18673f7741ce25eec16facef617df51238106d9c720c97e54555f98b9",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "copilot-p120",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "copilot-p120",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -1587.9999996,
+                  198.49999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  198.49999995
+                ],
+                "ortho_scale_mm": 551.38888875,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 2.1763224186842125,
+                "actual_projected_height_mm": 396.9999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -1.5880000591278076
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.19850000739097595
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "19bba8b3dab43b7c98381e62cd59722d61d64da7d535b6e03f632fd4190c4735",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "copilot-p150",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "copilot-p150",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -1703.1999996,
+                  212.89999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  212.89999995
+                ],
+                "ortho_scale_mm": 591.38888875,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 2.0291216538349275,
+                "actual_projected_height_mm": 425.7999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -1.7031999826431274
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.21289999783039093
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "9c172fcffbd0d1b3f55db485c57d310fdec82eb5dc17190e054b9c5c1b91e8f4",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "copilot-p200",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "copilot-p200",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -1875.9999996,
+                  234.49999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  234.49999995
+                ],
+                "ortho_scale_mm": 651.38888875,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.8422174844013257,
+                "actual_projected_height_mm": 468.9999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -1.8760000467300415
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.2345000058412552
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "458aec48f46deb9dd896344392390a4d8869fbe9719b5f608204b31e69faea07",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "copilot-p300",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "copilot-p300",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -2163.9999996,
+                  270.49999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  270.49999995
+                ],
+                "ortho_scale_mm": 751.3888887499999,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.5970425141584186,
+                "actual_projected_height_mm": 540.9999998999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -2.1640000343322754
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.2705000042915344
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "a194787bee66eccf51be4e50baf86f07d80ff1f838e56f5c0f7eaf5647bf502b",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "copilot-p400",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "copilot-p400",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -2394.3999996,
+                  299.29999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  299.29999995
+                ],
+                "ortho_scale_mm": 831.3888887500001,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.4433678585772414,
+                "actual_projected_height_mm": 598.5999999000001,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -2.394400119781494
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.29930001497268677
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "328b5c6249d38acd5e65f6a70e49533d1d2d971bbf7251933f4276037265c2a8",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            }
+          ]
+        },
+        {
+          "path": "comparisons/copilot-normalized-three_quarter.jpg",
+          "sha256": "8eef4cbb7c397c0611b944f6168817e2756d6c9f1004267c0dc5a22e6d666963",
+          "bytes": 588814,
+          "mode": "ACTUAL_CG_EQUAL_PROJECTED_SCREEN_HEIGHT_NOT_SIZE_RATIO",
+          "view": "three_quarter",
+          "image_size_px": [
+            3600,
+            880
+          ],
+          "source_cases": [
+            "copilot-fine8-base",
+            "copilot-p120",
+            "copilot-p150",
+            "copilot-p200",
+            "copilot-p300",
+            "copilot-p400"
+          ],
+          "conditions": [
+            {
+              "case_id": "copilot-fine8-base",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-three_quarter",
+                "role": "copilot-fine8-base",
+                "view": "three_quarter",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  618.44788664,
+                  -1452.97191689,
+                  866.24349561
+                ],
+                "target_mm": [
+                  6.42814018,
+                  -11.14374924,
+                  168.86177392
+                ],
+                "ortho_scale_mm": 595.3396018367573,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 2.0156562679481236,
+                "actual_projected_height_mm": 428.64451332246523,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.3569506476,
+                  -0.8409230276,
+                  0.4067366431
+                ],
+                "right_world": [
+                  0.9205048535,
+                  0.3907311285,
+                  -0.0
+                ],
+                "up_world": [
+                  -0.1589246675,
+                  0.374403054,
+                  0.9135454576
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    0.9205048084259033,
+                    -0.1589246243238449,
+                    0.3569508194923401,
+                    0.6184478998184204
+                  ],
+                  [
+                    0.39073124527931213,
+                    0.3744029104709625,
+                    -0.840923011302948,
+                    -1.4529719352722168
+                  ],
+                  [
+                    -4.669232112064492e-08,
+                    0.913545548915863,
+                    0.40673649311065674,
+                    0.8662434816360474
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "a293bb6e9d6c7b615dd3e80870ddfec18f97a2ba778b0cc3600cf9e21d80ab20",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "copilot-p120",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-three_quarter",
+                "role": "copilot-p120",
+                "view": "three_quarter",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  659.20981739,
+                  -1549.00100787,
+                  923.0513549
+                ],
+                "target_mm": [
+                  6.68630359,
+                  -11.75194412,
+                  179.51656845
+                ],
+                "ortho_scale_mm": 634.7394690108582,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.8905394395436155,
+                "actual_projected_height_mm": 457.0124176878179,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.3569506476,
+                  -0.8409230276,
+                  0.4067366431
+                ],
+                "right_world": [
+                  0.9205048535,
+                  0.3907311285,
+                  -0.0
+                ],
+                "up_world": [
+                  -0.1589246675,
+                  0.374403054,
+                  0.9135454576
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    0.9205048084259033,
+                    -0.1589246243238449,
+                    0.35695070028305054,
+                    0.6592098474502563
+                  ],
+                  [
+                    0.39073118567466736,
+                    0.3744029104709625,
+                    -0.8409230709075928,
+                    -1.5490010976791382
+                  ],
+                  [
+                    -1.3665655274053279e-09,
+                    0.913545548915863,
+                    0.40673649311065674,
+                    0.9230513572692871
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "919240d6b2150ff9a04a3a01e4472ab73e0bfc643b439d94bf04055d6297a22c",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "copilot-p150",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-three_quarter",
+                "role": "copilot-p150",
+                "view": "three_quarter",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  710.8050832,
+                  -1670.55183689,
+                  995.81243308
+                ],
+                "target_mm": [
+                  7.0712256,
+                  -12.65876357,
+                  193.92469654
+                ],
+                "ortho_scale_mm": 684.5541128296204,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.7529658759039106,
+                "actual_projected_height_mm": 492.8789612373267,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.3569506476,
+                  -0.8409230276,
+                  0.4067366431
+                ],
+                "right_world": [
+                  0.9205048535,
+                  0.3907311285,
+                  -0.0
+                ],
+                "up_world": [
+                  -0.1589246675,
+                  0.374403054,
+                  0.9135454576
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    0.9205048680305481,
+                    -0.1589246243238449,
+                    0.35695070028305054,
+                    0.7108050584793091
+                  ],
+                  [
+                    0.39073115587234497,
+                    0.3744029104709625,
+                    -0.8409230709075928,
+                    -1.6705520153045654
+                  ],
+                  [
+                    -5.025940552627617e-09,
+                    0.913545548915863,
+                    0.40673649311065674,
+                    0.9958124756813049
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "6042faf3bda610fe0cd39a8cb302c9149731299aceb330b0f87c2415dad42882",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "copilot-p200",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-three_quarter",
+                "role": "copilot-p200",
+                "view": "three_quarter",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  785.85605804,
+                  -1844.78426299,
+                  1099.78754568
+                ],
+                "target_mm": [
+                  8.48240971,
+                  -13.40671444,
+                  213.98904588
+                ],
+                "ortho_scale_mm": 756.1869056466658,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.5869092562159617,
+                "actual_projected_height_mm": 544.4545720655993,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.3569506476,
+                  -0.8409230276,
+                  0.4067366431
+                ],
+                "right_world": [
+                  0.9205048535,
+                  0.3907311285,
+                  -0.0
+                ],
+                "up_world": [
+                  -0.1589246675,
+                  0.374403054,
+                  0.9135454576
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    0.9205048084259033,
+                    -0.1589246243238449,
+                    0.3569508194923401,
+                    0.7858561277389526
+                  ],
+                  [
+                    0.39073124527931213,
+                    0.3744029104709625,
+                    -0.840923011302948,
+                    -1.8447843790054321
+                  ],
+                  [
+                    -4.669232112064492e-08,
+                    0.913545548915863,
+                    0.40673649311065674,
+                    1.0997875928878784
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "6787e873428c768c17b16251934ed172d878f42700a088aa3d1e0fec86e28b1f",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "copilot-p300",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-three_quarter",
+                "role": "copilot-p300",
+                "view": "three_quarter",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  905.30170085,
+                  -2124.75715397,
+                  1265.38344605
+                ],
+                "target_mm": [
+                  10.33839021,
+                  -16.35572129,
+                  245.59436569
+                ],
+                "ortho_scale_mm": 870.5717488474851,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.3784044814096388,
+                "actual_projected_height_mm": 626.8116591701893,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.3569506476,
+                  -0.8409230276,
+                  0.4067366431
+                ],
+                "right_world": [
+                  0.9205048535,
+                  0.3907311285,
+                  -0.0
+                ],
+                "up_world": [
+                  -0.1589246675,
+                  0.374403054,
+                  0.9135454576
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    0.9205048084259033,
+                    -0.1589246392250061,
+                    0.3569507598876953,
+                    0.9053017497062683
+                  ],
+                  [
+                    0.39073121547698975,
+                    0.3744029104709625,
+                    -0.8409230709075928,
+                    -2.1247572898864746
+                  ],
+                  [
+                    -2.219975492323556e-08,
+                    0.913545548915863,
+                    0.40673649311065674,
+                    1.2653834819793701
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "9765bd68645ea89cad7ab5cee426fc64b1563e424a533da702d4b1107a5b8fe9",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "copilot-p400",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-three_quarter",
+                "role": "copilot-p400",
+                "view": "three_quarter",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  995.55029145,
+                  -2341.36950941,
+                  1394.43674882
+                ],
+                "target_mm": [
+                  9.5185705,
+                  -18.42434683,
+                  270.87741407
+                ],
+                "ortho_scale_mm": 959.1581571295181,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.2510971116497112,
+                "actual_projected_height_mm": 690.593873133253,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.3569506476,
+                  -0.8409230276,
+                  0.4067366431
+                ],
+                "right_world": [
+                  0.9205048535,
+                  0.3907311285,
+                  -0.0
+                ],
+                "up_world": [
+                  -0.1589246675,
+                  0.374403054,
+                  0.9135454576
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    0.9205048084259033,
+                    -0.15892460942268372,
+                    0.3569507896900177,
+                    0.9955503344535828
+                  ],
+                  [
+                    0.39073121547698975,
+                    0.3744029402732849,
+                    -0.840923011302948,
+                    -2.34136962890625
+                  ],
+                  [
+                    -6.259797658003663e-08,
+                    0.913545548915863,
+                    0.40673649311065674,
+                    1.3944368362426758
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "b2c74682a823b21c06218bd29d71fddc6e1eed3601ef4307e02a94bd7c9fb07d",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            }
+          ]
+        },
+        {
+          "path": "comparisons/copilot-physical-size.jpg",
+          "sha256": "8f45aeae9c1f4a3369e8a9ee96711287c3fcfb2697ea81a4fb3771bbd95befd5",
+          "bytes": 573994,
+          "mode": "ACTUAL_CG_FIXED_PHYSICAL_PX_PER_MM",
+          "pixels_per_mm": 0.9,
+          "view": "front",
+          "image_size_px": [
+            4800,
+            940
+          ],
+          "method": "Rescale actual orthographic CG from its recordedpx/mm without changing mesh/part geometry; commonground; include actualmodelZheight.",
+          "source_cases": [
+            "copilot-fine8-base",
+            "copilot-p120",
+            "copilot-p150",
+            "copilot-p200",
+            "copilot-p300",
+            "copilot-p400"
+          ],
+          "conditions": [
+            {
+              "case_id": "copilot-fine8-base",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "copilot-fine8-base",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -1472.7999996,
+                  184.09999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  184.09999995
+                ],
+                "ortho_scale_mm": 511.38888875000004,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 2.3465507882527294,
+                "actual_projected_height_mm": 368.1999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -1.4728001356124878
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.18410001695156097
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "3ef9b1d18673f7741ce25eec16facef617df51238106d9c720c97e54555f98b9",
+              "source_image_size_px": [
+                1200,
+                1200
+              ],
+              "scale_factor": 0.38354166656250005,
+              "source_to_sheet_affine": [
+                0.38354166656250005,
+                0,
+                169.87500006249996,
+                0,
+                0.38354166656250005,
+                354.18500006249997
+              ],
+              "panel_box_px": [
+                0,
+                140,
+                800,
+                750
+              ],
+              "source_model_height_px": 864.0000002346551,
+              "sheet_model_height_px": 331.38000000000005,
+              "source_ground_y_px": 1032.0000001173275,
+              "sheet_ground_y_px": 750,
+              "pixels_per_mm": 0.9,
+              "resampling": "BICUBIC_UNIFORM_AFFINE_NOT_PER_MODEL_HEIGHT_NORMALIZATION"
+            },
+            {
+              "case_id": "copilot-p120",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "copilot-p120",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -1587.9999996,
+                  198.49999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  198.49999995
+                ],
+                "ortho_scale_mm": 551.38888875,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 2.1763224186842125,
+                "actual_projected_height_mm": 396.9999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -1.5880000591278076
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.19850000739097595
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "19bba8b3dab43b7c98381e62cd59722d61d64da7d535b6e03f632fd4190c4735",
+              "source_image_size_px": [
+                1200,
+                1200
+              ],
+              "scale_factor": 0.41354166656249997,
+              "source_to_sheet_affine": [
+                0.41354166656249997,
+                0,
+                951.8750000625,
+                0,
+                0.41354166656249997,
+                323.2250000625
+              ],
+              "panel_box_px": [
+                800,
+                140,
+                1600,
+                750
+              ],
+              "source_model_height_px": 864.0000002176324,
+              "sheet_model_height_px": 357.3,
+              "source_ground_y_px": 1032.0000001088163,
+              "sheet_ground_y_px": 750,
+              "pixels_per_mm": 0.9,
+              "resampling": "BICUBIC_UNIFORM_AFFINE_NOT_PER_MODEL_HEIGHT_NORMALIZATION"
+            },
+            {
+              "case_id": "copilot-p150",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "copilot-p150",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -1703.1999996,
+                  212.89999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  212.89999995
+                ],
+                "ortho_scale_mm": 591.38888875,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 2.0291216538349275,
+                "actual_projected_height_mm": 425.7999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -1.7031999826431274
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.21289999783039093
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "9c172fcffbd0d1b3f55db485c57d310fdec82eb5dc17190e054b9c5c1b91e8f4",
+              "source_image_size_px": [
+                1200,
+                1200
+              ],
+              "scale_factor": 0.44354166656250005,
+              "source_to_sheet_affine": [
+                0.44354166656250005,
+                0,
+                1733.8750000625,
+                0,
+                0.44354166656250005,
+                292.2650000625
+              ],
+              "panel_box_px": [
+                1600,
+                140,
+                2400,
+                750
+              ],
+              "source_model_height_px": 864.0000002029121,
+              "sheet_model_height_px": 383.22,
+              "source_ground_y_px": 1032.000000101456,
+              "sheet_ground_y_px": 750,
+              "pixels_per_mm": 0.9,
+              "resampling": "BICUBIC_UNIFORM_AFFINE_NOT_PER_MODEL_HEIGHT_NORMALIZATION"
+            },
+            {
+              "case_id": "copilot-p200",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "copilot-p200",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -1875.9999996,
+                  234.49999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  234.49999995
+                ],
+                "ortho_scale_mm": 651.38888875,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.8422174844013257,
+                "actual_projected_height_mm": 468.9999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -1.8760000467300415
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.2345000058412552
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "458aec48f46deb9dd896344392390a4d8869fbe9719b5f608204b31e69faea07",
+              "source_image_size_px": [
+                1200,
+                1200
+              ],
+              "scale_factor": 0.48854166656250003,
+              "source_to_sheet_affine": [
+                0.48854166656250003,
+                0,
+                2506.8750000625,
+                0,
+                0.48854166656250003,
+                245.82500006249995
+              ],
+              "panel_box_px": [
+                2400,
+                140,
+                3200,
+                750
+              ],
+              "source_model_height_px": 864.0000001842218,
+              "sheet_model_height_px": 422.1,
+              "source_ground_y_px": 1032.000000092111,
+              "sheet_ground_y_px": 750,
+              "pixels_per_mm": 0.9,
+              "resampling": "BICUBIC_UNIFORM_AFFINE_NOT_PER_MODEL_HEIGHT_NORMALIZATION"
+            },
+            {
+              "case_id": "copilot-p300",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "copilot-p300",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -2163.9999996,
+                  270.49999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  270.49999995
+                ],
+                "ortho_scale_mm": 751.3888887499999,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.5970425141584186,
+                "actual_projected_height_mm": 540.9999998999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -2.1640000343322754
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.2705000042915344
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "a194787bee66eccf51be4e50baf86f07d80ff1f838e56f5c0f7eaf5647bf502b",
+              "source_image_size_px": [
+                1200,
+                1200
+              ],
+              "scale_factor": 0.5635416665624999,
+              "source_to_sheet_affine": [
+                0.5635416665624999,
+                0,
+                3261.8750000625,
+                0,
+                0.5635416665624999,
+                168.42500006249998
+              ],
+              "panel_box_px": [
+                3200,
+                140,
+                4000,
+                750
+              ],
+              "source_model_height_px": 864.0000001597043,
+              "sheet_model_height_px": 486.8999999999999,
+              "source_ground_y_px": 1032.0000000798523,
+              "sheet_ground_y_px": 750,
+              "pixels_per_mm": 0.9,
+              "resampling": "BICUBIC_UNIFORM_AFFINE_NOT_PER_MODEL_HEIGHT_NORMALIZATION"
+            },
+            {
+              "case_id": "copilot-p400",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "copilot-p400",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -2394.3999996,
+                  299.29999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  299.29999995
+                ],
+                "ortho_scale_mm": 831.3888887500001,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.4433678585772414,
+                "actual_projected_height_mm": 598.5999999000001,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -2.394400119781494
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.29930001497268677
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "328b5c6249d38acd5e65f6a70e49533d1d2d971bbf7251933f4276037265c2a8",
+              "source_image_size_px": [
+                1200,
+                1200
+              ],
+              "scale_factor": 0.6235416665625001,
+              "source_to_sheet_affine": [
+                0.6235416665625001,
+                0,
+                4025.8750000625,
+                0,
+                0.6235416665625001,
+                106.5050000624999
+              ],
+              "panel_box_px": [
+                4000,
+                140,
+                4800,
+                750
+              ],
+              "source_model_height_px": 864.0000001443366,
+              "sheet_model_height_px": 538.7399999999999,
+              "source_ground_y_px": 1032.0000000721684,
+              "sheet_ground_y_px": 750,
+              "pixels_per_mm": 0.9,
+              "resampling": "BICUBIC_UNIFORM_AFFINE_NOT_PER_MODEL_HEIGHT_NORMALIZATION"
+            }
+          ]
+        }
+      ],
+      "complete_case_ids": [
+        "copilot-fine8-base",
+        "copilot-p120",
+        "copilot-p150",
+        "copilot-p200",
+        "copilot-p300",
+        "copilot-p400"
+      ],
+      "fixed_count_denominator": 17873,
+      "fixed_count_reference_manifest_sha256": "5253cbb755fc1069e745dfda69026e0475904abe5e2d76bd7312852672189d7b",
+      "actual_reference_count": 17873,
+      "columns": [
+        {
+          "column_index": 0,
+          "case_id": "copilot-fine8-base",
+          "logical_case_id": "copilot-fine8-base",
+          "geometry_revision": "original-matrix",
+          "role": "ONE_X_ACTUAL_GEOMETRY_REFERENCE",
+          "fixed_count_denominator": 17873,
+          "actual_reference_count": 17873,
+          "target_ratio": 1.0,
+          "target_count": 17873,
+          "actual_count": 17873,
+          "actual_ratio": 1.0,
+          "actual_size_mm": [
+            487.8,
+            423.8,
+            368.20000000000005
+          ],
+          "used_types": 148,
+          "manifest_sha256": "38722785af040902ad033251a8cb8cde901eadeb04efae74aec0e098cb26f16d",
+          "bom_sha256": "e5898e374bf7f710ba4cd7927bc74fa9f15b166747c1aea6fa0da9ad8ca6864d",
+          "source_render_stats_sha256": "6dd3dd4836162c81a7b30105f3c45e75b46a63c992117492fe54ca98fc302cea"
+        },
+        {
+          "column_index": 1,
+          "case_id": "copilot-p120",
+          "logical_case_id": "copilot-p120",
+          "geometry_revision": "original-matrix",
+          "role": "MULTIPLIER_CASE",
+          "fixed_count_denominator": 17873,
+          "actual_reference_count": 17873,
+          "target_ratio": 1.2,
+          "target_count": 21448,
+          "actual_count": 21388,
+          "actual_ratio": 1.1966653611592906,
+          "actual_size_mm": [
+            519.8,
+            439.8,
+            397.0
+          ],
+          "used_types": 155,
+          "manifest_sha256": "3a44107433f29351e8818e74bf1a3fa6db9fb13bc14e9b1029b3d7d20cd5249d",
+          "bom_sha256": "846fa70bf0cd57fabab11a0e5c4fdbe34bfea6c058c79e749cf4493fc5ad95dd",
+          "source_render_stats_sha256": "53fdf7237a529bb695c8857f23c19902d96d6d6e251711be3842e414707edc2b"
+        },
+        {
+          "column_index": 2,
+          "case_id": "copilot-p150",
+          "logical_case_id": "copilot-p150",
+          "geometry_revision": "original-matrix",
+          "role": "MULTIPLIER_CASE",
+          "fixed_count_denominator": 17873,
+          "actual_reference_count": 17873,
+          "target_ratio": 1.5,
+          "target_count": 26810,
+          "actual_count": 26690,
+          "actual_ratio": 1.4933139372237454,
+          "actual_size_mm": [
+            567.8,
+            487.8,
+            425.8
+          ],
+          "used_types": 162,
+          "manifest_sha256": "8b75a8ab2a1b040125ddeca241b2e07d0e85b3788100a3692b8bc6ab232cc1bb",
+          "bom_sha256": "1a6ce7019e9b278f6dd8a6d2d2997e3e9f6f7d7256aa533df9fd5ec5da8fc183",
+          "source_render_stats_sha256": "6d11f225240700df8e62ef7d37f2a6b30a3810360b69595307ea8d66f39f9739"
+        },
+        {
+          "column_index": 3,
+          "case_id": "copilot-p200",
+          "logical_case_id": "copilot-p200",
+          "geometry_revision": "original-matrix",
+          "role": "MULTIPLIER_CASE",
+          "fixed_count_denominator": 17873,
+          "actual_reference_count": 17873,
+          "target_ratio": 2.0,
+          "target_count": 35746,
+          "actual_count": 35648,
+          "actual_ratio": 1.99451686902031,
+          "actual_size_mm": [
+            631.8,
+            535.8,
+            469.0
+          ],
+          "used_types": 182,
+          "manifest_sha256": "f9d4f8f43b4391314e436a39e2228cff8b36fdd94d574c8923a00ee804a8a26c",
+          "bom_sha256": "c8684609650efbac880cb9a6b68dba0bc4abcb6882e3114dc1f25d1871db1903",
+          "source_render_stats_sha256": "2edcf56329310a98160d20997423711f4f6bcac16ee67e10a9953668a0b16b4e"
+        },
+        {
+          "column_index": 4,
+          "case_id": "copilot-p300",
+          "logical_case_id": "copilot-p300",
+          "geometry_revision": "original-matrix",
+          "role": "MULTIPLIER_CASE",
+          "fixed_count_denominator": 17873,
+          "actual_reference_count": 17873,
+          "target_ratio": 3.0,
+          "target_count": 53619,
+          "actual_count": 53350,
+          "actual_ratio": 2.984949364963912,
+          "actual_size_mm": [
+            727.8,
+            615.8,
+            540.9999999999999
+          ],
+          "used_types": 195,
+          "manifest_sha256": "6cc5d2279d5b80db851246fba64e88acca6acc472bdae1738d748193974c7b13",
+          "bom_sha256": "2d163053849351e35a65920b1efffabbafaf27bfb24eebb661211eb4a0185085",
+          "source_render_stats_sha256": "1240722b3095ab23e04e110a0e5fd315f77e306a514868c18599d7b1c1f718b3"
+        },
+        {
+          "column_index": 5,
+          "case_id": "copilot-p400",
+          "logical_case_id": "copilot-p400",
+          "geometry_revision": "original-matrix",
+          "role": "MULTIPLIER_CASE",
+          "fixed_count_denominator": 17873,
+          "actual_reference_count": 17873,
+          "target_ratio": 4.0,
+          "target_count": 71492,
+          "actual_count": 71261,
+          "actual_ratio": 3.987075476976445,
+          "actual_size_mm": [
+            791.8,
+            679.8,
+            598.5999999999999
+          ],
+          "used_types": 214,
+          "manifest_sha256": "37b26f4f6347aacb09f509e9507842a6223b9f2c7f27e58e22487b8cccb9b212",
+          "bom_sha256": "c5e6bbd8d3bfc8f3ad7f56e65d794305b3ee4d5137d4ee9785de0550cd35e787",
+          "source_render_stats_sha256": "d637e14e909e2b2fd8a4e0358c5e475e8eac6d830982c323646424bd82cb6e90"
+        }
+      ]
+    },
+    {
+      "character": "ducky",
+      "images": [
+        {
+          "path": "comparisons/ducky-normalized-front.jpg",
+          "sha256": "4db2a8bfd3bb176d327e726fa0a9634a4ea09b21d1180cfe78d1b2350108cf40",
+          "bytes": 397298,
+          "mode": "ACTUAL_CG_EQUAL_PROJECTED_SCREEN_HEIGHT_NOT_SIZE_RATIO",
+          "view": "front",
+          "image_size_px": [
+            3600,
+            880
+          ],
+          "source_cases": [
+            "ducky-fine8-base",
+            "ducky-p120",
+            "ducky-p150",
+            "ducky-p200",
+            "ducky-p300",
+            "ducky-p400"
+          ],
+          "conditions": [
+            {
+              "case_id": "ducky-fine8-base",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "ducky-fine8-base",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -1472.7999996,
+                  184.09999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  184.09999995
+                ],
+                "ortho_scale_mm": 511.38888875000004,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 2.3465507882527294,
+                "actual_projected_height_mm": 368.1999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -1.4728001356124878
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.18410001695156097
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "dfe3095a8ecc9a5cef61d06ad458daa25fa750334343b4a550b19f6b76565f98",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "ducky-p120",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "ducky-p120",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -1587.9999996,
+                  198.49999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  198.49999995
+                ],
+                "ortho_scale_mm": 551.38888875,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 2.1763224186842125,
+                "actual_projected_height_mm": 396.9999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -1.5880000591278076
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.19850000739097595
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "c6cb05f120a053fb3ee566a7cfbb029683146902c8a45d781fa74040f690eb54",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "ducky-p150",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "ducky-p150",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -1703.1999996,
+                  212.89999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  212.89999995
+                ],
+                "ortho_scale_mm": 591.38888875,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 2.0291216538349275,
+                "actual_projected_height_mm": 425.7999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -1.7031999826431274
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.21289999783039093
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "26547a53fedb77f27bb7c106947eb9b7505138db19c597f7633e9facc7e99b4e",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "ducky-p200",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "ducky-p200",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -1895.1999996,
+                  236.89999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  236.89999995
+                ],
+                "ortho_scale_mm": 658.0555554166667,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.823554242681206,
+                "actual_projected_height_mm": 473.7999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -1.8952000141143799
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.23690000176429749
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "1b79d486b925f7d4e68d99811390f390f141e4b3964d9ad4978c21b35f3d69ec",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "ducky-p300",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "ducky-p300",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -2163.9999996,
+                  270.49999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  270.49999995
+                ],
+                "ortho_scale_mm": 751.3888887499999,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.5970425141584186,
+                "actual_projected_height_mm": 540.9999998999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -2.1640000343322754
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.2705000042915344
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "c26afabdc3f26fc780149fe35bbe1b93eba4c85fbc193839141e12bb17a1d589",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "ducky-p400",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "ducky-p400",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -2394.3999996,
+                  299.29999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  299.29999995
+                ],
+                "ortho_scale_mm": 831.3888887500001,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.4433678585772414,
+                "actual_projected_height_mm": 598.5999999000001,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -2.394400119781494
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.29930001497268677
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "5ab85b5a487849024bae270e5ec5413e95ac0b213bdce91e52ca81ef9842c179",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            }
+          ]
+        },
+        {
+          "path": "comparisons/ducky-normalized-three_quarter.jpg",
+          "sha256": "d6beb9536e7e4ee7ef67f5a6b103e2c62ccd67f7cf4e83afd89a58e3e6c6f38a",
+          "bytes": 473341,
+          "mode": "ACTUAL_CG_EQUAL_PROJECTED_SCREEN_HEIGHT_NOT_SIZE_RATIO",
+          "view": "three_quarter",
+          "image_size_px": [
+            3600,
+            880
+          ],
+          "source_cases": [
+            "ducky-fine8-base",
+            "ducky-p120",
+            "ducky-p150",
+            "ducky-p200",
+            "ducky-p300",
+            "ducky-p400"
+          ],
+          "conditions": [
+            {
+              "case_id": "ducky-fine8-base",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-three_quarter",
+                "role": "ducky-fine8-base",
+                "view": "three_quarter",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  559.22134192,
+                  -1285.44292138,
+                  796.74734709
+                ],
+                "target_mm": [
+                  10.35625378,
+                  7.60219504,
+                  171.32883347
+                ],
+                "ortho_scale_mm": 533.9061769208543,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 2.247585909046126,
+                "actual_projected_height_mm": 384.41244738301504,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.3569506476,
+                  -0.8409230276,
+                  0.4067366431
+                ],
+                "right_world": [
+                  0.9205048535,
+                  0.3907311285,
+                  -0.0
+                ],
+                "up_world": [
+                  -0.1589246675,
+                  0.374403054,
+                  0.9135454576
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    0.9205048680305481,
+                    -0.15892457962036133,
+                    0.35695070028305054,
+                    0.5592213273048401
+                  ],
+                  [
+                    0.39073115587234497,
+                    0.3744029402732849,
+                    -0.8409230709075928,
+                    -1.2854429483413696
+                  ],
+                  [
+                    -4.176478540784956e-08,
+                    0.913545548915863,
+                    0.40673649311065674,
+                    0.7967473864555359
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "4a8b11ece3eaf497b4f76cb089116e073c95f5ab75bc1ab8d60e3f63c5f76eb5",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "ducky-p120",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-three_quarter",
+                "role": "ducky-p120",
+                "view": "three_quarter",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  595.97353119,
+                  -1369.1788345,
+                  849.64167529
+                ],
+                "target_mm": [
+                  11.69619898,
+                  7.29230089,
+                  183.87176471
+                ],
+                "ortho_scale_mm": 568.3532865254116,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 2.1113628238804014,
+                "actual_projected_height_mm": 409.21436629829634,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.3569506476,
+                  -0.8409230276,
+                  0.4067366431
+                ],
+                "right_world": [
+                  0.9205048535,
+                  0.3907311285,
+                  -0.0
+                ],
+                "up_world": [
+                  -0.1589246675,
+                  0.374403054,
+                  0.9135454576
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    0.9205048084259033,
+                    -0.1589246541261673,
+                    0.3569507598876953,
+                    0.595973551273346
+                  ],
+                  [
+                    0.39073121547698975,
+                    0.3744029104709625,
+                    -0.8409230709075928,
+                    -1.3691788911819458
+                  ],
+                  [
+                    2.292809497816961e-09,
+                    0.913545548915863,
+                    0.40673649311065674,
+                    0.8496416807174683
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "ff7cc9639cac37f426a457af9be603bfba55f99774c2c508699fd4636d70a670",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "ducky-p150",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-three_quarter",
+                "role": "ducky-p150",
+                "view": "three_quarter",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  643.01741304,
+                  -1477.43068432,
+                  916.65583001
+                ],
+                "target_mm": [
+                  12.45230682,
+                  8.08761299,
+                  198.14211872
+                ],
+                "ortho_scale_mm": 613.3795215612811,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.9563744106512548,
+                "actual_projected_height_mm": 441.6332555241224,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.3569506476,
+                  -0.8409230276,
+                  0.4067366431
+                ],
+                "right_world": [
+                  0.9205048535,
+                  0.3907311285,
+                  -0.0
+                ],
+                "up_world": [
+                  -0.1589246675,
+                  0.374403054,
+                  0.9135454576
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    0.9205048084259033,
+                    -0.1589246541261673,
+                    0.3569507598876953,
+                    0.6430174112319946
+                  ],
+                  [
+                    0.39073121547698975,
+                    0.3744029104709625,
+                    -0.8409230709075928,
+                    -1.4774307012557983
+                  ],
+                  [
+                    2.292809497816961e-09,
+                    0.913545548915863,
+                    0.40673649311065674,
+                    0.9166558384895325
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "5a2c7bb0817d4ef7dcf61938b2093619018722f4853b01ab2458b4f0a18309ee",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "ducky-p200",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-three_quarter",
+                "role": "ducky-p200",
+                "view": "three_quarter",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  706.087962,
+                  -1623.43899576,
+                  1009.94593707
+                ],
+                "target_mm": [
+                  13.25145255,
+                  8.78153416,
+                  220.47546557
+                ],
+                "ortho_scale_mm": 673.9537638359728,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.780537574521294,
+                "actual_projected_height_mm": 485.2467099619004,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.3569506476,
+                  -0.8409230276,
+                  0.4067366431
+                ],
+                "right_world": [
+                  0.9205048535,
+                  0.3907311285,
+                  -0.0
+                ],
+                "up_world": [
+                  -0.1589246675,
+                  0.374403054,
+                  0.9135454576
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    0.9205048084259033,
+                    -0.1589246392250061,
+                    0.3569507598876953,
+                    0.7060880064964294
+                  ],
+                  [
+                    0.39073121547698975,
+                    0.3744029104709625,
+                    -0.8409230709075928,
+                    -1.623439073562622
+                  ],
+                  [
+                    -2.219975492323556e-08,
+                    0.913545548915863,
+                    0.40673649311065674,
+                    1.0099459886550903
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "00e045b8d750de0aee022b5af16f3859929eebf06abd39832b619a2889286bf1",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "ducky-p300",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-three_quarter",
+                "role": "ducky-p300",
+                "view": "three_quarter",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  809.91289176,
+                  -1861.18838324,
+                  1159.80649382
+                ],
+                "target_mm": [
+                  15.2551724,
+                  10.90788493,
+                  254.31321247
+                ],
+                "ortho_scale_mm": 772.9999121292533,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.5523934494307523,
+                "actual_projected_height_mm": 556.5599367330624,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.3569506476,
+                  -0.8409230276,
+                  0.4067366431
+                ],
+                "right_world": [
+                  0.9205048535,
+                  0.3907311285,
+                  -0.0
+                ],
+                "up_world": [
+                  -0.1589246675,
+                  0.374403054,
+                  0.9135454576
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    0.9205048084259033,
+                    -0.15892460942268372,
+                    0.3569507896900177,
+                    0.809912919998169
+                  ],
+                  [
+                    0.39073121547698975,
+                    0.3744029402732849,
+                    -0.840923011302948,
+                    -1.8611884117126465
+                  ],
+                  [
+                    -6.259797658003663e-08,
+                    0.913545548915863,
+                    0.40673649311065674,
+                    1.1598066091537476
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "ede8ecd46fc09833d3e688555a2b8d8fe5ff0edb7a6a788c5f499829f6ef877b",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            },
+            {
+              "case_id": "ducky-p400",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-three_quarter",
+                "role": "ducky-p400",
+                "view": "three_quarter",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  892.37395134,
+                  -2048.87787524,
+                  1277.22593887
+                ],
+                "target_mm": [
+                  17.30808125,
+                  12.64812507,
+                  280.10951151
+                ],
+                "ortho_scale_mm": 851.2165983001933,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.4097469461900736,
+                "actual_projected_height_mm": 612.8759507761391,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.3569506476,
+                  -0.8409230276,
+                  0.4067366431
+                ],
+                "right_world": [
+                  0.9205048535,
+                  0.3907311285,
+                  -0.0
+                ],
+                "up_world": [
+                  -0.1589246675,
+                  0.374403054,
+                  0.9135454576
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    0.9205048084259033,
+                    -0.15892457962036133,
+                    0.3569507300853729,
+                    0.8923739790916443
+                  ],
+                  [
+                    0.39073118567466736,
+                    0.3744029402732849,
+                    -0.8409230709075928,
+                    -2.0488779544830322
+                  ],
+                  [
+                    -6.625734982890208e-08,
+                    0.913545548915863,
+                    0.40673649311065674,
+                    1.2772259712219238
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "3b3189faa5630d43dcd5ea37a39dd55092c73524ec4f6bdefd7e744a91e360e6",
+              "panel_size_px": [
+                580,
+                580
+              ],
+              "panel_model_height_px": 417.6
+            }
+          ]
+        },
+        {
+          "path": "comparisons/ducky-physical-size.jpg",
+          "sha256": "d6d99ba47f5a5ba4a5188e57a4e48f394753d6782eed8033f2f91a16cfdff86e",
+          "bytes": 465237,
+          "mode": "ACTUAL_CG_FIXED_PHYSICAL_PX_PER_MM",
+          "pixels_per_mm": 0.9,
+          "view": "front",
+          "image_size_px": [
+            4800,
+            940
+          ],
+          "method": "Rescale actual orthographic CG from its recordedpx/mm without changing mesh/part geometry; commonground; include actualmodelZheight.",
+          "source_cases": [
+            "ducky-fine8-base",
+            "ducky-p120",
+            "ducky-p150",
+            "ducky-p200",
+            "ducky-p300",
+            "ducky-p400"
+          ],
+          "conditions": [
+            {
+              "case_id": "ducky-fine8-base",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "ducky-fine8-base",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -1472.7999996,
+                  184.09999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  184.09999995
+                ],
+                "ortho_scale_mm": 511.38888875000004,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 2.3465507882527294,
+                "actual_projected_height_mm": 368.1999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -1.4728001356124878
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.18410001695156097
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "dfe3095a8ecc9a5cef61d06ad458daa25fa750334343b4a550b19f6b76565f98",
+              "source_image_size_px": [
+                1200,
+                1200
+              ],
+              "scale_factor": 0.38354166656250005,
+              "source_to_sheet_affine": [
+                0.38354166656250005,
+                0,
+                169.87500006249996,
+                0,
+                0.38354166656250005,
+                354.18500006249997
+              ],
+              "panel_box_px": [
+                0,
+                140,
+                800,
+                750
+              ],
+              "source_model_height_px": 864.0000002346551,
+              "sheet_model_height_px": 331.38000000000005,
+              "source_ground_y_px": 1032.0000001173275,
+              "sheet_ground_y_px": 750,
+              "pixels_per_mm": 0.9,
+              "resampling": "BICUBIC_UNIFORM_AFFINE_NOT_PER_MODEL_HEIGHT_NORMALIZATION"
+            },
+            {
+              "case_id": "ducky-p120",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "ducky-p120",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -1587.9999996,
+                  198.49999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  198.49999995
+                ],
+                "ortho_scale_mm": 551.38888875,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 2.1763224186842125,
+                "actual_projected_height_mm": 396.9999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -1.5880000591278076
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.19850000739097595
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "c6cb05f120a053fb3ee566a7cfbb029683146902c8a45d781fa74040f690eb54",
+              "source_image_size_px": [
+                1200,
+                1200
+              ],
+              "scale_factor": 0.41354166656249997,
+              "source_to_sheet_affine": [
+                0.41354166656249997,
+                0,
+                951.8750000625,
+                0,
+                0.41354166656249997,
+                323.2250000625
+              ],
+              "panel_box_px": [
+                800,
+                140,
+                1600,
+                750
+              ],
+              "source_model_height_px": 864.0000002176324,
+              "sheet_model_height_px": 357.3,
+              "source_ground_y_px": 1032.0000001088163,
+              "sheet_ground_y_px": 750,
+              "pixels_per_mm": 0.9,
+              "resampling": "BICUBIC_UNIFORM_AFFINE_NOT_PER_MODEL_HEIGHT_NORMALIZATION"
+            },
+            {
+              "case_id": "ducky-p150",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "ducky-p150",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -1703.1999996,
+                  212.89999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  212.89999995
+                ],
+                "ortho_scale_mm": 591.38888875,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 2.0291216538349275,
+                "actual_projected_height_mm": 425.7999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -1.7031999826431274
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.21289999783039093
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "26547a53fedb77f27bb7c106947eb9b7505138db19c597f7633e9facc7e99b4e",
+              "source_image_size_px": [
+                1200,
+                1200
+              ],
+              "scale_factor": 0.44354166656250005,
+              "source_to_sheet_affine": [
+                0.44354166656250005,
+                0,
+                1733.8750000625,
+                0,
+                0.44354166656250005,
+                292.2650000625
+              ],
+              "panel_box_px": [
+                1600,
+                140,
+                2400,
+                750
+              ],
+              "source_model_height_px": 864.0000002029121,
+              "sheet_model_height_px": 383.22,
+              "source_ground_y_px": 1032.000000101456,
+              "sheet_ground_y_px": 750,
+              "pixels_per_mm": 0.9,
+              "resampling": "BICUBIC_UNIFORM_AFFINE_NOT_PER_MODEL_HEIGHT_NORMALIZATION"
+            },
+            {
+              "case_id": "ducky-p200",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "ducky-p200",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -1895.1999996,
+                  236.89999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  236.89999995
+                ],
+                "ortho_scale_mm": 658.0555554166667,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.823554242681206,
+                "actual_projected_height_mm": 473.7999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -1.8952000141143799
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.23690000176429749
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "1b79d486b925f7d4e68d99811390f390f141e4b3964d9ad4978c21b35f3d69ec",
+              "source_image_size_px": [
+                1200,
+                1200
+              ],
+              "scale_factor": 0.49354166656250004,
+              "source_to_sheet_affine": [
+                0.49354166656250004,
+                0,
+                2503.8750000625,
+                0,
+                0.49354166656250004,
+                240.66500006249993
+              ],
+              "panel_box_px": [
+                2400,
+                140,
+                3200,
+                750
+              ],
+              "source_model_height_px": 864.0000001823554,
+              "sheet_model_height_px": 426.42,
+              "source_ground_y_px": 1032.0000000911778,
+              "sheet_ground_y_px": 750,
+              "pixels_per_mm": 0.9,
+              "resampling": "BICUBIC_UNIFORM_AFFINE_NOT_PER_MODEL_HEIGHT_NORMALIZATION"
+            },
+            {
+              "case_id": "ducky-p300",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "ducky-p300",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -2163.9999996,
+                  270.49999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  270.49999995
+                ],
+                "ortho_scale_mm": 751.3888887499999,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.5970425141584186,
+                "actual_projected_height_mm": 540.9999998999999,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -2.1640000343322754
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.2705000042915344
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "c26afabdc3f26fc780149fe35bbe1b93eba4c85fbc193839141e12bb17a1d589",
+              "source_image_size_px": [
+                1200,
+                1200
+              ],
+              "scale_factor": 0.5635416665624999,
+              "source_to_sheet_affine": [
+                0.5635416665624999,
+                0,
+                3261.8750000625,
+                0,
+                0.5635416665624999,
+                168.42500006249998
+              ],
+              "panel_box_px": [
+                3200,
+                140,
+                4000,
+                750
+              ],
+              "source_model_height_px": 864.0000001597043,
+              "sheet_model_height_px": 486.8999999999999,
+              "source_ground_y_px": 1032.0000000798523,
+              "sheet_ground_y_px": 750,
+              "pixels_per_mm": 0.9,
+              "resampling": "BICUBIC_UNIFORM_AFFINE_NOT_PER_MODEL_HEIGHT_NORMALIZATION"
+            },
+            {
+              "case_id": "ducky-p400",
+              "camera": {
+                "group_id": "part-count-matrix-20260921-normalized-front",
+                "role": "ducky-p400",
+                "view": "front",
+                "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+                "projection": "ORTHOGRAPHIC",
+                "position_mm": [
+                  0.0,
+                  -2394.3999996,
+                  299.29999995
+                ],
+                "target_mm": [
+                  0.0,
+                  0.0,
+                  299.29999995
+                ],
+                "ortho_scale_mm": 831.3888887500001,
+                "image_size_px": [
+                  1200,
+                  1200
+                ],
+                "pixels_per_mm": 1.4433678585772414,
+                "actual_projected_height_mm": 598.5999999000001,
+                "rendered_model_height_px": 864.0,
+                "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+                "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+                "direction_world": [
+                  0.0,
+                  -1.0,
+                  0.0
+                ],
+                "right_world": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "up_world": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "camera_matrix_world_m": [
+                  [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    -1.6292068494294654e-07,
+                    -1.0,
+                    -2.394400119781494
+                  ],
+                  [
+                    0.0,
+                    1.0,
+                    -1.6292068494294654e-07,
+                    0.29930001497268677
+                  ],
+                  [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                  ]
+                ]
+              },
+              "source_image_sha256": "5ab85b5a487849024bae270e5ec5413e95ac0b213bdce91e52ca81ef9842c179",
+              "source_image_size_px": [
+                1200,
+                1200
+              ],
+              "scale_factor": 0.6235416665625001,
+              "source_to_sheet_affine": [
+                0.6235416665625001,
+                0,
+                4025.8750000625,
+                0,
+                0.6235416665625001,
+                106.5050000624999
+              ],
+              "panel_box_px": [
+                4000,
+                140,
+                4800,
+                750
+              ],
+              "source_model_height_px": 864.0000001443366,
+              "sheet_model_height_px": 538.7399999999999,
+              "source_ground_y_px": 1032.0000000721684,
+              "sheet_ground_y_px": 750,
+              "pixels_per_mm": 0.9,
+              "resampling": "BICUBIC_UNIFORM_AFFINE_NOT_PER_MODEL_HEIGHT_NORMALIZATION"
+            }
+          ]
+        }
+      ],
+      "complete_case_ids": [
+        "ducky-fine8-base",
+        "ducky-p120",
+        "ducky-p150",
+        "ducky-p200",
+        "ducky-p300",
+        "ducky-p400"
+      ],
+      "fixed_count_denominator": 9669,
+      "fixed_count_reference_manifest_sha256": "fd5f65d03fb85bea911ec1945e2e8339909dafea2b63c6627523c34b2334d267",
+      "actual_reference_count": 9669,
+      "columns": [
+        {
+          "column_index": 0,
+          "case_id": "ducky-fine8-base",
+          "logical_case_id": "ducky-fine8-base",
+          "geometry_revision": "original-matrix",
+          "role": "ONE_X_ACTUAL_GEOMETRY_REFERENCE",
+          "fixed_count_denominator": 9669,
+          "actual_reference_count": 9669,
+          "target_ratio": 1.0,
+          "target_count": 9669,
+          "actual_count": 9669,
+          "actual_ratio": 1.0,
+          "actual_size_mm": [
+            295.8,
+            423.8,
+            368.20000000000005
+          ],
+          "used_types": 85,
+          "manifest_sha256": "684d5914d023a40a0b25676503b5fdc2bcd2dfeb48a0e1ff7fcaf3189f2157a6",
+          "bom_sha256": "ddf3d62a09a8a8a707466e6f94307f8326ef49e8be9b2b83938f23a5da2185ca",
+          "source_render_stats_sha256": "0d19dd010ef6d1c20f85aadc0d4d4d4b9a590a4be6340a51c411899b8d5586cb"
+        },
+        {
+          "column_index": 1,
+          "case_id": "ducky-p120",
+          "logical_case_id": "ducky-p120",
+          "geometry_revision": "original-matrix",
+          "role": "MULTIPLIER_CASE",
+          "fixed_count_denominator": 9669,
+          "actual_reference_count": 9669,
+          "target_ratio": 1.2,
+          "target_count": 11603,
+          "actual_count": 11586,
+          "actual_ratio": 1.1982624883648774,
+          "actual_size_mm": [
+            311.8,
+            455.8,
+            397.0
+          ],
+          "used_types": 93,
+          "manifest_sha256": "4810e4314bcb6245a0422485ae3a1417128c096444fc3a7eb87f4670673d51aa",
+          "bom_sha256": "2e9c11d802273c89ad76cacf034f499d2a16bf1990e111350387786d44760009",
+          "source_render_stats_sha256": "e1282adaa828ac3c786d352d7c1573900fbd8a4957bc212a50c85db13748baa8"
+        },
+        {
+          "column_index": 2,
+          "case_id": "ducky-p150",
+          "logical_case_id": "ducky-p150",
+          "geometry_revision": "original-matrix",
+          "role": "MULTIPLIER_CASE",
+          "fixed_count_denominator": 9669,
+          "actual_reference_count": 9669,
+          "target_ratio": 1.5,
+          "target_count": 14504,
+          "actual_count": 14460,
+          "actual_ratio": 1.495501085944772,
+          "actual_size_mm": [
+            343.8,
+            503.8,
+            425.8
+          ],
+          "used_types": 100,
+          "manifest_sha256": "bfed5a65b01819a5349a44aa40c8c996116ea3d28e67d1691df0e8f0c74828d9",
+          "bom_sha256": "a3db15338d21cfcf39cfbb2a1ff3a6b32f2c13f20bb423e3b18d6305ad5d5294",
+          "source_render_stats_sha256": "6486690d7bb7a3ff77dc9e1d91d8312a2eaf6e8476ec6bb6025c5a12353d0ecb"
+        },
+        {
+          "column_index": 3,
+          "case_id": "ducky-p200",
+          "logical_case_id": "ducky-p200",
+          "geometry_revision": "original-matrix",
+          "role": "MULTIPLIER_CASE",
+          "fixed_count_denominator": 9669,
+          "actual_reference_count": 9669,
+          "target_ratio": 2.0,
+          "target_count": 19338,
+          "actual_count": 19309,
+          "actual_ratio": 1.9970007239631813,
+          "actual_size_mm": [
+            375.8,
+            551.8,
+            473.8
+          ],
+          "used_types": 106,
+          "manifest_sha256": "aa8b312345cef3b29c85d780eac510321ba411f073b0a877256d1345d840d379",
+          "bom_sha256": "141c8a1295bdc58009a178c704a7b3a10ffa73428bc2fcd9dbef2a016ebb60f7",
+          "source_render_stats_sha256": "27978ed23951199cbc0f4d188ae6a63697d839f04c9afa660e211821abcf1183"
+        },
+        {
+          "column_index": 4,
+          "case_id": "ducky-p300",
+          "logical_case_id": "ducky-p300",
+          "geometry_revision": "original-matrix",
+          "role": "MULTIPLIER_CASE",
+          "fixed_count_denominator": 9669,
+          "actual_reference_count": 9669,
+          "target_ratio": 3.0,
+          "target_count": 29007,
+          "actual_count": 28932,
+          "actual_ratio": 2.992243251628917,
+          "actual_size_mm": [
+            439.8,
+            631.8,
+            540.9999999999999
+          ],
+          "used_types": 121,
+          "manifest_sha256": "c1e25350dd99d8f5ac7e0f52704274ef3435ee4d584ec47f92c37384d3f7f8f5",
+          "bom_sha256": "bed5513d10e214a5c81edf3bbcba27ea9c7e3bc029bf1c6510aa057778096a2c",
+          "source_render_stats_sha256": "a5365d85a034ef023c23a909287f420fa069b943ab042e3ddac7ea1a5f3ce51b"
+        },
+        {
+          "column_index": 5,
+          "case_id": "ducky-p400",
+          "logical_case_id": "ducky-p400",
+          "geometry_revision": "original-matrix",
+          "role": "MULTIPLIER_CASE",
+          "fixed_count_denominator": 9669,
+          "actual_reference_count": 9669,
+          "target_ratio": 4.0,
+          "target_count": 38676,
+          "actual_count": 38473,
+          "actual_ratio": 3.979005067742269,
+          "actual_size_mm": [
+            487.8,
+            695.8,
+            598.5999999999999
+          ],
+          "used_types": 139,
+          "manifest_sha256": "ec603fa41e6417f8b5ff2140f723a024d3149970865701a5e880dc0cc5bbb4b4",
+          "bom_sha256": "0bfe01dd0495f7f1b38acf2d69517820a2ead7b03845dab9e385a3f3e8cd72d5",
+          "source_render_stats_sha256": "6156d746443ff7592a3b0bae1fa429dde67a85c0cb67f45aca89cf8ed77d58ed"
+        }
+      ]
+    }
+  ],
+  "status": {
+    "selection": "NOT_SELECTED",
+    "visual_approval": "PENDING",
+    "physical_fit": "UNKNOWN",
+    "slicer_status": "NOT_SLICED"
+  },
+  "comparison_csv": {
+    "path": "comparison.csv",
+    "sha256": "2ff201f2914a1c99697f9b9888ca40aced68073cfca59e93ac21c0e2a81fe316",
+    "bytes": 2419,
+    "row_count": 15,
+    "columns": [
+      "case_id",
+      "logical_case_id",
+      "geometry_revision",
+      "character",
+      "target_ratio",
+      "baseline_count",
+      "actual_reference_count",
+      "target_count",
+      "actual_count",
+      "actual_ratio",
+      "difference",
+      "width_mm",
+      "depth_mm",
+      "height_mm",
+      "types",
+      "one_by_one",
+      "grip_long_ge_15_8_fraction"
+    ]
+  }
+}

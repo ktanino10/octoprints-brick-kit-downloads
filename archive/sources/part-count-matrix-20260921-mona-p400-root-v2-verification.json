@@ -1,0 +1,82 @@
+{
+  "case_id": "mona-p400-root-v2",
+  "source_commit": "3cfdaf619f33920c90a31eab91cc1899f925a526",
+  "metrics": {
+    "part_count": 49483,
+    "unique_types": 172,
+    "one_by_one_exceptions": 92,
+    "layer_count": 125,
+    "minimum_part_mm": [
+      7.8,
+      7.8,
+      3.2
+    ],
+    "grip_long_ge_15_8_count": 49391
+  },
+  "manifest_sha256": "33021b148b3a1006c39e0581030ab324e5570291aadcb46432becd6bde288223",
+  "bom_sha256": "3d19d1e696c3f3174bd594ea959a260b1f8fb6b6c73e970adf8cb6a0bf468a78",
+  "counted_instances": 49483,
+  "bom_ids_match": true,
+  "bom_types_colors_poses_steps_match": true,
+  "identity_projection_sha256": "cae57c1270fcec302edc9e175cd5fe2a093df5193ec853209adc7b1b68e0b4e1",
+  "body_height_families": [
+    {
+      "body_height_mm": 3.2,
+      "part_count": 78,
+      "unique_types": 7
+    },
+    {
+      "body_height_mm": 4.8,
+      "part_count": 49403,
+      "unique_types": 163
+    },
+    {
+      "body_height_mm": 14.4,
+      "part_count": 2,
+      "unique_types": 2
+    }
+  ],
+  "public_native_assembly": {
+    "path": "artifacts/studies/part-count-matrix-20260921/cases/mona-p400-root-v2/assembly.FCStd",
+    "document_objects": 197,
+    "native_links_resolved": 197,
+    "link_instances": 49483,
+    "valid_single_solid_targets_checked": 172,
+    "proxy_free": true,
+    "opened": true,
+    "recomputed": false,
+    "saved": false,
+    "sha256": "a3f616d3ba91d3be6ce1dd3347fef0692b2e281d66f3f273f81feadb9f29b5fb"
+  },
+  "public_blender_motion_preserved": true,
+  "source_saved_scene_binding": "65a488f47dfab4c354a88c9d6504904d13ea6f82565504d40f2d9b8745a5e1c7",
+  "source_native_reopen": {
+    "result": "PASS_REOPENED_RELATIVE_NATIVE_LINK_ARRAYS",
+    "actual_instance_count": 49483,
+    "all_ids_types_colors_poses_steps": true,
+    "all_sources_inside_bundle": true
+  },
+  "private_inputs_copied": 0,
+  "root_revision_evidence": {
+    "geometry_sequence_identity_sha256": "f5d30d2bbade82d2fe4e2ae2aa70ea467add01557aac2dd5d972b1580f5c1a8f",
+    "native_root_contact_evidence_sha256": "0728ff655378651f48554a5e6aef5e7f0b77beef34012983c925ef30139b6445",
+    "checked_root_modules": 2,
+    "checked_hidden_contour_backings": 0,
+    "checked_actual_brep_sections": 56,
+    "nominal_body_overlap_tolerance_mm3": 1e-05,
+    "gravity_balance_result": "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS",
+    "physical_validation": "UNKNOWN",
+    "physical_mass_measured": false
+  },
+  "public_native_id_pose_check": {
+    "case_id": "mona-p400-root-v2",
+    "assembly_sha256": "a3f616d3ba91d3be6ce1dd3347fef0692b2e281d66f3f273f81feadb9f29b5fb",
+    "actual_instances": 49483,
+    "array_count": 197,
+    "all_ids_types_colors_poses_steps": "MATCH",
+    "relocated_reopen": true,
+    "saved": false,
+    "recomputed": false
+  },
+  "files": []
+}

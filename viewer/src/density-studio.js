@@ -264,6 +264,7 @@ export class DensityStudio extends BrickStudio {
       matrix_elements_mismatched: mismatches, visible_instances: visible, explosion: this.progress.explosion,
       draw_calls: this.renderer.info.render.calls, triangles: this.renderer.info.render.triangles,
       shared_geometries: this.geometries.size, instance_batches: this.batches.length, actual_aids: this.aidMeshes.length,
+      visible_aids: this.aidMeshes.filter(({ mesh }) => mesh.visible).length,
       display_mode: this.prototypes.mode, selected_part_native_geometry: true,
       camera: [...this.camera.position.toArray(), ...this.controls.target.toArray()] };
   }

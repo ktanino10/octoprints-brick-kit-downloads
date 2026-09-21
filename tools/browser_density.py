@@ -1,6 +1,7 @@
 """Check matrix readiness and real radial/bottom-up guide behavior in a fresh browser."""
 
 import argparse
+import gzip
 import json
 from pathlib import Path
 from urllib.parse import parse_qs, urljoin, urlparse
@@ -24,7 +25,7 @@ args.output.mkdir(parents=True, exist_ok=True)
 report = {"base": base, "engine": args.engine, "browser_executable": args.browser,
           "input_wait": args.expect_input_wait, "checks": [], "errors": [], "cases": [],
           "media": [], "baseline_media": [], "reference_guides": [], "reference_media": [], "display_modes": [],
-          "comparison_sheets": [], "comparison_csv_rows": None}
+          "comparison_sheets": [], "comparison_csv_rows": None, "aid_evidence": []}
 
 
 def checked(message):
@@ -74,7 +75,7 @@ with sync_playwright() as playwright:
             catalog = context.request.get(urljoin(base, pointer["catalog"]["path"].lstrip("/"))).json()
             comparisons = (context.request.get(urljoin(base, catalog["comparison_sheets"]["path"].lstrip("/"))).json()
                            if catalog.get("comparison_sheets") else None)
-            available = catalog["cases"] + (list(catalog.get("reference_revisions", {}).values()) if args.case else [])
+            available = catalog["cases"] + list(catalog.get("reference_revisions", {}).values())
             cases = [entry for entry in available if entry["state"] == "READY"
                      and (not args.case or entry["id"] in args.case)]
             assert cases
@@ -130,6 +131,26 @@ with sync_playwright() as playwright:
                 expect(page.locator("#guide-error")).to_be_hidden()
                 expect(page.locator("#density-canvas")).to_have_attribute("data-visible-parts", str(entry["metrics"]["part_count"]))
                 english(page)
+                guide_model = json.loads(gzip.decompress(context.request.get(urljoin(base, entry["manifest"]["path"].lstrip("/"))).body()))
+                actual_aids = guide_model["aids"]
+                assert page.evaluate("window.__densityGuide.diagnostics().actual_aids") == len(actual_aids)
+                if actual_aids:
+                    expect(page.locator("#guide-aid-status")).to_be_visible()
+                    expect(page.locator("#guide-aid-status")).to_contain_text(f'{len(actual_aids)} actual temporary aids')
+                    expect(page.locator("#guide-aid-status")).to_contain_text("Do not remove")
+                    expected_aid_parts = []
+                    for aid in actual_aids:
+                        first = min((part for part in guide_model["parts"] if aid["id"] in part["required_aids"]),
+                                    key=lambda part: part["step"])
+                        for text in [aid["id"], first["id"], f'assembly step {first["step"]}',
+                                     f'prepare before step {aid["required_before_step"]}']:
+                            expect(page.locator("#guide-aid-status")).to_contain_text(text)
+                        expected_aid_parts.append({"aid_id": aid["id"], "part_id": first["id"], "actual_step": first["step"]})
+                    report["aid_evidence"].append({"case_id": entry["id"], "actual_aids": len(actual_aids),
+                                                  "supported_parts": expected_aid_parts, "removal_hold_visible": True})
+                else:
+                    expect(page.locator("#guide-aid-status")).to_be_hidden()
+                del guide_model
                 if catalog.get("display_catalog") and page.locator("#guide-detail").input_value() == "light":
                     initial = page.evaluate("window.__densityGuide.diagnostics()")
                     expect(page.locator("#guide-mesh-mode")).to_contain_text("Lightweight display model")
@@ -154,6 +175,7 @@ with sync_playwright() as playwright:
                     assert page.evaluate("window.__densityGuide.diagnostics().actual_aids") == 0
                     page.locator("#guide-mode").select_option("assembly")
                     expect(page.locator("#density-canvas")).to_have_attribute("data-visible-parts", "0")
+                    assert page.evaluate("window.__densityGuide.diagnostics().visible_aids") == len(actual_aids)
                     for module in root_proof["modules"]:
                         before = module["step"] - 1
                         page.locator("#guide-step").evaluate(
@@ -204,6 +226,7 @@ with sync_playwright() as playwright:
                 page.locator("#guide-parts button").first.click()
                 selected = page.locator("#guide-selection strong").inner_text()
                 expect(page.locator("#guide-part-preview canvas")).to_be_visible()
+                expect(page.locator("#guide-part-preview")).to_have_attribute("data-original-native", "true")
                 page.locator('[data-guide-action="part-bottom"]').click()
                 page.locator("#guide-same").check()
                 page.locator("#guide-search").fill(selected)

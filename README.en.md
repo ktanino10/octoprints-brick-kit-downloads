@@ -61,14 +61,22 @@ The small-part handling and blocked-hole feedback belongs to the earlier r2 4 mm
 Those holes were blocked **before** ultrasonic cleaning. The cause, actual slicer settings and condition-specific retention remain unresolved.
 Geometry-only 3MF files remain **NOT_SLICED**, not configured Bambu Studio projects or G-code.
 
-## Three characters × five count multipliers and actual 3D guides — partial publication
+## All fifteen actual count-multiplier cases and native 3D assembly guides
 
 **[Bilingual count matrix](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-matrix.html)** /
 **[Copilot 1.2× actual 3D guide](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-guide.html?case=copilot-p120)** /
 **[Copilot CG, Blender, animation and native CAD package](https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/tag/part-count-matrix-20260921-copilot-p120)**.
 
-Actual data satisfying the current delivery requirements is available for **Mona's new 1.2×/1.5×/3× revisions, all five Copilot multipliers and Ducky 1.2×: nine of fifteen cases**.
-The 1.2× case contains **21,388 parts versus target 21,448 (−60; actual ratio 1.196665×), 155 types,
+CG, animation, Blender, native CAD, BOM and actual 3D guides are distributed for **all fifteen cases: five support-free Mona revisions, five Copilot cases and five Ducky cases**.
+These are actual figure-part counts. The [fifteen-row comparison CSV](artifacts/studies/part-count-matrix-20260921/comparison.csv) records fixed targets, actual ratios, differences, dimensions and types.
+
+| Actual pieces | 1.2× | 1.5× | 2× | 3× | 4× |
+|---|---:|---:|---:|---:|---:|
+| Mona, support-free revision | 14,913 | 18,649 | 24,811 | 37,255 | 49,483 |
+| Copilot | 21,388 | 26,690 | 35,648 | 53,350 | 71,261 |
+| Ducky | 11,586 | 14,460 | 19,309 | 28,932 | 38,473 |
+
+Copilot's 1.2× case contains **21,388 parts versus target 21,448 (−60; actual ratio 1.196665×), 155 types,
 519.8 × 439.8 × 397.0 mm**. The 1.5× case contains **26,690 parts versus target 26,810 (−120; actual ratio 1.493314×),
 162 types, 567.8 × 487.8 × 425.8 mm**. The 2× case has **35,648 parts versus target 35,746 (−98; actual ratio 1.994517×),
 182 types, 631.8 × 535.8 × 469.0 mm**. The 3× case has **53,350 parts versus target 53,619 (−269),
@@ -78,8 +86,8 @@ The Mona-specific no-stand condition is not extended to Copilot. Crown/cheek ste
 neither aesthetic nor manufacturing approval is implied.
 
 **New requirement: Mona whiskers must need neither external supports nor temporary assembly pedestals.**
-The published Mona 1.2× and 1.5× data are preserved as historical support-dependent designs.
-They do not meet this added requirement and do not count toward completion of the requested fifteen cases.
+The earlier Mona 1.2× and 1.5× data are preserved as historical support-dependent designs.
+They are separate from the new support-free revisions and do not count toward the requested fifteen cases.
 The two old Mona cases remain separate historical records. Simply hiding supports in the CG does not qualify.
 [Mona's new 1.2× revision](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-guide.html?case=mona-p120-root-v2)
 has **14,913 parts (target 14,922; −9), 118 types and zero external/temporary assembly aids**.
@@ -91,11 +99,16 @@ Old URLs are not silently replaced.
 has **18,649 parts (target 18,653; −4), 128 types and zero aids**, separate from the historical 18,675-part design.
 Its flatter uneven mouth and eye/nose color-transfer differences remain. No aesthetic or physical-retention approval is implied.
 Mona's new 3× case has **37,255 parts (target 37,305; −50), 160 types, 615.8 × 503.8 × 545.8 mm and zero aids**.
-Mona 2× and 4× remain incomplete.
+Mona's new 2× case has **24,811 parts (target 24,870; −59), 135 types, 535.8 × 439.8 × 473.8 mm and zero aids**.
+All five native contact/insertion/balance targets are checked: four WR roots and one actual internal CT cheek backing.
+The new 4× case has **49,483 parts (target 49,740; −257), 172 types, 679.8 × 551.8 × 598.6 mm and zero aids**.
 
 The first Ducky multiplier is **1.2×: 11,586 parts (target 11,603; −17), 93 types,
 311.8 × 455.8 × 397.0 mm and zero temporary aids**. It uses the frozen 9,669-piece baseline, not the old 413-piece r3.
-The other four Ducky multiplier cases remain incomplete.
+Ducky's actual temporary-aid counts across its five cases are **0 / 0 / 3 / 0 / 1**.
+The 2× case keeps three separate aids outside its 19,309-piece figure count; the 4× case keeps one outside its 38,473-piece count.
+Adjacent aids are separate IDs even when they look like one object. Guides show actual supported IDs, assembly steps and heights;
+do not remove aids before physical retention/stability checks.
 Slicer-generated print supports are a separate unvalidated condition.
 All three 1× baselines now have separate public CG, native CAD, Blender and three-chapter animation packages linked from their matrix reference cards.
 **The three baselines do not count toward completion of the fifteen multiplier cases.**
@@ -128,7 +141,12 @@ STL/STEP, Blender, assembled/exploded CG, BOM/motion and a 12-second turntable/r
 Extract everything and preserve relative directories. Print plates/slots, slicing and G-code are not generated.
 Local eye-rim, nose and smile color-transfer differences remain; more parts do not guarantee better likeness.
 **NOT_SELECTED / NOT_SLICED; physical fit, retention, loads and tipping UNKNOWN; full-kit printing on hold.**
-Do not read the [machine-readable receipt](archive/block-budget-matrix.json)'s `PARTIAL` state as completion of all fifteen.
+The [machine-readable receipt](archive/block-budget-matrix.json) becomes `READY` only after all fifteen cases,
+comparison assets, anonymous downloads and the real public browser pass. Publication completion is not physical approval.
+The matrix includes **nine final comparison images**, each combining the actual reference with five multiplier cases.
+Front/three-quarter sheets use matched projected height; separate physical-size sheets use a uniform 0.9 px/mm in the source image and shared ground.
+Responsive display is not a physical ruler. All eighteen source manifests/BOMs, original CG pixels and cameras are hash-bound;
+no proxy image or geometry regeneration is used.
 
 ## Further Mona refinement toward initial Fine C
 

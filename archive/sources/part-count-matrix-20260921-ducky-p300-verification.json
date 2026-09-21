@@ -1,0 +1,66 @@
+{
+  "case_id": "ducky-p300",
+  "source_commit": "b7a2c1bcd29b35f57b2d69978f31d349bfd82ca8",
+  "metrics": {
+    "part_count": 28932,
+    "unique_types": 121,
+    "one_by_one_exceptions": 14,
+    "layer_count": 113,
+    "minimum_part_mm": [
+      7.8,
+      7.8,
+      3.2
+    ],
+    "grip_long_ge_15_8_count": 28918
+  },
+  "manifest_sha256": "c1e25350dd99d8f5ac7e0f52704274ef3435ee4d584ec47f92c37384d3f7f8f5",
+  "bom_sha256": "bed5513d10e214a5c81edf3bbcba27ea9c7e3bc029bf1c6510aa057778096a2c",
+  "counted_instances": 28932,
+  "bom_ids_match": true,
+  "bom_types_colors_poses_steps_match": true,
+  "identity_projection_sha256": "18c3e5b66d3d2bb8178c17d284fc731a3ba494ae963f48e6a87a558da150f0b5",
+  "body_height_families": [
+    {
+      "body_height_mm": 3.2,
+      "part_count": 117,
+      "unique_types": 5
+    },
+    {
+      "body_height_mm": 4.8,
+      "part_count": 28815,
+      "unique_types": 116
+    }
+  ],
+  "public_native_assembly": {
+    "path": "artifacts/studies/part-count-matrix-20260921/cases/ducky-p300/assembly.FCStd",
+    "document_objects": 134,
+    "native_links_resolved": 134,
+    "link_instances": 28932,
+    "valid_single_solid_targets_checked": 121,
+    "proxy_free": true,
+    "opened": true,
+    "recomputed": false,
+    "saved": false,
+    "sha256": "57e0168beed5e22b78838d846e251a30c7e6047cba3bafc6fd0657d2dc27ce1f"
+  },
+  "public_blender_motion_preserved": true,
+  "source_saved_scene_binding": "29e9677725db09231052d8e22d91a1dcff24e4cb452de259f2d0d1e36007d711",
+  "source_native_reopen": {
+    "result": "PASS_REOPENED_RELATIVE_NATIVE_LINK_ARRAYS",
+    "actual_instance_count": 28932,
+    "all_ids_types_colors_poses_steps": true,
+    "all_sources_inside_bundle": true
+  },
+  "private_inputs_copied": 0,
+  "public_native_id_pose_check": {
+    "case_id": "ducky-p300",
+    "assembly_sha256": "57e0168beed5e22b78838d846e251a30c7e6047cba3bafc6fd0657d2dc27ce1f",
+    "actual_instances": 28932,
+    "array_count": 134,
+    "all_ids_types_colors_poses_steps": "MATCH",
+    "relocated_reopen": true,
+    "saved": false,
+    "recomputed": false
+  },
+  "files": []
+}

@@ -247,6 +247,8 @@ async function selectCandidate(id, params = null) {
   $('#guide-empty').hidden = true;
   $('#guide-case-warning').textContent = '';
   $('#guide-whisker-status').hidden = true;
+  $('#guide-aid-status').hidden = true;
+  $('#guide-aid-status').replaceChildren();
   $('#guide-loading').hidden = false;
   $('#guide-loading').textContent = '実ID・配置・共有ネイティブ形状を読み込み、ハッシュを照合しています。';
   if (item.state === 'INPUT_WAIT') {
@@ -282,6 +284,17 @@ async function selectCandidate(id, params = null) {
       types: { ...nativeLibraries.types, ...lightweight.types } } : nativeLibraries;
     if (current !== generation) return;
     manifest = next; index = guideIndex(next);
+    if (manifest.aids.length) {
+      const note = $('#guide-aid-status');
+      note.hidden = false;
+      note.append(element('p', `実仮支持台は${number(manifest.aids.length, 0)}個で、本体部品数とは別です。隣接して一体に見えても別IDで管理します。実保持力と安定性の確認前に撤去しないでください。撤去経路は未検証です。`));
+      for (const aid of manifest.aids) {
+        const first = index.ordered.find(part => part.required_aids.includes(aid.id));
+        check(first && aid.required_before_step <= first.step, '仮支持台の準備stepと実部品IDの対応が一致しません。');
+        const supportHeight = aid.position_mm[2] + manifest.types[aid.type_id].body_height_mm;
+        note.append(element('p', `${aid.id} → ${first.id} · 実組立step ${first.step} · 準備はstep ${aid.required_before_step}より前 · 支持高さZ ${number(supportHeight)} mm`));
+      }
+    }
     $('#guide-case-warning').textContent = item.tradeoff;
     const whiskerRevisionRequired = densityDeliveryStatus(item) === 'REQUIRES_WHISKER_REVISION';
     $('#guide-whisker-status').hidden = !whiskerRevisionRequired;

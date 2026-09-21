@@ -36,7 +36,10 @@ def main():
         raise ValueError("The final comparison receipt differs from its explicitly supplied SHA")
     receipt = json.loads(raw)
     if (receipt.get("study_id") != STUDY
-            or receipt.get("state") not in {"READY_FIXED_INCREMENTAL_CASES_NOT_AUTOMATIC_ALL15", "READY_FINAL_COMPARISON_SHEETS"}
+            or receipt.get("state") not in {
+                "READY_FIXED_INCREMENTAL_CASES_NOT_AUTOMATIC_ALL15", "READY_FINAL_COMPARISON_SHEETS",
+                "READY_FIXED_SOURCE_COMPARISON_SUPPLEMENT_NOT_PUBLIC_QA",
+            }
             or not re.fullmatch(r"[0-9a-f]{40}", str(receipt.get("source_commit", "")))):
         raise ValueError("Only an explicitly fixed READY comparison supplement may be imported")
     catalog_path = ROOT / PREFIX / "catalog.json"
@@ -72,6 +75,27 @@ def main():
     csv_evidence = verify_comparison_csv(payload["comparison.csv"], catalog)
     needed = {"comparison-sheets.json", "comparison.csv"}
     proof_inputs = receipt["read_only_verification_files"]
+    binding_entries = [entry for entry in proof_inputs if entry["path"].endswith("/comparison-source-binding.json")]
+    if len(proof_inputs) != 91 or len(binding_entries) != 1:
+        raise ValueError("The final comparison supplement must explicitly close 90 source files and one binding record")
+    binding = json.loads(committed_bytes(repo, Path(binding_entries[0]["path"]), commit, binding_entries[0]))
+    if (binding.get("state") != "COMPLETE_ORIGINAL_RENDER_SOURCE_BINDING" or binding.get("study_id") != STUDY
+            or binding.get("public_descriptor_sha256") != sha(payload["comparison-sheets.json"])
+            or len(binding.get("records", [])) != 90):
+        raise ValueError("The private source closure does not bind the exact final public descriptor")
+    approved_proofs = {entry["path"]: entry for entry in proof_inputs if entry is not binding_entries[0]}
+    recorded = {str(repo / safe_relative(entry["path"])): entry for entry in binding["records"]}
+    if len(recorded) != 90 or recorded.keys() != approved_proofs.keys():
+        raise ValueError("Final comparison source closure omits, duplicates or adds a source file")
+    expected_cases = {column["case_id"] for row in index["rows"] for column in row["columns"]}
+    if len(expected_cases) != 18 or set(receipt.get("comparison_case_ids", [])) != expected_cases:
+        raise ValueError("Final comparison closure must bind the eighteen actual comparison models")
+    for path, record in recorded.items():
+        approved_record = approved_proofs[path]
+        if (record.get("case_id") not in expected_cases
+                or record.get("permission") != "READ_ONLY_ORIGINAL_RENDER_BINDING_NOT_PUBLICATION"
+                or any(record[key] != approved_record[key] for key in ["bytes", "sha256"])):
+            raise ValueError("A source binding differs from its explicit fixed read-only receipt")
 
     def proof_bytes(identifier, ending):
         matches = [entry for entry in proof_inputs
@@ -130,7 +154,10 @@ def main():
     catalog["comparison_sheets"] = next(item for item in assets if item["path"].endswith("/comparison-sheets.json"))
     catalog["comparison_assets"] = assets
     record = {"schema_version": 1, "study_id": STUDY, "source_commit": commit, "source_images": bindings,
-              "csv": csv_evidence, "private_source_inputs_copied": 0, "images_and_csv": assets}
+              "csv": csv_evidence, "private_source_inputs_copied": 0, "images_and_csv": assets,
+              "files": [{"path": file["path"].lstrip("/"), "bytes": file["bytes"], "sha256": file["sha256"],
+                         "source_relative_path": file["path"].removeprefix("/" + PREFIX),
+                         "source_commit": commit} for file in assets]}
     privacy(encoded(record), "comparison publication evidence")
     immutable_write(ROOT / "archive/sources" / f"{STUDY}-comparisons-verification.json", encoded(record))
     catalog_bytes = encoded(catalog)

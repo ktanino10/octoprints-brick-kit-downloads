@@ -1,0 +1,87 @@
+{
+  "case_id": "mona-p200-root-v2",
+  "source_commit": "298679f6bdb6215b27332a5de47e0451aa4033a5",
+  "metrics": {
+    "part_count": 24811,
+    "unique_types": 135,
+    "one_by_one_exceptions": 62,
+    "layer_count": 99,
+    "minimum_part_mm": [
+      7.8,
+      7.8,
+      3.2
+    ],
+    "grip_long_ge_15_8_count": 24749
+  },
+  "manifest_sha256": "176da3d97a1668a5e2da299719b4590fb7baea4ad5657a6444971a867e026442",
+  "bom_sha256": "abe675e22c0bf03344386ca7535d079545de00ec04f14ebc52c2397615490ac4",
+  "counted_instances": 24811,
+  "bom_ids_match": true,
+  "bom_types_colors_poses_steps_match": true,
+  "identity_projection_sha256": "30a35942d2f9389d4bddf25acc75132fdf9e84318559744ba28508ec86e21e8d",
+  "body_height_families": [
+    {
+      "body_height_mm": 3.2,
+      "part_count": 65,
+      "unique_types": 7
+    },
+    {
+      "body_height_mm": 4.8,
+      "part_count": 24742,
+      "unique_types": 124
+    },
+    {
+      "body_height_mm": 9.6,
+      "part_count": 2,
+      "unique_types": 2
+    },
+    {
+      "body_height_mm": 14.4,
+      "part_count": 2,
+      "unique_types": 2
+    }
+  ],
+  "public_native_assembly": {
+    "path": "artifacts/studies/part-count-matrix-20260921/cases/mona-p200-root-v2/assembly.FCStd",
+    "document_objects": 159,
+    "native_links_resolved": 159,
+    "link_instances": 24811,
+    "valid_single_solid_targets_checked": 135,
+    "proxy_free": true,
+    "opened": true,
+    "recomputed": false,
+    "saved": false,
+    "sha256": "95218532338893ce8c75c80d9e9134a0a37a970a9adb53bb244a257aaaa4eed8"
+  },
+  "public_blender_motion_preserved": true,
+  "source_saved_scene_binding": "4065fe7aafc5d41ad773b1f57b9f802f5511bb8546b5a79b379e3184d102a2f5",
+  "source_native_reopen": {
+    "result": "PASS_REOPENED_RELATIVE_NATIVE_LINK_ARRAYS",
+    "actual_instance_count": 24811,
+    "all_ids_types_colors_poses_steps": true,
+    "all_sources_inside_bundle": true
+  },
+  "private_inputs_copied": 0,
+  "root_revision_evidence": {
+    "geometry_sequence_identity_sha256": "5627b0ded5bc141c97009887e15010d3c7ac8d41f3e0da76c109200e2ec2005d",
+    "native_root_contact_evidence_sha256": "32156075f7d2fa60e8c68f5f8cf5fb61601207618cfd5f07e6a128f2a0ded550",
+    "checked_root_modules": 5,
+    "checked_hidden_contour_backings": 1,
+    "checked_actual_brep_sections": 102,
+    "nominal_body_overlap_tolerance_mm3": 1e-05,
+    "gravity_balance_result": "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS",
+    "physical_validation": "UNKNOWN",
+    "physical_mass_measured": false
+  },
+  "public_native_id_pose_check": {
+    "case_id": "mona-p200-root-v2",
+    "assembly_sha256": "95218532338893ce8c75c80d9e9134a0a37a970a9adb53bb244a257aaaa4eed8",
+    "actual_instances": 24811,
+    "array_count": 159,
+    "all_ids_types_colors_poses_steps": "MATCH",
+    "relocated_reopen": true,
+    "saved": false,
+    "recomputed": false
+  },
+  "files": []
+}

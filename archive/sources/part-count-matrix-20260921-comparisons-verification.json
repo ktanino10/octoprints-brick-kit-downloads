@@ -1,0 +1,528 @@
+{
+  "schema_version": 1,
+  "study_id": "part-count-matrix-20260921",
+  "source_commit": "e45fee2d6c1f509756bb8170919ed63b387c8282",
+  "source_images": [
+    {
+      "case_id": "mona-fine8-base-root-v2",
+      "view": "front",
+      "source_image_sha256": "7945a834252658b8d86f61b3a477498cba1fcf4104ae45f98f5902c74f99dd63",
+      "public_package_image_sha256": "bd5ff2aafc3547f11c2c1b06df4e0eb78a619fee70a4838caf5471edd421279a",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "mona-p120-root-v2",
+      "view": "front",
+      "source_image_sha256": "28c89e659b91626c76a18c5a7d9d2bedca41d173441f8c097a1552fe61fbad35",
+      "public_package_image_sha256": "d1288f9448f0d14871a3a7dbb661061f43d6311e73d2d5ce9c1779f5a079bce8",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "mona-p150-root-v2",
+      "view": "front",
+      "source_image_sha256": "b41158d21cf77958fa2d0f6b50937843e6612636cb57ff9480cf3127c9d96efa",
+      "public_package_image_sha256": "85a9675226d739f7203b2b68190b67220df472869ca374f964a15ac4faef8465",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "mona-p200-root-v2",
+      "view": "front",
+      "source_image_sha256": "571335a664501b3c29add1bb29e2dc9b4c4b5fe35105726c70325ada519dfb86",
+      "public_package_image_sha256": "779c35dc144aa6987c9e1e43597b637e94547f4aac0532d0c9586827c4646f39",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "mona-p300-root-v2",
+      "view": "front",
+      "source_image_sha256": "a63a01e6fa34b7b8fef618335ae127606d41b076d3968759d21df261163aeb3a",
+      "public_package_image_sha256": "0850b8361212709957d284c6ffb3d528dfab9cfe5654d960736e9bdb05d950d2",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "mona-p400-root-v2",
+      "view": "front",
+      "source_image_sha256": "bd75f55ec8dfade650233cd6fc102dca7d405607741ccb195c7d4a3520a328b6",
+      "public_package_image_sha256": "9b29b95ba871bf0ee36d280751f63c8689e502824235561e9e9de7a4de8b9fd8",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "mona-fine8-base-root-v2",
+      "view": "three_quarter",
+      "source_image_sha256": "a5493e2aff212a5ca9edfb925e601c29303f845143f650d2ea5d275ca69661bf",
+      "public_package_image_sha256": "0039879766028da76511eac81f63a17a47e3d30da9ada72dc0516b49c73b47cc",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "mona-p120-root-v2",
+      "view": "three_quarter",
+      "source_image_sha256": "d0d8a1bb3f9f2fc3e2700c05cb0ae59b1504811846ca456bc984d25b82ad5094",
+      "public_package_image_sha256": "c2bbf95c9cb7f94f25d51eaa459cc236fa4ebcbd47d600bf5d02e723ae759d11",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "mona-p150-root-v2",
+      "view": "three_quarter",
+      "source_image_sha256": "f2228f57bc2dc2856e79adff6bbfb885166ff944ca3b462892c06086c35684f6",
+      "public_package_image_sha256": "642ad1aeef945ae788ef1fc4939bd259c8fd1ca95cbf450829f9bf3f30ffab92",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "mona-p200-root-v2",
+      "view": "three_quarter",
+      "source_image_sha256": "d6af9195137552d6725be21ac624f26131e4a0ef8cf7ee62c6ec06c9c52e2fe0",
+      "public_package_image_sha256": "12cac76b8de8af9bc4ab6adb7756028c01b6555c5f232fda91432a7fd3ae0090",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "mona-p300-root-v2",
+      "view": "three_quarter",
+      "source_image_sha256": "25d6e47a3a3d40b13b15cbfba6b63ce30fa1e4c629c63f5fc94c5b1931ba4d90",
+      "public_package_image_sha256": "185c52cbbf1df5cd1188140e9132be938e1ac57dedef56d83bc5f39ce18dc188",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "mona-p400-root-v2",
+      "view": "three_quarter",
+      "source_image_sha256": "a21cb6857fec759a4478b248db6357dad236e933d0e438a53895b8225eed88d1",
+      "public_package_image_sha256": "dde666fcb13f2399e97bbe5cab23d09d45ef4c48be5b4be5f32969d2a2e855f3",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "mona-fine8-base-root-v2",
+      "view": "front",
+      "source_image_sha256": "7945a834252658b8d86f61b3a477498cba1fcf4104ae45f98f5902c74f99dd63",
+      "public_package_image_sha256": "bd5ff2aafc3547f11c2c1b06df4e0eb78a619fee70a4838caf5471edd421279a",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "mona-p120-root-v2",
+      "view": "front",
+      "source_image_sha256": "28c89e659b91626c76a18c5a7d9d2bedca41d173441f8c097a1552fe61fbad35",
+      "public_package_image_sha256": "d1288f9448f0d14871a3a7dbb661061f43d6311e73d2d5ce9c1779f5a079bce8",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "mona-p150-root-v2",
+      "view": "front",
+      "source_image_sha256": "b41158d21cf77958fa2d0f6b50937843e6612636cb57ff9480cf3127c9d96efa",
+      "public_package_image_sha256": "85a9675226d739f7203b2b68190b67220df472869ca374f964a15ac4faef8465",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "mona-p200-root-v2",
+      "view": "front",
+      "source_image_sha256": "571335a664501b3c29add1bb29e2dc9b4c4b5fe35105726c70325ada519dfb86",
+      "public_package_image_sha256": "779c35dc144aa6987c9e1e43597b637e94547f4aac0532d0c9586827c4646f39",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "mona-p300-root-v2",
+      "view": "front",
+      "source_image_sha256": "a63a01e6fa34b7b8fef618335ae127606d41b076d3968759d21df261163aeb3a",
+      "public_package_image_sha256": "0850b8361212709957d284c6ffb3d528dfab9cfe5654d960736e9bdb05d950d2",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "mona-p400-root-v2",
+      "view": "front",
+      "source_image_sha256": "bd75f55ec8dfade650233cd6fc102dca7d405607741ccb195c7d4a3520a328b6",
+      "public_package_image_sha256": "9b29b95ba871bf0ee36d280751f63c8689e502824235561e9e9de7a4de8b9fd8",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-fine8-base",
+      "view": "front",
+      "source_image_sha256": "3ef9b1d18673f7741ce25eec16facef617df51238106d9c720c97e54555f98b9",
+      "public_package_image_sha256": "9e4e9184c7ea3f547b136c98974b12e16e224bb44beebc5eff0bdd1f6ae7aaa5",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p120",
+      "view": "front",
+      "source_image_sha256": "19bba8b3dab43b7c98381e62cd59722d61d64da7d535b6e03f632fd4190c4735",
+      "public_package_image_sha256": "4befbf411a3799038d473991b5ed0050ac442b33973cd7bef1768256305824c7",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p150",
+      "view": "front",
+      "source_image_sha256": "9c172fcffbd0d1b3f55db485c57d310fdec82eb5dc17190e054b9c5c1b91e8f4",
+      "public_package_image_sha256": "60a1dbe3fc5868f0a02b7d6fab5e33fdb36400a64a21d82e1278c120d8f62cc0",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p200",
+      "view": "front",
+      "source_image_sha256": "458aec48f46deb9dd896344392390a4d8869fbe9719b5f608204b31e69faea07",
+      "public_package_image_sha256": "a30fc0633bdb5affa3984cce8c258503f0dcca2d2c5a095add1d5e2bdf3c0ed9",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p300",
+      "view": "front",
+      "source_image_sha256": "a194787bee66eccf51be4e50baf86f07d80ff1f838e56f5c0f7eaf5647bf502b",
+      "public_package_image_sha256": "65108bfdaddea3a7f2a73c417c5c4ca0050a339f01dda165cacd733eb8d58583",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p400",
+      "view": "front",
+      "source_image_sha256": "328b5c6249d38acd5e65f6a70e49533d1d2d971bbf7251933f4276037265c2a8",
+      "public_package_image_sha256": "6c6fe039f287702f2617fc013168c062c1793581de3d1ed4980ebf5f223c2f19",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-fine8-base",
+      "view": "three_quarter",
+      "source_image_sha256": "a293bb6e9d6c7b615dd3e80870ddfec18f97a2ba778b0cc3600cf9e21d80ab20",
+      "public_package_image_sha256": "b8fa103f674d1706ee9a76dd3d19a3417effe963e6b63eb7d24169e27ef55a6e",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p120",
+      "view": "three_quarter",
+      "source_image_sha256": "919240d6b2150ff9a04a3a01e4472ab73e0bfc643b439d94bf04055d6297a22c",
+      "public_package_image_sha256": "65d2dd1893371ede3fb5fd48d10c3bfc4791c034776dc17ae93c4baee55c7654",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p150",
+      "view": "three_quarter",
+      "source_image_sha256": "6042faf3bda610fe0cd39a8cb302c9149731299aceb330b0f87c2415dad42882",
+      "public_package_image_sha256": "04915805f6eed83542b113ee2cf9667f574280300beddbef359d253e84ee5ae7",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p200",
+      "view": "three_quarter",
+      "source_image_sha256": "6787e873428c768c17b16251934ed172d878f42700a088aa3d1e0fec86e28b1f",
+      "public_package_image_sha256": "c25ff3448d99327c8b35d2532ce23d8227825001ff8f748ecc6c3ebe65cf4ec6",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p300",
+      "view": "three_quarter",
+      "source_image_sha256": "9765bd68645ea89cad7ab5cee426fc64b1563e424a533da702d4b1107a5b8fe9",
+      "public_package_image_sha256": "3b688a0574f11720de1acc15615f4a6a9b3115361f203853d9b69f6614cbc7a5",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p400",
+      "view": "three_quarter",
+      "source_image_sha256": "b2c74682a823b21c06218bd29d71fddc6e1eed3601ef4307e02a94bd7c9fb07d",
+      "public_package_image_sha256": "b37973fac2cc2ee233db0afc91188ae1cb5241b58a62656cafdc6a961898083e",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-fine8-base",
+      "view": "front",
+      "source_image_sha256": "3ef9b1d18673f7741ce25eec16facef617df51238106d9c720c97e54555f98b9",
+      "public_package_image_sha256": "9e4e9184c7ea3f547b136c98974b12e16e224bb44beebc5eff0bdd1f6ae7aaa5",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p120",
+      "view": "front",
+      "source_image_sha256": "19bba8b3dab43b7c98381e62cd59722d61d64da7d535b6e03f632fd4190c4735",
+      "public_package_image_sha256": "4befbf411a3799038d473991b5ed0050ac442b33973cd7bef1768256305824c7",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p150",
+      "view": "front",
+      "source_image_sha256": "9c172fcffbd0d1b3f55db485c57d310fdec82eb5dc17190e054b9c5c1b91e8f4",
+      "public_package_image_sha256": "60a1dbe3fc5868f0a02b7d6fab5e33fdb36400a64a21d82e1278c120d8f62cc0",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p200",
+      "view": "front",
+      "source_image_sha256": "458aec48f46deb9dd896344392390a4d8869fbe9719b5f608204b31e69faea07",
+      "public_package_image_sha256": "a30fc0633bdb5affa3984cce8c258503f0dcca2d2c5a095add1d5e2bdf3c0ed9",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p300",
+      "view": "front",
+      "source_image_sha256": "a194787bee66eccf51be4e50baf86f07d80ff1f838e56f5c0f7eaf5647bf502b",
+      "public_package_image_sha256": "65108bfdaddea3a7f2a73c417c5c4ca0050a339f01dda165cacd733eb8d58583",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p400",
+      "view": "front",
+      "source_image_sha256": "328b5c6249d38acd5e65f6a70e49533d1d2d971bbf7251933f4276037265c2a8",
+      "public_package_image_sha256": "6c6fe039f287702f2617fc013168c062c1793581de3d1ed4980ebf5f223c2f19",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "ducky-fine8-base",
+      "view": "front",
+      "source_image_sha256": "dfe3095a8ecc9a5cef61d06ad458daa25fa750334343b4a550b19f6b76565f98",
+      "public_package_image_sha256": "a44c9812806a8c9119e697b70b72329110e6a1673d8caee122f04652e87df304",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "ducky-p120",
+      "view": "front",
+      "source_image_sha256": "c6cb05f120a053fb3ee566a7cfbb029683146902c8a45d781fa74040f690eb54",
+      "public_package_image_sha256": "b8c406c28196541ef4d3512aab30fe06d371834d129e5db6b19219169027711f",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "ducky-p150",
+      "view": "front",
+      "source_image_sha256": "26547a53fedb77f27bb7c106947eb9b7505138db19c597f7633e9facc7e99b4e",
+      "public_package_image_sha256": "b37004a9e445dbad56bfc1160ad3c12131bfb8a8077a674ead6a0ab7f120eff1",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "ducky-p200",
+      "view": "front",
+      "source_image_sha256": "1b79d486b925f7d4e68d99811390f390f141e4b3964d9ad4978c21b35f3d69ec",
+      "public_package_image_sha256": "0945c0e3309e6a7e06e7c7f8ee418706271b640ea07d831eb259a0ee75833841",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "ducky-p300",
+      "view": "front",
+      "source_image_sha256": "c26afabdc3f26fc780149fe35bbe1b93eba4c85fbc193839141e12bb17a1d589",
+      "public_package_image_sha256": "62e5387b68094611fb28f1a86b76129dd08abfa740093ead3d2926d1493ec268",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "ducky-p400",
+      "view": "front",
+      "source_image_sha256": "5ab85b5a487849024bae270e5ec5413e95ac0b213bdce91e52ca81ef9842c179",
+      "public_package_image_sha256": "b7d50fd80dbaae0f638b11279f0c4630557bba62d0ddb9bb2c73cb177bea63f1",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "ducky-fine8-base",
+      "view": "three_quarter",
+      "source_image_sha256": "4a8b11ece3eaf497b4f76cb089116e073c95f5ab75bc1ab8d60e3f63c5f76eb5",
+      "public_package_image_sha256": "3eca1a431868d96f7a7accce85cb289837e858ec75b19f6e3ee97b34804e4b6b",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "ducky-p120",
+      "view": "three_quarter",
+      "source_image_sha256": "ff7cc9639cac37f426a457af9be603bfba55f99774c2c508699fd4636d70a670",
+      "public_package_image_sha256": "b7ff1433bb0c0bd635b2ef409e7b6a3cc8ef3be21293a281b62ad3205f39282e",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "ducky-p150",
+      "view": "three_quarter",
+      "source_image_sha256": "5a2c7bb0817d4ef7dcf61938b2093619018722f4853b01ab2458b4f0a18309ee",
+      "public_package_image_sha256": "2b8748ebd999d3a40e5a27d40c344dc26ba4503cff334fd59cf55b8e0018ff5d",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "ducky-p200",
+      "view": "three_quarter",
+      "source_image_sha256": "00e045b8d750de0aee022b5af16f3859929eebf06abd39832b619a2889286bf1",
+      "public_package_image_sha256": "89bae8b54f97ecd002d46471b5cbe5a8e01ef3c76e8f3ff3bb44dfdcda62f064",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "ducky-p300",
+      "view": "three_quarter",
+      "source_image_sha256": "ede8ecd46fc09833d3e688555a2b8d8fe5ff0edb7a6a788c5f499829f6ef877b",
+      "public_package_image_sha256": "66c7c7a8b6a2105777ca2ba90ccab4806896864023da3c25b25297853d977fea",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "ducky-p400",
+      "view": "three_quarter",
+      "source_image_sha256": "3b3189faa5630d43dcd5ea37a39dd55092c73524ec4f6bdefd7e744a91e360e6",
+      "public_package_image_sha256": "a0b2472ab277b4957d873b5185241a658f6b567659fdb56ff7157f0e893b66d0",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "ducky-fine8-base",
+      "view": "front",
+      "source_image_sha256": "dfe3095a8ecc9a5cef61d06ad458daa25fa750334343b4a550b19f6b76565f98",
+      "public_package_image_sha256": "a44c9812806a8c9119e697b70b72329110e6a1673d8caee122f04652e87df304",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "ducky-p120",
+      "view": "front",
+      "source_image_sha256": "c6cb05f120a053fb3ee566a7cfbb029683146902c8a45d781fa74040f690eb54",
+      "public_package_image_sha256": "b8c406c28196541ef4d3512aab30fe06d371834d129e5db6b19219169027711f",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "ducky-p150",
+      "view": "front",
+      "source_image_sha256": "26547a53fedb77f27bb7c106947eb9b7505138db19c597f7633e9facc7e99b4e",
+      "public_package_image_sha256": "b37004a9e445dbad56bfc1160ad3c12131bfb8a8077a674ead6a0ab7f120eff1",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "ducky-p200",
+      "view": "front",
+      "source_image_sha256": "1b79d486b925f7d4e68d99811390f390f141e4b3964d9ad4978c21b35f3d69ec",
+      "public_package_image_sha256": "0945c0e3309e6a7e06e7c7f8ee418706271b640ea07d831eb259a0ee75833841",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "ducky-p300",
+      "view": "front",
+      "source_image_sha256": "c26afabdc3f26fc780149fe35bbe1b93eba4c85fbc193839141e12bb17a1d589",
+      "public_package_image_sha256": "62e5387b68094611fb28f1a86b76129dd08abfa740093ead3d2926d1493ec268",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "ducky-p400",
+      "view": "front",
+      "source_image_sha256": "5ab85b5a487849024bae270e5ec5413e95ac0b213bdce91e52ca81ef9842c179",
+      "public_package_image_sha256": "b7d50fd80dbaae0f638b11279f0c4630557bba62d0ddb9bb2c73cb177bea63f1",
+      "camera_unchanged": true
+    }
+  ],
+  "csv": {
+    "rows": 15,
+    "fixed_denominators_unchanged": true,
+    "references_counted_as_cases": false,
+    "actual_counts_dimensions_ratios_types_match": true
+  },
+  "private_source_inputs_copied": 0,
+  "images_and_csv": [
+    {
+      "path": "/artifacts/studies/part-count-matrix-20260921/comparison-sheets.json",
+      "bytes": 178927,
+      "sha256": "7fadcc56443502c5a3ed4399d660dfe469a8df86b2c59d2397631aa1897ed749"
+    },
+    {
+      "path": "/artifacts/studies/part-count-matrix-20260921/comparison.csv",
+      "bytes": 2419,
+      "sha256": "2ff201f2914a1c99697f9b9888ca40aced68073cfca59e93ac21c0e2a81fe316"
+    },
+    {
+      "path": "/artifacts/studies/part-count-matrix-20260921/comparisons/copilot-normalized-front.jpg",
+      "bytes": 504672,
+      "sha256": "25d46386d395da2c777a36001f233391d6a2c811ab8a5d4ab7ff999047c4a8a0"
+    },
+    {
+      "path": "/artifacts/studies/part-count-matrix-20260921/comparisons/copilot-normalized-three_quarter.jpg",
+      "bytes": 588814,
+      "sha256": "8eef4cbb7c397c0611b944f6168817e2756d6c9f1004267c0dc5a22e6d666963"
+    },
+    {
+      "path": "/artifacts/studies/part-count-matrix-20260921/comparisons/copilot-physical-size.jpg",
+      "bytes": 573994,
+      "sha256": "8f45aeae9c1f4a3369e8a9ee96711287c3fcfb2697ea81a4fb3771bbd95befd5"
+    },
+    {
+      "path": "/artifacts/studies/part-count-matrix-20260921/comparisons/ducky-normalized-front.jpg",
+      "bytes": 397298,
+      "sha256": "4db2a8bfd3bb176d327e726fa0a9634a4ea09b21d1180cfe78d1b2350108cf40"
+    },
+    {
+      "path": "/artifacts/studies/part-count-matrix-20260921/comparisons/ducky-normalized-three_quarter.jpg",
+      "bytes": 473341,
+      "sha256": "d6beb9536e7e4ee7ef67f5a6b103e2c62ccd67f7cf4e83afd89a58e3e6c6f38a"
+    },
+    {
+      "path": "/artifacts/studies/part-count-matrix-20260921/comparisons/ducky-physical-size.jpg",
+      "bytes": 465237,
+      "sha256": "d6d99ba47f5a5ba4a5188e57a4e48f394753d6782eed8033f2f91a16cfdff86e"
+    },
+    {
+      "path": "/artifacts/studies/part-count-matrix-20260921/comparisons/mona-normalized-front.jpg",
+      "bytes": 476598,
+      "sha256": "6fd67498cf070a752a3cfa3bde82a8e6d17c679f42a6dad27594796fbc8cbc13"
+    },
+    {
+      "path": "/artifacts/studies/part-count-matrix-20260921/comparisons/mona-normalized-three_quarter.jpg",
+      "bytes": 574138,
+      "sha256": "b5939fec2d810ec223b7494fe7aba00c04e82b4e92804582f6faa1ed24e3f6c6"
+    },
+    {
+      "path": "/artifacts/studies/part-count-matrix-20260921/comparisons/mona-physical-size.jpg",
+      "bytes": 551033,
+      "sha256": "afa27d649ce7e2f65841e6a8bcf891a701f940ea850714c13169c43cacf43f58"
+    }
+  ],
+  "files": [
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/comparison-sheets.json",
+      "bytes": 178927,
+      "sha256": "7fadcc56443502c5a3ed4399d660dfe469a8df86b2c59d2397631aa1897ed749",
+      "source_relative_path": "comparison-sheets.json",
+      "source_commit": "e45fee2d6c1f509756bb8170919ed63b387c8282"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/comparison.csv",
+      "bytes": 2419,
+      "sha256": "2ff201f2914a1c99697f9b9888ca40aced68073cfca59e93ac21c0e2a81fe316",
+      "source_relative_path": "comparison.csv",
+      "source_commit": "e45fee2d6c1f509756bb8170919ed63b387c8282"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/comparisons/copilot-normalized-front.jpg",
+      "bytes": 504672,
+      "sha256": "25d46386d395da2c777a36001f233391d6a2c811ab8a5d4ab7ff999047c4a8a0",
+      "source_relative_path": "comparisons/copilot-normalized-front.jpg",
+      "source_commit": "e45fee2d6c1f509756bb8170919ed63b387c8282"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/comparisons/copilot-normalized-three_quarter.jpg",
+      "bytes": 588814,
+      "sha256": "8eef4cbb7c397c0611b944f6168817e2756d6c9f1004267c0dc5a22e6d666963",
+      "source_relative_path": "comparisons/copilot-normalized-three_quarter.jpg",
+      "source_commit": "e45fee2d6c1f509756bb8170919ed63b387c8282"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/comparisons/copilot-physical-size.jpg",
+      "bytes": 573994,
+      "sha256": "8f45aeae9c1f4a3369e8a9ee96711287c3fcfb2697ea81a4fb3771bbd95befd5",
+      "source_relative_path": "comparisons/copilot-physical-size.jpg",
+      "source_commit": "e45fee2d6c1f509756bb8170919ed63b387c8282"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/comparisons/ducky-normalized-front.jpg",
+      "bytes": 397298,
+      "sha256": "4db2a8bfd3bb176d327e726fa0a9634a4ea09b21d1180cfe78d1b2350108cf40",
+      "source_relative_path": "comparisons/ducky-normalized-front.jpg",
+      "source_commit": "e45fee2d6c1f509756bb8170919ed63b387c8282"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/comparisons/ducky-normalized-three_quarter.jpg",
+      "bytes": 473341,
+      "sha256": "d6beb9536e7e4ee7ef67f5a6b103e2c62ccd67f7cf4e83afd89a58e3e6c6f38a",
+      "source_relative_path": "comparisons/ducky-normalized-three_quarter.jpg",
+      "source_commit": "e45fee2d6c1f509756bb8170919ed63b387c8282"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/comparisons/ducky-physical-size.jpg",
+      "bytes": 465237,
+      "sha256": "d6d99ba47f5a5ba4a5188e57a4e48f394753d6782eed8033f2f91a16cfdff86e",
+      "source_relative_path": "comparisons/ducky-physical-size.jpg",
+      "source_commit": "e45fee2d6c1f509756bb8170919ed63b387c8282"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/comparisons/mona-normalized-front.jpg",
+      "bytes": 476598,
+      "sha256": "6fd67498cf070a752a3cfa3bde82a8e6d17c679f42a6dad27594796fbc8cbc13",
+      "source_relative_path": "comparisons/mona-normalized-front.jpg",
+      "source_commit": "e45fee2d6c1f509756bb8170919ed63b387c8282"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/comparisons/mona-normalized-three_quarter.jpg",
+      "bytes": 574138,
+      "sha256": "b5939fec2d810ec223b7494fe7aba00c04e82b4e92804582f6faa1ed24e3f6c6",
+      "source_relative_path": "comparisons/mona-normalized-three_quarter.jpg",
+      "source_commit": "e45fee2d6c1f509756bb8170919ed63b387c8282"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/comparisons/mona-physical-size.jpg",
+      "bytes": 551033,
+      "sha256": "afa27d649ce7e2f65841e6a8bcf891a701f940ea850714c13169c43cacf43f58",
+      "source_relative_path": "comparisons/mona-physical-size.jpg",
+      "source_commit": "e45fee2d6c1f509756bb8170919ed63b387c8282"
+    }
+  ]
+}
