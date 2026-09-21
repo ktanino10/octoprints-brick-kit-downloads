@@ -1,0 +1,5 @@
+role,physical_piece_count,unique_types,one_by_one_exceptions,actual_height_mm,layer_count,assembly_step_count,minimum_xy_short_mm,minimum_xy_long_mm,minimum_body_height_mm
+original-source,,,,60.775572112762475,,,,,
+phase1-fine-c,13837,7,1766,180.71,75,13837,3.82,3.82,2.28
+r3-baseline,519,68,5,181.0,20,519,7.8,7.8,3.2
+dense360-pilot,10908,137,32,360.2,112,10908,7.8,7.8,3.2

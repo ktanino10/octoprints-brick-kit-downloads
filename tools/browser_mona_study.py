@@ -81,9 +81,15 @@ with sync_playwright() as playwright:
                         expect(cells.nth(0)).to_have_text("Not applicable (unsubdivided)" if locale == "en" else "対象外（無分割）")
                     else:
                         expect(cells.nth(0)).to_have_text(f'{row["metrics"]["part_count"]:,}')
-                        expect(cells.nth(1)).to_have_text(str(row["metrics"]["unique_types"]))
-                        expect(cells.nth(2)).to_have_text(str(row["metrics"]["one_by_one_exceptions"]))
-                        expect(cells.nth(4)).to_have_text(str(row["metrics"]["layer_count"]))
+                        expect(cells.nth(1)).to_have_text(f'{row["metrics"]["unique_types"]:,}')
+                        expect(cells.nth(2)).to_have_text(f'{row["metrics"]["one_by_one_exceptions"]:,}')
+                        expect(cells.nth(4)).to_have_text(f'{row["metrics"]["layer_count"]:,}')
+                        expect(cells.nth(6)).to_have_text(f'{row["metrics"]["grip_long_ge_15_8_count"]:,}')
+                    expected_size = " × ".join(f"{value:,.3f}".rstrip("0").rstrip(".") for value in row["metrics"]["dimensions_mm"])
+                    expect(cells.nth(3)).to_have_text(expected_size)
+                expect(page.locator("#mona-sampling")).to_contain_text(f'{study["fidelity_sampling"]["pilot_cell_count"]:,}')
+                expect(page.locator("#mona-layer-note")).not_to_be_empty()
+                expect(page.locator("#mona-interface img")).not_to_have_js_property("naturalWidth", 0)
                 for group in study["comparisons"]:
                     button = page.locator(f'[data-mona-comparison="{group["id"]}"]')
                     button.focus()
@@ -113,6 +119,8 @@ with sync_playwright() as playwright:
                 page.locator(f'[data-language="{other}"]').click()
                 expect(page.locator(f'[data-mona-comparison="{selected}"]')).to_have_attribute("aria-pressed", "true")
                 page.locator(f'[data-language="{locale}"]').click()
+                page.reload(wait_until="networkidle")
+                expect(page.locator(f'[data-mona-comparison="{selected}"]')).to_have_attribute("aria-pressed", "true")
             assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1")
             if locale == "en":
                 english(page)

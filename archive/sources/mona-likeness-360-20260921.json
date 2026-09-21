@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "revision": "mona-likeness-360-20260921",
+  "source_revision": "a666ae1c50a5b6626f6b3b629e688e08e2675c83",
+  "source_public_study_sha256": "fd25139be15b6347e9149b4c71e8ddfc0d007e4988b45a54de7ee67306efdc24",
+  "files": [
+    {
+      "path": "artifacts/studies/mona-likeness-360-20260921/ATTRIBUTION.md",
+      "bytes": 769,
+      "sha256": "93bff3268b734a441758085e5a9fa172db68ec7753539572bd185c89ca38a74c"
+    },
+    {
+      "path": "artifacts/studies/mona-likeness-360-20260921/LICENSE",
+      "bytes": 19346,
+      "sha256": "3711f963c05d0be80d53e5923308a6dee31b203da23435c9cfb7c7b6e4dd5e19"
+    },
+    {
+      "path": "artifacts/studies/mona-likeness-360-20260921/comparison-en.html",
+      "bytes": 5106,
+      "sha256": "4a0e983613d086a40a53285eb3d24a43a178d0313d29034d7d883f31a9550fec"
+    },
+    {
+      "path": "artifacts/studies/mona-likeness-360-20260921/comparison-ja.html",
+      "bytes": 5306,
+      "sha256": "6b1a2e2faec497d0af42e5cf88d2170da70b49bff13b8f05d894495b336fa33f"
+    },
+    {
+      "path": "artifacts/studies/mona-likeness-360-20260921/comparison.csv",
+      "bytes": 380,
+      "sha256": "cb4109ec21584db99601b800bde4b9cf4aba00083a768722c8ba341f191fd898"
+    },
+    {
+      "path": "artifacts/studies/mona-likeness-360-20260921/dense360-pilot-face-crop.jpg",
+      "bytes": 96377,
+      "sha256": "3d193a7cba747abebf27c4f3adcc718c2dcb1cf90c9cfda40975f88510e11955"
+    },
+    {
+      "path": "artifacts/studies/mona-likeness-360-20260921/dense360-pilot-normalized-front.jpg",
+      "bytes": 202035,
+      "sha256": "0627d35c965df02b3464b91542d2da5917755937f71a26dbbe65acbb3dbfe6cf"
+    },
+    {
+      "path": "artifacts/studies/mona-likeness-360-20260921/dense360-pilot-normalized-three_quarter.jpg",
+      "bytes": 256391,
+      "sha256": "11ac821de42c0eb068066e0f549e9aeedd9d003a95d6d6bdf1f06115da6efaa3"
+    },
+    {
+      "path": "artifacts/studies/mona-likeness-360-20260921/face-comparison.jpg",
+      "bytes": 405799,
+      "sha256": "1553534b835f24cb33e8d56341ae1e78fcd295c1d136caf408bb07bf45ca790c"
+    },
+    {
+      "path": "artifacts/studies/mona-likeness-360-20260921/fixed-8mm-parts.png",
+      "bytes": 74977,
+      "sha256": "5b723cc4388f8534fa188c0f0a1fbaf7d6f009ba792d3a310cf13b3e9c0d985a"
+    },
+    {
+      "path": "artifacts/studies/mona-likeness-360-20260921/normalized-front-comparison.jpg",
+      "bytes": 504922,
+      "sha256": "da815dc2cb6e8184ed946448de9ee02169a2c97939303fad86695390c0c2acd3"
+    },
+    {
+      "path": "artifacts/studies/mona-likeness-360-20260921/normalized-three_quarter-comparison.jpg",
+      "bytes": 557320,
+      "sha256": "7a7a55c192083be4fcbf2cd4e3b68f00da8b6df33d6d1264c8f6e149f3d1ec4d"
+    },
+    {
+      "path": "artifacts/studies/mona-likeness-360-20260921/original-source-face-crop.jpg",
+      "bytes": 59226,
+      "sha256": "9c48892bfb7889e4a34d1ba30af1e5cfd8c4e65730c4189a6c40a014e8c95b37"
+    },
+    {
+      "path": "artifacts/studies/mona-likeness-360-20260921/original-source-normalized-front.jpg",
+      "bytes": 135373,
+      "sha256": "6a266bbad366b9c4a98d682d4c141d5802733eab2970317cf84fc642f1e72fd2"
+    },
+    {
+      "path": "artifacts/studies/mona-likeness-360-20260921/original-source-normalized-three_quarter.jpg",
+      "bytes": 148145,
+      "sha256": "9561aa1c838d6e0ff65c892599f2f338e674439546521bcd6d6be1ead755a4be"
+    },
+    {
+      "path": "artifacts/studies/mona-likeness-360-20260921/phase1-fine-c-face-crop.jpg",
+      "bytes": 128016,
+      "sha256": "3f9426522110ed3d7dda5607fcdd35d35e07de5fedcea0678688ecc64e8fa9d2"
+    },
+    {
+      "path": "artifacts/studies/mona-likeness-360-20260921/phase1-fine-c-normalized-front.jpg",
+      "bytes": 267324,
+      "sha256": "87a3f16cc2653cc88c128e58718f7cd8c6fe302ea1a3540508d4edd61e31898f"
+    },
+    {
+      "path": "artifacts/studies/mona-likeness-360-20260921/phase1-fine-c-normalized-three_quarter.jpg",
+      "bytes": 303005,
+      "sha256": "688cfaebb3d0277361b412381ff011b311575035269df287140f8d1625d5ce97"
+    },
+    {
+      "path": "artifacts/studies/mona-likeness-360-20260921/physical-size-comparison.jpg",
+      "bytes": 355375,
+      "sha256": "e0833293771c670a6e1750a5aa932e5e43e7e51c8501a1f527153a4a69fb8eec"
+    },
+    {
+      "path": "artifacts/studies/mona-likeness-360-20260921/r3-baseline-face-crop.jpg",
+      "bytes": 54580,
+      "sha256": "9105f6eef68b32536bbec2d87a6eba1a86bbdae9a304846d30d8b091ea11e062"
+    },
+    {
+      "path": "artifacts/studies/mona-likeness-360-20260921/r3-baseline-normalized-front.jpg",
+      "bytes": 141325,
+      "sha256": "7e936ea1ad44990616104eb06de4530217dbfd1c123294701ec7008a89024d01"
+    },
+    {
+      "path": "artifacts/studies/mona-likeness-360-20260921/r3-baseline-normalized-three_quarter.jpg",
+      "bytes": 182069,
+      "sha256": "75c6c105fa9d1cab2aa0e528878b73fb653f036b729aa7d4ed73f9a0d87f6190"
+    },
+    {
+      "path": "artifacts/studies/mona-likeness-360-20260921/study.json",
+      "bytes": 88259,
+      "sha256": "fd25139be15b6347e9149b4c71e8ddfc0d007e4988b45a54de7ee67306efdc24"
+    }
+  ]
+}

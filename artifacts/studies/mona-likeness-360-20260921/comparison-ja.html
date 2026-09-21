@@ -1,0 +1,25 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>最初の細密Cに近づける、約36cmのMona</title><style>*{box-sizing:border-box}body{font-family:system-ui,sans-serif;background:#e8eef4;color:#18344b;max-width:1600px;padding:24px;margin:auto;line-height:1.7;overflow-wrap:anywhere}h1{font-size:clamp(28px,4vw,48px)}img{display:block;width:100%;height:auto}.status{background:#e0d7ec;border-left:5px solid #74618c;padding:18px}section{background:white;padding:18px;border-radius:12px;margin:22px 0}table{width:100%;border-collapse:collapse;table-layout:fixed}th,td{text-align:left;padding:10px;border-bottom:1px solid #c8d7e2}a{color:#275b96}@media(max-width:600px){body{padding:12px}th,td{font-size:12px;padding:6px}}</style>
+<h1>最初の細密Cに近づける、約36cmのMona</h1><p class="status">未採用パイロット / 実物未検証 / NOT SLICED / 現行r3は不変</p>
+<p><code>NOT_SELECTED / physical_fit UNKNOWN / retention UNKNOWN / NOT_SLICED / full_print ON_HOLD</code></p>
+<p>部品の少なさではなく、最初の細密Cの顔・体形・丸みへの近さを優先しました。本人の見た目確認がまだ必要です。</p>
+<p><a href="study.json">Actual data / camera records</a> · <a href="comparison.csv">CSV</a> ·
+<a href="comparison-en.html">English</a></p>
+<section><h2>形の比較 — 同じ画面上高さ（実寸比ではありません）</h2>
+<img src="normalized-three_quarter-comparison.jpg" alt="Four actual shapes at equal on-screen projected height">
+<details><summary>正面から見る</summary><img src="normalized-front-comparison.jpg" alt="Registered front likeness comparison"></details>
+<table><thead><tr><th>比較対象</th><th>実部品数</th><th>型数</th><th>実高さ</th><th>1×1</th></tr></thead><tbody><tr><td>元のMona / 原型</td><td>N/A</td><td>N/A</td><td>60.78 mm</td><td>N/A</td></tr><tr><td>最初の細密C / 約18 cm</td><td>13,837</td><td>7</td><td>180.71 mm</td><td>1766</td></tr><tr><td>現行r3 / 約18 cm</td><td>519</td><td>68</td><td>181.00 mm</td><td>5</td></tr><tr><td>新しい細密パイロット / 約36 cm</td><td>10,908</td><td>137</td><td>360.20 mm</td><td>32</td></tr></tbody></table>
+<p>新案は実10,908部品です。粗いr3を大きくしたのではなく、原型から115,033セルを新たにサンプリングし、接合部は8mmのまま固定しています。基準の初期Cは82,357セル・13,837部品で、部品のまとめ方が違うためセル密度と部品数は同じ指標ではありません。</p><p>実assembly instance数。内部/基礎を含み、仮支持台2個・背景は除きます。セル密度/型数/頂点数とは別です。</p></section>
+<section><h2>顔・耳の拡大 — 元の体高に登録した同じ領域</h2>
+<img src="face-comparison.jpg" alt="Actual original, fine C, r3 and dense pilot face crops">
+<p>原型の連続曲面とは違い、プレート段差やスタッドが見えます。同じクオリティと感じるかは本人の画像確認が必要です。</p></section>
+<section><h2>実寸比 — 同じ2.5px/mm</h2>
+<img src="physical-size-comparison.jpg" alt="Initial C and new360mm pilot at equal pixels per millimeter">
+<img src="fixed-8mm-parts.png" alt="Actual unchanged8mm joint/master part dimensions">
+<p>形比較は4モデルを同じ画面上高さへ正規化。実寸比ではありません。実寸比較だけ同じpx/mmです。</p></section>
+<section><h2>差の定量補助（自動合格判定ではありません）</h2>
+<table><thead><tr><th>原型との比較</th><th>Front IoU</th><th>Side IoU</th><th>顔色面の一致率</th></tr></thead><tbody><tr><td>最初の細密C / 約18 cm</td><td>0.9360</td><td>0.9418</td><td>0.9096</td></tr><tr><td>現行r3 / 約18 cm</td><td>0.8507</td><td>0.8443</td><td>0.7916</td></tr><tr><td>新しい細密パイロット / 約36 cm</td><td>0.9547</td><td>0.9540</td><td>0.9237</td></tr></tbody></table>
+<p>実際の原型/部品形状のラベル画像を体高で登録し、追加した基礎だけを除いて比較しています。スタッド・継ぎ目・塗色近似・登録条件も数値へ影響し、美観や機械性能の合格には使えません。</p></section>
+<section><h2>残る制約とトレードオフ</h2><ul><li>8mmXYの段差・ブロック境界・直径4.8mm／高さ1.8mmのスタッドは残り、原型の連続曲面そのものではありません。</li><li>約36cmの完成品と10,908個の組立は大きな作業負担です。部品数だけで美観/扱いやすさ/強度の合格とはしません。</li><li>ひげ先端のため2つの仮支持台が必要。実保持力確認前に取り除かず、大きい完成品の荷重・転倒・摩擦は未検証です。</li><li>元の3MF印刷寸法の原型、初期Cの目標尺度、正規化画面上の倍率は別物です。r2一体一回印刷データは作っていません。</li></ul></section>
+<footer>Independent noncommercial adaptation of martinwoodward/octoprints @981a85f0bec9d1a9c280fd5719d0d797852229c4.
+<a href="ATTRIBUTION.md">Attribution</a> / <a href="LICENSE">CC BY-NC4.0</a>. No GitHub/LEGO sponsorship or commercial-brick compatibility claim.</footer></html>

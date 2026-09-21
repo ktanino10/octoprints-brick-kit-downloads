@@ -61,7 +61,32 @@ The small-part handling and blocked-hole feedback belongs to the earlier r2 4 mm
 Those holes were blocked **before** ultrasonic cleaning. The cause, actual slicer settings and condition-specific retention remain unresolved.
 Geometry-only 3MF files remain **NOT_SLICED**, not configured Bambu Studio projects or G-code.
 
-## Shape and actual part-count comparison
+## Mona likeness, size and actual quantities
+
+The **[Mona comparison against initial Fine C](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/mona-likeness.html)**
+shows the original, initial C, published r3 and the new approximately 36 cm pilot.
+Front and three-quarter views use **matched on-screen heights**, with a separate facial close-up.
+True scale is shown separately; a larger display is not counted as better likeness.
+
+| Mona configuration | Actual parts | Types | Width × depth × height / mm |
+|---|---:|---:|---|
+| Unsubdivided original | Not applicable | Not applicable | 69.126 × 56.769 × 60.776 |
+| Initial Fine C | 13,837 | 7 | 211.82 × 171.82 × 180.71 |
+| Published r3 | 519 | 68 | 199.8 × 167.8 × 181.0 |
+| New Mona pilot — unselected | 10,908 | 137 | 407.8 × 343.8 × 360.2 |
+
+The pilot retains the 8 mm interface and resamples the original geometry; it is not an enlarged coarse r3 arrangement.
+It has 2,929 fewer parts than initial C and 10,389 more than r3. Different grouping reduces the physical count relative to C,
+while occupied sampling cells increase from 82,357 to 115,033. A low part count is not an aesthetic success criterion.
+There are 10,572 plates, 336 internal blocks and 112 placement layers. The 3.2 mm value is plate body height, not an FDM slicing layer height.
+
+**User visual approval is still pending.** The broad same-color forehead, white eye rims and stepped smile are not identical to initial C.
+The total includes 44 foundation parts and excludes two separate temporary whisker pedestals; these must not be removed before actual retention checks.
+Weight, retention, tipping and printability remain unvalidated: NOT_SLICED, with full-kit printing on hold.
+This publication provides a Mona image/count comparison only, not a new kit, trial, one-piece model or adoption of the other two characters.
+Current r3, the earlier A/B comparison and formal releases remain unchanged.
+
+## Earlier shape and actual part-count comparison
 
 The **[bilingual image and quantity comparison](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/shape-options.html)**
 shows adopted r3 alongside two unselected studies with matched camera, scale and palette.

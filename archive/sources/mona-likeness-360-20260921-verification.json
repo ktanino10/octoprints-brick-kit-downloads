@@ -1,0 +1,70 @@
+{
+  "study_id": "mona-likeness-360-20260921",
+  "source_commit": "a666ae1c50a5b6626f6b3b629e688e08e2675c83",
+  "public_source_files": 23,
+  "public_source_bytes": 3991425,
+  "private_inputs_copied": 0,
+  "native_assets_copied": 0,
+  "rows": [
+    {
+      "candidate_id": "original-mona-source",
+      "geometry_sha256": "a5dd2a8c6604bd564294bf3e2e19fed6181933447c03ab7ece46c940da52f9ee"
+    },
+    {
+      "candidate_id": "mona-fine",
+      "manifest_sha256": "93fd37f62bfaa588a016f1c748a97912d41e72f7719a094734ccbb12277ce552",
+      "bom_sha256": "3d3ca01d8f0fa3fcaf58abb25cd09ce239e089d379d18c32f2c95337ef078aaa",
+      "counted_instances": 13837,
+      "bom_ids_match": true,
+      "bom_types_colors_poses_steps_match": true,
+      "identity_projection_sha256": "21afd937f3e3592d6b88432b1d295d5654ad2d79bc44040b39221b2a22e2ddb4",
+      "reference_identity_verified": true,
+      "geometry_sha256": "6b100a0e9904ffcaaae86cb8f84561365cb3607a6a8ea26cec14d8b7c455d3e1",
+      "native_geometry_source_hashes": [
+        {
+          "sha256": "6b100a0e9904ffcaaae86cb8f84561365cb3607a6a8ea26cec14d8b7c455d3e1"
+        }
+      ]
+    },
+    {
+      "candidate_id": "mona-practical8",
+      "manifest_sha256": "8b9957525e0e67b34ad93c0b38529e494008e631192a537e5d75b163db951189",
+      "bom_sha256": "23f0b738cd53c76c0473f47b6819066e9ffc104da012c4c0c781025dbd8a2ff2",
+      "counted_instances": 519,
+      "bom_ids_match": true,
+      "bom_types_colors_poses_steps_match": true,
+      "identity_projection_sha256": "6123f33e02d3ab3f7a5c1add2a224055708d6a3ab05ca5aeaefac477fa653db3",
+      "reference_identity_verified": true,
+      "geometry_sha256": "c11e40d506e6326584dd2c4410b9869c1e541688ec37db5819d247bcef812cdb",
+      "native_geometry_source_hashes": [
+        {
+          "sha256": "c11e40d506e6326584dd2c4410b9869c1e541688ec37db5819d247bcef812cdb"
+        }
+      ]
+    },
+    {
+      "candidate_id": "mona-dense360",
+      "manifest_sha256": "c0cdfc713492f106023afceffa2fec347bba795be4a3f06fdf70823525884c31",
+      "bom_sha256": "75286040e3633736d4327bdfdf6c33bf80d5605235c9a3701186f28f569a796b",
+      "counted_instances": 10908,
+      "bom_ids_match": true,
+      "bom_types_colors_poses_steps_match": true,
+      "identity_projection_sha256": "bb1f0479cea61efba01aa583c4be0ab565385ae748dc7c4a92d658bdb5bcb228",
+      "geometry_sha256": "40b970cf670a0c3351e40f12cc2b8edbd12bd0e9bd6aad0a2fb0658d501ada80",
+      "native_geometry_source_hashes": [
+        {
+          "sha256": "c11e40d506e6326584dd2c4410b9869c1e541688ec37db5819d247bcef812cdb"
+        },
+        {
+          "sha256": "43a6ab45801566ee5c5b3fc9dbf3cf16695e2b2f1e731c0ac575bbdf0d437cf3"
+        },
+        {
+          "sha256": "40b970cf670a0c3351e40f12cc2b8edbd12bd0e9bd6aad0a2fb0658d501ada80"
+        }
+      ],
+      "resampled_from_original": true,
+      "original_geometry_sha256": "a5dd2a8c6604bd564294bf3e2e19fed6181933447c03ab7ece46c940da52f9ee"
+    }
+  ],
+  "files": []
+}

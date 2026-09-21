@@ -41,7 +41,10 @@ def main():
         return
     summary = checked_file(pointer["data_url"], pointer["data_sha256"], study=True)
     data = json.loads(summary.read_text())
-    images = []
+    source_index = json.loads((ROOT / f"archive/sources/{STUDY}.json").read_text())
+    for entry in source_index["files"]:
+        checked_file(entry["path"], entry["sha256"], entry["bytes"], study=True)
+    images = [data["fixed_interface_image"]]
     for group in data["comparisons"]:
         images.extend([group["sheet"]] if group["kind"] == "scale" else group["images"])
     for image in images:

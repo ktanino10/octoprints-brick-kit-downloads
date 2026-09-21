@@ -12,9 +12,8 @@ const object = (value) => value !== null && typeof value === 'object' && !Array.
 const hash = (value) => typeof value === 'string' && /^[0-9a-f]{64}$/.test(value);
 const count = (value) => Number.isSafeInteger(value) && value >= 0;
 const dimensions = (value) => Array.isArray(value) && value.length === 3 && value.every((n) => Number.isFinite(n) && n > 0);
-const bounds = (value, width, height) => Array.isArray(value) && value.length === 4
-  && value.every(Number.isFinite) && value[0] >= 0 && value[1] >= 0
-  && value[2] > value[0] && value[3] > value[1] && value[2] <= width && value[3] <= height;
+const region = (value) => Array.isArray(value) && value.length === 4
+  && value.every(Number.isFinite) && value[2] > value[0] && value[3] > value[1];
 const text = (value) => typeof value === 'string' && value.trim().length > 0;
 const requireThat = (condition, message) => { if (!condition) throw new Error(message); };
 
@@ -100,6 +99,21 @@ export function validateMonaStudy(study, pointer) {
   requireThat(study.rows.find((row) => row.role === 'pilot-360').evidence.original_geometry_sha256
     === study.rows.find((row) => row.role === 'original').evidence.geometry_sha256,
   '新Monaの再サンプリング元が、比較に使う原型と一致しません。');
+  const pilot = study.rows.find((row) => row.role === 'pilot-360');
+  const composition = study.pilot_metrics, sampling = study.fidelity_sampling;
+  requireThat(object(composition) && composition.physical_piece_count === pilot.metrics.part_count
+    && composition.assembly_step_count === pilot.metrics.part_count
+    && ['plate_count', 'standard9_6mm_brick_count', 'common_rectangular_parts', 'orthogonal_backing_contour_parts',
+      'foundation_parts', 'temporary_aid_count'].every((key) => count(composition[key]))
+    && composition.plate_count + composition.standard9_6mm_brick_count === pilot.metrics.part_count
+    && composition.common_rectangular_parts + composition.orthogonal_backing_contour_parts === pilot.metrics.part_count
+    && object(sampling) && count(sampling.first_C_cell_count) && count(sampling.pilot_cell_count)
+    && sampling.first_C_cell_count > 0 && sampling.pilot_cell_count > 0
+    && sampling.pilot_cell_count === sampling.actual_cell_count && sampling.occupied_cell_changes === 0
+    && text(study.assembly_layer_note) && Array.isArray(study.visual_observations)
+    && study.visual_observations.length > 0 && study.visual_observations.every(text),
+  '新Monaの部品内訳・サンプリング密度・層の意味・限界の説明が一致しません。');
+  validateImage(study.fixed_interface_image);
   requireThat(Array.isArray(study.comparisons) && study.comparisons.length >= 4
     && text(study.appearance_limit) && text(study.assembly_tradeoff)
     && study.prior_visual_feedback === 'USERREJECTS_LIKENESS',
@@ -139,13 +153,14 @@ export function validateMonaStudy(study, pointer) {
         images.add(image.path);
       }
       if (group.kind === 'shape') {
-        requireThat(group.images.every((image) => bounds(image.subject_bounds_px, image.width, image.height)),
+        requireThat(group.images.every((image) => Number.isFinite(image.projected_subject_height_px)
+          && image.projected_subject_height_px > 0 && image.projected_subject_height_px <= image.height),
           '同じ画面上高さを確認する、各モデルの投影範囲がありません。');
-        const heights = group.images.map((image) => image.subject_bounds_px[3] - image.subject_bounds_px[1]);
+        const heights = group.images.map((image) => image.projected_subject_height_px);
         requireThat(Math.max(...heights) - Math.min(...heights) <= 1,
           '形の比較でモデルの画面上高さが揃っていません。');
       } else {
-        requireThat(bounds(group.normalized_face_region, 1, 1)
+        requireThat(region(group.normalized_face_region)
           && group.images.every((image) => Array.isArray(image.normalized_face_region)
             && image.normalized_face_region.length === 4
             && image.normalized_face_region.every((value, index) => value === group.normalized_face_region[index])),

@@ -26,6 +26,12 @@ function fixture() {
     source_commit: pointer.source_commit, source_study_sha256: 'e'.repeat(64), ...flags,
     prior_visual_feedback: 'USERREJECTS_LIKENESS', appearance_limit: 'Unit test only; no real candidate.',
     assembly_tradeoff: 'Synthetic contract fixture, never published.',
+    assembly_layer_note: 'Unit-only placement layer definition.', visual_observations: ['Unit-only observation.'],
+    fixed_interface_image: image('interface'),
+    fidelity_sampling: { first_C_cell_count: 20, pilot_cell_count: 30, actual_cell_count: 30, occupied_cell_changes: 0 },
+    pilot_metrics: { physical_piece_count: 13838, assembly_step_count: 13838, plate_count: 1,
+      standard9_6mm_brick_count: 13837, common_rectangular_parts: 13837, orthogonal_backing_contour_parts: 1,
+      foundation_parts: 1, temporary_aid_count: 2 },
     rows: MONA_ROLES.map((role, index) => {
       const original = role === 'original';
       const parts = [null, 13837, 519, 13838][index];
@@ -49,7 +55,7 @@ function fixture() {
         framing_rule: kind === 'shape' ? 'MATCHED_SCREEN_HEIGHT' : 'MATCHED_NORMALIZED_FACE_REGION',
         ...(kind === 'face' ? { normalized_face_region: [0.1, 0.1, 0.9, 0.5] } : {}),
         images: MONA_ROLES.map((role) => ({ ...image(`${kind}-${view}-${role}`), role,
-          ...(kind === 'shape' ? { subject_bounds_px: [100, 100, 900, 900] }
+          ...(kind === 'shape' ? { projected_subject_height_px: 800 }
             : { normalized_face_region: [0.1, 0.1, 0.9, 0.5] }) })),
       })),
       { id: 'scale-front', kind: 'scale', view: 'front', conditions_sha256: 'd'.repeat(64),
@@ -92,8 +98,8 @@ test('Mona shape normalization, face crops and physical scale remain different c
     (data) => { data.comparisons[0].images[1].conditions_sha256 = 'f'.repeat(64); },
     (data) => { data.comparisons[0].images[1].role = 'original'; },
     (data) => { data.comparisons[0].images[1].width = 999; },
-    (data) => { data.comparisons[0].images[1].subject_bounds_px[3] = 950; },
-    (data) => { delete data.comparisons[0].images[1].subject_bounds_px; },
+    (data) => { data.comparisons[0].images[1].projected_subject_height_px = 850; },
+    (data) => { delete data.comparisons[0].images[1].projected_subject_height_px; },
     (data) => { data.comparisons[2].images[1].normalized_face_region = [0.1, 0.1, 0.8, 0.5]; },
     (data) => { data.comparisons[2].normalized_face_region = [0, 0, 2, 2]; },
     (data) => { data.comparisons[0].images[1].path = data.comparisons[0].images[0].path; },
@@ -111,6 +117,8 @@ test('Mona actual counts are uncapped, preserve both reference identities and ne
   const data = fixture();
   data.rows[3].metrics.part_count = 1_000_000;
   data.rows[3].evidence.counted_instances = 1_000_000;
+  Object.assign(data.pilot_metrics, { physical_piece_count: 1_000_000, assembly_step_count: 1_000_000,
+    standard9_6mm_brick_count: 999999, common_rectangular_parts: 999999 });
   assert.equal(validateMonaStudy(data, pointer).rows[3].metrics.part_count, 1_000_000);
   assert.deepEqual(countDelta(13838, 13837).parts, 1);
   assert.deepEqual(countDelta(13838, 519).parts, 13319);
@@ -123,6 +131,8 @@ test('Mona actual counts are uncapped, preserve both reference identities and ne
     (value) => { value.rows[3].pitch_mm = 16; },
     (value) => { value.rows[3].evidence.counted_instances += 1; },
     (value) => { value.rows[3].evidence.bom_ids_match = false; },
+    (value) => { value.pilot_metrics.plate_count += 1; },
+    (value) => { value.fidelity_sampling.occupied_cell_changes = 1; },
     (value) => { value.full_print = 'APPROVED'; },
   ]) {
     const changed = fixture();
@@ -164,6 +174,24 @@ test('Mona work preserves the exact earlier-study records and immutable snapshot
   if (publication.state === 'READY') {
     const bytes = await readFile(new URL(monaStudyPath(publication.data_url).slice(1), root));
     assert.equal(createHash('sha256').update(bytes).digest('hex'), publication.data_sha256);
-    validateMonaStudy(JSON.parse(bytes), publication);
+    const study = validateMonaStudy(JSON.parse(bytes), publication);
+    const rawBytes = await readFile(new URL(`artifacts/studies/${MONA_STUDY_ID}/study.json`, root));
+    assert.equal(createHash('sha256').update(rawBytes).digest('hex'), study.source_study_sha256);
+    const raw = JSON.parse(rawBytes);
+    assert.deepEqual(study.fidelity_sampling, raw.fidelity_sampling);
+    assert.deepEqual(study.pilot_metrics, raw.rows.find((row) => row.role === 'dense360-pilot').metrics);
+    for (const row of study.rows) {
+      const source = raw.rows.find((entry) => entry.role === row.source_role);
+      assert.equal(row.candidate_id, source.candidate_id);
+      assert.equal(row.metrics.part_count, source.metrics.physical_piece_count);
+      assert.equal(row.metrics.unique_types, source.metrics.unique_types);
+      assert.deepEqual(row.metrics.dimensions_mm, source.metrics.actual_size_mm);
+      for (const [view, sourceView] of [['front', 'front'], ['three-quarter', 'three_quarter']]) {
+        const image = study.comparisons.find((group) => group.kind === 'shape' && group.view === view).images.find((entry) => entry.role === row.role);
+        assert.equal(image.sha256, source.images[sourceView].sha256);
+        assert.deepEqual(image.source_camera, source.images[sourceView].normalization);
+        assert.equal(image.projected_subject_height_px, 864);
+      }
+    }
   }
 });

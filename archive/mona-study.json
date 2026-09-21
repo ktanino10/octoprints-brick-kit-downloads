@@ -1,12 +1,15 @@
 {
   "schema_version": 1,
   "study_id": "mona-likeness-360-20260921",
-  "state": "INPUT_WAIT",
+  "state": "READY",
   "current_revision_unchanged": "r3-8mm-20260920",
   "selection": "NOT_SELECTED",
   "visual_approval": "PENDING",
   "physical_fit": "UNKNOWN",
   "retention_strength": "UNKNOWN",
   "slicer_status": "NOT_SLICED",
-  "full_print": "ON_HOLD"
+  "full_print": "ON_HOLD",
+  "source_commit": "a666ae1c50a5b6626f6b3b629e688e08e2675c83",
+  "data_url": "/artifacts/studies/mona-likeness-360-20260921/public-study.json",
+  "data_sha256": "4cef8558af7da4c78ac35efbbdee2478bf40f5cddbe2d0054abda040aab81841"
 }

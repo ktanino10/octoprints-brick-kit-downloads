@@ -1,0 +1,2573 @@
+{
+  "schema_version": 1,
+  "study_id": "mona-likeness-360-20260921",
+  "revision": "mona-likeness-360-20260921",
+  "kind": "MONA_LIKENESS_AND_SCALE_STUDY",
+  "state": "READY_FOR_USER_COMPARISON",
+  "current_revision_unchanged": "r3-8mm-20260920",
+  "primary_reference": "phase1-fine-c",
+  "rows": [
+    {
+      "role": "original-source",
+      "candidate_id": "original-mona-source",
+      "label_ja": "元のMona / 原型",
+      "label_en": "Original Mona source",
+      "metrics": {
+        "physical_piece_count": null,
+        "unique_types": null,
+        "one_by_one_exceptions": null,
+        "layer_count": null,
+        "assembly_step_count": null,
+        "plate_count": null,
+        "common_rectangular_parts": null,
+        "minimum_xy_short_mm": null,
+        "minimum_xy_long_mm": null,
+        "minimum_body_height_mm": null,
+        "actual_size_mm": [
+          69.12628536574877,
+          56.769432701756244,
+          60.775572112762475
+        ],
+        "actual_height_mm": 60.775572112762475,
+        "brick_metrics_status": "NOT_APPLICABLE_UNSEGMENTED_ORIGINAL_SOURCE",
+        "source_size_note": "Size from the original3MF print transform, grounded atz0; normalized comparison enlarges it on screen, not a new360mm original print."
+      },
+      "images": {
+        "front": {
+          "path": "original-source-normalized-front.jpg",
+          "bytes": 135373,
+          "sha256": "6a266bbad366b9c4a98d682d4c141d5802733eab2970317cf84fc642f1e72fd2",
+          "size_px": [
+            1200,
+            1200
+          ],
+          "group_id": "mona-likeness-360-20260921-normalized-front",
+          "normalization": {
+            "group_id": "mona-likeness-360-20260921-normalized-front",
+            "role": "original-source",
+            "view": "front",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -243.10228845,
+              30.38778606
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              30.38778606
+            ],
+            "ortho_scale_mm": 84.41051682361112,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 14.216238037110783,
+            "actual_projected_height_mm": 60.775572113,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+            "direction_world": [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            "right_world": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "up_world": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "camera_matrix_world_m": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                -1.6292068494294654e-07,
+                -1.0,
+                -0.2431023120880127
+              ],
+              [
+                0.0,
+                1.0,
+                -1.6292068494294654e-07,
+                0.030387789011001587
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "three_quarter": {
+          "path": "original-source-normalized-three_quarter.jpg",
+          "bytes": 148145,
+          "sha256": "9561aa1c838d6e0ff65c892599f2f338e674439546521bcd6d6be1ead755a4be",
+          "size_px": [
+            1200,
+            1200
+          ],
+          "group_id": "mona-likeness-360-20260921-normalized-three_quarter",
+          "normalization": {
+            "group_id": "mona-likeness-360-20260921-normalized-three_quarter",
+            "role": "original-source",
+            "view": "three_quarter",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              87.79134989,
+              -215.1401906,
+              132.97791362
+            ],
+            "target_mm": [
+              -3.43047891,
+              -0.2350294,
+              29.03284257
+            ],
+            "ortho_scale_mm": 88.73564546523362,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 13.523314038101596,
+            "actual_projected_height_mm": 63.8896647349682,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+            "direction_world": [
+              0.3569506476,
+              -0.8409230276,
+              0.4067366431
+            ],
+            "right_world": [
+              0.9205048535,
+              0.3907311285,
+              -0.0
+            ],
+            "up_world": [
+              -0.1589246675,
+              0.374403054,
+              0.9135454576
+            ],
+            "camera_matrix_world_m": [
+              [
+                0.9205048680305481,
+                -0.15892475843429565,
+                0.356950581073761,
+                0.08779135346412659
+              ],
+              [
+                0.3907310962677002,
+                0.3744032084941864,
+                -0.8409229516983032,
+                -0.2151402086019516
+              ],
+              [
+                3.2944466710205234e-08,
+                0.9135453701019287,
+                0.406736820936203,
+                0.1329779326915741
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "face": {
+          "path": "original-source-face-crop.jpg",
+          "bytes": 59226,
+          "sha256": "9c48892bfb7889e4a34d1ba30af1e5cfd8c4e65730c4189a6c40a014e8c95b37",
+          "size_px": [
+            564,
+            611
+          ],
+          "group_id": "mona-likeness-360-20260921-registered-face",
+          "crop_box_in_registered_image_px": [
+            230,
+            148,
+            794,
+            759
+          ],
+          "crop_rule": {
+            "reference": "Original-source character-body registration, not foundation/whole-assembly height",
+            "x_fraction_of_body_height": [
+              -0.4,
+              0.4
+            ],
+            "z_fraction_of_body_height": [
+              0.15,
+              1.015
+            ],
+            "mode": "IDENTICAL_NORMALIZED_HEAD_FACE_REGION",
+            "quantitative_face_region": {
+              "x_fraction": [
+                -0.29,
+                0.29
+              ],
+              "z_fraction": [
+                0.2,
+                0.58
+              ]
+            }
+          },
+          "registration": {
+            "group_id": "mona-likeness-360-20260921-registered-character-front",
+            "role": "original-source",
+            "view": "front",
+            "mode": "REGISTERED_BODY_FOR_DESCRIPTIVE_METRICS",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -243.10228845,
+              30.38778606
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              30.38778606
+            ],
+            "ortho_scale_mm": 88.12457956350559,
+            "image_size_px": [
+              1024,
+              1024
+            ],
+            "pixels_per_mm": 11.619913593597012,
+            "body_height_mm": 60.775572112762475,
+            "body_bottom_z_mm": 0.0,
+            "registered_body_height_px": 706.2068965517242,
+            "exclude_foundation": true,
+            "scope": "Original-source XY origin and body-normalized height. Excludes added foundations; includes actual studs/seams. Not a mechanical or aesthetic pass criterion."
+          }
+        }
+      },
+      "provenance": {
+        "source_mesh_sha256": "a5dd2a8c6604bd564294bf3e2e19fed6181933447c03ab7ece46c940da52f9ee",
+        "source_revision": "981a85f0bec9d1a9c280fd5719d0d797852229c4"
+      },
+      "role_note_ja": "原型の無分割参照（ブロック数N/A）",
+      "user_evaluation": "REFERENCE_NOT_A_PRINT_APPROVAL",
+      "status": {
+        "selection": "REFERENCE_ONLY",
+        "physical_fit": "UNKNOWN",
+        "retention_strength": "UNKNOWN",
+        "slicer_status": "NOT_SLICED",
+        "full_print": "ON_HOLD"
+      }
+    },
+    {
+      "role": "phase1-fine-c",
+      "candidate_id": "mona-fine",
+      "label_ja": "最初の細密C / 約18 cm",
+      "label_en": "Initial fine C / about18cm",
+      "metrics": {
+        "physical_piece_count": 13837,
+        "part_count": 13837,
+        "unique_types": 7,
+        "one_by_one_exceptions": 1766,
+        "layer_count": 75,
+        "assembly_step_count": 13837,
+        "plate_count": 0,
+        "standard9_6mm_brick_count": 0,
+        "common_rectangular_parts": 13837,
+        "plate_count_definition": "Current-family3.2mm body plates only. Initial fineC uses its historical2.28mm bodies/2.4mm Zgrid, not this newstandard.",
+        "minimum_xy_short_mm": 3.82,
+        "minimum_xy_long_mm": 3.82,
+        "minimum_body_height_mm": 2.28,
+        "actual_size_mm": [
+          211.82,
+          171.82,
+          180.71
+        ],
+        "actual_height_mm": 180.71,
+        "brick_metrics_status": "ACTUAL_ASSEMBLY_INSTANCES",
+        "delta_from_primary_fine_c": 0,
+        "delta_from_current_r3": 13318
+      },
+      "images": {
+        "front": {
+          "path": "phase1-fine-c-normalized-front.jpg",
+          "bytes": 267324,
+          "sha256": "87a3f16cc2653cc88c128e58718f7cd8c6fe302ea1a3540508d4edd61e31898f",
+          "size_px": [
+            1200,
+            1200
+          ],
+          "group_id": "mona-likeness-360-20260921-normalized-front",
+          "normalization": {
+            "group_id": "mona-likeness-360-20260921-normalized-front",
+            "role": "phase1-fine-c",
+            "view": "front",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -722.85333292,
+              90.35666662
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              90.35666662
+            ],
+            "ortho_scale_mm": 250.9907405972222,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 4.7810528673075705,
+            "actual_projected_height_mm": 180.71333323,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+            "direction_world": [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            "right_world": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "up_world": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "camera_matrix_world_m": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                7.549790126404332e-08,
+                -1.0,
+                -0.7228533625602722
+              ],
+              [
+                0.0,
+                1.0,
+                7.549790126404332e-08,
+                0.09035667032003403
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "three_quarter": {
+          "path": "phase1-fine-c-normalized-three_quarter.jpg",
+          "bytes": 303005,
+          "sha256": "688cfaebb3d0277361b412381ff011b311575035269df287140f8d1625d5ce97",
+          "size_px": [
+            1200,
+            1200
+          ],
+          "group_id": "mona-likeness-360-20260921-normalized-three_quarter",
+          "normalization": {
+            "group_id": "mona-likeness-360-20260921-normalized-three_quarter",
+            "role": "phase1-fine-c",
+            "view": "three_quarter",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              270.91099602,
+              -661.7848345,
+              405.77101255
+            ],
+            "target_mm": [
+              -9.73999019,
+              -0.61254467,
+              85.97599109
+            ],
+            "ortho_scale_mm": 273.0020515654853,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 4.3955713633608156,
+            "actual_projected_height_mm": 196.5614771271494,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+            "direction_world": [
+              0.3569506476,
+              -0.8409230276,
+              0.4067366431
+            ],
+            "right_world": [
+              0.9205048535,
+              0.3907311285,
+              -0.0
+            ],
+            "up_world": [
+              -0.1589246675,
+              0.374403054,
+              0.9135454576
+            ],
+            "camera_matrix_world_m": [
+              [
+                0.9205048084259033,
+                -0.1589246243238449,
+                0.3569508194923401,
+                0.2709110379219055
+              ],
+              [
+                0.39073124527931213,
+                0.3744029104709625,
+                -0.840923011302948,
+                -0.6617848873138428
+              ],
+              [
+                -4.669232112064492e-08,
+                0.913545548915863,
+                0.40673649311065674,
+                0.40577104687690735
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "face": {
+          "path": "phase1-fine-c-face-crop.jpg",
+          "bytes": 128016,
+          "sha256": "3f9426522110ed3d7dda5607fcdd35d35e07de5fedcea0678688ecc64e8fa9d2",
+          "size_px": [
+            564,
+            611
+          ],
+          "group_id": "mona-likeness-360-20260921-registered-face",
+          "crop_box_in_registered_image_px": [
+            230,
+            148,
+            794,
+            759
+          ],
+          "crop_rule": {
+            "reference": "Original-source character-body registration, not foundation/whole-assembly height",
+            "x_fraction_of_body_height": [
+              -0.4,
+              0.4
+            ],
+            "z_fraction_of_body_height": [
+              0.15,
+              1.015
+            ],
+            "mode": "IDENTICAL_NORMALIZED_HEAD_FACE_REGION",
+            "quantitative_face_region": {
+              "x_fraction": [
+                -0.29,
+                0.29
+              ],
+              "z_fraction": [
+                0.2,
+                0.58
+              ]
+            }
+          },
+          "registration": {
+            "group_id": "mona-likeness-360-20260921-registered-character-front",
+            "role": "phase1-fine-c",
+            "view": "front",
+            "mode": "REGISTERED_BODY_FOR_DESCRIPTIVE_METRICS",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -720.0,
+              90.0
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              90.0
+            ],
+            "ortho_scale_mm": 261.0,
+            "image_size_px": [
+              1024,
+              1024
+            ],
+            "pixels_per_mm": 3.9233716475095783,
+            "body_height_mm": 180,
+            "body_bottom_z_mm": 0,
+            "registered_body_height_px": 706.2068965517242,
+            "exclude_foundation": true,
+            "scope": "Original-source XY origin and body-normalized height. Excludes added foundations; includes actual studs/seams. Not a mechanical or aesthetic pass criterion."
+          }
+        }
+      },
+      "provenance": {
+        "manifest_sha256": "93fd37f62bfaa588a016f1c748a97912d41e72f7719a094734ccbb12277ce552",
+        "bom_sha256": "3d3ca01d8f0fa3fcaf58abb25cd09ce239e089d379d18c32f2c95337ef078aaa",
+        "actual_render_part_count": 13837,
+        "native_geometry_source_hashes": [
+          {
+            "sha256": "6b100a0e9904ffcaaae86cb8f84561365cb3607a6a8ea26cec14d8b7c455d3e1"
+          }
+        ],
+        "source_revision": "981a85f0bec9d1a9c280fd5719d0d797852229c4"
+      },
+      "role_note_ja": "本人が見た目の基準に選んだ最初の細密C",
+      "user_evaluation": "REFERENCE_NOT_A_PRINT_APPROVAL",
+      "status": {
+        "selection": "REFERENCE_ONLY",
+        "physical_fit": "UNKNOWN",
+        "retention_strength": "UNKNOWN",
+        "slicer_status": "NOT_SLICED",
+        "full_print": "ON_HOLD"
+      }
+    },
+    {
+      "role": "r3-baseline",
+      "candidate_id": "mona-practical8",
+      "label_ja": "現行r3 / 約18 cm",
+      "label_en": "Current r3 / about18cm",
+      "metrics": {
+        "physical_piece_count": 519,
+        "part_count": 519,
+        "unique_types": 68,
+        "one_by_one_exceptions": 5,
+        "layer_count": 20,
+        "assembly_step_count": 519,
+        "plate_count": 50,
+        "standard9_6mm_brick_count": 469,
+        "common_rectangular_parts": 412,
+        "plate_count_definition": "Current-family3.2mm body plates only. Initial fineC uses its historical2.28mm bodies/2.4mm Zgrid, not this newstandard.",
+        "minimum_xy_short_mm": 7.8,
+        "minimum_xy_long_mm": 7.8,
+        "minimum_body_height_mm": 3.2,
+        "actual_size_mm": [
+          199.8,
+          167.8,
+          181.0
+        ],
+        "actual_height_mm": 181.0,
+        "brick_metrics_status": "ACTUAL_ASSEMBLY_INSTANCES",
+        "delta_from_primary_fine_c": -13318,
+        "delta_from_current_r3": 0
+      },
+      "images": {
+        "front": {
+          "path": "r3-baseline-normalized-front.jpg",
+          "bytes": 141325,
+          "sha256": "7e936ea1ad44990616104eb06de4530217dbfd1c123294701ec7008a89024d01",
+          "size_px": [
+            1200,
+            1200
+          ],
+          "group_id": "mona-likeness-360-20260921-normalized-front",
+          "normalization": {
+            "group_id": "mona-likeness-360-20260921-normalized-front",
+            "role": "r3-baseline",
+            "view": "front",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -723.99999848,
+              90.49999981
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              90.49999981
+            ],
+            "ortho_scale_mm": 251.3888883611111,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 4.773480673005098,
+            "actual_projected_height_mm": 180.99999961999998,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+            "direction_world": [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            "right_world": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "up_world": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "camera_matrix_world_m": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                -1.6292068494294654e-07,
+                -1.0,
+                -0.7240000367164612
+              ],
+              [
+                0.0,
+                1.0,
+                -1.6292068494294654e-07,
+                0.09050000458955765
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "three_quarter": {
+          "path": "r3-baseline-normalized-three_quarter.jpg",
+          "bytes": 182069,
+          "sha256": "75c6c105fa9d1cab2aa0e528878b73fb653f036b729aa7d4ed73f9a0d87f6190",
+          "size_px": [
+            1200,
+            1200
+          ],
+          "group_id": "mona-likeness-360-20260921-normalized-three_quarter",
+          "normalization": {
+            "group_id": "mona-likeness-360-20260921-normalized-three_quarter",
+            "role": "r3-baseline",
+            "view": "three_quarter",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              309.88288195,
+              -743.46172979,
+              440.94481066
+            ],
+            "target_mm": [
+              -4.69717437,
+              -2.35755988,
+              82.48843315
+            ],
+            "ortho_scale_mm": 306.00641001185016,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 3.921486481128058,
+            "actual_projected_height_mm": 220.32461520853212,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+            "direction_world": [
+              0.3569506476,
+              -0.8409230276,
+              0.4067366431
+            ],
+            "right_world": [
+              0.9205048535,
+              0.3907311285,
+              -0.0
+            ],
+            "up_world": [
+              -0.1589246675,
+              0.374403054,
+              0.9135454576
+            ],
+            "camera_matrix_world_m": [
+              [
+                0.9205048680305481,
+                -0.15892460942268372,
+                0.35695070028305054,
+                0.30988287925720215
+              ],
+              [
+                0.39073115587234497,
+                0.3744029402732849,
+                -0.8409230709075928,
+                -0.7434617877006531
+              ],
+              [
+                -1.7272222763153877e-08,
+                0.913545548915863,
+                0.40673649311065674,
+                0.4409448504447937
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "face": {
+          "path": "r3-baseline-face-crop.jpg",
+          "bytes": 54580,
+          "sha256": "9105f6eef68b32536bbec2d87a6eba1a86bbdae9a304846d30d8b091ea11e062",
+          "size_px": [
+            564,
+            611
+          ],
+          "group_id": "mona-likeness-360-20260921-registered-face",
+          "crop_box_in_registered_image_px": [
+            230,
+            148,
+            794,
+            759
+          ],
+          "crop_rule": {
+            "reference": "Original-source character-body registration, not foundation/whole-assembly height",
+            "x_fraction_of_body_height": [
+              -0.4,
+              0.4
+            ],
+            "z_fraction_of_body_height": [
+              0.15,
+              1.015
+            ],
+            "mode": "IDENTICAL_NORMALIZED_HEAD_FACE_REGION",
+            "quantitative_face_region": {
+              "x_fraction": [
+                -0.29,
+                0.29
+              ],
+              "z_fraction": [
+                0.2,
+                0.58
+              ]
+            }
+          },
+          "registration": {
+            "group_id": "mona-likeness-360-20260921-registered-character-front",
+            "role": "r3-baseline",
+            "view": "front",
+            "mode": "REGISTERED_BODY_FOR_DESCRIPTIVE_METRICS",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -691.2,
+              92.8
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              92.8
+            ],
+            "ortho_scale_mm": 250.56,
+            "image_size_px": [
+              1024,
+              1024
+            ],
+            "pixels_per_mm": 4.086845466155811,
+            "body_height_mm": 172.8,
+            "body_bottom_z_mm": 6.4,
+            "registered_body_height_px": 706.2068965517242,
+            "exclude_foundation": true,
+            "scope": "Original-source XY origin and body-normalized height. Excludes added foundations; includes actual studs/seams. Not a mechanical or aesthetic pass criterion."
+          }
+        }
+      },
+      "provenance": {
+        "manifest_sha256": "8b9957525e0e67b34ad93c0b38529e494008e631192a537e5d75b163db951189",
+        "bom_sha256": "23f0b738cd53c76c0473f47b6819066e9ffc104da012c4c0c781025dbd8a2ff2",
+        "actual_render_part_count": 519,
+        "native_geometry_source_hashes": [
+          {
+            "sha256": "c11e40d506e6326584dd2c4410b9869c1e541688ec37db5819d247bcef812cdb"
+          }
+        ],
+        "source_revision": "981a85f0bec9d1a9c280fd5719d0d797852229c4"
+      },
+      "role_note_ja": "顔・体形・丸みの再現が足りないという本人評価の記録",
+      "user_evaluation": "USER_REJECTS_LIKENESS",
+      "status": {
+        "selection": "REFERENCE_ONLY",
+        "physical_fit": "UNKNOWN",
+        "retention_strength": "UNKNOWN",
+        "slicer_status": "NOT_SLICED",
+        "full_print": "ON_HOLD"
+      }
+    },
+    {
+      "role": "dense360-pilot",
+      "candidate_id": "mona-dense360",
+      "label_ja": "新しい細密パイロット / 約36 cm",
+      "label_en": "New dense pilot / about36cm",
+      "metrics": {
+        "part_count": 10908,
+        "physical_piece_count": 10908,
+        "unique_types": 137,
+        "reused_native_types": 63,
+        "new_native_types": 74,
+        "color_count": 4,
+        "color_part_counts": {
+          "c0": 9595,
+          "c3": 1120,
+          "c2": 117,
+          "c1": 76
+        },
+        "plate_count": 10572,
+        "standard9_6mm_brick_count": 336,
+        "common_rectangular_parts": 10111,
+        "orthogonal_backing_contour_parts": 797,
+        "slope_or_curved_surface_parts": 0,
+        "one_by_one_exceptions": 32,
+        "minimum_xy_short_mm": 7.8,
+        "minimum_xy_long_mm": 7.8,
+        "minimum_body_height_mm": 3.2,
+        "grip_long_ge_15_8_mm": 10876,
+        "maximum_part_xy_mm": [
+          55.8,
+          95.8
+        ],
+        "actual_size_mm": [
+          407.8,
+          343.8,
+          360.2
+        ],
+        "bounds_mm": [
+          [
+            -203.9,
+            -171.9,
+            0.0
+          ],
+          [
+            203.9,
+            171.9,
+            360.2
+          ]
+        ],
+        "height_mm": 360.2,
+        "width_mm": 407.8,
+        "depth_mm": 343.8,
+        "target_finished_height_mm": 360.0,
+        "layer_count": 112,
+        "assembly_step_count": 10908,
+        "foundation_parts": 44,
+        "temporary_aid_count": 2,
+        "count_definition": "Actualindividualassemblyinstancesincludingfoundationandinternalparts;exclude2temporarypedestalsandrenderstage",
+        "actual_height_mm": 360.2,
+        "brick_metrics_status": "ACTUAL_ASSEMBLY_INSTANCES",
+        "delta_from_primary_fine_c": -2929,
+        "delta_from_current_r3": 10389
+      },
+      "images": {
+        "front": {
+          "path": "dense360-pilot-normalized-front.jpg",
+          "bytes": 202035,
+          "sha256": "0627d35c965df02b3464b91542d2da5917755937f71a26dbbe65acbb3dbfe6cf",
+          "size_px": [
+            1200,
+            1200
+          ],
+          "group_id": "mona-likeness-360-20260921-normalized-front",
+          "normalization": {
+            "group_id": "mona-likeness-360-20260921-normalized-front",
+            "role": "dense360-pilot",
+            "view": "front",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -1440.8,
+              180.1
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              180.1
+            ],
+            "ortho_scale_mm": 500.27777777777777,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 2.3986674069961134,
+            "actual_projected_height_mm": 360.2,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+            "direction_world": [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            "right_world": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "up_world": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "camera_matrix_world_m": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                -1.6292068494294654e-07,
+                -1.0,
+                -1.4408000707626343
+              ],
+              [
+                0.0,
+                1.0,
+                -1.6292068494294654e-07,
+                0.18010000884532928
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "three_quarter": {
+          "path": "dense360-pilot-normalized-three_quarter.jpg",
+          "bytes": 256391,
+          "sha256": "11ac821de42c0eb068066e0f549e9aeedd9d003a95d6d6bdf1f06115da6efaa3",
+          "size_px": [
+            1200,
+            1200
+          ],
+          "group_id": "mona-likeness-360-20260921-normalized-three_quarter",
+          "normalization": {
+            "group_id": "mona-likeness-360-20260921-normalized-three_quarter",
+            "role": "dense360-pilot",
+            "view": "three_quarter",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              529.18192974,
+              -1289.79154841,
+              796.80706557
+            ],
+            "target_mm": [
+              -17.93046754,
+              -0.8755129,
+              173.38570086
+            ],
+            "ortho_scale_mm": 532.2012543512802,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 2.254786117448604,
+            "actual_projected_height_mm": 383.18490313292176,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+            "direction_world": [
+              0.3569506476,
+              -0.8409230276,
+              0.4067366431
+            ],
+            "right_world": [
+              0.9205048535,
+              0.3907311285,
+              -0.0
+            ],
+            "up_world": [
+              -0.1589246675,
+              0.374403054,
+              0.9135454576
+            ],
+            "camera_matrix_world_m": [
+              [
+                0.9205048680305481,
+                -0.15892457962036133,
+                0.35695070028305054,
+                0.529181957244873
+              ],
+              [
+                0.39073115587234497,
+                0.3744029402732849,
+                -0.8409230709075928,
+                -1.2897915840148926
+              ],
+              [
+                -4.176478540784956e-08,
+                0.913545548915863,
+                0.40673649311065674,
+                0.7968071103096008
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        },
+        "face": {
+          "path": "dense360-pilot-face-crop.jpg",
+          "bytes": 96377,
+          "sha256": "3d193a7cba747abebf27c4f3adcc718c2dcb1cf90c9cfda40975f88510e11955",
+          "size_px": [
+            564,
+            611
+          ],
+          "group_id": "mona-likeness-360-20260921-registered-face",
+          "crop_box_in_registered_image_px": [
+            230,
+            148,
+            794,
+            759
+          ],
+          "crop_rule": {
+            "reference": "Original-source character-body registration, not foundation/whole-assembly height",
+            "x_fraction_of_body_height": [
+              -0.4,
+              0.4
+            ],
+            "z_fraction_of_body_height": [
+              0.15,
+              1.015
+            ],
+            "mode": "IDENTICAL_NORMALIZED_HEAD_FACE_REGION",
+            "quantitative_face_region": {
+              "x_fraction": [
+                -0.29,
+                0.29
+              ],
+              "z_fraction": [
+                0.2,
+                0.58
+              ]
+            }
+          },
+          "registration": {
+            "group_id": "mona-likeness-360-20260921-registered-character-front",
+            "role": "dense360-pilot",
+            "view": "front",
+            "mode": "REGISTERED_BODY_FOR_DESCRIPTIVE_METRICS",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -1408.0,
+              182.4
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              182.4
+            ],
+            "ortho_scale_mm": 510.4,
+            "image_size_px": [
+              1024,
+              1024
+            ],
+            "pixels_per_mm": 2.0062695924764893,
+            "body_height_mm": 352,
+            "body_bottom_z_mm": 6.4,
+            "registered_body_height_px": 706.2068965517242,
+            "exclude_foundation": true,
+            "scope": "Original-source XY origin and body-normalized height. Excludes added foundations; includes actual studs/seams. Not a mechanical or aesthetic pass criterion."
+          }
+        }
+      },
+      "provenance": {
+        "manifest_sha256": "c0cdfc713492f106023afceffa2fec347bba795be4a3f06fdf70823525884c31",
+        "bom_sha256": "75286040e3633736d4327bdfdf6c33bf80d5605235c9a3701186f28f569a796b",
+        "actual_render_part_count": 10908,
+        "native_geometry_source_hashes": [
+          {
+            "sha256": "c11e40d506e6326584dd2c4410b9869c1e541688ec37db5819d247bcef812cdb"
+          },
+          {
+            "sha256": "43a6ab45801566ee5c5b3fc9dbf3cf16695e2b2f1e731c0ac575bbdf0d437cf3"
+          },
+          {
+            "sha256": "40b970cf670a0c3351e40f12cc2b8edbd12bd0e9bd6aad0a2fb0658d501ada80"
+          }
+        ],
+        "source_revision": "981a85f0bec9d1a9c280fd5719d0d797852229c4"
+      },
+      "role_note_ja": "元モデルから高密度で再構成した未採用の約36cm候補",
+      "user_evaluation": "REFERENCE_NOT_A_PRINT_APPROVAL",
+      "status": {
+        "selection": "NOT_SELECTED",
+        "physical_fit": "UNKNOWN",
+        "retention_strength": "UNKNOWN",
+        "slicer_status": "NOT_SLICED",
+        "full_print": "ON_HOLD"
+      }
+    }
+  ],
+  "comparison_groups": [
+    {
+      "path": "normalized-front-comparison.jpg",
+      "bytes": 504922,
+      "sha256": "da815dc2cb6e8184ed946448de9ee02169a2c97939303fad86695390c0c2acd3",
+      "size_px": [
+        3200,
+        1210
+      ],
+      "group_id": "mona-likeness-360-20260921-normalized-front",
+      "mode": "EQUAL_SCREEN_HEIGHT_NOT_PHYSICAL_RATIO",
+      "roles": [
+        "original-source",
+        "phase1-fine-c",
+        "r3-baseline",
+        "dense360-pilot"
+      ]
+    },
+    {
+      "path": "normalized-three_quarter-comparison.jpg",
+      "bytes": 557320,
+      "sha256": "7a7a55c192083be4fcbf2cd4e3b68f00da8b6df33d6d1264c8f6e149f3d1ec4d",
+      "size_px": [
+        3200,
+        1210
+      ],
+      "group_id": "mona-likeness-360-20260921-normalized-three_quarter",
+      "mode": "EQUAL_SCREEN_HEIGHT_NOT_PHYSICAL_RATIO",
+      "roles": [
+        "original-source",
+        "phase1-fine-c",
+        "r3-baseline",
+        "dense360-pilot"
+      ]
+    },
+    {
+      "path": "face-comparison.jpg",
+      "bytes": 405799,
+      "sha256": "1553534b835f24cb33e8d56341ae1e78fcd295c1d136caf408bb07bf45ca790c",
+      "size_px": [
+        2520,
+        950
+      ],
+      "group_id": "mona-likeness-360-20260921-registered-face",
+      "mode": "IDENTICAL_NORMALIZED_HEAD_FACE_REGION",
+      "roles": [
+        "original-source",
+        "phase1-fine-c",
+        "r3-baseline",
+        "dense360-pilot"
+      ]
+    },
+    {
+      "path": "physical-size-comparison.jpg",
+      "bytes": 355375,
+      "sha256": "e0833293771c670a6e1750a5aa932e5e43e7e51c8501a1f527153a4a69fb8eec",
+      "size_px": [
+        2440,
+        1430
+      ],
+      "group_id": "mona-likeness-360-20260921-physical-front",
+      "mode": "PHYSICAL_SIZE_RATIO",
+      "pixels_per_mm": 2.5,
+      "roles": [
+        "phase1-fine-c",
+        "dense360-pilot"
+      ]
+    }
+  ],
+  "fixed_interface_image": {
+    "path": "fixed-8mm-parts.png",
+    "bytes": 74977,
+    "sha256": "5b723cc4388f8534fa188c0f0a1fbaf7d6f009ba792d3a310cf13b3e9c0d985a",
+    "size_px": [
+      1620,
+      970
+    ],
+    "group_id": "mona-likeness-360-20260921-fixed-interface",
+    "mode": "ACTUAL_NATIVE_PART_SECTIONS",
+    "pixels_per_mm": 13,
+    "part_type_ids": [
+      "BR-02x02-H096",
+      "BR-02x04-H096",
+      "PL-02x04-H032"
+    ],
+    "note": "Part diagrams use13px/mm, separately labelled; not the2.5px/mm whole-figure scale image."
+  },
+  "render_conditions": {
+    "study_id": "mona-likeness-360-20260921",
+    "roles": {
+      "original-source": {
+        "normalization": {
+          "front": {
+            "group_id": "mona-likeness-360-20260921-normalized-front",
+            "role": "original-source",
+            "view": "front",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -243.10228845,
+              30.38778606
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              30.38778606
+            ],
+            "ortho_scale_mm": 84.41051682361112,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 14.216238037110783,
+            "actual_projected_height_mm": 60.775572113,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+            "direction_world": [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            "right_world": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "up_world": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          "three_quarter": {
+            "group_id": "mona-likeness-360-20260921-normalized-three_quarter",
+            "role": "original-source",
+            "view": "three_quarter",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              87.79134989,
+              -215.1401906,
+              132.97791362
+            ],
+            "target_mm": [
+              -3.43047891,
+              -0.2350294,
+              29.03284257
+            ],
+            "ortho_scale_mm": 88.73564546523362,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 13.523314038101596,
+            "actual_projected_height_mm": 63.8896647349682,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+            "direction_world": [
+              0.3569506476,
+              -0.8409230276,
+              0.4067366431
+            ],
+            "right_world": [
+              0.9205048535,
+              0.3907311285,
+              -0.0
+            ],
+            "up_world": [
+              -0.1589246675,
+              0.374403054,
+              0.9135454576
+            ]
+          }
+        },
+        "registration": {
+          "front": {
+            "group_id": "mona-likeness-360-20260921-registered-character-front",
+            "role": "original-source",
+            "view": "front",
+            "mode": "REGISTERED_BODY_FOR_DESCRIPTIVE_METRICS",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -243.10228845,
+              30.38778606
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              30.38778606
+            ],
+            "ortho_scale_mm": 88.12457956350559,
+            "image_size_px": [
+              1024,
+              1024
+            ],
+            "pixels_per_mm": 11.619913593597012,
+            "body_height_mm": 60.775572112762475,
+            "body_bottom_z_mm": 0.0,
+            "registered_body_height_px": 706.2068965517242,
+            "exclude_foundation": true,
+            "scope": "Original-source XY origin and body-normalized height. Excludes added foundations; includes actual studs/seams. Not a mechanical or aesthetic pass criterion."
+          },
+          "side": {
+            "group_id": "mona-likeness-360-20260921-registered-character-side",
+            "role": "original-source",
+            "view": "side",
+            "mode": "REGISTERED_BODY_FOR_DESCRIPTIVE_METRICS",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              243.10228845,
+              -0.0,
+              30.38778606
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              30.38778606
+            ],
+            "ortho_scale_mm": 88.12457956350559,
+            "image_size_px": [
+              1024,
+              1024
+            ],
+            "pixels_per_mm": 11.619913593597012,
+            "body_height_mm": 60.775572112762475,
+            "body_bottom_z_mm": 0.0,
+            "registered_body_height_px": 706.2068965517242,
+            "exclude_foundation": true,
+            "scope": "Original-source XY origin and body-normalized height. Excludes added foundations; includes actual studs/seams. Not a mechanical or aesthetic pass criterion."
+          }
+        },
+        "physical_scale": {
+          "group_id": "mona-likeness-360-20260921-physical-front",
+          "role": "original-source",
+          "view": "front",
+          "mode": "PHYSICAL_SCALE_SAME_PIXELS_PER_MM",
+          "projection": "ORTHOGRAPHIC",
+          "position_mm": [
+            0,
+            -2000,
+            180
+          ],
+          "target_mm": [
+            0,
+            0,
+            180
+          ],
+          "ortho_scale_mm": 480.0,
+          "image_size_px": [
+            1200,
+            1200
+          ],
+          "pixels_per_mm": 2.5,
+          "actual_overall_height_mm": 60.775572112762475,
+          "note": "Identical2.5px/mm and sharedground plane for initialC and newpilot; models are not independently fit to frame."
+        },
+        "body_height_mm": 60.775572112762475,
+        "body_z0_mm": 0.0,
+        "overall_height_mm": 60.775572112762475
+      },
+      "phase1-fine-c": {
+        "normalization": {
+          "front": {
+            "group_id": "mona-likeness-360-20260921-normalized-front",
+            "role": "phase1-fine-c",
+            "view": "front",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -722.85333292,
+              90.35666662
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              90.35666662
+            ],
+            "ortho_scale_mm": 250.9907405972222,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 4.7810528673075705,
+            "actual_projected_height_mm": 180.71333323,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+            "direction_world": [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            "right_world": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "up_world": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          "three_quarter": {
+            "group_id": "mona-likeness-360-20260921-normalized-three_quarter",
+            "role": "phase1-fine-c",
+            "view": "three_quarter",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              270.91099602,
+              -661.7848345,
+              405.77101255
+            ],
+            "target_mm": [
+              -9.73999019,
+              -0.61254467,
+              85.97599109
+            ],
+            "ortho_scale_mm": 273.0020515654853,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 4.3955713633608156,
+            "actual_projected_height_mm": 196.5614771271494,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+            "direction_world": [
+              0.3569506476,
+              -0.8409230276,
+              0.4067366431
+            ],
+            "right_world": [
+              0.9205048535,
+              0.3907311285,
+              -0.0
+            ],
+            "up_world": [
+              -0.1589246675,
+              0.374403054,
+              0.9135454576
+            ]
+          }
+        },
+        "registration": {
+          "front": {
+            "group_id": "mona-likeness-360-20260921-registered-character-front",
+            "role": "phase1-fine-c",
+            "view": "front",
+            "mode": "REGISTERED_BODY_FOR_DESCRIPTIVE_METRICS",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -720.0,
+              90.0
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              90.0
+            ],
+            "ortho_scale_mm": 261.0,
+            "image_size_px": [
+              1024,
+              1024
+            ],
+            "pixels_per_mm": 3.9233716475095783,
+            "body_height_mm": 180,
+            "body_bottom_z_mm": 0,
+            "registered_body_height_px": 706.2068965517242,
+            "exclude_foundation": true,
+            "scope": "Original-source XY origin and body-normalized height. Excludes added foundations; includes actual studs/seams. Not a mechanical or aesthetic pass criterion."
+          },
+          "side": {
+            "group_id": "mona-likeness-360-20260921-registered-character-side",
+            "role": "phase1-fine-c",
+            "view": "side",
+            "mode": "REGISTERED_BODY_FOR_DESCRIPTIVE_METRICS",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              720.0,
+              -0.0,
+              90.0
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              90.0
+            ],
+            "ortho_scale_mm": 261.0,
+            "image_size_px": [
+              1024,
+              1024
+            ],
+            "pixels_per_mm": 3.9233716475095783,
+            "body_height_mm": 180,
+            "body_bottom_z_mm": 0,
+            "registered_body_height_px": 706.2068965517242,
+            "exclude_foundation": true,
+            "scope": "Original-source XY origin and body-normalized height. Excludes added foundations; includes actual studs/seams. Not a mechanical or aesthetic pass criterion."
+          }
+        },
+        "physical_scale": {
+          "group_id": "mona-likeness-360-20260921-physical-front",
+          "role": "phase1-fine-c",
+          "view": "front",
+          "mode": "PHYSICAL_SCALE_SAME_PIXELS_PER_MM",
+          "projection": "ORTHOGRAPHIC",
+          "position_mm": [
+            0,
+            -2000,
+            180
+          ],
+          "target_mm": [
+            0,
+            0,
+            180
+          ],
+          "ortho_scale_mm": 480.0,
+          "image_size_px": [
+            1200,
+            1200
+          ],
+          "pixels_per_mm": 2.5,
+          "actual_overall_height_mm": 180.71,
+          "note": "Identical2.5px/mm and sharedground plane for initialC and newpilot; models are not independently fit to frame."
+        },
+        "body_height_mm": 180,
+        "body_z0_mm": 0,
+        "overall_height_mm": 180.71
+      },
+      "r3-baseline": {
+        "normalization": {
+          "front": {
+            "group_id": "mona-likeness-360-20260921-normalized-front",
+            "role": "r3-baseline",
+            "view": "front",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -723.99999848,
+              90.49999981
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              90.49999981
+            ],
+            "ortho_scale_mm": 251.3888883611111,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 4.773480673005098,
+            "actual_projected_height_mm": 180.99999961999998,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+            "direction_world": [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            "right_world": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "up_world": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          "three_quarter": {
+            "group_id": "mona-likeness-360-20260921-normalized-three_quarter",
+            "role": "r3-baseline",
+            "view": "three_quarter",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              309.88288195,
+              -743.46172979,
+              440.94481066
+            ],
+            "target_mm": [
+              -4.69717437,
+              -2.35755988,
+              82.48843315
+            ],
+            "ortho_scale_mm": 306.00641001185016,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 3.921486481128058,
+            "actual_projected_height_mm": 220.32461520853212,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+            "direction_world": [
+              0.3569506476,
+              -0.8409230276,
+              0.4067366431
+            ],
+            "right_world": [
+              0.9205048535,
+              0.3907311285,
+              -0.0
+            ],
+            "up_world": [
+              -0.1589246675,
+              0.374403054,
+              0.9135454576
+            ]
+          }
+        },
+        "registration": {
+          "front": {
+            "group_id": "mona-likeness-360-20260921-registered-character-front",
+            "role": "r3-baseline",
+            "view": "front",
+            "mode": "REGISTERED_BODY_FOR_DESCRIPTIVE_METRICS",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -691.2,
+              92.8
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              92.8
+            ],
+            "ortho_scale_mm": 250.56,
+            "image_size_px": [
+              1024,
+              1024
+            ],
+            "pixels_per_mm": 4.086845466155811,
+            "body_height_mm": 172.8,
+            "body_bottom_z_mm": 6.4,
+            "registered_body_height_px": 706.2068965517242,
+            "exclude_foundation": true,
+            "scope": "Original-source XY origin and body-normalized height. Excludes added foundations; includes actual studs/seams. Not a mechanical or aesthetic pass criterion."
+          },
+          "side": {
+            "group_id": "mona-likeness-360-20260921-registered-character-side",
+            "role": "r3-baseline",
+            "view": "side",
+            "mode": "REGISTERED_BODY_FOR_DESCRIPTIVE_METRICS",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              691.2,
+              -0.0,
+              92.8
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              92.8
+            ],
+            "ortho_scale_mm": 250.56,
+            "image_size_px": [
+              1024,
+              1024
+            ],
+            "pixels_per_mm": 4.086845466155811,
+            "body_height_mm": 172.8,
+            "body_bottom_z_mm": 6.4,
+            "registered_body_height_px": 706.2068965517242,
+            "exclude_foundation": true,
+            "scope": "Original-source XY origin and body-normalized height. Excludes added foundations; includes actual studs/seams. Not a mechanical or aesthetic pass criterion."
+          }
+        },
+        "physical_scale": {
+          "group_id": "mona-likeness-360-20260921-physical-front",
+          "role": "r3-baseline",
+          "view": "front",
+          "mode": "PHYSICAL_SCALE_SAME_PIXELS_PER_MM",
+          "projection": "ORTHOGRAPHIC",
+          "position_mm": [
+            0,
+            -2000,
+            180
+          ],
+          "target_mm": [
+            0,
+            0,
+            180
+          ],
+          "ortho_scale_mm": 480.0,
+          "image_size_px": [
+            1200,
+            1200
+          ],
+          "pixels_per_mm": 2.5,
+          "actual_overall_height_mm": 181.0,
+          "note": "Identical2.5px/mm and sharedground plane for initialC and newpilot; models are not independently fit to frame."
+        },
+        "body_height_mm": 172.8,
+        "body_z0_mm": 6.4,
+        "overall_height_mm": 181.0
+      },
+      "dense360-pilot": {
+        "normalization": {
+          "front": {
+            "group_id": "mona-likeness-360-20260921-normalized-front",
+            "role": "dense360-pilot",
+            "view": "front",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -1440.8,
+              180.1
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              180.1
+            ],
+            "ortho_scale_mm": 500.27777777777777,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 2.3986674069961134,
+            "actual_projected_height_mm": 360.2,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+            "direction_world": [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            "right_world": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "up_world": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          "three_quarter": {
+            "group_id": "mona-likeness-360-20260921-normalized-three_quarter",
+            "role": "dense360-pilot",
+            "view": "three_quarter",
+            "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              529.18192974,
+              -1289.79154841,
+              796.80706557
+            ],
+            "target_mm": [
+              -17.93046754,
+              -0.8755129,
+              173.38570086
+            ],
+            "ortho_scale_mm": 532.2012543512802,
+            "image_size_px": [
+              1200,
+              1200
+            ],
+            "pixels_per_mm": 2.254786117448604,
+            "actual_projected_height_mm": 383.18490313292176,
+            "rendered_model_height_px": 864.0,
+            "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+            "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+            "direction_world": [
+              0.3569506476,
+              -0.8409230276,
+              0.4067366431
+            ],
+            "right_world": [
+              0.9205048535,
+              0.3907311285,
+              -0.0
+            ],
+            "up_world": [
+              -0.1589246675,
+              0.374403054,
+              0.9135454576
+            ]
+          }
+        },
+        "registration": {
+          "front": {
+            "group_id": "mona-likeness-360-20260921-registered-character-front",
+            "role": "dense360-pilot",
+            "view": "front",
+            "mode": "REGISTERED_BODY_FOR_DESCRIPTIVE_METRICS",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              0.0,
+              -1408.0,
+              182.4
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              182.4
+            ],
+            "ortho_scale_mm": 510.4,
+            "image_size_px": [
+              1024,
+              1024
+            ],
+            "pixels_per_mm": 2.0062695924764893,
+            "body_height_mm": 352,
+            "body_bottom_z_mm": 6.4,
+            "registered_body_height_px": 706.2068965517242,
+            "exclude_foundation": true,
+            "scope": "Original-source XY origin and body-normalized height. Excludes added foundations; includes actual studs/seams. Not a mechanical or aesthetic pass criterion."
+          },
+          "side": {
+            "group_id": "mona-likeness-360-20260921-registered-character-side",
+            "role": "dense360-pilot",
+            "view": "side",
+            "mode": "REGISTERED_BODY_FOR_DESCRIPTIVE_METRICS",
+            "projection": "ORTHOGRAPHIC",
+            "position_mm": [
+              1408.0,
+              -0.0,
+              182.4
+            ],
+            "target_mm": [
+              0.0,
+              0.0,
+              182.4
+            ],
+            "ortho_scale_mm": 510.4,
+            "image_size_px": [
+              1024,
+              1024
+            ],
+            "pixels_per_mm": 2.0062695924764893,
+            "body_height_mm": 352,
+            "body_bottom_z_mm": 6.4,
+            "registered_body_height_px": 706.2068965517242,
+            "exclude_foundation": true,
+            "scope": "Original-source XY origin and body-normalized height. Excludes added foundations; includes actual studs/seams. Not a mechanical or aesthetic pass criterion."
+          }
+        },
+        "physical_scale": {
+          "group_id": "mona-likeness-360-20260921-physical-front",
+          "role": "dense360-pilot",
+          "view": "front",
+          "mode": "PHYSICAL_SCALE_SAME_PIXELS_PER_MM",
+          "projection": "ORTHOGRAPHIC",
+          "position_mm": [
+            0,
+            -2000,
+            180
+          ],
+          "target_mm": [
+            0,
+            0,
+            180
+          ],
+          "ortho_scale_mm": 480.0,
+          "image_size_px": [
+            1200,
+            1200
+          ],
+          "pixels_per_mm": 2.5,
+          "actual_overall_height_mm": 360.2,
+          "note": "Identical2.5px/mm and sharedground plane for initialC and newpilot; models are not independently fit to frame."
+        },
+        "body_height_mm": 352,
+        "body_z0_mm": 6.4,
+        "overall_height_mm": 360.2
+      }
+    },
+    "source_palette": {
+      "c0": {
+        "hex": "#5E43B7",
+        "name": "Purple",
+        "source": "3MF filament_colour[0]"
+      },
+      "c1": {
+        "hex": "#FFFFFF",
+        "name": "Jade white",
+        "source": "3MF filament_colour[1]"
+      },
+      "c2": {
+        "hex": "#000000",
+        "name": "Black",
+        "source": "3MF filament_colour[2]"
+      },
+      "c3": {
+        "hex": "#F5547C",
+        "name": "Hot pink",
+        "source": "3MF filament_colour[3]"
+      }
+    },
+    "presentation": {
+      "world_rgba": [
+        0.68,
+        0.76,
+        0.86,
+        1
+      ],
+      "world_strength": 0.35,
+      "view_transform": "AgX",
+      "look": "AgX - Medium High Contrast",
+      "exposure": -0.3,
+      "material_roughness": 0.65,
+      "specular_ior_level": 0.0,
+      "light_scaling": "Same positions/size divided by modelheight; light power scales with height squared. Same angular lighting on different actual sizes."
+    },
+    "face_region": {
+      "reference": "Original-source character-body registration, not foundation/whole-assembly height",
+      "x_fraction_of_body_height": [
+        -0.4,
+        0.4
+      ],
+      "z_fraction_of_body_height": [
+        0.15,
+        1.015
+      ],
+      "mode": "IDENTICAL_NORMALIZED_HEAD_FACE_REGION",
+      "quantitative_face_region": {
+        "x_fraction": [
+          -0.29,
+          0.29
+        ],
+        "z_fraction": [
+          0.2,
+          0.58
+        ]
+      }
+    }
+  },
+  "descriptive_likeness_metrics": {
+    "method": "Actual native/source emission-label renders under known source-body registration; originals ground-normalized, addedfoundationshidden.1024x1024orthographic images,1.45bodyheight imageplane.",
+    "source_registration": "OriginalSTL/3MF pose; sourcebodyheight60.7756 / firstC180 / r3body172.8 / pilotbody352 normalized separately; no coarse-r3 shape dilation",
+    "role_vs_original": [
+      {
+        "role": "phase1-fine-c",
+        "front": {
+          "intersection_over_union": 0.9360441847434563,
+          "reference_visible_pixels": 428098,
+          "candidate_visible_pixels": 442634,
+          "silhouette_symmetric_mean_distance_fraction_of_body_height": 0.10754024690161948,
+          "silhouette_symmetric_p95_distance_fraction_of_body_height": 0.3425348794528304,
+          "interpretation": "Descriptive projected geometry overlap/boundary distance; no aesthetic or mechanical pass threshold"
+        },
+        "side": {
+          "intersection_over_union": 0.9417717229955037,
+          "reference_visible_pixels": 356214,
+          "candidate_visible_pixels": 365861,
+          "silhouette_symmetric_mean_distance_fraction_of_body_height": 0.10843181379581367,
+          "silhouette_symmetric_p95_distance_fraction_of_body_height": 0.3276679713198733,
+          "interpretation": "Descriptive projected geometry overlap/boundary distance; no aesthetic or mechanical pass threshold"
+        },
+        "face_colors": {
+          "face_roi_box_px": [
+            307,
+            456,
+            717,
+            724
+          ],
+          "matching_visible_label_fraction": 0.909592282489989,
+          "colors": {
+            "purple": {
+              "intersection_over_union": 0.34404414151249596,
+              "reference_pixels": 1876,
+              "candidate_pixels": 2265
+            },
+            "white": {
+              "intersection_over_union": 0.6829475965632015,
+              "reference_pixels": 12038,
+              "candidate_pixels": 9704
+            },
+            "black": {
+              "intersection_over_union": 0.7987485499349668,
+              "reference_pixels": 24496,
+              "candidate_pixels": 26673
+            },
+            "pink": {
+              "intersection_over_union": 0.9148473692075697,
+              "reference_pixels": 71470,
+              "candidate_pixels": 69480
+            }
+          },
+          "interpretation": "Nearest source palette labels on actual registered visible surfaces. Face pose, color regions and gaps influence this statistic; it does not declare likeness approval."
+        },
+        "visible_dark_components": {
+          "black_visible_components_larger_than_11px": [
+            {
+              "pixels": 11369,
+              "center_px": [
+                383.82786524760314,
+                563.158413228956
+              ],
+              "bounds_px": [
+                332,
+                495,
+                441,
+                621
+              ]
+            },
+            {
+              "pixels": 10970,
+              "center_px": [
+                641.1032816773018,
+                560.3397447584321
+              ],
+              "bounds_px": [
+                583,
+                498,
+                692,
+                620
+              ]
+            },
+            {
+              "pixels": 1452,
+              "center_px": [
+                527.1280991735537,
+                682.1611570247934
+              ],
+              "bounds_px": [
+                489,
+                667,
+                567,
+                696
+              ]
+            },
+            {
+              "pixels": 1198,
+              "center_px": [
+                511.54006677796326,
+                609.8430717863105
+              ],
+              "bounds_px": [
+                489,
+                589,
+                535,
+                630
+              ]
+            },
+            {
+              "pixels": 1124,
+              "center_px": [
+                699.9937722419929,
+                573.0
+              ],
+              "bounds_px": [
+                693,
+                536,
+                708,
+                611
+              ]
+            },
+            {
+              "pixels": 285,
+              "center_px": [
+                323.0,
+                573.0
+              ],
+              "bounds_px": [
+                316,
+                564,
+                331,
+                583
+              ]
+            },
+            {
+              "pixels": 140,
+              "center_px": [
+                574.05,
+                662.1785714285714
+              ],
+              "bounds_px": [
+                567,
+                658,
+                582,
+                668
+              ]
+            },
+            {
+              "pixels": 135,
+              "center_px": [
+                480.0,
+                681.0
+              ],
+              "bounds_px": [
+                473,
+                677,
+                488,
+                686
+              ]
+            }
+          ],
+          "note": "Diagnostic components only; do not automatically label them as eyes/mouth or accept a face because components exist."
+        }
+      },
+      {
+        "role": "r3-baseline",
+        "front": {
+          "intersection_over_union": 0.8507463280896908,
+          "reference_visible_pixels": 428098,
+          "candidate_visible_pixels": 501456,
+          "silhouette_symmetric_mean_distance_fraction_of_body_height": 0.03187901851812312,
+          "silhouette_symmetric_p95_distance_fraction_of_body_height": 0.08613286786066815,
+          "interpretation": "Descriptive projected geometry overlap/boundary distance; no aesthetic or mechanical pass threshold"
+        },
+        "side": {
+          "intersection_over_union": 0.8442763118885266,
+          "reference_visible_pixels": 356214,
+          "candidate_visible_pixels": 421379,
+          "silhouette_symmetric_mean_distance_fraction_of_body_height": 0.036128708008941184,
+          "silhouette_symmetric_p95_distance_fraction_of_body_height": 0.0796972641480372,
+          "interpretation": "Descriptive projected geometry overlap/boundary distance; no aesthetic or mechanical pass threshold"
+        },
+        "face_colors": {
+          "face_roi_box_px": [
+            307,
+            456,
+            717,
+            724
+          ],
+          "matching_visible_label_fraction": 0.7916090280305789,
+          "colors": {
+            "purple": {
+              "intersection_over_union": 0.08431629532546964,
+              "reference_pixels": 1876,
+              "candidate_pixels": 606
+            },
+            "white": {
+              "intersection_over_union": 0.3168407410230998,
+              "reference_pixels": 12038,
+              "candidate_pixels": 5235
+            },
+            "black": {
+              "intersection_over_union": 0.4855668625483732,
+              "reference_pixels": 24496,
+              "candidate_pixels": 27328
+            },
+            "pink": {
+              "intersection_over_union": 0.7964164050092742,
+              "reference_pixels": 71470,
+              "candidate_pixels": 76711
+            }
+          },
+          "interpretation": "Nearest source palette labels on actual registered visible surfaces. Face pose, color regions and gaps influence this statistic; it does not declare likeness approval."
+        },
+        "visible_dark_components": {
+          "black_visible_components_larger_than_11px": [
+            {
+              "pixels": 11660,
+              "center_px": [
+                365.4393653516295,
+                543.2474271012007
+              ],
+              "bounds_px": [
+                300,
+                473,
+                430,
+                590
+              ]
+            },
+            {
+              "pixels": 10412,
+              "center_px": [
+                658.4962543219362,
+                549.682193622743
+              ],
+              "bounds_px": [
+                594,
+                505,
+                724,
+                629
+              ]
+            },
+            {
+              "pixels": 3820,
+              "center_px": [
+                511.5,
+                609.9900523560209
+              ],
+              "bounds_px": [
+                463,
+                591,
+                561,
+                630
+              ]
+            },
+            {
+              "pixels": 2535,
+              "center_px": [
+                495.0,
+                688.0
+              ],
+              "bounds_px": [
+                463,
+                669,
+                528,
+                708
+              ]
+            }
+          ],
+          "note": "Diagnostic components only; do not automatically label them as eyes/mouth or accept a face because components exist."
+        }
+      },
+      {
+        "role": "dense360-pilot",
+        "front": {
+          "intersection_over_union": 0.9547447534512367,
+          "reference_visible_pixels": 428098,
+          "candidate_visible_pixels": 448390,
+          "silhouette_symmetric_mean_distance_fraction_of_body_height": 0.008421787460959514,
+          "silhouette_symmetric_p95_distance_fraction_of_body_height": 0.018462584936609065,
+          "interpretation": "Descriptive projected geometry overlap/boundary distance; no aesthetic or mechanical pass threshold"
+        },
+        "side": {
+          "intersection_over_union": 0.9539640710865444,
+          "reference_visible_pixels": 356214,
+          "candidate_visible_pixels": 373404,
+          "silhouette_symmetric_mean_distance_fraction_of_body_height": 0.009499228285218462,
+          "silhouette_symmetric_p95_distance_fraction_of_body_height": 0.018950215892752878,
+          "interpretation": "Descriptive projected geometry overlap/boundary distance; no aesthetic or mechanical pass threshold"
+        },
+        "face_colors": {
+          "face_roi_box_px": [
+            307,
+            456,
+            717,
+            724
+          ],
+          "matching_visible_label_fraction": 0.9236621769202766,
+          "colors": {
+            "purple": {
+              "intersection_over_union": 0.2892857142857143,
+              "reference_pixels": 1876,
+              "candidate_pixels": 2095
+            },
+            "white": {
+              "intersection_over_union": 0.6520796220277283,
+              "reference_pixels": 12038,
+              "candidate_pixels": 9292
+            },
+            "black": {
+              "intersection_over_union": 0.8189758823113374,
+              "reference_pixels": 24496,
+              "candidate_pixels": 26941
+            },
+            "pink": {
+              "intersection_over_union": 0.9327558480520007,
+              "reference_pixels": 71470,
+              "candidate_pixels": 71552
+            }
+          },
+          "interpretation": "Nearest source palette labels on actual registered visible surfaces. Face pose, color regions and gaps influence this statistic; it does not declare likeness approval."
+        },
+        "visible_dark_components": {
+          "black_visible_components_larger_than_11px": [
+            {
+              "pixels": 12402,
+              "center_px": [
+                378.066763425254,
+                564.2997903563942
+              ],
+              "bounds_px": [
+                311,
+                499,
+                440,
+                621
+              ]
+            },
+            {
+              "pixels": 12209,
+              "center_px": [
+                646.2738963060037,
+                559.1515275616349
+              ],
+              "bounds_px": [
+                584,
+                496,
+                713,
+                615
+              ]
+            },
+            {
+              "pixels": 1412,
+              "center_px": [
+                511.5,
+                611.5892351274788
+              ],
+              "bounds_px": [
+                488,
+                592,
+                536,
+                627
+              ]
+            },
+            {
+              "pixels": 518,
+              "center_px": [
+                500.8127413127413,
+                680.027027027027
+              ],
+              "bounds_px": [
+                472,
+                673,
+                536,
+                685
+              ]
+            },
+            {
+              "pixels": 304,
+              "center_px": [
+                554.4473684210526,
+                673.1052631578947
+              ],
+              "bounds_px": [
+                536,
+                666,
+                568,
+                679
+              ]
+            },
+            {
+              "pixels": 96,
+              "center_px": [
+                575.5,
+                662.5
+              ],
+              "bounds_px": [
+                568,
+                660,
+                584,
+                666
+              ]
+            }
+          ],
+          "note": "Diagnostic components only; do not automatically label them as eyes/mouth or accept a face because components exist."
+        }
+      }
+    ],
+    "pilot_vs_primary_fine_c": {
+      "front": {
+        "intersection_over_union": 0.9506120947827458,
+        "reference_visible_pixels": 442634,
+        "candidate_visible_pixels": 448390,
+        "silhouette_symmetric_mean_distance_fraction_of_body_height": 0.1066148885510784,
+        "silhouette_symmetric_p95_distance_fraction_of_body_height": 0.3436039993400502,
+        "interpretation": "Descriptive projected geometry overlap/boundary distance; no aesthetic or mechanical pass threshold"
+      },
+      "side": {
+        "intersection_over_union": 0.9547191263766046,
+        "reference_visible_pixels": 365861,
+        "candidate_visible_pixels": 373404,
+        "silhouette_symmetric_mean_distance_fraction_of_body_height": 0.10746041530624076,
+        "silhouette_symmetric_p95_distance_fraction_of_body_height": 0.33509644016935236,
+        "interpretation": "Descriptive projected geometry overlap/boundary distance; no aesthetic or mechanical pass threshold"
+      },
+      "face_colors": {
+        "face_roi_box_px": [
+          307,
+          456,
+          717,
+          724
+        ],
+        "matching_visible_label_fraction": 0.9083181652712049,
+        "colors": {
+          "purple": {
+            "intersection_over_union": 0.2630359212050985,
+            "reference_pixels": 2265,
+            "candidate_pixels": 2095
+          },
+          "white": {
+            "intersection_over_union": 0.6181957577306415,
+            "reference_pixels": 9704,
+            "candidate_pixels": 9292
+          },
+          "black": {
+            "intersection_over_union": 0.8222418598327782,
+            "reference_pixels": 26673,
+            "candidate_pixels": 26941
+          },
+          "pink": {
+            "intersection_over_union": 0.9166383539676284,
+            "reference_pixels": 69480,
+            "candidate_pixels": 71552
+          }
+        },
+        "interpretation": "Nearest source palette labels on actual registered visible surfaces. Face pose, color regions and gaps influence this statistic; it does not declare likeness approval."
+      }
+    },
+    "face_region": {
+      "x_fraction": [
+        -0.29,
+        0.29
+      ],
+      "z_fraction": [
+        0.2,
+        0.58
+      ]
+    },
+    "face_roi_box_px": [
+      307,
+      456,
+      717,
+      724
+    ],
+    "limitations": [
+      "Scalar overlaps cannot certify facial expression or aesthetic likeness.",
+      "Actual studs, gaps, palette quantization and firstC versus newplate Z-resolution affect masks.",
+      "These masks exclude addedfoundationforregistration; beauty comparison showscompleteassembledheight.",
+      "No inferred print, fit, retention, weight or stability approval."
+    ],
+    "aesthetic_pass": null,
+    "user_visual_decision": "REQUIRED"
+  },
+  "fidelity_sampling": {
+    "sampled_occupied_cells": 115033,
+    "sampled_boundary_cells": 11776,
+    "actual_cell_count": 115033,
+    "occupied_cell_changes": 0,
+    "boundary_color_changes": 3,
+    "boundary_color_change_reason": "Only original-source front-ray corrections for the recessed painted smile; no guessed face color or silhouette editing.",
+    "source_visible_smile_corrected_cells": [
+      [
+        0,
+        -20,
+        28
+      ],
+      [
+        2,
+        -20,
+        29
+      ],
+      [
+        3,
+        -20,
+        30
+      ]
+    ],
+    "hidden_color_backing_changes": 434,
+    "sampler_connectivity_bridge_cells": 0,
+    "sampling_source": "Pinned originalMonaSTL/painted3MF at352mm; never r3occupancy",
+    "first_C_cell_count": 82357,
+    "pilot_cell_count": 115033,
+    "normalized_xy_pitch_first_C": 0.022222222222222223,
+    "normalized_xy_pitch_pilot": 0.022727272727272728,
+    "normalized_z_pitch_first_C": 0.013333333333333332,
+    "normalized_z_pitch_pilot": 0.009090909090909092,
+    "note": "Groupedphysicalpartcount is distinct fromsampledcelldensity. This preserves a digital sampling, not the continuous surface exactly."
+  },
+  "piece_count_definition_ja": "実assembly instance数。内部/基礎を含み、仮支持台2個・背景は除きます。セル密度/型数/頂点数とは別です。",
+  "piece_count_definition_en": "Actual assembly instances including foundation and internal parts; excludes 2 temporary pedestals and the stage. Not sampled-cell, type or vertex counts.",
+  "priority_ja": "部品の少なさではなく、最初の細密Cの顔・体形・丸みへの近さを優先しました。本人の見た目確認がまだ必要です。",
+  "priority_en": "Priority is resemblance to the initial fine C face, proportions and roundness, not minimizing pieces. User visual approval is still required.",
+  "normalization_note_ja": "形比較は4モデルを同じ画面上高さへ正規化。実寸比ではありません。実寸比較だけ同じpx/mmです。",
+  "normalization_note_en": "Shape panels normalize all 4 models to equal screen height. They are not size-ratio images. Only the separate physical-size image uses identical px/mm.",
+  "assembly_layer_note_ja": "層数は組付け部品の底面Z位置の数です。3.2mmはプレートの本体高さで、FDMの印刷層高ではありません。",
+  "assembly_layer_note_en": "Layer counts refer to distinct assembly bottom-Z positions.3.2mm is the plate body height, not an FDM slicing layer height.",
+  "limits_ja": [
+    "8mmXYの段差・ブロック境界・直径4.8mm／高さ1.8mmのスタッドは残り、原型の連続曲面そのものではありません。",
+    "約36cmの完成品と10,908個の組立は大きな作業負担です。部品数だけで美観/扱いやすさ/強度の合格とはしません。",
+    "ひげ先端のため2つの仮支持台が必要。実保持力確認前に取り除かず、大きい完成品の荷重・転倒・摩擦は未検証です。",
+    "元の3MF印刷寸法の原型、初期Cの目標尺度、正規化画面上の倍率は別物です。r2一体一回印刷データは作っていません。"
+  ],
+  "limits_en": [
+    "The 8 mm XY steps, brick seams and 4.8 mm diameter / 1.8 mm tall studs remain; this is not the continuous original surface.",
+    "A roughly 36 cm figure with 10,908 separately assembled parts is a substantial undertaking. Count alone proves neither likeness, handling nor strength.",
+    "Two temporary whisker pedestals are required. Do not remove before actual retention checks; whole-figure loads, tipping and friction are untested.",
+    "Original 3MF print size, initial C target scale and on-screen normalization are distinct. No single-body r2 print data is created."
+  ],
+  "status": {
+    "selection": "NOT_SELECTED",
+    "physical_fit": "UNKNOWN",
+    "retention_strength": "UNKNOWN",
+    "slicer_status": "NOT_SLICED",
+    "full_print": "ON_HOLD",
+    "production_export": "BLOCKED",
+    "user_r3_evaluation": "USER_REJECTS_LIKENESS"
+  },
+  "source": {
+    "repository": "https://github.com/martinwoodward/octoprints",
+    "revision": "981a85f0bec9d1a9c280fd5719d0d797852229c4",
+    "license": "CC BY-NC4.0"
+  },
+  "visual_review": {
+    "study_id": "mona-likeness-360-20260921",
+    "images_actually_inspected": true,
+    "ready_for_user_comparison": true,
+    "user_likeness_approval": "PENDING",
+    "inspection_scope": [
+      "Actual four-column registered face/head comparison",
+      "Actual four-column equal-screen-height front comparison",
+      "Actual four-column equal-screen-height three-quarter comparison",
+      "Separate initial-C versus pilot physical-size image at the same2.5px/mm"
+    ],
+    "observations_ja": [
+      "新パイロットは現行r3より、初期Cの丸い頬・頭部、左右の目、口・耳・ひげに近い細かい段差を持っています。",
+      "最初のレンダーで口元に紫の切れが見えました。原3MFの正面可視面をrayで調べ、黒い口の塗色が最短距離サンプルでは紫の凹部へ誤分類される3セルを特定しました。",
+      "他の可視セルを持たない3つの既存部品を、実際の元三角形の黒へ変更して再描画しました。部品数・ID・形状・接合部は不変で、推測した顔パーツを追加していません。",
+      "修正後の口は黒い段階的な笑みとして読めますが、連続した原型曲線と完全一致するわけではありません。",
+      "額・目・頬のプレート段差、露出スタッド、平らな色面は残ります。原型の連続曲面や本人の『同じクオリティ』を客観的に合格扱いしていません。",
+      "新案の額と鼻の間の大きい同色面、目の白い縁、細い段階的な口元は初期Cと同一ではありません。顔の拡大でこの差を隠さず示しています。",
+      "大きさだけで改善を演出しないよう、形比較の4体は投影上の画面高さを揃えています。約18cm対36cmの実寸比は別画像です。",
+      "パイロットの部品数は初期Cより少ないですが、低部品数目標による削除ではありません。元から再サンプリングした占有セルは初期Cより多く、内部の長い支持付き部品へ統合されています。"
+    ],
+    "observations_en": [
+      "Compared with current r3, the new pilot has finer stepping around the rounded head/cheeks, eyes, mouth, ears and whiskers, closer to the initial fine-C reference.",
+      "The first rendered smile contained purple interruptions. Actual front rays against the painted original3MF identified three cells where nearest-point sampling had selected an unpainted recess instead of the visible black smile.",
+      "Three existing whole parts with only those exposed cells were recolored to the verified source black and rendered again. Piece counts, IDs, geometry and interfaces did not change; no invented face decoration was added.",
+      "The corrected black stepped smile is readable, but it is not identical to the original continuous curve.",
+      "Forehead/eye/cheek plate steps, exposed studs and planar color regions remain. Neither continuous-surface equivalence nor the user's likeness approval is claimed.",
+      "The larger same-color forehead/nose region, white eye rims and thin stepped smile are not identical to initial C. The face crop exposes rather than hides those differences.",
+      "The four shape panels use equal actual projected screen height. The18cm/36cm physical-size comparison is separate.",
+      "The pilot has fewer physical pieces than initial C because of different grouping, not low-count silhouette pruning. Its fresh source-sampled occupancy is denser."
+    ],
+    "quantitative_interpretation": "Registered silhouette and face-color statistics support comparison only. They do not replace visual approval, physical fit, handling, load or retention tests.",
+    "selection": "NOT_SELECTED",
+    "physical_fit": "UNKNOWN",
+    "retention_strength": "UNKNOWN",
+    "large_figure_load_stability": "UNKNOWN",
+    "slicer_status": "NOT_SLICED",
+    "current_r3_changed": false
+  }
+}

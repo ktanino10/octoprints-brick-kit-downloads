@@ -95,7 +95,7 @@ function renderMetrics() {
       role === 'original' ? notApplicable : format(metrics.part_count, 0),
       role === 'original' ? notApplicable : format(metrics.unique_types, 0),
       role === 'original' ? notApplicable : format(metrics.one_by_one_exceptions, 0),
-      metrics.dimensions_mm.map((value) => format(value)).join(' × '),
+      metrics.dimensions_mm.map((value) => format(value, 3)).join(' × '),
       role === 'original' ? notApplicable : format(metrics.layer_count, 0),
       role === 'original' ? notApplicable : metrics.minimum_part_mm.map((value) => format(value)).join(' / '),
       role === 'original' ? notApplicable : format(metrics.grip_long_ge_15_8_count, 0),
@@ -111,8 +111,20 @@ function renderMetrics() {
     deltas.append(create('p', `${names[role]}との差：${signed(delta.parts)}部品（${signed(delta.percent)}%）`));
   }
   $('#mona-actual-height').textContent = `目標は約360 mm。実データの高さは${format(pilot.metrics.dimensions_mm[2])} mmです。`;
+  $('#mona-layer-note').textContent = study.assembly_layer_note;
   $('#mona-appearance-limit').textContent = study.appearance_limit;
   $('#mona-tradeoff').textContent = study.assembly_tradeoff;
+  const sampling = study.fidelity_sampling;
+  const parts = study.pilot_metrics;
+  $('#mona-sampling').replaceChildren(
+    create('p', `形をサンプリングした占有セル：初期C ${format(sampling.first_C_cell_count, 0)} → 新案 ${format(sampling.pilot_cell_count, 0)}。個別部品数とは異なります。`),
+    create('p', study.visual_observations.at(-1)),
+    create('p', `新案の内訳：3.2 mmプレート ${format(parts.plate_count, 0)}部品、9.6 mm内部ブロック ${format(parts.standard9_6mm_brick_count, 0)}部品。`),
+    create('p', `共通直方体 ${format(parts.common_rectangular_parts, 0)}部品と、直交した支持・把持用形状 ${format(parts.orthogonal_backing_contour_parts, 0)}部品で構成しています。曲面外装や斜面の部品はありません。`),
+    create('p', `基礎の${format(parts.foundation_parts, 0)}部品は総数に含みます。別の仮支持台${format(parts.temporary_aid_count, 0)}個は総数に含みません。`)
+  );
+  $('#mona-interface').replaceChildren(actualImage(study.fixed_interface_image, '実ネイティブ形状の8 mm共通ブロック・部品寸法'));
+  $('#mona-observations').replaceChildren(...study.visual_observations.map((text) => create('li', text)));
   const proof = $('#mona-provenance');
   proof.replaceChildren();
   for (const row of study.rows) {
