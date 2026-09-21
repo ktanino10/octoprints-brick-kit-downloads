@@ -40,6 +40,17 @@ def english(page):
     assert not state["remaining"] and not state["missing"], state
 
 
+def uncropped_parts_diagram(page):
+    image = page.locator("#mona-interface img")
+    expect(image).not_to_have_js_property("naturalWidth", 0)
+    measurements = image.evaluate("""img => {
+      const box = img.getBoundingClientRect(), style = getComputedStyle(img);
+      return {height: box.height, expected: box.width * img.naturalHeight / img.naturalWidth, fit: style.objectFit};
+    }""")
+    assert abs(measurements["height"] - measurements["expected"]) <= 1, measurements
+    assert measurements["fit"] == "contain", measurements
+
+
 with sync_playwright() as playwright:
     browser = playwright.chromium.launch(executable_path=args.browser, headless=True,
                                         args=["--no-first-run", "--disable-background-networking", "--disable-sync"])
@@ -89,7 +100,7 @@ with sync_playwright() as playwright:
                     expect(cells.nth(3)).to_have_text(expected_size)
                 expect(page.locator("#mona-sampling")).to_contain_text(f'{study["fidelity_sampling"]["pilot_cell_count"]:,}')
                 expect(page.locator("#mona-layer-note")).not_to_be_empty()
-                expect(page.locator("#mona-interface img")).not_to_have_js_property("naturalWidth", 0)
+                uncropped_parts_diagram(page)
                 for group in study["comparisons"]:
                     button = page.locator(f'[data-mona-comparison="{group["id"]}"]')
                     button.focus()
@@ -139,6 +150,7 @@ with sync_playwright() as playwright:
         assert phone.evaluate("document.documentElement.scrollWidth <= innerWidth + 1")
         if study:
             expect(phone.locator(f'[data-mona-comparison="{group_id}"]')).to_have_attribute("aria-pressed", "true")
+            uncropped_parts_diagram(phone)
         else:
             expect(phone.locator("#mona-pending")).to_be_visible()
         phone.screenshot(path=str(args.output / "mona-mobile-en.png"), full_page=True)

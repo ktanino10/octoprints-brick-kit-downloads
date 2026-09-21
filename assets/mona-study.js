@@ -9,7 +9,7 @@ const $ = (selector) => document.querySelector(selector);
 const names = { original: '原型Mona（無分割）', 'fine-c': '初期細密C（4 mm）',
   'current-r3': '公開中r3（8 mm）', 'pilot-360': '新しい約36 cm案（8 mm）' };
 const kinds = { shape: '形の比較', face: '顔の拡大', scale: '実寸比' };
-const views = { front: '正面', 'three-quarter': '斜め' };
+const views = { front: '正面', 'three-quarter': '斜め（3/4）' };
 const rules = {
   shape: '画面上の高さをそろえた形の比較です。実寸比ではありません。大きく表示したことを再現度の向上と扱いません。',
   face: '同じ顔領域を切り出した拡大比較です。完成サイズやブロックの実寸比を示す画像ではありません。',

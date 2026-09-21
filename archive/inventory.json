@@ -18261,8 +18261,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "CSS",
-      "bytes": 2509,
-      "sha256": "54a6faa4a6eb201110427d4cbbc5c2b741226776b49710385aa720d2ca9e1201",
+      "bytes": 2579,
+      "sha256": "156d918668431802407fa422527349583901e9e9ef7e94a506ccf7e70b6033be",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/mona-study.css",
       "status": "ARCHIVE_RECORD"
     },
@@ -18271,8 +18271,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "JS",
-      "bytes": 9718,
-      "sha256": "9582fae61220f35bfe034910a944fc231cc4e93a52736737590453bdc2b34a01",
+      "bytes": 9727,
+      "sha256": "c2bf374da53c8af97dbfb99f7ee4b59b79bb22cde0ba2b2e1f361cfa47ae79ee",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/mona-study.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -18485,8 +18485,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "JS",
-      "bytes": 342387,
-      "sha256": "3160bc865a3200578154e393c0031fd30980c3a7c5e2975e25866a49f69ca4ae",
+      "bytes": 342458,
+      "sha256": "29bf3f794462ef2c952f49d7b41a963157517c9776ada4ef0213be4b585a0f2d",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/translations.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -19074,8 +19074,8 @@
       "group": "viewer",
       "revision": "public-viewer-2026-09-19",
       "format": "JS",
-      "bytes": 1203551,
-      "sha256": "733d2cb74c06f228810f909347aafadba1ed736cbbe75b5ce8b9970f84f55331",
+      "bytes": 1203646,
+      "sha256": "ccdc9d1d0d7d64a5a92d3071a646b9ec1f6e4d5c16d37725b5eb1f57d0b09a77",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/viewer/assets/studio.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -19092,7 +19092,7 @@
   ],
   "totals": {
     "files": 1489,
-    "bytes": 816048097,
+    "bytes": 816048342,
     "groups": {
       "site": 51,
       "design": 22,

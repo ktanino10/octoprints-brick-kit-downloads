@@ -90,6 +90,7 @@
   "共通直方体 {0}部品と、直交した支持・把持用形状 {1}部品で構成しています。曲面外装や斜面の部品はありません。": "The study uses {0} common rectangular parts and {1} orthogonal backing or handling shapes. There are no curved-shell or slope parts.",
   "基礎の{0}部品は総数に含みます。別の仮支持台{1}個は総数に含みません。": "The total includes {0} foundation parts and excludes {1} separate temporary pedestals.",
   "配置層数": "Placement layers",
+  "斜め（3/4）": "Three-quarter",
   "長辺15.8 mm以上の部品": "Parts with a long side of at least 15.8 mm",
   "顔の拡大": "Facial close-up",
   "顔の拡大で、同じ正規化領域を使った記録が一致しません。": "The facial close-up records do not use the same normalized region.",

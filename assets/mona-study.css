@@ -9,8 +9,8 @@
 .mona-image-card[data-role="fine-c"]{border-top-color:var(--plum)}
 .mona-image-card[data-role="pilot-360"]{border-top-color:#267c75}
 .mona-image-card h3{font-size:15px;padding:18px 14px;margin:0;min-height:76px;display:flex;align-items:center}
-.mona-image-card .image-link img,.mona-scale-sheet .image-link img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
-.mona-image-card .image-link:hover img,.mona-scale-sheet .image-link:hover img{transform:none}
+.mona-image-card .image-link img,.mona-scale-sheet .image-link img,#mona-interface .image-link img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+.mona-image-card .image-link:hover img,.mona-scale-sheet .image-link:hover img,#mona-interface .image-link:hover img{transform:none}
 .mona-image-card figcaption{padding:14px;font-size:12px;min-height:70px}
 .mona-scale-sheet{margin:24px 0;background:white;border:1px solid var(--line);border-radius:6px;overflow:hidden}
 .mona-scale-sheet figcaption{font-size:12px;padding:20px}
