@@ -119,6 +119,10 @@ def main():
                                  "camera_unchanged": True})
     if len(needed) != 11:
         raise ValueError("Final supplement must contain exactly nine sheets, one CSV and one index")
+    for name in needed:
+        destination = ROOT / PREFIX / name
+        if destination.exists() and destination.read_bytes() != payload[name]:
+            raise ValueError("A fixed comparison artifact would be overwritten: " + name)
     assets = []
     for name in sorted(needed):
         immutable_write(ROOT / PREFIX / name, payload[name])

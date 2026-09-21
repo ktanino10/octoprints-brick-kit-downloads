@@ -143,7 +143,9 @@ function renderComparisonSheets() {
       ? '実寸比・正面：原画像上0.9 px/mm。画面表示は縮小されても6モデルの相対比を保ちます。'
       : image.view === 'front' ? '正面：6モデルを同じ投影高さで比較。実寸比ではありません。'
         : '斜め：6モデルを同じ投影高さで比較。実寸比ではありません。';
-    host.append(actualImage(comparisonFile(image), caption));
+    const figure = element('figure', undefined, 'mona-scale-sheet');
+    figure.append(actualImage(comparisonFile(image), caption), element('figcaption', caption));
+    host.append(figure);
   }
   $('#matrix-comparison-csv').href = assetURL(comparisonFile(comparisons.comparison_csv).path);
 }

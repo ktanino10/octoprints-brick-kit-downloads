@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { DENSITY_ID, COUNT_PERCENTAGES } from '../../assets/density-data.js';
-import { DENSITY_COMPARISON_COLUMNS, comparisonEntries, validateDensityComparisons } from '../../assets/density-comparisons.js';
+import { DENSITY_COMPARISON_COLUMNS, comparisonEntries, comparisonFile, validateDensityComparisons } from '../../assets/density-comparisons.js';
 
 const hash = 'a'.repeat(64);
 const file = path => ({ path, bytes: 10, sha256: hash });
@@ -85,6 +85,9 @@ test('final six-way comparisons preserve frozen denominators, real references an
   assert.equal(data.rows[0].fixed_count_denominator, 12435);
   assert.equal(data.rows[0].columns[0].actual_count, 12411);
   assert.equal(data.comparison_csv.row_count, 15);
+  const physical = comparisonFile(data.rows[0].images[2]);
+  assert.equal(physical.width, 4800);
+  assert.equal(physical.height, 800);
 });
 
 test('final sheets reject missing real cases, old-reference substitutions, inconsistent scales and extra CSV rows', () => {

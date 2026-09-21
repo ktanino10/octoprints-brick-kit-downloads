@@ -11,7 +11,8 @@ export const DENSITY_COMPARISON_COLUMNS = Object.freeze([
 
 export function comparisonFile(file) {
   const path = file.path?.startsWith('/') ? file.path : `/artifacts/studies/${DENSITY_ID}/${file.path}`;
-  return validateDensityFile({ ...file, path });
+  return validateDensityFile({ ...file, path,
+    ...(file.image_size_px ? { width: file.image_size_px[0], height: file.image_size_px[1] } : {}) });
 }
 
 export function comparisonEntries(catalog, character) {
