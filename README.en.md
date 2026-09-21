@@ -67,7 +67,7 @@ Geometry-only 3MF files remain **NOT_SLICED**, not configured Bambu Studio proje
 **[Copilot 1.2× actual 3D guide](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-guide.html?case=copilot-p120)** /
 **[Copilot CG, Blender, animation and native CAD package](https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/tag/part-count-matrix-20260921-copilot-p120)**.
 
-Actual data satisfying the current delivery requirements is available for **Mona's new 1.2×/1.5× revisions and all five Copilot multipliers: seven of fifteen cases**.
+Actual data satisfying the current delivery requirements is available for **Mona's new 1.2×/1.5×/3× revisions, all five Copilot multipliers and Ducky 1.2×: nine of fifteen cases**.
 The 1.2× case contains **21,388 parts versus target 21,448 (−60; actual ratio 1.196665×), 155 types,
 519.8 × 439.8 × 397.0 mm**. The 1.5× case contains **26,690 parts versus target 26,810 (−120; actual ratio 1.493314×),
 162 types, 567.8 × 487.8 × 425.8 mm**. The 2× case has **35,648 parts versus target 35,746 (−98; actual ratio 1.994517×),
@@ -90,7 +90,12 @@ Old URLs are not silently replaced.
 [Mona's new 1.5× revision](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-guide.html?case=mona-p150-root-v2)
 has **18,649 parts (target 18,653; −4), 128 types and zero aids**, separate from the historical 18,675-part design.
 Its flatter uneven mouth and eye/nose color-transfer differences remain. No aesthetic or physical-retention approval is implied.
-The other three new Mona multiplier cases remain incomplete.
+Mona's new 3× case has **37,255 parts (target 37,305; −50), 160 types, 615.8 × 503.8 × 545.8 mm and zero aids**.
+Mona 2× and 4× remain incomplete.
+
+The first Ducky multiplier is **1.2×: 11,586 parts (target 11,603; −17), 93 types,
+311.8 × 455.8 × 397.0 mm and zero temporary aids**. It uses the frozen 9,669-piece baseline, not the old 413-piece r3.
+The other four Ducky multiplier cases remain incomplete.
 Slicer-generated print supports are a separate unvalidated condition.
 All three 1× baselines now have separate public CG, native CAD, Blender and three-chapter animation packages linked from their matrix reference cards.
 **The three baselines do not count toward completion of the fifteen multiplier cases.**

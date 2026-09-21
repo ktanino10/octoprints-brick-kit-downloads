@@ -1,0 +1,66 @@
+{
+  "case_id": "ducky-p120",
+  "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e",
+  "metrics": {
+    "part_count": 11586,
+    "unique_types": 93,
+    "one_by_one_exceptions": 7,
+    "layer_count": 83,
+    "minimum_part_mm": [
+      7.8,
+      7.8,
+      3.2
+    ],
+    "grip_long_ge_15_8_count": 11579
+  },
+  "manifest_sha256": "4810e4314bcb6245a0422485ae3a1417128c096444fc3a7eb87f4670673d51aa",
+  "bom_sha256": "2e9c11d802273c89ad76cacf034f499d2a16bf1990e111350387786d44760009",
+  "counted_instances": 11586,
+  "bom_ids_match": true,
+  "bom_types_colors_poses_steps_match": true,
+  "identity_projection_sha256": "5cd36b8eda84c798d2c57fc82e644900e4d60b6cd5bb4fcac12c3317fe918792",
+  "body_height_families": [
+    {
+      "body_height_mm": 3.2,
+      "part_count": 78,
+      "unique_types": 5
+    },
+    {
+      "body_height_mm": 4.8,
+      "part_count": 11508,
+      "unique_types": 88
+    }
+  ],
+  "public_native_assembly": {
+    "path": "artifacts/studies/part-count-matrix-20260921/cases/ducky-p120/assembly.FCStd",
+    "document_objects": 104,
+    "native_links_resolved": 104,
+    "link_instances": 11586,
+    "valid_single_solid_targets_checked": 93,
+    "proxy_free": true,
+    "opened": true,
+    "recomputed": false,
+    "saved": false,
+    "sha256": "55b99f4c98f2a7daeac10df5b9ac8866bd54ff12495f78383c8dd78bdc618d5f"
+  },
+  "public_blender_motion_preserved": true,
+  "source_saved_scene_binding": "137149eeb5703fe9121129acca7bd3ebad014431fcb30d5733d0c4a1d14a4886",
+  "source_native_reopen": {
+    "result": "PASS_REOPENED_RELATIVE_NATIVE_LINK_ARRAYS",
+    "actual_instance_count": 11586,
+    "all_ids_types_colors_poses_steps": true,
+    "all_sources_inside_bundle": true
+  },
+  "private_inputs_copied": 0,
+  "public_native_id_pose_check": {
+    "case_id": "ducky-p120",
+    "assembly_sha256": "55b99f4c98f2a7daeac10df5b9ac8866bd54ff12495f78383c8dd78bdc618d5f",
+    "actual_instances": 11586,
+    "array_count": 104,
+    "all_ids_types_colors_poses_steps": "MATCH",
+    "relocated_reopen": true,
+    "saved": false,
+    "recomputed": false
+  },
+  "files": []
+}

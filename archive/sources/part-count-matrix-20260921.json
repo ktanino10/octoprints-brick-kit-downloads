@@ -122,6 +122,20 @@
       "source_commit": "d8eadae855c504b3fabdf22ed6617edb1b79e993"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/ducky-p120-summary.json",
+      "bytes": 71826,
+      "sha256": "4730ccf1d830b088e268531da73a50d201860b13a05e6398d45e85ce3e366810",
+      "source_relative_path": "cases/ducky-p120-summary.json",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/ducky-p120.json.gz",
+      "bytes": 418007,
+      "sha256": "8ab3d4c1fe9c507a2da91d19de0d7c2939287765387236562898843655574653",
+      "source_relative_path": "cases/ducky-p120.json.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/cases/mona-fine8-base-root-v2-summary.json",
       "bytes": 105851,
       "sha256": "3ec2433645ae3fcb3b19bfd131d374524ec83d84d3939002c1500a7a9f806ea0",
@@ -204,6 +218,20 @@
       "sha256": "86b95bb3bf1c96a9e92707e95b8da8c4db15db0e9273ff6450fd5cd3755f29b7",
       "source_relative_path": "cases/mona-p150.json.gz",
       "source_commit": "c02a11b4e56c5c192a4f6db8606118eef1f2c081"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/mona-p300-root-v2-summary.json",
+      "bytes": 136688,
+      "sha256": "e8c49b6ed3463872dceeb2d3e652614399f330cd4e4f995bcb4872fa64a4f529",
+      "source_relative_path": "cases/mona-p300-root-v2-summary.json",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/mona-p300-root-v2.json.gz",
+      "bytes": 1670108,
+      "sha256": "af17ebab21a35b66d40d2b858238d1cb9ce840e4bc8e7145736d4e475f502162",
+      "source_relative_path": "cases/mona-p300-root-v2.json.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
     },
     {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/BR-01x01-H048-EDGE-C020.mesh.gz",
@@ -416,6 +444,13 @@
       "source_commit": "d8eadae855c504b3fabdf22ed6617edb1b79e993"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/BR-02x08-H048.mesh.gz",
+      "bytes": 111536,
+      "sha256": "3d34d5dc932f06be210b0a730502da8a9add1205535ad69c7dc7b4137f361f11",
+      "source_relative_path": "geometry/BR-02x08-H048.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/BR-03x03-H048-EDGE-C020.mesh.gz",
       "bytes": 64504,
       "sha256": "a4d8442e57c21c37863a40c89256bf5d4682eddbaa2474fcce2740515aaf600b",
@@ -435,6 +470,13 @@
       "sha256": "83f83872295619833a8bc53d804a3081af6ecff2bcdd19c3b36d28dbdc7230a3",
       "source_relative_path": "geometry/BR-04x04-H048-EDGE-C020.mesh.gz",
       "source_commit": "0943f2af21a2c380e47fac21150347f6d8dc6dc5"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/BR-04x04-H048.mesh.gz",
+      "bytes": 124885,
+      "sha256": "599f52f0910515661b3d8d3f51226ecf878b47bd0e0a347dd75d39725965ec22",
+      "source_relative_path": "geometry/BR-04x04-H048.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
     },
     {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/BR-04x05-H048-EDGE-C020.mesh.gz",
@@ -556,6 +598,13 @@
       "source_commit": "0943f2af21a2c380e47fac21150347f6d8dc6dc5"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-05C-H048-1898941840.mesh.gz",
+      "bytes": 23770,
+      "sha256": "59292ec02f3c1e6188b28015ac791960694b6869cfa28ca1255a465260457f0d",
+      "source_relative_path": "geometry/CT-05C-H048-1898941840.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-05C-H048-358de10196-EDGE-C020.mesh.gz",
       "bytes": 24539,
       "sha256": "8f070f8aab5bf7fbd3d47b74f5157ec12f50698d7190693c275e701623346d3a",
@@ -617,6 +666,13 @@
       "sha256": "8568a532a8391d4570b18ec9c7ae7869c3c396b4b480cd15f7ef1f0eb4dce902",
       "source_relative_path": "geometry/CT-05C-H048-9fb1b8d9d3-EDGE-C020.mesh.gz",
       "source_commit": "d8eadae855c504b3fabdf22ed6617edb1b79e993"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-05C-H048-9fb1b8d9d3.mesh.gz",
+      "bytes": 23840,
+      "sha256": "bba7ecef4b2edc581a394b75c692128dd2bd789f054207cc6eff937659d1cde6",
+      "source_relative_path": "geometry/CT-05C-H048-9fb1b8d9d3.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
     },
     {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-05C-H048-a75f0f97b1-EDGE-C020.mesh.gz",
@@ -857,6 +913,13 @@
       "source_commit": "0943f2af21a2c380e47fac21150347f6d8dc6dc5"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-06C-H048-dbd376e0d1-EDGE-C020.mesh.gz",
+      "bytes": 29658,
+      "sha256": "f6177d28b03613952d0ef8c25ae12f370edc58d1362520789f1d52ea8e0f97d3",
+      "source_relative_path": "geometry/CT-06C-H048-dbd376e0d1-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-06C-H048-e4a18a0220-EDGE-C020.mesh.gz",
       "bytes": 28758,
       "sha256": "86d98d88dd3536fbde5ca08874160acb194c8dbb3660da75602f1cc19b4ec06e",
@@ -869,6 +932,13 @@
       "sha256": "3f1fb43c7eeeb9dc419195122886bc06151e872b55a4982db4c57e947a82e429",
       "source_relative_path": "geometry/CT-06C-H048-ea1afa457c-EDGE-C020.mesh.gz",
       "source_commit": "c02a11b4e56c5c192a4f6db8606118eef1f2c081"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-06C-H048-fbb3a17667-EDGE-C020.mesh.gz",
+      "bytes": 28626,
+      "sha256": "192285d3c5189883bc565b1046a1b8087d09da3d2df87eb4b5aa6621bddb48da",
+      "source_relative_path": "geometry/CT-06C-H048-fbb3a17667-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
     },
     {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-06C-H048-fef1fe7ca2-EDGE-C020.mesh.gz",
@@ -1354,6 +1424,13 @@
       "source_commit": "0943f2af21a2c380e47fac21150347f6d8dc6dc5"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-08C-H048-f6f795e224-EDGE-C020.mesh.gz",
+      "bytes": 44002,
+      "sha256": "c5d2c3a5562134972578fe3859d2da90a032ca17fcdeb5bb551b5bd14774301b",
+      "source_relative_path": "geometry/CT-08C-H048-f6f795e224-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-10fa964061-EDGE-C020.mesh.gz",
       "bytes": 60134,
       "sha256": "7ef2e3aacab6c11a652ba49a51238ee1480f8dea9d19c225ab253e4edafc86b7",
@@ -1394,6 +1471,13 @@
       "sha256": "c5e47fdd9a47816e9a3dec249e3bbb4e677c0e854e1725646aa7625ae7212d52",
       "source_relative_path": "geometry/CT-09C-H048-2942373b3f-EDGE-C020.mesh.gz",
       "source_commit": "0943f2af21a2c380e47fac21150347f6d8dc6dc5"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-2942373b3f.mesh.gz",
+      "bytes": 59756,
+      "sha256": "5798a30b07b70d8469aa5fa1003b87d8e3e16c7ccccf1f3e3115028345490d48",
+      "source_relative_path": "geometry/CT-09C-H048-2942373b3f.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
     },
     {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-2bc2853866-EDGE-C020.mesh.gz",
@@ -1506,6 +1590,20 @@
       "sha256": "9f6ddc31367d90367ad3fb3dd94f28ea3d459647ef9e0381ff93e57f8ef32436",
       "source_relative_path": "geometry/CT-09C-H048-792fee37ed-EDGE-C020.mesh.gz",
       "source_commit": "0943f2af21a2c380e47fac21150347f6d8dc6dc5"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-8d59b31769-EDGE-C020.mesh.gz",
+      "bytes": 41563,
+      "sha256": "0242d0bc415845c69f0a80bb50d6da433da7ce2d23187e9e8bfb1e6b662071fa",
+      "source_relative_path": "geometry/CT-09C-H048-8d59b31769-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-9689b17d78-EDGE-C020.mesh.gz",
+      "bytes": 49081,
+      "sha256": "dc278684f4c4a5a914d3ac795437b4544d06173464d22445b0d7c12dee94213c",
+      "source_relative_path": "geometry/CT-09C-H048-9689b17d78-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
     },
     {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-9c9497634a-EDGE-C020.mesh.gz",
@@ -1963,6 +2061,13 @@
       "source_commit": "0943f2af21a2c380e47fac21150347f6d8dc6dc5"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-11C-H048-b0fdc4a29d-EDGE-C020.mesh.gz",
+      "bytes": 64271,
+      "sha256": "c2085fab836e7e8fc9907cb8c1cb00fb6f90668140899867d2d5a7f2d475e237",
+      "source_relative_path": "geometry/CT-11C-H048-b0fdc4a29d-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-11C-H048-b605c830dc-EDGE-C020.mesh.gz",
       "bytes": 76306,
       "sha256": "d045bfaa3a97068ecae74a4ea2e309147c2ae5a46f73823c7c94dbd94e8c5a73",
@@ -2019,6 +2124,13 @@
       "source_commit": "1cdefd83e3988504fe9c7887ca3097ce284ed5d3"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-11C-H048-e7542fd413-EDGE-C020.mesh.gz",
+      "bytes": 75802,
+      "sha256": "73b216e49f334168a327e125d8c8b747f236992252a4fa650bfec2bce816a4af",
+      "source_relative_path": "geometry/CT-11C-H048-e7542fd413-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-11C-H048-e8ec78968c-EDGE-C020.mesh.gz",
       "bytes": 64543,
       "sha256": "c9db269628b91c5d3198bdc7cc574b0c704f05b7c1657cd284b8d24ad5ab91ec",
@@ -2073,6 +2185,13 @@
       "sha256": "d0ce1ec34c7c0bd0daad3230d1a2b59bc58d8c78f5f5fd23010ee6ea0ec58187",
       "source_relative_path": "geometry/CT-12C-H048-1a091324ac-EDGE-C020.mesh.gz",
       "source_commit": "1cdefd83e3988504fe9c7887ca3097ce284ed5d3"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-12C-H048-1d30fdea0b-EDGE-C020.mesh.gz",
+      "bytes": 80190,
+      "sha256": "c334a79c5028fff19047a3b1088152a818e094289d840a75e0602b1b624a1b2d",
+      "source_relative_path": "geometry/CT-12C-H048-1d30fdea0b-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
     },
     {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-12C-H048-1e9f8a77d6-EDGE-C020.mesh.gz",
@@ -2313,6 +2432,13 @@
       "source_commit": "0943f2af21a2c380e47fac21150347f6d8dc6dc5"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-23f90fac06-EDGE-C020.mesh.gz",
+      "bytes": 69039,
+      "sha256": "9bf816013135483e7dbff067c34169f88bc29707ff2da7a45a773891dcfd6803",
+      "source_relative_path": "geometry/CT-13C-H048-23f90fac06-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-3b1b6ef0f6-EDGE-C020.mesh.gz",
       "bytes": 74939,
       "sha256": "df702e581820d34bc725c03591e04b1e60fbbfefd0e8ac33bca6993987260dad",
@@ -2332,6 +2458,13 @@
       "sha256": "0d8b1892423001871a170a91533721820331a7e37f82b57a5f8d3ecfb0dd8868",
       "source_relative_path": "geometry/CT-13C-H048-467ec6063e-EDGE-C020.mesh.gz",
       "source_commit": "df5691fcb57f938c788dfcd9f19fc6df257a1b6b"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-52b330340a-EDGE-C020.mesh.gz",
+      "bytes": 90514,
+      "sha256": "8f8657429700134cab4dc4891b69af4a5c84128f87cda1dfbdd35aaa4ac37cd9",
+      "source_relative_path": "geometry/CT-13C-H048-52b330340a-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
     },
     {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-6520692d31-EDGE-C020.mesh.gz",
@@ -2460,6 +2593,13 @@
       "source_commit": "d8eadae855c504b3fabdf22ed6617edb1b79e993"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-f89b445397-EDGE-C020.mesh.gz",
+      "bytes": 56550,
+      "sha256": "849c561d22727d047f5b925061ea15ae2cdaf6512be1b2b46f56f20f8a0538c8",
+      "source_relative_path": "geometry/CT-13C-H048-f89b445397-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-14C-H048-02f2a7dc91-EDGE-C020.mesh.gz",
       "bytes": 94067,
       "sha256": "a81160d02814cb5051a831240dfb797e9e021639e80ef3c748fa5496c9f5b8ab",
@@ -2542,6 +2682,13 @@
       "sha256": "af0e8da98cfb758a5c772c0e49c684b05cbaeae44a731c40b02675910397e0b3",
       "source_relative_path": "geometry/CT-14C-H048-66f0bc985b-EDGE-C020.mesh.gz",
       "source_commit": "d8eadae855c504b3fabdf22ed6617edb1b79e993"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-14C-H048-68cd41883e-EDGE-C020.mesh.gz",
+      "bytes": 60556,
+      "sha256": "222feb8f80088eca2e13219ad2a727475a0b885fb836a314c8797b5a59be4522",
+      "source_relative_path": "geometry/CT-14C-H048-68cd41883e-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
     },
     {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-14C-H048-702c04371b-EDGE-C020.mesh.gz",
@@ -2677,6 +2824,13 @@
       "source_commit": "c02a11b4e56c5c192a4f6db8606118eef1f2c081"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-15C-H048-371a24ec89-EDGE-C020.mesh.gz",
+      "bytes": 106822,
+      "sha256": "3988df629dc6aafcb361f3f6f55f7e0e7160992009e217d880b81d934537e2a6",
+      "source_relative_path": "geometry/CT-15C-H048-371a24ec89-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-15C-H048-51042eea39-EDGE-C020.mesh.gz",
       "bytes": 111203,
       "sha256": "73d0aba3d194bf945f5cab959faa1bbfe31ef7c3dc40ced1af0880378b7cc985",
@@ -2789,11 +2943,25 @@
       "source_commit": "7c1ab2bc2e11a7ebbbb9b662f005b6fdf04f0cb7"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-16C-H048-5cb6da7976-EDGE-C020.mesh.gz",
+      "bytes": 105157,
+      "sha256": "2eec917d0ed490ba22f9fdcda1eb0c3d1583462185b4d663c1520349286d2175",
+      "source_relative_path": "geometry/CT-16C-H048-5cb6da7976-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-16C-H048-611561ebb9-EDGE-C020.mesh.gz",
       "bytes": 120456,
       "sha256": "8e0ae8273d69a7ab7e6aa8a1551c49bdb3722e388019d7f4563fa58eaae8924e",
       "source_relative_path": "geometry/CT-16C-H048-611561ebb9-EDGE-C020.mesh.gz",
       "source_commit": "333d4d03dacaf8782a30b463eaf4854407643529"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-16C-H048-67d08a9be0-EDGE-C020.mesh.gz",
+      "bytes": 108892,
+      "sha256": "53d58d1fe0415bdea8d66ee056d0a2d546eeec09c4aac3992635d6ce584d7f48",
+      "source_relative_path": "geometry/CT-16C-H048-67d08a9be0-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
     },
     {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-16C-H048-75dd96d657-EDGE-C020.mesh.gz",
@@ -3090,6 +3258,13 @@
       "source_commit": "1cdefd83e3988504fe9c7887ca3097ce284ed5d3"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-19C-H048-38ba65d7af-EDGE-C020.mesh.gz",
+      "bytes": 115376,
+      "sha256": "a63a6cb29c267eaf541c68a0fd9439c71530c7af1a7f9d8dd9e6053aa2445666",
+      "source_relative_path": "geometry/CT-19C-H048-38ba65d7af-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-19C-H048-507c0f846b-EDGE-C020.mesh.gz",
       "bytes": 140178,
       "sha256": "f46d0e95c38e7c492be7df9e68eb5b5ce608e29106884e6f105f8c8056eb721f",
@@ -3137,6 +3312,13 @@
       "sha256": "90cf5cfafd5e5a060b4dfb3e5fba5c1b794f8c12495a550e4522e5ff317dcf34",
       "source_relative_path": "geometry/CT-19C-H048-d780f296f3-EDGE-C020.mesh.gz",
       "source_commit": "c02a11b4e56c5c192a4f6db8606118eef1f2c081"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-19C-H048-efcfdf1691-EDGE-C020.mesh.gz",
+      "bytes": 120214,
+      "sha256": "c2b3c4b74f27957c4f5a93ed50c859140b915533ddde01e85347412c470b6020",
+      "source_relative_path": "geometry/CT-19C-H048-efcfdf1691-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
     },
     {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-20C-H048-1782d89818-EDGE-C020.mesh.gz",
@@ -3265,11 +3447,25 @@
       "source_commit": "df5691fcb57f938c788dfcd9f19fc6df257a1b6b"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-21C-H048-ca1737ec9b-EDGE-C020.mesh.gz",
+      "bytes": 153828,
+      "sha256": "fb5b34280294417f8958fcf859a213c3003d76420bdf8afc184796b964d48b45",
+      "source_relative_path": "geometry/CT-21C-H048-ca1737ec9b-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-21C-H048-eac53c3707-EDGE-C020.mesh.gz",
       "bytes": 162525,
       "sha256": "e44e433cde7d8ab028365cd7988ec80bdf62c299b7e4480fb9cef7bb37efe023",
       "source_relative_path": "geometry/CT-21C-H048-eac53c3707-EDGE-C020.mesh.gz",
       "source_commit": "1cdefd83e3988504fe9c7887ca3097ce284ed5d3"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-22C-H048-646be051fe-EDGE-C020.mesh.gz",
+      "bytes": 160614,
+      "sha256": "0a8643361cdcb57c79c8c203c70edba74e7eb68d38f73121fa1d4f34ddfb1e5c",
+      "source_relative_path": "geometry/CT-22C-H048-646be051fe-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
     },
     {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-22C-H048-67d6d31713-EDGE-C020.mesh.gz",
@@ -3342,6 +3538,13 @@
       "source_commit": "659eb738fea7f33e58c28567664832c883ddf9d7"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-24C-H048-cef877e9ed-EDGE-C020.mesh.gz",
+      "bytes": 183281,
+      "sha256": "19f98474f9bd932de63227ed717888bdec045ecc6c5c3567ec1ea47a369d594d",
+      "source_relative_path": "geometry/CT-24C-H048-cef877e9ed-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-24C-H048-d30214b8b6-EDGE-C020.mesh.gz",
       "bytes": 181444,
       "sha256": "99674f1f8db7188da30bb37c067a2104e2dc8f85e46f788514866e18e84109da",
@@ -3356,6 +3559,13 @@
       "source_commit": "659eb738fea7f33e58c28567664832c883ddf9d7"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-25C-H048-4b0a3177fa-EDGE-C020.mesh.gz",
+      "bytes": 192011,
+      "sha256": "d0b88d214d32cbc9731f03f4ead536efc4f8e82c1366dc965d61ed5542a4d2b9",
+      "source_relative_path": "geometry/CT-25C-H048-4b0a3177fa-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-25C-H048-60d04b6c1d-EDGE-C020.mesh.gz",
       "bytes": 196087,
       "sha256": "2c2199f3ffa9623ed2b05854a68966e99938c0ccca8c1a81742023afb5095daa",
@@ -3368,6 +3578,13 @@
       "sha256": "e0c915336e6210272f19aebb967120257c313e9472c77568830d9b9090246a5c",
       "source_relative_path": "geometry/CT-25C-H048-611dcc013f-EDGE-C020.mesh.gz",
       "source_commit": "0943f2af21a2c380e47fac21150347f6d8dc6dc5"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-25C-H048-7b02b9b144-EDGE-C020.mesh.gz",
+      "bytes": 190997,
+      "sha256": "abc3c99d62797c45c84816f38c59940b63f5b5457287d0808f71faf0600162e7",
+      "source_relative_path": "geometry/CT-25C-H048-7b02b9b144-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
     },
     {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-25C-H048-b6b30d10c3-EDGE-C020.mesh.gz",
@@ -3391,11 +3608,25 @@
       "source_commit": "df5691fcb57f938c788dfcd9f19fc6df257a1b6b"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-26C-H048-6b3fc9a8cd-EDGE-C020.mesh.gz",
+      "bytes": 204430,
+      "sha256": "b02b5ea7ed93b77e0b3c31898418047022f85326bfa1f78b89b603e906a763e7",
+      "source_relative_path": "geometry/CT-26C-H048-6b3fc9a8cd-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-26C-H048-8c22afbfaf-EDGE-C020.mesh.gz",
       "bytes": 193941,
       "sha256": "6d59c2f680efda8cbb35f71a5ed1773e825ae85b4496d5601b3d0bf91a847c14",
       "source_relative_path": "geometry/CT-26C-H048-8c22afbfaf-EDGE-C020.mesh.gz",
       "source_commit": "df5691fcb57f938c788dfcd9f19fc6df257a1b6b"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-26C-H048-c22ad3c5e7-EDGE-C020.mesh.gz",
+      "bytes": 189913,
+      "sha256": "7eed235f8580730e2d06d9367591fe99e83fc4458402b0d16341862c7cdab243",
+      "source_relative_path": "geometry/CT-26C-H048-c22ad3c5e7-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
     },
     {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-26C-H048-efefa2a4a4-EDGE-C020.mesh.gz",
@@ -3417,6 +3648,13 @@
       "sha256": "aec72d934c1ac6387c119789833360c6df4fbfc76c58bbd5d87dd4fd763068f8",
       "source_relative_path": "geometry/CT-28C-H048-11ab824083-EDGE-C020.mesh.gz",
       "source_commit": "7c1ab2bc2e11a7ebbbb9b662f005b6fdf04f0cb7"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-28C-H048-26023fca9b-EDGE-C020.mesh.gz",
+      "bytes": 153024,
+      "sha256": "8540a770922714a7b740e2ef899b50beb7bce201443eed0fe08ef71fc6f6da33",
+      "source_relative_path": "geometry/CT-28C-H048-26023fca9b-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
     },
     {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-28C-H048-5b0c222e7f-EDGE-C020.mesh.gz",
@@ -3466,6 +3704,13 @@
       "sha256": "a2fc13f3f27a5be7ecfa5ba417908ce7336da397a461d06978bf1985f785aa8e",
       "source_relative_path": "geometry/CT-29C-H048-24f5b42297-EDGE-C020.mesh.gz",
       "source_commit": "333d4d03dacaf8782a30b463eaf4854407643529"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-29C-H048-ef520b220e-EDGE-C020.mesh.gz",
+      "bytes": 227513,
+      "sha256": "ea38dc390fd268e6f9c5989cdcc91dc37b0789815290e2630a3d7c7447ed5769",
+      "source_relative_path": "geometry/CT-29C-H048-ef520b220e-EDGE-C020.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
     },
     {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-30C-H048-1eb9578887-EDGE-C020.mesh.gz",
@@ -3662,6 +3907,20 @@
       "sha256": "a7f96cf77b0cf5d746800a409ebea21f92e571b417902fdf59ded0de0740c90b",
       "source_relative_path": "geometry/WR-18bbe8c5db1f841f.mesh.gz",
       "source_commit": "e1fa20d28944a09a9523bb7f0712a21640c882c9"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/WR-52401aafbd56f430.mesh.gz",
+      "bytes": 1045550,
+      "sha256": "e749e2cd0a2ae293846aab2beeb187690f9a2f95644bb307edd61298af434d5e",
+      "source_relative_path": "geometry/WR-52401aafbd56f430.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/WR-693c389c0d9cb972.mesh.gz",
+      "bytes": 1117698,
+      "sha256": "94f093578b95a7361333826e11d37c1b88e631ccfc9c8c77ffeaf42a04cdbeda",
+      "source_relative_path": "geometry/WR-693c389c0d9cb972.mesh.gz",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
     },
     {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/WR-9a5f870fb99ca288.mesh.gz",
@@ -3986,6 +4245,34 @@
       "source_commit": "d8eadae855c504b3fabdf22ed6617edb1b79e993"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/ducky-p120-assembled-front.jpg",
+      "bytes": 55576,
+      "sha256": "666d2d9cbd2c2ca53717bf9197ef0033ff95fc50de8e336ade89d319bb9d95a6",
+      "source_relative_path": "images/ducky-p120-assembled-front.jpg",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/ducky-p120-assembled-three_quarter.jpg",
+      "bytes": 75815,
+      "sha256": "4e7e7ba6380b3088627650a2affe5e0186fe652c609651ad9bd9a3c96b689129",
+      "source_relative_path": "images/ducky-p120-assembled-three_quarter.jpg",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/ducky-p120-radial-exploded.jpg",
+      "bytes": 152679,
+      "sha256": "1cd5d1304efbb5332e34fd0362ac4d2b32cec3fce56451b0d2e661dfd7d4a594",
+      "source_relative_path": "images/ducky-p120-radial-exploded.jpg",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/ducky-p120-registered-face.jpg",
+      "bytes": 54454,
+      "sha256": "8811591041181f6944ad355f8985fec94ba7047156be604609451b5e1774a15a",
+      "source_relative_path": "images/ducky-p120-registered-face.jpg",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/images/mona-fine8-base-assembled-front.jpg",
       "bytes": 76164,
       "sha256": "d2055759151c4d130acd77b0db380c703d61c4487df17cb21cc54eb9e0e15f83",
@@ -4154,6 +4441,34 @@
       "source_commit": "e1fa20d28944a09a9523bb7f0712a21640c882c9"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/mona-p300-root-v2-assembled-front.jpg",
+      "bytes": 75721,
+      "sha256": "217dfded96e046c5e877251fb31357a3b56f0de827a2b0f755f551a2e3118a6e",
+      "source_relative_path": "images/mona-p300-root-v2-assembled-front.jpg",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/mona-p300-root-v2-assembled-three_quarter.jpg",
+      "bytes": 103968,
+      "sha256": "028791f7d7ad426342e5fd1bcbd1253ee235b7dd31cff9b83104ff03abe5b76b",
+      "source_relative_path": "images/mona-p300-root-v2-assembled-three_quarter.jpg",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/mona-p300-root-v2-radial-exploded.jpg",
+      "bytes": 197718,
+      "sha256": "b9d8a2f64c6b54943ed8eeb738d823df83032e655e3ab195c28220573c684842",
+      "source_relative_path": "images/mona-p300-root-v2-radial-exploded.jpg",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/mona-p300-root-v2-registered-face.jpg",
+      "bytes": 72291,
+      "sha256": "20b02890a8ac055d77593ccd70c3416855157061d786578717eeee890b4277b6",
+      "source_relative_path": "images/mona-p300-root-v2-registered-face.jpg",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/references/copilot-initial-fine-legacy_three_quarter.jpg",
       "bytes": 115584,
       "sha256": "66735d96a3fa62e8167b7b45f243209c683e9cb392878ce84b05d554891d864b",
@@ -4280,6 +4595,20 @@
       "source_commit": "7c1ab2bc2e11a7ebbbb9b662f005b6fdf04f0cb7"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/source-records/a5266273a56e64bdad8662195517b166dd6e501e-matrix.json",
+      "bytes": 7756,
+      "sha256": "5554ee92ca60af357b04e53846ebcaf8e42a538c375d043ad42c984365725b96",
+      "source_relative_path": "matrix.json",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/source-records/a5266273a56e64bdad8662195517b166dd6e501e-references.json",
+      "bytes": 3778,
+      "sha256": "cbe3d556e049853665c263e4da2269b852df933f1ce0728df774f82b609e6ded",
+      "source_relative_path": "references.json",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/source-records/c02a11b4e56c5c192a4f6db8606118eef1f2c081-matrix.json",
       "bytes": 4997,
       "sha256": "f8d896b15ce106a8a43aa791291b657b09270aac1665de9bdfae794f6def997d",
@@ -4355,7 +4684,14 @@
       "sha256": "625f4530d0ac51ceb6f0f3a7e84a08af7ec89b8dd5c6aba159ddbab5446e3042",
       "source_relative_path": "validation/mona-p150-root-v2-whisker-support.json",
       "source_commit": "e1fa20d28944a09a9523bb7f0712a21640c882c9"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/validation/mona-p300-root-v2-whisker-support.json",
+      "bytes": 158565,
+      "sha256": "17e1edf0746bb96e73db815df6ae42462f1e05121578d574d3fa1cf57136eee6",
+      "source_relative_path": "validation/mona-p300-root-v2-whisker-support.json",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e"
     }
   ],
-  "source_revision": "df5691fcb57f938c788dfcd9f19fc6df257a1b6b"
+  "source_revision": "a5266273a56e64bdad8662195517b166dd6e501e"
 }

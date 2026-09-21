@@ -67,8 +67,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "MD",
-      "bytes": 26587,
-      "sha256": "28158301624ee91a7049f761a2798ace03b26ac51bfd08db79892358d9102b51",
+      "bytes": 26961,
+      "sha256": "3eb9118601a97917852bcc798e03378a1370e8594593fe8b1f970dbed13359d6",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/README.en.md",
       "status": "ARCHIVE_RECORD"
     },
@@ -77,8 +77,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "MD",
-      "bytes": 26989,
-      "sha256": "247ddd47f8e5be18ce353b2db375e21c44b0f07d0d1fcbc9354436c434def9cb",
+      "bytes": 27394,
+      "sha256": "7efc1a3453ba79ddff56d1769c72b471454ae0327ee4134adfcb2906eec3aee0",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/README.md",
       "status": "ARCHIVE_RECORD"
     },
@@ -87,8 +87,8 @@
       "group": "design",
       "revision": "r2-20260919",
       "format": "JSON",
-      "bytes": 23897,
-      "sha256": "7967d1540ee5a07582faef97d306268aa04243b3a2b6e54ade53fa12afdf809b",
+      "bytes": 27833,
+      "sha256": "fd586abbda07b9177daf5a1f98776c91f84def4f3d13fe9f4d8bdf4ce7434cf5",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/block-budget-matrix.json",
       "status": "ARCHIVE_RECORD"
     },
@@ -107,8 +107,8 @@
       "group": "design",
       "revision": "r2-20260919",
       "format": "JSON",
-      "bytes": 629,
-      "sha256": "cd88430095bce2a6d86d871a01a3b168ab3467f24897fb1d55dba7efa1bdae91",
+      "bytes": 630,
+      "sha256": "9efe0e8bc97cdd8538646b3c4c64fe6b4bb1779764cc6e8dfe833bf3c4360cc7",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/density-study.json",
       "status": "ARCHIVE_RECORD"
     },
@@ -223,6 +223,16 @@
       "status": "ARCHIVE_RECORD"
     },
     {
+      "path": "archive/releases/part-count-matrix-20260921-ducky-p120.json",
+      "group": "design",
+      "revision": "r2-20260919",
+      "format": "JSON",
+      "bytes": 1000,
+      "sha256": "486da28a7817e6cb9f3ee17d5b7495df87d9762ac3465f11006e85fa28363c1d",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/releases/part-count-matrix-20260921-ducky-p120.json",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
       "path": "archive/releases/part-count-matrix-20260921-mona-fine8-base-root-v2.json",
       "group": "design",
       "revision": "r2-20260919",
@@ -280,6 +290,16 @@
       "bytes": 995,
       "sha256": "da562cb63643aee0ac5f89f1e51c4342706cc2d79feba2f97a4f33a682809a36",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/releases/part-count-matrix-20260921-mona-p150.json",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
+      "path": "archive/releases/part-count-matrix-20260921-mona-p300-root-v2.json",
+      "group": "design",
+      "revision": "r2-20260919",
+      "format": "JSON",
+      "bytes": 1043,
+      "sha256": "c0614bd8f26780f82a066bcfd88e43114e344b823f3d4d958f197510430585c3",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/releases/part-count-matrix-20260921-mona-p300-root-v2.json",
       "status": "ARCHIVE_RECORD"
     },
     {
@@ -433,6 +453,16 @@
       "status": "ARCHIVE_RECORD"
     },
     {
+      "path": "archive/sources/part-count-matrix-20260921-ducky-p120-verification.json",
+      "group": "design",
+      "revision": "r2-20260919",
+      "format": "JSON",
+      "bytes": 2081,
+      "sha256": "e9fc2cb487f4b118f8733d128ec6c97257b6f1ad13a61c1340483cb771b62392",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/sources/part-count-matrix-20260921-ducky-p120-verification.json",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
       "path": "archive/sources/part-count-matrix-20260921-mona-fine8-base-root-v2-verification.json",
       "group": "design",
       "revision": "r2-20260919",
@@ -493,12 +523,22 @@
       "status": "ARCHIVE_RECORD"
     },
     {
+      "path": "archive/sources/part-count-matrix-20260921-mona-p300-root-v2-verification.json",
+      "group": "design",
+      "revision": "r2-20260919",
+      "format": "JSON",
+      "bytes": 2721,
+      "sha256": "d6e30fc774ded553bf78083f76f12a6c2f117d82c7e99192c193fad14f602c3f",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/sources/part-count-matrix-20260921-mona-p300-root-v2-verification.json",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
       "path": "archive/sources/part-count-matrix-20260921.json",
       "group": "design",
       "revision": "r2-20260919",
       "format": "JSON",
-      "bytes": 232343,
-      "sha256": "8b4b4fecc5b5933bb17acfc846ec9b3c2fb41935b37d82f41aaa7603b3f9fdef",
+      "bytes": 250133,
+      "sha256": "5fca7bf44d6ab7c2740f94e389d458c3e40549259593bc90812edf4a535a33f0",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/sources/part-count-matrix-20260921.json",
       "status": "ARCHIVE_RECORD"
     },
@@ -18625,6 +18665,42 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/ducky-p120-guide.json.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 421533,
+      "sha256": "f3abd3aa8d34f494e8149c13f3e0cd301a536614069a825d96071c9058410331",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/cases/ducky-p120-guide.json.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/ducky-p120-summary.json",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JSON",
+      "bytes": 71826,
+      "sha256": "4730ccf1d830b088e268531da73a50d201860b13a05e6398d45e85ce3e366810",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/cases/ducky-p120-summary.json",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "4730ccf1d830b088e268531da73a50d201860b13a05e6398d45e85ce3e366810",
+      "source_bytes": 71826,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/ducky-p120.json.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 418007,
+      "sha256": "8ab3d4c1fe9c507a2da91d19de0d7c2939287765387236562898843655574653",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/cases/ducky-p120.json.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "8ab3d4c1fe9c507a2da91d19de0d7c2939287765387236562898843655574653",
+      "source_bytes": 418007,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/cases/mona-fine8-base-root-v2-guide.json.gz",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -18831,12 +18907,48 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/mona-p300-root-v2-guide.json.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 1675014,
+      "sha256": "d1282b7cfa6186f7317440a6f21df99f750f68d62664e46e0a18d200119d9c60",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/cases/mona-p300-root-v2-guide.json.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/mona-p300-root-v2-summary.json",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JSON",
+      "bytes": 136688,
+      "sha256": "e8c49b6ed3463872dceeb2d3e652614399f330cd4e4f995bcb4872fa64a4f529",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/cases/mona-p300-root-v2-summary.json",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "e8c49b6ed3463872dceeb2d3e652614399f330cd4e4f995bcb4872fa64a4f529",
+      "source_bytes": 136688,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/mona-p300-root-v2.json.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 1670108,
+      "sha256": "af17ebab21a35b66d40d2b858238d1cb9ce840e4bc8e7145736d4e475f502162",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/cases/mona-p300-root-v2.json.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "af17ebab21a35b66d40d2b858238d1cb9ce840e4bc8e7145736d4e475f502162",
+      "source_bytes": 1670108,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/catalog.json",
       "group": "study",
       "revision": "part-count-matrix-20260921",
       "format": "JSON",
-      "bytes": 86530,
-      "sha256": "14f71103554e5a25b72c421a6f3ad96e4d67fa24d19b466a631ff5cb2ce95b03",
+      "bytes": 100582,
+      "sha256": "b74e3746588c77cf930ce952a4d2f1f2537ffb8160aaa0da40ec39b7645e17b9",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/catalog.json",
       "status": "UNSELECTED_DIGITAL_STUDY"
     },
@@ -18845,8 +18957,8 @@
       "group": "study",
       "revision": "part-count-matrix-20260921",
       "format": "JSON",
-      "bytes": 11727,
-      "sha256": "90336f5d5c6bce9f85066f51273f25fcb57d3c0e64a206854737e3b80c4044ac",
+      "bytes": 14975,
+      "sha256": "eed195f67ac516068289e8dd643a833efe694bdd64ea59b11415a264780b6e50",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/display/case-performance.json",
       "status": "UNSELECTED_DIGITAL_STUDY"
     },
@@ -18855,8 +18967,8 @@
       "group": "study",
       "revision": "part-count-matrix-20260921",
       "format": "JSON",
-      "bytes": 1345912,
-      "sha256": "f7dca74c06b5ee25fb60deb394023276cd4100192c3da5ad9fab3572c41d8ced",
+      "bytes": 1568210,
+      "sha256": "e1f83730735ee0e1d0fdd3eb2def38801ca60018017eaac3b050ed83aedf85a1",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/display/catalog.json",
       "status": "UNSELECTED_DIGITAL_STUDY"
     },
@@ -18888,6 +19000,16 @@
       "bytes": 15131,
       "sha256": "c7f1579be8382cc0f98b4a8ae29121cd8e34e67c97712e0ead9690e750b708f0",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/display/geometry/0be231cdf3879b7d85cc4e2660df7a767c640490c051291fa432267ebadf549c-e004.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/display/geometry/120fd637e53d96615e8e3fe62d6b4f2b7f696357914442de762df369abb74470-e004.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 24036,
+      "sha256": "25a7fcbeae9824b8def635e13f378c025e26c4fb633818e2c055b20d2aab579d",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/display/geometry/120fd637e53d96615e8e3fe62d6b4f2b7f696357914442de762df369abb74470-e004.mesh.gz",
       "status": "UNSELECTED_DIGITAL_STUDY"
     },
     {
@@ -18978,6 +19100,16 @@
       "bytes": 10515,
       "sha256": "bcced92e42eb5a1a6720c8434427a8ed4769a98a4f449123ab30462a2c4e0674",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/display/geometry/61af40e636b2a66d963ab35411bbfd36a6a6093e7204135039332a8b84f34eb2-e004.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/display/geometry/62d5076aaece47bd4b49c3532fa1260d052fdeb364dc2032688879c767b6889b-e004.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 27585,
+      "sha256": "0e6635f445909da08dde1ecaa5fa867d81d37cd5fef4da71b4ac3e77827437e4",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/display/geometry/62d5076aaece47bd4b49c3532fa1260d052fdeb364dc2032688879c767b6889b-e004.mesh.gz",
       "status": "UNSELECTED_DIGITAL_STUDY"
     },
     {
@@ -19721,6 +19853,19 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/BR-02x08-H048.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 111536,
+      "sha256": "3d34d5dc932f06be210b0a730502da8a9add1205535ad69c7dc7b4137f361f11",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/BR-02x08-H048.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "3d34d5dc932f06be210b0a730502da8a9add1205535ad69c7dc7b4137f361f11",
+      "source_bytes": 111536,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/BR-03x03-H048-EDGE-C020.mesh.gz",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -19757,6 +19902,19 @@
       "status": "UNSELECTED_DIGITAL_STUDY",
       "source_sha256": "83f83872295619833a8bc53d804a3081af6ecff2bcdd19c3b36d28dbdc7230a3",
       "source_bytes": 124227,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/BR-04x04-H048.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 124885,
+      "sha256": "599f52f0910515661b3d8d3f51226ecf878b47bd0e0a347dd75d39725965ec22",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/BR-04x04-H048.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "599f52f0910515661b3d8d3f51226ecf878b47bd0e0a347dd75d39725965ec22",
+      "source_bytes": 124885,
       "relation": "BYTE_IDENTICAL"
     },
     {
@@ -19981,6 +20139,19 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-05C-H048-1898941840.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 23770,
+      "sha256": "59292ec02f3c1e6188b28015ac791960694b6869cfa28ca1255a465260457f0d",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-05C-H048-1898941840.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "59292ec02f3c1e6188b28015ac791960694b6869cfa28ca1255a465260457f0d",
+      "source_bytes": 23770,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-05C-H048-358de10196-EDGE-C020.mesh.gz",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -20095,6 +20266,19 @@
       "status": "UNSELECTED_DIGITAL_STUDY",
       "source_sha256": "8568a532a8391d4570b18ec9c7ae7869c3c396b4b480cd15f7ef1f0eb4dce902",
       "source_bytes": 23930,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-05C-H048-9fb1b8d9d3.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 23840,
+      "sha256": "bba7ecef4b2edc581a394b75c692128dd2bd789f054207cc6eff937659d1cde6",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-05C-H048-9fb1b8d9d3.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "bba7ecef4b2edc581a394b75c692128dd2bd789f054207cc6eff937659d1cde6",
+      "source_bytes": 23840,
       "relation": "BYTE_IDENTICAL"
     },
     {
@@ -20540,6 +20724,19 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-06C-H048-dbd376e0d1-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 29658,
+      "sha256": "f6177d28b03613952d0ef8c25ae12f370edc58d1362520789f1d52ea8e0f97d3",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-06C-H048-dbd376e0d1-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "f6177d28b03613952d0ef8c25ae12f370edc58d1362520789f1d52ea8e0f97d3",
+      "source_bytes": 29658,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-06C-H048-e4a18a0220-EDGE-C020.mesh.gz",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -20563,6 +20760,19 @@
       "status": "UNSELECTED_DIGITAL_STUDY",
       "source_sha256": "3f1fb43c7eeeb9dc419195122886bc06151e872b55a4982db4c57e947a82e429",
       "source_bytes": 28389,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-06C-H048-fbb3a17667-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 28626,
+      "sha256": "192285d3c5189883bc565b1046a1b8087d09da3d2df87eb4b5aa6621bddb48da",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-06C-H048-fbb3a17667-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "192285d3c5189883bc565b1046a1b8087d09da3d2df87eb4b5aa6621bddb48da",
+      "source_bytes": 28626,
       "relation": "BYTE_IDENTICAL"
     },
     {
@@ -21463,6 +21673,19 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-08C-H048-f6f795e224-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 44002,
+      "sha256": "c5d2c3a5562134972578fe3859d2da90a032ca17fcdeb5bb551b5bd14774301b",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-08C-H048-f6f795e224-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "c5d2c3a5562134972578fe3859d2da90a032ca17fcdeb5bb551b5bd14774301b",
+      "source_bytes": 44002,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-10fa964061-EDGE-C020.mesh.gz",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -21538,6 +21761,19 @@
       "status": "UNSELECTED_DIGITAL_STUDY",
       "source_sha256": "c5e47fdd9a47816e9a3dec249e3bbb4e677c0e854e1725646aa7625ae7212d52",
       "source_bytes": 59579,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-2942373b3f.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 59756,
+      "sha256": "5798a30b07b70d8469aa5fa1003b87d8e3e16c7ccccf1f3e3115028345490d48",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-2942373b3f.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "5798a30b07b70d8469aa5fa1003b87d8e3e16c7ccccf1f3e3115028345490d48",
+      "source_bytes": 59756,
       "relation": "BYTE_IDENTICAL"
     },
     {
@@ -21746,6 +21982,32 @@
       "status": "UNSELECTED_DIGITAL_STUDY",
       "source_sha256": "9f6ddc31367d90367ad3fb3dd94f28ea3d459647ef9e0381ff93e57f8ef32436",
       "source_bytes": 55041,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-8d59b31769-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 41563,
+      "sha256": "0242d0bc415845c69f0a80bb50d6da433da7ce2d23187e9e8bfb1e6b662071fa",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-8d59b31769-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "0242d0bc415845c69f0a80bb50d6da433da7ce2d23187e9e8bfb1e6b662071fa",
+      "source_bytes": 41563,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-9689b17d78-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 49081,
+      "sha256": "dc278684f4c4a5a914d3ac795437b4544d06173464d22445b0d7c12dee94213c",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-09C-H048-9689b17d78-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "dc278684f4c4a5a914d3ac795437b4544d06173464d22445b0d7c12dee94213c",
+      "source_bytes": 49081,
       "relation": "BYTE_IDENTICAL"
     },
     {
@@ -22594,6 +22856,19 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-11C-H048-b0fdc4a29d-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 64271,
+      "sha256": "c2085fab836e7e8fc9907cb8c1cb00fb6f90668140899867d2d5a7f2d475e237",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-11C-H048-b0fdc4a29d-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "c2085fab836e7e8fc9907cb8c1cb00fb6f90668140899867d2d5a7f2d475e237",
+      "source_bytes": 64271,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-11C-H048-b605c830dc-EDGE-C020.mesh.gz",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -22698,6 +22973,19 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-11C-H048-e7542fd413-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 75802,
+      "sha256": "73b216e49f334168a327e125d8c8b747f236992252a4fa650bfec2bce816a4af",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-11C-H048-e7542fd413-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "73b216e49f334168a327e125d8c8b747f236992252a4fa650bfec2bce816a4af",
+      "source_bytes": 75802,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-11C-H048-e8ec78968c-EDGE-C020.mesh.gz",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -22799,6 +23087,19 @@
       "status": "UNSELECTED_DIGITAL_STUDY",
       "source_sha256": "d0ce1ec34c7c0bd0daad3230d1a2b59bc58d8c78f5f5fd23010ee6ea0ec58187",
       "source_bytes": 75778,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-12C-H048-1d30fdea0b-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 80190,
+      "sha256": "c334a79c5028fff19047a3b1088152a818e094289d840a75e0602b1b624a1b2d",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-12C-H048-1d30fdea0b-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "c334a79c5028fff19047a3b1088152a818e094289d840a75e0602b1b624a1b2d",
+      "source_bytes": 80190,
       "relation": "BYTE_IDENTICAL"
     },
     {
@@ -23244,6 +23545,19 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-23f90fac06-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 69039,
+      "sha256": "9bf816013135483e7dbff067c34169f88bc29707ff2da7a45a773891dcfd6803",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-23f90fac06-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "9bf816013135483e7dbff067c34169f88bc29707ff2da7a45a773891dcfd6803",
+      "source_bytes": 69039,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-3b1b6ef0f6-EDGE-C020.mesh.gz",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -23280,6 +23594,19 @@
       "status": "UNSELECTED_DIGITAL_STUDY",
       "source_sha256": "0d8b1892423001871a170a91533721820331a7e37f82b57a5f8d3ecfb0dd8868",
       "source_bytes": 73627,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-52b330340a-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 90514,
+      "sha256": "8f8657429700134cab4dc4891b69af4a5c84128f87cda1dfbdd35aaa4ac37cd9",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-52b330340a-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "8f8657429700134cab4dc4891b69af4a5c84128f87cda1dfbdd35aaa4ac37cd9",
+      "source_bytes": 90514,
       "relation": "BYTE_IDENTICAL"
     },
     {
@@ -23517,6 +23844,19 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-f89b445397-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 56550,
+      "sha256": "849c561d22727d047f5b925061ea15ae2cdaf6512be1b2b46f56f20f8a0538c8",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-13C-H048-f89b445397-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "849c561d22727d047f5b925061ea15ae2cdaf6512be1b2b46f56f20f8a0538c8",
+      "source_bytes": 56550,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-14C-H048-02f2a7dc91-EDGE-C020.mesh.gz",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -23670,6 +24010,19 @@
       "status": "UNSELECTED_DIGITAL_STUDY",
       "source_sha256": "af0e8da98cfb758a5c772c0e49c684b05cbaeae44a731c40b02675910397e0b3",
       "source_bytes": 96464,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-14C-H048-68cd41883e-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 60556,
+      "sha256": "222feb8f80088eca2e13219ad2a727475a0b885fb836a314c8797b5a59be4522",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-14C-H048-68cd41883e-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "222feb8f80088eca2e13219ad2a727475a0b885fb836a314c8797b5a59be4522",
+      "source_bytes": 60556,
       "relation": "BYTE_IDENTICAL"
     },
     {
@@ -23920,6 +24273,19 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-15C-H048-371a24ec89-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 106822,
+      "sha256": "3988df629dc6aafcb361f3f6f55f7e0e7160992009e217d880b81d934537e2a6",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-15C-H048-371a24ec89-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "3988df629dc6aafcb361f3f6f55f7e0e7160992009e217d880b81d934537e2a6",
+      "source_bytes": 106822,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-15C-H048-51042eea39-EDGE-C020.mesh.gz",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -24128,6 +24494,19 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-16C-H048-5cb6da7976-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 105157,
+      "sha256": "2eec917d0ed490ba22f9fdcda1eb0c3d1583462185b4d663c1520349286d2175",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-16C-H048-5cb6da7976-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "2eec917d0ed490ba22f9fdcda1eb0c3d1583462185b4d663c1520349286d2175",
+      "source_bytes": 105157,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-16C-H048-611561ebb9-EDGE-C020.mesh.gz",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -24138,6 +24517,19 @@
       "status": "UNSELECTED_DIGITAL_STUDY",
       "source_sha256": "8e0ae8273d69a7ab7e6aa8a1551c49bdb3722e388019d7f4563fa58eaae8924e",
       "source_bytes": 120456,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-16C-H048-67d08a9be0-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 108892,
+      "sha256": "53d58d1fe0415bdea8d66ee056d0a2d546eeec09c4aac3992635d6ce584d7f48",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-16C-H048-67d08a9be0-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "53d58d1fe0415bdea8d66ee056d0a2d546eeec09c4aac3992635d6ce584d7f48",
+      "source_bytes": 108892,
       "relation": "BYTE_IDENTICAL"
     },
     {
@@ -24687,6 +25079,19 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-19C-H048-38ba65d7af-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 115376,
+      "sha256": "a63a6cb29c267eaf541c68a0fd9439c71530c7af1a7f9d8dd9e6053aa2445666",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-19C-H048-38ba65d7af-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "a63a6cb29c267eaf541c68a0fd9439c71530c7af1a7f9d8dd9e6053aa2445666",
+      "source_bytes": 115376,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-19C-H048-507c0f846b-EDGE-C020.mesh.gz",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -24775,6 +25180,19 @@
       "status": "UNSELECTED_DIGITAL_STUDY",
       "source_sha256": "90cf5cfafd5e5a060b4dfb3e5fba5c1b794f8c12495a550e4522e5ff317dcf34",
       "source_bytes": 118982,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-19C-H048-efcfdf1691-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 120214,
+      "sha256": "c2b3c4b74f27957c4f5a93ed50c859140b915533ddde01e85347412c470b6020",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-19C-H048-efcfdf1691-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "c2b3c4b74f27957c4f5a93ed50c859140b915533ddde01e85347412c470b6020",
+      "source_bytes": 120214,
       "relation": "BYTE_IDENTICAL"
     },
     {
@@ -25012,6 +25430,19 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-21C-H048-ca1737ec9b-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 153828,
+      "sha256": "fb5b34280294417f8958fcf859a213c3003d76420bdf8afc184796b964d48b45",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-21C-H048-ca1737ec9b-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "fb5b34280294417f8958fcf859a213c3003d76420bdf8afc184796b964d48b45",
+      "source_bytes": 153828,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-21C-H048-eac53c3707-EDGE-C020.mesh.gz",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -25022,6 +25453,19 @@
       "status": "UNSELECTED_DIGITAL_STUDY",
       "source_sha256": "e44e433cde7d8ab028365cd7988ec80bdf62c299b7e4480fb9cef7bb37efe023",
       "source_bytes": 162525,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-22C-H048-646be051fe-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 160614,
+      "sha256": "0a8643361cdcb57c79c8c203c70edba74e7eb68d38f73121fa1d4f34ddfb1e5c",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-22C-H048-646be051fe-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "0a8643361cdcb57c79c8c203c70edba74e7eb68d38f73121fa1d4f34ddfb1e5c",
+      "source_bytes": 160614,
       "relation": "BYTE_IDENTICAL"
     },
     {
@@ -25155,6 +25599,19 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-24C-H048-cef877e9ed-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 183281,
+      "sha256": "19f98474f9bd932de63227ed717888bdec045ecc6c5c3567ec1ea47a369d594d",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-24C-H048-cef877e9ed-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "19f98474f9bd932de63227ed717888bdec045ecc6c5c3567ec1ea47a369d594d",
+      "source_bytes": 183281,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-24C-H048-d30214b8b6-EDGE-C020.mesh.gz",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -25181,6 +25638,19 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-25C-H048-4b0a3177fa-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 192011,
+      "sha256": "d0b88d214d32cbc9731f03f4ead536efc4f8e82c1366dc965d61ed5542a4d2b9",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-25C-H048-4b0a3177fa-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "d0b88d214d32cbc9731f03f4ead536efc4f8e82c1366dc965d61ed5542a4d2b9",
+      "source_bytes": 192011,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-25C-H048-60d04b6c1d-EDGE-C020.mesh.gz",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -25204,6 +25674,19 @@
       "status": "UNSELECTED_DIGITAL_STUDY",
       "source_sha256": "e0c915336e6210272f19aebb967120257c313e9472c77568830d9b9090246a5c",
       "source_bytes": 178700,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-25C-H048-7b02b9b144-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 190997,
+      "sha256": "abc3c99d62797c45c84816f38c59940b63f5b5457287d0808f71faf0600162e7",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-25C-H048-7b02b9b144-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "abc3c99d62797c45c84816f38c59940b63f5b5457287d0808f71faf0600162e7",
+      "source_bytes": 190997,
       "relation": "BYTE_IDENTICAL"
     },
     {
@@ -25246,6 +25729,19 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-26C-H048-6b3fc9a8cd-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 204430,
+      "sha256": "b02b5ea7ed93b77e0b3c31898418047022f85326bfa1f78b89b603e906a763e7",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-26C-H048-6b3fc9a8cd-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "b02b5ea7ed93b77e0b3c31898418047022f85326bfa1f78b89b603e906a763e7",
+      "source_bytes": 204430,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-26C-H048-8c22afbfaf-EDGE-C020.mesh.gz",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -25256,6 +25752,19 @@
       "status": "UNSELECTED_DIGITAL_STUDY",
       "source_sha256": "6d59c2f680efda8cbb35f71a5ed1773e825ae85b4496d5601b3d0bf91a847c14",
       "source_bytes": 193941,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-26C-H048-c22ad3c5e7-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 189913,
+      "sha256": "7eed235f8580730e2d06d9367591fe99e83fc4458402b0d16341862c7cdab243",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-26C-H048-c22ad3c5e7-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "7eed235f8580730e2d06d9367591fe99e83fc4458402b0d16341862c7cdab243",
+      "source_bytes": 189913,
       "relation": "BYTE_IDENTICAL"
     },
     {
@@ -25295,6 +25804,19 @@
       "status": "UNSELECTED_DIGITAL_STUDY",
       "source_sha256": "aec72d934c1ac6387c119789833360c6df4fbfc76c58bbd5d87dd4fd763068f8",
       "source_bytes": 212708,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-28C-H048-26023fca9b-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 153024,
+      "sha256": "8540a770922714a7b740e2ef899b50beb7bce201443eed0fe08ef71fc6f6da33",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-28C-H048-26023fca9b-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "8540a770922714a7b740e2ef899b50beb7bce201443eed0fe08ef71fc6f6da33",
+      "source_bytes": 153024,
       "relation": "BYTE_IDENTICAL"
     },
     {
@@ -25386,6 +25908,19 @@
       "status": "UNSELECTED_DIGITAL_STUDY",
       "source_sha256": "a2fc13f3f27a5be7ecfa5ba417908ce7336da397a461d06978bf1985f785aa8e",
       "source_bytes": 232491,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/CT-29C-H048-ef520b220e-EDGE-C020.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 227513,
+      "sha256": "ea38dc390fd268e6f9c5989cdcc91dc37b0789815290e2630a3d7c7447ed5769",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/CT-29C-H048-ef520b220e-EDGE-C020.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "ea38dc390fd268e6f9c5989cdcc91dc37b0789815290e2630a3d7c7447ed5769",
+      "source_bytes": 227513,
       "relation": "BYTE_IDENTICAL"
     },
     {
@@ -25750,6 +26285,32 @@
       "status": "UNSELECTED_DIGITAL_STUDY",
       "source_sha256": "a7f96cf77b0cf5d746800a409ebea21f92e571b417902fdf59ded0de0740c90b",
       "source_bytes": 825840,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/WR-52401aafbd56f430.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 1045550,
+      "sha256": "e749e2cd0a2ae293846aab2beeb187690f9a2f95644bb307edd61298af434d5e",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/WR-52401aafbd56f430.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "e749e2cd0a2ae293846aab2beeb187690f9a2f95644bb307edd61298af434d5e",
+      "source_bytes": 1045550,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/WR-693c389c0d9cb972.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 1117698,
+      "sha256": "94f093578b95a7361333826e11d37c1b88e631ccfc9c8c77ffeaf42a04cdbeda",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/WR-693c389c0d9cb972.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "94f093578b95a7361333826e11d37c1b88e631ccfc9c8c77ffeaf42a04cdbeda",
+      "source_bytes": 1117698,
       "relation": "BYTE_IDENTICAL"
     },
     {
@@ -26351,6 +26912,58 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/ducky-p120-assembled-front.jpg",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JPG",
+      "bytes": 55576,
+      "sha256": "666d2d9cbd2c2ca53717bf9197ef0033ff95fc50de8e336ade89d319bb9d95a6",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/images/ducky-p120-assembled-front.jpg",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "666d2d9cbd2c2ca53717bf9197ef0033ff95fc50de8e336ade89d319bb9d95a6",
+      "source_bytes": 55576,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/ducky-p120-assembled-three_quarter.jpg",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JPG",
+      "bytes": 75815,
+      "sha256": "4e7e7ba6380b3088627650a2affe5e0186fe652c609651ad9bd9a3c96b689129",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/images/ducky-p120-assembled-three_quarter.jpg",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "4e7e7ba6380b3088627650a2affe5e0186fe652c609651ad9bd9a3c96b689129",
+      "source_bytes": 75815,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/ducky-p120-radial-exploded.jpg",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JPG",
+      "bytes": 152679,
+      "sha256": "1cd5d1304efbb5332e34fd0362ac4d2b32cec3fce56451b0d2e661dfd7d4a594",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/images/ducky-p120-radial-exploded.jpg",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "1cd5d1304efbb5332e34fd0362ac4d2b32cec3fce56451b0d2e661dfd7d4a594",
+      "source_bytes": 152679,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/ducky-p120-registered-face.jpg",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JPG",
+      "bytes": 54454,
+      "sha256": "8811591041181f6944ad355f8985fec94ba7047156be604609451b5e1774a15a",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/images/ducky-p120-registered-face.jpg",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "8811591041181f6944ad355f8985fec94ba7047156be604609451b5e1774a15a",
+      "source_bytes": 54454,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/images/mona-fine8-base-assembled-front.jpg",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -26663,6 +27276,58 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/mona-p300-root-v2-assembled-front.jpg",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JPG",
+      "bytes": 75721,
+      "sha256": "217dfded96e046c5e877251fb31357a3b56f0de827a2b0f755f551a2e3118a6e",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/images/mona-p300-root-v2-assembled-front.jpg",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "217dfded96e046c5e877251fb31357a3b56f0de827a2b0f755f551a2e3118a6e",
+      "source_bytes": 75721,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/mona-p300-root-v2-assembled-three_quarter.jpg",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JPG",
+      "bytes": 103968,
+      "sha256": "028791f7d7ad426342e5fd1bcbd1253ee235b7dd31cff9b83104ff03abe5b76b",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/images/mona-p300-root-v2-assembled-three_quarter.jpg",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "028791f7d7ad426342e5fd1bcbd1253ee235b7dd31cff9b83104ff03abe5b76b",
+      "source_bytes": 103968,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/mona-p300-root-v2-radial-exploded.jpg",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JPG",
+      "bytes": 197718,
+      "sha256": "b9d8a2f64c6b54943ed8eeb738d823df83032e655e3ab195c28220573c684842",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/images/mona-p300-root-v2-radial-exploded.jpg",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "b9d8a2f64c6b54943ed8eeb738d823df83032e655e3ab195c28220573c684842",
+      "source_bytes": 197718,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/mona-p300-root-v2-registered-face.jpg",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JPG",
+      "bytes": 72291,
+      "sha256": "20b02890a8ac055d77593ccd70c3416855157061d786578717eeee890b4277b6",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/images/mona-p300-root-v2-registered-face.jpg",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "20b02890a8ac055d77593ccd70c3416855157061d786578717eeee890b4277b6",
+      "source_bytes": 72291,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/references/copilot-initial-fine-legacy_three_quarter.jpg",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -26897,6 +27562,32 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/source-records/a5266273a56e64bdad8662195517b166dd6e501e-matrix.json",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JSON",
+      "bytes": 7756,
+      "sha256": "5554ee92ca60af357b04e53846ebcaf8e42a538c375d043ad42c984365725b96",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/source-records/a5266273a56e64bdad8662195517b166dd6e501e-matrix.json",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "5554ee92ca60af357b04e53846ebcaf8e42a538c375d043ad42c984365725b96",
+      "source_bytes": 7756,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/source-records/a5266273a56e64bdad8662195517b166dd6e501e-references.json",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JSON",
+      "bytes": 3778,
+      "sha256": "cbe3d556e049853665c263e4da2269b852df933f1ce0728df774f82b609e6ded",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/source-records/a5266273a56e64bdad8662195517b166dd6e501e-references.json",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "cbe3d556e049853665c263e4da2269b852df933f1ce0728df774f82b609e6ded",
+      "source_bytes": 3778,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/source-records/c02a11b4e56c5c192a4f6db8606118eef1f2c081-matrix.json",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -27037,6 +27728,19 @@
       "status": "UNSELECTED_DIGITAL_STUDY",
       "source_sha256": "625f4530d0ac51ceb6f0f3a7e84a08af7ec89b8dd5c6aba159ddbab5446e3042",
       "source_bytes": 106014,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/validation/mona-p300-root-v2-whisker-support.json",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JSON",
+      "bytes": 158565,
+      "sha256": "17e1edf0746bb96e73db815df6ae42462f1e05121578d574d3fa1cf57136eee6",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/validation/mona-p300-root-v2-whisker-support.json",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "17e1edf0746bb96e73db815df6ae42462f1e05121578d574d3fa1cf57136eee6",
+      "source_bytes": 158565,
       "relation": "BYTE_IDENTICAL"
     },
     {
@@ -27510,8 +28214,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "JS",
-      "bytes": 10048,
-      "sha256": "09dc302b99d99d6aa3b93ccbd2ca935a137d2cd6767fb2ff9677003674ed78a1",
+      "bytes": 10148,
+      "sha256": "d5879ee848af248398d2e07ce40bdbae55cf5ef8172c0f782147ba364ef845d4",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/density-comparisons.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -27530,8 +28234,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "JS",
-      "bytes": 14154,
-      "sha256": "2f591115f966118f7db814b7025ca7ff2adbe3a8bac3d27871b2626f50a2b499",
+      "bytes": 14282,
+      "sha256": "95021bf398e27f43be71518133f826eaeab85b743b73c102c2a73979cc6c6b41",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/density-matrix.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -27864,8 +28568,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "JS",
-      "bytes": 557807,
-      "sha256": "3132aab263bd7797a22ad58472b5fe957f673e7d8758d1864640c9412369a258",
+      "bytes": 580672,
+      "sha256": "7a9bf08ec3d6622151cb9918e4ecc1f4bdadafc40eb5345240214b07fa954a06",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/translations.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -28523,8 +29227,8 @@
       "group": "viewer",
       "revision": "public-viewer-2026-09-19",
       "format": "JS",
-      "bytes": 1476846,
-      "sha256": "1c96b2032283ee5009a119e995c649b852823ad6e35f752b597a4ba97b858fbc",
+      "bytes": 1512348,
+      "sha256": "3576ad2b51b2fd40f3c6010511a699b80373ef4e04c8377d25d72f43e69b6555",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/viewer/assets/density-guide.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -28553,8 +29257,8 @@
       "group": "viewer",
       "revision": "public-viewer-2026-09-19",
       "format": "JS",
-      "bytes": 1536013,
-      "sha256": "b19ff15b401c5723ae882b860191a722587c4f598fad365c593271451cc88ca7",
+      "bytes": 1570932,
+      "sha256": "6f43eba9310cab4e55edb212f06b52f85228f99a74965c4caf0861ba65ccc3a1",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/viewer/assets/studio.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -28570,17 +29274,17 @@
     }
   ],
   "totals": {
-    "files": 2244,
-    "bytes": 901917154,
+    "files": 2300,
+    "bytes": 913091694,
     "groups": {
       "site": 69,
-      "design": 54,
+      "design": 58,
       "phase1": 149,
       "common": 561,
       "common-trial": 24,
       "selected": 544,
       "trial": 60,
-      "study": 761,
+      "study": 813,
       "feedback": 16,
       "viewer": 6
     }

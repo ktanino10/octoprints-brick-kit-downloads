@@ -87,22 +87,33 @@ function validateRootEvidenceBinding(manifest, proof) {
     && Array.isArray(proof.modules) && proof.modules.length > 0
     && Array.isArray(native.modules) && native.modules.length === proof.modules.length
     && Array.isArray(gravity.modules) && gravity.modules.length === proof.modules.length
-    && Array.isArray(proof.root_structural_sections) && proof.root_structural_sections.length === proof.modules.length,
+    && Array.isArray(proof.root_structural_sections),
   '根元の実CAD接触・断面・組立途中の重心検査が未完了です。');
   const byId = new Map(manifest.parts.map((part) => [part.id, part])), seen = new Set();
+  const requiredSections = new Set(native.modules.filter(item => item.anchor_role === 'WHISKER_ROOT_MODULE').map(item => item.part_id));
+  check(requiredSections.size > 0 && proof.root_structural_sections.length === requiredSections.size
+    && new Set(proof.root_structural_sections.map(item => item.part_id)).size === requiredSections.size
+    && proof.root_structural_sections.every(item => requiredSections.has(item.part_id)),
+  '根元の実CAD接触・断面・組立途中の重心検査が未完了です。');
   for (const module of proof.modules) {
     const part = byId.get(module.part_id);
     const body = native.modules.find((item) => item.part_id === module.part_id);
     const balance = gravity.modules.find((item) => item.part_id === module.part_id);
     const section = proof.root_structural_sections.find((item) => item.part_id === module.part_id);
+    const hiddenBacking = body?.anchor_role === 'HIDDEN_CHEEK_BACKING';
+    const sectionVerified = hiddenBacking
+      ? part?.role === 'body-supported-hidden-cheek-root' && part.type_id.startsWith('CT-')
+        && manifest.types[part.type_id]?.kind === 'contour-brick' && !section
+      : body?.anchor_role === 'WHISKER_ROOT_MODULE' && section?.native_single_solid === true
+        && section.type_id === part?.type_id && finite(section.minimum_effective_section_area_mm2)
+        && section.minimum_effective_section_area_mm2 > 0
+        && section.material_strength_infill_layer_orientation === 'UNMEASURED';
     check(part && !seen.has(part.id) && module.type_id === part.type_id && module.step === part.step
       && module.physical_bottom_z_mm === part.position_mm[2] && module.receiving_body_stage_z_mm === part.assembly_stage_z_mm
       && Array.isArray(module.actual_body_support_ids) && module.actual_body_support_ids.length > 0
       && module.actual_body_support_ids.every((id) => part.support_ids.includes(id))
       && body?.actual_single_solid === true && body.native_root_type === part.type_id && body.module_insertion_step === part.step
-      && section?.native_single_solid === true && section.type_id === part.type_id
-      && finite(section.minimum_effective_section_area_mm2) && section.minimum_effective_section_area_mm2 > 0
-      && section.material_strength_infill_layer_orientation === 'UNMEASURED'
+      && sectionVerified
       && balance?.result === 'PASS_NOMINAL_CAD_STATIC_MOMENT_BOUND'
       && finite(balance.required_margin_mm) && balance.required_margin_mm >= 1
       && finite(balance.minimum_support_margin_mm) && balance.minimum_support_margin_mm >= balance.required_margin_mm

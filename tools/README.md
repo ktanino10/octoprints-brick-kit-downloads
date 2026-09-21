@@ -313,6 +313,10 @@ whisker_load_casesから指定のASCII-escaped compact JSONを作り、geometry/
 元native-completeの根元接触reportも同じcanonical SHAで公開小証拠へ結びます。module単体の重心と実支持凸包、
 各組立prefixの1 mm以上の公称CAD margin、後続部品の実ID/順序、native bearingと差込みsampleを確認します。
 これは均一密度のCAD静モーメントの証拠で、印刷質量やPLA保持力の実測ではありません。
+Mona2の `HIDDEN_CHEEK_BACKING` は、実sourceで `body-supported-hidden-cheek-root` の
+`CT-...` / `contour-brick` と一致した場合に限り、WR専用beam断面の対象から区別します。
+native single-solid/接触/差込み/全prefix重心はWRもCTも全対象を検査し、CTをaidや未検査例外にはしません。
+WR4断面群とCTを含む5native/gravity対象のような構成も受けますが、−5.13 mmを含む一対象の失敗だけでも遮断します。
 private full sourceは `assembly.assembly_aids`、portable/light形式はtop-level `assembly_aids` を使います。
 portable形式の `origin` はfull sourceの `position_origin` と同じ意味です。フィールドを黙って無視せず、
 実sourceの全ID/type/color/pose/step/dependenciesをportable manifestにも照合します。

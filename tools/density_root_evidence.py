@@ -166,30 +166,43 @@ def validate_root_evidence(proof, manifest, native_complete):
     sections = proof.get("root_structural_sections")
     require(isinstance(sections, list), "Actual BRep root-section evidence is missing")
     sections_by_id = {item["part_id"]: item for item in sections}
-    require(len(sections_by_id) == len(sections) == len(modules),
-            "Actual root-section evidence omits or duplicates a module")
+    section_ids = set()
+    for module in modules:
+        role = module.get("anchor_role")
+        require(role in {"WHISKER_ROOT_MODULE", "HIDDEN_CHEEK_BACKING"}, "Unknown actual native anchor role")
+        if role == "WHISKER_ROOT_MODULE":
+            section_ids.add(module["part_id"])
+        else:
+            part = parts.get(module["part_id"])
+            require(part is not None and part.get("role") == "body-supported-hidden-cheek-root"
+                    and manifest["types"][part["type_id"]].get("kind") == "contour-brick"
+                    and part["type_id"].startswith("CT-"),
+                    "A non-WR anchor must be the actual source-bound internal contour backing, not an aid")
+    require(bool(section_ids) and len(sections_by_id) == len(sections) and sections_by_id.keys() == section_ids,
+            "Actual BRep section evidence must cover every WR root, without reclassifying a CT backing")
     for module in modules:
         part_id = module["part_id"]
-        require(part_id in parts and part_id in by_id and part_id in gravity_by_id and part_id in sections_by_id,
+        require(part_id in parts and part_id in by_id and part_id in gravity_by_id,
                 "Native root evidence names an unknown actual part")
         part, public = parts[part_id], by_id[part_id]
-        section = sections_by_id[part_id]
-        slices = section.get("actual_brep_sections")
-        require(section.get("type_id") == part["type_id"] and section.get("native_single_solid") is True
-                and finite(section.get("minimum_true_root_roof_mm")) and section["minimum_true_root_roof_mm"] > 0
-                and isinstance(slices, list) and bool(slices) and section.get("section_count") == len(slices)
-                and section.get("material_strength_infill_layer_orientation") == "UNMEASURED"
-                and isinstance(section.get("note"), str) and bool(section["note"].strip()),
-                "A root lacks actual continuous BRep sections or overstates physical strength")
-        for sample in slices:
-            require(finite(sample.get("plane_x_mm")) and finite(sample.get("finite_slice_width_mm"))
-                    and sample["finite_slice_width_mm"] > 0 and finite(sample.get("effective_solid_area_mm2"))
-                    and sample["effective_solid_area_mm2"] > 0,
-                    "An actual BRep root section is empty or invalid")
-        require(finite(section.get("minimum_effective_section_area_mm2"))
-                and math.isclose(section["minimum_effective_section_area_mm2"],
-                                 min(sample["effective_solid_area_mm2"] for sample in slices), abs_tol=1e-6, rel_tol=0),
-                "The reported minimum root section differs from the actual slice records")
+        if part_id in sections_by_id:
+            section = sections_by_id[part_id]
+            slices = section.get("actual_brep_sections")
+            require(section.get("type_id") == part["type_id"] and section.get("native_single_solid") is True
+                    and finite(section.get("minimum_true_root_roof_mm")) and section["minimum_true_root_roof_mm"] > 0
+                    and isinstance(slices, list) and bool(slices) and section.get("section_count") == len(slices)
+                    and section.get("material_strength_infill_layer_orientation") == "UNMEASURED"
+                    and isinstance(section.get("note"), str) and bool(section["note"].strip()),
+                    "A root lacks actual continuous BRep sections or overstates physical strength")
+            for sample in slices:
+                require(finite(sample.get("plane_x_mm")) and finite(sample.get("finite_slice_width_mm"))
+                        and sample["finite_slice_width_mm"] > 0 and finite(sample.get("effective_solid_area_mm2"))
+                        and sample["effective_solid_area_mm2"] > 0,
+                        "An actual BRep root section is empty or invalid")
+            require(finite(section.get("minimum_effective_section_area_mm2"))
+                    and math.isclose(section["minimum_effective_section_area_mm2"],
+                                     min(sample["effective_solid_area_mm2"] for sample in slices), abs_tol=1e-6, rel_tol=0),
+                    "The reported minimum root section differs from the actual slice records")
         require(module.get("actual_single_solid") is True and module.get("native_root_type") == part["type_id"]
                 and module.get("module_insertion_step") == part["step"]
                 and public.get("type_id") == part["type_id"] and public.get("step") == part["step"]
@@ -224,6 +237,7 @@ def validate_root_evidence(proof, manifest, native_complete):
         "geometry_sequence_identity_sha256": identity,
         "native_root_contact_evidence_sha256": canonical_sha(native),
         "checked_root_modules": len(modules),
+        "checked_hidden_contour_backings": sum(module["anchor_role"] == "HIDDEN_CHEEK_BACKING" for module in modules),
         "checked_actual_brep_sections": sum(len(item["actual_brep_sections"]) for item in sections),
         "nominal_body_overlap_tolerance_mm3": 1e-5,
         "gravity_balance_result": BALANCE_PASS,

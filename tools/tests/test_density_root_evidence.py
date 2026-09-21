@@ -52,6 +52,7 @@ class RootEvidenceTests(unittest.TestCase):
             "result": NATIVE_PASS, "gravity_balance_result": BALANCE_PASS,
             "external_aid_count": 0, "assembly_aid_count": 0, "modules": [{
                 "part_id": "UNIT-ROOT", "native_root_type": "UNIT-TYPE", "actual_single_solid": True,
+                "anchor_role": "WHISKER_ROOT_MODULE",
                 "root_stud_count": 4, "root_xy_span_mm": [8, 8], "module_insertion_step": 2,
                 "body_supports": [{"lower_part_id": "UNIT-BODY", "native_bearing_mm2": 20.0,
                                    "nominal_volume_overlap_mm3": 0.0, "insertion_offsets_mm": [0, 1, 3]}],
@@ -190,14 +191,23 @@ class RootEvidenceTests(unittest.TestCase):
             sections.append({**copy.deepcopy(section_template), "part_id": root_id})
             gravity_modules.append({"part_id": root_id, **copy.deepcopy(module["gravity_balance"])})
         manifest["parts"] = bodies + roots + payloads
+        contour_type = "CT-UNIT-HIDDEN"
+        manifest["types"][contour_type] = {**copy.deepcopy(manifest["types"]["UNIT-TYPE"]), "kind": "contour-brick"}
+        roots[2].update(type_id=contour_type, role="body-supported-hidden-cheek-root")
+        native_modules[2].update(anchor_role="HIDDEN_CHEEK_BACKING", native_root_type=contour_type)
+        public_modules[2]["type_id"] = contour_type
+        sections.pop()
         manifest["motion"]["stages"][0]["end_step"] = 9
         native["whisker_root_native_validation"]["modules"] = native_modules
-        proof.update(actual_parts=9, modules=public_modules, root_structural_sections=sections,
+        proof.update(actual_parts=9, actual_types=2, modules=public_modules, root_structural_sections=sections,
                      geometry_sequence_identity_sha256=geometry_sequence_identity(manifest),
                      native_root_contact_evidence_sha256=canonical_sha(native["whisker_root_native_validation"]),
                      actual_native_root_checks=copy.deepcopy(native["whisker_root_native_validation"]))
         proof["gravity_balance"]["modules"] = gravity_modules
-        self.assertEqual(validate_root_evidence(proof, manifest, native)["checked_root_modules"], 3)
+        result = validate_root_evidence(proof, manifest, native)
+        self.assertEqual(result["checked_root_modules"], 3)
+        self.assertEqual(result["checked_hidden_contour_backings"], 1)
+        self.assertEqual(result["checked_actual_brep_sections"], 2)
         native_modules[2]["gravity_balance"]["assembly_prefix_checks"][-1]["minimum_support_margin_mm"] = -5.13
         proof["native_root_contact_evidence_sha256"] = canonical_sha(native["whisker_root_native_validation"])
         proof["actual_native_root_checks"] = copy.deepcopy(native["whisker_root_native_validation"])

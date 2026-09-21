@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "study_id": "part-count-matrix-20260921",
+  "case_id": "mona-p300-root-v2",
+  "tag": "part-count-matrix-20260921-mona-p300-root-v2",
+  "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e",
+  "status": "UNSELECTED_DIGITAL_CASE_NOT_SLICED",
+  "assets": [
+    {
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p300-root-v2/mona-p300-root-v2-cad-scene-animation-public.zip",
+      "bytes": 152645955,
+      "sha256": "3ca383682949251d0d05a7caf6ece13846503cd4de96949b73a327322cba7d0b"
+    },
+    {
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p300-root-v2/mona-p300-root-v2-assembly-motion.mp4",
+      "bytes": 2015608,
+      "sha256": "ddc0e009d48bdfba3dd685b92e3bd13d9d98aeb91bfab03bf80cc19037e487e7"
+    }
+  ],
+  "case_categories": [
+    "cg",
+    "animation",
+    "native_cad",
+    "assembly"
+  ],
+  "physical_fit": "UNKNOWN",
+  "full_print": "ON_HOLD"
+}

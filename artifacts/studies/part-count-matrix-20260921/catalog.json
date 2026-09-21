@@ -713,7 +713,139 @@
       "geometry_revision": "whisker-root-v2",
       "character": "mona",
       "count_percentage": 300,
-      "state": "INPUT_WAIT"
+      "state": "READY",
+      "metrics": {
+        "part_count": 37255,
+        "unique_types": 160,
+        "one_by_one_exceptions": 68,
+        "layer_count": 114,
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "grip_long_ge_15_8_count": 37187,
+        "dimensions_mm": [
+          615.8,
+          503.8,
+          545.8
+        ]
+      },
+      "target_count": 37305,
+      "target_difference": -50,
+      "actual_ratio": 2.995979091274628,
+      "manifest": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/cases/mona-p300-root-v2-guide.json.gz",
+        "bytes": 1675014,
+        "sha256": "d1282b7cfa6186f7317440a6f21df99f750f68d62664e46e0a18d200119d9c60"
+      },
+      "source_manifest_sha256": "98525666a674023e7ea0412736e163da1a5745bf1d4df21a82063554c2e4e496",
+      "source_bom_sha256": "569fd6c3a051e305a92b056c288e4b162e8d10fd96190784178bf92013f87db6",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e",
+      "images": {
+        "front": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/mona-p300-root-v2-assembled-front.jpg",
+          "bytes": 75721,
+          "sha256": "217dfded96e046c5e877251fb31357a3b56f0de827a2b0f755f551a2e3118a6e",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_front"
+        },
+        "three_quarter": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/mona-p300-root-v2-assembled-three_quarter.jpg",
+          "bytes": 103968,
+          "sha256": "028791f7d7ad426342e5fd1bcbd1253ee235b7dd31cff9b83104ff03abe5b76b",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_three_quarter"
+        }
+      },
+      "tradeoff": "実37,255部品、固定分母12,435・目標37,305との差-50で許容内。完成正面・斜め、実MP4 frame1/18/54/73/108/144、根元挿入のframe89/90/91/92を閲覧した。 実寸615.8x503.8x545.8mm、実部品数倍率2.995979。耳・白黒の目・口・頬・左右の実ヒゲを保ち、外付けまたは仮の組立支台は0個。原形の占有セルと見える色を保持した根元再構成であり、支台付き旧Mona3案とは別IDの候補である。 白目の縁と紫の境界は不均一で、額や頬に大きな階段状の線、口の片側に高まりが残る。部品数増加を美観改善の保証にしない。 根元01は受け側course26→根元27、根元02は受け側27→根元28。実動画89では根元前、90では挿入途中、91/92ではヒゲを含む根元が組み込まれている。根元の接続段階と実部品底面Zを混同せず、支台なしの受け側先行順を確認した。 2個の実native根元は223.8x223.8x19.2mmおよび223.8x175.8x19.2mm。各27断面、真の下面屋根1.6mm以上、native接触と挿入、全組立順が成立する。実CAD一様密度の静モーメント最小marginは22.3395/26.2591mm、後続荷重を含む60/57 prefixを確認している。 1x1例外68個、長辺15.8mm以上37,187個。保存native/別展開再openの全37,255ID/type/color/pose/step、160型の実頂点・面、分解・復帰・空から全数への保存scene照合が完了した。 以上は比較用デジタル成果の完了であり、現物のPLA密度・インフィル・保持力・曲げ・クリープ・転倒・手のアクセスは未検証。組立支台なしとスライサーのサポート不要は別条件で、現物の強度や印刷を承認しない。",
+      "assets": {
+        "cg": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p300-root-v2/mona-p300-root-v2-cad-scene-animation-public.zip",
+            "filename": "mona-p300-root-v2-cad-scene-animation-public.zip",
+            "bytes": 152645955,
+            "sha256": "3ca383682949251d0d05a7caf6ece13846503cd4de96949b73a327322cba7d0b",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "still",
+              "blender"
+            ]
+          }
+        ],
+        "native_cad": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p300-root-v2/mona-p300-root-v2-cad-scene-animation-public.zip",
+            "filename": "mona-p300-root-v2-cad-scene-animation-public.zip",
+            "bytes": 152645955,
+            "sha256": "3ca383682949251d0d05a7caf6ece13846503cd4de96949b73a327322cba7d0b",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "freecad_assembly",
+              "linked_libraries",
+              "stl",
+              "step"
+            ]
+          }
+        ],
+        "assembly": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p300-root-v2/mona-p300-root-v2-cad-scene-animation-public.zip",
+            "filename": "mona-p300-root-v2-cad-scene-animation-public.zip",
+            "bytes": 152645955,
+            "sha256": "3ca383682949251d0d05a7caf6ece13846503cd4de96949b73a327322cba7d0b",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "bom",
+              "ordered_ids",
+              "instructions"
+            ]
+          }
+        ],
+        "animations": {
+          "turntable": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p300-root-v2/mona-p300-root-v2-assembly-motion.mp4",
+            "bytes": 2015608,
+            "sha256": "ddc0e009d48bdfba3dd685b92e3bd13d9d98aeb91bfab03bf80cc19037e487e7",
+            "start_seconds": 0,
+            "end_seconds": 3
+          },
+          "radial_explode": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p300-root-v2/mona-p300-root-v2-assembly-motion.mp4",
+            "bytes": 2015608,
+            "sha256": "ddc0e009d48bdfba3dd685b92e3bd13d9d98aeb91bfab03bf80cc19037e487e7",
+            "start_seconds": 3,
+            "end_seconds": 6
+          },
+          "bottom_up": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p300-root-v2/mona-p300-root-v2-assembly-motion.mp4",
+            "bytes": 2015608,
+            "sha256": "ddc0e009d48bdfba3dd685b92e3bd13d9d98aeb91bfab03bf80cc19037e487e7",
+            "start_seconds": 6,
+            "end_seconds": 12
+          }
+        }
+      },
+      "whisker_support": {
+        "external_aid_count": 0,
+        "assembly_aid_count": 0,
+        "status": "DIGITAL_SELF_SUPPORTING_UNTESTED",
+        "physical_validation": "UNKNOWN",
+        "geometry_revision": "whisker-root-v2",
+        "manifest_sha256": "98525666a674023e7ea0412736e163da1a5745bf1d4df21a82063554c2e4e496",
+        "attachment_evidence_sha256": "7deee317b18a2757224009e4f2d01f9795abe493d372a7fb6957140d7b56fdf7",
+        "sequence_evidence_sha256": "17e1edf0746bb96e73db815df6ae42462f1e05121578d574d3fa1cf57136eee6",
+        "motion_sha256": "b8c52550eb76f7754a8bacd2f8d149fddc9c8a84a0f8a35efcc699f1c9aa7d0a",
+        "geometry_sequence_identity_sha256": "258e6f42f7d7a78f2353c18ac1f8e927d20fbff3f5704c0ff7a05b5da3aaf88d",
+        "all_categories_geometry_match": true,
+        "assembly_validation_ref": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/validation/mona-p300-root-v2-whisker-support.json",
+          "bytes": 158565,
+          "sha256": "17e1edf0746bb96e73db815df6ae42462f1e05121578d574d3fa1cf57136eee6"
+        },
+        "gravity_balance_result": "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS",
+        "physical_mass_measured": false
+      }
     },
     {
       "id": "mona-p400-root-v2",
@@ -1317,7 +1449,119 @@
       "id": "ducky-p120",
       "character": "ducky",
       "count_percentage": 120,
-      "state": "INPUT_WAIT"
+      "state": "READY",
+      "metrics": {
+        "part_count": 11586,
+        "unique_types": 93,
+        "one_by_one_exceptions": 7,
+        "layer_count": 83,
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "grip_long_ge_15_8_count": 11579,
+        "dimensions_mm": [
+          311.8,
+          455.8,
+          397
+        ]
+      },
+      "target_count": 11603,
+      "target_difference": -17,
+      "actual_ratio": 1.1982624883648774,
+      "manifest": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/cases/ducky-p120-guide.json.gz",
+        "bytes": 421533,
+        "sha256": "f3abd3aa8d34f494e8149c13f3e0cd301a536614069a825d96071c9058410331"
+      },
+      "source_manifest_sha256": "4810e4314bcb6245a0422485ae3a1417128c096444fc3a7eb87f4670673d51aa",
+      "source_bom_sha256": "2e9c11d802273c89ad76cacf034f499d2a16bf1990e111350387786d44760009",
+      "source_commit": "a5266273a56e64bdad8662195517b166dd6e501e",
+      "images": {
+        "front": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/ducky-p120-assembled-front.jpg",
+          "bytes": 55576,
+          "sha256": "666d2d9cbd2c2ca53717bf9197ef0033ff95fc50de8e336ade89d319bb9d95a6",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_front"
+        },
+        "three_quarter": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/ducky-p120-assembled-three_quarter.jpg",
+          "bytes": 75815,
+          "sha256": "4e7e7ba6380b3088627650a2affe5e0186fe652c609651ad9bd9a3c96b689129",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_three_quarter"
+        }
+      },
+      "tradeoff": "実11,586部品、固定分母9,669・目標11,603との差-17で許容内。完成正面・斜めと実MP4のframe1/18/54/73/108/144を閲覧した。 黄色の丸い頭と胴、黒い目、橙色の突き出したくちばし、側面の翼と後方の尾を実ブロックで表している。正面ではくちばし下の段差が目立ち、斜めでは頭頂・胸・翼に格子の段階が見える。 実寸311.8x455.8x397.0mm、実部品数倍率1.198262。固定8mm部品を使うため完成体は大型で、寸法を一律1.2倍した案ではない。元形状への見た目の一致が数だけで改善したとは判定しない。 1x1例外7個、長辺15.8mm以上11,579個。今回の実案には仮支持台がなく、frame73は本体も支台も空で、底部から段階的に全数へ進む。 保存native・別展開再open、全11,586ID/type/color/pose/step、93型の実頂点・面、放射状分解からの復帰と空から全数への保存scene照合が完了した。 本成果は未選択のデジタル比較案。小例外部品の扱いやすさ、現物の嵌合・保持力・荷重・転倒は未検証であり、スライスや印刷の許可ではない。",
+      "assets": {
+        "cg": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-p120/ducky-p120-cad-scene-animation-public.zip",
+            "filename": "ducky-p120-cad-scene-animation-public.zip",
+            "bytes": 71132982,
+            "sha256": "f7bd0a7eb00f0520573838ed308665aa759725adf602fd5264c1e9c7638cd276",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "still",
+              "blender"
+            ]
+          }
+        ],
+        "native_cad": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-p120/ducky-p120-cad-scene-animation-public.zip",
+            "filename": "ducky-p120-cad-scene-animation-public.zip",
+            "bytes": 71132982,
+            "sha256": "f7bd0a7eb00f0520573838ed308665aa759725adf602fd5264c1e9c7638cd276",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "freecad_assembly",
+              "linked_libraries",
+              "stl",
+              "step"
+            ]
+          }
+        ],
+        "assembly": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-p120/ducky-p120-cad-scene-animation-public.zip",
+            "filename": "ducky-p120-cad-scene-animation-public.zip",
+            "bytes": 71132982,
+            "sha256": "f7bd0a7eb00f0520573838ed308665aa759725adf602fd5264c1e9c7638cd276",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "bom",
+              "ordered_ids",
+              "instructions"
+            ]
+          }
+        ],
+        "animations": {
+          "turntable": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-p120/ducky-p120-assembly-motion.mp4",
+            "bytes": 1593769,
+            "sha256": "69107ec98dac8849e431fbe0c6cce70ce71ad9ffb5654064b223482a9c6ecfc1",
+            "start_seconds": 0,
+            "end_seconds": 3
+          },
+          "radial_explode": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-p120/ducky-p120-assembly-motion.mp4",
+            "bytes": 1593769,
+            "sha256": "69107ec98dac8849e431fbe0c6cce70ce71ad9ffb5654064b223482a9c6ecfc1",
+            "start_seconds": 3,
+            "end_seconds": 6
+          },
+          "bottom_up": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-p120/ducky-p120-assembly-motion.mp4",
+            "bytes": 1593769,
+            "sha256": "69107ec98dac8849e431fbe0c6cce70ce71ad9ffb5654064b223482a9c6ecfc1",
+            "start_seconds": 6,
+            "end_seconds": 12
+          }
+        }
+      }
     },
     {
       "id": "ducky-p150",
@@ -1729,7 +1973,7 @@
   ],
   "display_catalog": {
     "path": "/artifacts/studies/part-count-matrix-20260921/display/catalog.json",
-    "bytes": 1345912,
-    "sha256": "f7dca74c06b5ee25fb60deb394023276cd4100192c3da5ad9fab3572c41d8ced"
+    "bytes": 1568210,
+    "sha256": "e1f83730735ee0e1d0fdd3eb2def38801ca60018017eaac3b050ed83aedf85a1"
   }
 }

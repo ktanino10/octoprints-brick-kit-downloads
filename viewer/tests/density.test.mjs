@@ -280,7 +280,8 @@ test('only bound root evidence enables support-stage ordering; old Z-order guard
     actual_native_root_checks: {
       result: 'PASS_ACTUAL_BODY_ROOT_BREP_CONTACTS', gravity_balance_result: 'PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS',
       external_aid_count: 0, assembly_aid_count: 0,
-      modules: [{ part_id: root.id, actual_single_solid: true, native_root_type: root.type_id, module_insertion_step: root.step }],
+      modules: [{ part_id: root.id, anchor_role: 'WHISKER_ROOT_MODULE', actual_single_solid: true,
+        native_root_type: root.type_id, module_insertion_step: root.step }],
     },
     root_structural_sections: [{ part_id: root.id, native_single_solid: true, type_id: root.type_id,
       minimum_effective_section_area_mm2: 5, material_strength_infill_layer_orientation: 'UNMEASURED' }],
@@ -304,6 +305,31 @@ test('only bound root evidence enables support-stage ordering; old Z-order guard
     const changed = structuredClone(proof); change(changed);
     assert.throws(() => validateGuideManifest(manifest, id, changed));
   }
+  const backed = structuredClone(manifest), backingProof = structuredClone(proof);
+  const backing = backed.parts[5], contourId = 'CT-UNIT-HIDDEN';
+  backed.types[contourId] = { ...structuredClone(backed.types[backing.type_id]), kind: 'contour-brick' };
+  backing.type_id = contourId;
+  backing.role = 'body-supported-hidden-cheek-root';
+  backed.metrics.unique_types = 2;
+  backingProof.actual_types = 2;
+  backingProof.modules.push({ part_id: backing.id, type_id: contourId, step: backing.step,
+    physical_bottom_z_mm: backing.position_mm[2], receiving_body_stage_z_mm: backing.assembly_stage_z_mm,
+    actual_body_support_ids: backing.support_ids });
+  backingProof.actual_native_root_checks.modules.push({
+    part_id: backing.id, anchor_role: 'HIDDEN_CHEEK_BACKING', actual_single_solid: true,
+    native_root_type: contourId, module_insertion_step: backing.step,
+  });
+  backingProof.gravity_balance.modules.push({
+    part_id: backing.id, result: 'PASS_NOMINAL_CAD_STATIC_MOMENT_BOUND', required_margin_mm: 1,
+    minimum_support_margin_mm: 2, downstream_payloads: [],
+    assembly_prefix_checks: [{ added_part_id: backing.id, after_step: backing.step, minimum_support_margin_mm: 2 }],
+  });
+  assert.equal(validateGuideManifest(backed, id, backingProof), backed);
+  backingProof.gravity_balance.modules[1].assembly_prefix_checks[0].minimum_support_margin_mm = -5.13;
+  assert.throws(() => validateGuideManifest(backed, id, backingProof), /重心検査/);
+  backingProof.gravity_balance.modules[1].assembly_prefix_checks[0].minimum_support_margin_mm = 2;
+  backing.role = 'temporary-support';
+  assert.throws(() => validateGuideManifest(backed, id, backingProof), /重心検査/);
   const legacy = guideFixture();
   legacy.parts[4].position_mm[2] = -2;
   assert.throws(() => validateGuideManifest(legacy, 'mona-p120'), /底から順/);

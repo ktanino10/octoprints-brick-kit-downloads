@@ -44,7 +44,7 @@
     "field": "commit"
   },
   "verified_content_commit": null,
-  "catalog_sha256": "14f71103554e5a25b72c421a6f3ad96e4d67fa24d19b466a631ff5cb2ce95b03",
+  "catalog_sha256": "b74e3746588c77cf930ce952a4d2f1f2537ffb8160aaa0da40ec39b7645e17b9",
   "cases": [
     {
       "case_id": "mona-p120-root-v2",
@@ -154,19 +154,42 @@
       "logical_case_id": "mona-p300",
       "character": "mona",
       "multiplier": 3.0,
-      "target_count": null,
-      "actual_count": null,
-      "actual_ratio": null,
-      "status": "INPUT_WAIT",
-      "source_status": "INPUT_WAIT",
-      "whisker_support": null,
-      "cg_url": null,
-      "animation_url": null,
-      "animation_urls": {},
-      "cad_url": null,
-      "assembly_url": null,
-      "viewer_url": null,
-      "viewer_url_en": null
+      "target_count": 37305,
+      "actual_count": 37255,
+      "actual_ratio": 2.995979091274628,
+      "status": "READY",
+      "source_status": "READY",
+      "whisker_support": {
+        "external_aid_count": 0,
+        "assembly_aid_count": 0,
+        "status": "DIGITAL_SELF_SUPPORTING_UNTESTED",
+        "physical_validation": "UNKNOWN",
+        "geometry_revision": "whisker-root-v2",
+        "manifest_sha256": "98525666a674023e7ea0412736e163da1a5745bf1d4df21a82063554c2e4e496",
+        "attachment_evidence_sha256": "7deee317b18a2757224009e4f2d01f9795abe493d372a7fb6957140d7b56fdf7",
+        "sequence_evidence_sha256": "17e1edf0746bb96e73db815df6ae42462f1e05121578d574d3fa1cf57136eee6",
+        "motion_sha256": "b8c52550eb76f7754a8bacd2f8d149fddc9c8a84a0f8a35efcc699f1c9aa7d0a",
+        "geometry_sequence_identity_sha256": "258e6f42f7d7a78f2353c18ac1f8e927d20fbff3f5704c0ff7a05b5da3aaf88d",
+        "all_categories_geometry_match": true,
+        "assembly_validation_ref": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/validation/mona-p300-root-v2-whisker-support.json",
+          "bytes": 158565,
+          "sha256": "17e1edf0746bb96e73db815df6ae42462f1e05121578d574d3fa1cf57136eee6"
+        },
+        "gravity_balance_result": "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS",
+        "physical_mass_measured": false
+      },
+      "cg_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p300-root-v2/mona-p300-root-v2-cad-scene-animation-public.zip",
+      "animation_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p300-root-v2/mona-p300-root-v2-assembly-motion.mp4",
+      "animation_urls": {
+        "turntable": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p300-root-v2/mona-p300-root-v2-assembly-motion.mp4",
+        "radial_explode": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p300-root-v2/mona-p300-root-v2-assembly-motion.mp4",
+        "bottom_up": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p300-root-v2/mona-p300-root-v2-assembly-motion.mp4"
+      },
+      "cad_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p300-root-v2/mona-p300-root-v2-cad-scene-animation-public.zip",
+      "assembly_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-mona-p300-root-v2/mona-p300-root-v2-cad-scene-animation-public.zip",
+      "viewer_url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case=mona-p300-root-v2",
+      "viewer_url_en": "https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-guide.html?case=mona-p300-root-v2"
     },
     {
       "case_id": "mona-p400-root-v2",
@@ -307,19 +330,23 @@
       "logical_case_id": "ducky-p120",
       "character": "ducky",
       "multiplier": 1.2,
-      "target_count": null,
-      "actual_count": null,
-      "actual_ratio": null,
-      "status": "INPUT_WAIT",
-      "source_status": "INPUT_WAIT",
+      "target_count": 11603,
+      "actual_count": 11586,
+      "actual_ratio": 1.1982624883648774,
+      "status": "READY",
+      "source_status": "READY",
       "whisker_support": null,
-      "cg_url": null,
-      "animation_url": null,
-      "animation_urls": {},
-      "cad_url": null,
-      "assembly_url": null,
-      "viewer_url": null,
-      "viewer_url_en": null
+      "cg_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-p120/ducky-p120-cad-scene-animation-public.zip",
+      "animation_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-p120/ducky-p120-assembly-motion.mp4",
+      "animation_urls": {
+        "turntable": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-p120/ducky-p120-assembly-motion.mp4",
+        "radial_explode": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-p120/ducky-p120-assembly-motion.mp4",
+        "bottom_up": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-p120/ducky-p120-assembly-motion.mp4"
+      },
+      "cad_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-p120/ducky-p120-cad-scene-animation-public.zip",
+      "assembly_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-ducky-p120/ducky-p120-cad-scene-animation-public.zip",
+      "viewer_url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case=ducky-p120",
+      "viewer_url_en": "https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-guide.html?case=ducky-p120"
     },
     {
       "case_id": "ducky-p150",
@@ -430,8 +457,8 @@
     "mona_whisker_requirement": "NO_EXTERNAL_OR_ASSEMBLY_AIDS",
     "physical_validation": "UNKNOWN",
     "slicer_print_supports": "SEPARATE_UNVALIDATED_CONDITION",
-    "data_ready_case_count": 7,
-    "requirement_ready_case_count": 7,
+    "data_ready_case_count": 9,
+    "requirement_ready_case_count": 9,
     "historical_data_case_count": 2,
     "final_comparisons_available": false
   }
