@@ -1,0 +1,516 @@
+{
+  "schema_version": 1,
+  "study_id": "part-count-matrix-20260921",
+  "state": "READY",
+  "scope": "PUBLIC_DIGITAL_ARTIFACT_DELIVERY_NOT_AESTHETIC_PHYSICAL_OR_PRINT_APPROVAL",
+  "verified_at_utc": "2026-09-21T23:46:15.294338+00:00",
+  "verified_content_commit": "d9e7e7b58dd7ce034793956a6f231168cc2abc03",
+  "verified_content_pages_run": "35668230599",
+  "final_public_commit": {
+    "record": "/archive/deployment.json",
+    "field": "commit"
+  },
+  "catalog_sha256": "69b39de67d8d9214b75b631bf1e9f73e09ee16a520314b65a559ad6be2ff864e",
+  "actual_multiplier_cases": [
+    {
+      "case_id": "mona-p120-root-v2",
+      "logical_case_id": "mona-p120",
+      "actual_parts": 14913,
+      "target_parts": 14922,
+      "difference": -9,
+      "actual_ratio": 1.1992762364294332,
+      "actual_types": 118,
+      "dimensions_mm": [
+        439.8,
+        359.8,
+        397
+      ],
+      "temporary_aids_excluded_from_figure_count": 0,
+      "native_documents_reopened_after_relocation": 122,
+      "all_native_ids_types_colors_poses_steps": "MATCH",
+      "blender_geometry_material_motion_preserved": true,
+      "source_manifest_sha256": "ee3f8121f1ba46fff973952a6cd9a4fc5f6d868a8cb4e9924d068d01d7828b88",
+      "geometry_revision": "whisker-root-v2"
+    },
+    {
+      "case_id": "mona-p150-root-v2",
+      "logical_case_id": "mona-p150",
+      "actual_parts": 18649,
+      "target_parts": 18653,
+      "difference": -4,
+      "actual_ratio": 1.499718536389224,
+      "actual_types": 128,
+      "dimensions_mm": [
+        487.8,
+        391.8,
+        425.8
+      ],
+      "temporary_aids_excluded_from_figure_count": 0,
+      "native_documents_reopened_after_relocation": 132,
+      "all_native_ids_types_colors_poses_steps": "MATCH",
+      "blender_geometry_material_motion_preserved": true,
+      "source_manifest_sha256": "cf4dd304ff6eac6c18e2fed28a797e0d3853ffd07de1011de4ae329f9bfe5f9f",
+      "geometry_revision": "whisker-root-v2"
+    },
+    {
+      "case_id": "mona-p200-root-v2",
+      "logical_case_id": "mona-p200",
+      "actual_parts": 24811,
+      "target_parts": 24870,
+      "difference": -59,
+      "actual_ratio": 1.9952553277040612,
+      "actual_types": 135,
+      "dimensions_mm": [
+        535.8,
+        439.8,
+        473.8
+      ],
+      "temporary_aids_excluded_from_figure_count": 0,
+      "native_documents_reopened_after_relocation": 139,
+      "all_native_ids_types_colors_poses_steps": "MATCH",
+      "blender_geometry_material_motion_preserved": true,
+      "source_manifest_sha256": "176da3d97a1668a5e2da299719b4590fb7baea4ad5657a6444971a867e026442",
+      "geometry_revision": "whisker-root-v2"
+    },
+    {
+      "case_id": "mona-p300-root-v2",
+      "logical_case_id": "mona-p300",
+      "actual_parts": 37255,
+      "target_parts": 37305,
+      "difference": -50,
+      "actual_ratio": 2.995979091274628,
+      "actual_types": 160,
+      "dimensions_mm": [
+        615.8,
+        503.8,
+        545.8
+      ],
+      "temporary_aids_excluded_from_figure_count": 0,
+      "native_documents_reopened_after_relocation": 164,
+      "all_native_ids_types_colors_poses_steps": "MATCH",
+      "blender_geometry_material_motion_preserved": true,
+      "source_manifest_sha256": "98525666a674023e7ea0412736e163da1a5745bf1d4df21a82063554c2e4e496",
+      "geometry_revision": "whisker-root-v2"
+    },
+    {
+      "case_id": "mona-p400-root-v2",
+      "logical_case_id": "mona-p400",
+      "actual_parts": 49483,
+      "target_parts": 49740,
+      "difference": -257,
+      "actual_ratio": 3.979332529151588,
+      "actual_types": 172,
+      "dimensions_mm": [
+        679.8,
+        551.8,
+        598.5999999999999
+      ],
+      "temporary_aids_excluded_from_figure_count": 0,
+      "native_documents_reopened_after_relocation": 176,
+      "all_native_ids_types_colors_poses_steps": "MATCH",
+      "blender_geometry_material_motion_preserved": true,
+      "source_manifest_sha256": "33021b148b3a1006c39e0581030ab324e5570291aadcb46432becd6bde288223",
+      "geometry_revision": "whisker-root-v2"
+    },
+    {
+      "case_id": "copilot-p120",
+      "logical_case_id": "copilot-p120",
+      "actual_parts": 21388,
+      "target_parts": 21448,
+      "difference": -60,
+      "actual_ratio": 1.1966653611592906,
+      "actual_types": 155,
+      "dimensions_mm": [
+        519.8,
+        439.8,
+        397
+      ],
+      "temporary_aids_excluded_from_figure_count": 1,
+      "native_documents_reopened_after_relocation": 160,
+      "all_native_ids_types_colors_poses_steps": "MATCH",
+      "blender_geometry_material_motion_preserved": true,
+      "source_manifest_sha256": "3a44107433f29351e8818e74bf1a3fa6db9fb13bc14e9b1029b3d7d20cd5249d",
+      "geometry_revision": "original-matrix"
+    },
+    {
+      "case_id": "copilot-p150",
+      "logical_case_id": "copilot-p150",
+      "actual_parts": 26690,
+      "target_parts": 26810,
+      "difference": -120,
+      "actual_ratio": 1.4933139372237454,
+      "actual_types": 162,
+      "dimensions_mm": [
+        567.8,
+        487.8,
+        425.8
+      ],
+      "temporary_aids_excluded_from_figure_count": 1,
+      "native_documents_reopened_after_relocation": 167,
+      "all_native_ids_types_colors_poses_steps": "MATCH",
+      "blender_geometry_material_motion_preserved": true,
+      "source_manifest_sha256": "8b75a8ab2a1b040125ddeca241b2e07d0e85b3788100a3692b8bc6ab232cc1bb",
+      "geometry_revision": "original-matrix"
+    },
+    {
+      "case_id": "copilot-p200",
+      "logical_case_id": "copilot-p200",
+      "actual_parts": 35648,
+      "target_parts": 35746,
+      "difference": -98,
+      "actual_ratio": 1.99451686902031,
+      "actual_types": 182,
+      "dimensions_mm": [
+        631.8,
+        535.8,
+        469
+      ],
+      "temporary_aids_excluded_from_figure_count": 1,
+      "native_documents_reopened_after_relocation": 187,
+      "all_native_ids_types_colors_poses_steps": "MATCH",
+      "blender_geometry_material_motion_preserved": true,
+      "source_manifest_sha256": "f9d4f8f43b4391314e436a39e2228cff8b36fdd94d574c8923a00ee804a8a26c",
+      "geometry_revision": "original-matrix"
+    },
+    {
+      "case_id": "copilot-p300",
+      "logical_case_id": "copilot-p300",
+      "actual_parts": 53350,
+      "target_parts": 53619,
+      "difference": -269,
+      "actual_ratio": 2.984949364963912,
+      "actual_types": 195,
+      "dimensions_mm": [
+        727.8,
+        615.8,
+        540.9999999999999
+      ],
+      "temporary_aids_excluded_from_figure_count": 2,
+      "native_documents_reopened_after_relocation": 201,
+      "all_native_ids_types_colors_poses_steps": "MATCH",
+      "blender_geometry_material_motion_preserved": true,
+      "source_manifest_sha256": "6cc5d2279d5b80db851246fba64e88acca6acc472bdae1738d748193974c7b13",
+      "geometry_revision": "original-matrix"
+    },
+    {
+      "case_id": "copilot-p400",
+      "logical_case_id": "copilot-p400",
+      "actual_parts": 71261,
+      "target_parts": 71492,
+      "difference": -231,
+      "actual_ratio": 3.987075476976445,
+      "actual_types": 214,
+      "dimensions_mm": [
+        791.8,
+        679.8,
+        598.5999999999999
+      ],
+      "temporary_aids_excluded_from_figure_count": 0,
+      "native_documents_reopened_after_relocation": 218,
+      "all_native_ids_types_colors_poses_steps": "MATCH",
+      "blender_geometry_material_motion_preserved": true,
+      "source_manifest_sha256": "37b26f4f6347aacb09f509e9507842a6223b9f2c7f27e58e22487b8cccb9b212",
+      "geometry_revision": "original-matrix"
+    },
+    {
+      "case_id": "ducky-p120",
+      "logical_case_id": "ducky-p120",
+      "actual_parts": 11586,
+      "target_parts": 11603,
+      "difference": -17,
+      "actual_ratio": 1.1982624883648774,
+      "actual_types": 93,
+      "dimensions_mm": [
+        311.8,
+        455.8,
+        397
+      ],
+      "temporary_aids_excluded_from_figure_count": 0,
+      "native_documents_reopened_after_relocation": 97,
+      "all_native_ids_types_colors_poses_steps": "MATCH",
+      "blender_geometry_material_motion_preserved": true,
+      "source_manifest_sha256": "4810e4314bcb6245a0422485ae3a1417128c096444fc3a7eb87f4670673d51aa",
+      "geometry_revision": "original-matrix"
+    },
+    {
+      "case_id": "ducky-p150",
+      "logical_case_id": "ducky-p150",
+      "actual_parts": 14460,
+      "target_parts": 14504,
+      "difference": -44,
+      "actual_ratio": 1.495501085944772,
+      "actual_types": 100,
+      "dimensions_mm": [
+        343.8,
+        503.8,
+        425.8
+      ],
+      "temporary_aids_excluded_from_figure_count": 0,
+      "native_documents_reopened_after_relocation": 104,
+      "all_native_ids_types_colors_poses_steps": "MATCH",
+      "blender_geometry_material_motion_preserved": true,
+      "source_manifest_sha256": "bfed5a65b01819a5349a44aa40c8c996116ea3d28e67d1691df0e8f0c74828d9",
+      "geometry_revision": "original-matrix"
+    },
+    {
+      "case_id": "ducky-p200",
+      "logical_case_id": "ducky-p200",
+      "actual_parts": 19309,
+      "target_parts": 19338,
+      "difference": -29,
+      "actual_ratio": 1.9970007239631813,
+      "actual_types": 106,
+      "dimensions_mm": [
+        375.8,
+        551.8,
+        473.8
+      ],
+      "temporary_aids_excluded_from_figure_count": 3,
+      "native_documents_reopened_after_relocation": 113,
+      "all_native_ids_types_colors_poses_steps": "MATCH",
+      "blender_geometry_material_motion_preserved": true,
+      "source_manifest_sha256": "aa8b312345cef3b29c85d780eac510321ba411f073b0a877256d1345d840d379",
+      "geometry_revision": "original-matrix"
+    },
+    {
+      "case_id": "ducky-p300",
+      "logical_case_id": "ducky-p300",
+      "actual_parts": 28932,
+      "target_parts": 29007,
+      "difference": -75,
+      "actual_ratio": 2.992243251628917,
+      "actual_types": 121,
+      "dimensions_mm": [
+        439.8,
+        631.8,
+        540.9999999999999
+      ],
+      "temporary_aids_excluded_from_figure_count": 0,
+      "native_documents_reopened_after_relocation": 125,
+      "all_native_ids_types_colors_poses_steps": "MATCH",
+      "blender_geometry_material_motion_preserved": true,
+      "source_manifest_sha256": "c1e25350dd99d8f5ac7e0f52704274ef3435ee4d584ec47f92c37384d3f7f8f5",
+      "geometry_revision": "original-matrix"
+    },
+    {
+      "case_id": "ducky-p400",
+      "logical_case_id": "ducky-p400",
+      "actual_parts": 38473,
+      "target_parts": 38676,
+      "difference": -203,
+      "actual_ratio": 3.979005067742269,
+      "actual_types": 139,
+      "dimensions_mm": [
+        487.8,
+        695.8,
+        598.5999999999999
+      ],
+      "temporary_aids_excluded_from_figure_count": 1,
+      "native_documents_reopened_after_relocation": 144,
+      "all_native_ids_types_colors_poses_steps": "MATCH",
+      "blender_geometry_material_motion_preserved": true,
+      "source_manifest_sha256": "ec603fa41e6417f8b5ff2140f723a024d3149970865701a5e880dc0cc5bbb4b4",
+      "geometry_revision": "original-matrix"
+    }
+  ],
+  "actual_multiplier_case_count": 15,
+  "actual_figure_instances_total": 466208,
+  "frozen_baseline_counts": {
+    "mona": 12435,
+    "copilot": 17873,
+    "ducky": 9669
+  },
+  "baseline_assumption": "INITIAL_FINE_C_ADAPTED_8MM_COMPARISON_ASSUMPTION_NOT_USER_SELECTION",
+  "actual_reference_counts": {
+    "mona": 12411,
+    "copilot": 17873,
+    "ducky": 9669
+  },
+  "references_count_toward_fifteen": false,
+  "mona_reference_difference_from_frozen": -24,
+  "historical_mona_cases_excluded": [
+    "mona-p120",
+    "mona-p150"
+  ],
+  "browser": {
+    "engine": "WebKit",
+    "pinned_browser_revision": 2203,
+    "playwright_python_version": "1.55.0",
+    "public_https_cases_checked": [
+      "mona-p120-root-v2",
+      "mona-p150-root-v2",
+      "mona-p200-root-v2",
+      "mona-p300-root-v2",
+      "mona-p400-root-v2",
+      "copilot-p120",
+      "copilot-p150",
+      "copilot-p200",
+      "copilot-p300",
+      "copilot-p400",
+      "ducky-p120",
+      "ducky-p150",
+      "ducky-p200",
+      "ducky-p300",
+      "ducky-p400"
+    ],
+    "reference_guides_checked": [
+      "mona-fine8-base-root-v2"
+    ],
+    "original_and_lightweight_modes_checked": 16,
+    "native_part_preview_and_root_geometry": "ORIGINAL_NATIVE",
+    "radial_absolute_roundtrip_and_all_gpu_matrices": "PASS",
+    "bottom_up_empty_part_course_full_and_root_receiver_order": "PASS",
+    "ja_en_share_reload_selection_and_bom": "PASS",
+    "largest_mobile_viewport_case": "copilot-p400",
+    "mobile_scope": "390px viewport on macOS desktop; not physical phone testing",
+    "actual_movie_chapter_playbacks": 57,
+    "actual_case_movie_chapters": 45,
+    "actual_reference_card_movie_chapters": 9,
+    "additional_reference_guide_movie_chapters": 3,
+    "temporary_aids": [
+      {
+        "case_id": "copilot-p120",
+        "actual_aids": 1,
+        "supported_parts": [
+          {
+            "aid_id": "copilot-p120-aid-01",
+            "part_id": "COPILOT-P120-000313",
+            "actual_step": 267
+          }
+        ],
+        "removal_hold_visible": true
+      },
+      {
+        "case_id": "copilot-p150",
+        "actual_aids": 1,
+        "supported_parts": [
+          {
+            "aid_id": "copilot-p150-aid-01",
+            "part_id": "COPILOT-P150-000356",
+            "actual_step": 304
+          }
+        ],
+        "removal_hold_visible": true
+      },
+      {
+        "case_id": "copilot-p200",
+        "actual_aids": 1,
+        "supported_parts": [
+          {
+            "aid_id": "copilot-p200-aid-01",
+            "part_id": "COPILOT-P200-000437",
+            "actual_step": 364
+          }
+        ],
+        "removal_hold_visible": true
+      },
+      {
+        "case_id": "copilot-p300",
+        "actual_aids": 2,
+        "supported_parts": [
+          {
+            "aid_id": "copilot-p300-aid-01",
+            "part_id": "COPILOT-P300-000497",
+            "actual_step": 436
+          },
+          {
+            "aid_id": "copilot-p300-aid-02",
+            "part_id": "COPILOT-P300-000498",
+            "actual_step": 435
+          }
+        ],
+        "removal_hold_visible": true
+      },
+      {
+        "case_id": "ducky-p200",
+        "actual_aids": 3,
+        "supported_parts": [
+          {
+            "aid_id": "ducky-p200-aid-01",
+            "part_id": "DUCKY-P200-008384",
+            "actual_step": 8257
+          },
+          {
+            "aid_id": "ducky-p200-aid-02",
+            "part_id": "DUCKY-P200-008400",
+            "actual_step": 8258
+          },
+          {
+            "aid_id": "ducky-p200-aid-03",
+            "part_id": "DUCKY-P200-008711",
+            "actual_step": 8538
+          }
+        ],
+        "removal_hold_visible": true
+      },
+      {
+        "case_id": "ducky-p400",
+        "actual_aids": 1,
+        "supported_parts": [
+          {
+            "aid_id": "ducky-p400-aid-01",
+            "part_id": "DUCKY-P400-016770",
+            "actual_step": 16565
+          }
+        ],
+        "removal_hold_visible": true
+      }
+    ],
+    "explicit_missing_data_image_mesh_and_root_evidence_errors": "PASS"
+  },
+  "comparisons": {
+    "actual_source_models": 18,
+    "source_files_bound": 90,
+    "private_binding_record_checked": true,
+    "comparison_images_checked": [
+      "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/comparisons/mona-normalized-front.jpg",
+      "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/comparisons/mona-normalized-three_quarter.jpg",
+      "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/comparisons/mona-physical-size.jpg",
+      "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/comparisons/copilot-normalized-front.jpg",
+      "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/comparisons/copilot-normalized-three_quarter.jpg",
+      "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/comparisons/copilot-physical-size.jpg",
+      "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/comparisons/ducky-normalized-front.jpg",
+      "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/comparisons/ducky-normalized-three_quarter.jpg",
+      "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/comparisons/ducky-physical-size.jpg"
+    ],
+    "csv_actual_case_rows": 15,
+    "csv_columns": 17,
+    "all_nine_actual_images_visually_inspected": true,
+    "matched_panel_model_height_px": 417.6,
+    "physical_pixels_per_mm": 0.9,
+    "uniform_affine_and_shared_ground_px": 750,
+    "images_are_actual_cg_composites_without_geometry_regeneration": true,
+    "evidence_record": "/archive/sources/part-count-matrix-20260921-comparisons-verification.json"
+  },
+  "anonymous_delivery": {
+    "authentication": "none",
+    "matrix_assets_verified": 53,
+    "changed_site_files_verified": 211,
+    "new_or_changed_assets_full_sha256": 23,
+    "unchanged_assets_prior_full_sha256_and_fresh_head": 30,
+    "mp4_range_and_ftyp_checks": 21,
+    "actual_browser_video_delivery": "PASS",
+    "whole_native_packages": "PUBLIC_VERSIONED_RELEASES"
+  },
+  "display_performance": {
+    "all_fifteen_actual_cases_measured": true,
+    "per_case_measurements": "/artifacts/studies/part-count-matrix-20260921/display/case-performance.json",
+    "maximum_case_native_and_light_measurements": "/artifacts/studies/part-count-matrix-20260921/display/maximum-case-performance.json",
+    "original_native_and_cad_assets_modified": false,
+    "roots_special_shapes_and_selected_parts": "ORIGINAL_NATIVE",
+    "approximate_simplifier_error_mm": 0.04,
+    "manufacturing_or_universal_device_performance_guarantee": false
+  },
+  "safety_and_scope": {
+    "selection": "NOT_SELECTED",
+    "visual_approval": "PENDING",
+    "physical_validation": "UNKNOWN",
+    "slicer_status": "NOT_SLICED",
+    "slicer_supports": "UNKNOWN_SEPARATE_FROM_ASSEMBLY_AIDS",
+    "full_print": "ON_HOLD",
+    "aid_withdrawal": "NOT_VALIDATED",
+    "private_source_repository_visibility_changed": false,
+    "private_history_or_absolute_paths_in_public_artifacts": false,
+    "historical_current_r3_and_old_urls_preserved": true
+  }
+}

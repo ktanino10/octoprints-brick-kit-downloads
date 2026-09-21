@@ -143,6 +143,8 @@ Local eye-rim, nose and smile color-transfer differences remain; more parts do n
 **NOT_SELECTED / NOT_SLICED; physical fit, retention, loads and tipping UNKNOWN; full-kit printing on hold.**
 The [machine-readable receipt](archive/block-budget-matrix.json) becomes `READY` only after all fifteen cases,
 comparison assets, anonymous downloads and the real public browser pass. Publication completion is not physical approval.
+[The final public verification record](artifacts/studies/part-count-matrix-20260921/publication-verification.json) records all fifteen actual counts/native checks,
+the public browser, 57 actual movie-chapter playbacks, anonymous hash verification and environment limitations.
 The matrix includes **nine final comparison images**, each combining the actual reference with five multiplier cases.
 Front/three-quarter sheets use matched projected height; separate physical-size sheets use a uniform 0.9 px/mm in the source image and shared ground.
 Responsive display is not a physical ruler. All eighteen source manifests/BOMs, original CG pixels and cameras are hash-bound;

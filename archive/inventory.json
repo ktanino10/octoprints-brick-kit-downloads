@@ -67,8 +67,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "MD",
-      "bytes": 28644,
-      "sha256": "15e3cda7941fc325050ec6bbbc6a9bb0a8a6e0283d6c0da3bfeb51d72a6ac611",
+      "bytes": 28920,
+      "sha256": "f9766c1e94b539c7bb1ffad6cd790eebcd81d0d37b21e661f1645f1f98ef6cb3",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/README.en.md",
       "status": "ARCHIVE_RECORD"
     },
@@ -77,8 +77,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "MD",
-      "bytes": 28962,
-      "sha256": "50d2fced39a73788fbe588e28e8b7932b96a83914bc2442b599d323cdc90ea12",
+      "bytes": 29228,
+      "sha256": "2107f94faa3eed2c428c105a32b89cf6cb8707af38c9c08aa41ebf6f224da9b2",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/README.md",
       "status": "ARCHIVE_RECORD"
     },
@@ -87,8 +87,8 @@
       "group": "design",
       "revision": "r2-20260919",
       "format": "JSON",
-      "bytes": 38358,
-      "sha256": "ba8d6be1e3d47f8654f3316ba3563b9182123908aed8e4f187152a26864ca5fe",
+      "bytes": 38616,
+      "sha256": "ac56fdc6e1a670abc22dd5263d843a920e999f73bb215fcf34f598bc94225907",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/block-budget-matrix.json",
       "status": "ARCHIVE_RECORD"
     },
@@ -29569,6 +29569,16 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/publication-verification.json",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JSON",
+      "bytes": 18397,
+      "sha256": "312757d980dfca9f19acc4a26d3be0e9662402accb531824ae1a55d028c373ed",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/publication-verification.json",
+      "status": "UNSELECTED_DIGITAL_STUDY"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/references/copilot-initial-fine-legacy_three_quarter.jpg",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -31697,8 +31707,8 @@
     }
   ],
   "totals": {
-    "files": 2491,
-    "bytes": 952327898,
+    "files": 2492,
+    "bytes": 952347095,
     "groups": {
       "site": 69,
       "design": 71,
@@ -31707,7 +31717,7 @@
       "common-trial": 24,
       "selected": 544,
       "trial": 60,
-      "study": 991,
+      "study": 992,
       "feedback": 16,
       "viewer": 6
     }

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "study_id": "part-count-matrix-20260921",
-  "state": "PARTIAL",
+  "state": "READY",
   "baseline_counts": {
     "mona": 12435,
     "copilot": 17873,
@@ -43,7 +43,7 @@
     "record": "archive/deployment.json",
     "field": "commit"
   },
-  "verified_content_commit": null,
+  "verified_content_commit": "d9e7e7b58dd7ce034793956a6f231168cc2abc03",
   "catalog_sha256": "69b39de67d8d9214b75b631bf1e9f73e09ee16a520314b65a559ad6be2ff864e",
   "cases": [
     {
@@ -512,8 +512,8 @@
     }
   ],
   "verification": {
-    "public_browser_passed": false,
-    "anonymous_downloads_passed": false
+    "public_browser_passed": true,
+    "anonymous_downloads_passed": true
   },
   "requested_delivery": {
     "mona_whisker_requirement": "NO_EXTERNAL_OR_ASSEMBLY_AIDS",
@@ -523,5 +523,10 @@
     "requirement_ready_case_count": 15,
     "historical_data_case_count": 2,
     "final_comparisons_available": true
+  },
+  "verification_record": {
+    "path": "/artifacts/studies/part-count-matrix-20260921/publication-verification.json",
+    "bytes": 18397,
+    "sha256": "312757d980dfca9f19acc4a26d3be0e9662402accb531824ae1a55d028c373ed"
   }
 }
