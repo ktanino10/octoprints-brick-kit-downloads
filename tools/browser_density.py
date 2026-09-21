@@ -103,6 +103,11 @@ with sync_playwright() as playwright:
                 page.locator('[data-guide-action="complete"]').click()
                 expect(page.locator("#density-canvas")).to_have_attribute("data-visible-parts", str(entry["metrics"]["part_count"]))
                 assert page.evaluate("window.__densityGuide.diagnostics().matrix_elements_mismatched") == 0
+                page.locator('[data-guide-action="view:front"]').click()
+                canvas = page.locator("#density-canvas canvas")
+                box = canvas.bounding_box()
+                canvas.click(position={"x": box["width"] / 2, "y": box["height"] / 2})
+                expect(page.locator("#guide-selection strong")).to_be_visible()
                 page.locator("#guide-parts button").first.click()
                 selected = page.locator("#guide-selection strong").inner_text()
                 expect(page.locator("#guide-part-preview canvas")).to_be_visible()
