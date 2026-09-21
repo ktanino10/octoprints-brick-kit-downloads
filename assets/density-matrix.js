@@ -151,7 +151,7 @@ try {
     catalog = validateDensityCatalog(await readJSON(pointer.catalog.path, pointer.catalog.sha256), pointer);
     const ready = catalog.cases.filter((item) => item.state === 'READY').length;
     const eligible = catalog.cases.filter((item) => densityDeliveryStatus(item) === 'READY').length;
-    $('#matrix-status').textContent = `追加要件適合 ${number(eligible, 0)} / 15案。旧設計を含む実データ公開 ${number(ready, 0)} / 15案。実物合格ではありません。`;
+    $('#matrix-status').textContent = `追加要件適合 ${number(eligible, 0)} / 15案。比較対象の実データ公開 ${number(ready, 0)} / 15案。旧版は別の履歴です。実物合格ではありません。`;
     $('#matrix-results').hidden = false; render(); renderTable(); renderHistory();
   }
 } catch (error) {

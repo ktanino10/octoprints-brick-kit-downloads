@@ -9,7 +9,7 @@ import {
 } from '../../assets/density-data.js';
 import {
   validateGuideManifest, guideIndex, radialPosition, courseBoundary, stageRange,
-  samePartDestinations, AssemblyPlayback,
+  samePartDestinations, AssemblyPlayback, validateRootAnchoredStructure,
 } from '../src/density-state.js';
 import { densityMatrix } from '../src/density-studio.js';
 import { readDensityView, writeDensityView } from '../src/density-view-state.js';
@@ -176,6 +176,44 @@ test('revised geometry occupies one logical slot while old actual IDs remain exp
   assert.throws(() => validateGuideManifest(guide, original.id));
   guide.animation_contract.sequence_mode = 'BODY_FIRST_ROOT_ANCHORED';
   assert.throws(() => validateGuideManifest(guide, revised.id), /工程検査記録/);
+});
+
+test('root-anchored structural checks preserve real low origins and require actual dependency order', () => {
+  const manifest = guideFixture();
+  Object.assign(manifest, { candidate_id: 'mona-p120-root-v2', logical_case_id: 'mona-p120',
+    geometry_revision: 'whisker-root-v2' });
+  manifest.animation_contract.sequence_mode = 'BODY_FIRST_ROOT_ANCHORED';
+  for (const part of manifest.parts) {
+    part.assembly_stage_z_mm = part.position_mm[2];
+    part.insertion_predecessor_ids = [...part.support_ids];
+  }
+  manifest.parts[4].position_mm[2] = -2;
+  manifest.parts[5].position_mm[2] = 0;
+  manifest.parts[5].insertion_predecessor_ids.push('UNIT-4');
+  for (const stage of manifest.animation_contract.stages) {
+    stage.support_z_mm = manifest.parts[stage.start_step - 1].assembly_stage_z_mm;
+  }
+  const before = structuredClone(manifest);
+  assert.equal(validateRootAnchoredStructure(manifest), manifest);
+  assert.deepEqual(manifest, before);
+  assert.throws(() => validateGuideManifest(manifest, manifest.candidate_id), /工程検査記録/);
+  for (const change of [
+    (data) => { data.candidate_id = 'mona-p120'; },
+    (data) => { data.geometry_revision = 'unverified-other'; },
+    (data) => { data.aids.push({ id: 'hidden-support' }); },
+    (data) => { data.parts[4].required_aids.push('hidden-support'); },
+    (data) => { delete data.parts[0].insertion_predecessor_ids; },
+    (data) => { data.parts[4].insertion_predecessor_ids = ['UNIT-7']; },
+    (data) => { data.parts[4].support_ids = ['UNIT-4']; },
+    (data) => { data.parts[4].assembly_stage_z_mm = -10; },
+    (data) => { data.parts[7].assembly_course = 0; },
+    (data) => { data.parts[6].assembly_stage_z_mm += 1; },
+    (data) => { data.animation_contract.stages[1].support_z_mm = 1; },
+    (data) => { data.animation_contract.stages[1].end_step = 7; },
+  ]) {
+    const changed = structuredClone(manifest); change(changed);
+    assert.throws(() => validateRootAnchoredStructure(changed));
+  }
 });
 
 test('radial explosion is absolute, all-directional and exactly reversible for every pose', () => {

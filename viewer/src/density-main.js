@@ -37,11 +37,17 @@ function link(file, label) {
   return node;
 }
 function setEnabled(ready) {
-  document.querySelectorAll('[data-guide-action],#guide-mode,#guide-explode,#guide-step,#guide-speed,#guide-stage')
+  document.querySelectorAll('[data-guide-action],#guide-mode,#guide-explode,#guide-step,#guide-speed,#guide-stage,#guide-search,#guide-same,#guide-prev,#guide-next')
     .forEach((node) => { node.disabled = !ready; });
 }
 function writeURL(url = new URL(location.href)) {
-  if (!candidate || !manifest) return url;
+  if (!candidate) return url;
+  if (!manifest) {
+    const pending = new URL(url);
+    pending.search = '';
+    pending.searchParams.set('case', candidate.id);
+    return pending;
+  }
   return writeDensityView(url, {
     candidate: candidate.id, ...progress, part: selected?.id ?? null,
     query: $('#guide-search').value, same: $('#guide-same').checked,
@@ -190,6 +196,7 @@ function renderBOM() {
 function renderDownloads() {
   const host = $('#guide-downloads');
   host.replaceChildren();
+  const mediaGeneration = generation;
   for (const [key, label] of [['cg', 'CG・Blender'], ['native_cad', 'FreeCAD・STEP・STL'], ['assembly', 'BOM・実組立順']]) {
     const section = element('section');
     section.append(element('h3', label));
@@ -204,7 +211,9 @@ function renderDownloads() {
   for (const [key, label] of [['turntable', '旋回'], ['radial_explode', '360度放射分解'], ['bottom_up', '底から組立']]) {
     const clip = candidate.assets.animations[key];
     const video = studyVideo(`${downloadURL(clip)}#t=${clip.start_seconds},${clip.end_seconds}`, label,
-      () => showError('公開動画を読み込めません。動画の取得リンクから確認してください。'));
+      () => {
+        if (mediaGeneration === generation) showError('公開動画を読み込めません。動画の取得リンクから確認してください。');
+      });
     section.append(element('h4', label), video, link(clip, '元の動画を取得 ↗'));
   }
   host.append(section);
@@ -219,15 +228,24 @@ async function selectCandidate(id, params = null) {
   $('#density-canvas').dataset.ready = 'false';
   preview?.clear(); studio?.clear(); setEnabled(false);
   candidate = item; $('#guide-case').value = id;
+  if (!params) history.replaceState(history.state, '', writeURL());
   $('#guide-error').hidden = true;
   $('#guide-parts').replaceChildren(); $('#guide-bom').replaceChildren(); $('#guide-selection').replaceChildren();
+  $('#guide-downloads').querySelectorAll('video').forEach((video) => video.pause());
   $('#guide-downloads').replaceChildren();
+  for (const selector of ['#guide-target-status', '#guide-mesh-mode', '#guide-progress', '#guide-active',
+    '#guide-current-course', '#guide-required-aids', '#guide-list-count']) $(selector).textContent = '';
+  $('#guide-active-files').replaceChildren(); $('#guide-stage').replaceChildren();
+  $('#guide-search').value = ''; $('#guide-same').checked = false;
+  $('#guide-step').max = '0'; $('#guide-step').value = '0'; $('#guide-explode').value = '0';
+  $('#guide-empty').hidden = true;
   $('#guide-case-warning').textContent = '';
   $('#guide-whisker-status').hidden = true;
   $('#guide-loading').hidden = false;
   $('#guide-loading').textContent = '実ID・配置・共有ネイティブ形状を読み込み、ハッシュを照合しています。';
   if (item.state === 'INPUT_WAIT') {
     $('#guide-loading').textContent = 'この案の実データは受領待ちです。旧案や箱の形状では代用しません。';
+    history.replaceState(history.state, '', writeURL());
     return;
   }
   try {

@@ -420,6 +420,332 @@
   ],
   "cases": [
     {
+      "id": "mona-p120-root-v2",
+      "logical_case_id": "mona-p120",
+      "geometry_revision": "whisker-root-v2",
+      "character": "mona",
+      "count_percentage": 120,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "mona-p150-root-v2",
+      "logical_case_id": "mona-p150",
+      "geometry_revision": "whisker-root-v2",
+      "character": "mona",
+      "count_percentage": 150,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "mona-p200-root-v2",
+      "logical_case_id": "mona-p200",
+      "geometry_revision": "whisker-root-v2",
+      "character": "mona",
+      "count_percentage": 200,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "mona-p300-root-v2",
+      "logical_case_id": "mona-p300",
+      "geometry_revision": "whisker-root-v2",
+      "character": "mona",
+      "count_percentage": 300,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "mona-p400-root-v2",
+      "logical_case_id": "mona-p400",
+      "geometry_revision": "whisker-root-v2",
+      "character": "mona",
+      "count_percentage": 400,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "copilot-p120",
+      "character": "copilot",
+      "count_percentage": 120,
+      "state": "READY",
+      "metrics": {
+        "part_count": 21388,
+        "unique_types": 155,
+        "one_by_one_exceptions": 30,
+        "layer_count": 83,
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "grip_long_ge_15_8_count": 21358,
+        "dimensions_mm": [
+          519.8,
+          439.8,
+          397.0
+        ]
+      },
+      "target_count": 21448,
+      "target_difference": -60,
+      "actual_ratio": 1.1966653611592906,
+      "manifest": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/cases/copilot-p120-guide.json.gz",
+        "bytes": 792206,
+        "sha256": "529f7d89e37cd0bf0c0ccee18d9d3472a08d64660433126d5e43aaba445e1dbc"
+      },
+      "source_manifest_sha256": "3a44107433f29351e8818e74bf1a3fa6db9fb13bc14e9b1029b3d7d20cd5249d",
+      "source_bom_sha256": "846fa70bf0cd57fabab11a0e5c4fdbe34bfea6c058c79e749cf4493fc5ad95dd",
+      "source_commit": "333d4d03dacaf8782a30b463eaf4854407643529",
+      "images": {
+        "front": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/copilot-p120-assembled-front.jpg",
+          "bytes": 79351,
+          "sha256": "d5997d8926a3d6390e6a4c4dbce0f482da660ebf7cdab8c0c5881384104d4eb8",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_front"
+        },
+        "three_quarter": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/copilot-p120-assembled-three_quarter.jpg",
+          "bytes": 104007,
+          "sha256": "23ec9b6a8324d507aac52b5325b6540457f00c7fdb550c9ad195bf68e1e510d1",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_three_quarter"
+        }
+      },
+      "tradeoff": "実21388部品、固定目標21448との差-60で許容内。完成正面・斜めと実動画フレーム1/18/54/73/108/144を確認した。 紫の頭部/外枠、青いゴーグル・顔面、黄緑の特徴色と左右の張り出しが実単色ブロックとして見える。大きな完成サイズで相対的な輪郭の格子密度は増えるが、色境界の段差は残る。 実519.8x439.8x397.0mm。これは旧695部品r3の1.2倍ではなく、初期FineCに対応させた17873部品の新8mm基準に対する1.196665倍である。 頭頂部と頬の階段形状、左右の黄緑の非対称な離散形状があり、元キャラクターの連続曲面や美観の合格とは扱わない。 仮支持1個は本体21388個とは別で、実映像にも残している。今回のMonaヒゲ支台なし条件はCopilotへ勝手に拡張せず、この設計の支台依存を明示する。 保存sceneの全ID/type/color/pose/step、分解後の位置復帰、frame73の本体0から最終全21388を独立照合。実CAD/動画/組立データが揃った比較案であり、現物保持力や印刷の承認ではない。",
+      "assets": {
+        "cg": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p120/copilot-p120-cad-scene-animation-public.zip",
+            "filename": "copilot-p120-cad-scene-animation-public.zip",
+            "bytes": 126056928,
+            "sha256": "5120840d80337a6a10833063c9a4fc3740dbf19016372518c576b1ed39323440",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "still",
+              "blender"
+            ]
+          }
+        ],
+        "native_cad": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p120/copilot-p120-cad-scene-animation-public.zip",
+            "filename": "copilot-p120-cad-scene-animation-public.zip",
+            "bytes": 126056928,
+            "sha256": "5120840d80337a6a10833063c9a4fc3740dbf19016372518c576b1ed39323440",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "freecad_assembly",
+              "linked_libraries",
+              "stl",
+              "step"
+            ]
+          }
+        ],
+        "assembly": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p120/copilot-p120-cad-scene-animation-public.zip",
+            "filename": "copilot-p120-cad-scene-animation-public.zip",
+            "bytes": 126056928,
+            "sha256": "5120840d80337a6a10833063c9a4fc3740dbf19016372518c576b1ed39323440",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "bom",
+              "ordered_ids",
+              "instructions"
+            ]
+          }
+        ],
+        "animations": {
+          "turntable": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p120/copilot-p120-assembly-motion.mp4",
+            "bytes": 1804995,
+            "sha256": "1848ebb4012f7090ba020496b92bb4e4a35c999657e0690d0b1fea5a597a4e4b",
+            "start_seconds": 0,
+            "end_seconds": 3
+          },
+          "radial_explode": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p120/copilot-p120-assembly-motion.mp4",
+            "bytes": 1804995,
+            "sha256": "1848ebb4012f7090ba020496b92bb4e4a35c999657e0690d0b1fea5a597a4e4b",
+            "start_seconds": 3,
+            "end_seconds": 6
+          },
+          "bottom_up": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p120/copilot-p120-assembly-motion.mp4",
+            "bytes": 1804995,
+            "sha256": "1848ebb4012f7090ba020496b92bb4e4a35c999657e0690d0b1fea5a597a4e4b",
+            "start_seconds": 6,
+            "end_seconds": 12
+          }
+        }
+      }
+    },
+    {
+      "id": "copilot-p150",
+      "character": "copilot",
+      "count_percentage": 150,
+      "state": "READY",
+      "metrics": {
+        "part_count": 26690,
+        "unique_types": 162,
+        "one_by_one_exceptions": 39,
+        "layer_count": 89,
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "grip_long_ge_15_8_count": 26651,
+        "dimensions_mm": [
+          567.8,
+          487.8,
+          425.8
+        ]
+      },
+      "target_count": 26810,
+      "target_difference": -120,
+      "actual_ratio": 1.4933139372237454,
+      "manifest": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/cases/copilot-p150-guide.json.gz",
+        "bytes": 984627,
+        "sha256": "93f52f91e50e11fa6dd084174b1eac089f8fef2273c12d7edfe8162485798bda"
+      },
+      "source_manifest_sha256": "8b75a8ab2a1b040125ddeca241b2e07d0e85b3788100a3692b8bc6ab232cc1bb",
+      "source_bom_sha256": "1a6ce7019e9b278f6dd8a6d2d2997e3e9f6f7d7256aa533df9fd5ec5da8fc183",
+      "source_commit": "7c1ab2bc2e11a7ebbbb9b662f005b6fdf04f0cb7",
+      "images": {
+        "front": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/copilot-p150-assembled-front.jpg",
+          "bytes": 80455,
+          "sha256": "9aa63a97e5a6fcec302cd3cff4b1f0e72f21633b36b65800da95d822614f40f0",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_front"
+        },
+        "three_quarter": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/copilot-p150-assembled-three_quarter.jpg",
+          "bytes": 105264,
+          "sha256": "7f8311adbefa4eb503ece5be768a1fbad766b352c351a0e462dc4a0da656e0ff",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_three_quarter"
+        }
+      },
+      "tradeoff": "実26690部品、固定目標26810との差-120で許容内。完成正面・斜めと実動画フレーム1/18/54/73/108/144を確認した。 紫の頭部と青いゴーグル・顔面、黄緑の特徴色、左右と後頭部の丸みが実ブロックで表されている。8mm部品に対する外形の相対分解能は増えているが、頭頂とゴーグルの段差は残る。 実567.8x487.8x425.8mm、17873部品の1xに対して実1.493314倍。これは線寸法を1.5倍した値ではない。 1.2倍案との違いは局所的な段階や色境界にも現れ、黄緑部分の輪郭は依然粗い。高い部品数をそのまま完成度の点数にはしない。 1x1例外39個、長辺15.8mm以上26651個。小さな仮支持1個は別部品として実画像に示し、本体個数へ混ぜない。Monaのみの支台不要条件とは区別する。 保存sceneの全26690ID/type/color/pose/stepと分解/復帰/空から最終までの実位置を照合済み。CAD・CG・動画・組立一式を揃えた比較案で、現物嵌合・保持力・転倒・印刷は未検証。",
+      "assets": {
+        "cg": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p150/copilot-p150-cad-scene-animation-public.zip",
+            "filename": "copilot-p150-cad-scene-animation-public.zip",
+            "bytes": 136086242,
+            "sha256": "e402ab8a42f1b5be66c11026ccd767302461d204efdff013d620a3ac7e752f2b",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "still",
+              "blender"
+            ]
+          }
+        ],
+        "native_cad": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p150/copilot-p150-cad-scene-animation-public.zip",
+            "filename": "copilot-p150-cad-scene-animation-public.zip",
+            "bytes": 136086242,
+            "sha256": "e402ab8a42f1b5be66c11026ccd767302461d204efdff013d620a3ac7e752f2b",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "freecad_assembly",
+              "linked_libraries",
+              "stl",
+              "step"
+            ]
+          }
+        ],
+        "assembly": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p150/copilot-p150-cad-scene-animation-public.zip",
+            "filename": "copilot-p150-cad-scene-animation-public.zip",
+            "bytes": 136086242,
+            "sha256": "e402ab8a42f1b5be66c11026ccd767302461d204efdff013d620a3ac7e752f2b",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "bom",
+              "ordered_ids",
+              "instructions"
+            ]
+          }
+        ],
+        "animations": {
+          "turntable": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p150/copilot-p150-assembly-motion.mp4",
+            "bytes": 1848260,
+            "sha256": "da9b3e6f012841b1f5fca9ed90e15734070296d6ec80d3edf6969a1fd16a29fd",
+            "start_seconds": 0,
+            "end_seconds": 3
+          },
+          "radial_explode": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p150/copilot-p150-assembly-motion.mp4",
+            "bytes": 1848260,
+            "sha256": "da9b3e6f012841b1f5fca9ed90e15734070296d6ec80d3edf6969a1fd16a29fd",
+            "start_seconds": 3,
+            "end_seconds": 6
+          },
+          "bottom_up": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p150/copilot-p150-assembly-motion.mp4",
+            "bytes": 1848260,
+            "sha256": "da9b3e6f012841b1f5fca9ed90e15734070296d6ec80d3edf6969a1fd16a29fd",
+            "start_seconds": 6,
+            "end_seconds": 12
+          }
+        }
+      }
+    },
+    {
+      "id": "copilot-p200",
+      "character": "copilot",
+      "count_percentage": 200,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "copilot-p300",
+      "character": "copilot",
+      "count_percentage": 300,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "copilot-p400",
+      "character": "copilot",
+      "count_percentage": 400,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "ducky-p120",
+      "character": "ducky",
+      "count_percentage": 120,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "ducky-p150",
+      "character": "ducky",
+      "count_percentage": 150,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "ducky-p200",
+      "character": "ducky",
+      "count_percentage": 200,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "ducky-p300",
+      "character": "ducky",
+      "count_percentage": 300,
+      "state": "INPUT_WAIT"
+    },
+    {
+      "id": "ducky-p400",
+      "character": "ducky",
+      "count_percentage": 400,
+      "state": "INPUT_WAIT"
+    }
+  ],
+  "historical_cases": [
+    {
       "id": "mona-p120",
       "character": "mona",
       "count_percentage": 120,
@@ -654,84 +980,6 @@
           }
         }
       }
-    },
-    {
-      "id": "mona-p200",
-      "character": "mona",
-      "count_percentage": 200,
-      "state": "INPUT_WAIT"
-    },
-    {
-      "id": "mona-p300",
-      "character": "mona",
-      "count_percentage": 300,
-      "state": "INPUT_WAIT"
-    },
-    {
-      "id": "mona-p400",
-      "character": "mona",
-      "count_percentage": 400,
-      "state": "INPUT_WAIT"
-    },
-    {
-      "id": "copilot-p120",
-      "character": "copilot",
-      "count_percentage": 120,
-      "state": "INPUT_WAIT"
-    },
-    {
-      "id": "copilot-p150",
-      "character": "copilot",
-      "count_percentage": 150,
-      "state": "INPUT_WAIT"
-    },
-    {
-      "id": "copilot-p200",
-      "character": "copilot",
-      "count_percentage": 200,
-      "state": "INPUT_WAIT"
-    },
-    {
-      "id": "copilot-p300",
-      "character": "copilot",
-      "count_percentage": 300,
-      "state": "INPUT_WAIT"
-    },
-    {
-      "id": "copilot-p400",
-      "character": "copilot",
-      "count_percentage": 400,
-      "state": "INPUT_WAIT"
-    },
-    {
-      "id": "ducky-p120",
-      "character": "ducky",
-      "count_percentage": 120,
-      "state": "INPUT_WAIT"
-    },
-    {
-      "id": "ducky-p150",
-      "character": "ducky",
-      "count_percentage": 150,
-      "state": "INPUT_WAIT"
-    },
-    {
-      "id": "ducky-p200",
-      "character": "ducky",
-      "count_percentage": 200,
-      "state": "INPUT_WAIT"
-    },
-    {
-      "id": "ducky-p300",
-      "character": "ducky",
-      "count_percentage": 300,
-      "state": "INPUT_WAIT"
-    },
-    {
-      "id": "ducky-p400",
-      "character": "ducky",
-      "count_percentage": 400,
-      "state": "INPUT_WAIT"
     }
   ]
 }

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "study_id": "part-count-matrix-20260921",
+  "case_id": "copilot-p120",
+  "tag": "part-count-matrix-20260921-copilot-p120",
+  "source_commit": "333d4d03dacaf8782a30b463eaf4854407643529",
+  "status": "UNSELECTED_DIGITAL_CASE_NOT_SLICED",
+  "assets": [
+    {
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p120/copilot-p120-cad-scene-animation-public.zip",
+      "bytes": 126056928,
+      "sha256": "5120840d80337a6a10833063c9a4fc3740dbf19016372518c576b1ed39323440"
+    },
+    {
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p120/copilot-p120-assembly-motion.mp4",
+      "bytes": 1804995,
+      "sha256": "1848ebb4012f7090ba020496b92bb4e4a35c999657e0690d0b1fea5a597a4e4b"
+    }
+  ],
+  "case_categories": [
+    "cg",
+    "animation",
+    "native_cad",
+    "assembly"
+  ],
+  "physical_fit": "UNKNOWN",
+  "full_print": "ON_HOLD"
+}

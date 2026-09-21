@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 
 from make_density_receipt import receipt_for
-from density_requirements import all_cases, delivery_status, logical_case_id
+from density_requirements import MONA_GEOMETRY_REVISION, all_cases, delivery_status, logical_case_id
 from validate_archive import privacy
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -62,7 +62,12 @@ def merge_catalog(previous, incoming, accepted_case):
             if item["state"] != "INPUT_WAIT" and item != old:
                 raise ValueError("An incremental receipt cannot promote other unreviewed cases")
             if old["state"] != "INPUT_WAIT":
-                new_slots[slot] = copy.deepcopy(old)
+                if (item["state"] == "INPUT_WAIT" and item["id"] != old["id"]
+                        and item.get("geometry_revision") == MONA_GEOMETRY_REVISION
+                        and old["id"] == slot and delivery_status(old) == "REQUIRES_WHISKER_REVISION"):
+                    history[old["id"]] = copy.deepcopy(old)
+                else:
+                    new_slots[slot] = copy.deepcopy(old)
     merged["cases"] = [new_slots[logical_case_id(item)] for item in merged["cases"]]
     if history:
         merged["historical_cases"] = list(history.values())

@@ -39,10 +39,14 @@ with sync_playwright() as playwright:
               const gl = canvas.getContext('webgl2');
               const frames = [];
               for (let index = 0; index < 5; index++) {
+                const before = new URL(location.href).searchParams.get('camera');
                 const start = performance.now();
                 canvas.dispatchEvent(new KeyboardEvent('keydown', {key:'ArrowLeft', bubbles:true}));
                 await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
                 gl.finish();
+                if (new URL(location.href).searchParams.get('camera') === before) {
+                  throw new Error('The measured rotation input did not actually change the camera');
+                }
                 frames.push(performance.now() - start);
               }
               return {frames_ms: frames, diagnostics: window.__densityGuide.diagnostics(),

@@ -29,6 +29,39 @@ def safe_relative(value):
     return path
 
 
+def root_validation_path(case, summary, model, payload):
+    logical, revision = case_identity(case)
+    if revision is None:
+        return None
+    if any(record.get("logical_case_id") != logical or record.get("geometry_revision") != revision
+           for record in [summary, model]):
+        raise ValueError("Root revision identity differs across its approved source records")
+    support = summary.get("whisker_support")
+    reference = support.get("assembly_validation_ref") if isinstance(support, dict) else None
+    expected = f"validation/{case}-whisker-support.json"
+    if not isinstance(reference, dict) or reference.get("path") != expected or expected not in payload:
+        raise ValueError("The root revision lacks its exact allowlisted public validation file")
+    raw = payload[expected]
+    if sha(raw) != reference.get("sha256"):
+        raise ValueError("Root validation reference hash differs from its approved bytes")
+    proof = json.loads(raw)
+    if (proof.get("schema_version") != 1 or proof.get("case_id") != case
+            or proof.get("logical_case_id") != logical or proof.get("geometry_revision") != revision
+            or proof.get("status") != "DIGITAL_SELF_SUPPORTING_UNTESTED"
+            or proof.get("physical_validation") != "UNKNOWN"
+            or proof.get("slicer_supports") != "UNKNOWN_SEPARATE_FROM_NO_ASSEMBLY_STANDS"
+            or any(type(proof.get(key)) is not int or proof[key] != 0 for key in
+                   ["external_aid_count", "assembly_aid_count", "floating_seed_steps", "blocked_vertical_body_columns"])
+            or any(proof.get(key) is not True for key in
+                   ["source_occupied_cells_unchanged", "source_visible_colors_unchanged", "body_first_all_steps_supported"])
+            or proof.get("actual_parts") != len(model["parts"])
+            or proof.get("actual_types") != len({part["type_id"] for part in model["parts"]})
+            or model.get("assembly_aids") != []
+            or any(part.get("required_aids") != [] for part in model["parts"])):
+        raise ValueError("Root validation is incomplete, belongs to different geometry, or still requires aids")
+    return expected
+
+
 def committed_bytes(repo, path, commit, entry):
     relative = path.relative_to(repo).as_posix()
     data = subprocess.check_output(["git", "-C", str(repo), "cat-file", "blob", f"{commit}:{relative}"])
@@ -108,6 +141,9 @@ def main():
     selected_names.update(image["path"] for image in summary["images"])
     selected_names.update(item["path"] for item in {**model["geometry"], **model["assembly_aid_geometry"]}.values())
     selected_names.update(image["path"] for row in json.loads(payload["references.json"])["rows"] for image in row["images"])
+    root_proof = root_validation_path(case, summary, model, payload)
+    if root_proof is not None:
+        selected_names.add(root_proof)
     if not selected_names <= set(payload):
         raise ValueError("The actual case needs a file outside this explicit allowlist")
     files = [entry for entry in files if entry["path"] in selected_names]

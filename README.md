@@ -60,13 +60,19 @@ Mona・Copilot・Duckyを約180 mmの独立ブリックで組み立てる、非�
 ## 3体×5個数倍率・実3D組立ガイド（部分公開）
 
 **[日英の個数倍率一覧](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-matrix.html)** /
-**[代表Mona 1.2倍の実3D](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case=mona-p120)** /
-**[代表案のCG・Blender・動画・ネイティブCAD一式](https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/tag/part-count-matrix-20260921-mona-p120)**。
+**[Copilot 1.2倍の実3D](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case=copilot-p120)** /
+**[CopilotのCG・Blender・動画・ネイティブCAD一式](https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/tag/part-count-matrix-20260921-copilot-p120)**。
+
+現在の要求に対応する実データ公開は **Copilot 1.2倍・1.5倍の2/15案**です。1.2倍は目標21,448に対し
+**21,388部品（差−60、実1.196665倍）・155型、519.8 × 439.8 × 397.0 mm**。
+1.5倍は目標26,810に対し **26,690部品（差−120、実1.493314倍）・162型、567.8 × 487.8 × 425.8 mm**。
+各案の仮支持1個は本体と別に表示し、Monaだけの支台なし条件をCopilotへ拡張しません。
+頭頂・頬の階段と黄緑の非対称な離散形状は残り、美観・製造の合格を意味しません。
 
 **追加要件：Monaのヒゲは外付け支え・組立仮支台なしで設計します。**
 現時点のMona 1.2倍・1.5倍は支台が必要な旧設計として実データを保存していますが、
 この新要件には未適合で、今回要求された15案の完成件数には含めません。
-公開済みデータは2/15案、新要件適合は0/15案です。支台をCGから消すだけで適合とは扱いません。
+旧Mona 2案は比較の15枠とは別の履歴です。新Mona 5案は未完了で、支台をCGから消すだけでは適合と扱いません。
 根元保持・回転止め・組立順を含む実改訂を制作担当が検討中で、別の固定revisionとして導入します。
 印刷時のスライサーsupport要否は別の未検証条件です。
 Mona・Copilot・Duckyの1倍基準は、CG・ネイティブCAD・Blender・3章動画を別の参照パッケージとして公開しました。
@@ -75,7 +81,8 @@ Monaの1倍画像・CADも支台依存の旧参照として明示します。凍
 1倍の個数はMona 12,435 / Copilot 17,873 / Ducky 9,669。3体を初期Fine Cに近い8 mm共通ブロックへそろえる
 **比較前提であってユーザーの採用ではなく**、旧r3の695/413を混ぜていません。倍率は物理個別部品数で、線形の寸法倍率ではありません。
 
-代表Monaは目標14,922に対し **14,936個（差+14、実1.201126倍）・118型、439.8 × 359.8 × 397.0 mm**。
+[履歴Mona 1.2倍の実3D](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case=mona-p120)
+は目標14,922に対し **14,936個（差+14、実1.201126倍）・118型、439.8 × 359.8 × 397.0 mm**。
 追加のMona 1.5倍は目標18,653に対し **18,675個（差+22、実1.501809倍）・129型、487.8 × 391.8 × 425.8 mm**。
 1.5倍案の口は初期C・1倍基準より平たい不均一線に見え、目内縁・鼻にも色の転写ずれが残ります。
 この見た目の後退を隠さず、多い部品数を外観の合格と扱いません。

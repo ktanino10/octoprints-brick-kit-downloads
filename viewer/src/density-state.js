@@ -13,6 +13,46 @@ export function radialPosition(part, amount, out = [0, 0, 0]) {
   return out;
 }
 
+export function validateRootAnchoredStructure(manifest) {
+  const identity = densityCaseIdentity(manifest.candidate_id);
+  const contract = manifest.animation_contract;
+  check(identity?.revision === 'whisker-root-v2' && manifest.geometry_revision === identity.revision
+    && manifest.logical_case_id === identity.logicalId && contract?.sequence_mode === 'BODY_FIRST_ROOT_ANCHORED',
+  '支持段による取付順は、検証対象のMona根元改訂だけに限定します。');
+  check(Array.isArray(manifest.aids) && manifest.aids.length === 0
+    && manifest.parts.every((part) => Array.isArray(part.required_aids) && part.required_aids.length === 0),
+  '支台なしの取付順に、外付け・組立仮支台が含まれています。');
+  const ordered = [...manifest.parts].sort((a, b) => a.step - b.step);
+  const prior = new Set();
+  for (const [index, part] of ordered.entries()) {
+    const before = ordered[index - 1];
+    check(typeof part.id === 'string' && !prior.has(part.id) && part.step === index + 1
+      && finite(part.assembly_stage_z_mm) && isCount(part.assembly_course)
+      && (!before || (part.assembly_stage_z_mm >= before.assembly_stage_z_mm - 1e-7
+        && part.assembly_course >= before.assembly_course
+        && (part.assembly_course !== before.assembly_course
+          || Math.abs(part.assembly_stage_z_mm - before.assembly_stage_z_mm) <= 1e-7))),
+    '根元改訂の支持段・工程番号が底側からの順序と一致しません。');
+    for (const dependencies of [part.support_ids, part.insertion_predecessor_ids]) {
+      check(Array.isArray(dependencies) && new Set(dependencies).size === dependencies.length
+        && dependencies.every((id) => prior.has(id)),
+      '必要な支持・差込み先行部品より前に、部品を取り付ける順序になっています。');
+    }
+    prior.add(part.id);
+  }
+  let nextStep = 1;
+  check(Array.isArray(contract.stages) && contract.stages.length > 0, '制作元の組立工程区分がありません。');
+  for (const stage of contract.stages) {
+    check(stage.start_step === nextStep && isCount(stage.end_step) && stage.end_step >= stage.start_step
+      && stage.end_step <= ordered.length && finite(stage.support_z_mm)
+      && Math.abs(stage.support_z_mm - ordered[stage.start_step - 1].assembly_stage_z_mm) <= 1e-7,
+    '根元改訂の工程表示と実際の支持高さが一致しません。');
+    nextStep = stage.end_step + 1;
+  }
+  check(nextStep === ordered.length + 1, '最後の組立工程に未収録の部品があります。');
+  return manifest;
+}
+
 export function validateGuideManifest(manifest, candidateId) {
   const identity = densityCaseIdentity(candidateId);
   check(isObject(manifest) && manifest.schema_version === 1 && manifest.study_id === DENSITY_ID

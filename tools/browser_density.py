@@ -3,7 +3,7 @@
 import argparse
 import json
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import parse_qs, urljoin, urlparse
 
 from playwright.sync_api import expect, sync_playwright
 from browser_study_helpers import english, uncropped_image, play_actual_chapter
@@ -14,6 +14,8 @@ parser.add_argument("--browser", required=True)
 parser.add_argument("--engine", choices=["chromium", "webkit"], default="chromium")
 parser.add_argument("--expect-input-wait", action="store_true")
 parser.add_argument("--case", help="A specific actual READY case for incremental acceptance")
+parser.add_argument("--skip-baseline-media", action="store_true",
+                    help="For unchanged baseline assets only; the publication verifier independently checks this scope")
 parser.add_argument("--output", type=Path, default=Path(".archive-work/density-browser"))
 args = parser.parse_args()
 base = args.url.rstrip("/") + "/"
@@ -85,7 +87,7 @@ with sync_playwright() as playwright:
                             expect(image).not_to_have_js_property("naturalWidth", 0)
                             uncropped_image(image)
                     baseline = catalog["baselines"][character]
-                    if baseline["state"] == "READY" and locale == "en":
+                    if baseline["state"] == "READY" and locale == "en" and not args.skip_baseline_media:
                         expect(page.locator(f'[data-baseline-download="{character}"]')).to_have_attribute(
                             "href", baseline["assets"]["native_cad"][0]["url"])
                         videos = page.locator("#matrix-reference details")
@@ -147,6 +149,26 @@ with sync_playwright() as playwright:
                 report["cases"].append(entry["id"])
             checked("actual cases support radial cycling, all views, empty/part/course/full assembly, selection and shared reload")
             checked("actual Release/Pages videos decode and play every declared chapter through the page CSP")
+            pending = next((entry for entry in catalog["cases"] if entry["state"] == "INPUT_WAIT"), None)
+            if pending:
+                page.locator("#guide-case").select_option(pending["id"])
+                expect(page.locator("#density-canvas")).to_have_attribute("data-ready", "false")
+                expect(page.locator("#guide-loading")).to_be_visible()
+                expect(page.locator("#guide-error")).to_be_hidden()
+                for selector in ["#guide-target-status", "#guide-progress", "#guide-active", "#guide-list-count"]:
+                    expect(page.locator(selector)).to_have_text("")
+                expect(page.locator("#guide-downloads video")).to_have_count(0)
+                expect(page.locator("#guide-search")).to_be_disabled()
+                assert page.evaluate("window.__densityGuide.diagnostics().ready") is False
+                assert parse_qs(urlparse(page.url).query) == {"case": [pending["id"]]}
+                page.locator('[data-language="en"]').click()
+                page.reload(wait_until="networkidle")
+                expect(page.locator("#guide-case")).to_have_value(pending["id"])
+                expect(page.locator("#guide-loading")).to_be_visible()
+                expect(page.locator("#guide-error")).to_be_hidden()
+                expect(page.locator("#density-canvas canvas")).to_have_count(0)
+                english(page)
+                checked("switching from a real case to a pending revision clears old counts/media and preserves the pending JA/EN URL")
         phone_context = browser.new_context(viewport={"width": 390, "height": 844}, is_mobile=True,
                                             has_touch=True, locale="ja-JP", reduced_motion="reduce")
         phone = phone_context.new_page()

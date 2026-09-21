@@ -242,6 +242,9 @@ export class DensityStudio extends BrickStudio {
     super.clear();
     if (this.moving) this.moving.visible = false;
     this.motionPart = null;
+    for (const key of ['candidate', 'batches', 'prototypeGeometries', 'geometryMode', 'assemblyCount', 'explosion', 'movingPart']) {
+      delete this.host.dataset[key];
+    }
   }
 
   dispose() {

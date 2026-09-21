@@ -113,6 +113,8 @@ def receipt_for(catalog, *, browser=None, downloads=None, catalog_sha256=None):
         "historical_cases": [{
             "case_id": case["id"], "logical_case_id": logical_case_id(case),
             "counts_toward_requested_delivery": False,
+            "source_status": case["state"], "status": delivery_status(case),
+            "actual_count": case["metrics"]["part_count"],
             "viewer_url": BASE + "ja/density-guide.html?case=" + case["id"],
             "viewer_url_en": BASE + "en/density-guide.html?case=" + case["id"],
             "cad_url": file_url(case["assets"]["native_cad"][0]),
@@ -124,6 +126,7 @@ def receipt_for(catalog, *, browser=None, downloads=None, catalog_sha256=None):
             "slicer_print_supports": "SEPARATE_UNVALIDATED_CONDITION",
             "data_ready_case_count": sum(case["source_status"] == "READY" for case in cases),
             "requirement_ready_case_count": sum(case["status"] == "READY" for case in cases),
+            "historical_data_case_count": len(catalog.get("historical_cases", [])),
         },
     }
 

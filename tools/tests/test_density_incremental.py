@@ -108,6 +108,23 @@ class IncrementalDensityTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 revision_fields("mona-p120-root-v2", identity, wrong, identity)
 
+    def test_changed_mona_requirement_retires_old_geometry_without_fabricating_a_ready_replacement(self):
+        previous = self.fixture()
+        previous["cases"][1].update(state="READY", actual=18675)
+        previous["cases"].append({"id": "copilot-p120", "character": "copilot",
+                                  "count_percentage": 120, "state": "INPUT_WAIT"})
+        incoming = copy.deepcopy(previous)
+        for case in incoming["cases"][:2]:
+            logical = case["id"]
+            case.clear()
+            case.update(id=logical + "-root-v2", logical_case_id=logical, geometry_revision="whisker-root-v2",
+                        character="mona", count_percentage=int(logical.split("p")[-1]), state="INPUT_WAIT")
+        incoming["cases"][2].update(state="READY", actual=21388)
+        merged = merge_catalog(previous, incoming, "copilot-p120")
+        self.assertEqual(merged["cases"][:2], incoming["cases"][:2])
+        self.assertEqual(merged["historical_cases"], previous["cases"][:2])
+        self.assertEqual(sum(case["state"] == "READY" for case in merged["cases"]), 1)
+
 
 if __name__ == "__main__":
     unittest.main()

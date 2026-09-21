@@ -4,9 +4,9 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
-import re
 
 import FreeCAD
+from density_requirements import case_identity
 
 ROOT = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser(description=__doc__)
@@ -17,8 +17,8 @@ args = parser.parse_args()
 scope = args.root.resolve()
 if not scope.is_relative_to(ROOT / ".archive-work") or not args.report.resolve().is_relative_to(ROOT / ".archive-work"):
     raise ValueError("Read-only native auditing must stay in owned relocated staging")
-if not re.fullmatch(r"(mona|copilot|ducky)-(p(120|150|200|300|400)|fine8-base)", args.case):
-    raise ValueError("Invalid matrix case")
+if args.case not in {"mona-fine8-base", "copilot-fine8-base", "ducky-fine8-base", "mona-fine8-base-root-v2"}:
+    case_identity(args.case)
 case = scope / "artifacts/studies/part-count-matrix-20260921/cases" / args.case
 manifest = json.loads((case / "manifest.json").read_text())
 mapping = json.loads((case / "native-id-map.json").read_text())

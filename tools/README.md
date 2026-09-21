@@ -297,8 +297,21 @@ Copilot/DuckyにはMona固有の条件を適用せず、旧MonaのURL/画像/Rel
 旧 `?case=mona-p120` は旧形状を解決し続け、新版へ暗黙転送しません。履歴は15案へ重複計上せず、
 別案の増分receiptによる履歴改変・再採用・未検証案の同時昇格も拒否します。
 新版manifest/instance/summary間の論理枠とgeometry revisionを一致させ、既存バイトは上書きしません。
+固定packetがMonaの比較枠を未完成root-v2へ切り替えた場合も、旧支台版は履歴へ退避できます。
+新枠は無画像・実数なしのINPUT_WAITのままで、他caseのREADYに便乗して完成へ昇格させません。
 
 新版の実一体ヒゲmoduleは低い実底面と高い取付支持段を持ち得ます。
 制作元の `BODY_FIRST_ROOT_ANCHORED` は本体を下から積み、受け側支持段でmoduleを取付ける契約です。
 実 `position_mm` は改変しません。この新modeは形状・native・差込み・全順序の固定検査証拠を受領するまで
 明示エラーにし、既存のbody-bottom-Z非減少検査を無条件に緩めたり、旧順序へ戻したりしません。
+
+`density_root_evidence.py` は、固定された実source manifestの全型・palette・parts・motion_stages・
+whisker_load_casesから指定のASCII-escaped compact JSONを作り、geometry/sequence SHAを検算します。
+元native-completeの根元接触reportも同じcanonical SHAで公開小証拠へ結びます。module単体の重心と実支持凸包、
+各組立prefixの1 mm以上の公称CAD margin、後続部品の実ID/順序、native bearingと差込みsampleを確認します。
+これは均一密度のCAD静モーメントの証拠で、印刷質量やPLA保持力の実測ではありません。
+新modeの実案を有効にするには、さらに公開ガイドの同じ証拠参照と新順序の受入を完了する必要があります。
+
+大きい公開ZIPの最終化は既存依存を入れた `.venv/bin/python tools/finalize_density_package.py ...` で実行します。
+Blender 5系の圧縮scene検査には既存のzstandard依存が必要です。Releaseのdraftはタグ参照APIで404になる場合があり、
+draftのasset検査はrelease IDで行います。検査コマンド失敗後にpublishを続行してはいけません。

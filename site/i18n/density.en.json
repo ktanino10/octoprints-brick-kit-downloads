@@ -1,4 +1,9 @@
 {
+  "支持段による取付順は、検証対象のMona根元改訂だけに限定します。": "Support-stage installation order is restricted to the specified Mona root revision.",
+  "支台なしの取付順に、外付け・組立仮支台が含まれています。": "The support-free sequence contains external or temporary assembly aids.",
+  "根元改訂の支持段・工程番号が底側からの順序と一致しません。": "The root revision's support stages or course numbers do not follow bottom-up order.",
+  "必要な支持・差込み先行部品より前に、部品を取り付ける順序になっています。": "A part is installed before its required supports or insertion predecessors.",
+  "根元改訂の工程表示と実際の支持高さが一致しません。": "The root revision's stage labels do not match actual support heights.",
   "旧版の記録は比較の15枠と分けて保持する必要があります。": "Historical records must remain separate from the fifteen comparison slots.",
   "新版の取付順は、実形状に結び付いた工程検査記録を確認するまで表示できません。": "The revised installation order cannot be shown until its sequence evidence is verified against the actual geometry.",
   "{0} · 履歴 · {1}部品": "{0} · historical · {1} parts",
@@ -37,6 +42,7 @@
   "支台が必要な旧Mona設計です。ヒゲ支台なしの追加要件を未達で、今回の15案完了には数えません。": "This historical Mona needs supports. It does not meet the new support-free whisker requirement and is excluded from completion of the requested fifteen cases.",
   "ヒゲ支台なし改訂が必要": "Support-free whisker revision required",
   "追加要件適合 {0} / 15案。旧設計を含む実データ公開 {1} / 15案。実物合格ではありません。": "New requirements met: {0} / 15. Actual data published, including historical designs: {1} / 15. This is not physical approval.",
+  "追加要件適合 {0} / 15案。比較対象の実データ公開 {1} / 15案。旧版は別の履歴です。実物合格ではありません。": "New requirements met: {0} / 15. Current comparison cases with actual data: {1} / 15. Earlier versions are separate historical records. This is not physical approval.",
   "表示中は外付け・組立仮支台が必要な旧Mona設計です。支台を非表示にして新要件達成とは扱いません。ヒゲ支台なしの実改訂を待っており、今回の完了件数から除外しています。": "The displayed historical Mona requires external or temporary assembly supports. Hiding them would not meet the new requirement. A real support-free whisker revision is pending, so this design is excluded from the requested completion count.",
   "追加要件：Monaのヒゲは外付け支え・組立仮支台なしへ。": "New requirement: Mona whiskers without external or temporary assembly supports.",
   "公開済みの支台ありMonaは旧設計として保存し、この要件を満たす完成案には数えません。実形状・根元保持・組立順を改訂した新版を待っています。CGから支台を消すだけでは達成しません。スライサーの印刷用サポート要否は別の未検証条件です。": "Published support-dependent Mona designs are preserved as history and are not counted as fulfilling this requirement. A new geometry, root-retention and assembly-order revision is pending. Removing supports from the CG alone does not qualify. Slicer-generated print supports are a separate, unvalidated condition.",

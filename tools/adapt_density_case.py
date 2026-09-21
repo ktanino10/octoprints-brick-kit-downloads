@@ -11,6 +11,7 @@ import subprocess
 
 from mona_study_evidence import verify_manifest_bom, body_height_families
 from density_requirements import case_identity
+from density_root_evidence import validate_root_evidence
 from validate_archive import privacy
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -80,7 +81,8 @@ def main():
     full = json.loads(mb)
     revision = revision_fields(case_id, payload, full, summary)
     evidence = verify_manifest_bom(mb, bb)
-    motion = json.loads(proof_bytes(f"/cases/{case_id}/motion.json"))
+    motion_bytes = proof_bytes(f"/cases/{case_id}/motion.json")
+    motion = json.loads(motion_bytes)
     validation = json.loads(proof_bytes(f"/cases/{case_id}/validation.json"))
     audit = json.loads(proof_bytes(f"/cases/{case_id}/saved-scene-audit.json"))
     native = json.loads(proof_bytes(f"/portable/cases/{case_id}/native-complete.json"))
@@ -112,6 +114,36 @@ def main():
     animation_check = json.loads((stage / "animation-portability.json").read_text())
     if not animation_check["motion_unchanged"] or not animation_check["frame1_roundtrip_no_drift"]:
         raise ValueError("Public saved-scene animation was not preserved")
+    root_record = root_validation = whisker_support = None
+    if revision:
+        reference = summary["whisker_support"]["assembly_validation_ref"]
+        if reference["path"] != f"validation/{case_id}-whisker-support.json":
+            raise ValueError("The actual root revision references a different validation record")
+        root_bytes = (light / reference["path"]).read_bytes()
+        if sha(root_bytes) != reference["sha256"]:
+            raise ValueError("The exact public root validation bytes changed")
+        root_record = validate_root_evidence(json.loads(root_bytes), full, native)
+        if native.get("temporary_aids") != [] or payload.get("assembly_aids") != []:
+            raise ValueError("The root source/native assembly still contains temporary supports")
+        if full["motion"]["stages"] != motion["stages"] or full["motion"]["sequence_mode"] != motion.get("sequence_mode"):
+            raise ValueError("Root motion stages differ from the exact canonical source identity")
+        metadata = json.loads((stage / "native-metadata-review.json").read_text())
+        original_assembly = [item for item in metadata if item["path"].endswith(f"/{case_id}/assembly.FCStd")]
+        if (len(original_assembly) != 1
+                or original_assembly[0]["source_sha256"] != summary["provenance"]["native_assembly_sha256"]
+                or sha((stage / "original-scene.blend").read_bytes()) != summary["provenance"]["render_scene_sha256"]):
+            raise ValueError("Root native/render provenance does not bind the original metadata-only copies")
+        root_validation = {"path": PREFIX + reference["path"], "bytes": len(root_bytes), "sha256": sha(root_bytes)}
+        whisker_support = {
+            "external_aid_count": 0, "assembly_aid_count": 0,
+            "status": "DIGITAL_SELF_SUPPORTING_UNTESTED", "physical_validation": "UNKNOWN",
+            "geometry_revision": revision["geometry_revision"], "manifest_sha256": sha(mb),
+            "attachment_evidence_sha256": root_record["native_root_contact_evidence_sha256"],
+            "sequence_evidence_sha256": sha(root_bytes), "motion_sha256": sha(motion_bytes),
+            "geometry_sequence_identity_sha256": root_record["geometry_sequence_identity_sha256"],
+            "all_categories_geometry_match": True, "assembly_validation_ref": root_validation,
+            "gravity_balance_result": root_record["gravity_balance_result"], "physical_mass_measured": False,
+        }
 
     def checked_image(item, **extra):
         path = light / item["path"]
@@ -152,10 +184,16 @@ def main():
              "animation_contract": {"explosion": "ABSOLUTE_RADIAL_OFFSETS", "assembly": "BOTTOM_UP_SOURCE_ORDER",
                 "disassembly_validation": "NOT_SIMULATED", "physical_assembly": "UNKNOWN", "radial_center_mm": motion["center_mm"],
                 "stages": [{"id": item["stage_id"], "label": item["label_ja"], "start_step": item["start_step"],
-                            "end_step": item["end_step"]} for item in motion["stages"]]},
+                            "end_step": item["end_step"],
+                            **({"support_z_mm": item["support_z_mm"]} if root_record else {})}
+                           for item in motion["stages"]]},
              "source_manifest_sha256": sha(mb), "source_bom_sha256": sha(bb)}
     if "sequence_mode" in motion:
         guide["animation_contract"]["sequence_mode"] = motion["sequence_mode"]
+    if root_record:
+        guide.update(root_validation=root_validation, whisker_support=whisker_support,
+                     geometry_sequence_identity_sha256=root_record["geometry_sequence_identity_sha256"],
+                     native_root_contact_evidence_sha256=root_record["native_root_contact_evidence_sha256"])
     if (motion["absolute_pose_rule"] != "position_mm + amount*radial_offset_mm" or motion["assembly_step_zero"] != "EMPTY"
             or motion["assembly_final_step"] != len(parts) or not motion["orientation_unchanged"] or not motion["zero_exact_return"]):
         raise ValueError("Source animation contract was not absolute and empty-to-full")
@@ -189,16 +227,19 @@ def main():
             raise ValueError("Actual shape comparison does not use normalized projected height")
         image_records[view] = checked_image(item, framing_rule="MATCHED_SCREEN_HEIGHT",
                                            condition_id="ACTUAL_PROJECTED_HEIGHT864_" + view)
+    tradeoff = " ".join(summary["visual_review"]["observations_ja"])
     entry = {"id": case_id, **revision, "character": payload["character"], "count_percentage": int(round(summary["metrics"]["target_ratio"] * 100)),
              "state": "READY", "metrics": normalized_metrics, "target_count": summary["metrics"]["target_count"],
              "target_difference": summary["metrics"]["count_difference"], "actual_ratio": summary["metrics"]["actual_ratio"],
              "manifest": {"path": PREFIX + guide_name, "bytes": len(guide_bytes), "sha256": sha(guide_bytes)},
              "source_manifest_sha256": sha(mb), "source_bom_sha256": sha(bb), "source_commit": receipt["source_commit"],
-             "images": image_records, "tradeoff": summary["visual_review"]["observations_ja"][2],
+             "images": image_records, "tradeoff": tradeoff,
              "assets": {"cg": [{**bundle, "contents": ["still", "blender"]}],
                         "native_cad": [{**bundle, "contents": ["freecad_assembly", "linked_libraries", "stl", "step"]}],
                         "assembly": [{**bundle, "contents": ["bom", "ordered_ids", "instructions"]}],
                         "animations": animations}}
+    if whisker_support:
+        entry["whisker_support"] = whisker_support
     raw_matrix = json.loads((light / "matrix.json").read_text())
     baselines = {}
     existing_catalog_path = ROOT / PREFIX.lstrip("/") / "catalog.json"
@@ -238,12 +279,14 @@ def main():
     for stem in ["observations"]:
         translations.update(zip(summary["visual_review"][stem + "_ja"], summary["visual_review"][stem + "_en"], strict=True))
     translations.update(zip(summary["limitations_ja"], summary["limitations_en"], strict=True))
+    translations[tradeoff] = " ".join(summary["visual_review"]["observations_en"])
     translations.update({item["label_ja"]: item["label_en"] for item in motion["stages"]})
     (output / "translations.json").write_bytes(encoded(translations))
     (output / "evidence.json").write_bytes(encoded({"case_id": case_id, "source_commit": receipt["source_commit"],
         **evidence, "body_height_families": body_height_families(full), "public_native_assembly": assembly,
         "public_blender_motion_preserved": True, "source_saved_scene_binding": source_motion["instance_projection_sha256"],
-        "source_native_reopen": native["moved_reopen"], "private_inputs_copied": 0}))
+        "source_native_reopen": native["moved_reopen"], "private_inputs_copied": 0,
+        **({"root_revision_evidence": root_record} if root_record else {})}))
     print(json.dumps({"case_id": case_id, "actual_count": len(parts), "native_types": len(payload["geometry"]),
                       "native_aids": len(aids), "derived_guide_bytes": len(guide_bytes), "catalog_state": "PARTIAL"}, indent=2))
 
