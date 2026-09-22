@@ -88,16 +88,17 @@ with sync_playwright() as p:
                 if locale == "en":
                     english(page)
                 if not route:
-                    expect(page.locator(".candidate-card")).to_have_count(9)
+                    expect(page.locator(".candidate-card")).to_have_count(0)
+                    expect(page.locator(".print-model")).to_have_count(3)
                     if locale == "en":
-                        assert "13,434 parts" in page.locator(".specimen").first.locator("p").inner_text()
-                        assert "angle. Inspect" in page.locator("#selected-media h2").inner_text()
-                    for image in page.locator(".candidate-card img").all():
+                        expect(page.locator("#model-mona option:checked")).to_contain_text("14,913 parts")
+                        expect(page.locator("#print-status")).to_contain_text("not a ready-to-print list")
+                    for image in page.locator(".print-model img").all():
                         image.scroll_into_view_if_needed()
                         expect(image).not_to_have_js_property("naturalWidth", 0)
                     page.screenshot(path=str(args.output / f"home-{locale}.png"), full_page=True)
                 if route == "downloads.html":
-                    expect(page.locator(".bundle")).to_have_count(4)
+                    expect(page.locator("#historical-bundles .bundle")).to_have_count(4)
                     page.locator("#file-search").fill("mona-fine")
                     assert page.locator("#file-list .path").count() > 0
                     page.locator("#file-search").fill("missing-no-file")

@@ -1,6 +1,6 @@
 {
   "home": {"template": "index.html", "legacy": "index.html", "localized": "index.html"},
-  "models": {"template": "models.html", "legacy": "models.html", "localized": "models.html"},
+  "models": {"template": "index.html", "legacy": "models.html", "localized": "models.html"},
   "assembly": {"template": "assembly.html", "legacy": "assembly.html", "localized": "assembly.html"},
   "shape-options": {"template": "shape-options.html", "legacy": "shape-options.html", "localized": "shape-options.html"},
   "mona-likeness": {"template": "mona-likeness.html", "legacy": "mona-likeness.html", "localized": "mona-likeness.html"},

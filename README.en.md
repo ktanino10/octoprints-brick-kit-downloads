@@ -3,13 +3,17 @@
 [日本語](README.md) / [English](README.en.md)
 
 **[Public site / English](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/)** ·
-**[Assembly viewer](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/viewer/)** ·
+**[Actual 3D assembly guide](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-guide.html)** ·
 **[All downloads](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/downloads.html)** ·
 **[Physical feedback](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/feedback.html)** ·
-**[Design history](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/history.html)** ·
-**[Current models and publication status](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/models.html)**
+**[Design journey](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/history.html)** ·
+**[Choose a model](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/models.html)**
 
-The [revised proposed-sequence guide](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/assembly.html)
+Start with the homepage **print-data catalogue**: choose one of five variants for each character by part count, assembled size and assembly aids.
+The low-part r3 designs (Mona 519 / Copilot 695 / Ducky 413) are excluded from normal choices; trials, failures and refinements have a separate history page.
+“STL available” does not mean physically validated printing. All cases remain unsliced and untested, with full-kit printing on hold. The sections below preserve revision-specific records.
+
+The [historical r3 proposed-sequence record](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/assembly.html)
 reads IDs, types, colors, base positions, rotations and steps from the same revision's actual manifest. It is not physical assembly approval.
 
 [Public repository](https://github.com/ktanino10/octoprints-brick-kit-downloads) ·

@@ -2,6 +2,21 @@
 
 通常のPages更新は、保存済みの成果物とビューアだけで行えます。制作元やCADソフトウェアは不要です。
 
+## 初めての人向けカタログと制作履歴
+
+トップと既存の `models.html` は同じ `site/templates/index.html` を使います。
+`assets/print-catalog-data.js` はREADY受領記録・ハッシュ付き公開検証に結び付いた15案だけを扱い、
+Mona 519 / Copilot 695 / Ducky 413個の少部品r3や基準参照を通常候補へ混ぜません。
+3枚のキャラクターカードで5案ずつ選べ、実画像・個数・完成寸法・別勘定の支台数・ZIP・組立ガイドを同時に切り替えます。
+公開READYを印刷合格には読み替えず、全案を実物未検証・NOT_SLICED・全数印刷保留として表示します。
+
+試行錯誤は `history.html` に分離し、初期9案、実物フィードバック、旧r3、外観改良の記録へ案内します。
+旧CAD・画像・Releaseと版のメタデータは不変です。旧r3のZIPはファイル目録の閉じた履歴欄に残します。
+`browser_print_catalog.py` は日英の全15選択、旧 `models.html` URL、言語切替/再読み込み、
+390pxで44px以上の選択欄、初期画面で旧案・動画・ネイティブを自動取得しないこと、
+検証記録/画像の欠落や旧案IDの指定時に代替モデルを出さないことを確認します。
+これは表示導線の変更であり、新しいCAD生成や実機の印刷承認ではありません。
+
 ```sh
 npm ci --prefix viewer --no-audit --no-fund
 node viewer/scripts/extract-i18n.mjs

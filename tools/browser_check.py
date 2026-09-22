@@ -133,14 +133,18 @@ with sync_playwright() as p:
     try:
         response = page.goto(base, wait_until="networkidle", timeout=90000)
         assert response.status == 200
-        expect(page.locator(".candidate-card")).to_have_count(9)
-        expect(page.locator(".specimen")).to_have_count(3)
-        expect(page.locator(".status-strip")).to_contain_text("全数印刷は保留")
+        expect(page.locator(".candidate-card")).to_have_count(0)
+        expect(page.locator(".print-model")).to_have_count(3)
+        expect(page.locator("#print-status")).to_contain_text("全数印刷は保留")
         clean_width(page)
         initial_requests = report["requests"][:]
         assert not any(url.endswith((".blend", ".FCStd", ".stl", ".step", ".mp4")) or "prototypes.json" in url or "/manifest.json" in url for url in initial_requests)
         assert all(urlsplit(url).netloc == urlsplit(base).netloc for url in initial_requests)
         page.screenshot(path=str(out / "landing-desktop.png"), full_page=True)
+        checked("landing: three high-part model selectors, no history or geometry/video auto-download")
+        page.goto(urljoin(base, "history.html"), wait_until="networkidle")
+        page.locator("#phase1-gallery > summary").click()
+        expect(page.locator(".candidate-card")).to_have_count(9)
         for card in page.locator(".candidate-card").all():
             image = card.locator("img")
             image.scroll_into_view_if_needed()
@@ -152,20 +156,18 @@ with sync_playwright() as p:
             page.locator("#image-dialog img").wait_for()
             expect(page.locator("#image-dialog img")).to_have_js_property("naturalWidth", 1200)
             page.keyboard.press("Escape")
-        page.locator(".feedback-photo img").scroll_into_view_if_needed()
-        expect(page.locator(".feedback-photo img")).not_to_have_js_property("naturalWidth", 0)
-        page.screenshot(path=str(out / "landing-desktop.png"), full_page=True)
+        page.screenshot(path=str(out / "separate-history.png"), full_page=True)
         page.evaluate("window.scrollTo(0, 0)")
         page.screenshot(path=str(out / "landing-top.png"))
-        checked("landing: nine real candidate image choices, no geometry/video/third-party auto-download")
-        for selector in ("#selected-videos", "#history-videos"):
+        checked("history: nine preserved original candidate images and full-size previews")
+        for selector in ("#history-videos",):
             host = page.locator(selector)
             host.locator("..").locator("summary").click()
             for video in host.locator("video").all():
                 play(video)
             host.locator("..").locator("summary").click()
-        checked("six generated videos play, with selected and Balanced-history labels separated")
-        page.goto(urljoin(base, "viewer/"), wait_until="networkidle", timeout=90000)
+        checked("the three historical Balanced videos play on the separate history page")
+        page.goto(urljoin(base, "viewer/?mode=r2"), wait_until="networkidle", timeout=90000)
         for candidate, count in [("mona-fine", 13434), ("copilot-chunky", 3021), ("ducky-fine", 10311)]:
             if candidate != "mona-fine":
                 page.locator(f'button[data-character="{candidate.split("-")[0]}"]').click()
@@ -178,7 +180,7 @@ with sync_playwright() as p:
             page.screenshot(path=str(out / "viewer-phase1-largest.png"))
             checked("Phase1 largest actual model renders 19,588 parts with all nine history choices")
         page.goto(urljoin(base, "downloads.html"), wait_until="networkidle")
-        expect(page.locator(".bundle")).to_have_count(4)
+        expect(page.locator("#historical-bundles .bundle")).to_have_count(4)
         expect(page.locator("#download-error")).to_be_hidden()
         page.locator("#file-search").fill("Selected-p4.FCStd")
         expect(page.locator("#file-list .path")).to_have_count(1)

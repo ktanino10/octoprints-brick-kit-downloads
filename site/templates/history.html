@@ -1,9 +1,16 @@
 <!doctype html>
 <html lang="ja">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Octoprints候補選定、r2接合部、初回試作の課題と次の検討方向。設計上の検証と実物評価を区別した公開履歴。"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'"><title>設計の経緯と未解決のこと — Octoprints</title><link rel="icon" href="viewer/assets/mark.svg"><link rel="stylesheet" href="assets/site.css"></head>
-<body><a class="skip" href="#main">本文へ</a><header class="header wrap"><a class="brand" href="./">octoprints<span>BRICK STUDY / PUBLIC ARCHIVE</span></a><nav aria-label="メイン"><a href="models.html">現行3体</a><a href="viewer/">組立ビューア</a><a href="downloads.html">ダウンロード</a><a href="feedback.html">実物の記録</a><a href="history.html" aria-current="page">設計の経緯</a></nav></header>
-<div class="status-strip"><div class="wrap"><strong>8 mm共通ブロックへ設計改訂／実物の嵌合・保持力は未検証</strong><span>全数印刷は保留</span><a href="feedback.html">旧試作の報告を読む →</a></div></div>
-<main id="main" class="wrap content-page"><div class="page-heading"><p class="eyebrow">DESIGN HISTORY / 2026-09-19 → 2026-09-20</p><h1>変えたこと。<br>まだ、言えないこと。</h1><p>外観の選択、設計改訂の実装承認、ネイティブCADの数値検査、実物の評価を区別します。</p></div><div class="prose">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Octoprintsを作るまでの試行錯誤。初期候補、穴詰まりの実物報告、少部品案から多部品案への改良を、印刷用モデル一覧とは分けて記録しています。"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'"><title>制作の試行錯誤 — Octoprints</title><link rel="icon" href="viewer/assets/mark.svg"><link rel="stylesheet" href="assets/site.css"><link rel="stylesheet" href="assets/print-catalog.css"><script type="module" src="assets/site.js"></script></head>
+<body><a class="skip" href="#main">本文へ</a><header class="header wrap"><a class="brand" href="./">octoprints<span>TRIALS / FEEDBACK / DESIGN HISTORY</span></a><nav aria-label="メイン"><a href="./">モデルを選ぶ</a><a href="density-guide.html">組立ガイド</a><a href="downloads.html">ファイル目録</a><a href="history.html" aria-current="page">制作の試行錯誤</a></nav></header>
+<main id="main" class="wrap content-page">
+<div class="page-heading"><p class="eyebrow">TRIAL AND ERROR / SEPARATE FROM THE MODEL CATALOGUE</p><h1>作るまでの、<br>試行錯誤。</h1><p>初めて印刷用データを探す人向けの一覧とは分けて、うまくいかなかった点や改良の経緯を残しています。</p><a class="button primary" href="./">印刷用のモデル一覧へ戻る →</a></div>
+<div class="history-index">
+  <a href="feedback.html"><strong>実物で起きた問題</strong><span>小さい部品、穴詰まり、写真10枚と動画。</span></a>
+  <a href="mona-refinement.html?comparison=face-front"><strong>見た目の改良</strong><span>初期Fine C、約36 cm案、目・口・輪郭の比較。</span></a>
+  <a href="density-matrix.html"><strong>多部品15案の比較</strong><span>実部品数、同じ画面上高さ、別の実寸比。</span></a>
+</div>
+<div class="note"><strong>このページは制作履歴です。</strong>以前の画像や試験データを、現在のモデルの印刷合格と読み替えないでください。実物未検証・全数印刷保留の条件は変わりません。</div>
+<div class="prose">
   <h2>出発点：自分で組み立てる、約180 mm。</h2><p>Mona・Copilot・Duckyを、3Dプリントした独立したブリックで一つずつ組み立てることが元の目標です。Bambu Lab P1SとPLAを想定し、0.2 mm・0.4 mmノズルを所有。市販LEGOとの互換性は必須条件ではありません。</p><p>原型は <a href="https://github.com/martinwoodward/octoprints/tree/981a85f0bec9d1a9c280fd5719d0d797852229c4">martinwoodward/octoprints の固定リビジョン</a>です。縮尺の統一、格子化、色の離散化、個別部品の分割・統合、独自接合部、表示・試験データを追加しました。<a href="ATTRIBUTION.md">帰属と改変の詳細</a>を維持してください。</p>
   <h2>Phase1：3キャラクター × 3段階の細かさ</h2><p>Chunkyは8 mmピッチ・4.8 mm層、Balancedは6 mm・3.6 mm層、Fineは4 mm・2.4 mm層。次は当時の個別部品数です。</p>
   <div class="table-scroll"><table><thead><tr><th>キャラクター</th><th>A / Chunky</th><th>B / Balanced</th><th>C / Fine</th></tr></thead><tbody><tr><th>Mona</th><td>2,325</td><td>4,838</td><td>13,837</td></tr><tr><th>Copilot</th><td>3,135</td><td>6,576</td><td>19,588</td></tr><tr><th>Ducky</th><td>1,767</td><td>3,646</td><td>10,662</td></tr><tr><th>設計上の高さ</th><td>183.95 mm</td><td>181.13 mm</td><td>180.71 mm</td></tr></tbody></table></div>
@@ -16,8 +23,11 @@
   <div class="note"><strong>数値PASS ≠ 現物合格。</strong>当時のCAD再オープン、BRep・メッシュ、接触グラフ、公称の上下挿入経路の結果は、該当版の限定的な記録です。実際の手・工具アクセス、摩擦、荷重、インフィル、着脱耐久性は含みません。ビューアの順序も、承認済みの組立説明書ではありません。</div>
   <h2>初回の実物：小ささと穴詰まり</h2><p>4 mm試験片に対し、提供者から「小さくて作りにくい」「穴がプラスチックで埋まっている」と報告されました。穴詰まりは<strong>超音波洗浄前から</strong>発生していました。洗浄を原因とも、解決策とも判断していません。<a href="feedback.html">写真10枚・無音動画・未確定の条件</a>を確認してください。</p>
   <h2 id="next">2026-09-20：共通ブロックへの設計改訂を承認</h2><p>8 mmピッチを基準に、2×2・2×4など手で持つことのできる共通ブロックへ作り直す実装が依頼されました。本体9.6 mm、プレート3.2 mm、スタッド径4.8 mm・高さ1.8 mm、開いた下面の壁・筒・リブを設計基準にします。旧細密の1.10 mmピン・小さい盲穴を維持する方針ではありません。</p><p><strong>設計改訂の実装は承認済み、実物の製造は未承認です。</strong>新revisionは <span class="mono">r3-8mm-20260920</span>。制作データがそろった版だけを公開し、物理嵌合・保持力・耐久性・全体組立・スライス結果は別の未検証事項として残します。約180 mmの厳密な維持や、市販LEGOとの互換性は保証しません。</p>
-  <p><a href="models.html">現行3体と実データの公開状況</a> / <a href="docs/COMMON-BLOCKS.ja.md">独立した寸法基準・新版のガイド</a> / <a href="archive/revisions.json">版別の状態記録</a></p>
+  <p><a href="viewer/?revision=r3-8mm-20260920">旧少部品案の履歴ビューア</a> / <a href="docs/COMMON-BLOCKS.ja.md">当時の寸法基準と資料</a> / <a href="archive/revisions.json">版別の状態記録</a></p>
   <ul><li><a href="https://www.lego.com/en-us/history/articles/d-the-stud-and-tube-principle" rel="noreferrer">LEGO公式：stud and tube principle</a> — 設計原理の歴史。</li><li><a href="https://www.ldraw.org/article/218.html" rel="noreferrer">LDrawの寸法仕様</a> — 実寸換算は近似で、製造公差ではありません。</li><li><a href="https://blog.prusa3d.com/how-to-make-3d-printed-lego-and-lego-duplo-parts_31741/" rel="noreferrer">Prusa：LEGO風部品のFFF印刷</a> — 精度・初層・嵌合の難しさ。他機種の補正値をP1Sの検証済み設定として転用しません。</li></ul><p>第三者の画像・動画・モデルは転載せず、参考リンクだけを掲載しています。</p>
+  <h2 id="low-count-r3">少部品のr3案は、通常の候補から外す</h2><p>Mona 519個・Copilot 695個・Ducky 413個の少部品デザインは、印刷用モデル一覧には掲載しません。8 mm規格自体を廃止する意味ではなく、部品数の多い15案を通常の選択肢にしています。過去のCAD・画像・配布物は履歴として保持します。</p>
+  <h2>部品数を増やしても、見た目は単純には良くならない</h2><p>初期Fine Cの配色や輪郭を参照し、Monaの大きい案、半高部品、根元一体化へ進みました。平たくなった口や色境界のずれも記録し、部品数を美観の合格点にはしていません。</p><p><a href="shape-options.html">以前のプレート・輪郭・斜面案</a> / <a href="mona-likeness.html">最初の大きいMona案</a> / <a href="mona-refinement.html">その後の顔・輪郭の改良</a> / <a href="density-matrix.html">最終15案と実寸比</a></p>
+  <h2>組立用の支えと、現物検証は別に残す</h2><p>新しいMona 5案は外付け・組立仮支台なしの実根元へ改訂しています。ただし、公称CADの接触・重心検査は実PLAの強度や保持力の実測ではありません。DuckyやCopilotでは案ごとの支台を別に記録し、未検証の撤去を案内しません。</p>
   <h2 id="print-options">印刷方法についての追加希望</h2>
   <p>2026-09-20、「別々に印刷して後で組み立てる方法」と「最初からすべて印刷する方法」の2方式が希望されました。後者が組立不要の一体造形なのか、別部品を同じプレートへ並べる一括印刷なのかは、意図を確認中です。</p>
   <p>今回の設計改訂は分割して後で組み立てる方式が対象です。色別に別部品を並べた形状3MFがあっても、一体造形の希望確認や印刷準備済みデータの意味ではありません。組立ビューの完成形は一体印刷ファイルではなく、全数印刷は引き続き保留します。</p>
@@ -27,4 +37,8 @@
   <p>画像サムネイルは実生成画像からの縮小版で、架空の宣伝画像ではありません。写真・実物動画は公開済みの個人メタデータ除去済みファイルだけを使用し、元の添付原本・音声・センサートラックは公開していません。</p>
   <p><a href="archive/source-inventory.json">コピー前の許可対象目録</a>と<a href="archive/inventory.json">公開ファイルのハッシュ目録</a>で、元のハッシュと公開用派生物のハッシュを区別しています。当時の検証資料内のハッシュは当時の入力に対する記録です。現在の配布物との照合は公開目録を使用してください。<a href="archive/portability.json">ネイティブファイル整理・形状保存の記録</a>も付属します。</p>
   <h2>権利と立場</h2><p>原型とモデル派生物は<a href="LICENSE">CC BY-NC 4.0</a>（非商用）。再配布・改変時も帰属・ライセンス・変更の明示を維持してください。実物写真・動画の権利は提供者に帰属し、この掲載許可が一律のCCライセンスになるわけではありません。Three.js等のライブラリーは<a href="viewer/assets/THIRD_PARTY_LICENSES.txt">個別のライセンス</a>に従います。</p><p>GitHub / LEGOによる推奨・協賛・認証・商用互換性を主張しません。商標の権利は各権利者に帰属します。</p>
-</div></main><footer class="footer wrap"><div><a class="brand" href="./">octoprints<span>制作物と、改善の記録を公開。</span></a><p><a href="ATTRIBUTION.md">出典・改変・ライセンス</a></p></div><div><a href="downloads.html">全配布カタログ →</a><a href="https://github.com/ktanino10/octoprints-brick-kit-downloads">公開リポジトリ ↗</a></div></footer></body></html>
+</div>
+<details class="history-image-disclosure" id="phase1-gallery"><summary>初期9案の実画像と当時の動画を開く</summary><p>Phase1の履歴です。通常の印刷用モデル一覧とは分けています。</p><div id="candidate-matrix"><p class="loading">候補の記録を読み込んでいます。</p></div><div id="media-error" class="error" role="alert" hidden></div><details class="media-disclosure"><summary>Phase1のBalanced動画を見る <span>6 mm・履歴の3本</span></summary><div id="history-videos" class="video-grid"></div></details></details>
+</main><footer class="footer wrap"><div><a class="brand" href="./">octoprints<span>制作物と、改善の記録を公開。</span></a><p><a href="ATTRIBUTION.md">出典・改変・ライセンス</a></p></div><div><a href="./">モデルを選ぶ →</a><a href="downloads.html">全配布カタログ →</a><a href="https://github.com/ktanino10/octoprints-brick-kit-downloads">公開リポジトリ ↗</a></div></footer>
+<dialog id="image-dialog" aria-label="制作履歴の実画像"><button class="dialog-close" type="button" aria-label="拡大画像を閉じる">閉じる ×</button><img alt=""><p></p><a class="text-link" download>実画像を取得 ↓</a></dialog>
+</body></html>

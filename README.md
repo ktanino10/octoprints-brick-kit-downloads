@@ -3,13 +3,17 @@
 [日本語](README.md) / [English](README.en.md)
 
 **[公開サイト / 日本語](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/)** ·
-**[組立ビューア](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/viewer/)** ·
+**[実3D組立ガイド](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html)** ·
 **[全ダウンロード](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/downloads.html)** ·
 **[実物フィードバック](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/feedback.html)** ·
-**[設計の経緯](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/history.html)** ·
-**[現行3体・公開状況](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/models.html)**
+**[制作の試行錯誤](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/history.html)** ·
+**[モデルを選ぶ](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/models.html)**
 
-[新版の組立候補ガイド](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/assembly.html) は、
+初めての方はトップの**印刷用データカタログ**から、3体それぞれの5案を部品数・完成サイズ・支台の有無で選べます。
+Mona 519 / Copilot 695 / Ducky 413個の少部品r3案は通常の候補から外し、過去の試作・失敗・改良は別ページへ分けています。
+「STL公開」は印刷確認済みを意味しません。全案が未スライス・実物未検証で、全数印刷は保留です。以下は版別の保存記録です。
+
+[以前のr3組立候補の記録](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/assembly.html) は、
 同じ版の実マニフェストからID・型・色・底面位置・回転・順序を表示します。実物組立の承認ではありません。
 
 [公開リポジトリ](https://github.com/ktanino10/octoprints-brick-kit-downloads) ·

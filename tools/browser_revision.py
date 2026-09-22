@@ -76,21 +76,12 @@ with sync_playwright() as playwright:
                 localized(page, locale)
                 no_overflow(page)
                 if route in ["", "models.html"]:
-                    expect(page.locator("#current-error")).to_be_hidden()
-                    if args.expect_input_wait:
-                        expect(page.locator('[data-availability="INPUT_WAIT"]')).to_have_count(1)
-                        expect(page.locator("#current-specimens img")).to_have_count(0)
-                        expect(page.locator("#selected-videos video")).to_have_count(0)
-                    else:
-                        expect(page.locator("#current-specimens article")).to_have_count(3)
-                        for image in page.locator("#current-specimens img").all():
-                            image.scroll_into_view_if_needed()
-                            expect(image).not_to_have_js_property("naturalWidth", 0)
-                        if route == "models.html":
-                            expect(page.locator("#current-exploded img")).to_have_count(3)
-                            for image in page.locator("#current-exploded img").all():
-                                image.scroll_into_view_if_needed()
-                                expect(image).not_to_have_js_property("naturalWidth", 0)
+                    expect(page.locator("#print-catalog-error")).to_be_hidden()
+                    expect(page.locator(".print-model")).to_have_count(3)
+                    expect(page.locator("#current-specimens,#selected-videos")).to_have_count(0)
+                    for image in page.locator(".print-model img").all():
+                        image.scroll_into_view_if_needed()
+                        expect(image).not_to_have_js_property("naturalWidth", 0)
                 if route == "downloads.html":
                     expect(page.locator("#download-error")).to_be_hidden()
                     expect(page.locator("#historical-bundles .bundle")).to_have_count(4)
