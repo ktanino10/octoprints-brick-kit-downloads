@@ -6,7 +6,7 @@
   "scope": "FOUR_NEW_ACTUAL_SUPPORT_FREE_COPILOT_REVISIONS_NOT_THE_PREVIOUS_FIFTEEN_CASE_DELIVERY",
   "baseline_count": 17873,
   "expected_case_count": 4,
-  "published_verified_case_count": 1,
+  "published_verified_case_count": 3,
   "requirements": {
     "external_aid_count": 0,
     "assembly_aid_count": 0,
@@ -62,7 +62,7 @@
       "actual_case_id": "copilot-p150-support-free-v2",
       "geometry_revision": "body-support-v2",
       "source_commit": "313c7d5bee20dd343b4c01f2000eef94e26d09ed",
-      "status": "PUBLIC_PENDING",
+      "status": "READY",
       "actual_count": 26673,
       "external_aid_count": 0,
       "assembly_aid_count": 0,
@@ -77,9 +77,11 @@
       "assembly_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p150-support-free-v2/copilot-p150-support-free-v2-cad-scene-animation-public.zip",
       "viewer_url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case=copilot-p150-support-free-v2",
       "verification": {
-        "public_browser_passed": false,
-        "anonymous_downloads_passed": false
-      }
+        "public_browser_passed": true,
+        "anonymous_downloads_passed": true
+      },
+      "verified_content_commit": "4ef08d5ba797e8dd752fbac35e3a76636e5dc5b7",
+      "verified_pages_run": "35697058877"
     },
     {
       "logical_case_id": "copilot-p200",
@@ -93,7 +95,7 @@
       "actual_case_id": "copilot-p200-support-free-v2",
       "geometry_revision": "body-support-v2",
       "source_commit": "f231e36aad95adfdaa03df696816cf86be06f784",
-      "status": "PUBLIC_PENDING",
+      "status": "READY",
       "actual_count": 35630,
       "external_aid_count": 0,
       "assembly_aid_count": 0,
@@ -108,9 +110,11 @@
       "assembly_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p200-support-free-v2/copilot-p200-support-free-v2-cad-scene-animation-public.zip",
       "viewer_url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case=copilot-p200-support-free-v2",
       "verification": {
-        "public_browser_passed": false,
-        "anonymous_downloads_passed": false
-      }
+        "public_browser_passed": true,
+        "anonymous_downloads_passed": true
+      },
+      "verified_content_commit": "4ef08d5ba797e8dd752fbac35e3a76636e5dc5b7",
+      "verified_pages_run": "35697058877"
     },
     {
       "logical_case_id": "copilot-p300",
