@@ -10,6 +10,7 @@ import subprocess
 from urllib.request import Request, urlopen
 
 from make_density_receipt import public_asset_records
+from density_requirements import validate_copilot_support_receipt
 from verify_publication import BASE, HEADERS, get_json, verify_bytes
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -72,6 +73,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--expected-commit", required=True)
     parser.add_argument("--before", required=True)
+    parser.add_argument("--body-support", action="store_true", help="Verify only the separate new Copilot support-free publication")
     parser.add_argument("--report", type=Path, required=True)
     parser.add_argument("--browser-report", type=Path, help="Actual public browser/media acceptance report")
     parser.add_argument("--previous-report", type=Path, action="append", default=[],
@@ -87,7 +89,14 @@ def main():
     pointer = get_json(BASE + "archive/density-study.json")
     if pointer != json.loads((ROOT / "archive/density-study.json").read_text()) or pointer["state"] == "INPUT_WAIT":
         raise ValueError("Actual matrix pointer is missing or stale")
-    catalog_file = pointer["catalog"]
+    body_receipt = None
+    if args.body_support:
+        body_receipt = validate_copilot_support_receipt(get_json(BASE + "archive/copilot-support-free-revision.json"))
+        if body_receipt != json.loads((ROOT / "archive/copilot-support-free-revision.json").read_text()):
+            raise ValueError("The separate Copilot revision receipt is stale")
+        if body_receipt.get("base_catalog_sha256") != pointer["catalog"]["sha256"]:
+            raise ValueError("The new revision is not bound to the unchanged original matrix")
+    catalog_file = body_receipt["revision_catalog"] if args.body_support else pointer["catalog"]
     catalog_path = catalog_file["path"].lstrip("/")
     data = (ROOT / catalog_path).read_bytes()
     if hashlib.sha256(data).hexdigest() != catalog_file["sha256"]:
@@ -95,6 +104,7 @@ def main():
     catalog = json.loads(data)
     if get_json(BASE + catalog_path) != catalog:
         raise ValueError("Actual public catalog differs from the checked local one")
+    delivery_catalog = {**catalog, "baselines": {}} if args.body_support else catalog
     inventory = get_json(BASE + "archive/inventory.json")
     if inventory != json.loads((ROOT / "archive/inventory.json").read_text()):
         raise ValueError("Actual public inventory is stale")
@@ -114,7 +124,7 @@ def main():
             if entry.get("authentication") == "none":
                 prior_assets[entry["url"]] = entry
     assets = []
-    for entry in public_asset_records(catalog):
+    for entry in public_asset_records(delivery_catalog):
         prior = prior_assets.get(entry["url"])
         if prior and all(prior.get(key) == entry[key] for key in ["bytes", "sha256"]):
             with urlopen(Request(entry["url"], method="HEAD", headers=HEADERS), timeout=60) as response:
@@ -125,7 +135,7 @@ def main():
             assets.append(verify_bytes(entry["url"], entry["bytes"], entry["sha256"]))
         print("Verified actual download:", entry["url"].rsplit("/", 1)[-1], flush=True)
     video_ranges = []
-    for address in sorted({file["url"] for file in public_asset_records(catalog) if file["url"].endswith(".mp4")}):
+    for address in sorted({file["url"] for file in public_asset_records(delivery_catalog) if file["url"].endswith(".mp4")}):
         with urlopen(Request(address, headers={**HEADERS, "Range": "bytes=0-1023"}), timeout=60) as response:
             sample = response.read()
             mime = response.headers.get_content_type()
@@ -137,13 +147,27 @@ def main():
     report = {"study_id": STUDY, "deployment": deployment, "catalog_sha256": catalog_file["sha256"],
               "changed_site_files": site, "assets": assets, "animation_range_checks": video_ranges,
               "old_history_not_redownloaded": True, "physical_fit": "UNKNOWN", "slicer_status": "NOT_SLICED", "full_print": "ON_HOLD"}
+    if args.body_support:
+        report.update(geometry_revision="body-support-v2", request_id=body_receipt["request_id"],
+                      base_catalog_sha256=pointer["catalog"]["sha256"])
     if args.browser_report:
         if not args.browser_report.resolve().is_relative_to(ROOT / ".archive-work"):
             raise ValueError("Use the current owned public browser report")
         browser = json.loads(args.browser_report.read_text())
-        previous_catalog = json.loads(subprocess.check_output([
-            "git", "-C", str(ROOT), "show", args.before + ":" + catalog_path]))
-        report.update(browser_coverage(catalog, browser, previous_catalog))
+        exists = subprocess.run(["git", "-C", str(ROOT), "cat-file", "-e", args.before + ":" + catalog_path],
+                                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL).returncode == 0
+        if args.body_support:
+            if browser.get("geometry_revision") != "body-support-v2":
+                raise ValueError("Old public browser checks cannot complete the new support-free request")
+            previous_catalog = json.loads(subprocess.check_output([
+                "git", "-C", str(ROOT), "show", args.before + ":" + catalog_path])) if exists else {"cases": []}
+            report.update(browser_coverage(delivery_catalog,
+                {**browser, "baseline_media": [], "reference_guides": [], "reference_media": []},
+                {**previous_catalog, "baselines": {}}))
+        else:
+            previous_catalog = json.loads(subprocess.check_output([
+                "git", "-C", str(ROOT), "show", args.before + ":" + catalog_path]))
+            report.update(browser_coverage(catalog, browser, previous_catalog))
     else:
         report["browser_media_delivery"] = "NOT_CHECKED"
     args.report.parent.mkdir(parents=True, exist_ok=True)

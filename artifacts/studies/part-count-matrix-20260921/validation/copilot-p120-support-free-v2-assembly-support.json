@@ -1,0 +1,1174 @@
+{
+  "schema_version": 1,
+  "case_id": "copilot-p120-support-free-v2",
+  "logical_case_id": "copilot-p120",
+  "geometry_revision": "body-support-v2",
+  "status": "DIGITAL_SELF_SUPPORTING_UNTESTED",
+  "external_aid_count": 0,
+  "assembly_aid_count": 0,
+  "actual_parts": 21382,
+  "actual_types": 156,
+  "geometry_sequence_identity_sha256": "87f4f8c36d56db6b5729996076668e7343648df763b8ce0a456dc11c64597a94",
+  "native_support_contact_evidence_sha256": "f44e599d613cd541b0d1839c2ae64382e72c1302c390cda1437127f94c9d367a",
+  "actual_native_support_checks": {
+    "result": "PASS_ACTUAL_BODY_SUPPORT_BREP_CONTACTS",
+    "modules": [
+      {
+        "part_id": "COPILOT-P120-SUPPORT-FREE-V2-ROOT-01",
+        "native_support_type": "BS-0e9661fb7ce065e5",
+        "actual_single_solid": true,
+        "anchor_role": "BODY_INTEGRATED_SUPPORT_ROOT",
+        "body_supports": [
+          {
+            "lower_part_id": "COPILOT-P120-000286",
+            "native_bearing_mm2": 230.3136612624712,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P120-000298",
+            "native_bearing_mm2": 235.10053460993367,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P120-000299",
+            "native_bearing_mm2": 164.8608882033076,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P120-000314",
+            "native_bearing_mm2": 161.38638377920847,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P120-000328",
+            "native_bearing_mm2": 81.40455977571176,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P120-000329",
+            "native_bearing_mm2": 83.61649311836962,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          }
+        ],
+        "root_stud_count": 48,
+        "root_xy_span_mm": [
+          72,
+          56
+        ],
+        "body_mm": [
+          79.8,
+          71.8,
+          9.6
+        ],
+        "module_position_mm": [
+          -4,
+          -176,
+          16.0
+        ],
+        "module_insertion_step": 374,
+        "gravity_balance": {
+          "result": "PASS_NOMINAL_CAD_STATIC_MOMENT_BOUND",
+          "minimum_support_margin_mm": 18.18269414336094,
+          "required_margin_mm": 1.0,
+          "actual_bearing_hull_xy_mm": [
+            [
+              -43.9,
+              -171.7
+            ],
+            [
+              -27.9,
+              -203.7
+            ],
+            [
+              -12.3,
+              -203.7
+            ],
+            [
+              35.9,
+              -171.9
+            ],
+            [
+              35.9,
+              -140.1
+            ],
+            [
+              -43.9,
+              -140.1
+            ]
+          ],
+          "root_cad_volume_mm3": 12670.93495011979,
+          "root_cad_centroid_mm": [
+            -6.468094677272525,
+            -169.77445328026948,
+            23.4244440008619
+          ],
+          "downstream_payloads": [
+            {
+              "part_id": "COPILOT-P120-000431",
+              "cad_volume_mm3": 2178.7591932122073,
+              "cad_centroid_mm": [
+                -4.000000000000011,
+                -192.0,
+                24.136115984835918
+              ]
+            },
+            {
+              "part_id": "COPILOT-P120-000441",
+              "cad_volume_mm3": 2178.7591932122077,
+              "cad_centroid_mm": [
+                11.999999999999988,
+                -192.0,
+                24.136115984835918
+              ]
+            },
+            {
+              "part_id": "COPILOT-P120-000582",
+              "cad_volume_mm3": 479.4687951734616,
+              "cad_centroid_mm": [
+                -28.0,
+                -208.0,
+                28.738427988595035
+              ]
+            },
+            {
+              "part_id": "COPILOT-P120-000583",
+              "cad_volume_mm3": 1748.985519673881,
+              "cad_centroid_mm": [
+                -3.999999999999999,
+                -204.0,
+                28.92804771429022
+              ]
+            },
+            {
+              "part_id": "COPILOT-P120-000561",
+              "cad_volume_mm3": 944.9500997948172,
+              "cad_centroid_mm": [
+                -36.00000000000001,
+                -200.0,
+                28.771567265879305
+              ]
+            },
+            {
+              "part_id": "COPILOT-P120-000562",
+              "cad_volume_mm3": 1750.8788530072168,
+              "cad_centroid_mm": [
+                -36.0,
+                -188.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P120-000584",
+              "cad_volume_mm3": 1750.8788530072159,
+              "cad_centroid_mm": [
+                -4.000000000000001,
+                -188.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P120-000563",
+              "cad_volume_mm3": 1750.8788530072175,
+              "cad_centroid_mm": [
+                -36.0,
+                -172.0,
+                28.929567234800185
+              ]
+            },
+            {
+              "part_id": "COPILOT-P120-000585",
+              "cad_volume_mm3": 1750.878853007217,
+              "cad_centroid_mm": [
+                -4.0,
+                -172.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P120-000605",
+              "cad_volume_mm3": 1750.8788530072168,
+              "cad_centroid_mm": [
+                28.0,
+                -172.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P120-000564",
+              "cad_volume_mm3": 1750.8788530072168,
+              "cad_centroid_mm": [
+                -36.0,
+                -156.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P120-000586",
+              "cad_volume_mm3": 1750.8788530072159,
+              "cad_centroid_mm": [
+                -4.000000000000001,
+                -156.0,
+                28.929567234800192
+              ]
+            },
+            {
+              "part_id": "COPILOT-P120-000606",
+              "cad_volume_mm3": 1750.878853007216,
+              "cad_centroid_mm": [
+                28.0,
+                -156.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P120-000565",
+              "cad_volume_mm3": 1750.878853007217,
+              "cad_centroid_mm": [
+                -36.0,
+                -140.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P120-000587",
+              "cad_volume_mm3": 1750.878853007216,
+              "cad_centroid_mm": [
+                -4.000000000000001,
+                -140.0,
+                28.929567234800192
+              ]
+            },
+            {
+              "part_id": "COPILOT-P120-000607",
+              "cad_volume_mm3": 1750.8788530072163,
+              "cad_centroid_mm": [
+                28.0,
+                -140.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P120-000756",
+              "cad_volume_mm3": 1748.9855196738838,
+              "cad_centroid_mm": [
+                -28.00000000000001,
+                -196.0,
+                33.728047714290206
+              ]
+            },
+            {
+              "part_id": "COPILOT-P120-000768",
+              "cad_volume_mm3": 1750.878853007218,
+              "cad_centroid_mm": [
+                -12.0,
+                -164.0,
+                33.729567234800186
+              ]
+            },
+            {
+              "part_id": "COPILOT-P120-000779",
+              "cad_volume_mm3": 1750.878853007217,
+              "cad_centroid_mm": [
+                4.0,
+                -164.0,
+                33.729567234800186
+              ]
+            }
+          ],
+          "assembly_prefix_checks": [
+            {
+              "after_step": 374,
+              "added_part_id": "COPILOT-P120-SUPPORT-FREE-V2-ROOT-01",
+              "minimum_support_margin_mm": 25.106205818793796
+            },
+            {
+              "after_step": 375,
+              "added_part_id": "COPILOT-P120-000431",
+              "minimum_support_margin_mm": 25.106205818793796
+            },
+            {
+              "after_step": 376,
+              "added_part_id": "COPILOT-P120-000441",
+              "minimum_support_margin_mm": 20.892075080247892
+            },
+            {
+              "after_step": 502,
+              "added_part_id": "COPILOT-P120-000582",
+              "minimum_support_margin_mm": 20.892075080247892
+            },
+            {
+              "after_step": 503,
+              "added_part_id": "COPILOT-P120-000583",
+              "minimum_support_margin_mm": 18.18269414336094
+            },
+            {
+              "after_step": 506,
+              "added_part_id": "COPILOT-P120-000561",
+              "minimum_support_margin_mm": 18.18269414336094
+            },
+            {
+              "after_step": 509,
+              "added_part_id": "COPILOT-P120-000562",
+              "minimum_support_margin_mm": 18.18269414336094
+            },
+            {
+              "after_step": 510,
+              "added_part_id": "COPILOT-P120-000584",
+              "minimum_support_margin_mm": 18.18269414336094
+            },
+            {
+              "after_step": 517,
+              "added_part_id": "COPILOT-P120-000563",
+              "minimum_support_margin_mm": 18.18269414336094
+            },
+            {
+              "after_step": 518,
+              "added_part_id": "COPILOT-P120-000585",
+              "minimum_support_margin_mm": 18.18269414336094
+            },
+            {
+              "after_step": 519,
+              "added_part_id": "COPILOT-P120-000605",
+              "minimum_support_margin_mm": 18.18269414336094
+            },
+            {
+              "after_step": 524,
+              "added_part_id": "COPILOT-P120-000564",
+              "minimum_support_margin_mm": 18.18269414336094
+            },
+            {
+              "after_step": 525,
+              "added_part_id": "COPILOT-P120-000586",
+              "minimum_support_margin_mm": 18.18269414336094
+            },
+            {
+              "after_step": 526,
+              "added_part_id": "COPILOT-P120-000606",
+              "minimum_support_margin_mm": 18.18269414336094
+            },
+            {
+              "after_step": 531,
+              "added_part_id": "COPILOT-P120-000565",
+              "minimum_support_margin_mm": 18.18269414336094
+            },
+            {
+              "after_step": 532,
+              "added_part_id": "COPILOT-P120-000587",
+              "minimum_support_margin_mm": 18.18269414336094
+            },
+            {
+              "after_step": 533,
+              "added_part_id": "COPILOT-P120-000607",
+              "minimum_support_margin_mm": 18.18269414336094
+            },
+            {
+              "after_step": 680,
+              "added_part_id": "COPILOT-P120-000756",
+              "minimum_support_margin_mm": 18.18269414336094
+            },
+            {
+              "after_step": 700,
+              "added_part_id": "COPILOT-P120-000768",
+              "minimum_support_margin_mm": 18.18269414336094
+            },
+            {
+              "after_step": 701,
+              "added_part_id": "COPILOT-P120-000779",
+              "minimum_support_margin_mm": 18.18269414336094
+            }
+          ],
+          "assumptions": "Uniform-density native CADvolume,notmeasuredPLA/infillmass. Perhullside include100percent ofdestabilizing exclusive-root/firstshared-receiverpayload,ignorestabilizingpayload. No creditforunknownstudpullouttension.",
+          "not_validated": "Printedmaterial/infilldistribution,creep,yield,impact,dynamicassemblyloads,retentionandwholefiguretipping."
+        },
+        "load_path": "Continuous stepped material from tip to this native multi-point seated body root; no floor/stand member.",
+        "physical_retention": "UNKNOWN",
+        "physical_strength": "UNKNOWN",
+        "physical_bottom_z_mm": 16.0,
+        "receiving_body_stage_z_mm": 20.8
+      }
+    ],
+    "external_aid_count": 0,
+    "assembly_aid_count": 0,
+    "gravity_balance_result": "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS",
+    "physical_validation": "UNKNOWN",
+    "slicer_supports": "UNKNOWN"
+  },
+  "gravity_balance": {
+    "result": "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS",
+    "modules": [
+      {
+        "part_id": "COPILOT-P120-SUPPORT-FREE-V2-ROOT-01",
+        "result": "PASS_NOMINAL_CAD_STATIC_MOMENT_BOUND",
+        "minimum_support_margin_mm": 18.18269414336094,
+        "required_margin_mm": 1.0,
+        "actual_bearing_hull_xy_mm": [
+          [
+            -43.9,
+            -171.7
+          ],
+          [
+            -27.9,
+            -203.7
+          ],
+          [
+            -12.3,
+            -203.7
+          ],
+          [
+            35.9,
+            -171.9
+          ],
+          [
+            35.9,
+            -140.1
+          ],
+          [
+            -43.9,
+            -140.1
+          ]
+        ],
+        "root_cad_volume_mm3": 12670.93495011979,
+        "root_cad_centroid_mm": [
+          -6.468094677272525,
+          -169.77445328026948,
+          23.4244440008619
+        ],
+        "downstream_payloads": [
+          {
+            "part_id": "COPILOT-P120-000431",
+            "cad_volume_mm3": 2178.7591932122073,
+            "cad_centroid_mm": [
+              -4.000000000000011,
+              -192.0,
+              24.136115984835918
+            ]
+          },
+          {
+            "part_id": "COPILOT-P120-000441",
+            "cad_volume_mm3": 2178.7591932122077,
+            "cad_centroid_mm": [
+              11.999999999999988,
+              -192.0,
+              24.136115984835918
+            ]
+          },
+          {
+            "part_id": "COPILOT-P120-000582",
+            "cad_volume_mm3": 479.4687951734616,
+            "cad_centroid_mm": [
+              -28.0,
+              -208.0,
+              28.738427988595035
+            ]
+          },
+          {
+            "part_id": "COPILOT-P120-000583",
+            "cad_volume_mm3": 1748.985519673881,
+            "cad_centroid_mm": [
+              -3.999999999999999,
+              -204.0,
+              28.92804771429022
+            ]
+          },
+          {
+            "part_id": "COPILOT-P120-000561",
+            "cad_volume_mm3": 944.9500997948172,
+            "cad_centroid_mm": [
+              -36.00000000000001,
+              -200.0,
+              28.771567265879305
+            ]
+          },
+          {
+            "part_id": "COPILOT-P120-000562",
+            "cad_volume_mm3": 1750.8788530072168,
+            "cad_centroid_mm": [
+              -36.0,
+              -188.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P120-000584",
+            "cad_volume_mm3": 1750.8788530072159,
+            "cad_centroid_mm": [
+              -4.000000000000001,
+              -188.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P120-000563",
+            "cad_volume_mm3": 1750.8788530072175,
+            "cad_centroid_mm": [
+              -36.0,
+              -172.0,
+              28.929567234800185
+            ]
+          },
+          {
+            "part_id": "COPILOT-P120-000585",
+            "cad_volume_mm3": 1750.878853007217,
+            "cad_centroid_mm": [
+              -4.0,
+              -172.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P120-000605",
+            "cad_volume_mm3": 1750.8788530072168,
+            "cad_centroid_mm": [
+              28.0,
+              -172.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P120-000564",
+            "cad_volume_mm3": 1750.8788530072168,
+            "cad_centroid_mm": [
+              -36.0,
+              -156.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P120-000586",
+            "cad_volume_mm3": 1750.8788530072159,
+            "cad_centroid_mm": [
+              -4.000000000000001,
+              -156.0,
+              28.929567234800192
+            ]
+          },
+          {
+            "part_id": "COPILOT-P120-000606",
+            "cad_volume_mm3": 1750.878853007216,
+            "cad_centroid_mm": [
+              28.0,
+              -156.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P120-000565",
+            "cad_volume_mm3": 1750.878853007217,
+            "cad_centroid_mm": [
+              -36.0,
+              -140.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P120-000587",
+            "cad_volume_mm3": 1750.878853007216,
+            "cad_centroid_mm": [
+              -4.000000000000001,
+              -140.0,
+              28.929567234800192
+            ]
+          },
+          {
+            "part_id": "COPILOT-P120-000607",
+            "cad_volume_mm3": 1750.8788530072163,
+            "cad_centroid_mm": [
+              28.0,
+              -140.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P120-000756",
+            "cad_volume_mm3": 1748.9855196738838,
+            "cad_centroid_mm": [
+              -28.00000000000001,
+              -196.0,
+              33.728047714290206
+            ]
+          },
+          {
+            "part_id": "COPILOT-P120-000768",
+            "cad_volume_mm3": 1750.878853007218,
+            "cad_centroid_mm": [
+              -12.0,
+              -164.0,
+              33.729567234800186
+            ]
+          },
+          {
+            "part_id": "COPILOT-P120-000779",
+            "cad_volume_mm3": 1750.878853007217,
+            "cad_centroid_mm": [
+              4.0,
+              -164.0,
+              33.729567234800186
+            ]
+          }
+        ],
+        "assembly_prefix_checks": [
+          {
+            "after_step": 374,
+            "added_part_id": "COPILOT-P120-SUPPORT-FREE-V2-ROOT-01",
+            "minimum_support_margin_mm": 25.106205818793796
+          },
+          {
+            "after_step": 375,
+            "added_part_id": "COPILOT-P120-000431",
+            "minimum_support_margin_mm": 25.106205818793796
+          },
+          {
+            "after_step": 376,
+            "added_part_id": "COPILOT-P120-000441",
+            "minimum_support_margin_mm": 20.892075080247892
+          },
+          {
+            "after_step": 502,
+            "added_part_id": "COPILOT-P120-000582",
+            "minimum_support_margin_mm": 20.892075080247892
+          },
+          {
+            "after_step": 503,
+            "added_part_id": "COPILOT-P120-000583",
+            "minimum_support_margin_mm": 18.18269414336094
+          },
+          {
+            "after_step": 506,
+            "added_part_id": "COPILOT-P120-000561",
+            "minimum_support_margin_mm": 18.18269414336094
+          },
+          {
+            "after_step": 509,
+            "added_part_id": "COPILOT-P120-000562",
+            "minimum_support_margin_mm": 18.18269414336094
+          },
+          {
+            "after_step": 510,
+            "added_part_id": "COPILOT-P120-000584",
+            "minimum_support_margin_mm": 18.18269414336094
+          },
+          {
+            "after_step": 517,
+            "added_part_id": "COPILOT-P120-000563",
+            "minimum_support_margin_mm": 18.18269414336094
+          },
+          {
+            "after_step": 518,
+            "added_part_id": "COPILOT-P120-000585",
+            "minimum_support_margin_mm": 18.18269414336094
+          },
+          {
+            "after_step": 519,
+            "added_part_id": "COPILOT-P120-000605",
+            "minimum_support_margin_mm": 18.18269414336094
+          },
+          {
+            "after_step": 524,
+            "added_part_id": "COPILOT-P120-000564",
+            "minimum_support_margin_mm": 18.18269414336094
+          },
+          {
+            "after_step": 525,
+            "added_part_id": "COPILOT-P120-000586",
+            "minimum_support_margin_mm": 18.18269414336094
+          },
+          {
+            "after_step": 526,
+            "added_part_id": "COPILOT-P120-000606",
+            "minimum_support_margin_mm": 18.18269414336094
+          },
+          {
+            "after_step": 531,
+            "added_part_id": "COPILOT-P120-000565",
+            "minimum_support_margin_mm": 18.18269414336094
+          },
+          {
+            "after_step": 532,
+            "added_part_id": "COPILOT-P120-000587",
+            "minimum_support_margin_mm": 18.18269414336094
+          },
+          {
+            "after_step": 533,
+            "added_part_id": "COPILOT-P120-000607",
+            "minimum_support_margin_mm": 18.18269414336094
+          },
+          {
+            "after_step": 680,
+            "added_part_id": "COPILOT-P120-000756",
+            "minimum_support_margin_mm": 18.18269414336094
+          },
+          {
+            "after_step": 700,
+            "added_part_id": "COPILOT-P120-000768",
+            "minimum_support_margin_mm": 18.18269414336094
+          },
+          {
+            "after_step": 701,
+            "added_part_id": "COPILOT-P120-000779",
+            "minimum_support_margin_mm": 18.18269414336094
+          }
+        ],
+        "assumptions": "Uniform-density native CADvolume,notmeasuredPLA/infillmass. Perhullside include100percent ofdestabilizing exclusive-root/firstshared-receiverpayload,ignorestabilizingpayload. No creditforunknownstudpullouttension.",
+        "not_validated": "Printedmaterial/infilldistribution,creep,yield,impact,dynamicassemblyloads,retentionandwholefiguretipping."
+      }
+    ],
+    "physical_mass_measured": false
+  },
+  "support_structural_sections": [
+    {
+      "part_id": "COPILOT-P120-SUPPORT-FREE-V2-ROOT-01",
+      "type_id": "BS-0e9661fb7ce065e5",
+      "native_single_solid": true,
+      "minimum_true_root_roof_mm": 1.6000000000000014,
+      "section_count": 18,
+      "minimum_effective_section_area_mm2": 52.58856324974265,
+      "actual_brep_sections": [
+        {
+          "section_axis": "x",
+          "plane_x_mm": -32.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979307601,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": -24.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979307608,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": -16.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 240.79994285050205,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": -8.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 139.96568979307364,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": 0.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 139.96567716253844,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": 8.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 139.9656897930757,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": 16.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 139.9656897930816,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": 24.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979308083,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": 32.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568979307279,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": -28.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 75.84000000000114,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": -20.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856324974518,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": -12.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.588563249743714,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": -4.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.588563249745164,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": 4.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856324974265,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": 12.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 252.33706928400966,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": 20.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 252.33706928401398,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": 28.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 252.33706928401392,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "z-transition",
+          "plane_z_mm": 4.800000000000001,
+          "finite_slice_width_mm": 0.05,
+          "effective_solid_area_mm2": 60.83999999999975,
+          "definition": "Actual BRep material common to adjacent thin bands on both sides of the step transition, after aligning their Z bands; not the union of unrelated cross-section areas."
+        }
+      ],
+      "load_path": "Each previously floating seed is now material-continuous through a stepped same-color beam into body-root walls/tubes/posts. Multiple spaced stud/cavity sites and bearing faces resist translation and rotation geometrically.",
+      "material_strength_infill_layer_orientation": "UNMEASURED",
+      "note": "Positive material sections and CAD static balance are not an allowable bending/torsion strength or pullout test."
+    }
+  ],
+  "modules": [
+    {
+      "part_id": "COPILOT-P120-SUPPORT-FREE-V2-ROOT-01",
+      "type_id": "BS-0e9661fb7ce065e5",
+      "step": 374,
+      "physical_bottom_z_mm": 16.0,
+      "receiving_body_stage_z_mm": 20.8,
+      "actual_body_support_ids": [
+        "COPILOT-P120-000286",
+        "COPILOT-P120-000298",
+        "COPILOT-P120-000299",
+        "COPILOT-P120-000314",
+        "COPILOT-P120-000328",
+        "COPILOT-P120-000329"
+      ],
+      "root_contact_sites": [
+        [
+          -5,
+          -21,
+          13
+        ],
+        [
+          -5,
+          -20,
+          13
+        ],
+        [
+          -5,
+          -19,
+          13
+        ],
+        [
+          -5,
+          -18,
+          13
+        ],
+        [
+          -4,
+          -21,
+          13
+        ],
+        [
+          -4,
+          -20,
+          13
+        ],
+        [
+          -4,
+          -19,
+          13
+        ],
+        [
+          -4,
+          -18,
+          13
+        ],
+        [
+          -3,
+          -25,
+          13
+        ],
+        [
+          -3,
+          -24,
+          13
+        ],
+        [
+          -3,
+          -23,
+          13
+        ],
+        [
+          -3,
+          -22,
+          13
+        ],
+        [
+          -3,
+          -21,
+          13
+        ],
+        [
+          -3,
+          -20,
+          13
+        ],
+        [
+          -3,
+          -19,
+          13
+        ],
+        [
+          -3,
+          -18,
+          13
+        ],
+        [
+          -2,
+          -25,
+          13
+        ],
+        [
+          -2,
+          -24,
+          13
+        ],
+        [
+          -2,
+          -23,
+          13
+        ],
+        [
+          -2,
+          -22,
+          13
+        ],
+        [
+          -2,
+          -21,
+          13
+        ],
+        [
+          -2,
+          -20,
+          13
+        ],
+        [
+          -2,
+          -19,
+          13
+        ],
+        [
+          -2,
+          -18,
+          13
+        ],
+        [
+          -1,
+          -21,
+          13
+        ],
+        [
+          -1,
+          -20,
+          13
+        ],
+        [
+          -1,
+          -19,
+          13
+        ],
+        [
+          -1,
+          -18,
+          13
+        ],
+        [
+          0,
+          -21,
+          13
+        ],
+        [
+          0,
+          -20,
+          13
+        ],
+        [
+          0,
+          -19,
+          13
+        ],
+        [
+          0,
+          -18,
+          13
+        ],
+        [
+          1,
+          -21,
+          13
+        ],
+        [
+          1,
+          -20,
+          13
+        ],
+        [
+          1,
+          -19,
+          13
+        ],
+        [
+          1,
+          -18,
+          13
+        ],
+        [
+          2,
+          -21,
+          13
+        ],
+        [
+          2,
+          -20,
+          13
+        ],
+        [
+          2,
+          -19,
+          13
+        ],
+        [
+          2,
+          -18,
+          13
+        ],
+        [
+          3,
+          -21,
+          13
+        ],
+        [
+          3,
+          -20,
+          13
+        ],
+        [
+          3,
+          -19,
+          13
+        ],
+        [
+          3,
+          -18,
+          13
+        ],
+        [
+          4,
+          -21,
+          13
+        ],
+        [
+          4,
+          -20,
+          13
+        ],
+        [
+          4,
+          -19,
+          13
+        ],
+        [
+          4,
+          -18,
+          13
+        ]
+      ]
+    }
+  ],
+  "source_occupied_cells_unchanged": true,
+  "source_visible_colors_unchanged": true,
+  "body_first_all_steps_supported": true,
+  "floating_seed_steps": 0,
+  "blocked_vertical_body_columns": 0,
+  "native_bounds_mm": [
+    [
+      -259.9,
+      -219.9,
+      0.0
+    ],
+    [
+      259.9,
+      219.9,
+      397.0
+    ]
+  ],
+  "sequence_method": "Complete receiving-body-first dependency order with explicit multi-heightmodule support stages. All previously unsupportedtips travel with a continuousroot, not placed before theirconnection.",
+  "insertion_scope": "All actual module/body cell columns and exact native root/support BRep samples at2.1/1/.3/0mm; unchanged monotone interface profiles. Hand access, print deformation, real friction and extraction are not validated.",
+  "physical_validation": "UNKNOWN",
+  "slicer_supports": "UNKNOWN_SEPARATE_FROM_NO_ASSEMBLY_STANDS"
+}

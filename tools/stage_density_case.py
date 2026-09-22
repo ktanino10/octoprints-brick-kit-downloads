@@ -8,7 +8,7 @@ from pathlib import Path, PurePosixPath
 import re
 import subprocess
 import zipfile
-from density_requirements import MONA_ROOT_REFERENCE_ID, artifact_identity, case_identity
+from density_requirements import COPILOT_SUPPORT_REVISION, MONA_ROOT_REFERENCE_ID, artifact_identity, case_identity
 
 from validate_archive import privacy
 
@@ -36,9 +36,10 @@ def root_validation_path(case, summary, model, payload):
     if any(record.get("logical_case_id") != logical or record.get("geometry_revision") != revision
            for record in [summary, model]):
         raise ValueError("Root revision identity differs across its approved source records")
-    support = summary.get("whisker_support")
+    body_support = revision == COPILOT_SUPPORT_REVISION
+    support = summary.get("assembly_support" if body_support else "whisker_support")
     reference = support.get("assembly_validation_ref") if isinstance(support, dict) else None
-    expected = f"validation/{case}-whisker-support.json"
+    expected = f"validation/{case}-{'assembly' if body_support else 'whisker'}-support.json"
     if not isinstance(reference, dict) or reference.get("path") != expected or expected not in payload:
         raise ValueError("The root revision lacks its exact allowlisted public validation file")
     raw = payload[expected]
@@ -131,6 +132,7 @@ def main():
     parser.add_argument("--receipt-sha256", required=True)
     parser.add_argument("--case", help="Select one exact case from a multi-case READY packet")
     parser.add_argument("--reference", action="store_true", help="Accept only the explicitly separate support-free 1x reference")
+    parser.add_argument("--body-support", action="store_true", help="Accept only the separate four-case Copilot body-support revision")
     args = parser.parse_args()
     receipt_bytes = args.receipt.read_bytes()
     if sha(receipt_bytes) != args.receipt_sha256:
@@ -139,13 +141,23 @@ def main():
     if receipt["study_id"] != STUDY or receipt["state"] not in {
         "READY_SINGLE_REPRESENTATIVE_CASE_NOT_ALL15", "READY_SINGLE_CASE_NOT_ALL15",
         "READY_FIXED_INCREMENTAL_CASES_NOT_AUTOMATIC_ALL15",
+        "READY_FIXED_BODY_SUPPORT_REVISION_CASES",
     }:
         raise ValueError("Only an explicitly finalized individual case may be staged")
     case_ids = receipt.get("case_ids", [receipt.get("case_id")])
     case = args.case or (case_ids[0] if len(case_ids) == 1 else None)
     if case is None or case not in case_ids:
         raise ValueError("Select an explicitly authorized case from this READY packet")
-    if args.reference:
+    if args.body_support:
+        if (args.reference or artifact_identity(case)[1] != COPILOT_SUPPORT_REVISION
+                or receipt["state"] != "READY_FIXED_BODY_SUPPORT_REVISION_CASES"
+                or receipt.get("geometry_revision") != COPILOT_SUPPORT_REVISION
+                or receipt.get("catalog_path") != "revisions/body-support-v2/matrix.json"
+                or receipt.get("expected_revision_case_count") != 4):
+            raise ValueError("A body-support packet must match its separate fixed revision scope")
+    elif receipt["state"] == "READY_FIXED_BODY_SUPPORT_REVISION_CASES":
+        raise ValueError("Stage body-support data explicitly, never as the original fifteen-case matrix")
+    elif args.reference:
         if case != MONA_ROOT_REFERENCE_ID or receipt.get("multiplier_cases_newly_ready") != 0:
             raise ValueError("A reference-only packet must not promote any multiplier case")
     else:
@@ -176,10 +188,13 @@ def main():
     model = json.loads(gzip.decompress(payload[model_name]))
     if model["case_id"] != case:
         raise ValueError("Lightweight model differs from the selected actual case")
-    selected_names = {summary_name, model_name, "matrix.json", "references.json", "LICENSE", "ATTRIBUTION.md", "README.txt"}
+    catalog_name = receipt.get("catalog_path", "matrix.json")
+    selected_names = {summary_name, model_name, catalog_name, "LICENSE", "ATTRIBUTION.md", "README.txt"}
     selected_names.update(image["path"] for image in summary["images"])
     selected_names.update(item["path"] for item in {**model["geometry"], **model["assembly_aid_geometry"]}.values())
-    selected_names.update(image["path"] for row in json.loads(payload["references.json"])["rows"] for image in row["images"])
+    if not args.body_support:
+        selected_names.add("references.json")
+        selected_names.update(image["path"] for row in json.loads(payload["references.json"])["rows"] for image in row["images"])
     root_proof = root_validation_path(case, summary, model, payload)
     if root_proof is not None:
         selected_names.add(root_proof)
@@ -238,6 +253,9 @@ def main():
     (stage / "source-review.json").write_text(json.dumps({
         "study_id": STUDY, "case_id": case, "source_commit": commit, "source_light_files": files,
         "kind": "BASELINE_REFERENCE_NOT_MULTIPLIER_CASE" if args.reference else "ACTUAL_MULTIPLIER_CASE",
+        **({"kind": "COPILOT_BODY_SUPPORT_REVISION", "geometry_revision": COPILOT_SUPPORT_REVISION,
+            "source_catalog_path": catalog_name, "public_storage_delta": receipt["public_storage_delta"]}
+           if args.body_support else {}),
         "private_verification_inputs_read": len(proof), "private_inputs_copied": 0,
         "private_raw_artifact_persistence_verified": len(persisted_artifacts),
         "source_release_files": [{key: item[key] for key in ["bytes", "sha256"]} | {"filename": Path(item["path"]).name}

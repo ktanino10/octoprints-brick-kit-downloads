@@ -1,7 +1,7 @@
 import { DENSITY_ID, DENSITY_CHARACTERS, COUNT_PERCENTAGES, densityAssert as check,
   densityDeliveryStatus, validateDensityCatalog } from './density-data.js';
 
-export function printCatalog(catalog, pointer, receipt, evidence) {
+export function printCatalog(catalog, pointer, receipt, evidence, bodyPublication = null) {
   validateDensityCatalog(catalog, pointer);
   check(receipt.study_id === DENSITY_ID && receipt.state === 'READY'
     && receipt.catalog_sha256 === pointer.catalog.sha256
@@ -17,7 +17,7 @@ export function printCatalog(catalog, pointer, receipt, evidence) {
   const verified = new Map(evidence.actual_multiplier_cases.map(item => [item.case_id, item]));
   check(verified.size === 15 && evidence.actual_multiplier_cases.length === 15,
     '15案の実データ検証記録が不足しています。');
-  return DENSITY_CHARACTERS.map(character => ({
+  const groups = DENSITY_CHARACTERS.map(character => ({
     character,
     cases: COUNT_PERCENTAGES.map(percentage => {
       const item = catalog.cases.find(row => row.character === character && row.count_percentage === percentage);
@@ -38,10 +38,27 @@ export function printCatalog(catalog, pointer, receipt, evidence) {
       };
     }),
   }));
+  if (bodyPublication?.published.length) {
+    const copilot = groups.find(group => group.character === 'copilot');
+    copilot.historicalCases = [];
+    for (const entry of bodyPublication.published) {
+      const position = copilot.cases.findIndex(item => item.percentage === entry.count_percentage);
+      check(position >= 0, 'Copilot支台なし改訂の実データ・旧版との関係・公開検証記録が一致しません。');
+      copilot.historicalCases.push({ ...copilot.cases[position], historical: true });
+      copilot.cases[position] = {
+        id: entry.id, character: 'copilot', percentage: entry.count_percentage, partCount: entry.metrics.part_count,
+        typeCount: entry.metrics.unique_types, dimensions: entry.metrics.dimensions_mm, aids: 0,
+        image: entry.images.three_quarter, download: entry.assets.native_cad[0],
+        physicalStatus: 'UNTESTED', slicerStatus: 'NOT_SLICED', supportFreeRevision: true,
+      };
+    }
+  }
+  return groups;
 }
 
 export function selectedPrintCase(group, requested) {
-  const item = requested === null ? group.cases[0] : group.cases.find(row => row.id === requested);
+  const item = requested === null ? group.cases[0]
+    : [...group.cases, ...(group.historicalCases ?? [])].find(row => row.id === requested);
   check(item, '指定されたモデルは印刷用データのカタログにありません。');
   return item;
 }

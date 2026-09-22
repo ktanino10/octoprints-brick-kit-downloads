@@ -11,8 +11,9 @@ import struct
 import subprocess
 
 from mona_study_evidence import verify_manifest_bom, body_height_families
-from density_requirements import MONA_ROOT_REFERENCE_ID, artifact_identity
+from density_requirements import COPILOT_SUPPORT_REVISION, MONA_ROOT_REFERENCE_ID, artifact_identity
 from density_root_evidence import validate_root_evidence
+from density_body_support import validate_body_support_evidence
 from validate_archive import privacy
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -136,6 +137,7 @@ def main():
     full = json.loads(mb)
     verify_portable_identity(full, json.loads((native_root / "cases" / case_id / "manifest.json").read_text()))
     revision = revision_fields(case_id, payload, full, summary)
+    body_support = revision.get("geometry_revision") == COPILOT_SUPPORT_REVISION
     evidence = verify_manifest_bom(mb, bb)
     motion_bytes = proof_bytes(f"/cases/{case_id}/motion.json")
     motion = json.loads(motion_bytes)
@@ -143,7 +145,8 @@ def main():
     audit = json.loads(proof_bytes(f"/cases/{case_id}/saved-scene-audit.json"))
     native = json.loads(proof_bytes(f"/portable/cases/{case_id}/native-complete.json"))
     sequence_valid = (
-        validation.get("result") == "PASS_LIMITED_NATIVE_ROOT_AND_BODY_FIRST_SEQUENCE"
+        validation.get("result") == ("PASS_LIMITED_NATIVE_SUPPORT_AND_BODY_FIRST_SEQUENCE" if body_support
+                                    else "PASS_LIMITED_NATIVE_ROOT_AND_BODY_FIRST_SEQUENCE")
         and validation.get("manifest_sha256") == sha(mb)
         and validation.get("case_id") == case_id
         and validation.get("geometry_revision") == revision["geometry_revision"]
@@ -178,13 +181,13 @@ def main():
         raise ValueError("Public saved-scene animation was not preserved")
     root_record = root_validation = whisker_support = None
     if revision:
-        reference = summary["whisker_support"]["assembly_validation_ref"]
-        if reference["path"] != f"validation/{case_id}-whisker-support.json":
+        reference = summary["assembly_support" if body_support else "whisker_support"]["assembly_validation_ref"]
+        if reference["path"] != f"validation/{case_id}-{'assembly' if body_support else 'whisker'}-support.json":
             raise ValueError("The actual root revision references a different validation record")
         root_bytes = (light / reference["path"]).read_bytes()
         if sha(root_bytes) != reference["sha256"]:
             raise ValueError("The exact public root validation bytes changed")
-        root_record = validate_root_evidence(json.loads(root_bytes), full, native)
+        root_record = (validate_body_support_evidence if body_support else validate_root_evidence)(json.loads(root_bytes), full, native)
         if native.get("temporary_aids") != [] or payload.get("assembly_aids") != []:
             raise ValueError("The root source/native assembly still contains temporary supports")
         if full["motion"]["stages"] != motion["stages"] or full["motion"]["sequence_mode"] != motion.get("sequence_mode"):
@@ -200,7 +203,7 @@ def main():
             "external_aid_count": 0, "assembly_aid_count": 0,
             "status": "DIGITAL_SELF_SUPPORTING_UNTESTED", "physical_validation": "UNKNOWN",
             "geometry_revision": revision["geometry_revision"], "manifest_sha256": sha(mb),
-            "attachment_evidence_sha256": root_record["native_root_contact_evidence_sha256"],
+            "attachment_evidence_sha256": root_record["native_support_contact_evidence_sha256" if body_support else "native_root_contact_evidence_sha256"],
             "sequence_evidence_sha256": sha(root_bytes), "motion_sha256": sha(motion_bytes),
             "geometry_sequence_identity_sha256": root_record["geometry_sequence_identity_sha256"],
             "all_categories_geometry_match": True, "assembly_validation_ref": root_validation,
@@ -241,7 +244,9 @@ def main():
                      "retention_validation": "UNKNOWN", "show_during_preparation": True})
     guide = {"schema_version": 1, "study_id": STUDY, "candidate_id": case_id, "units": "mm", **revision,
              "position_origin": payload["origin"], "frame": full["frame"], "status": payload["status"],
-             "types": types, "palette": payload["palette"], "parts": payload["parts"], "aids": aids,
+             "types": types, "palette": payload["palette"],
+             "parts": [{**part, "source_part_ids": part.get("source_part_ids", [part["id"]])} for part in payload["parts"]]
+                      if body_support else payload["parts"], "aids": aids,
              "geometry_files": geometry_files, "metrics": {"part_count": len(parts), "unique_types": evidence["metrics"]["unique_types"]},
              "animation_contract": {"explosion": "ABSOLUTE_RADIAL_OFFSETS", "assembly": "BOTTOM_UP_SOURCE_ORDER",
                 "disassembly_validation": "NOT_SIMULATED", "physical_assembly": "UNKNOWN", "radial_center_mm": motion["center_mm"],
@@ -252,7 +257,11 @@ def main():
              "source_manifest_sha256": sha(mb), "source_bom_sha256": sha(bb)}
     if "sequence_mode" in motion:
         guide["animation_contract"]["sequence_mode"] = motion["sequence_mode"]
-    if root_record:
+    if body_support:
+        guide.update(support_validation=root_validation, assembly_support=whisker_support,
+                     geometry_sequence_identity_sha256=root_record["geometry_sequence_identity_sha256"],
+                     native_support_contact_evidence_sha256=root_record["native_support_contact_evidence_sha256"])
+    elif root_record:
         guide.update(root_validation=root_validation, whisker_support=whisker_support,
                      geometry_sequence_identity_sha256=root_record["geometry_sequence_identity_sha256"],
                      native_root_contact_evidence_sha256=root_record["native_root_contact_evidence_sha256"])
@@ -301,17 +310,43 @@ def main():
                         "assembly": [{**bundle, "contents": ["bom", "ordered_ids", "instructions"]}],
                         "animations": animations}}
     if whisker_support:
-        entry["whisker_support"] = whisker_support
+        entry["assembly_support" if body_support else "whisker_support"] = whisker_support
     if is_reference:
         entry.pop("count_percentage")
         entry.update(kind="BASELINE_REFERENCE_NOT_MULTIPLIER_CASE", counts_toward_multiplier_cases=False,
                      fixed_count_baseline=summary["metrics"]["baseline_count"],
                      actual_count_difference_from_fixed=summary["metrics"]["count_difference"])
-    raw_matrix = json.loads((light / "matrix.json").read_text())
+    raw_matrix = json.loads((light / stage_review.get("source_catalog_path", "matrix.json")).read_text())
+    if body_support:
+        if (raw_matrix.get("geometry_revision") != COPILOT_SUPPORT_REVISION or raw_matrix.get("expected_case_count") != 4
+                or len(raw_matrix["cases"]) != 4 or summary["metrics"]["baseline_count"] != 17873):
+            raise ValueError("New Copilot revision changed its separate scope or fixed denominator")
+        base_path = ROOT / PREFIX.lstrip("/") / "catalog.json"
+        base_bytes = base_path.read_bytes()
+        catalog = {
+            "schema_version": 1, "study_id": STUDY, "kind": "COPILOT_BODY_SUPPORT_REVISION",
+            "geometry_revision": COPILOT_SUPPORT_REVISION, **FLAGS,
+            "base_catalog_sha256": sha(base_bytes), "baseline_count": 17873, "expected_case_count": 4,
+            "cases": [],
+        }
+        for row in raw_matrix["cases"]:
+            identity = revision_fields(row["case_id"], row)
+            percentage = int(identity["logical_case_id"].rsplit("p", 1)[1])
+            expected = (17873 * percentage + 50) // 100
+            if row["baseline_count"] != 17873 or row["target_count"] != expected:
+                raise ValueError("Body-support source catalog changed a fixed target")
+            catalog["cases"].append(entry if row["case_id"] == case_id else {
+                "id": row["case_id"], **identity, "character": "copilot",
+                "count_percentage": percentage, "state": "INPUT_WAIT", "target_count": expected,
+            })
+        reference_rows = []
+        references = {"rows": []}
+    else:
+        catalog = None
     baselines = {}
     existing_catalog_path = ROOT / PREFIX.lstrip("/") / "catalog.json"
     existing_catalog = json.loads(existing_catalog_path.read_text()) if existing_catalog_path.exists() else None
-    for row in raw_matrix["baseline_rows"]:
+    for row in raw_matrix.get("baseline_rows", []):
         if existing_catalog:
             current = existing_catalog["baselines"][row["character"]]
             if current["manifest_sha256"] != row["source_manifest_sha256"] or current["metrics"]["part_count"] != row["actual_count"]:
@@ -331,11 +366,13 @@ def main():
         baselines[row["character"]] = {"state": "COUNTED", "native_media_status": "PENDING",
             "candidate_id": row["candidate_id"], "pitch_mm": 8, "basis": "INITIAL_FINE_C_ADAPTED_8MM",
             "manifest_sha256": sha(baseline_bytes), "metrics": {**baseline_proof["metrics"], "dimensions_mm": dims}}
-    references = json.loads((light / "references.json").read_text())
+    if not body_support:
+        references = json.loads((light / "references.json").read_text())
     reference_rows = [{"character": row["character"], "candidate_id": row["candidate_id"], "note": row["note_ja"],
                        "images": [checked_image(item, view=item["view"], condition_id=item["condition_id"]) for item in row["images"]]}
                       for row in references["rows"]]
-    catalog = {"schema_version": 1, "study_id": STUDY, "kind": "ACTUAL_PART_COUNT_MATRIX", **FLAGS,
+    if not body_support:
+        catalog = {"schema_version": 1, "study_id": STUDY, "kind": "ACTUAL_PART_COUNT_MATRIX", **FLAGS,
                "baselines": baselines, "appearance_references": reference_rows,
                "cases": [entry if row["case_id"] == case_id else {
                    "id": row["case_id"], **revision_fields(row["case_id"], row),
@@ -346,7 +383,7 @@ def main():
             raise ValueError("The revised reference cannot change the frozen multiplier denominator")
         catalog = copy.deepcopy(existing_catalog)
         catalog.setdefault("reference_revisions", {})["mona"] = entry
-    elif existing_catalog and "reference_revisions" in existing_catalog:
+    elif not body_support and existing_catalog and "reference_revisions" in existing_catalog:
         catalog["reference_revisions"] = copy.deepcopy(existing_catalog["reference_revisions"])
     (output / "catalog.json").write_bytes(encoded(catalog))
     translations = {row["note_ja"]: row["note_en"] for row in references["rows"]}
@@ -360,7 +397,7 @@ def main():
         **evidence, "body_height_families": body_height_families(full), "public_native_assembly": assembly,
         "public_blender_motion_preserved": True, "source_saved_scene_binding": source_motion["instance_projection_sha256"],
         "source_native_reopen": native["moved_reopen"], "private_inputs_copied": 0,
-        **({"root_revision_evidence": root_record} if root_record else {})}))
+        **({("body_support_revision_evidence" if body_support else "root_revision_evidence"): root_record} if root_record else {})}))
     print(json.dumps({"case_id": case_id, "actual_count": len(parts), "native_types": len(payload["geometry"]),
                       "native_aids": len(aids), "derived_guide_bytes": len(guide_bytes), "catalog_state": "PARTIAL"}, indent=2))
 

@@ -21,27 +21,42 @@
       "logical_case_id": "copilot-p120",
       "multiplier": 1.2,
       "target_count": 21448,
-      "previous_case": {"case_id": "copilot-p120", "actual_count": 21388, "assembly_aid_count": 1},
+      "previous_case": {
+        "case_id": "copilot-p120",
+        "actual_count": 21388,
+        "assembly_aid_count": 1
+      },
       "actual_case_id": "copilot-p120-support-free-v2",
       "geometry_revision": "body-support-v2",
-      "source_commit": null,
-      "status": "INPUT_WAIT",
-      "actual_count": null,
-      "external_aid_count": null,
-      "assembly_aid_count": null,
-      "geometry_sequence_evidence": null,
-      "cad_url": null,
-      "cg_url": null,
-      "animation_url": null,
-      "assembly_url": null,
-      "viewer_url": null,
-      "verification": {"public_browser_passed": false, "anonymous_downloads_passed": false}
+      "source_commit": "835e3f483b8bca99fd3023bb0e849ed9dacf2351",
+      "status": "PUBLIC_PENDING",
+      "actual_count": 21382,
+      "external_aid_count": 0,
+      "assembly_aid_count": 0,
+      "geometry_sequence_evidence": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/validation/copilot-p120-support-free-v2-assembly-support.json",
+        "bytes": 33587,
+        "sha256": "6898a037e32f6648261dd2399fedb0fde746d306408db5dce7399cbb9cb4a1a5"
+      },
+      "cad_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p120-support-free-v2/copilot-p120-support-free-v2-cad-scene-animation-public.zip",
+      "cg_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p120-support-free-v2/copilot-p120-support-free-v2-cad-scene-animation-public.zip",
+      "animation_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p120-support-free-v2/copilot-p120-support-free-v2-assembly-motion.mp4",
+      "assembly_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p120-support-free-v2/copilot-p120-support-free-v2-cad-scene-animation-public.zip",
+      "viewer_url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case=copilot-p120-support-free-v2",
+      "verification": {
+        "public_browser_passed": false,
+        "anonymous_downloads_passed": false
+      }
     },
     {
       "logical_case_id": "copilot-p150",
       "multiplier": 1.5,
       "target_count": 26810,
-      "previous_case": {"case_id": "copilot-p150", "actual_count": 26690, "assembly_aid_count": 1},
+      "previous_case": {
+        "case_id": "copilot-p150",
+        "actual_count": 26690,
+        "assembly_aid_count": 1
+      },
       "actual_case_id": "copilot-p150-support-free-v2",
       "geometry_revision": "body-support-v2",
       "source_commit": null,
@@ -55,13 +70,20 @@
       "animation_url": null,
       "assembly_url": null,
       "viewer_url": null,
-      "verification": {"public_browser_passed": false, "anonymous_downloads_passed": false}
+      "verification": {
+        "public_browser_passed": false,
+        "anonymous_downloads_passed": false
+      }
     },
     {
       "logical_case_id": "copilot-p200",
       "multiplier": 2,
       "target_count": 35746,
-      "previous_case": {"case_id": "copilot-p200", "actual_count": 35648, "assembly_aid_count": 1},
+      "previous_case": {
+        "case_id": "copilot-p200",
+        "actual_count": 35648,
+        "assembly_aid_count": 1
+      },
       "actual_case_id": "copilot-p200-support-free-v2",
       "geometry_revision": "body-support-v2",
       "source_commit": null,
@@ -75,13 +97,20 @@
       "animation_url": null,
       "assembly_url": null,
       "viewer_url": null,
-      "verification": {"public_browser_passed": false, "anonymous_downloads_passed": false}
+      "verification": {
+        "public_browser_passed": false,
+        "anonymous_downloads_passed": false
+      }
     },
     {
       "logical_case_id": "copilot-p300",
       "multiplier": 3,
       "target_count": 53619,
-      "previous_case": {"case_id": "copilot-p300", "actual_count": 53350, "assembly_aid_count": 2},
+      "previous_case": {
+        "case_id": "copilot-p300",
+        "actual_count": 53350,
+        "assembly_aid_count": 2
+      },
       "actual_case_id": "copilot-p300-support-free-v2",
       "geometry_revision": "body-support-v2",
       "source_commit": null,
@@ -95,7 +124,10 @@
       "animation_url": null,
       "assembly_url": null,
       "viewer_url": null,
-      "verification": {"public_browser_passed": false, "anonymous_downloads_passed": false}
+      "verification": {
+        "public_browser_passed": false,
+        "anonymous_downloads_passed": false
+      }
     }
   ],
   "preserved_existing_four_x": {
@@ -118,6 +150,19 @@
     "Public complete CAD, CG, animation and assembly data",
     "Actual public browser and anonymous byte/hash verification for each new revision"
   ],
-  "verification": {"public_browser_passed": false, "anonymous_downloads_passed": false},
-  "public_commit": {"record": "archive/deployment.json", "field": "commit"}
+  "verification": {
+    "public_browser_passed": false,
+    "anonymous_downloads_passed": false
+  },
+  "public_commit": {
+    "record": "archive/deployment.json",
+    "field": "commit"
+  },
+  "revision_catalog": {
+    "path": "/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/catalog.json",
+    "bytes": 10730,
+    "sha256": "0a4ed8e594172844891267fb4648fde6ffbd30ec984c50bb5a33c54b9bd3e718"
+  },
+  "base_catalog_sha256": "69b39de67d8d9214b75b631bf1e9f73e09ee16a520314b65a559ad6be2ff864e",
+  "budget_baseline": "/archive/body-support-baseline.json"
 }

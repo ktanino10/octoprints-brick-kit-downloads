@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "study_id": "part-count-matrix-20260921",
+  "kind": "COPILOT_BODY_SUPPORT_REVISION",
+  "geometry_revision": "body-support-v2",
+  "current_revision_unchanged": "r3-8mm-20260920",
+  "baseline_choice": "COMPARISON_ASSUMPTION_NOT_USER_SELECTION",
+  "selection": "NOT_SELECTED",
+  "visual_approval": "PENDING",
+  "physical_fit": "UNKNOWN",
+  "retention_strength": "UNKNOWN",
+  "whole_figure_stability": "UNKNOWN",
+  "slicer_status": "NOT_SLICED",
+  "full_print": "ON_HOLD",
+  "base_catalog_sha256": "69b39de67d8d9214b75b631bf1e9f73e09ee16a520314b65a559ad6be2ff864e",
+  "baseline_count": 17873,
+  "expected_case_count": 4,
+  "cases": [
+    {
+      "id": "copilot-p120-support-free-v2",
+      "logical_case_id": "copilot-p120",
+      "geometry_revision": "body-support-v2",
+      "character": "copilot",
+      "count_percentage": 120,
+      "state": "READY",
+      "metrics": {
+        "part_count": 21382,
+        "unique_types": 156,
+        "one_by_one_exceptions": 30,
+        "layer_count": 83,
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "grip_long_ge_15_8_count": 21352,
+        "dimensions_mm": [
+          519.8,
+          439.8,
+          397
+        ]
+      },
+      "target_count": 21448,
+      "target_difference": -66,
+      "actual_ratio": 1.1963296592625747,
+      "manifest": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/cases/copilot-p120-support-free-v2-guide.json.gz",
+        "bytes": 970693,
+        "sha256": "775f618e7b5c9425366d609f66b1e20f37c4c431f60f360e0adcde895b6f46f4"
+      },
+      "source_manifest_sha256": "81f0c3d009e97c4bd4b03ca1fd1ca86a249518158c715ec69a70b53c18bd82c3",
+      "source_bom_sha256": "e2d8bfe61822440ca248d7125c0f6f49819751fa7ec3b9981b68459dbd3bc79d",
+      "source_commit": "835e3f483b8bca99fd3023bb0e849ed9dacf2351",
+      "images": {
+        "front": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/copilot-p120-support-free-v2-assembled-front.jpg",
+          "bytes": 79160,
+          "sha256": "e21ecfcdf9eb162c69be2d3d7f39d4b88d81789754c81419ed35c7ea038d9994",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_front"
+        },
+        "three_quarter": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/copilot-p120-support-free-v2-assembled-three_quarter.jpg",
+          "bytes": 103645,
+          "sha256": "e39cdc8f052547a0057c64141a25ded6d50c94d2eedd5699d15f2d7f2ed0450c",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_three_quarter"
+        }
+      },
+      "tradeoff": "新actualID copilot-p120-support-free-v2の実21,382部品・156型を確認。固定分母17,873と目標21,448は不変で、差-66は許容内。旧21,388部品の7個を実1個の本体内受けへ置き換えた差-6であり、単に支台を隠した案ではない。 完成正面・斜め・放射分解・登録正面の実CG4枚と、実144frame/12fps/12秒/3章動画のframe1/18/54/73/108/144、根元挿入77/78/79/80を閲覧した。ゴーグル・顔・側面の外観と見える色を保ち、旧床柱は存在しない。 旧seed COPILOT-P120-000313（旧step267、実底面Z16.0mm）は、既存受け000421と既存内部000412/000422/000432/000442/000452へ材料連続で接続した。新BS-0e9661fb7ce065e5は79.8x71.8x9.6mm、真のbodybottomZ16.0を維持し、受け側Z20.8の48接点から支持される。元占有セル・全色・非変更部品の位置を保持し、床への柱や重りを追加しない。 本体受けcourse4を先に組み、その後course5/新step374で根元を入れる。実動画77〜80で受け側と根元の周辺工程を確認した。接続段階Z20.8と物体底面Z16.0を分け、Z値を偽装しない。 実nativeの単一solid・接触面/bearing・非干渉・挿入・全support/insertion先行関係が成立し、元/別展開のFreeCADで全21,382ID/type/color/pose/stepが一致した。 根元自身と後続19部品の全20prefixで、公称一様密度CADの静モーメント余裕は最小18.182694mmとなり、従来の1mm基準を維持した。選定用proxy値ではなく実BRep volume/centroidによる別検査である。 前方下縁の荷重方向に対してX/Y断面と段差の実接続neckを検査した。実18断面の最小面積52.588563mm²、局所Z4.8の接続neck60.84mm²、真の下面屋根1.6mm。測定追加時もnative FCStd/STEP/STL/mesh bytesは不変だった。 保存Blender sceneの156型の実頂点・面、全instanceの材質/位置/step、放射分解からの絶対復帰と本体0→全数を照合した。外部/仮の組立支台は実0個で、frame73にも支台はない。 現物のPLA・インフィルの質量、保持力、曲げ、クリープ、手のアクセス、転倒、スライサーのサポート要否は未検証。外観の採用と印刷は未承認。旧4案、既存4倍/基準、Mona/Ducky、旧画像や型bytesは変更していない。",
+      "assets": {
+        "cg": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p120-support-free-v2/copilot-p120-support-free-v2-cad-scene-animation-public.zip",
+            "filename": "copilot-p120-support-free-v2-cad-scene-animation-public.zip",
+            "bytes": 131103298,
+            "sha256": "2b9f78c83c61e3855f289cf9bc0330fe0ddee1f653b23a301592d10cdf56505c",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "still",
+              "blender"
+            ]
+          }
+        ],
+        "native_cad": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p120-support-free-v2/copilot-p120-support-free-v2-cad-scene-animation-public.zip",
+            "filename": "copilot-p120-support-free-v2-cad-scene-animation-public.zip",
+            "bytes": 131103298,
+            "sha256": "2b9f78c83c61e3855f289cf9bc0330fe0ddee1f653b23a301592d10cdf56505c",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "freecad_assembly",
+              "linked_libraries",
+              "stl",
+              "step"
+            ]
+          }
+        ],
+        "assembly": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p120-support-free-v2/copilot-p120-support-free-v2-cad-scene-animation-public.zip",
+            "filename": "copilot-p120-support-free-v2-cad-scene-animation-public.zip",
+            "bytes": 131103298,
+            "sha256": "2b9f78c83c61e3855f289cf9bc0330fe0ddee1f653b23a301592d10cdf56505c",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "bom",
+              "ordered_ids",
+              "instructions"
+            ]
+          }
+        ],
+        "animations": {
+          "turntable": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p120-support-free-v2/copilot-p120-support-free-v2-assembly-motion.mp4",
+            "bytes": 1809099,
+            "sha256": "e2935417a0a78033db4ef8c65a6b81cb099aa1a470a21a9b8409eb831f6b3eb7",
+            "start_seconds": 0,
+            "end_seconds": 3
+          },
+          "radial_explode": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p120-support-free-v2/copilot-p120-support-free-v2-assembly-motion.mp4",
+            "bytes": 1809099,
+            "sha256": "e2935417a0a78033db4ef8c65a6b81cb099aa1a470a21a9b8409eb831f6b3eb7",
+            "start_seconds": 3,
+            "end_seconds": 6
+          },
+          "bottom_up": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p120-support-free-v2/copilot-p120-support-free-v2-assembly-motion.mp4",
+            "bytes": 1809099,
+            "sha256": "e2935417a0a78033db4ef8c65a6b81cb099aa1a470a21a9b8409eb831f6b3eb7",
+            "start_seconds": 6,
+            "end_seconds": 12
+          }
+        }
+      },
+      "assembly_support": {
+        "external_aid_count": 0,
+        "assembly_aid_count": 0,
+        "status": "DIGITAL_SELF_SUPPORTING_UNTESTED",
+        "physical_validation": "UNKNOWN",
+        "geometry_revision": "body-support-v2",
+        "manifest_sha256": "81f0c3d009e97c4bd4b03ca1fd1ca86a249518158c715ec69a70b53c18bd82c3",
+        "attachment_evidence_sha256": "f44e599d613cd541b0d1839c2ae64382e72c1302c390cda1437127f94c9d367a",
+        "sequence_evidence_sha256": "6898a037e32f6648261dd2399fedb0fde746d306408db5dce7399cbb9cb4a1a5",
+        "motion_sha256": "948224736199fbf4c95e8bbabf0afac3266540baa96f065460411942c2acc491",
+        "geometry_sequence_identity_sha256": "87f4f8c36d56db6b5729996076668e7343648df763b8ce0a456dc11c64597a94",
+        "all_categories_geometry_match": true,
+        "assembly_validation_ref": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/validation/copilot-p120-support-free-v2-assembly-support.json",
+          "bytes": 33587,
+          "sha256": "6898a037e32f6648261dd2399fedb0fde746d306408db5dce7399cbb9cb4a1a5"
+        },
+        "gravity_balance_result": "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS",
+        "physical_mass_measured": false
+      }
+    },
+    {
+      "id": "copilot-p150-support-free-v2",
+      "logical_case_id": "copilot-p150",
+      "geometry_revision": "body-support-v2",
+      "character": "copilot",
+      "count_percentage": 150,
+      "state": "INPUT_WAIT",
+      "target_count": 26810
+    },
+    {
+      "id": "copilot-p200-support-free-v2",
+      "logical_case_id": "copilot-p200",
+      "geometry_revision": "body-support-v2",
+      "character": "copilot",
+      "count_percentage": 200,
+      "state": "INPUT_WAIT",
+      "target_count": 35746
+    },
+    {
+      "id": "copilot-p300-support-free-v2",
+      "logical_case_id": "copilot-p300",
+      "geometry_revision": "body-support-v2",
+      "character": "copilot",
+      "count_percentage": 300,
+      "state": "INPUT_WAIT",
+      "target_count": 53619
+    }
+  ],
+  "display_catalog": {
+    "path": "/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/display/catalog.json",
+    "bytes": 195566,
+    "sha256": "014904eb2b27a2723a784b80854fa9e591827f99d4e0226253057b359f08a8a4"
+  }
+}

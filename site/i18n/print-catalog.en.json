@@ -1,4 +1,11 @@
 {
+  "Copilot支台なし改訂の実データ・旧版との関係・公開検証記録が一致しません。": "The support-free Copilot revision does not match its actual data, immutable prior version or public verification record.",
+  "本体支持改訂の実形状・全支持・断面・組立途中の重心証拠が一致しません。": "The body-support revision's actual geometry, receiver contacts, sections or assembly-prefix balance evidence does not match.",
+  "本体内部の支持段による順序は、証拠に結合した新Copilot改訂だけに限定します。": "Internal receiving-stage order is restricted to the evidence-bound new Copilot revision.",
+  "このCopilot改訂は本体内部の実一体支持構造を使い、外付け支え・組立仮支台は0個です。実CADの接触・断面・全組立途中の公称重心を検査済みですが、現物の保持力・強度は未検証です。実部品の底面Zと受け側の支持高さは区別します。": "This Copilot revision uses a real body-integrated support structure with zero external or temporary assembly aids. Actual CAD contacts, sections and all nominal assembly-prefix balance checks were reviewed; physical retention and strength remain unvalidated. Real part-bottom Z and receiving-body support height remain distinct.",
+  "履歴・支台付き：{0}部品": "Historical supported version: {0} parts",
+  "本体内部の支持構造へ改訂した支台なしの実データです。現物の保持力・強度は未検証です。": "Actual support-free data revised with a body-integrated support structure. Physical retention and strength remain unvalidated.",
+  "支台なし改訂の記録を見る →": "Read the support-free revision record →",
   "Copilotの4案を、支台なしへ改訂する": "Revising four Copilot cases to remove assembly aids",
   "支台のある1.2・1.5・2・3倍案は、実構造を支台なしへ改訂する追加依頼の対象です。既に支台0の4倍案は維持します。現在の支台付きファイルを非表示や名称変更だけで「支台なし」とは扱いません。": "The supported 1.2×, 1.5×, 2× and 3× cases are subject to an additional actual-structure redesign. The existing zero-aid 4× case is preserved. Hiding or renaming supports does not make the current files support-free.",
   "新しいCAD・CG・動画・組立順と実公開確認がそろった改訂だけを公開します。以前の15案の公開完了と、この追加改訂の完了は別です。": "Only revisions with complete new CAD, CG, animation, assembly data and public verification are published. The previous fifteen-case delivery and this additional redesign are separate completion scopes.",

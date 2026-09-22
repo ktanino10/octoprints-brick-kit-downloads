@@ -13,6 +13,7 @@ import {
 import { DensityStudio } from './density-studio.js';
 import { DensityPartPreview } from './density-part-preview.js';
 import { readDensityView, writeDensityView } from './density-view-state.js';
+import { loadBodySupportPublication } from '../../assets/body-support-publication.js';
 
 const $ = (selector) => document.querySelector(selector);
 let catalog = null, displayCatalog = null, candidate = null, manifest = null, index = null, studio = null, preview = null;
@@ -91,7 +92,7 @@ function updateProgress() {
   const active = progress.mode === 'assembly' ? index.ordered[progress.steps] ?? null : null;
   $('#guide-active').textContent = active ? `${active.id} · ${active.type_id} · ${manifest.palette[active.color_id].name}`
     : count === manifest.parts.length ? '全IDを表示中（実物組立の承認ではありません）' : '次に配置する部品を確認してください。';
-  $('#guide-current-course').textContent = !active ? '' : manifest.animation_contract.sequence_mode === 'BODY_FIRST_ROOT_ANCHORED'
+  $('#guide-current-course').textContent = !active ? '' : ['BODY_FIRST_ROOT_ANCHORED', 'BODY_FIRST_INTERNAL_SUPPORT'].includes(manifest.animation_contract.sequence_mode)
     ? `次：支持段 ${active.assembly_course} / 支持高さZ ${number(active.assembly_stage_z_mm)} mm / 実部品底面Z ${number(active.position_mm[2])} mm`
     : `次：配置層 ${active.assembly_course} / 底面Z ${number(active.position_mm[2])} mm`;
   $('#guide-required-aids').textContent = active?.required_aids.length
@@ -281,9 +282,11 @@ async function selectCandidate(id, params = null) {
       '表示中は外付け・組立仮支台が必要な旧Mona設計です。支台を非表示にして新要件達成とは扱いません。ヒゲ支台なしの新版とは別の履歴で、今回の完了件数から除外しています。';
     if (rootProof) {
       $('#guide-whisker-status').hidden = false;
-      $('#guide-whisker-status').replaceChildren(element('p',
-        'この改訂は実一体ヒゲ部品と支持段の順序を使い、外付け支え・組立仮支台は0個です。CAD接触・断面・公称重心を検査済みですが、実物の質量・保持力・強度は未検証です。実部品の底面Zと支持高さは区別して表示します。'),
-      link(next.root_validation, '根元・順序・公称CAD重心の検査記録 ↗'));
+      const body = next.geometry_revision === 'body-support-v2';
+      $('#guide-whisker-status').replaceChildren(element('p', body
+        ? 'このCopilot改訂は本体内部の実一体支持構造を使い、外付け支え・組立仮支台は0個です。実CADの接触・断面・全組立途中の公称重心を検査済みですが、現物の保持力・強度は未検証です。実部品の底面Zと受け側の支持高さは区別します。'
+        : 'この改訂は実一体ヒゲ部品と支持段の順序を使い、外付け支え・組立仮支台は0個です。CAD接触・断面・公称重心を検査済みですが、実物の質量・保持力・強度は未検証です。実部品の底面Zと支持高さは区別して表示します。'),
+      link(body ? next.support_validation : next.root_validation, '根元・順序・公称CAD重心の検査記録 ↗'));
     }
     $('#guide-target-status').textContent = item.kind === 'BASELINE_REFERENCE_NOT_MULTIPLIER_CASE'
       ? `倍率計算の固定基準 ${number(item.fixed_count_baseline, 0)}部品 / 支台なし参照の実構成 ${number(item.metrics.part_count, 0)}部品（差 ${number(item.actual_count_difference_from_fixed, 0)}）。15案の完成件数には含めません。`
@@ -400,6 +403,8 @@ try {
     $('#guide-loading').textContent = '15案の実ネイティブ形状・順序・動画を受領待ちです。表示用の仮モデルは作成していません。';
   } else {
     catalog = validateDensityCatalog(await verifiedJSON(pointer.catalog), pointer);
+    const bodyPublication = await loadBodySupportPublication(readJSON, file => verifiedJSON(file), pointer);
+    if (bodyPublication.catalog) catalog = { ...catalog, support_revisions: bodyPublication.catalog };
     if (catalog.display_catalog) {
       displayCatalog = await verifiedJSON(catalog.display_catalog);
       check(displayCatalog.schema_version === 1 && displayCatalog.study_id === catalog.study_id
@@ -407,6 +412,14 @@ try {
         && displayCatalog.roots_and_non_rectangular_types === 'UNCHANGED_NATIVE'
         && displayCatalog.selected_part_preview === 'UNCHANGED_NATIVE',
       '表示用軽量形状の原形指紋・誤差・変更範囲が不正です。');
+    }
+    if (bodyPublication.catalog?.display_catalog) {
+      const addition = await verifiedJSON(bodyPublication.catalog.display_catalog);
+      check(addition.schema_version === 1 && addition.study_id === catalog.study_id
+        && addition.mode === 'DISPLAY_ONLY_LIGHTWEIGHT' && addition.roots_and_non_rectangular_types === 'UNCHANGED_NATIVE'
+        && addition.selected_part_preview === 'UNCHANGED_NATIVE',
+      '表示用軽量形状の原形指紋・誤差・変更範囲が不正です。');
+      displayCatalog = { ...addition, cases: { ...displayCatalog?.cases, ...addition.cases } };
     }
     $('#guide-case').replaceChildren(...densityGuideEntries(catalog).map((item) => {
       const historical = (catalog.historical_cases ?? []).some((old) => old.id === item.id);

@@ -11,7 +11,22 @@ geometry revisionは `body-support-v2` です。INPUT_WAITでは生成後の実�
 そろわなければREADYを拒否し、元の15案READYや既存0aidの4倍を加算しません。
 新native/geometry/sequence/mediaの受入は固定READY receipt到着後のみです。Mona用の名前や既存Z-order guardを
 無条件で流用・緩和せず、新しい実構造の証拠契約を別に検査します。
-copy前に新規unique paths/bytesと派生データを集計し、総Pages1GB・旧assets保持・Release-only大容量データを維持します。
+`density_body_support.py` は14フィールドのcanonical identity（未統合のlineageは明示契約の`[id]`）、
+元load集合と実step順prefix、実BS接触/挿入/1mm公称重心、X/Y断面を検査します。Z-neckの必要面は
+実body_slicesの非0開始面から導出し、平面1courseでは架空neckを要求・記録しません。旧Mona canonicalは不変です。
+`stage_density_case.py --body-support` → native/scene public-copy照合 → `adapt_density_case.py` →
+`install_body_support_case.py` が新4案だけのoverlayを作り、旧15catalog・旧READY・旧comparisonは書き換えません。
+`build_density_display.mjs --body-support` は別display indexと既存同hashの表示meshを使い、BS型は原形です。
+
+`archive/body-support-baseline.json` に固定baseline commitと旧immutable集合を保存しています。
+旧matrix140,000,000Bを維持したうえで、新body-support増分30,000,000B、総Pages1,000,000,000B未満を検査します。
+`body_support_budget()` は実配信パスごとに集計し、同hash別pathは別々、既存同pathは一度だけ数えます。
+新規/再利用/可変index分類は各owned stageの`public-storage-review.json`に記録し、heavy native/mediaはRelease-onlyです。
+
+`browser_density.py --body-support --case <actualID> --skip-baseline-media` と
+`verify_density_publication.py --body-support` で新ケースだけの実public QAを行い、
+`finalize_body_support_receipt.py` が確認済みcaseだけREADYへ進めます。4件未満なら全体はPARTIALです。
+通常のモデル選択は新caseのpublic QA後にだけ切り替え、明示された旧caseIDの画像・guide・Releaseは履歴として保持します。
 
 ## 初めての人向けカタログと制作履歴
 

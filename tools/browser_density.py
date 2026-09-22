@@ -16,6 +16,7 @@ parser.add_argument("--browser", required=True)
 parser.add_argument("--engine", choices=["chromium", "webkit"], default="chromium")
 parser.add_argument("--expect-input-wait", action="store_true")
 parser.add_argument("--case", action="append", help="A specific actual READY case; repeat for an incremental batch")
+parser.add_argument("--body-support", action="store_true", help="Verify the separately requested Copilot body-support revision only")
 parser.add_argument("--skip-baseline-media", action="store_true",
                     help="For unchanged baseline assets only; the publication verifier independently checks this scope")
 parser.add_argument("--output", type=Path, default=Path(".archive-work/density-browser"))
@@ -23,6 +24,7 @@ args = parser.parse_args()
 base = args.url.rstrip("/") + "/"
 args.output.mkdir(parents=True, exist_ok=True)
 report = {"base": base, "engine": args.engine, "browser_executable": args.browser,
+          "geometry_revision": "body-support-v2" if args.body_support else None,
           "input_wait": args.expect_input_wait, "checks": [], "errors": [], "cases": [],
           "media": [], "baseline_media": [], "reference_guides": [], "reference_media": [], "display_modes": [],
           "comparison_sheets": [], "comparison_csv_rows": None, "aid_evidence": []}
@@ -76,6 +78,12 @@ with sync_playwright() as playwright:
             comparisons = (context.request.get(urljoin(base, catalog["comparison_sheets"]["path"].lstrip("/"))).json()
                            if catalog.get("comparison_sheets") else None)
             available = catalog["cases"] + list(catalog.get("reference_revisions", {}).values())
+            if args.body_support:
+                body_receipt = context.request.get(urljoin(base, "archive/copilot-support-free-revision.json")).json()
+                body_catalog = context.request.get(urljoin(base, body_receipt["revision_catalog"]["path"].lstrip("/"))).json()
+                assert body_catalog["geometry_revision"] == "body-support-v2"
+                assert body_catalog["base_catalog_sha256"] == pointer["catalog"]["sha256"]
+                available = body_catalog["cases"]
             cases = [entry for entry in available if entry["state"] == "READY"
                      and (not args.case or entry["id"] in args.case)]
             assert cases
@@ -169,7 +177,7 @@ with sync_playwright() as playwright:
                     assert all(abs(left - right) < 1e-4 for left, right in zip(initial["camera"], light_view["camera"]))
                     assert light_view["triangles"] < native_view["triangles"]
                     report["display_modes"].append({"case_id": entry["id"], "original": native_view, "lightweight": light_view})
-                root_reference = entry.get("whisker_support", {}).get("assembly_validation_ref")
+                root_reference = entry.get("assembly_support", entry.get("whisker_support", {})).get("assembly_validation_ref")
                 if root_reference:
                     root_proof = context.request.get(urljoin(base, root_reference["path"].lstrip("/"))).json()
                     assert page.evaluate("window.__densityGuide.diagnostics().actual_aids") == 0
@@ -246,7 +254,7 @@ with sync_playwright() as playwright:
                 report["reference_guides" if entry.get("kind") == "BASELINE_REFERENCE_NOT_MULTIPLIER_CASE" else "cases"].append(entry["id"])
             checked("actual cases support radial cycling, all views, empty/part/course/full assembly, selection and shared reload")
             checked("actual Release/Pages videos decode and play every declared chapter through the page CSP")
-            pending = next((entry for entry in catalog["cases"] if entry["state"] == "INPUT_WAIT"), None)
+            pending = next((entry for entry in available if entry["state"] == "INPUT_WAIT"), None)
             if pending:
                 page.locator("#guide-case").select_option(pending["id"])
                 expect(page.locator("#density-canvas")).to_have_attribute("data-ready", "false")
@@ -292,14 +300,15 @@ with sync_playwright() as playwright:
         checked("missing matrix/guide data is an explicit localized error, not an earlier-model fallback")
         if not args.expect_input_wait:
             entry = cases[0]
+            matrix_entry = next(item for item in catalog["cases"] if item["id"] == entry["logical_case_id"]) if args.body_support else entry
             missing_image_context = browser.new_context()
             missing_image = missing_image_context.new_page()
-            image_url = urljoin(base, entry["images"]["front"]["path"].lstrip("/"))
+            image_url = urljoin(base, matrix_entry["images"]["front"]["path"].lstrip("/"))
             missing_image.route(image_url, lambda route: route.fulfill(status=404, body="missing actual image"))
             missing_image.goto(urljoin(base, f'en/density-matrix.html?character={entry["character"]}&view=front'),
                                wait_until="networkidle")
             expect(missing_image.locator("#matrix-error")).to_be_visible()
-            image_selector = "#matrix-reference img" if entry.get("kind") == "BASELINE_REFERENCE_NOT_MULTIPLIER_CASE" else f'.density-card[data-case="{entry["id"]}"] img'
+            image_selector = "#matrix-reference img" if matrix_entry.get("kind") == "BASELINE_REFERENCE_NOT_MULTIPLIER_CASE" else f'.density-card[data-case="{matrix_entry["id"]}"] img'
             failed_images = missing_image.locator(image_selector)
             assert any(image.evaluate("(img) => img.currentSrc") == image_url and image.evaluate("(img) => img.naturalWidth") == 0
                        for image in failed_images.all())
@@ -317,11 +326,11 @@ with sync_playwright() as playwright:
             english(broken_geometry)
             broken_geometry_context.close()
             checked("failed actual images or native meshes show explicit errors without replacement geometry")
-            root_entry = next((entry for entry in cases if entry.get("whisker_support", {}).get("assembly_validation_ref")), None)
+            root_entry = next((entry for entry in cases if entry.get("assembly_support", entry.get("whisker_support", {})).get("assembly_validation_ref")), None)
             if root_entry:
                 proof_context = browser.new_context()
                 proof_page = proof_context.new_page()
-                evidence = root_entry["whisker_support"]["assembly_validation_ref"]
+                evidence = root_entry.get("assembly_support", root_entry.get("whisker_support"))["assembly_validation_ref"]
                 proof_page.route(urljoin(base, evidence["path"].lstrip("/")),
                                  lambda route: route.fulfill(status=503, body="missing actual root evidence"))
                 proof_page.goto(urljoin(base, f'en/density-guide.html?case={root_entry["id"]}'), wait_until="domcontentloaded")

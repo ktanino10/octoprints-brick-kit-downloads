@@ -2,6 +2,7 @@ import {
   DENSITY_ID, densityArtifactIdentity, densityAssert as check,
   isObject, isVector, isHash, isCount, validateDensityFile,
 } from '../../assets/density-data.js';
+import { validateBodySupportBinding } from './body-support-state.js';
 
 const partCollator = new Intl.Collator('en', { numeric: true });
 const finite = (value) => typeof value === 'number' && Number.isFinite(value);
@@ -19,6 +20,11 @@ export function validateRootAnchoredStructure(manifest) {
   check(identity?.revision === 'whisker-root-v2' && manifest.geometry_revision === identity.revision
     && manifest.logical_case_id === identity.logicalId && contract?.sequence_mode === 'BODY_FIRST_ROOT_ANCHORED',
   '支持段による取付順は、検証対象のMona根元改訂だけに限定します。');
+  return validateStageOrderedStructure(manifest);
+}
+
+export function validateStageOrderedStructure(manifest) {
+  const contract = manifest.animation_contract;
   check(Array.isArray(manifest.aids) && manifest.aids.length === 0
     && manifest.parts.every((part) => Array.isArray(part.required_aids) && part.required_aids.length === 0),
   '支台なしの取付順に、外付け・組立仮支台が含まれています。');
@@ -211,7 +217,11 @@ export function validateGuideManifest(manifest, candidateId, rootEvidence = null
     && contract.physical_assembly === 'UNKNOWN' && isVector(contract.radial_center_mm),
   '放射分解・底からの組立の表示契約がありません。');
   const rootAnchored = contract.sequence_mode === 'BODY_FIRST_ROOT_ANCHORED';
-  if (identity.revision || rootAnchored) {
+  const bodySupported = contract.sequence_mode === 'BODY_FIRST_INTERNAL_SUPPORT';
+  if (identity.supportFree || bodySupported) {
+    validateBodySupportBinding(manifest, rootEvidence);
+    validateStageOrderedStructure(manifest);
+  } else if (identity.revision || rootAnchored) {
     check(rootAnchored, '新版の取付順は、実形状に結び付いた工程検査記録を確認するまで表示できません。');
     validateRootEvidenceBinding(manifest, rootEvidence);
     validateRootAnchoredStructure(manifest);
@@ -220,7 +230,7 @@ export function validateGuideManifest(manifest, candidateId, rootEvidence = null
   const ordered = [...manifest.parts].sort((a, b) => a.step - b.step);
   for (let index = 0; index < ordered.length; index++) {
     const part = ordered[index], before = ordered[index - 1];
-    check(part.step === index + 1 && (rootAnchored || !before || (part.position_mm[2] >= before.position_mm[2] - 1e-7
+    check(part.step === index + 1 && (rootAnchored || bodySupported || !before || (part.position_mm[2] >= before.position_mm[2] - 1e-7
       && part.assembly_course >= before.assembly_course)), '組立順が底から順に並んでいません。');
     for (const support of part.support_ids) {
       check(ids.has(support) && ids.get(support).step < part.step, '必要な支持部品より先に組み立てる順序になっています。');

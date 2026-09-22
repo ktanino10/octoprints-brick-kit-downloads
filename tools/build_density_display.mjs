@@ -8,7 +8,13 @@ import { DENSITY_ID, densityGuideEntries } from '../assets/density-data.js';
 const root = new URL('../', import.meta.url);
 const prefix = `artifacts/studies/${DENSITY_ID}/`;
 const sha = value => createHash('sha256').update(value).digest('hex');
-const catalog = JSON.parse(await readFile(new URL(prefix + 'catalog.json', root)));
+const bodySupport = process.argv.includes('--body-support');
+if (process.argv.slice(2).some(value => value !== '--body-support')) throw new Error('Unknown display build option');
+const outputPrefix = bodySupport ? prefix + 'revisions/body-support-v2/' : prefix;
+const catalog = JSON.parse(await readFile(new URL(outputPrefix + 'catalog.json', root)));
+if (bodySupport && (catalog.kind !== 'COPILOT_BODY_SUPPORT_REVISION' || catalog.geometry_revision !== 'body-support-v2')) {
+  throw new Error('Display generation requires the separately accepted body-support catalog');
+}
 const display = { schema_version: 1, study_id: DENSITY_ID, mode: 'DISPLAY_ONLY_LIGHTWEIGHT',
   error_description: 'Approximate simplifier error, not a manufacturing tolerance or a Hausdorff proof.',
   roots_and_non_rectangular_types: 'UNCHANGED_NATIVE', selected_part_preview: 'UNCHANGED_NATIVE',
@@ -63,15 +69,20 @@ for (const entry of densityGuideEntries(catalog)) {
     native_triangles_per_frame: before, display_triangles_per_frame: after, reduction: before / after };
 }
 const displayBytes = Buffer.from(JSON.stringify(display, null, 2) + '\n');
-await writeFile(new URL(prefix + 'display/catalog.json', root), displayBytes);
-catalog.display_catalog = { path: '/' + prefix + 'display/catalog.json', bytes: displayBytes.length, sha256: sha(displayBytes) };
+await mkdir(new URL(outputPrefix + 'display/', root), { recursive: true });
+await writeFile(new URL(outputPrefix + 'display/catalog.json', root), displayBytes);
+catalog.display_catalog = { path: '/' + outputPrefix + 'display/catalog.json', bytes: displayBytes.length, sha256: sha(displayBytes) };
 const catalogBytes = Buffer.from(JSON.stringify(catalog, null, 2) + '\n');
-await writeFile(new URL(prefix + 'catalog.json', root), catalogBytes);
-const pointerPath = new URL('archive/density-study.json', root);
+await writeFile(new URL(outputPrefix + 'catalog.json', root), catalogBytes);
+const pointerPath = new URL(bodySupport ? 'archive/copilot-support-free-revision.json' : 'archive/density-study.json', root);
 const pointer = JSON.parse(await readFile(pointerPath));
-pointer.catalog = { path: '/' + prefix + 'catalog.json', bytes: catalogBytes.length, sha256: sha(catalogBytes) };
+pointer[bodySupport ? 'revision_catalog' : 'catalog'] = {
+  path: '/' + outputPrefix + 'catalog.json', bytes: catalogBytes.length, sha256: sha(catalogBytes),
+};
 await writeFile(pointerPath, JSON.stringify(pointer, null, 2) + '\n');
-execFileSync('python3', ['tools/make_density_receipt.py'], { stdio: 'inherit' });
+if (bodySupport) execFileSync('python3', ['-c',
+  "import sys;sys.path.insert(0,'tools');from validate_density import body_support_budget;print(body_support_budget())"], { stdio: 'inherit' });
+else execFileSync('python3', ['tools/make_density_receipt.py'], { stdio: 'inherit' });
 console.log(JSON.stringify(Object.fromEntries(Object.entries(display.cases).map(([id, item]) => [id, {
   native: item.native_triangles_per_frame, display: item.display_triangles_per_frame, reduction: item.reduction,
 }]))));

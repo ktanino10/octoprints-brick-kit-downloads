@@ -1,7 +1,8 @@
 import { assetURL, localizedURL, numberLocale, setLanguageContext } from './i18n.js';
 import { readJSON } from './site.js';
-import { DENSITY_POINTER, validateDensityPointer } from './density-data.js';
+import { DENSITY_POINTER, densityGuideEntries, validateDensityPointer } from './density-data.js';
 import { printCatalog, selectedPrintCase } from './print-catalog-data.js';
+import { loadBodySupportPublication } from './body-support-publication.js';
 
 const names = { mona: 'Mona', copilot: 'Copilot', ducky: 'Ducky' };
 const number = (value, digits = 1) => new Intl.NumberFormat(numberLocale(), { maximumFractionDigits: digits }).format(value);
@@ -70,8 +71,9 @@ async function openPreview(item) {
   try {
     const module = await import(assetURL('viewer/assets/catalog-preview.js'));
     request.signal.throwIfAborted();
-    const entry = sourceCatalog.cases.find(row => row.id === item.id);
-    const instance = await module.loadCataloguePreview(previewHost, entry, sourceCatalog.display_catalog,
+    const entry = densityGuideEntries(sourceCatalog).find(row => row.id === item.id);
+    const display = entry.geometry_revision === 'body-support-v2' ? sourceCatalog.support_revisions.display_catalog : sourceCatalog.display_catalog;
+    const instance = await module.loadCataloguePreview(previewHost, entry, display,
       { signal: request.signal, onError: fail });
     if (request.signal.aborted || generation !== previewGeneration || !previewDialog.open) {
       instance.dispose();
@@ -136,6 +138,10 @@ function modelCard(group, initial) {
     const option = element('option', `${number(item.partCount, 0)}部品 / 高さ${number(item.dimensions[2])} mm`);
     option.value = item.id; select.append(option);
   }
+  if (initial.historical) {
+    const old = element('option', `履歴・支台付き：${number(initial.partCount, 0)}部品`);
+    old.value = initial.id; select.append(old);
+  }
   const size = element('p', undefined, 'print-model-size');
   const aids = element('p', undefined, 'print-model-aids');
   const revisionNote = element('p', undefined, 'quiet');
@@ -170,13 +176,18 @@ function modelCard(group, initial) {
     imageLink.dataset.caption = `${names[group.character]} · ${number(item.partCount, 0)}部品 · 実物未検証`;
     size.textContent = `完成サイズ（幅×奥行×高さ）${item.dimensions.map(value => number(value)).join(' × ')} mm`;
     aids.textContent = `組立用の仮支台：${number(item.aids, 0)}個（本体部品数とは別）`;
-    revisionNote.hidden = item.character !== 'copilot' || item.aids === 0;
+    revisionNote.hidden = item.character !== 'copilot' || (item.aids === 0 && !item.supportFreeRevision);
     if (!revisionNote.hidden) {
-      revisionNote.replaceChildren(element('span', '現在の配布物は支台付きの案です。支台なしへの設計改訂は別に進めています。'), document.createTextNode(' '), revisionLink);
+      revisionNote.replaceChildren(element('span', item.supportFreeRevision
+        ? '本体内部の支持構造へ改訂した支台なしの実データです。現物の保持力・強度は未検証です。'
+        : '現在の配布物は支台付きの案です。支台なしへの設計改訂は別に進めています。'), document.createTextNode(' '), revisionLink);
     }
     download.href = item.download.url;
     packageInfo.textContent = `ZIP ${number(item.download.bytes / 1000000)} MB · STL・STEP・BOM・CAD・動画を同梱`;
     guide.href = localizedURL(`density-guide.html?case=${item.id}`);
+    compare.href = localizedURL(item.supportFreeRevision ? 'history.html#copilot-support-free'
+      : `density-matrix.html?character=${group.character}`);
+    compare.textContent = item.supportFreeRevision ? '支台なし改訂の記録を見る →' : '5案を大きな画像で比較する →';
   }
   choose(initial);
   select.addEventListener('change', () => {
@@ -199,8 +210,9 @@ try {
     readJSON(pointer.catalog.path, pointer.catalog.sha256),
     readJSON(receipt.verification_record.path, receipt.verification_record.sha256),
   ]);
-  const groups = printCatalog(catalog, pointer, receipt, evidence);
-  sourceCatalog = catalog;
+  const bodyPublication = await loadBodySupportPublication(readJSON, file => readJSON(file.path, file.sha256), pointer);
+  const groups = printCatalog(catalog, pointer, receipt, evidence, bodyPublication);
+  sourceCatalog = bodyPublication.catalog ? { ...catalog, support_revisions: bodyPublication.catalog } : catalog;
   const params = new URL(location.href).searchParams;
   const cards = groups.map(group => modelCard(group, selectedPrintCase(group, params.get(group.character))));
   document.querySelector('#model-cards').replaceChildren(...cards);

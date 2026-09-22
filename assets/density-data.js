@@ -12,6 +12,7 @@ export const DENSITY_FLAGS = Object.freeze({
 export const MONA_WHISKER_REQUIREMENT = 'NO_EXTERNAL_OR_ASSEMBLY_AIDS';
 export const MONA_GEOMETRY_REVISION = 'whisker-root-v2';
 export const MONA_ROOT_REFERENCE_ID = 'mona-fine8-base-root-v2';
+export const COPILOT_SUPPORT_REVISION = 'body-support-v2';
 export const isObject = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
 export const isHash = (value) => typeof value === 'string' && /^[0-9a-f]{64}$/.test(value);
 export const isCount = (value) => Number.isSafeInteger(value) && value >= 0;
@@ -31,13 +32,16 @@ export function allDensityCases(catalog) {
 }
 
 export function densityArtifactIdentity(id) {
+  const support = /^(copilot-p(120|150|200|300))-support-free-v2$/.exec(String(id));
+  if (support) return { logicalId: support[1], character: 'copilot', percentage: Number(support[2]),
+    revision: COPILOT_SUPPORT_REVISION, supportFree: true };
   return id === MONA_ROOT_REFERENCE_ID
     ? { logicalId: 'mona-fine8-base', character: 'mona', percentage: 100, revision: MONA_GEOMETRY_REVISION, reference: true }
     : densityCaseIdentity(id);
 }
 
 export function densityGuideEntries(catalog) {
-  return [...allDensityCases(catalog), ...Object.values(catalog.reference_revisions ?? {})];
+  return [...allDensityCases(catalog), ...Object.values(catalog.reference_revisions ?? {}), ...(catalog.support_revisions?.cases ?? [])];
 }
 
 export function densityPath(value) {
@@ -104,7 +108,7 @@ export function validateDensityPointer(pointer) {
   return pointer;
 }
 
-function validateMetrics(metrics) {
+export function validateMetrics(metrics) {
   densityAssert(isObject(metrics) && isCount(metrics.part_count) && metrics.part_count > 0
     && isCount(metrics.unique_types) && metrics.unique_types > 0 && metrics.unique_types <= metrics.part_count
     && isCount(metrics.one_by_one_exceptions) && metrics.one_by_one_exceptions <= metrics.part_count
@@ -114,7 +118,7 @@ function validateMetrics(metrics) {
   '実部品数・型数・小部品・寸法の記録が不正です。');
 }
 
-function validateAssetGroups(assets) {
+export function validateAssetGroups(assets) {
   densityAssert(isObject(assets), '全案にCG・ネイティブCAD・組立データの公開配布が必要です。');
   for (const key of ['cg', 'native_cad', 'assembly']) {
     densityAssert(Array.isArray(assets[key]) && assets[key].length > 0,

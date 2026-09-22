@@ -4,10 +4,12 @@ import { densityAssert as check } from '../../assets/density-data.js';
 
 export async function loadDensityModel(entry, displayCatalog, { signal, detail } = {}) {
   const data = await verifiedJSON(entry.manifest, signal);
-  const rootProof = data.root_validation ? await verifiedJSON(data.root_validation, signal) : null;
+  const proofFile = data.support_validation ?? data.root_validation;
+  const rootProof = proofFile ? await verifiedJSON(proofFile, signal) : null;
   const manifest = validateGuideManifest(data, entry.id, rootProof);
-  if (rootProof) check(entry.whisker_support?.sequence_evidence_sha256 === manifest.root_validation.sha256
-    && entry.whisker_support?.manifest_sha256 === manifest.source_manifest_sha256,
+  const support = data.support_validation ? entry.assembly_support : entry.whisker_support;
+  if (rootProof) check(support?.sequence_evidence_sha256 === proofFile.sha256
+    && support?.manifest_sha256 === manifest.source_manifest_sha256,
   '根元改訂の証拠が実ID・形状・組立順・支台数と一致しません。');
   check(manifest.metrics.part_count === entry.metrics.part_count && manifest.metrics.unique_types === entry.metrics.unique_types,
     'カタログと実3Dの部品数・使用型が一致しません。');

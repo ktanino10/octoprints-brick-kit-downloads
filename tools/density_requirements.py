@@ -17,13 +17,16 @@ def case_identity(identifier):
 
 
 def artifact_identity(identifier):
+    support = re.fullmatch(r"(copilot-p(?:120|150|200|300))-support-free-v2", str(identifier))
+    if support:
+        return support[1], COPILOT_SUPPORT_REVISION
     if identifier == MONA_ROOT_REFERENCE_ID:
         return "mona-fine8-base", MONA_GEOMETRY_REVISION
     return case_identity(identifier)
 
 
 def logical_case_id(case):
-    logical, revision = case_identity(case["id"])
+    logical, revision = artifact_identity(case["id"])
     if case.get("logical_case_id", logical) != logical:
         raise ValueError("Actual geometry belongs to a different logical comparison slot")
     if revision and (case.get("logical_case_id") != logical or case.get("geometry_revision") != revision):
