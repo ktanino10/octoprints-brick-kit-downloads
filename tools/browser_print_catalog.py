@@ -6,7 +6,7 @@ from pathlib import Path
 from urllib.parse import urljoin, urlsplit
 
 from playwright.sync_api import expect, sync_playwright
-from browser_study_helpers import english, uncropped_image
+from browser_study_helpers import english, uncropped_image, published_print_cases
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--url", required=True)
@@ -34,6 +34,7 @@ with sync_playwright() as playwright:
     try:
         pointer = context.request.get(urljoin(base, "archive/density-study.json")).json()
         catalogue = context.request.get(urljoin(base, pointer["catalog"]["path"].lstrip("/"))).json()
+        actual_cases = published_print_cases(context.request, base, catalogue)
         for locale in ["ja", "en"]:
             for route in ["", "models.html"]:
                 requested.clear()
@@ -59,7 +60,7 @@ with sync_playwright() as playwright:
                     english(page)
                 assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1")
                 page.screenshot(path=str(args.output / f'{locale}-{route or "home"}.png'), full_page=True)
-            for entry in catalogue["cases"]:
+            for entry in actual_cases:
                 card = page.locator(f'.print-model[data-character="{entry["character"]}"]')
                 card.locator("select").select_option(entry["id"])
                 expect(card).to_have_attribute("data-case", entry["id"])
@@ -142,7 +143,7 @@ with sync_playwright() as playwright:
             failures.close()
         missing_image = browser.new_context(viewport={"width": 1440, "height": 1000})
         try:
-            first = next(item for item in catalogue["cases"] if item["character"] == "mona" and item["count_percentage"] == 120)
+            first = next(item for item in actual_cases if item["character"] == "mona" and item["count_percentage"] == 120)
             address = urljoin(base, first["images"]["three_quarter"]["path"].lstrip("/"))
             missing_image.route(address, lambda route: route.fulfill(status=404, body=""))
             broken = missing_image.new_page()

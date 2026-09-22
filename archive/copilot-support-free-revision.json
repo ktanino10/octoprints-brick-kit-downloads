@@ -6,7 +6,7 @@
   "scope": "FOUR_NEW_ACTUAL_SUPPORT_FREE_COPILOT_REVISIONS_NOT_THE_PREVIOUS_FIFTEEN_CASE_DELIVERY",
   "baseline_count": 17873,
   "expected_case_count": 4,
-  "published_verified_case_count": 0,
+  "published_verified_case_count": 1,
   "requirements": {
     "external_aid_count": 0,
     "assembly_aid_count": 0,
@@ -29,7 +29,7 @@
       "actual_case_id": "copilot-p120-support-free-v2",
       "geometry_revision": "body-support-v2",
       "source_commit": "835e3f483b8bca99fd3023bb0e849ed9dacf2351",
-      "status": "PUBLIC_PENDING",
+      "status": "READY",
       "actual_count": 21382,
       "external_aid_count": 0,
       "assembly_aid_count": 0,
@@ -44,9 +44,11 @@
       "assembly_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p120-support-free-v2/copilot-p120-support-free-v2-cad-scene-animation-public.zip",
       "viewer_url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case=copilot-p120-support-free-v2",
       "verification": {
-        "public_browser_passed": false,
-        "anonymous_downloads_passed": false
-      }
+        "public_browser_passed": true,
+        "anonymous_downloads_passed": true
+      },
+      "verified_content_commit": "1e46bdc2b4d1d9db949ce34d0d909845bf109dca",
+      "verified_pages_run": "35688995113"
     },
     {
       "logical_case_id": "copilot-p150",

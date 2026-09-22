@@ -8,7 +8,7 @@ from pathlib import Path
 from urllib.parse import urljoin
 
 from playwright.sync_api import expect, sync_playwright
-from browser_study_helpers import english
+from browser_study_helpers import english, published_print_cases
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--url", required=True)
@@ -53,18 +53,19 @@ with sync_playwright() as playwright:
     try:
         pointer = context.request.get(urljoin(base, "archive/density-study.json")).json()
         catalog = context.request.get(urljoin(base, pointer["catalog"]["path"].lstrip("/"))).json()
+        actual_cases = published_print_cases(context.request, base, catalog)
         receipt = context.request.get(urljoin(base, "archive/block-budget-matrix.json")).json()
         evidence = context.request.get(urljoin(base, receipt["verification_record"]["path"].lstrip("/"))).json()
         counts = {item["case_id"]: item["temporary_aids_excluded_from_figure_count"]
                   for item in evidence["actual_multiplier_cases"]}
-        for case in catalog["cases"]:
-            case["expected_aids"] = counts[case["id"]]
+        for case in actual_cases:
+            case["expected_aids"] = 0 if case.get("geometry_revision") == "body-support-v2" else counts[case["id"]]
         page.goto(urljoin(base, "en/"), wait_until="networkidle")
         expect(page.locator(".print-model")).to_have_count(3)
         assert not any("catalog-preview.js" in url or url.endswith(".mesh.gz") or "-guide.json.gz" in url for url in requested)
         expect(page.locator("#catalog-preview-canvas canvas")).to_have_count(0)
         checked("landing stays image-only; 3D renderer and geometry are loaded only on request")
-        for case in catalog["cases"]:
+        for case in actual_cases:
             page.locator(f'#model-{case["character"]}').select_option(case["id"])
             page.locator(f'[data-open-rotation="{case["character"]}"]').click()
             value = ready(page, case)
@@ -109,7 +110,7 @@ with sync_playwright() as playwright:
             small = mobile.new_page()
             small.on("pageerror", lambda error: report["errors"].append(str(error)))
             small.goto(urljoin(base, "ja/"), wait_until="networkidle")
-            largest = max(catalog["cases"], key=lambda case: case["metrics"]["part_count"])
+            largest = max(actual_cases, key=lambda case: case["metrics"]["part_count"])
             small.locator(f'#model-{largest["character"]}').select_option(largest["id"])
             small.locator(f'[data-open-rotation="{largest["character"]}"]').tap()
             value = ready(small, largest)
@@ -125,7 +126,7 @@ with sync_playwright() as playwright:
             mobile.close()
         checked("largest actual model works at 390px with touch-configured rotation, tap controls and no horizontal overflow")
 
-        first = catalog["cases"][0]
+        first = actual_cases[0]
         manifest_url = urljoin(base, first["manifest"]["path"].lstrip("/"))
         pending = browser.new_context()
         held = []
@@ -141,7 +142,7 @@ with sync_playwright() as playwright:
             held[0].abort()
             pending.unroute(manifest_url)
             waiting.locator('[data-open-rotation="ducky"]').click()
-            ducky = next(case for case in catalog["cases"] if case["character"] == "ducky")
+            ducky = next(case for case in actual_cases if case["character"] == "ducky")
             ready(waiting, ducky)
             expect(waiting.locator("#catalog-preview-error")).to_be_hidden()
             waiting.locator("#catalog-preview-close").click()

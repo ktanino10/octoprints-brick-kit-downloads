@@ -117,8 +117,8 @@
       "group": "design",
       "revision": "r2-20260919",
       "format": "JSON",
-      "bytes": 6502,
-      "sha256": "ed3c10d36a9bfec21e9fceaf3a1dcbb70d9d4b601506cec3061fe38ef50a912f",
+      "bytes": 6611,
+      "sha256": "ed786b79cb006bccd510e91e2ba226600cae568095afac9f6db4ebfbadc8c4a6",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/copilot-support-free-revision.json",
       "status": "ARCHIVE_RECORD"
     },
@@ -31955,7 +31955,7 @@
   ],
   "totals": {
     "files": 2514,
-    "bytes": 956540859,
+    "bytes": 956540968,
     "groups": {
       "site": 73,
       "design": 76,
