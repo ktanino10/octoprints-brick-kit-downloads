@@ -3,12 +3,16 @@
 [日本語](ATTRIBUTION.md) / [English](ATTRIBUTION.en.md) · [アーカイブの案内](README.md)
 
 この公開アーカイブは、Mona・Copilot・Duckyを独立したブロックで組み立てる非商用の検討から作成した
-Phase1候補9種・r2選定3種の履歴と、新しい8 mm共通ブロック版を区別して管理します。
+多部品15案の比較と、Phase1・r2・r3の試行錯誤の履歴を区別して管理します。
 モデル、画像・動画、ネイティブCAD、配置・部品表、独自接合部・試験片の実際の公開範囲は、
 [版別公開記録](archive/revisions.json) と [全ファイル目録](archive/inventory.json) に示します。
 従来のルート直下の4 mm・11部品の2ファイルは変更せず保存しています。
 
-関連する原型作品・参照元：
+## 原型プロジェクト：martinwoodward/octoprints
+
+[martinwoodward/octoprints](https://github.com/martinwoodward/octoprints) は、
+GitHubに関連するマスコットの3Dプリントモデルを公開するプロジェクトです。
+本アーカイブのキャラクター形状・配色の出発点として参照しています。原型をこのプロジェクトの独自作品とは扱いません。
 
 - 著作者：`martinwoodward/octoprints` の制作者・貢献者
 - リポジトリ：https://github.com/martinwoodward/octoprints
@@ -23,6 +27,10 @@ Monaのひげ用仮支持台、Blender/FreeCAD/STEP/STL/3MF、画像・動画・
 r2では部品のまとめ方と接合部を変更しました。包絡・色を基準とし、継ぎ目や画素の同一性は主張しません。
 公開コピーのローカルメタデータ整理・相対パス化、静的配信への移植も追加変更です。
 市販ブリックの互換品として設計したものではありません。
+
+後続の多部品スタディでは、より大きい完成寸法、半高部品、根元・本体の組立構造、
+実部品数の5倍率比較、放射分解・底からの組立説明、表示用LODと360度プレビューを追加しています。
+このアーカイブ独自の部品分割・CAD・組立順・表示機能を、参照元の実装や検証結果として紹介するものではありません。
 
 2026-09-20のr3設計改訂は、8 mmピッチ、本体9.6 mm・プレート3.2 mm、
 開いた下面の壁・筒・リブを使う共通ブロック方式への再設計です。
@@ -53,5 +61,23 @@ GitHubまたはLEGOによる推奨・協賛・認証・互換性を主張しま�
 YouTubeの「3Dプリント後の超音波洗浄」は提供者のリンクとして示し、印刷工程・嵌合合格の証拠とはしません。
 
 Three.js等の第三者ソフトウェアは
-[THIRD_PARTY_LICENSES.txt](viewer/THIRD_PARTY_LICENSES.txt) の個別ライセンスに従います。
+[THIRD_PARTY_LICENSES.txt](viewer/assets/THIRD_PARTY_LICENSES.txt) の個別ライセンスに従います。
 元の著作権表示とライセンス本文を維持しています。
+
+## 使用した公開ソフトウェア
+
+| プロジェクト | 紹介と使用範囲 | ライセンス |
+|---|---|---|
+| [mrdoob/three.js](https://github.com/mrdoob/three.js) | ブラウザー向け3Dライブラリー。実メッシュの表示、回転・ズーム、共有形状のインスタンス描画に使用しています。 | MIT |
+| [zeux/meshoptimizer](https://github.com/zeux/meshoptimizer) | メッシュの最適化ライブラリー。通常ブロックの表示用LODを事前生成する用途だけに使用し、元のCAD・STL・Blenderを置き換えません。 | MIT |
+
+これらはモデル原型の配布元ではなく、表示・処理に使うソフトウェアです。
+モデル派生物のCC BY-NC 4.0と、ソフトウェアのMIT等のライセンスを混同しないでください。
+ビルド・検証用ツールを含む固定バージョンの著作権表示は上記の第三者ライセンス資料に収録しています。
+
+## 操作の参考にした公開ページ
+
+[公開組立ガイド](https://ktanino10.github.io/copilot-brick-display/assembly-guide/B.html?commit=35ebc1123477) と
+[公開組立ビュー](https://ktanino10.github.io/copilot-brick-display/assembly.html?commit=35ebc1123477) は、
+部品から配置先をたどる案内や、工程を見ながら組み立てる操作の参考にしました。
+この参照はUIの見せ方についてであり、それらのコードやモデルを転載したものではありません。

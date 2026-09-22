@@ -11,8 +11,19 @@
 
 初めての方はトップの**印刷用データカタログ**から、3体それぞれの5案を部品数・完成サイズ・支台の有無で選べます。
 各カードの**「360°回転で見る」**から、選んだ実モデルをドラッグ／スワイプで回転・拡大できます。3Dは開いたときだけ読み込みます。
+Copilotの支台付き1.2・1.5・2・3倍案は、別の[支台なし改訂](archive/copilot-support-free-revision.json)を進めています。
+現在の旧支台付きファイルを「支台なし」とは表示せず、元の15案の公開READYを新4案の完了には使いません。既存の支台0個の4倍案は変更しません。
 Mona 519 / Copilot 695 / Ducky 413個の少部品r3案は通常の候補から外し、過去の試作・失敗・改良は別ページへ分けています。
 「STL公開」は印刷確認済みを意味しません。全案が未スライス・実物未検証で、全数印刷は保留です。以下は版別の保存記録です。
+
+### 原型・参考プロジェクト
+
+原型は **[martinwoodward/octoprints](https://github.com/martinwoodward/octoprints)**。GitHubに関連するマスコットの3Dプリントモデルを公開するプロジェクトで、
+固定リビジョン `981a85f0bec9d1a9c280fd5719d0d797852229c4` を参照しています。
+本アーカイブではブロックへの分割・統合、ネイティブCAD、BOM、組立順・比較・360度表示を追加しました。
+モデル派生物は **CC BY-NC 4.0**。表示には [Three.js](https://github.com/mrdoob/three.js)、表示用LODの事前処理には
+[meshoptimizer](https://github.com/zeux/meshoptimizer) を使用しています。
+[参照元の紹介・改変・UI参考・権利区分](ATTRIBUTION.md) と [第三者ソフトウェアのライセンス](viewer/assets/THIRD_PARTY_LICENSES.txt) を参照してください。
 
 [以前のr3組立候補の記録](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/assembly.html) は、
 同じ版の実マニフェストからID・型・色・底面位置・回転・順序を表示します。実物組立の承認ではありません。

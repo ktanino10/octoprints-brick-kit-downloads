@@ -11,6 +11,13 @@
 </div>
 <div class="note"><strong>このページは制作履歴です。</strong>以前の画像や試験データを、現在のモデルの印刷合格と読み替えないでください。実物未検証・全数印刷保留の条件は変わりません。</div>
 <div class="prose">
+  <section id="references"><h2>原型・参考プロジェクト</h2>
+    <p><a href="https://github.com/martinwoodward/octoprints"><strong>martinwoodward/octoprints</strong></a> — GitHubに関連するマスコットの3Dプリントモデルを公開するプロジェクトです。キャラクターの原型・配色の出発点として、固定リビジョンを参照しています。</p>
+    <p>本アーカイブで追加したのは、独立ブロックへの分割・統合、ネイティブCAD、BOM、組立順、比較画像、表示用LODと360度表示です。原型を独自作品としたり、これらの変更を参照元の実装として紹介したりしません。</p>
+    <ul><li><a href="https://github.com/mrdoob/three.js">mrdoob/three.js</a> — ブラウザーの実3D表示・回転・ズームに使うライブラリーです。MITライセンス。</li><li><a href="https://github.com/zeux/meshoptimizer">zeux/meshoptimizer</a> — 表示用メッシュの軽量化を事前処理するライブラリーです。元のCADは変更しません。MITライセンス。</li></ul>
+    <p>これらのソフトウェアは表示・処理のための道具で、実物の嵌合・保持力・強度を保証するものではありません。モデル派生物のCC BY-NC 4.0と、ソフトウェアのライセンスを分けています。</p>
+    <p><a href="ATTRIBUTION.md">固定リビジョン・改変内容・公開UIの参照元・権利の詳細</a> / <a href="viewer/assets/THIRD_PARTY_LICENSES.txt">第三者ソフトウェアの著作権表示とライセンス</a></p>
+  </section>
   <h2>出発点：自分で組み立てる、約180 mm。</h2><p>Mona・Copilot・Duckyを、3Dプリントした独立したブリックで一つずつ組み立てることが元の目標です。Bambu Lab P1SとPLAを想定し、0.2 mm・0.4 mmノズルを所有。市販LEGOとの互換性は必須条件ではありません。</p><p>原型は <a href="https://github.com/martinwoodward/octoprints/tree/981a85f0bec9d1a9c280fd5719d0d797852229c4">martinwoodward/octoprints の固定リビジョン</a>です。縮尺の統一、格子化、色の離散化、個別部品の分割・統合、独自接合部、表示・試験データを追加しました。<a href="ATTRIBUTION.md">帰属と改変の詳細</a>を維持してください。</p>
   <h2>Phase1：3キャラクター × 3段階の細かさ</h2><p>Chunkyは8 mmピッチ・4.8 mm層、Balancedは6 mm・3.6 mm層、Fineは4 mm・2.4 mm層。次は当時の個別部品数です。</p>
   <div class="table-scroll"><table><thead><tr><th>キャラクター</th><th>A / Chunky</th><th>B / Balanced</th><th>C / Fine</th></tr></thead><tbody><tr><th>Mona</th><td>2,325</td><td>4,838</td><td>13,837</td></tr><tr><th>Copilot</th><td>3,135</td><td>6,576</td><td>19,588</td></tr><tr><th>Ducky</th><td>1,767</td><td>3,646</td><td>10,662</td></tr><tr><th>設計上の高さ</th><td>183.95 mm</td><td>181.13 mm</td><td>180.71 mm</td></tr></tbody></table></div>
@@ -28,6 +35,7 @@
   <h2 id="low-count-r3">少部品のr3案は、通常の候補から外す</h2><p>Mona 519個・Copilot 695個・Ducky 413個の少部品デザインは、印刷用モデル一覧には掲載しません。8 mm規格自体を廃止する意味ではなく、部品数の多い15案を通常の選択肢にしています。過去のCAD・画像・配布物は履歴として保持します。</p>
   <h2>部品数を増やしても、見た目は単純には良くならない</h2><p>初期Fine Cの配色や輪郭を参照し、Monaの大きい案、半高部品、根元一体化へ進みました。平たくなった口や色境界のずれも記録し、部品数を美観の合格点にはしていません。</p><p><a href="shape-options.html">以前のプレート・輪郭・斜面案</a> / <a href="mona-likeness.html">最初の大きいMona案</a> / <a href="mona-refinement.html">その後の顔・輪郭の改良</a> / <a href="density-matrix.html">最終15案と実寸比</a></p>
   <h2>組立用の支えと、現物検証は別に残す</h2><p>新しいMona 5案は外付け・組立仮支台なしの実根元へ改訂しています。ただし、公称CADの接触・重心検査は実PLAの強度や保持力の実測ではありません。DuckyやCopilotでは案ごとの支台を別に記録し、未検証の撤去を案内しません。</p>
+  <section id="copilot-support-free"><h2>Copilotの4案を、支台なしへ改訂する</h2><p>支台のある1.2・1.5・2・3倍案は、実構造を支台なしへ改訂する追加依頼の対象です。既に支台0の4倍案は維持します。現在の支台付きファイルを非表示や名称変更だけで「支台なし」とは扱いません。</p><p>新しいCAD・CG・動画・組立順と実公開確認がそろった改訂だけを公開します。以前の15案の公開完了と、この追加改訂の完了は別です。<a href="archive/copilot-support-free-revision.json">支台なし改訂の公開状況</a>で区別します。</p></section>
   <h2 id="print-options">印刷方法についての追加希望</h2>
   <p>2026-09-20、「別々に印刷して後で組み立てる方法」と「最初からすべて印刷する方法」の2方式が希望されました。後者が組立不要の一体造形なのか、別部品を同じプレートへ並べる一括印刷なのかは、意図を確認中です。</p>
   <p>今回の設計改訂は分割して後で組み立てる方式が対象です。色別に別部品を並べた形状3MFがあっても、一体造形の希望確認や印刷準備済みデータの意味ではありません。組立ビューの完成形は一体印刷ファイルではなく、全数印刷は引き続き保留します。</p>

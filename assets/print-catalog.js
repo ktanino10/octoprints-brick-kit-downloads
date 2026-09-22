@@ -138,6 +138,9 @@ function modelCard(group, initial) {
   }
   const size = element('p', undefined, 'print-model-size');
   const aids = element('p', undefined, 'print-model-aids');
+  const revisionNote = element('p', undefined, 'quiet');
+  const revisionLink = element('a', '支台なし改訂の公開状況 →', 'text-link');
+  revisionLink.href = localizedURL('history.html#copilot-support-free');
   const download = element('a', 'STL入りモデル一式を取得 ↓', 'button primary');
   download.dataset.printDownload = '';
   const packageInfo = element('p', undefined, 'quiet');
@@ -150,7 +153,7 @@ function modelCard(group, initial) {
   rotate.dataset.openRotation = group.character;
   rotate.setAttribute('aria-label', `${names[group.character]}を360度回転して見る`);
   rotate.addEventListener('click', () => openPreview(choice));
-  body.append(label, select, rotate, size, aids, download, packageInfo, guide, compare);
+  body.append(label, select, rotate, size, aids, revisionNote, download, packageInfo, guide, compare);
   card.append(heading, imageLink, body);
   function choose(item) {
     choice = item;
@@ -167,6 +170,10 @@ function modelCard(group, initial) {
     imageLink.dataset.caption = `${names[group.character]} · ${number(item.partCount, 0)}部品 · 実物未検証`;
     size.textContent = `完成サイズ（幅×奥行×高さ）${item.dimensions.map(value => number(value)).join(' × ')} mm`;
     aids.textContent = `組立用の仮支台：${number(item.aids, 0)}個（本体部品数とは別）`;
+    revisionNote.hidden = item.character !== 'copilot' || item.aids === 0;
+    if (!revisionNote.hidden) {
+      revisionNote.replaceChildren(element('span', '現在の配布物は支台付きの案です。支台なしへの設計改訂は別に進めています。'), document.createTextNode(' '), revisionLink);
+    }
     download.href = item.download.url;
     packageInfo.textContent = `ZIP ${number(item.download.bytes / 1000000)} MB · STL・STEP・BOM・CAD・動画を同梱`;
     guide.href = localizedURL(`density-guide.html?case=${item.id}`);

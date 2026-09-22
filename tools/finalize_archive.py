@@ -198,7 +198,8 @@ def make_inventory():
     names += ["README.en.md", "ATTRIBUTION.en.md", "models.html", "assembly.html", "shape-options.html",
               "mona-likeness.html", "mona-refinement.html", "density-matrix.html", "density-guide.html",
               "archive/revisions.json", "archive/shape-study.json", "archive/mona-study.json",
-              "archive/mona-refinement.json", "archive/density-study.json", "archive/block-budget-matrix.json"]
+              "archive/mona-refinement.json", "archive/density-study.json", "archive/block-budget-matrix.json",
+              "archive/copilot-support-free-revision.json"]
     names += all_files("archive/releases") + all_files("archive/sources") + all_files("archive/portability")
     names += ["p4-trial-11-parts.3mf", "p4-trial-11-parts.stl", "index.html", "downloads.html",
               "feedback.html", "history.html", "LICENSE", "ATTRIBUTION.md", "README.md",

@@ -11,8 +11,21 @@
 
 Start with the homepage **print-data catalogue**: choose one of five variants for each character by part count, assembled size and assembly aids.
 Use **“Rotate in 360°”** on a card to drag/swipe and zoom the selected actual model. Its 3D data loads only when opened.
+Copilot's supported 1.2×/1.5×/2×/3× designs have a separate [support-free redesign request](archive/copilot-support-free-revision.json).
+Current supported files are not relabeled support-free, and the earlier fifteen-case READY receipt does not complete the four new revisions.
+The existing zero-aid 4× design remains unchanged.
 The low-part r3 designs (Mona 519 / Copilot 695 / Ducky 413) are excluded from normal choices; trials, failures and refinements have a separate history page.
 “STL available” does not mean physically validated printing. All cases remain unsliced and untested, with full-kit printing on hold. The sections below preserve revision-specific records.
+
+### Upstream and reference projects
+
+The original models come from **[martinwoodward/octoprints](https://github.com/martinwoodward/octoprints)**,
+a project publishing GitHub-themed 3D-printable mascots. We reference pinned revision `981a85f0bec9d1a9c280fd5719d0d797852229c4`.
+This archive adds brick decomposition/grouping, native CAD, BOMs, assembly sequences, comparisons and 360-degree viewing.
+Model derivatives follow **CC BY-NC 4.0**. [Three.js](https://github.com/mrdoob/three.js) supplies browser rendering,
+and [meshoptimizer](https://github.com/zeux/meshoptimizer) is used for offline display LOD.
+See [project introductions, modifications, interface references and rights](ATTRIBUTION.en.md)
+and [third-party software licenses](viewer/assets/THIRD_PARTY_LICENSES.txt).
 
 The [historical r3 proposed-sequence record](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/assembly.html)
 reads IDs, types, colors, base positions, rotations and steps from the same revision's actual manifest. It is not physical assembly approval.

@@ -41,6 +41,7 @@ with sync_playwright() as playwright:
                 assert response.status == 200
                 expect(page.locator(".print-model")).to_have_count(3)
                 expect(page.locator("#print-catalog-error")).to_be_hidden()
+                expect(page.locator('footer a[href="https://github.com/martinwoodward/octoprints"]')).to_have_count(1)
                 expect(page.locator(".candidate-card,#current-specimens,#selected-videos,#block-size")).to_have_count(0)
                 expect(page.locator("#print-status")).to_contain_text(
                     "not a ready-to-print list" if locale == "en" else "そのまま印刷OK")
@@ -92,6 +93,8 @@ with sync_playwright() as playwright:
             page.goto(urljoin(base, f"{locale}/history.html"), wait_until="networkidle")
             expect(page.locator("#phase1-gallery")).not_to_have_attribute("open", "")
             expect(page.locator("#low-count-r3")).to_be_visible()
+            for repository in ["martinwoodward/octoprints", "mrdoob/three.js", "zeux/meshoptimizer"]:
+                expect(page.locator(f'#references a[href="https://github.com/{repository}"]')).to_have_count(1)
             expect(page.locator("#candidate-matrix .candidate-card")).to_have_count(9)
             page.locator("#phase1-gallery > summary").click()
             for image in page.locator("#candidate-matrix img").all():
@@ -103,6 +106,15 @@ with sync_playwright() as playwright:
             expect(page.locator("#legacy-r3-packages")).not_to_have_attribute("open", "")
             expect(page.locator("#matrix-download-title")).to_be_visible()
         passed("trial/error, original candidates and rejected low-part design records are on the separate history path")
+        separate = context.request.get(urljoin(base, "archive/copilot-support-free-revision.json")).json()
+        assert separate["request_id"] == "copilot-support-free-20260922"
+        if separate["published_verified_case_count"] < 4:
+            assert separate["state"] == "PARTIAL" and not any(separate["verification"].values())
+        assert separate["previous_completed_delivery"]["satisfies_this_new_request"] is False
+        licenses = context.request.get(urljoin(base, "viewer/assets/THIRD_PARTY_LICENSES.txt"))
+        assert licenses.status == 200 and "meshoptimizer 1.2.0 (MIT)" in licenses.text()
+        assert "three 0.180.0 (MIT)" in licenses.text()
+        passed("visible upstream/software credits and the separate support-free request do not overstate printing or revision completion")
 
         page.set_viewport_size({"width": 390, "height": 844})
         page.goto(urljoin(base, "en/"), wait_until="networkidle")

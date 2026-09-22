@@ -2,6 +2,17 @@
 
 通常のPages更新は、保存済みの成果物とビューアだけで行えます。制作元やCADソフトウェアは不要です。
 
+## Copilot支台なし追加改訂の受領記録
+
+`archive/copilot-support-free-revision.json` は、既存15案の完了記録とは別の4案だけを追跡します。
+固定分母17,873と1.2/1.5/2/3倍のtargetを維持し、actual IDsは `copilot-p...-support-free-v2`、
+geometry revisionは `body-support-v2` です。INPUT_WAITでは生成後の実数/実支台数/source commit/proof/配布URLをnullにし、
+要求値の0と未検証の実数を区別します。`validate_copilot_support_receipt` は全4案の新identity/証拠/URL/実public QAが
+そろわなければREADYを拒否し、元の15案READYや既存0aidの4倍を加算しません。
+新native/geometry/sequence/mediaの受入は固定READY receipt到着後のみです。Mona用の名前や既存Z-order guardを
+無条件で流用・緩和せず、新しい実構造の証拠契約を別に検査します。
+copy前に新規unique paths/bytesと派生データを集計し、総Pages1GB・旧assets保持・Release-only大容量データを維持します。
+
 ## 初めての人向けカタログと制作履歴
 
 トップと既存の `models.html` は同じ `site/templates/index.html` を使います。

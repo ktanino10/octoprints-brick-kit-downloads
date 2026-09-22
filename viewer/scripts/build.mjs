@@ -28,7 +28,7 @@ await build({
   external: ['../../assets/i18n.js'], legalComments: 'eof', logLevel: 'info',
 });
 
-const dependencies = ['three', 'esbuild', 'playwright', 'playwright-core', '@babel/parser'];
+const dependencies = ['three', 'meshoptimizer', 'esbuild', 'playwright', 'playwright-core', '@babel/parser'];
 const licenses = await Promise.all(dependencies.map(async (name) => {
   const base = path.join(root, 'node_modules', name);
   const pkg = JSON.parse(await readFile(path.join(base, 'package.json'), 'utf8'));
@@ -45,7 +45,7 @@ const licenses = await Promise.all(dependencies.map(async (name) => {
   return `${'='.repeat(72)}\n${name} ${pkg.version} (${pkg.license})\n${'='.repeat(72)}\n\n${license.trim()}\n`;
 }));
 const notices = `Octoprints Phase 1 viewer — third-party notices\n\n`
-  + `The served JavaScript includes Three.js. esbuild and Playwright are build/test tools only.\n`
+  + `The served JavaScript includes Three.js. meshoptimizer is used for offline display-mesh processing; esbuild, Babel and Playwright are build/test tools only.\n`
   + `No external fonts, CDNs, telemetry, or remote runtime dependencies are used.\n\n`
   + licenses.join('\n');
 await Promise.all(['THIRD_PARTY_LICENSES.txt', 'assets/THIRD_PARTY_LICENSES.txt'].map(
