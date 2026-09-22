@@ -14,6 +14,7 @@ parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--url", required=True)
 parser.add_argument("--browser", required=True)
 parser.add_argument("--output", type=Path, required=True)
+parser.add_argument("--case", action="append", help="Only exercise selected current actual cases in an incremental batch")
 args = parser.parse_args()
 base = args.url.rstrip("/") + "/"
 args.output.mkdir(parents=True, exist_ok=True)
@@ -54,6 +55,8 @@ with sync_playwright() as playwright:
         pointer = context.request.get(urljoin(base, "archive/density-study.json")).json()
         catalog = context.request.get(urljoin(base, pointer["catalog"]["path"].lstrip("/"))).json()
         actual_cases = published_print_cases(context.request, base, catalog)
+        selected_cases = [case for case in actual_cases if not args.case or case["id"] in args.case]
+        assert selected_cases and (not args.case or {case["id"] for case in selected_cases} == set(args.case))
         receipt = context.request.get(urljoin(base, "archive/block-budget-matrix.json")).json()
         evidence = context.request.get(urljoin(base, receipt["verification_record"]["path"].lstrip("/"))).json()
         counts = {item["case_id"]: item["temporary_aids_excluded_from_figure_count"]
@@ -65,7 +68,7 @@ with sync_playwright() as playwright:
         assert not any("catalog-preview.js" in url or url.endswith(".mesh.gz") or "-guide.json.gz" in url for url in requested)
         expect(page.locator("#catalog-preview-canvas canvas")).to_have_count(0)
         checked("landing stays image-only; 3D renderer and geometry are loaded only on request")
-        for case in actual_cases:
+        for case in selected_cases:
             page.locator(f'#model-{case["character"]}').select_option(case["id"])
             page.locator(f'[data-open-rotation="{case["character"]}"]').click()
             value = ready(page, case)
@@ -103,14 +106,14 @@ with sync_playwright() as playwright:
             expect(page.locator("#catalog-preview-canvas canvas")).to_have_count(0)
             assert page.evaluate("window.__catalogPreview.diagnostics().ready") is False
             report["cases"].append(case["id"])
-        checked("all fifteen actual models rotate and zoom; three characters complete a 360-degree roundtrip without pose drift")
+        checked(f"{len(selected_cases)} selected actual models rotate and zoom with exact poses; selected 1.2x views complete a 360-degree roundtrip")
 
         mobile = browser.new_context(viewport={"width": 390, "height": 844}, is_mobile=True, has_touch=True, reduced_motion="reduce")
         try:
             small = mobile.new_page()
             small.on("pageerror", lambda error: report["errors"].append(str(error)))
             small.goto(urljoin(base, "ja/"), wait_until="networkidle")
-            largest = max(actual_cases, key=lambda case: case["metrics"]["part_count"])
+            largest = max(selected_cases, key=lambda case: case["metrics"]["part_count"])
             small.locator(f'#model-{largest["character"]}').select_option(largest["id"])
             small.locator(f'[data-open-rotation="{largest["character"]}"]').tap()
             value = ready(small, largest)
@@ -126,7 +129,7 @@ with sync_playwright() as playwright:
             mobile.close()
         checked("largest actual model works at 390px with touch-configured rotation, tap controls and no horizontal overflow")
 
-        first = actual_cases[0]
+        first = selected_cases[0]
         manifest_url = urljoin(base, first["manifest"]["path"].lstrip("/"))
         pending = browser.new_context()
         held = []
@@ -135,15 +138,16 @@ with sync_playwright() as playwright:
             waiting = pending.new_page()
             waiting.goto(urljoin(base, "en/"), wait_until="networkidle")
             with waiting.expect_request(manifest_url):
-                waiting.locator('[data-open-rotation="mona"]').click()
+                waiting.locator(f'[data-open-rotation="{first["character"]}"]').click()
             expect(waiting.locator("#catalog-preview-loading")).to_be_visible()
             waiting.locator("#catalog-preview-close").click()
             assert len(held) == 1
             held[0].abort()
             pending.unroute(manifest_url)
-            waiting.locator('[data-open-rotation="ducky"]').click()
-            ducky = next(case for case in actual_cases if case["character"] == "ducky")
-            ready(waiting, ducky)
+            alternate_character = "ducky" if first["character"] != "ducky" else "mona"
+            waiting.locator(f'[data-open-rotation="{alternate_character}"]').click()
+            alternate = next(case for case in actual_cases if case["character"] == alternate_character)
+            ready(waiting, alternate)
             expect(waiting.locator("#catalog-preview-error")).to_be_hidden()
             waiting.locator("#catalog-preview-close").click()
         finally:
@@ -157,7 +161,7 @@ with sync_playwright() as playwright:
             failed.route(broken_url, lambda route: route.fulfill(status=404, body=""))
             broken = failed.new_page()
             broken.goto(urljoin(base, "en/"), wait_until="networkidle")
-            broken.locator('[data-open-rotation="mona"]').click()
+            broken.locator(f'[data-open-rotation="{first["character"]}"]').click()
             expect(broken.locator("#catalog-preview-error")).to_be_visible(timeout=180000)
             expect(broken.locator("#catalog-preview-canvas")).to_have_attribute("data-model-ready", "false")
             expect(broken.locator("#catalog-preview-canvas canvas")).to_have_count(0)

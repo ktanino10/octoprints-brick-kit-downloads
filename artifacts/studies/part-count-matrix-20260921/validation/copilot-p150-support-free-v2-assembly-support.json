@@ -1,0 +1,3375 @@
+{
+  "schema_version": 1,
+  "case_id": "copilot-p150-support-free-v2",
+  "logical_case_id": "copilot-p150",
+  "geometry_revision": "body-support-v2",
+  "status": "DIGITAL_SELF_SUPPORTING_UNTESTED",
+  "external_aid_count": 0,
+  "assembly_aid_count": 0,
+  "actual_parts": 26673,
+  "actual_types": 162,
+  "geometry_sequence_identity_sha256": "8f68e0fade85afa1f02d4efb98e7789300121f02fa7dafd266c17554de30e1a8",
+  "native_support_contact_evidence_sha256": "d099f240bb2ef691151faf1b4662646e396c11cae161992a1074802b96e38187",
+  "actual_native_support_checks": {
+    "result": "PASS_ACTUAL_BODY_SUPPORT_BREP_CONTACTS",
+    "modules": [
+      {
+        "part_id": "COPILOT-P150-SUPPORT-FREE-V2-ROOT-01",
+        "native_support_type": "BS-389940f5bda66897",
+        "actual_single_solid": true,
+        "anchor_role": "BODY_INTEGRATED_SUPPORT_ROOT",
+        "body_supports": [
+          {
+            "lower_part_id": "COPILOT-P150-000228",
+            "native_bearing_mm2": 21.849231145451576,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000231",
+            "native_bearing_mm2": 60.85411554947364,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000233",
+            "native_bearing_mm2": 39.608037835572475,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000236",
+            "native_bearing_mm2": 39.608037835572475,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000237",
+            "native_bearing_mm2": 39.608037835572325,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000241",
+            "native_bearing_mm2": 39.608037835572475,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000242",
+            "native_bearing_mm2": 39.608037835572325,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000247",
+            "native_bearing_mm2": 39.60803783557249,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000248",
+            "native_bearing_mm2": 39.608037835572325,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000254",
+            "native_bearing_mm2": 39.608037835572475,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000255",
+            "native_bearing_mm2": 39.608037835572325,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000257",
+            "native_bearing_mm2": 98.33899995349572,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000258",
+            "native_bearing_mm2": 79.75154446803316,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000259",
+            "native_bearing_mm2": 79.75154446803317,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000260",
+            "native_bearing_mm2": 79.75154446803317,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000261",
+            "native_bearing_mm2": 96.43704004393459,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000262",
+            "native_bearing_mm2": 39.60803783557233,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000264",
+            "native_bearing_mm2": 191.8974190139558,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000265",
+            "native_bearing_mm2": 161.00192824724223,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000266",
+            "native_bearing_mm2": 161.00192824724215,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000267",
+            "native_bearing_mm2": 161.00192824724226,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000268",
+            "native_bearing_mm2": 161.00192824724226,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000269",
+            "native_bearing_mm2": 39.60803783557233,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000271",
+            "native_bearing_mm2": 98.33899995349563,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000272",
+            "native_bearing_mm2": 79.75154446803369,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000273",
+            "native_bearing_mm2": 79.75154446803367,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000274",
+            "native_bearing_mm2": 79.75154446803367,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000275",
+            "native_bearing_mm2": 96.43704004393499,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000276",
+            "native_bearing_mm2": 39.608037835572325,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000282",
+            "native_bearing_mm2": 39.60803783557249,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000283",
+            "native_bearing_mm2": 39.60803783557233,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000288",
+            "native_bearing_mm2": 39.60803783557249,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000289",
+            "native_bearing_mm2": 39.608037835572325,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000294",
+            "native_bearing_mm2": 39.60803783557249,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000295",
+            "native_bearing_mm2": 39.608037835572325,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000299",
+            "native_bearing_mm2": 39.60803783557249,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000300",
+            "native_bearing_mm2": 37.396104492914056,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000302",
+            "native_bearing_mm2": 60.85411554947348,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          },
+          {
+            "lower_part_id": "COPILOT-P150-000303",
+            "native_bearing_mm2": 60.854115549473455,
+            "nominal_volume_overlap_mm3": 0.0,
+            "insertion_offsets_mm": [
+              2.1,
+              1,
+              0.3,
+              0
+            ]
+          }
+        ],
+        "root_stud_count": 136,
+        "root_xy_span_mm": [
+          216,
+          168
+        ],
+        "body_mm": [
+          223.8,
+          231.8,
+          4.8
+        ],
+        "module_position_mm": [
+          4,
+          -112,
+          16.0
+        ],
+        "module_insertion_step": 322,
+        "gravity_balance": {
+          "result": "PASS_NOMINAL_CAD_STATIC_MOMENT_BOUND",
+          "minimum_support_margin_mm": 35.66923115856175,
+          "required_margin_mm": 1.0,
+          "actual_bearing_hull_xy_mm": [
+            [
+              -107.9,
+              -11.9
+            ],
+            [
+              -11.9,
+              -171.7
+            ],
+            [
+              19.9,
+              -171.7
+            ],
+            [
+              115.9,
+              -11.9
+            ],
+            [
+              115.9,
+              3.9
+            ],
+            [
+              -107.9,
+              3.9
+            ]
+          ],
+          "root_cad_volume_mm3": 39458.887868267055,
+          "root_cad_centroid_mm": [
+            3.9999999999999556,
+            -93.17637950352528,
+            19.19870755803321
+          ],
+          "downstream_payloads": [
+            {
+              "part_id": "COPILOT-P150-000474",
+              "cad_volume_mm3": 1319.2118461355558,
+              "cad_centroid_mm": [
+                -20.000000000000007,
+                -216.0,
+                24.114722471133653
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000485",
+              "cad_volume_mm3": 1319.2118461355565,
+              "cad_centroid_mm": [
+                -4.000000000000008,
+                -216.0,
+                24.114722471133653
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000496",
+              "cad_volume_mm3": 1319.2118461355565,
+              "cad_centroid_mm": [
+                11.999999999999993,
+                -216.0,
+                24.114722471133653
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000507",
+              "cad_volume_mm3": 1319.2118461355565,
+              "cad_centroid_mm": [
+                27.999999999999993,
+                -216.0,
+                24.114722471133653
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000486",
+              "cad_volume_mm3": 1750.8788530072168,
+              "cad_centroid_mm": [
+                -4.000000000000001,
+                -188.0,
+                24.129567234800195
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000497",
+              "cad_volume_mm3": 1750.8788530072172,
+              "cad_centroid_mm": [
+                12.0,
+                -188.0,
+                24.129567234800195
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000487",
+              "cad_volume_mm3": 1750.8788530072175,
+              "cad_centroid_mm": [
+                -4.000000000000001,
+                -156.0,
+                24.129567234800195
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000498",
+              "cad_volume_mm3": 1750.878853007218,
+              "cad_centroid_mm": [
+                12.0,
+                -156.0,
+                24.12956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000488",
+              "cad_volume_mm3": 1750.8788530072175,
+              "cad_centroid_mm": [
+                -4.000000000000001,
+                -124.0,
+                24.12956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000499",
+              "cad_volume_mm3": 1750.878853007218,
+              "cad_centroid_mm": [
+                12.0,
+                -124.0,
+                24.12956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000489",
+              "cad_volume_mm3": 1750.8788530072168,
+              "cad_centroid_mm": [
+                -4.000000000000001,
+                -92.0,
+                24.129567234800195
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000500",
+              "cad_volume_mm3": 1750.8788530072163,
+              "cad_centroid_mm": [
+                12.0,
+                -92.0,
+                24.129567234800195
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000490",
+              "cad_volume_mm3": 1750.8788530072168,
+              "cad_centroid_mm": [
+                -4.0,
+                -60.0,
+                24.129567234800195
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000501",
+              "cad_volume_mm3": 1750.8788530072168,
+              "cad_centroid_mm": [
+                12.0,
+                -60.0,
+                24.129567234800195
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000491",
+              "cad_volume_mm3": 1750.8788530072163,
+              "cad_centroid_mm": [
+                -4.000000000000001,
+                -28.0,
+                24.129567234800195
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000502",
+              "cad_volume_mm3": 1750.8788530072159,
+              "cad_centroid_mm": [
+                12.0,
+                -28.0,
+                24.1295672348002
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000431",
+              "cad_volume_mm3": 1750.878853007217,
+              "cad_centroid_mm": [
+                -100.0,
+                3.9999999999999996,
+                24.129567234800195
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000438",
+              "cad_volume_mm3": 1750.878853007217,
+              "cad_centroid_mm": [
+                -84.0,
+                3.9999999999999996,
+                24.129567234800195
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000448",
+              "cad_volume_mm3": 1750.8788530072175,
+              "cad_centroid_mm": [
+                -68.0,
+                3.9999999999999996,
+                24.129567234800195
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000458",
+              "cad_volume_mm3": 1750.878853007215,
+              "cad_centroid_mm": [
+                -52.0,
+                3.9999999999999996,
+                24.1295672348002
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000469",
+              "cad_volume_mm3": 1750.8788530072156,
+              "cad_centroid_mm": [
+                -36.0,
+                3.9999999999999996,
+                24.1295672348002
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000481",
+              "cad_volume_mm3": 1750.8788530072159,
+              "cad_centroid_mm": [
+                -20.0,
+                3.999999999999999,
+                24.1295672348002
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000492",
+              "cad_volume_mm3": 1750.8788530072163,
+              "cad_centroid_mm": [
+                -4.000000000000001,
+                3.999999999999999,
+                24.129567234800195
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000503",
+              "cad_volume_mm3": 1750.8788530072163,
+              "cad_centroid_mm": [
+                12.0,
+                3.9999999999999996,
+                24.129567234800195
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000514",
+              "cad_volume_mm3": 1750.8788530072159,
+              "cad_centroid_mm": [
+                28.0,
+                3.9999999999999996,
+                24.1295672348002
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000525",
+              "cad_volume_mm3": 1750.878853007215,
+              "cad_centroid_mm": [
+                44.0,
+                3.9999999999999996,
+                24.1295672348002
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000535",
+              "cad_volume_mm3": 1750.878853007217,
+              "cad_centroid_mm": [
+                60.0,
+                3.9999999999999996,
+                24.129567234800195
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000545",
+              "cad_volume_mm3": 1750.8788530072165,
+              "cad_centroid_mm": [
+                76.0,
+                3.999999999999999,
+                24.1295672348002
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000554",
+              "cad_volume_mm3": 1750.8788530072163,
+              "cad_centroid_mm": [
+                92.0,
+                3.9999999999999987,
+                24.1295672348002
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000561",
+              "cad_volume_mm3": 1750.878853007217,
+              "cad_centroid_mm": [
+                108.0,
+                3.999999999999999,
+                24.129567234800195
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000657",
+              "cad_volume_mm3": 1748.985519673881,
+              "cad_centroid_mm": [
+                -3.999999999999999,
+                -220.0,
+                28.92804771429022
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000679",
+              "cad_volume_mm3": 1748.9855196738813,
+              "cad_centroid_mm": [
+                28.0,
+                -220.0,
+                28.92804771429022
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000658",
+              "cad_volume_mm3": 1750.8788530072159,
+              "cad_centroid_mm": [
+                -4.000000000000001,
+                -204.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000680",
+              "cad_volume_mm3": 1750.8788530072156,
+              "cad_centroid_mm": [
+                28.0,
+                -204.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000659",
+              "cad_volume_mm3": 1750.8788530072159,
+              "cad_centroid_mm": [
+                -4.000000000000001,
+                -188.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000681",
+              "cad_volume_mm3": 1750.8788530072156,
+              "cad_centroid_mm": [
+                28.0,
+                -188.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000660",
+              "cad_volume_mm3": 1750.878853007217,
+              "cad_centroid_mm": [
+                -4.0,
+                -172.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000682",
+              "cad_volume_mm3": 1750.8788530072168,
+              "cad_centroid_mm": [
+                28.0,
+                -172.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000661",
+              "cad_volume_mm3": 1750.8788530072159,
+              "cad_centroid_mm": [
+                -4.000000000000001,
+                -156.0,
+                28.929567234800192
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000683",
+              "cad_volume_mm3": 1750.878853007216,
+              "cad_centroid_mm": [
+                28.0,
+                -156.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000662",
+              "cad_volume_mm3": 1750.878853007216,
+              "cad_centroid_mm": [
+                -4.000000000000001,
+                -140.0,
+                28.929567234800192
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000684",
+              "cad_volume_mm3": 1750.8788530072163,
+              "cad_centroid_mm": [
+                28.0,
+                -140.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000663",
+              "cad_volume_mm3": 1750.8788530072154,
+              "cad_centroid_mm": [
+                -4.000000000000001,
+                -124.0,
+                28.929567234800192
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000685",
+              "cad_volume_mm3": 1750.8788530072152,
+              "cad_centroid_mm": [
+                28.0,
+                -124.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000664",
+              "cad_volume_mm3": 1750.8788530072156,
+              "cad_centroid_mm": [
+                -4.0,
+                -108.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000686",
+              "cad_volume_mm3": 1750.8788530072156,
+              "cad_centroid_mm": [
+                28.0,
+                -108.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000665",
+              "cad_volume_mm3": 1750.8788530072152,
+              "cad_centroid_mm": [
+                -4.0,
+                -92.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000687",
+              "cad_volume_mm3": 1750.8788530072156,
+              "cad_centroid_mm": [
+                28.0,
+                -92.0,
+                28.929567234800185
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000666",
+              "cad_volume_mm3": 1750.8788530072159,
+              "cad_centroid_mm": [
+                -4.0,
+                -76.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000688",
+              "cad_volume_mm3": 1750.8788530072156,
+              "cad_centroid_mm": [
+                28.0,
+                -76.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000667",
+              "cad_volume_mm3": 1750.8788530072159,
+              "cad_centroid_mm": [
+                -4.0,
+                -60.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000689",
+              "cad_volume_mm3": 1750.878853007216,
+              "cad_centroid_mm": [
+                28.0,
+                -60.0,
+                28.929567234800185
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000668",
+              "cad_volume_mm3": 1750.8788530072152,
+              "cad_centroid_mm": [
+                -4.0,
+                -44.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000690",
+              "cad_volume_mm3": 1750.878853007215,
+              "cad_centroid_mm": [
+                28.0,
+                -44.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000669",
+              "cad_volume_mm3": 1750.8788530072159,
+              "cad_centroid_mm": [
+                -4.0,
+                -28.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000691",
+              "cad_volume_mm3": 1750.8788530072156,
+              "cad_centroid_mm": [
+                28.0,
+                -28.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000670",
+              "cad_volume_mm3": 1750.8788530072156,
+              "cad_centroid_mm": [
+                -4.000000000000001,
+                -12.0,
+                28.92956723480019
+              ]
+            },
+            {
+              "part_id": "COPILOT-P150-000692",
+              "cad_volume_mm3": 1750.8788530072159,
+              "cad_centroid_mm": [
+                28.0,
+                -12.0,
+                28.92956723480019
+              ]
+            }
+          ],
+          "assembly_prefix_checks": [
+            {
+              "after_step": 322,
+              "added_part_id": "COPILOT-P150-SUPPORT-FREE-V2-ROOT-01",
+              "minimum_support_margin_mm": 54.06684986003347
+            },
+            {
+              "after_step": 400,
+              "added_part_id": "COPILOT-P150-000474",
+              "minimum_support_margin_mm": 51.35508103507288
+            },
+            {
+              "after_step": 401,
+              "added_part_id": "COPILOT-P150-000485",
+              "minimum_support_margin_mm": 49.243071062610156
+            },
+            {
+              "after_step": 402,
+              "added_part_id": "COPILOT-P150-000496",
+              "minimum_support_margin_mm": 47.67614889202051
+            },
+            {
+              "after_step": 403,
+              "added_part_id": "COPILOT-P150-000507",
+              "minimum_support_margin_mm": 47.67614889202051
+            },
+            {
+              "after_step": 411,
+              "added_part_id": "COPILOT-P150-000486",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 412,
+              "added_part_id": "COPILOT-P150-000497",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 423,
+              "added_part_id": "COPILOT-P150-000487",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 424,
+              "added_part_id": "COPILOT-P150-000498",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 436,
+              "added_part_id": "COPILOT-P150-000488",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 437,
+              "added_part_id": "COPILOT-P150-000499",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 451,
+              "added_part_id": "COPILOT-P150-000489",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 452,
+              "added_part_id": "COPILOT-P150-000500",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 468,
+              "added_part_id": "COPILOT-P150-000490",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 469,
+              "added_part_id": "COPILOT-P150-000501",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 485,
+              "added_part_id": "COPILOT-P150-000491",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 486,
+              "added_part_id": "COPILOT-P150-000502",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 496,
+              "added_part_id": "COPILOT-P150-000431",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 497,
+              "added_part_id": "COPILOT-P150-000438",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 498,
+              "added_part_id": "COPILOT-P150-000448",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 499,
+              "added_part_id": "COPILOT-P150-000458",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 500,
+              "added_part_id": "COPILOT-P150-000469",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 501,
+              "added_part_id": "COPILOT-P150-000481",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 502,
+              "added_part_id": "COPILOT-P150-000492",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 503,
+              "added_part_id": "COPILOT-P150-000503",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 504,
+              "added_part_id": "COPILOT-P150-000514",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 505,
+              "added_part_id": "COPILOT-P150-000525",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 506,
+              "added_part_id": "COPILOT-P150-000535",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 507,
+              "added_part_id": "COPILOT-P150-000545",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 508,
+              "added_part_id": "COPILOT-P150-000554",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 509,
+              "added_part_id": "COPILOT-P150-000561",
+              "minimum_support_margin_mm": 45.765143145844114
+            },
+            {
+              "after_step": 555,
+              "added_part_id": "COPILOT-P150-000657",
+              "minimum_support_margin_mm": 43.384289518874844
+            },
+            {
+              "after_step": 556,
+              "added_part_id": "COPILOT-P150-000679",
+              "minimum_support_margin_mm": 41.17456695433253
+            },
+            {
+              "after_step": 562,
+              "added_part_id": "COPILOT-P150-000658",
+              "minimum_support_margin_mm": 41.17456695433253
+            },
+            {
+              "after_step": 563,
+              "added_part_id": "COPILOT-P150-000680",
+              "minimum_support_margin_mm": 38.925848504518186
+            },
+            {
+              "after_step": 569,
+              "added_part_id": "COPILOT-P150-000659",
+              "minimum_support_margin_mm": 38.925848504518186
+            },
+            {
+              "after_step": 570,
+              "added_part_id": "COPILOT-P150-000681",
+              "minimum_support_margin_mm": 37.104618396104705
+            },
+            {
+              "after_step": 576,
+              "added_part_id": "COPILOT-P150-000660",
+              "minimum_support_margin_mm": 37.104618396104705
+            },
+            {
+              "after_step": 577,
+              "added_part_id": "COPILOT-P150-000682",
+              "minimum_support_margin_mm": 35.66923115856175
+            },
+            {
+              "after_step": 583,
+              "added_part_id": "COPILOT-P150-000661",
+              "minimum_support_margin_mm": 35.66923115856175
+            },
+            {
+              "after_step": 584,
+              "added_part_id": "COPILOT-P150-000683",
+              "minimum_support_margin_mm": 35.66923115856175
+            },
+            {
+              "after_step": 591,
+              "added_part_id": "COPILOT-P150-000662",
+              "minimum_support_margin_mm": 35.66923115856175
+            },
+            {
+              "after_step": 592,
+              "added_part_id": "COPILOT-P150-000684",
+              "minimum_support_margin_mm": 35.66923115856175
+            },
+            {
+              "after_step": 599,
+              "added_part_id": "COPILOT-P150-000663",
+              "minimum_support_margin_mm": 35.66923115856175
+            },
+            {
+              "after_step": 600,
+              "added_part_id": "COPILOT-P150-000685",
+              "minimum_support_margin_mm": 35.66923115856175
+            },
+            {
+              "after_step": 608,
+              "added_part_id": "COPILOT-P150-000664",
+              "minimum_support_margin_mm": 35.66923115856175
+            },
+            {
+              "after_step": 609,
+              "added_part_id": "COPILOT-P150-000686",
+              "minimum_support_margin_mm": 35.66923115856175
+            },
+            {
+              "after_step": 618,
+              "added_part_id": "COPILOT-P150-000665",
+              "minimum_support_margin_mm": 35.66923115856175
+            },
+            {
+              "after_step": 619,
+              "added_part_id": "COPILOT-P150-000687",
+              "minimum_support_margin_mm": 35.66923115856175
+            },
+            {
+              "after_step": 627,
+              "added_part_id": "COPILOT-P150-000666",
+              "minimum_support_margin_mm": 35.66923115856175
+            },
+            {
+              "after_step": 628,
+              "added_part_id": "COPILOT-P150-000688",
+              "minimum_support_margin_mm": 35.66923115856175
+            },
+            {
+              "after_step": 637,
+              "added_part_id": "COPILOT-P150-000667",
+              "minimum_support_margin_mm": 35.66923115856175
+            },
+            {
+              "after_step": 638,
+              "added_part_id": "COPILOT-P150-000689",
+              "minimum_support_margin_mm": 35.66923115856175
+            },
+            {
+              "after_step": 647,
+              "added_part_id": "COPILOT-P150-000668",
+              "minimum_support_margin_mm": 35.66923115856175
+            },
+            {
+              "after_step": 648,
+              "added_part_id": "COPILOT-P150-000690",
+              "minimum_support_margin_mm": 35.66923115856175
+            },
+            {
+              "after_step": 657,
+              "added_part_id": "COPILOT-P150-000669",
+              "minimum_support_margin_mm": 35.66923115856175
+            },
+            {
+              "after_step": 658,
+              "added_part_id": "COPILOT-P150-000691",
+              "minimum_support_margin_mm": 35.66923115856175
+            },
+            {
+              "after_step": 668,
+              "added_part_id": "COPILOT-P150-000670",
+              "minimum_support_margin_mm": 35.66923115856175
+            },
+            {
+              "after_step": 669,
+              "added_part_id": "COPILOT-P150-000692",
+              "minimum_support_margin_mm": 35.66923115856175
+            }
+          ],
+          "assumptions": "Uniform-density native CADvolume,notmeasuredPLA/infillmass. Perhullside include100percent ofdestabilizing exclusive-root/firstshared-receiverpayload,ignorestabilizingpayload. No creditforunknownstudpullouttension.",
+          "not_validated": "Printedmaterial/infilldistribution,creep,yield,impact,dynamicassemblyloads,retentionandwholefiguretipping."
+        },
+        "load_path": "Continuous stepped material from tip to this native multi-point seated body root; no floor/stand member.",
+        "physical_retention": "UNKNOWN",
+        "physical_strength": "UNKNOWN",
+        "physical_bottom_z_mm": 16.0,
+        "receiving_body_stage_z_mm": 16.0
+      }
+    ],
+    "external_aid_count": 0,
+    "assembly_aid_count": 0,
+    "gravity_balance_result": "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS",
+    "physical_validation": "UNKNOWN",
+    "slicer_supports": "UNKNOWN"
+  },
+  "gravity_balance": {
+    "result": "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS",
+    "modules": [
+      {
+        "part_id": "COPILOT-P150-SUPPORT-FREE-V2-ROOT-01",
+        "result": "PASS_NOMINAL_CAD_STATIC_MOMENT_BOUND",
+        "minimum_support_margin_mm": 35.66923115856175,
+        "required_margin_mm": 1.0,
+        "actual_bearing_hull_xy_mm": [
+          [
+            -107.9,
+            -11.9
+          ],
+          [
+            -11.9,
+            -171.7
+          ],
+          [
+            19.9,
+            -171.7
+          ],
+          [
+            115.9,
+            -11.9
+          ],
+          [
+            115.9,
+            3.9
+          ],
+          [
+            -107.9,
+            3.9
+          ]
+        ],
+        "root_cad_volume_mm3": 39458.887868267055,
+        "root_cad_centroid_mm": [
+          3.9999999999999556,
+          -93.17637950352528,
+          19.19870755803321
+        ],
+        "downstream_payloads": [
+          {
+            "part_id": "COPILOT-P150-000474",
+            "cad_volume_mm3": 1319.2118461355558,
+            "cad_centroid_mm": [
+              -20.000000000000007,
+              -216.0,
+              24.114722471133653
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000485",
+            "cad_volume_mm3": 1319.2118461355565,
+            "cad_centroid_mm": [
+              -4.000000000000008,
+              -216.0,
+              24.114722471133653
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000496",
+            "cad_volume_mm3": 1319.2118461355565,
+            "cad_centroid_mm": [
+              11.999999999999993,
+              -216.0,
+              24.114722471133653
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000507",
+            "cad_volume_mm3": 1319.2118461355565,
+            "cad_centroid_mm": [
+              27.999999999999993,
+              -216.0,
+              24.114722471133653
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000486",
+            "cad_volume_mm3": 1750.8788530072168,
+            "cad_centroid_mm": [
+              -4.000000000000001,
+              -188.0,
+              24.129567234800195
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000497",
+            "cad_volume_mm3": 1750.8788530072172,
+            "cad_centroid_mm": [
+              12.0,
+              -188.0,
+              24.129567234800195
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000487",
+            "cad_volume_mm3": 1750.8788530072175,
+            "cad_centroid_mm": [
+              -4.000000000000001,
+              -156.0,
+              24.129567234800195
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000498",
+            "cad_volume_mm3": 1750.878853007218,
+            "cad_centroid_mm": [
+              12.0,
+              -156.0,
+              24.12956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000488",
+            "cad_volume_mm3": 1750.8788530072175,
+            "cad_centroid_mm": [
+              -4.000000000000001,
+              -124.0,
+              24.12956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000499",
+            "cad_volume_mm3": 1750.878853007218,
+            "cad_centroid_mm": [
+              12.0,
+              -124.0,
+              24.12956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000489",
+            "cad_volume_mm3": 1750.8788530072168,
+            "cad_centroid_mm": [
+              -4.000000000000001,
+              -92.0,
+              24.129567234800195
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000500",
+            "cad_volume_mm3": 1750.8788530072163,
+            "cad_centroid_mm": [
+              12.0,
+              -92.0,
+              24.129567234800195
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000490",
+            "cad_volume_mm3": 1750.8788530072168,
+            "cad_centroid_mm": [
+              -4.0,
+              -60.0,
+              24.129567234800195
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000501",
+            "cad_volume_mm3": 1750.8788530072168,
+            "cad_centroid_mm": [
+              12.0,
+              -60.0,
+              24.129567234800195
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000491",
+            "cad_volume_mm3": 1750.8788530072163,
+            "cad_centroid_mm": [
+              -4.000000000000001,
+              -28.0,
+              24.129567234800195
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000502",
+            "cad_volume_mm3": 1750.8788530072159,
+            "cad_centroid_mm": [
+              12.0,
+              -28.0,
+              24.1295672348002
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000431",
+            "cad_volume_mm3": 1750.878853007217,
+            "cad_centroid_mm": [
+              -100.0,
+              3.9999999999999996,
+              24.129567234800195
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000438",
+            "cad_volume_mm3": 1750.878853007217,
+            "cad_centroid_mm": [
+              -84.0,
+              3.9999999999999996,
+              24.129567234800195
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000448",
+            "cad_volume_mm3": 1750.8788530072175,
+            "cad_centroid_mm": [
+              -68.0,
+              3.9999999999999996,
+              24.129567234800195
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000458",
+            "cad_volume_mm3": 1750.878853007215,
+            "cad_centroid_mm": [
+              -52.0,
+              3.9999999999999996,
+              24.1295672348002
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000469",
+            "cad_volume_mm3": 1750.8788530072156,
+            "cad_centroid_mm": [
+              -36.0,
+              3.9999999999999996,
+              24.1295672348002
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000481",
+            "cad_volume_mm3": 1750.8788530072159,
+            "cad_centroid_mm": [
+              -20.0,
+              3.999999999999999,
+              24.1295672348002
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000492",
+            "cad_volume_mm3": 1750.8788530072163,
+            "cad_centroid_mm": [
+              -4.000000000000001,
+              3.999999999999999,
+              24.129567234800195
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000503",
+            "cad_volume_mm3": 1750.8788530072163,
+            "cad_centroid_mm": [
+              12.0,
+              3.9999999999999996,
+              24.129567234800195
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000514",
+            "cad_volume_mm3": 1750.8788530072159,
+            "cad_centroid_mm": [
+              28.0,
+              3.9999999999999996,
+              24.1295672348002
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000525",
+            "cad_volume_mm3": 1750.878853007215,
+            "cad_centroid_mm": [
+              44.0,
+              3.9999999999999996,
+              24.1295672348002
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000535",
+            "cad_volume_mm3": 1750.878853007217,
+            "cad_centroid_mm": [
+              60.0,
+              3.9999999999999996,
+              24.129567234800195
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000545",
+            "cad_volume_mm3": 1750.8788530072165,
+            "cad_centroid_mm": [
+              76.0,
+              3.999999999999999,
+              24.1295672348002
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000554",
+            "cad_volume_mm3": 1750.8788530072163,
+            "cad_centroid_mm": [
+              92.0,
+              3.9999999999999987,
+              24.1295672348002
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000561",
+            "cad_volume_mm3": 1750.878853007217,
+            "cad_centroid_mm": [
+              108.0,
+              3.999999999999999,
+              24.129567234800195
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000657",
+            "cad_volume_mm3": 1748.985519673881,
+            "cad_centroid_mm": [
+              -3.999999999999999,
+              -220.0,
+              28.92804771429022
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000679",
+            "cad_volume_mm3": 1748.9855196738813,
+            "cad_centroid_mm": [
+              28.0,
+              -220.0,
+              28.92804771429022
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000658",
+            "cad_volume_mm3": 1750.8788530072159,
+            "cad_centroid_mm": [
+              -4.000000000000001,
+              -204.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000680",
+            "cad_volume_mm3": 1750.8788530072156,
+            "cad_centroid_mm": [
+              28.0,
+              -204.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000659",
+            "cad_volume_mm3": 1750.8788530072159,
+            "cad_centroid_mm": [
+              -4.000000000000001,
+              -188.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000681",
+            "cad_volume_mm3": 1750.8788530072156,
+            "cad_centroid_mm": [
+              28.0,
+              -188.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000660",
+            "cad_volume_mm3": 1750.878853007217,
+            "cad_centroid_mm": [
+              -4.0,
+              -172.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000682",
+            "cad_volume_mm3": 1750.8788530072168,
+            "cad_centroid_mm": [
+              28.0,
+              -172.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000661",
+            "cad_volume_mm3": 1750.8788530072159,
+            "cad_centroid_mm": [
+              -4.000000000000001,
+              -156.0,
+              28.929567234800192
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000683",
+            "cad_volume_mm3": 1750.878853007216,
+            "cad_centroid_mm": [
+              28.0,
+              -156.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000662",
+            "cad_volume_mm3": 1750.878853007216,
+            "cad_centroid_mm": [
+              -4.000000000000001,
+              -140.0,
+              28.929567234800192
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000684",
+            "cad_volume_mm3": 1750.8788530072163,
+            "cad_centroid_mm": [
+              28.0,
+              -140.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000663",
+            "cad_volume_mm3": 1750.8788530072154,
+            "cad_centroid_mm": [
+              -4.000000000000001,
+              -124.0,
+              28.929567234800192
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000685",
+            "cad_volume_mm3": 1750.8788530072152,
+            "cad_centroid_mm": [
+              28.0,
+              -124.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000664",
+            "cad_volume_mm3": 1750.8788530072156,
+            "cad_centroid_mm": [
+              -4.0,
+              -108.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000686",
+            "cad_volume_mm3": 1750.8788530072156,
+            "cad_centroid_mm": [
+              28.0,
+              -108.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000665",
+            "cad_volume_mm3": 1750.8788530072152,
+            "cad_centroid_mm": [
+              -4.0,
+              -92.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000687",
+            "cad_volume_mm3": 1750.8788530072156,
+            "cad_centroid_mm": [
+              28.0,
+              -92.0,
+              28.929567234800185
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000666",
+            "cad_volume_mm3": 1750.8788530072159,
+            "cad_centroid_mm": [
+              -4.0,
+              -76.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000688",
+            "cad_volume_mm3": 1750.8788530072156,
+            "cad_centroid_mm": [
+              28.0,
+              -76.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000667",
+            "cad_volume_mm3": 1750.8788530072159,
+            "cad_centroid_mm": [
+              -4.0,
+              -60.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000689",
+            "cad_volume_mm3": 1750.878853007216,
+            "cad_centroid_mm": [
+              28.0,
+              -60.0,
+              28.929567234800185
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000668",
+            "cad_volume_mm3": 1750.8788530072152,
+            "cad_centroid_mm": [
+              -4.0,
+              -44.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000690",
+            "cad_volume_mm3": 1750.878853007215,
+            "cad_centroid_mm": [
+              28.0,
+              -44.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000669",
+            "cad_volume_mm3": 1750.8788530072159,
+            "cad_centroid_mm": [
+              -4.0,
+              -28.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000691",
+            "cad_volume_mm3": 1750.8788530072156,
+            "cad_centroid_mm": [
+              28.0,
+              -28.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000670",
+            "cad_volume_mm3": 1750.8788530072156,
+            "cad_centroid_mm": [
+              -4.000000000000001,
+              -12.0,
+              28.92956723480019
+            ]
+          },
+          {
+            "part_id": "COPILOT-P150-000692",
+            "cad_volume_mm3": 1750.8788530072159,
+            "cad_centroid_mm": [
+              28.0,
+              -12.0,
+              28.92956723480019
+            ]
+          }
+        ],
+        "assembly_prefix_checks": [
+          {
+            "after_step": 322,
+            "added_part_id": "COPILOT-P150-SUPPORT-FREE-V2-ROOT-01",
+            "minimum_support_margin_mm": 54.06684986003347
+          },
+          {
+            "after_step": 400,
+            "added_part_id": "COPILOT-P150-000474",
+            "minimum_support_margin_mm": 51.35508103507288
+          },
+          {
+            "after_step": 401,
+            "added_part_id": "COPILOT-P150-000485",
+            "minimum_support_margin_mm": 49.243071062610156
+          },
+          {
+            "after_step": 402,
+            "added_part_id": "COPILOT-P150-000496",
+            "minimum_support_margin_mm": 47.67614889202051
+          },
+          {
+            "after_step": 403,
+            "added_part_id": "COPILOT-P150-000507",
+            "minimum_support_margin_mm": 47.67614889202051
+          },
+          {
+            "after_step": 411,
+            "added_part_id": "COPILOT-P150-000486",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 412,
+            "added_part_id": "COPILOT-P150-000497",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 423,
+            "added_part_id": "COPILOT-P150-000487",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 424,
+            "added_part_id": "COPILOT-P150-000498",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 436,
+            "added_part_id": "COPILOT-P150-000488",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 437,
+            "added_part_id": "COPILOT-P150-000499",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 451,
+            "added_part_id": "COPILOT-P150-000489",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 452,
+            "added_part_id": "COPILOT-P150-000500",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 468,
+            "added_part_id": "COPILOT-P150-000490",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 469,
+            "added_part_id": "COPILOT-P150-000501",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 485,
+            "added_part_id": "COPILOT-P150-000491",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 486,
+            "added_part_id": "COPILOT-P150-000502",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 496,
+            "added_part_id": "COPILOT-P150-000431",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 497,
+            "added_part_id": "COPILOT-P150-000438",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 498,
+            "added_part_id": "COPILOT-P150-000448",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 499,
+            "added_part_id": "COPILOT-P150-000458",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 500,
+            "added_part_id": "COPILOT-P150-000469",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 501,
+            "added_part_id": "COPILOT-P150-000481",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 502,
+            "added_part_id": "COPILOT-P150-000492",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 503,
+            "added_part_id": "COPILOT-P150-000503",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 504,
+            "added_part_id": "COPILOT-P150-000514",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 505,
+            "added_part_id": "COPILOT-P150-000525",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 506,
+            "added_part_id": "COPILOT-P150-000535",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 507,
+            "added_part_id": "COPILOT-P150-000545",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 508,
+            "added_part_id": "COPILOT-P150-000554",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 509,
+            "added_part_id": "COPILOT-P150-000561",
+            "minimum_support_margin_mm": 45.765143145844114
+          },
+          {
+            "after_step": 555,
+            "added_part_id": "COPILOT-P150-000657",
+            "minimum_support_margin_mm": 43.384289518874844
+          },
+          {
+            "after_step": 556,
+            "added_part_id": "COPILOT-P150-000679",
+            "minimum_support_margin_mm": 41.17456695433253
+          },
+          {
+            "after_step": 562,
+            "added_part_id": "COPILOT-P150-000658",
+            "minimum_support_margin_mm": 41.17456695433253
+          },
+          {
+            "after_step": 563,
+            "added_part_id": "COPILOT-P150-000680",
+            "minimum_support_margin_mm": 38.925848504518186
+          },
+          {
+            "after_step": 569,
+            "added_part_id": "COPILOT-P150-000659",
+            "minimum_support_margin_mm": 38.925848504518186
+          },
+          {
+            "after_step": 570,
+            "added_part_id": "COPILOT-P150-000681",
+            "minimum_support_margin_mm": 37.104618396104705
+          },
+          {
+            "after_step": 576,
+            "added_part_id": "COPILOT-P150-000660",
+            "minimum_support_margin_mm": 37.104618396104705
+          },
+          {
+            "after_step": 577,
+            "added_part_id": "COPILOT-P150-000682",
+            "minimum_support_margin_mm": 35.66923115856175
+          },
+          {
+            "after_step": 583,
+            "added_part_id": "COPILOT-P150-000661",
+            "minimum_support_margin_mm": 35.66923115856175
+          },
+          {
+            "after_step": 584,
+            "added_part_id": "COPILOT-P150-000683",
+            "minimum_support_margin_mm": 35.66923115856175
+          },
+          {
+            "after_step": 591,
+            "added_part_id": "COPILOT-P150-000662",
+            "minimum_support_margin_mm": 35.66923115856175
+          },
+          {
+            "after_step": 592,
+            "added_part_id": "COPILOT-P150-000684",
+            "minimum_support_margin_mm": 35.66923115856175
+          },
+          {
+            "after_step": 599,
+            "added_part_id": "COPILOT-P150-000663",
+            "minimum_support_margin_mm": 35.66923115856175
+          },
+          {
+            "after_step": 600,
+            "added_part_id": "COPILOT-P150-000685",
+            "minimum_support_margin_mm": 35.66923115856175
+          },
+          {
+            "after_step": 608,
+            "added_part_id": "COPILOT-P150-000664",
+            "minimum_support_margin_mm": 35.66923115856175
+          },
+          {
+            "after_step": 609,
+            "added_part_id": "COPILOT-P150-000686",
+            "minimum_support_margin_mm": 35.66923115856175
+          },
+          {
+            "after_step": 618,
+            "added_part_id": "COPILOT-P150-000665",
+            "minimum_support_margin_mm": 35.66923115856175
+          },
+          {
+            "after_step": 619,
+            "added_part_id": "COPILOT-P150-000687",
+            "minimum_support_margin_mm": 35.66923115856175
+          },
+          {
+            "after_step": 627,
+            "added_part_id": "COPILOT-P150-000666",
+            "minimum_support_margin_mm": 35.66923115856175
+          },
+          {
+            "after_step": 628,
+            "added_part_id": "COPILOT-P150-000688",
+            "minimum_support_margin_mm": 35.66923115856175
+          },
+          {
+            "after_step": 637,
+            "added_part_id": "COPILOT-P150-000667",
+            "minimum_support_margin_mm": 35.66923115856175
+          },
+          {
+            "after_step": 638,
+            "added_part_id": "COPILOT-P150-000689",
+            "minimum_support_margin_mm": 35.66923115856175
+          },
+          {
+            "after_step": 647,
+            "added_part_id": "COPILOT-P150-000668",
+            "minimum_support_margin_mm": 35.66923115856175
+          },
+          {
+            "after_step": 648,
+            "added_part_id": "COPILOT-P150-000690",
+            "minimum_support_margin_mm": 35.66923115856175
+          },
+          {
+            "after_step": 657,
+            "added_part_id": "COPILOT-P150-000669",
+            "minimum_support_margin_mm": 35.66923115856175
+          },
+          {
+            "after_step": 658,
+            "added_part_id": "COPILOT-P150-000691",
+            "minimum_support_margin_mm": 35.66923115856175
+          },
+          {
+            "after_step": 668,
+            "added_part_id": "COPILOT-P150-000670",
+            "minimum_support_margin_mm": 35.66923115856175
+          },
+          {
+            "after_step": 669,
+            "added_part_id": "COPILOT-P150-000692",
+            "minimum_support_margin_mm": 35.66923115856175
+          }
+        ],
+        "assumptions": "Uniform-density native CADvolume,notmeasuredPLA/infillmass. Perhullside include100percent ofdestabilizing exclusive-root/firstshared-receiverpayload,ignorestabilizingpayload. No creditforunknownstudpullouttension.",
+        "not_validated": "Printedmaterial/infilldistribution,creep,yield,impact,dynamicassemblyloads,retentionandwholefiguretipping."
+      }
+    ],
+    "physical_mass_measured": false
+  },
+  "support_structural_sections": [
+    {
+      "part_id": "COPILOT-P150-SUPPORT-FREE-V2-ROOT-01",
+      "type_id": "BS-389940f5bda66897",
+      "native_single_solid": true,
+      "minimum_true_root_roof_mm": 1.5999999999999996,
+      "section_count": 55,
+      "minimum_effective_section_area_mm2": 52.58856326434779,
+      "actual_brep_sections": [
+        {
+          "section_axis": "x",
+          "plane_x_mm": -104.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.588563264355045,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": -96.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856326435501,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": -88.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856326435504,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": -80.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.588563264355024,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": -72.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.588563264355,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": -64.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856326435879,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": -56.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.588563264358775,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": -48.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856326435876,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": -40.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.588563264360616,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": -32.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856326436065,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": -24.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856326477685,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": -16.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 90.02856326476423,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": -8.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 820.7598285514969,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": 0.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 820.7598238373007,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": 8.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 820.7598285514986,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": 16.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 90.02856326476643,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": 24.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856326478456,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": 32.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.5885632643563,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": 40.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.588563264356466,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": 48.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.588563264356466,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": 56.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.588563264356395,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": 64.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856326434779,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": 72.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856326434788,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": 80.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.588563264349986,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": 88.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856326435,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": 96.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.58856326434996,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "x",
+          "plane_x_mm": 104.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 52.588563264349986,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": -108.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 152.6399999999912,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": -100.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 152.63999999999123,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": -92.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 152.6399999999912,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": -84.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 152.6399999999912,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": -76.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 152.63999999999123,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": -68.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 152.6399999999912,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": -60.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 152.64000000000206,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": -52.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.5256897582326,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": -44.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568975823903,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": -36.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568975823964,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": -28.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568975822615,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": -20.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568975822622,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": -12.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568975822645,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": -4.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568975822679,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": 4.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568975822666,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": 12.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568975822658,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": 20.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568975825244,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": 28.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568975825244,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": 36.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.5256897582268,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": 44.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568975822687,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": 52.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568975822692,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": 60.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568975822687,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": 68.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.5256897582005,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": 76.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568975820044,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": 84.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568975820049,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": 92.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568975820044,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": 100.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 102.52568975820049,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        },
+        {
+          "section_axis": "y",
+          "plane_y_mm": 108.0,
+          "finite_slice_width_mm": 0.1,
+          "effective_solid_area_mm2": 701.7712078614907,
+          "definition": "Actual cavity-bearing BRep body section, excluding the top studs; not an allowable force."
+        }
+      ],
+      "load_path": "Each previously floating seed is now material-continuous through a stepped same-color beam into body-root walls/tubes/posts. Multiple spaced stud/cavity sites and bearing faces resist translation and rotation geometrically.",
+      "material_strength_infill_layer_orientation": "UNMEASURED",
+      "note": "Positive material sections and CAD static balance are not an allowable bending/torsion strength or pullout test.",
+      "section_applicability": {
+        "basis": "Actual canonical type.body_slices, not a substituted comparison plane",
+        "body_slice_count": 1,
+        "expected_internal_transition_local_z_mm": [],
+        "required_section_axes": [
+          "x",
+          "y"
+        ],
+        "actual_section_axes": [
+          "x",
+          "y"
+        ],
+        "z_transition_neck_status": "NOT_APPLICABLE_SINGLE_COURSE"
+      }
+    }
+  ],
+  "modules": [
+    {
+      "part_id": "COPILOT-P150-SUPPORT-FREE-V2-ROOT-01",
+      "type_id": "BS-389940f5bda66897",
+      "step": 322,
+      "physical_bottom_z_mm": 16.0,
+      "receiving_body_stage_z_mm": 16.0,
+      "actual_body_support_ids": [
+        "COPILOT-P150-000228",
+        "COPILOT-P150-000231",
+        "COPILOT-P150-000233",
+        "COPILOT-P150-000236",
+        "COPILOT-P150-000237",
+        "COPILOT-P150-000241",
+        "COPILOT-P150-000242",
+        "COPILOT-P150-000247",
+        "COPILOT-P150-000248",
+        "COPILOT-P150-000254",
+        "COPILOT-P150-000255",
+        "COPILOT-P150-000257",
+        "COPILOT-P150-000258",
+        "COPILOT-P150-000259",
+        "COPILOT-P150-000260",
+        "COPILOT-P150-000261",
+        "COPILOT-P150-000262",
+        "COPILOT-P150-000264",
+        "COPILOT-P150-000265",
+        "COPILOT-P150-000266",
+        "COPILOT-P150-000267",
+        "COPILOT-P150-000268",
+        "COPILOT-P150-000269",
+        "COPILOT-P150-000271",
+        "COPILOT-P150-000272",
+        "COPILOT-P150-000273",
+        "COPILOT-P150-000274",
+        "COPILOT-P150-000275",
+        "COPILOT-P150-000276",
+        "COPILOT-P150-000282",
+        "COPILOT-P150-000283",
+        "COPILOT-P150-000288",
+        "COPILOT-P150-000289",
+        "COPILOT-P150-000294",
+        "COPILOT-P150-000295",
+        "COPILOT-P150-000299",
+        "COPILOT-P150-000300",
+        "COPILOT-P150-000302",
+        "COPILOT-P150-000303"
+      ],
+      "root_contact_sites": [
+        [
+          -13,
+          -1,
+          10
+        ],
+        [
+          -13,
+          0,
+          10
+        ],
+        [
+          -12,
+          -1,
+          10
+        ],
+        [
+          -12,
+          0,
+          10
+        ],
+        [
+          -11,
+          -1,
+          10
+        ],
+        [
+          -11,
+          0,
+          10
+        ],
+        [
+          -10,
+          -1,
+          10
+        ],
+        [
+          -10,
+          0,
+          10
+        ],
+        [
+          -9,
+          -1,
+          10
+        ],
+        [
+          -9,
+          0,
+          10
+        ],
+        [
+          -8,
+          -1,
+          10
+        ],
+        [
+          -8,
+          0,
+          10
+        ],
+        [
+          -7,
+          -1,
+          10
+        ],
+        [
+          -7,
+          0,
+          10
+        ],
+        [
+          -6,
+          -1,
+          10
+        ],
+        [
+          -6,
+          0,
+          10
+        ],
+        [
+          -5,
+          -1,
+          10
+        ],
+        [
+          -5,
+          0,
+          10
+        ],
+        [
+          -4,
+          -1,
+          10
+        ],
+        [
+          -4,
+          0,
+          10
+        ],
+        [
+          -3,
+          -1,
+          10
+        ],
+        [
+          -3,
+          0,
+          10
+        ],
+        [
+          -2,
+          -1,
+          10
+        ],
+        [
+          -2,
+          0,
+          10
+        ],
+        [
+          -1,
+          -21,
+          10
+        ],
+        [
+          -1,
+          -20,
+          10
+        ],
+        [
+          -1,
+          -19,
+          10
+        ],
+        [
+          -1,
+          -18,
+          10
+        ],
+        [
+          -1,
+          -17,
+          10
+        ],
+        [
+          -1,
+          -16,
+          10
+        ],
+        [
+          -1,
+          -15,
+          10
+        ],
+        [
+          -1,
+          -14,
+          10
+        ],
+        [
+          -1,
+          -13,
+          10
+        ],
+        [
+          -1,
+          -12,
+          10
+        ],
+        [
+          -1,
+          -11,
+          10
+        ],
+        [
+          -1,
+          -10,
+          10
+        ],
+        [
+          -1,
+          -9,
+          10
+        ],
+        [
+          -1,
+          -8,
+          10
+        ],
+        [
+          -1,
+          -7,
+          10
+        ],
+        [
+          -1,
+          -6,
+          10
+        ],
+        [
+          -1,
+          -5,
+          10
+        ],
+        [
+          -1,
+          -4,
+          10
+        ],
+        [
+          -1,
+          -3,
+          10
+        ],
+        [
+          -1,
+          -2,
+          10
+        ],
+        [
+          -1,
+          -1,
+          10
+        ],
+        [
+          -1,
+          0,
+          10
+        ],
+        [
+          0,
+          -21,
+          10
+        ],
+        [
+          0,
+          -20,
+          10
+        ],
+        [
+          0,
+          -19,
+          10
+        ],
+        [
+          0,
+          -18,
+          10
+        ],
+        [
+          0,
+          -17,
+          10
+        ],
+        [
+          0,
+          -16,
+          10
+        ],
+        [
+          0,
+          -15,
+          10
+        ],
+        [
+          0,
+          -14,
+          10
+        ],
+        [
+          0,
+          -13,
+          10
+        ],
+        [
+          0,
+          -12,
+          10
+        ],
+        [
+          0,
+          -11,
+          10
+        ],
+        [
+          0,
+          -10,
+          10
+        ],
+        [
+          0,
+          -9,
+          10
+        ],
+        [
+          0,
+          -8,
+          10
+        ],
+        [
+          0,
+          -7,
+          10
+        ],
+        [
+          0,
+          -6,
+          10
+        ],
+        [
+          0,
+          -5,
+          10
+        ],
+        [
+          0,
+          -4,
+          10
+        ],
+        [
+          0,
+          -3,
+          10
+        ],
+        [
+          0,
+          -2,
+          10
+        ],
+        [
+          0,
+          -1,
+          10
+        ],
+        [
+          0,
+          0,
+          10
+        ],
+        [
+          1,
+          -21,
+          10
+        ],
+        [
+          1,
+          -20,
+          10
+        ],
+        [
+          1,
+          -19,
+          10
+        ],
+        [
+          1,
+          -18,
+          10
+        ],
+        [
+          1,
+          -17,
+          10
+        ],
+        [
+          1,
+          -16,
+          10
+        ],
+        [
+          1,
+          -15,
+          10
+        ],
+        [
+          1,
+          -14,
+          10
+        ],
+        [
+          1,
+          -13,
+          10
+        ],
+        [
+          1,
+          -12,
+          10
+        ],
+        [
+          1,
+          -11,
+          10
+        ],
+        [
+          1,
+          -10,
+          10
+        ],
+        [
+          1,
+          -9,
+          10
+        ],
+        [
+          1,
+          -8,
+          10
+        ],
+        [
+          1,
+          -7,
+          10
+        ],
+        [
+          1,
+          -6,
+          10
+        ],
+        [
+          1,
+          -5,
+          10
+        ],
+        [
+          1,
+          -4,
+          10
+        ],
+        [
+          1,
+          -3,
+          10
+        ],
+        [
+          1,
+          -2,
+          10
+        ],
+        [
+          1,
+          -1,
+          10
+        ],
+        [
+          1,
+          0,
+          10
+        ],
+        [
+          2,
+          -21,
+          10
+        ],
+        [
+          2,
+          -20,
+          10
+        ],
+        [
+          2,
+          -19,
+          10
+        ],
+        [
+          2,
+          -18,
+          10
+        ],
+        [
+          2,
+          -17,
+          10
+        ],
+        [
+          2,
+          -16,
+          10
+        ],
+        [
+          2,
+          -15,
+          10
+        ],
+        [
+          2,
+          -14,
+          10
+        ],
+        [
+          2,
+          -13,
+          10
+        ],
+        [
+          2,
+          -12,
+          10
+        ],
+        [
+          2,
+          -11,
+          10
+        ],
+        [
+          2,
+          -10,
+          10
+        ],
+        [
+          2,
+          -9,
+          10
+        ],
+        [
+          2,
+          -8,
+          10
+        ],
+        [
+          2,
+          -7,
+          10
+        ],
+        [
+          2,
+          -6,
+          10
+        ],
+        [
+          2,
+          -5,
+          10
+        ],
+        [
+          2,
+          -4,
+          10
+        ],
+        [
+          2,
+          -3,
+          10
+        ],
+        [
+          2,
+          -2,
+          10
+        ],
+        [
+          2,
+          -1,
+          10
+        ],
+        [
+          2,
+          0,
+          10
+        ],
+        [
+          3,
+          -1,
+          10
+        ],
+        [
+          3,
+          0,
+          10
+        ],
+        [
+          4,
+          -1,
+          10
+        ],
+        [
+          4,
+          0,
+          10
+        ],
+        [
+          5,
+          -1,
+          10
+        ],
+        [
+          5,
+          0,
+          10
+        ],
+        [
+          6,
+          -1,
+          10
+        ],
+        [
+          6,
+          0,
+          10
+        ],
+        [
+          7,
+          -1,
+          10
+        ],
+        [
+          7,
+          0,
+          10
+        ],
+        [
+          8,
+          -1,
+          10
+        ],
+        [
+          8,
+          0,
+          10
+        ],
+        [
+          9,
+          -1,
+          10
+        ],
+        [
+          9,
+          0,
+          10
+        ],
+        [
+          10,
+          -1,
+          10
+        ],
+        [
+          10,
+          0,
+          10
+        ],
+        [
+          11,
+          -1,
+          10
+        ],
+        [
+          11,
+          0,
+          10
+        ],
+        [
+          12,
+          -1,
+          10
+        ],
+        [
+          12,
+          0,
+          10
+        ],
+        [
+          13,
+          -1,
+          10
+        ],
+        [
+          13,
+          0,
+          10
+        ],
+        [
+          14,
+          -1,
+          10
+        ],
+        [
+          14,
+          0,
+          10
+        ]
+      ]
+    }
+  ],
+  "source_occupied_cells_unchanged": true,
+  "source_visible_colors_unchanged": true,
+  "body_first_all_steps_supported": true,
+  "floating_seed_steps": 0,
+  "blocked_vertical_body_columns": 0,
+  "native_bounds_mm": [
+    [
+      -283.9,
+      -243.9,
+      0.0
+    ],
+    [
+      283.9,
+      243.9,
+      425.8
+    ]
+  ],
+  "sequence_method": "Complete receiving-body-first dependency order with explicit multi-heightmodule support stages. All previously unsupportedtips travel with a continuousroot, not placed before theirconnection.",
+  "insertion_scope": "All actual module/body cell columns and exact native root/support BRep samples at2.1/1/.3/0mm; unchanged monotone interface profiles. Hand access, print deformation, real friction and extraction are not validated.",
+  "physical_validation": "UNKNOWN",
+  "slicer_supports": "UNKNOWN_SEPARATE_FROM_NO_ASSEMBLY_STANDS"
+}

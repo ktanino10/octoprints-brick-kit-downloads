@@ -76,6 +76,23 @@ def validate_sequence(manifest):
     require(next_step == len(parts) + 1, "Body-support stages omit actual IDs")
 
 
+def support_load_sets(manifest):
+    modules = {part["id"] for part in manifest["parts"]
+               if manifest["types"][part["type_id"]].get("kind") == "stepped-root-module"}
+    exclusive, payloads = {}, {identifier: [] for identifier in modules}
+    for part in manifest["parts"]:
+        inherited = [exclusive[identifier] for identifier in part["support_ids"]]
+        contributors = set(inherited) - {None}
+        if part["id"] in modules:
+            require(not contributors, "A new root would reset another root's exclusive downstream load path")
+            exclusive[part["id"]] = part["id"]
+            continue
+        for identifier in contributors:
+            payloads[identifier].append(part["id"])
+        exclusive[part["id"]] = inherited[0] if inherited and inherited[0] is not None and len(set(inherited)) == 1 else None
+    return payloads
+
+
 def validate_body_support_evidence(proof, manifest, native_complete):
     identifier = manifest["candidate_id"]
     logical = support_identity(identifier)
@@ -134,6 +151,7 @@ def validate_body_support_evidence(proof, manifest, native_complete):
             "The body-support load cases must identify each actual support module once")
     load_map = {item["support_part_id"]: item for item in loads}
     require(load_map.keys() == module_ids, "Actual native load cases and source support identities differ")
+    computed_loads = support_load_sets(manifest)
     require(proof["gravity_balance"].get("result") == BALANCE_PASS
             and proof["gravity_balance"].get("physical_mass_measured") is False,
             "Nominal CAD balance is not measured physical mass or retention")
@@ -215,6 +233,7 @@ def validate_body_support_evidence(proof, manifest, native_complete):
         payload_ids = load.get("payload_part_ids")
         require(isinstance(payload_ids, list) and len(set(payload_ids)) == len(payload_ids)
                 and set(payload_ids) == {item["part_id"] for item in balance["downstream_payloads"]}
+                and set(payload_ids) == set(computed_loads[part_id])
                 and isinstance(load.get("assumption"), str) and bool(load["assumption"].strip()),
                 "The source identity omits or alters a downstream CAD load")
     return {
@@ -222,5 +241,6 @@ def validate_body_support_evidence(proof, manifest, native_complete):
         "native_support_contact_evidence_sha256": canonical_sha(native),
         "checked_support_modules": len(module_ids), "checked_actual_brep_sections": section_count,
         "sequence_mode": SEQUENCE_MODE, "native_result": NATIVE_PASS,
+        "root_dependency_result": "PASS_NO_EXCLUSIVE_ROOT_RESET",
         "gravity_balance_result": BALANCE_PASS, "physical_validation": "UNKNOWN", "physical_mass_measured": False,
     }

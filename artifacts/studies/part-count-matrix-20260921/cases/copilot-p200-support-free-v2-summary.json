@@ -1,0 +1,3544 @@
+{
+  "case_id": "copilot-p200-support-free-v2",
+  "candidate_id": "copilot-p200-support-free-v2",
+  "character": "copilot",
+  "metrics": {
+    "physical_piece_count": 35630,
+    "part_count": 35630,
+    "unique_types": 182,
+    "target_count": 35746,
+    "baseline_count": 17873,
+    "target_ratio": 2.0,
+    "actual_ratio": 1.9935097633301628,
+    "count_difference": -116,
+    "count_tolerance": 357.46,
+    "count_within_tolerance": true,
+    "one_by_one_exceptions": 57,
+    "grip_long_ge_15_8_mm": 35573,
+    "minimum_xy_short_mm": 7.8,
+    "minimum_xy_long_mm": 7.8,
+    "minimum_body_height_mm": 3.2,
+    "width_mm": 631.8,
+    "depth_mm": 535.8,
+    "height_mm": 469.0,
+    "bounds_mm": [
+      [
+        -315.9,
+        -267.9,
+        0.0
+      ],
+      [
+        315.9,
+        267.9,
+        469.0
+      ]
+    ],
+    "actual_size_mm": [
+      631.8,
+      535.8,
+      469.0
+    ],
+    "layer_count": 98,
+    "assembly_step_count": 35630,
+    "foundation_parts": 184,
+    "temporary_aid_count": 0,
+    "common_rectangular_parts": 33827,
+    "body_height_families": [
+      {
+        "body_height_mm": 3.2,
+        "part_count": 184,
+        "unique_types": 6
+      },
+      {
+        "body_height_mm": 4.8,
+        "part_count": 35446,
+        "unique_types": 176
+      }
+    ],
+    "grip_long_ge_15_8_fraction": 0.9984002245298905,
+    "root_module_count": 1,
+    "source_previous_actual_count": 35648,
+    "actual_piece_delta_from_support_dependent_case": -18,
+    "root_module_native_type_count": 1,
+    "color_part_counts": {
+      "c0": 34251,
+      "c1": 1292,
+      "c2": 87
+    },
+    "color_count": 3,
+    "orthogonal_backing_contour_parts": 1803,
+    "edge_relieved_parts": 8131,
+    "edge_relieved_used_types": 153,
+    "layer_count_definition": "Nondecreasing receiving-body/root support courses; not hanging-tip bottomZ or slicing layers."
+  },
+  "manifest": {
+    "path": "cases/copilot-p200-support-free-v2.json.gz",
+    "sha256": "04355f6f15e65f50a99134c638b2cd56c41e58c136f7fb7f9d9cf2fed0b2b511",
+    "bytes": 1605089
+  },
+  "descriptive_pattern_metrics": {
+    "case_id": "copilot-p200-support-free-v2",
+    "manifest_sha256": "00d945c4bcb66c3f802874535765f29c95ef9e641d13f91aaafdd715a1ae2157",
+    "method": "REGISTERED_LATTICE_DIAGNOSTIC_NOT_NATIVE_PIXEL_SILHOUETTE",
+    "scope": "Occupied8mm/4.8mm source sample andwhole-part palette projectedonto the same normalizedbody. Excludes studs,gaps,chamfers andsupports; realCGmustbeviewed separately.",
+    "front": {
+      "intersection_over_union": 0.9819293978922544,
+      "reference_visible_pixels": 538791,
+      "candidate_visible_pixels": 536921,
+      "silhouette_symmetric_mean_distance_fraction_of_body_height": 0.004155021895728462,
+      "silhouette_symmetric_p95_distance_fraction_of_body_height": 0.009912109374999999,
+      "interpretation": "Descriptive projected geometry overlap/boundary distance; no aesthetic or mechanical pass threshold"
+    },
+    "side": {
+      "intersection_over_union": 0.9806246426096216,
+      "reference_visible_pixels": 491727,
+      "candidate_visible_pixels": 488498,
+      "silhouette_symmetric_mean_distance_fraction_of_body_height": 0.004185765069950583,
+      "silhouette_symmetric_p95_distance_fraction_of_body_height": 0.011328125,
+      "interpretation": "Descriptive projected geometry overlap/boundary distance; no aesthetic or mechanical pass threshold"
+    },
+    "painted_feature_region": {
+      "face_roi_box_px": [
+        201,
+        220,
+        839,
+        776
+      ],
+      "matching_visible_label_fraction": 0.9628836767359128,
+      "colors": {
+        "purple": {
+          "intersection_over_union": 0.913135197409391,
+          "reference_pixels": 123600,
+          "candidate_pixels": 122169
+        },
+        "white": {
+          "intersection_over_union": 0.9423024311951704,
+          "reference_pixels": 212252,
+          "candidate_pixels": 213726
+        },
+        "black": {
+          "intersection_over_union": 0.8936837551373567,
+          "reference_pixels": 17619,
+          "candidate_pixels": 17399
+        },
+        "pink": {
+          "intersection_over_union": null,
+          "reference_pixels": 0,
+          "candidate_pixels": 0
+        }
+      },
+      "interpretation": "Nearest source palette labels on actual registered visible surfaces. Face pose, color regions and gaps influence this statistic; it does not declare likeness approval."
+    },
+    "region_definition": "Tight reference-front bbox of all non-base colorcells plus5pixels; not automatic anatomical landmark detection.",
+    "cell_count": 251229,
+    "reference_C_cell_count": 122021,
+    "aesthetic_pass": null,
+    "physical_fit": "UNKNOWN",
+    "interpretation": "Differences are descriptive. Morepieces are not a validated likeness percentage or mechanical completion."
+  },
+  "images": [
+    {
+      "view": "assembled-front",
+      "path": "images/copilot-p200-support-free-v2-assembled-front.jpg",
+      "bytes": 81977,
+      "sha256": "c6258d1486088f774c639b86d93787dddee8386319bde78991570eef45afccb3"
+    },
+    {
+      "view": "assembled-three_quarter",
+      "path": "images/copilot-p200-support-free-v2-assembled-three_quarter.jpg",
+      "bytes": 106470,
+      "sha256": "5ea6bc99aa2b1eccf48acf152d995af518928d8e0430033ee1487cc076b5fe4a"
+    },
+    {
+      "view": "radial-exploded",
+      "path": "images/copilot-p200-support-free-v2-radial-exploded.jpg",
+      "bytes": 163083,
+      "sha256": "64a202b6ea0d7677d4d97c9eb361af8af1c3db248c96fa8c503bc07386cdde58"
+    },
+    {
+      "view": "registered-face",
+      "path": "images/copilot-p200-support-free-v2-registered-face.jpg",
+      "bytes": 78020,
+      "sha256": "f73c16c8bae6bbf1ccb4c5924dca871a18db7be1379b17beea5f257cd9fbd04f"
+    }
+  ],
+  "geometry": {
+    "BR-01x01-H048": {
+      "path": "geometry/BR-01x01-H048.mesh.gz",
+      "bytes": 4774,
+      "sha256": "f352b4bad37cac38ed37a68f21080173d4970aef4bd5ef2c281bf55f0406756f",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 388,
+      "face_count": 772,
+      "float32_mesh_sha256": "9d075952e568e9534ecc8cd5ca2aa153946ffa18dc4026133cc2a1abdf3f3383",
+      "maximum_coordinate_rounding_error_mm": 4.98443597507503e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-01x01-H048-EDGE-C020": {
+      "path": "geometry/BR-01x01-H048-EDGE-C020.mesh.gz",
+      "bytes": 4868,
+      "sha256": "0cb78f230108712f5c3d6d625d10227ba3081f244d30e58bc0b11ae736c96011",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 392,
+      "face_count": 780,
+      "float32_mesh_sha256": "af812d15a8df8c8ea224bf4d78bff868d658c57419ac13c10f3e7aba2fe06653",
+      "maximum_coordinate_rounding_error_mm": 4.98443597507503e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-01x02-H048": {
+      "path": "geometry/BR-01x02-H048.mesh.gz",
+      "bytes": 14176,
+      "sha256": "c53ccb06221763d52c3e0651b1b70dc2349bfd8916dd92d518d31c318a6ab972",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1139,
+      "face_count": 2274,
+      "float32_mesh_sha256": "e1468f627fadc7c8ea93e4381f94c2a405065867c49daf18160cc40d66a3991d",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-01x02-H048-EDGE-C020": {
+      "path": "geometry/BR-01x02-H048-EDGE-C020.mesh.gz",
+      "bytes": 14299,
+      "sha256": "bab51969f30e35a87d1c5d3b6d8a53f278ca9fd32e22bb131e8afe5b1705a02d",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1143,
+      "face_count": 2282,
+      "float32_mesh_sha256": "8ee28933753d8acf0982891f003ee505015c63cc9cdbe75acf4b608e71b3a6f9",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-01x03-H048": {
+      "path": "geometry/BR-01x03-H048.mesh.gz",
+      "bytes": 23606,
+      "sha256": "0c836f3dba87cf4b6a435a88a74e6fe0ec06e60b69855e0c7c1d84d4fcb30f67",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1890,
+      "face_count": 3776,
+      "float32_mesh_sha256": "76025c1adef8877e7fe08aee4bd32d879dd7ceec6f648459c7819cc4d6b8c90b",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-01x03-H048-EDGE-C020": {
+      "path": "geometry/BR-01x03-H048-EDGE-C020.mesh.gz",
+      "bytes": 23723,
+      "sha256": "75f4e03951715cfd3ebc781b0020707859cb5b9fc5a622da88304e479cf76f77",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1894,
+      "face_count": 3784,
+      "float32_mesh_sha256": "4ec3b76720adf4d7e8cc21059c7f2fb65a4266973eca5e3c012c09f2710335ab",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-01x04-H048": {
+      "path": "geometry/BR-01x04-H048.mesh.gz",
+      "bytes": 32716,
+      "sha256": "0ca47c5937d86eb6713ec522bf1f0113136302d344b4ab505647e9d395d549d1",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2641,
+      "face_count": 5278,
+      "float32_mesh_sha256": "add2c2c799eceb68fd9c0ebbd4a3a3739ad1b10ac35b5eb519e5333d54ea00e3",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-01x04-H048-EDGE-C020": {
+      "path": "geometry/BR-01x04-H048-EDGE-C020.mesh.gz",
+      "bytes": 32835,
+      "sha256": "488742ce473399e46dfd41a0b1fd0e6213231d9a1f403e1dfaa1184e98a09b34",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2645,
+      "face_count": 5286,
+      "float32_mesh_sha256": "aa789ac94a069badf3625281dbe17e89e866aa574eed68816e964360cdc8883e",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-01x05-H048": {
+      "path": "geometry/BR-01x05-H048.mesh.gz",
+      "bytes": 41391,
+      "sha256": "2bb186d27ba23f2ce6f3c780dbb06f2db6b24ed385ddacfa7db204f179b7f1f5",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3392,
+      "face_count": 6780,
+      "float32_mesh_sha256": "79d69c3c77f666ecf35f4f1a95d444884f41d75237b4f76501ecdc0b71884c53",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-01x05-H048-EDGE-C020": {
+      "path": "geometry/BR-01x05-H048-EDGE-C020.mesh.gz",
+      "bytes": 41470,
+      "sha256": "568e6071cd156242f6d9f3da2281ec445f6378d3816fc3aae14a022a60346078",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3396,
+      "face_count": 6788,
+      "float32_mesh_sha256": "79f35ea4a602d28511dd0c491bb9f8af997cd3aef2d59d7afa17b3468b345f62",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-01x06-H048-EDGE-C020": {
+      "path": "geometry/BR-01x06-H048-EDGE-C020.mesh.gz",
+      "bytes": 50022,
+      "sha256": "d0b56e7718c550065f1eda1a3fe6f3529ff63c183af92fc599644d5441daf3a8",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4147,
+      "face_count": 8290,
+      "float32_mesh_sha256": "07de4c02e74ce1c554ffa0296ec20cfbad84e38cabaf9a5c84ff763357d11838",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-01x08-H048-EDGE-C020": {
+      "path": "geometry/BR-01x08-H048-EDGE-C020.mesh.gz",
+      "bytes": 65575,
+      "sha256": "23471b8bc014bbbec49817359aacb88fe5ee21581e8e4a5cd50a4dcb9b13d04c",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5649,
+      "face_count": 11294,
+      "float32_mesh_sha256": "711e6c326a4d944fe481bae2dc142e69ed758ca488e9d406c9efdac53aa19b26",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-01x10-H048-EDGE-C020": {
+      "path": "geometry/BR-01x10-H048-EDGE-C020.mesh.gz",
+      "bytes": 83968,
+      "sha256": "83cb2e17d25df0f38cd18f55c2d0d8ed96ec37d8c3b883c937543dc358c6fb65",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 7151,
+      "face_count": 14298,
+      "float32_mesh_sha256": "20cbfc91aaeea0f341e5751b84410ee06cb10d1e06968d88d0abf1a62d994141",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-02x02-H048": {
+      "path": "geometry/BR-02x02-H048.mesh.gz",
+      "bytes": 24814,
+      "sha256": "9006b9dab8a852bac7595635715408069698bf5e64554833b7fd1a4fd34992be",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2045,
+      "face_count": 4086,
+      "float32_mesh_sha256": "68dcde39d696218f5923ec33252e2ef333dc363f5b1f7b6684519bbb78f28cc6",
+      "maximum_coordinate_rounding_error_mm": 4.9462891560381195e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-02x02-H048-EDGE-C020": {
+      "path": "geometry/BR-02x02-H048-EDGE-C020.mesh.gz",
+      "bytes": 24968,
+      "sha256": "5213c4e348e11fd15a961364dd85a2a52c17e92574423010f583b1409d3019e4",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2049,
+      "face_count": 4094,
+      "float32_mesh_sha256": "84efbec113e306f5d5473aafa0acc102a7e9667fe4e3a8c27434c4575035686e",
+      "maximum_coordinate_rounding_error_mm": 4.9462891560381195e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-02x03-H048": {
+      "path": "geometry/BR-02x03-H048.mesh.gz",
+      "bytes": 40274,
+      "sha256": "7a587fddf141861715c63150d3899293b0437cea744dd022b7a28d70db98cd0a",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3326,
+      "face_count": 6648,
+      "float32_mesh_sha256": "edf3cd5db0d90e4ca77b3a6dfdc2ced46916c8d4d6fd30ac2353e1e2bd87b6ef",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-02x03-H048-EDGE-C020": {
+      "path": "geometry/BR-02x03-H048-EDGE-C020.mesh.gz",
+      "bytes": 40281,
+      "sha256": "5057902aa43844b0fe318aacf523f6023ae6b0ebb7b65469cdba7a42810b59f5",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3330,
+      "face_count": 6656,
+      "float32_mesh_sha256": "1304e63fb5db24c994e3ece9dae9365fd76df5262b97f9035fe6998f95e4b3e9",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-02x04-H048": {
+      "path": "geometry/BR-02x04-H048.mesh.gz",
+      "bytes": 54768,
+      "sha256": "60b06c6fae27879a36e7fce7bd7cc93964ef9e9603ae8ef3121b15fbf073b338",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4607,
+      "face_count": 9210,
+      "float32_mesh_sha256": "b765441b67f47a10d348316f29b8aece61636d7d21a5f6d100c6e2473c11b437",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-02x04-H048-EDGE-C020": {
+      "path": "geometry/BR-02x04-H048-EDGE-C020.mesh.gz",
+      "bytes": 54627,
+      "sha256": "4f1815b1fa57a7b1f6f62535279ed122f2f9adbec23d91d5b5bf5daa50010106",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4611,
+      "face_count": 9218,
+      "float32_mesh_sha256": "73f1ba85beada7dbadde615b4d92b6e6f8c51af15ca3403898bc7440a7b25a07",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-02x05-H048-EDGE-C020": {
+      "path": "geometry/BR-02x05-H048-EDGE-C020.mesh.gz",
+      "bytes": 68601,
+      "sha256": "d818a5bc7c2b980512631e856ecc1813f573fe98d1732f8951056e57daa038be",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5892,
+      "face_count": 11780,
+      "float32_mesh_sha256": "0be231cdf3879b7d85cc4e2660df7a767c640490c051291fa432267ebadf549c",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-02x06-H048-EDGE-C020": {
+      "path": "geometry/BR-02x06-H048-EDGE-C020.mesh.gz",
+      "bytes": 83541,
+      "sha256": "263d305b714207aa50fab9a5ce9e68597d2d7949368d594fca55b302ffd4f0a9",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 7173,
+      "face_count": 14342,
+      "float32_mesh_sha256": "729874f9cd931f39922c0615cf92550ed41e1f309e659a46e75ff45ff5235a54",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-02x07-H048-EDGE-C020": {
+      "path": "geometry/BR-02x07-H048-EDGE-C020.mesh.gz",
+      "bytes": 98234,
+      "sha256": "405d507af44cb55b94f4c52e254f978880b2a065022908a1b691ebe1ed60bbc9",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 8454,
+      "face_count": 16904,
+      "float32_mesh_sha256": "574858c873abf55ed5ae2c6b06717a4b52c5ae6971e512801cdec3109f016de5",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-02x08-H048-EDGE-C020": {
+      "path": "geometry/BR-02x08-H048-EDGE-C020.mesh.gz",
+      "bytes": 111341,
+      "sha256": "ed07c9dc4dfb0debcf76afc0628062ddc5d76407085755b033878c07d3136026",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 9735,
+      "face_count": 19466,
+      "float32_mesh_sha256": "bbf14cafd5999635f1b39d2bab30774c1bd54483958147d13064f9391aadd553",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-03x04-H048-EDGE-C020": {
+      "path": "geometry/BR-03x04-H048-EDGE-C020.mesh.gz",
+      "bytes": 89906,
+      "sha256": "9531a5c424df529571ce01c192b35ceb9421fa43fc7c412e335790b95048005c",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 7702,
+      "face_count": 15400,
+      "float32_mesh_sha256": "b48d149ec584ca2c924f0e7c99e9188e417d0dff0c6c710e52339a8ba4b8a260",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-04x04-H048-EDGE-C020": {
+      "path": "geometry/BR-04x04-H048-EDGE-C020.mesh.gz",
+      "bytes": 124227,
+      "sha256": "83f83872295619833a8bc53d804a3081af6ecff2bcdd19c3b36d28dbdc7230a3",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 10793,
+      "face_count": 21582,
+      "float32_mesh_sha256": "46587283ae1c717491a0f9de751acee8c9a231689a34ce608e0d23a9657eaefd",
+      "maximum_coordinate_rounding_error_mm": 4.992676494453008e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-04x05-H048-EDGE-C020": {
+      "path": "geometry/BR-04x05-H048-EDGE-C020.mesh.gz",
+      "bytes": 157933,
+      "sha256": "531e0c2548e8d4490a11975c1832fa25c66c8754290ac550e40b4d8565ca3221",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 13884,
+      "face_count": 27764,
+      "float32_mesh_sha256": "918ce85cc6ef5b72d8d0cc5e9d77879562da2c4f7d8e09322c6d169ea1e579a2",
+      "maximum_coordinate_rounding_error_mm": 4.992676494453008e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BR-04x06-H048-EDGE-C020": {
+      "path": "geometry/BR-04x06-H048-EDGE-C020.mesh.gz",
+      "bytes": 191619,
+      "sha256": "ddd752755eb367b5fbc6a3b2d440dc1fa46bdece4b7dea532daf1fb42e902d9c",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 16975,
+      "face_count": 33946,
+      "float32_mesh_sha256": "fb390ea18b2ba1288cd5291f88a5c007ab57cc2345a4d6bef77d9bd14461051e",
+      "maximum_coordinate_rounding_error_mm": 4.992676494453008e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "BS-f1562cd26f18d2e0": {
+      "path": "geometry/BS-f1562cd26f18d2e0.mesh.gz",
+      "bytes": 1224174,
+      "sha256": "a1e6e149dc120e8de0e3147831c6db70021a2d2df8edf0a0480da5f173d084eb",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 110873,
+      "face_count": 221742,
+      "float32_mesh_sha256": "7fd70599419f7c86e9abad95d70e974ab89c87f84f11164e1b5db38c025a7303",
+      "maximum_coordinate_rounding_error_mm": 4.992676494453008e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-03C-H048-c1d6f05dcc": {
+      "path": "geometry/CT-03C-H048-c1d6f05dcc.mesh.gz",
+      "bytes": 14277,
+      "sha256": "6cb111902fa18a3061c32e3a12420253b297e24c73b18dead6975815e16ffacf",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1158,
+      "face_count": 2312,
+      "float32_mesh_sha256": "c1ae884b0e673e4be5d10a9fa30ad55f10f6e80d3ec4cd2ab17577a1b7efe377",
+      "maximum_coordinate_rounding_error_mm": 4.9462891560381195e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-03C-H048-c1d6f05dcc-EDGE-C020": {
+      "path": "geometry/CT-03C-H048-c1d6f05dcc-EDGE-C020.mesh.gz",
+      "bytes": 14404,
+      "sha256": "e5959b09b2ef358f48c20cb1ef2721f6a55afad5a15f84ab6149b6c81a86dd01",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1164,
+      "face_count": 2324,
+      "float32_mesh_sha256": "20b0b5ddaa04afed2a7a9a0b0673883e69c57257656c507f368eed2fbee7bc71",
+      "maximum_coordinate_rounding_error_mm": 4.9462891560381195e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-04C-H048-15e33fd0c4": {
+      "path": "geometry/CT-04C-H048-15e33fd0c4.mesh.gz",
+      "bytes": 19089,
+      "sha256": "70e11c81eafae3e8ac813bdb98a7f4edb5ba55557696deab7894e984324be10c",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1540,
+      "face_count": 3076,
+      "float32_mesh_sha256": "031e93d87f70b3fae580b1034221161653738a6423a439c9ab04223e31ef3fa4",
+      "maximum_coordinate_rounding_error_mm": 4.98443597507503e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-04C-H048-15e33fd0c4-EDGE-C020": {
+      "path": "geometry/CT-04C-H048-15e33fd0c4-EDGE-C020.mesh.gz",
+      "bytes": 19282,
+      "sha256": "81eba109c046d619fb529b3851b43b625a484a7cafd6dc4802fea5098c4a6b78",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1546,
+      "face_count": 3088,
+      "float32_mesh_sha256": "49f4c81d7e6141f871ca7abbb274d744575f58ba88096cd41f0864c32648c768",
+      "maximum_coordinate_rounding_error_mm": 4.98443597507503e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-04C-H048-8e241044a8": {
+      "path": "geometry/CT-04C-H048-8e241044a8.mesh.gz",
+      "bytes": 18996,
+      "sha256": "e357e289af8fb54c114d77c0e56f5a1e88958e5f3f1063aeb637b4083a01b5aa",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1540,
+      "face_count": 3076,
+      "float32_mesh_sha256": "42d5742a0fa44c8d9135cbdffda6cb5a5318de87b6accc33b850e5f4efcd138f",
+      "maximum_coordinate_rounding_error_mm": 4.98443597507503e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-04C-H048-8e241044a8-EDGE-C020": {
+      "path": "geometry/CT-04C-H048-8e241044a8-EDGE-C020.mesh.gz",
+      "bytes": 19126,
+      "sha256": "d9ed2e3c8eaabefb2edc49c737a2144a7c4b491807d5b5a4c1d56b3074f5ab32",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1546,
+      "face_count": 3088,
+      "float32_mesh_sha256": "0409cabdd44d31b4b2423b0bec253ee72eaff11b49b615a9e4695e163ace879e",
+      "maximum_coordinate_rounding_error_mm": 4.98443597507503e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-04C-H048-c7f6e1087d-EDGE-C020": {
+      "path": "geometry/CT-04C-H048-c7f6e1087d-EDGE-C020.mesh.gz",
+      "bytes": 19184,
+      "sha256": "eb03cb16722bd6022a657d69f5ddd375791fa7ceeddf6b7e5a1b68832ffa2543",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1556,
+      "face_count": 3108,
+      "float32_mesh_sha256": "6f8aa03be5b94377b542d35b950c1fae7f6877e65c5dc613ac87d779cb71d39f",
+      "maximum_coordinate_rounding_error_mm": 4.98443597507503e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-05C-H048-1898941840-EDGE-C020": {
+      "path": "geometry/CT-05C-H048-1898941840-EDGE-C020.mesh.gz",
+      "bytes": 23878,
+      "sha256": "5d5264fc6515c6e491a968f7530e05be8a37f41f8733b0ad9b6a001781477e91",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1933,
+      "face_count": 3862,
+      "float32_mesh_sha256": "f482935404b239dfcd488419dcc27e85a5536b0954bb979b452cba33728f1361",
+      "maximum_coordinate_rounding_error_mm": 4.9462891560381195e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-05C-H048-358de10196-EDGE-C020": {
+      "path": "geometry/CT-05C-H048-358de10196-EDGE-C020.mesh.gz",
+      "bytes": 24539,
+      "sha256": "8f070f8aab5bf7fbd3d47b74f5157ec12f50698d7190693c275e701623346d3a",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1943,
+      "face_count": 3882,
+      "float32_mesh_sha256": "d19e0575aa1b0d7c964b6395a1f8e8e26d64768b146369e39e81e54d34b0636f",
+      "maximum_coordinate_rounding_error_mm": 4.9462891560381195e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-05C-H048-4415eb3f30-EDGE-C020": {
+      "path": "geometry/CT-05C-H048-4415eb3f30-EDGE-C020.mesh.gz",
+      "bytes": 23979,
+      "sha256": "d3ab28918972c1c9634363bed5b92f708f91a7fc484b691bae4c2ad8733266b9",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1943,
+      "face_count": 3882,
+      "float32_mesh_sha256": "05081896157371965bb5991eb2f6a6cd5465d5a54a148c11c85ba2a4aa4250f6",
+      "maximum_coordinate_rounding_error_mm": 4.9462891560381195e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-05C-H048-73f76289ae": {
+      "path": "geometry/CT-05C-H048-73f76289ae.mesh.gz",
+      "bytes": 23565,
+      "sha256": "5c67f2502d28614047e5da5e173baecc338320e715ca84d2cafc90b97c6bf99a",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1927,
+      "face_count": 3850,
+      "float32_mesh_sha256": "74ebc53c9dd0dd9e67fd1a576e84988589c9e2b060cc49470c6b92eb36a5102f",
+      "maximum_coordinate_rounding_error_mm": 4.9462891560381195e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-05C-H048-73f76289ae-EDGE-C020": {
+      "path": "geometry/CT-05C-H048-73f76289ae-EDGE-C020.mesh.gz",
+      "bytes": 23700,
+      "sha256": "7e4ffb26a4b84899647c33263bf650ec1fba6d72df0dea8043b73e70b4b21515",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1933,
+      "face_count": 3862,
+      "float32_mesh_sha256": "02e5d7a67416039ee75b91d1f8019e0befdc6ed74bbfb3f9508ff6d5ba25771a",
+      "maximum_coordinate_rounding_error_mm": 4.9462891560381195e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-05C-H048-7ede4fdf04": {
+      "path": "geometry/CT-05C-H048-7ede4fdf04.mesh.gz",
+      "bytes": 30866,
+      "sha256": "85e0d1c7fc22d9402975b690930b239283ac2c14058e5e14186d2857559a3a2e",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2446,
+      "face_count": 4888,
+      "float32_mesh_sha256": "2c6079f6e60372a2620cf7f43ccb037e349918fbd1dce137c32253331331c548",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-05C-H048-7ede4fdf04-EDGE-C020": {
+      "path": "geometry/CT-05C-H048-7ede4fdf04-EDGE-C020.mesh.gz",
+      "bytes": 30939,
+      "sha256": "984c49ca423a105d3e382ad8041d2d040447e5c30f0ca9f4a9ec0e1f4fdba489",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2452,
+      "face_count": 4900,
+      "float32_mesh_sha256": "f21d1e01ce6d75671b5b41a85233705f03cf1d075d3aa51c90f5a836ce15c899",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-05C-H048-9fb1b8d9d3-EDGE-C020": {
+      "path": "geometry/CT-05C-H048-9fb1b8d9d3-EDGE-C020.mesh.gz",
+      "bytes": 23930,
+      "sha256": "8568a532a8391d4570b18ec9c7ae7869c3c396b4b480cd15f7ef1f0eb4dce902",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1943,
+      "face_count": 3882,
+      "float32_mesh_sha256": "1581f97d5e2912f06d9f0c35e2d8bd3669b8cc0b2bff7be858187a03358d5733",
+      "maximum_coordinate_rounding_error_mm": 4.9462891560381195e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-05C-H048-c763985811": {
+      "path": "geometry/CT-05C-H048-c763985811.mesh.gz",
+      "bytes": 30679,
+      "sha256": "e7a48bcca71ffa4bda694845af9c492a3965b4a3cc8b02135bc8ba5dd5c75696",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2446,
+      "face_count": 4888,
+      "float32_mesh_sha256": "d4cf2dff502c73534fa5867b5f4848833cbdd6fd09de1847fb5201a59606b825",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-05C-H048-c763985811-EDGE-C020": {
+      "path": "geometry/CT-05C-H048-c763985811-EDGE-C020.mesh.gz",
+      "bytes": 30837,
+      "sha256": "cf2efacecd1dfa67a7420527bfe2f1b04ae73f88a664583ae0027a991b45809c",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2452,
+      "face_count": 4900,
+      "float32_mesh_sha256": "861684ae383f080227d0f8c60e2ccfb76a0061fe85af5493c8f1d908da89f873",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-05C-H048-e7674de05c-EDGE-C020": {
+      "path": "geometry/CT-05C-H048-e7674de05c-EDGE-C020.mesh.gz",
+      "bytes": 23515,
+      "sha256": "0a2a1f09212684981f814f1f9b93eee13104612a8dd0f4509f1c0d9a5f7ca3b2",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1932,
+      "face_count": 3860,
+      "float32_mesh_sha256": "06aad247af9549c2f482ff1a0d952d236e71bc5c08e15c8a2aa6784cbe71f420",
+      "maximum_coordinate_rounding_error_mm": 4.98443597507503e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-06C-H048-0fcf335a29-EDGE-C020": {
+      "path": "geometry/CT-06C-H048-0fcf335a29-EDGE-C020.mesh.gz",
+      "bytes": 35903,
+      "sha256": "c74466508ac14d6f4a458f6b99ec0638d14ae2e60f1cbae95f54c6eab8fe4f35",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2838,
+      "face_count": 5672,
+      "float32_mesh_sha256": "17b597d600a29bbd85840eafb898cc438ba88461b84df9f8f8ea90a1a5d017e9",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-06C-H048-1f09483782": {
+      "path": "geometry/CT-06C-H048-1f09483782.mesh.gz",
+      "bytes": 35575,
+      "sha256": "d4c969c954f75cdf0345c3e9e3138a915235c4ecdeac7def2f754ab04df5c511",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2831,
+      "face_count": 5658,
+      "float32_mesh_sha256": "655d4fc51d97a08f9031566aefd608c6005284e75b233957e3f1da092efd8730",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-06C-H048-1f09483782-EDGE-C020": {
+      "path": "geometry/CT-06C-H048-1f09483782-EDGE-C020.mesh.gz",
+      "bytes": 35637,
+      "sha256": "22003d29d41fdde818041732fe6e8dde54cd51d1de3e55f63c4192614f3389bd",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2839,
+      "face_count": 5674,
+      "float32_mesh_sha256": "d568f686d1577006e6c726ab91b7f41fda9883a41a56d487363bb1f54ba896ec",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-06C-H048-31129ef203-EDGE-C020": {
+      "path": "geometry/CT-06C-H048-31129ef203-EDGE-C020.mesh.gz",
+      "bytes": 35377,
+      "sha256": "b70eea676d1890fb048ef5a22a904035799c2559d71a86a20e72a1f3c645bc20",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2837,
+      "face_count": 5670,
+      "float32_mesh_sha256": "45e3a1e09c3b1cc6f85e8b5df48307fb3ef9a7c352bdf0cedf750fd8390f92e1",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-06C-H048-35cb3dae83-EDGE-C020": {
+      "path": "geometry/CT-06C-H048-35cb3dae83-EDGE-C020.mesh.gz",
+      "bytes": 29934,
+      "sha256": "bf9786da6598deb1c88b50c2f05fd4115f967bbc5e279988b80c80340305b33e",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2328,
+      "face_count": 4652,
+      "float32_mesh_sha256": "eef9f9c419c02d8a8b6376590c64fb53b8190ef5c0045901df5259d1d09a52af",
+      "maximum_coordinate_rounding_error_mm": 4.98443597507503e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-06C-H048-40fc84d825-EDGE-C020": {
+      "path": "geometry/CT-06C-H048-40fc84d825-EDGE-C020.mesh.gz",
+      "bytes": 29211,
+      "sha256": "e4df648aa854cf2c3e7df583a9b11ee1ccaadf49af3f8c585ec23c57175a0216",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2319,
+      "face_count": 4634,
+      "float32_mesh_sha256": "b567c148e8663e97b58f5faea105e979507962759d93b7c5197062740b3976a3",
+      "maximum_coordinate_rounding_error_mm": 4.973143674646963e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-06C-H048-57cbd8448c-EDGE-C020": {
+      "path": "geometry/CT-06C-H048-57cbd8448c-EDGE-C020.mesh.gz",
+      "bytes": 28669,
+      "sha256": "fce538a6011ad948c7f03a871aed7fab590ef2a8e15a3f0c51803d3505fc039a",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2319,
+      "face_count": 4634,
+      "float32_mesh_sha256": "85e6c2f334f076d73ceb36b64c24ed6447d22a4557d3512bdff91921d83e4a36",
+      "maximum_coordinate_rounding_error_mm": 4.973143674646963e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-06C-H048-6fa6c35f3e-EDGE-C020": {
+      "path": "geometry/CT-06C-H048-6fa6c35f3e-EDGE-C020.mesh.gz",
+      "bytes": 28297,
+      "sha256": "725c4651e5b415362f669f889a9f167ccb9aa426b74c0f439a2bb800b9873ce5",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2318,
+      "face_count": 4632,
+      "float32_mesh_sha256": "042a8b5cc998e6fdd64daf448486ff3dc2e4707e779e5084f20945b393d0b90c",
+      "maximum_coordinate_rounding_error_mm": 4.98443597507503e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-06C-H048-7e0a0c4a1a-EDGE-C020": {
+      "path": "geometry/CT-06C-H048-7e0a0c4a1a-EDGE-C020.mesh.gz",
+      "bytes": 34446,
+      "sha256": "80b76610799da24a795c26b61727e8182d715656024f0d02c254d144ef28384d",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2848,
+      "face_count": 5692,
+      "float32_mesh_sha256": "23fbaefd1c99487129b41f860a74aaadf90978baf821a9ae99cf2ec1f0813338",
+      "maximum_coordinate_rounding_error_mm": 4.9462891560381195e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-06C-H048-a31e2b092f-EDGE-C020": {
+      "path": "geometry/CT-06C-H048-a31e2b092f-EDGE-C020.mesh.gz",
+      "bytes": 28535,
+      "sha256": "a01a1cc12409a88c49b421ad1af5e52d0df6510a9cd839334230987fa7d05b89",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2328,
+      "face_count": 4652,
+      "float32_mesh_sha256": "049aa6ff35dd77b3e3f339ab1af9d0e5d9611c920b3b104eaf26e55c1bb14b84",
+      "maximum_coordinate_rounding_error_mm": 4.98443597507503e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-06C-H048-adaaf29086": {
+      "path": "geometry/CT-06C-H048-adaaf29086.mesh.gz",
+      "bytes": 35577,
+      "sha256": "6a0b04353de8773993ed092e6c6ae98705f88d4089cc0546ad7a8a1c97772e9e",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2832,
+      "face_count": 5660,
+      "float32_mesh_sha256": "794d445a12221837e5500d6fb623d3b7d5bbdbafa966c16cd4a7a1650fe1b249",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-06C-H048-adaaf29086-EDGE-C020": {
+      "path": "geometry/CT-06C-H048-adaaf29086-EDGE-C020.mesh.gz",
+      "bytes": 35554,
+      "sha256": "f23e6d8ec7231fd2c8f2c68e9090ed5e4d3ff12507d7a5a18ae4c32838c845ce",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2838,
+      "face_count": 5672,
+      "float32_mesh_sha256": "5e103a5f3f75c829ca527e0347879c14ce2aae8b9d04e485e02e519582aff829",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-19b018b623": {
+      "path": "geometry/CT-07C-H048-19b018b623.mesh.gz",
+      "bytes": 45897,
+      "sha256": "710a250d9e13adaa4680137332a8d0ed37eadfe5969c31fecd899a672003b7c2",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3737,
+      "face_count": 7470,
+      "float32_mesh_sha256": "6242cdd7dbed74cf59893436f213ea9f99425234a4b1f000c9aa4330b47963d3",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-19b018b623-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-19b018b623-EDGE-C020.mesh.gz",
+      "bytes": 45833,
+      "sha256": "8dc35f6bc44964cd8b1eb8efeca3f42a39290f7f0d047d6c46096e644a41b71f",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3743,
+      "face_count": 7482,
+      "float32_mesh_sha256": "acb82f0d8ef2a249dfc9e91c1cb6c022618b728faf5939020e64ba84f03a57b1",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-370aafe7ff-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-370aafe7ff-EDGE-C020.mesh.gz",
+      "bytes": 40022,
+      "sha256": "c5f493986b525b113766d35d7ae24fe066578ccbd3adaad1ffdd82a6432d8f55",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3233,
+      "face_count": 6462,
+      "float32_mesh_sha256": "c17a59f999ee7e2937880f567de5216ee1445536ee9e8d50db578ad29254f5d8",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-47687fad65-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-47687fad65-EDGE-C020.mesh.gz",
+      "bytes": 40066,
+      "sha256": "a510e926591400ab0ce2567b1cf1e08c91c8385b467c35d9bdb6d476d3647e8b",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3223,
+      "face_count": 6442,
+      "float32_mesh_sha256": "23181b33d46a1d41628abd7fdebe1dda7c5460502b3774c3ddccdcfd257c1831",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-48e06b5e1e": {
+      "path": "geometry/CT-07C-H048-48e06b5e1e.mesh.gz",
+      "bytes": 45676,
+      "sha256": "14a399007f5240fb14f35421055ac415ae0a244d8a702e8435d973353b97d0bd",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3736,
+      "face_count": 7468,
+      "float32_mesh_sha256": "1a1b06bb2559ecfbdfb785f7271b95447c8d60c894b6d00568bbf25a05bef0f7",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-48e06b5e1e-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-48e06b5e1e-EDGE-C020.mesh.gz",
+      "bytes": 45729,
+      "sha256": "b204ebdb3145ae0b7b3bf0ecbc52bbdb8451166de0ff8dd8a4d1729ccc381e8b",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3742,
+      "face_count": 7480,
+      "float32_mesh_sha256": "6c271e4b2a0754569e970183399e7d481fa166029ab25ade987e051ebc0128f7",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-6da108573e-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-6da108573e-EDGE-C020.mesh.gz",
+      "bytes": 39791,
+      "sha256": "1a8e6fb280ef3224ff7249a7338db1c4bf0d8442e1887eff745a81544392a32e",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3223,
+      "face_count": 6442,
+      "float32_mesh_sha256": "c6d2edec1092b5a9a1cd909e1d30678d3d2e2453933cf89b0ad548fd2d2e60fc",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-6f6d33aa39-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-6f6d33aa39-EDGE-C020.mesh.gz",
+      "bytes": 33397,
+      "sha256": "3bd9f6813de6794a7384c9b27ea49925275aa4de362d04a2c3d90957f993aa1b",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2713,
+      "face_count": 5422,
+      "float32_mesh_sha256": "4560a98e91036a0ceaa191c1afa18bd3ddc9f389958b537cba9fdd32a8e95d6c",
+      "maximum_coordinate_rounding_error_mm": 4.946290488305749e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-72a74687bf-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-72a74687bf-EDGE-C020.mesh.gz",
+      "bytes": 39470,
+      "sha256": "87aa7f14de4d5bb891e76fe570a7e417a9b0ebecc2013f505965d538815517ca",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3233,
+      "face_count": 6462,
+      "float32_mesh_sha256": "e7d53ba83ea899db6e3706c18f42cfca8df1635b8923e55bb3b0e19034d7cffb",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-8db0b03e41-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-8db0b03e41-EDGE-C020.mesh.gz",
+      "bytes": 45254,
+      "sha256": "924a4246fc122dd924771571ca8060de183bf7d95ddb398665f3d1814371a9da",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3734,
+      "face_count": 7464,
+      "float32_mesh_sha256": "3890396dc8837db8cc2d9d89b987d9344f870cef4aa4ad08e42fa3a81a653b38",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-9088f6a05f-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-9088f6a05f-EDGE-C020.mesh.gz",
+      "bytes": 34380,
+      "sha256": "2a036130f4e71262be74e433546db848bc6ead7f886b0b309c1d544717dbbf0d",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2713,
+      "face_count": 5422,
+      "float32_mesh_sha256": "5a4be7e6af077e54dfac9a17d92822678b0cabfb4a589aa305dd7f8898ae5e2c",
+      "maximum_coordinate_rounding_error_mm": 4.946290488305749e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-9beb2ab922-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-9beb2ab922-EDGE-C020.mesh.gz",
+      "bytes": 39933,
+      "sha256": "524b8eaab59fbee5338614c086fd3b8f2294d7a055a22178c4210b746cb6bee4",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3234,
+      "face_count": 6464,
+      "float32_mesh_sha256": "933dae2598301aaf7c2e16708ea56a621094d7a1c0919fcbea4bf66be1b5c627",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-9fe7fee271-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-9fe7fee271-EDGE-C020.mesh.gz",
+      "bytes": 45365,
+      "sha256": "3fb8c30ce50e30bbfd0a60dc346b8bf5963b76a284b6e079dcd9b82bb5d3672b",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3734,
+      "face_count": 7464,
+      "float32_mesh_sha256": "afda9a94e6a509e6e7051d7aab708627cc220c22974e1b410d6d4845670fe6ea",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-ccf91ed838-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-ccf91ed838-EDGE-C020.mesh.gz",
+      "bytes": 34265,
+      "sha256": "9f07fd041f1ac823e17ed4fc754365db238ea93d541f99c5eba514468570738c",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2705,
+      "face_count": 5406,
+      "float32_mesh_sha256": "b177a70bd62204d56afcba5f2152e938a9bfe0ab479377cdeeb38e041090fb87",
+      "maximum_coordinate_rounding_error_mm": 4.98443597507503e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-d4c0928299": {
+      "path": "geometry/CT-07C-H048-d4c0928299.mesh.gz",
+      "bytes": 39621,
+      "sha256": "6ef96171bcb99c9d65fdcf0a15e125e341b0bbbaab803e3bf3d3e40f4085f060",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3215,
+      "face_count": 6426,
+      "float32_mesh_sha256": "b49b4e7206a95ad71517d2ae25f712d89c748ade0aee7534d2ba7518dbf8e2a0",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-d4c0928299-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-d4c0928299-EDGE-C020.mesh.gz",
+      "bytes": 39670,
+      "sha256": "aac265df2dc84f26618713de5c87a4e4c9ad698885d9c14ed8f7440db3af344a",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3223,
+      "face_count": 6442,
+      "float32_mesh_sha256": "d400f703ba5c3c2ddd552a8faa3deb7ced426a729bea74d83116106a6813c85f",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-dcb01270ec-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-dcb01270ec-EDGE-C020.mesh.gz",
+      "bytes": 40993,
+      "sha256": "d9cf6f0aa44651e450f7f1b41bc9165fa56bab30a19e71e8f736c25456bbded8",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3233,
+      "face_count": 6462,
+      "float32_mesh_sha256": "b80c82ed7ca948696333b164e2ef3db734c4c87b49ef928eb8e35532518fa8aa",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-e42e91e2b8": {
+      "path": "geometry/CT-07C-H048-e42e91e2b8.mesh.gz",
+      "bytes": 39682,
+      "sha256": "d8dc90a17b711296c93b8c56ca7ce33a0798e9f9313a72ad79bd351de74df189",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3216,
+      "face_count": 6428,
+      "float32_mesh_sha256": "f262a7ded3494d1e2a0c900a12643409ce6ecb651078e3e30e4b09c0a03a44ce",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-e42e91e2b8-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-e42e91e2b8-EDGE-C020.mesh.gz",
+      "bytes": 39682,
+      "sha256": "ff1698286a58bab2e662eee5af06a249e146ccad157b5982584e1117eddfd4aa",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3224,
+      "face_count": 6444,
+      "float32_mesh_sha256": "7583c6b5c78b7a978ae5a14b66c0ca2a8729f200ef2d8a82b6946d7d8c61f49e",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-f7779baa32": {
+      "path": "geometry/CT-07C-H048-f7779baa32.mesh.gz",
+      "bytes": 40456,
+      "sha256": "09959dbeffaa1bb5cd7139a18737bf2eaa8e1b6b0a4b0e263fdb0598d8d0fa96",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3215,
+      "face_count": 6426,
+      "float32_mesh_sha256": "9971bb0fdb1203f58ee127229e51db94906ecd22d4e877afc8f90f781d3816e6",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-07C-H048-fa3c95b030-EDGE-C020": {
+      "path": "geometry/CT-07C-H048-fa3c95b030-EDGE-C020.mesh.gz",
+      "bytes": 32614,
+      "sha256": "cdb8ecf0dec904fbaed44e1a1668d5ef09a19fa7bbf1007ec8c732aafa2c69ce",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2703,
+      "face_count": 5402,
+      "float32_mesh_sha256": "7f3f18f171c2774f95d2a8d56a0fb477d2d5ded62cf4524e586d66430bd62423",
+      "maximum_coordinate_rounding_error_mm": 4.946290488305749e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-08C-H048-0300667972": {
+      "path": "geometry/CT-08C-H048-0300667972.mesh.gz",
+      "bytes": 50955,
+      "sha256": "62cb338856bf1539170b1ffe0e61f893d32e7739fa0346519f4865c619a01c55",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4123,
+      "face_count": 8242,
+      "float32_mesh_sha256": "e67645ecdfc5f6a6a27d6057b514ca4c307cc36dc664ca5dbfefc5aa36cc5cc5",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-08C-H048-210717a140-EDGE-C020": {
+      "path": "geometry/CT-08C-H048-210717a140-EDGE-C020.mesh.gz",
+      "bytes": 44151,
+      "sha256": "ff2d054d2807fc71d95a704b245fba01750f4ba2805129c15ddba8d64fa1aed9",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3599,
+      "face_count": 7194,
+      "float32_mesh_sha256": "aa044139d52d17d156f6498a624152034c515f2c360eb151248692083f3f8213",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-08C-H048-2676942104-EDGE-C020": {
+      "path": "geometry/CT-08C-H048-2676942104-EDGE-C020.mesh.gz",
+      "bytes": 50967,
+      "sha256": "2a8809082a9a0b017de4450ab3bae468bf883668d492e94a33553e7f210ead73",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4128,
+      "face_count": 8252,
+      "float32_mesh_sha256": "d77ed4a8315c61f2305b7a4e0a16ce9e45b0509ddd45b0b13058a15e752026b5",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-08C-H048-385592b6ac-EDGE-C020": {
+      "path": "geometry/CT-08C-H048-385592b6ac-EDGE-C020.mesh.gz",
+      "bytes": 50654,
+      "sha256": "002f87e662423dc1a4abe5b49ea003760233ab9eb2657d97bdd44931952dae39",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4129,
+      "face_count": 8254,
+      "float32_mesh_sha256": "0b10714ffbb1c43458ced02fd7062e774166b7fe0cf227dd5f2fcc6dffa8c9f2",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-08C-H048-40c07caec4-EDGE-C020": {
+      "path": "geometry/CT-08C-H048-40c07caec4-EDGE-C020.mesh.gz",
+      "bytes": 50490,
+      "sha256": "68c07381d7bbf18c5e02c79a94d8da4cb6293345f039fa1b45660487b1ae6a53",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4128,
+      "face_count": 8252,
+      "float32_mesh_sha256": "afd0b162eb3d3ce8071fce647c76d459203c0db1cee2b65f3d25ee1f7d228ed1",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-08C-H048-554eeb4216-EDGE-C020": {
+      "path": "geometry/CT-08C-H048-554eeb4216-EDGE-C020.mesh.gz",
+      "bytes": 37834,
+      "sha256": "c407d7a39d2482a3c3b80565a05d279b938c4f90b45fcccaa486a72a558db43b",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3072,
+      "face_count": 6140,
+      "float32_mesh_sha256": "7263b97c0822f6f52144142375259f5c71791b74661d633acf99a5b044944e4b",
+      "maximum_coordinate_rounding_error_mm": 4.98443597507503e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-08C-H048-9022c20661-EDGE-C020": {
+      "path": "geometry/CT-08C-H048-9022c20661-EDGE-C020.mesh.gz",
+      "bytes": 55487,
+      "sha256": "e92dc43fd781b0d69e8bc4460a5d0710f4ac611b5b30e66e2f1576b38764ef40",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4640,
+      "face_count": 9276,
+      "float32_mesh_sha256": "749f5b6c5f8b3a54feeab9b33bd7c252bbbd31732deccef7df47805ac78a3312",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-08C-H048-a11ffc3c17-EDGE-C020": {
+      "path": "geometry/CT-08C-H048-a11ffc3c17-EDGE-C020.mesh.gz",
+      "bytes": 44291,
+      "sha256": "8eb5f3adb1c690cdc68b2bca3e9998c1a3cb7552a27bc2d980bb61bf79904e83",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3599,
+      "face_count": 7194,
+      "float32_mesh_sha256": "a2f44c86167b25411fdd8262972eea8e1a7e35f032dde959a7e95c31db25e516",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-08C-H048-bb0ded6fb4-EDGE-C020": {
+      "path": "geometry/CT-08C-H048-bb0ded6fb4-EDGE-C020.mesh.gz",
+      "bytes": 37167,
+      "sha256": "4176652621a63b52c034ebd4f463f828ca73506188ee48f5bd6bea7319db6935",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3076,
+      "face_count": 6148,
+      "float32_mesh_sha256": "a54e999ec2cf9e7b83c58a9d630a3eb7a029253f1879623f35c69c09f23a7fcb",
+      "maximum_coordinate_rounding_error_mm": 4.973143674646963e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-08C-H048-c97240b548-EDGE-C020": {
+      "path": "geometry/CT-08C-H048-c97240b548-EDGE-C020.mesh.gz",
+      "bytes": 38423,
+      "sha256": "f509a10aa808df37e73a26275b1ea883f8ec5811c2d83f499316a99b65353dfb",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3097,
+      "face_count": 6190,
+      "float32_mesh_sha256": "b87d2e03d37bcea4dd9ff44dea572b4f09be0629ef79ec0216fa707eabcbdb75",
+      "maximum_coordinate_rounding_error_mm": 4.98443597507503e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-08C-H048-dc99f97b92-EDGE-C020": {
+      "path": "geometry/CT-08C-H048-dc99f97b92-EDGE-C020.mesh.gz",
+      "bytes": 50880,
+      "sha256": "0b28657d7d32672851f2f0064ecabc145a4b9dcf5f5d4d4393eebf59191096b2",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4118,
+      "face_count": 8232,
+      "float32_mesh_sha256": "e602fafa182ce8ac426082a247eb656046e158248980bf36f4f4c436de2e6ddf",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-08C-H048-e64f5ce8c6-EDGE-C020": {
+      "path": "geometry/CT-08C-H048-e64f5ce8c6-EDGE-C020.mesh.gz",
+      "bytes": 50201,
+      "sha256": "967a2e66f4fdbef273b8afc201ecf270fcb745027415955025667b32f6cdbfde",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4128,
+      "face_count": 8252,
+      "float32_mesh_sha256": "f3094c623d165d2ad91fcf31e53b4496c6ccabfd7a0cc01ae69a808b443c0a86",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-09C-H048-10fa964061-EDGE-C020": {
+      "path": "geometry/CT-09C-H048-10fa964061-EDGE-C020.mesh.gz",
+      "bytes": 60134,
+      "sha256": "7ef2e3aacab6c11a652ba49a51238ee1480f8dea9d19c225ab253e4edafc86b7",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5035,
+      "face_count": 10066,
+      "float32_mesh_sha256": "25ecc9cf6b4a89ee323a76caee58015de846c25815384abf2ce1818d85b60e2a",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-09C-H048-1b75716a54-EDGE-C020": {
+      "path": "geometry/CT-09C-H048-1b75716a54-EDGE-C020.mesh.gz",
+      "bytes": 60282,
+      "sha256": "018e7e13536d61772a8c8cde1641c60f704d2225079d73c38f03bfdf447e5a6a",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5035,
+      "face_count": 10066,
+      "float32_mesh_sha256": "70a77dd6685e537809fb819dfc6282110db70f1b2aef06f7d12b6e1b837d8202",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-09C-H048-2525716df2-EDGE-C020": {
+      "path": "geometry/CT-09C-H048-2525716df2-EDGE-C020.mesh.gz",
+      "bytes": 48072,
+      "sha256": "7a46e2368eb0ed17f237d683eca21409277cffdfa2654cc97a324bc88ec4ee82",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4014,
+      "face_count": 8024,
+      "float32_mesh_sha256": "1df594b26e98fb9b8dbcebd25411888fa7a59528d43267d108988dd431a532c5",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-09C-H048-2942373b3f-EDGE-C020": {
+      "path": "geometry/CT-09C-H048-2942373b3f-EDGE-C020.mesh.gz",
+      "bytes": 59579,
+      "sha256": "c5e47fdd9a47816e9a3dec249e3bbb4e677c0e854e1725646aa7625ae7212d52",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5023,
+      "face_count": 10042,
+      "float32_mesh_sha256": "0fec732a9ecf823eb58bf448637487b64d5da57cc03133fec53770bdcd0aa096",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-09C-H048-2f6410248c-EDGE-C020": {
+      "path": "geometry/CT-09C-H048-2f6410248c-EDGE-C020.mesh.gz",
+      "bytes": 59801,
+      "sha256": "d85a8c5be0ddeeb9dbd99dee33561afc23d3f182081e4dfe385e79a1a3e37b39",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5033,
+      "face_count": 10062,
+      "float32_mesh_sha256": "0d759eab280a20646d84d93205f48178326c7b064b2a3e07e2314e8ed92854e3",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-09C-H048-415b9d4854-EDGE-C020": {
+      "path": "geometry/CT-09C-H048-415b9d4854-EDGE-C020.mesh.gz",
+      "bytes": 61148,
+      "sha256": "f2adc8cba03db434695fce28251c3b9789f285078bc31ccae62bdeaf9256a087",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5033,
+      "face_count": 10062,
+      "float32_mesh_sha256": "d4e84cd67c8d8b9fbcacda86de9c04cd94b0954cab8715d1787ddf0dbd625bed",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-09C-H048-4acbc065e3-EDGE-C020": {
+      "path": "geometry/CT-09C-H048-4acbc065e3-EDGE-C020.mesh.gz",
+      "bytes": 48113,
+      "sha256": "1b493416694c5cd57e7f0e6e8df1c34d52b1b17ccb5459566fc953a4b04a73e8",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4004,
+      "face_count": 8004,
+      "float32_mesh_sha256": "28c62bf413b7c86598cb6f9eabac20970ada9241b34798c47b16cd1b35308365",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-09C-H048-5a6f2acc1c-EDGE-C020": {
+      "path": "geometry/CT-09C-H048-5a6f2acc1c-EDGE-C020.mesh.gz",
+      "bytes": 56592,
+      "sha256": "b4880ada1d5ae0a175d27309abb63ed20f17fbd540d43fab954f4ede7e31ea1d",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4524,
+      "face_count": 9044,
+      "float32_mesh_sha256": "0f2cf5f6e68ddeeb8baf068d417865232349a68268a952bbf643f69b9c2b07dc",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-09C-H048-5ba1c77317-EDGE-C020": {
+      "path": "geometry/CT-09C-H048-5ba1c77317-EDGE-C020.mesh.gz",
+      "bytes": 59810,
+      "sha256": "a3e413be206b8854e5582f76c563e63a5c793f42e58e968d6fd683eea7971e56",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5023,
+      "face_count": 10042,
+      "float32_mesh_sha256": "fe289e29244352167b43b44322fbea316462219fc6e391b38869739685e6eb26",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-09C-H048-5eb32c5359-EDGE-C020": {
+      "path": "geometry/CT-09C-H048-5eb32c5359-EDGE-C020.mesh.gz",
+      "bytes": 59861,
+      "sha256": "0c1de04a6bff79a4a6664fc6d3e108c34c075876a0d5adba84c6efbb55257ecf",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5033,
+      "face_count": 10062,
+      "float32_mesh_sha256": "1899856c57434044c1207a47575b9c4222daee09a4703650d86fe79a20c332b3",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-09C-H048-60da3d3edf-EDGE-C020": {
+      "path": "geometry/CT-09C-H048-60da3d3edf-EDGE-C020.mesh.gz",
+      "bytes": 55083,
+      "sha256": "d9376de1c441c1e7e2a8cf79129027ac4c328ba5d1b65fba815f08686d42fd99",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4513,
+      "face_count": 9022,
+      "float32_mesh_sha256": "b69fc31fac90612123cf3112dc1f5d382d0d2c04412976b67302557603f40ab5",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-09C-H048-619cfdedda-EDGE-C020": {
+      "path": "geometry/CT-09C-H048-619cfdedda-EDGE-C020.mesh.gz",
+      "bytes": 60615,
+      "sha256": "c586bc5ae5749e383dc39a4fe25b4c2dedb80da8d533db34c28c59ed284cc84e",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5033,
+      "face_count": 10062,
+      "float32_mesh_sha256": "d8afd624bcea5258abe9e8227092abaf6c913c9e9da0076422984eb10da82332",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-09C-H048-7914aed1c0-EDGE-C020": {
+      "path": "geometry/CT-09C-H048-7914aed1c0-EDGE-C020.mesh.gz",
+      "bytes": 42066,
+      "sha256": "fcf128e02fef583a404b15056e13c78216d6f6ea12af9549347baed95a5eedc7",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3483,
+      "face_count": 6962,
+      "float32_mesh_sha256": "60eb5fc39640182562739b12a7aaf21dcbb9af4c446e6c6889fc0248c2ce5c30",
+      "maximum_coordinate_rounding_error_mm": 4.946290488305749e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-09C-H048-792fee37ed-EDGE-C020": {
+      "path": "geometry/CT-09C-H048-792fee37ed-EDGE-C020.mesh.gz",
+      "bytes": 55041,
+      "sha256": "9f6ddc31367d90367ad3fb3dd94f28ea3d459647ef9e0381ff93e57f8ef32436",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4513,
+      "face_count": 9022,
+      "float32_mesh_sha256": "7750f6403abedbb3afa30b9638ea5a72e522762f5bfe6c288a783a7fdce10ad6",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-09C-H048-e28b76847a-EDGE-C020": {
+      "path": "geometry/CT-09C-H048-e28b76847a-EDGE-C020.mesh.gz",
+      "bytes": 48557,
+      "sha256": "8c4df9ac32a24b2e751cf3be42484d3891baf78795dc47c45dd60cb622780251",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 3975,
+      "face_count": 7946,
+      "float32_mesh_sha256": "2e2a10a20744c2d85d1691c8ac0e654be46f2910b8901c3733bc008938c651fc",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-09C-H048-f0f5e236bd-EDGE-C020": {
+      "path": "geometry/CT-09C-H048-f0f5e236bd-EDGE-C020.mesh.gz",
+      "bytes": 54737,
+      "sha256": "1e26e2da93fd2099112e09de6978d84fc38b1551bf073f0914fe775f74d20062",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4513,
+      "face_count": 9022,
+      "float32_mesh_sha256": "14352812b438e70f21ae05162ec68ab31876a4dd586dae1909882df270d12107",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-10C-H048-095abb22fa-EDGE-C020": {
+      "path": "geometry/CT-10C-H048-095abb22fa-EDGE-C020.mesh.gz",
+      "bytes": 53196,
+      "sha256": "bc504031121b050b6b9cca774cb008ef5158cb30d37293c51398ca2876eb8bcf",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4379,
+      "face_count": 8754,
+      "float32_mesh_sha256": "dbb0a24d719fd9bcbce9122062f3a90ee359ef3be72f9f81ce63f06c8120eac2",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-10C-H048-6f25413d60-EDGE-C020": {
+      "path": "geometry/CT-10C-H048-6f25413d60-EDGE-C020.mesh.gz",
+      "bytes": 65225,
+      "sha256": "ba6a7b68997c9ddd5d50face604f111c9d2667532e835346a301b25dfc99f754",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5418,
+      "face_count": 10832,
+      "float32_mesh_sha256": "ed935e82f5197e48ca05f60f753f7ec9b89798c31ed3c4a1246623b5913bb00f",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-10C-H048-71024a1453-EDGE-C020": {
+      "path": "geometry/CT-10C-H048-71024a1453-EDGE-C020.mesh.gz",
+      "bytes": 70108,
+      "sha256": "310ae59382f8abbde794a6e7ae04ea326bb6b46fec28c2258253cf0994f2a199",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5928,
+      "face_count": 11852,
+      "float32_mesh_sha256": "0a41e3ac613f162fc871221db7293c055268bfd7d768b50c4acd6637907716c5",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-10C-H048-a154228b8a-EDGE-C020": {
+      "path": "geometry/CT-10C-H048-a154228b8a-EDGE-C020.mesh.gz",
+      "bytes": 64891,
+      "sha256": "2b07c1a562656e506491889059c17cc282f6c353c00179dc0405d4bc6c8c4b98",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5418,
+      "face_count": 10832,
+      "float32_mesh_sha256": "902b0c434eaf3dddfc1ba313ebb993c3efd79d6829fded110e73415e4d337f33",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-10C-H048-b3692aef1c-EDGE-C020": {
+      "path": "geometry/CT-10C-H048-b3692aef1c-EDGE-C020.mesh.gz",
+      "bytes": 64646,
+      "sha256": "dd18540b9df191cbb8469d48053970a54f69932afa06257f609bc2810227d3c3",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5418,
+      "face_count": 10832,
+      "float32_mesh_sha256": "1bfb4409392720cb1cdd5c2527ee415f36abf03c8f48825b450bf1075b0e1692",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-10C-H048-d5a8b98a9b-EDGE-C020": {
+      "path": "geometry/CT-10C-H048-d5a8b98a9b-EDGE-C020.mesh.gz",
+      "bytes": 65417,
+      "sha256": "7f3bc39f4cb5f8cb9f2e46ebf108169838cccc299c9c61d0aa9c598febc066c8",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5420,
+      "face_count": 10836,
+      "float32_mesh_sha256": "9019fa4a4d17c7832b6c505ffa51e4939f9ac3654e4744f0fbf92f745c965ce5",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-10C-H048-d6324c8a56-EDGE-C020": {
+      "path": "geometry/CT-10C-H048-d6324c8a56-EDGE-C020.mesh.gz",
+      "bytes": 64461,
+      "sha256": "6faeff7bf6da87ef47f7373046e0e31652c40266f0d048ee4144379abda9ab93",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5418,
+      "face_count": 10832,
+      "float32_mesh_sha256": "090ed7b55e29c350ef7013e671d1d483d85d27e93af7df075d6af59e289bec17",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-10C-H048-e13752c9a5-EDGE-C020": {
+      "path": "geometry/CT-10C-H048-e13752c9a5-EDGE-C020.mesh.gz",
+      "bytes": 70403,
+      "sha256": "49cbbc6a4ca296082476491a68dbf37191f3d9e1aa581623636c291ddf049fe7",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5928,
+      "face_count": 11852,
+      "float32_mesh_sha256": "5b35325d7a2819281749806f2c3f22ccdbd4d091e581f58c405620ccf7e6f507",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-11C-H048-19e6f750fa-EDGE-C020": {
+      "path": "geometry/CT-11C-H048-19e6f750fa-EDGE-C020.mesh.gz",
+      "bytes": 74358,
+      "sha256": "31e7b8aaa4c2caee816a2be464fb3a794e98e9c672618d5e4858e3469ba0c73e",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 6314,
+      "face_count": 12624,
+      "float32_mesh_sha256": "4299d3b8bee13674a61accfcea087c8a5aef3b62845d136c1ec51a442c543645",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-11C-H048-300b51f304-EDGE-C020": {
+      "path": "geometry/CT-11C-H048-300b51f304-EDGE-C020.mesh.gz",
+      "bytes": 69584,
+      "sha256": "9d5ec487d9dd6ef3ed945c6fe19b5ba167eaa7dd2c74f19f421fa9cf037fcaf1",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5803,
+      "face_count": 11602,
+      "float32_mesh_sha256": "54fe44902d1e4a051ed379468d137073afb753f5ddc1533294cab775d5acca76",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-11C-H048-4aaaca6928-EDGE-C020": {
+      "path": "geometry/CT-11C-H048-4aaaca6928-EDGE-C020.mesh.gz",
+      "bytes": 70151,
+      "sha256": "de55e3803744772b85c6d4f575a6fc1c88a5d259d58624342fd97a0f258a3b36",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5796,
+      "face_count": 11588,
+      "float32_mesh_sha256": "90934ef6f603838d48be650651dea311846e43732004898786976fa0f9d7ee56",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-11C-H048-51645b78fc-EDGE-C020": {
+      "path": "geometry/CT-11C-H048-51645b78fc-EDGE-C020.mesh.gz",
+      "bytes": 68811,
+      "sha256": "6df967654a7e6acf16ce04feb8f721ea126e56ddb36fc39362e377d1a9cb7923",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5796,
+      "face_count": 11588,
+      "float32_mesh_sha256": "f35abd03bd660ce47d546360c245f488338755f29112812517db394613ad6624",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-11C-H048-61c223c85d-EDGE-C020": {
+      "path": "geometry/CT-11C-H048-61c223c85d-EDGE-C020.mesh.gz",
+      "bytes": 74557,
+      "sha256": "4158f35e71fdbb9aedbaa2eb6af96eb013ac6cbfe301281334805a812ca715f6",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 6322,
+      "face_count": 12640,
+      "float32_mesh_sha256": "3ff0fc5414369db55e164f6707a44166c82fdc41815edb998b637a3bf3577460",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-11C-H048-6914ea5a07-EDGE-C020": {
+      "path": "geometry/CT-11C-H048-6914ea5a07-EDGE-C020.mesh.gz",
+      "bytes": 80638,
+      "sha256": "2b6cf05174dd208e64863289fa05d1eed8e6a3fee1f65be2a8be59d325590b4f",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 6833,
+      "face_count": 13662,
+      "float32_mesh_sha256": "d5647a197951b621d292083b04ad33ffc38ad859df41f5493859b886b8238320",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-11C-H048-6b26bf00b4-EDGE-C020": {
+      "path": "geometry/CT-11C-H048-6b26bf00b4-EDGE-C020.mesh.gz",
+      "bytes": 74426,
+      "sha256": "41e9424ca8f779439bac7635443cd2e708439caa7db4af75491573992109530d",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 6323,
+      "face_count": 12642,
+      "float32_mesh_sha256": "4adca1e36e79a611de4fb23a770fb9c7671b900327b7aa1c851d80c5a325e759",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-11C-H048-762f24c514-EDGE-C020": {
+      "path": "geometry/CT-11C-H048-762f24c514-EDGE-C020.mesh.gz",
+      "bytes": 70341,
+      "sha256": "56bfc895da1b1a47d52144c235782b5ec65d788fa2b87bc9697cfedd595cb419",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5813,
+      "face_count": 11622,
+      "float32_mesh_sha256": "8f6b88df9e97fb6f6044ccb443a33626d0c317eb608bed13eda03925b110a620",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-11C-H048-7d45da0666-EDGE-C020": {
+      "path": "geometry/CT-11C-H048-7d45da0666-EDGE-C020.mesh.gz",
+      "bytes": 69201,
+      "sha256": "b8f271fe5b8c31bb961ae68f6da538d3603e7a30c19d54a2738bf23d0ac1e35a",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5803,
+      "face_count": 11602,
+      "float32_mesh_sha256": "fe120ecb9940def1e6ae180c83737259ef3410ab39e8a5e3ec3330561d4f3f99",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-11C-H048-947c6162a2-EDGE-C020": {
+      "path": "geometry/CT-11C-H048-947c6162a2-EDGE-C020.mesh.gz",
+      "bytes": 74522,
+      "sha256": "7df2cee50a8a84ab07d18081d8793dd392c64ed76bac265dbf02284a9a374fa7",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 6313,
+      "face_count": 12622,
+      "float32_mesh_sha256": "1467728ccdb9e469aaa0834d4887ffe0e87aff760a960bc9ef75a3424011887f",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-11C-H048-9b0f6ccc99-EDGE-C020": {
+      "path": "geometry/CT-11C-H048-9b0f6ccc99-EDGE-C020.mesh.gz",
+      "bytes": 74098,
+      "sha256": "f279bbc96fddc26273d2da5a48294b9ebcdf58e1bf594eb2c93a73baad1743e2",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 6314,
+      "face_count": 12624,
+      "float32_mesh_sha256": "182808a9998d7dd45536d3e49d289cee80a402c388b425927fa25755ac92ae10",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-11C-H048-b0163edc7f-EDGE-C020": {
+      "path": "geometry/CT-11C-H048-b0163edc7f-EDGE-C020.mesh.gz",
+      "bytes": 80608,
+      "sha256": "6afe942132b1af2e1ba9e50dd44756850290b988ffca84092dd181be5b497abc",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 6833,
+      "face_count": 13662,
+      "float32_mesh_sha256": "c44637bc9046a2f2e535ccb7b9827e9b62de38914e783c50305a796b0dc5ed9b",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-11C-H048-b9dc78d781-EDGE-C020": {
+      "path": "geometry/CT-11C-H048-b9dc78d781-EDGE-C020.mesh.gz",
+      "bytes": 49805,
+      "sha256": "06895d0c5899d64c5d61955fef414f26bcd7b061a78a52ab7d4590b5d6d39811",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4251,
+      "face_count": 8498,
+      "float32_mesh_sha256": "695bdb380135dab8bf569d015c9718bde9f8b12504358c891b55f25be0a98932",
+      "maximum_coordinate_rounding_error_mm": 4.98443597507503e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-11C-H048-bf669c0412-EDGE-C020": {
+      "path": "geometry/CT-11C-H048-bf669c0412-EDGE-C020.mesh.gz",
+      "bytes": 62855,
+      "sha256": "ecf329092576ab1562d78bfe910ff106e0428e2ec078f082af78756163d7a936",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5294,
+      "face_count": 10584,
+      "float32_mesh_sha256": "d9a29fd9cd963f49cd2ce9dbb92da16ae16d42b343fafa0da4ae589c56de137d",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-11C-H048-c026d4ad49-EDGE-C020": {
+      "path": "geometry/CT-11C-H048-c026d4ad49-EDGE-C020.mesh.gz",
+      "bytes": 63262,
+      "sha256": "8e3463c64d2931934ea6d5f08907b3f603a360bc3ced8bf2c7fd734a0a88c004",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5294,
+      "face_count": 10584,
+      "float32_mesh_sha256": "421fa93d8693e02a8eccf531c1a64249839127ecc10917b322457e2d9f26413c",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-11C-H048-e615620d44-EDGE-C020": {
+      "path": "geometry/CT-11C-H048-e615620d44-EDGE-C020.mesh.gz",
+      "bytes": 69713,
+      "sha256": "a99bb64b7807a210aa957915b888229721e77a08c4686fb936e48dfc9c4c4c15",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5812,
+      "face_count": 11620,
+      "float32_mesh_sha256": "bde50ff6fe5bb085c0eb0749a6064bc6289fb2daf42e8f0df7d475d9815ad427",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-11C-H048-e8ec78968c-EDGE-C020": {
+      "path": "geometry/CT-11C-H048-e8ec78968c-EDGE-C020.mesh.gz",
+      "bytes": 64543,
+      "sha256": "c9db269628b91c5d3198bdc7cc574b0c704f05b7c1657cd284b8d24ad5ab91ec",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5292,
+      "face_count": 10580,
+      "float32_mesh_sha256": "931161da93bba3bfb7be65987f4e19436281bd61fd264ca51ce076784d929d0d",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-12C-H048-1a091324ac-EDGE-C020": {
+      "path": "geometry/CT-12C-H048-1a091324ac-EDGE-C020.mesh.gz",
+      "bytes": 75778,
+      "sha256": "d0ce1ec34c7c0bd0daad3230d1a2b59bc58d8c78f5f5fd23010ee6ea0ec58187",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 6188,
+      "face_count": 12372,
+      "float32_mesh_sha256": "8aba1315cc8d88f560803ccae63bb2e1b906b5aecfb4cdb8030ccb8af4646574",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-12C-H048-411ee5178a-EDGE-C020": {
+      "path": "geometry/CT-12C-H048-411ee5178a-EDGE-C020.mesh.gz",
+      "bytes": 72871,
+      "sha256": "bb585d31a67182d656c1f38cfc6e34338e7d22de428e5edb29dba19e07a1ba59",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 6187,
+      "face_count": 12370,
+      "float32_mesh_sha256": "edf29c7985f3ce19a743efc7022a46a5982c92f302b5571177425515a9bfa442",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-12C-H048-5cf781c50b-EDGE-C020": {
+      "path": "geometry/CT-12C-H048-5cf781c50b-EDGE-C020.mesh.gz",
+      "bytes": 85123,
+      "sha256": "5e75b15c4cd42d6bef0a44d1e18282f908d5133c06b36774832b1587d405a2b5",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 7220,
+      "face_count": 14436,
+      "float32_mesh_sha256": "ec382381b0dd76e1bf5cf5066f1f3fbdf8a004fd4136701eab35fc091cd8f930",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-12C-H048-6040f49a34-EDGE-C020": {
+      "path": "geometry/CT-12C-H048-6040f49a34-EDGE-C020.mesh.gz",
+      "bytes": 84721,
+      "sha256": "054c7dc55b5f3e84ff1dc550292ebb23fb426918ddac66477806b55c45cd121d",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 7218,
+      "face_count": 14432,
+      "float32_mesh_sha256": "e1bbe261b52812953384c7047dd6a5f8b0f1408d0d40b6376a380b6b48c0298e",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-12C-H048-7e00fd8d82-EDGE-C020": {
+      "path": "geometry/CT-12C-H048-7e00fd8d82-EDGE-C020.mesh.gz",
+      "bytes": 69595,
+      "sha256": "c6141f560e20302f0ae7f09344d7ebd32f6c39a39518c80c332647f4d0137233",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5675,
+      "face_count": 11346,
+      "float32_mesh_sha256": "0d5278e313c1998666acc789cce0073ed1fb28b8a509e863a397f24587262265",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-12C-H048-ebffe76004-EDGE-C020": {
+      "path": "geometry/CT-12C-H048-ebffe76004-EDGE-C020.mesh.gz",
+      "bytes": 79083,
+      "sha256": "c28188d41b28b67ced7ba3ed4ad367c89fb4b13f41820ffc30700a801f9de2c1",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 6709,
+      "face_count": 13414,
+      "float32_mesh_sha256": "5042667a8634535ce26291e74ca983b0b7124bef7a517ff4599f4e67fbe0cddb",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-12C-H048-f63d61757c-EDGE-C020": {
+      "path": "geometry/CT-12C-H048-f63d61757c-EDGE-C020.mesh.gz",
+      "bytes": 79879,
+      "sha256": "b01a6d894971d21c2a1b003e30ee73ec1c80e54d03332868092f10ebe8e4c548",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 6710,
+      "face_count": 13416,
+      "float32_mesh_sha256": "2946787ab033a098c9d0117ff70ce8b05034cf66e902ebeff096bcbcbdb06fc5",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-13C-H048-09e4eb6019-EDGE-C020": {
+      "path": "geometry/CT-13C-H048-09e4eb6019-EDGE-C020.mesh.gz",
+      "bytes": 79338,
+      "sha256": "aee161dfce925bbbcfba199110bcf0bffd33d43a7b88e8709519a1483b90d35c",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 6571,
+      "face_count": 13138,
+      "float32_mesh_sha256": "e56559042a2d33ca93471d944606f6dd3d5f6191abd9762e6a86918a7bbcbe06",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-13C-H048-21cc7eaf66-EDGE-C020": {
+      "path": "geometry/CT-13C-H048-21cc7eaf66-EDGE-C020.mesh.gz",
+      "bytes": 96156,
+      "sha256": "18631e99ace81f80b78e7a43acb7060a187a0fa8eaecbf890cf41f4cca07c8e6",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 8124,
+      "face_count": 16244,
+      "float32_mesh_sha256": "bc0a40787f74463a98e684eb0e4c5e6728d785a304a75e56bc0bd3e100a0e412",
+      "maximum_coordinate_rounding_error_mm": 4.992676494453008e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-13C-H048-9f3fc85061-EDGE-C020": {
+      "path": "geometry/CT-13C-H048-9f3fc85061-EDGE-C020.mesh.gz",
+      "bytes": 94824,
+      "sha256": "8a1aaad910cd0dc71686097a9b30810c9c10558e2fe400e1f4009fb3494dee5b",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 8114,
+      "face_count": 16224,
+      "float32_mesh_sha256": "dbcfa03e64977fa2af313c51b847d7011acbe917595eb5671a22fe0f8661eed1",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-13C-H048-cdfa907ec5-EDGE-C020": {
+      "path": "geometry/CT-13C-H048-cdfa907ec5-EDGE-C020.mesh.gz",
+      "bytes": 94665,
+      "sha256": "dd5502ee9b30f5473defb7a8bc5aee0ae1cc06e05ff11b95822b82813f05d095",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 8114,
+      "face_count": 16224,
+      "float32_mesh_sha256": "40b3af1c46979c855a560ff43ffc647def612ef5d93d1ba7fa8fd086a65c2928",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-13C-H048-d0bdc17c2b-EDGE-C020": {
+      "path": "geometry/CT-13C-H048-d0bdc17c2b-EDGE-C020.mesh.gz",
+      "bytes": 85144,
+      "sha256": "786b6e2cecb8be887d5bc305f6b4f31bcab7d988bba7c99e5bd7a516cc3d6154",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 7094,
+      "face_count": 14184,
+      "float32_mesh_sha256": "4ef27ea31bd2eaa16fe2449b19e7b20645c8a9fe1c375582a97a913980824d32",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-13C-H048-dba953227e-EDGE-C020": {
+      "path": "geometry/CT-13C-H048-dba953227e-EDGE-C020.mesh.gz",
+      "bytes": 90960,
+      "sha256": "41d3802af4bf203c030e76cdd09e2b91be444addc131dbb3d2e30693e2a5fa89",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 7615,
+      "face_count": 15226,
+      "float32_mesh_sha256": "a8163584b6e598eb6be3806e66684f6c36b71c2eacf574d6ca4833c9e6f97f05",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-13C-H048-e4bdb6e259-EDGE-C020": {
+      "path": "geometry/CT-13C-H048-e4bdb6e259-EDGE-C020.mesh.gz",
+      "bytes": 95763,
+      "sha256": "bb6403eebb626f0168c7d06f87795c0af9498598f0a6b3b7ec83f211031f38b7",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 8124,
+      "face_count": 16244,
+      "float32_mesh_sha256": "5ff9b461b3408f335f4b59db2e2f114fab914e71f849648956a0688b2262f558",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-13C-H048-e93cb96448-EDGE-C020": {
+      "path": "geometry/CT-13C-H048-e93cb96448-EDGE-C020.mesh.gz",
+      "bytes": 88993,
+      "sha256": "303c5535440a83b185816c68e1ef031c64b9fc31f6f49e705de98ca24730228d",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 7614,
+      "face_count": 15224,
+      "float32_mesh_sha256": "73f45d3e3038951fc736e477edb5b141968c638b8fbde9cc75339213fba48691",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-13C-H048-f6153c8fb4-EDGE-C020": {
+      "path": "geometry/CT-13C-H048-f6153c8fb4-EDGE-C020.mesh.gz",
+      "bytes": 83181,
+      "sha256": "66ec76e78fa680685442fb02cc8bac035b96e2f31b16d87b901dac83f734ded3",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 7092,
+      "face_count": 14180,
+      "float32_mesh_sha256": "935d1a64f1af5ddde4e8f1974ca4f4474974d53226876f2c59cc415c62dc35b2",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-14C-H048-02f2a7dc91-EDGE-C020": {
+      "path": "geometry/CT-14C-H048-02f2a7dc91-EDGE-C020.mesh.gz",
+      "bytes": 94067,
+      "sha256": "a81160d02814cb5051a831240dfb797e9e021639e80ef3c748fa5496c9f5b8ab",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 8009,
+      "face_count": 16014,
+      "float32_mesh_sha256": "12d1d434d22cfec05f9327c190c60cc65a96c07442f908e0cd563fd9a19e820d",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-14C-H048-2963ab7381-EDGE-C020": {
+      "path": "geometry/CT-14C-H048-2963ab7381-EDGE-C020.mesh.gz",
+      "bytes": 101498,
+      "sha256": "c51f1f5191c7c60def68b82555ea4dac19a48014fcf4a06428e97a5163fe1551",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 8517,
+      "face_count": 17030,
+      "float32_mesh_sha256": "72394fc34c75b1b0b9e414d3de318dddd2e8f8f8b24dba4e4ed64a517771def9",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-14C-H048-66748d8502-EDGE-C020": {
+      "path": "geometry/CT-14C-H048-66748d8502-EDGE-C020.mesh.gz",
+      "bytes": 83434,
+      "sha256": "240ae4d03af98171e5ab5301c17b6fee2c82b98a4f76b2dd52e4696f40b40d89",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 6959,
+      "face_count": 13914,
+      "float32_mesh_sha256": "0dce4fa2926c776f1460406f22fee015095d45cb7cfe202bb9902b4b3db7d543",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-14C-H048-80d08fbb88-EDGE-C020": {
+      "path": "geometry/CT-14C-H048-80d08fbb88-EDGE-C020.mesh.gz",
+      "bytes": 105580,
+      "sha256": "78e6abf98c8e3fb7051aa3f632980da58a4f08ec1d47af7400fd75d8f05e2ea9",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 9018,
+      "face_count": 18032,
+      "float32_mesh_sha256": "7d4d0854b8975ce26c88e8a5182f863305f1bfb55d66b76cddd898fb0bcf4861",
+      "maximum_coordinate_rounding_error_mm": 4.992676494453008e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-14C-H048-d4302f08dd-EDGE-C020": {
+      "path": "geometry/CT-14C-H048-d4302f08dd-EDGE-C020.mesh.gz",
+      "bytes": 93125,
+      "sha256": "078a6f0aeb403f5687ea85bb23719ced8f07475cfd2b3c24d76474372bf901f7",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 7997,
+      "face_count": 15990,
+      "float32_mesh_sha256": "a90fd502c30bcc2819720fae963c48fea0c2b1eab4088caa1dd6f89166e730b2",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-14C-H048-edc6e4ef28-EDGE-C020": {
+      "path": "geometry/CT-14C-H048-edc6e4ef28-EDGE-C020.mesh.gz",
+      "bytes": 101125,
+      "sha256": "cd20e02d69cd80ae16af119978a7325ed51a40ca14328bb530bcb42795871ce6",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 8506,
+      "face_count": 17008,
+      "float32_mesh_sha256": "7e34462b67c6351fad4d228db352ceb2aae377b1bd84f21ab7998db4cc54e973",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-15C-H048-51042eea39-EDGE-C020": {
+      "path": "geometry/CT-15C-H048-51042eea39-EDGE-C020.mesh.gz",
+      "bytes": 111203,
+      "sha256": "73d0aba3d194bf945f5cab959faa1bbfe31ef7c3dc40ced1af0880378b7cc985",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 9414,
+      "face_count": 18824,
+      "float32_mesh_sha256": "1ad7707d924715aa0c809a20a4612828319c1b9d322fb0961d67622aedafaa13",
+      "maximum_coordinate_rounding_error_mm": 4.992676494453008e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-15C-H048-6dddaeba00-EDGE-C020": {
+      "path": "geometry/CT-15C-H048-6dddaeba00-EDGE-C020.mesh.gz",
+      "bytes": 102754,
+      "sha256": "9c610dbb2d19b60abfb237003f9d8b63abdf6104b550dc9742c626afeb2f5cb1",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 8902,
+      "face_count": 17800,
+      "float32_mesh_sha256": "d5539f9f9cf0456a750c4c32e94a433a7a057bc584af185cfb9d3ef950ed2b40",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-15C-H048-94c2a455b3-EDGE-C020": {
+      "path": "geometry/CT-15C-H048-94c2a455b3-EDGE-C020.mesh.gz",
+      "bytes": 106007,
+      "sha256": "f765c67918922e15dfa10b9ebdce688f3ab4f28c41cfbfeaae550bc42f628d4d",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 8903,
+      "face_count": 17802,
+      "float32_mesh_sha256": "2f3e29403e5617a9cca5dc5f459d2c6764bb6b6dcf0eddc57106abfb0a30cd66",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-15C-H048-d87db9f8c0-EDGE-C020": {
+      "path": "geometry/CT-15C-H048-d87db9f8c0-EDGE-C020.mesh.gz",
+      "bytes": 102879,
+      "sha256": "7249cfcded0ea0019ff47faaba7ff523509b881d35cce60f7896ede958bdd5a5",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 8902,
+      "face_count": 17800,
+      "float32_mesh_sha256": "a89c811506c43fb63f6961ff65a4d42ff9bca079942468a16011d41d4f072182",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-16C-H048-1e95825b09-EDGE-C020": {
+      "path": "geometry/CT-16C-H048-1e95825b09-EDGE-C020.mesh.gz",
+      "bytes": 120205,
+      "sha256": "72a8b84bc23107f8d72e49f9b2862c94ac0fb5f8ad545c8a6766b9ec13acc8ae",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 10320,
+      "face_count": 20636,
+      "float32_mesh_sha256": "6570869358cc8f2a2ae80a5158af9db220d9aeeafa5a19ff0251abf14454b697",
+      "maximum_coordinate_rounding_error_mm": 4.992676494453008e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-16C-H048-9f2859cfc9-EDGE-C020": {
+      "path": "geometry/CT-16C-H048-9f2859cfc9-EDGE-C020.mesh.gz",
+      "bytes": 121457,
+      "sha256": "c941c17de719bab8aff85d25632b5b8788c8d7694512820b1f3f490f47cbd641",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 10320,
+      "face_count": 20636,
+      "float32_mesh_sha256": "dc7dd9e09da78280cc5c1a594ba3d41dbed06c19ae2ca7c2d0416c297e086f53",
+      "maximum_coordinate_rounding_error_mm": 4.992676494453008e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-17C-H048-b80de266ea-EDGE-C020": {
+      "path": "geometry/CT-17C-H048-b80de266ea-EDGE-C020.mesh.gz",
+      "bytes": 111887,
+      "sha256": "ff0964658e2b05aabf07ebfca07496169c447e695891f0b553a19bb19f8d934b",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 9684,
+      "face_count": 19364,
+      "float32_mesh_sha256": "c703b00b67b0b00dc3ffccd64315f56a0aed518ec9a6f7c33aa3c626a45db437",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-17C-H048-c3ca1a941e-EDGE-C020": {
+      "path": "geometry/CT-17C-H048-c3ca1a941e-EDGE-C020.mesh.gz",
+      "bytes": 118424,
+      "sha256": "aab61381f8d5070c5a4da90a337af354114f6d806fd2f3c68fb74587bcef1f57",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 10191,
+      "face_count": 20378,
+      "float32_mesh_sha256": "a0c99b1e4dc13c713e4cb976c54e46df396a12058e7cd9d6f3a656f5b0e80ed9",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-17C-H048-fca9ed04d8-EDGE-C020": {
+      "path": "geometry/CT-17C-H048-fca9ed04d8-EDGE-C020.mesh.gz",
+      "bytes": 117930,
+      "sha256": "71e2916f558ac31fb288d22605cf26dabb59f88dcf6c1d52df2de692e4997764",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 10191,
+      "face_count": 20378,
+      "float32_mesh_sha256": "5dfb60f4a89e0ab61a482262d17b2049b5ca747f61b7d274e31618526feb1fc8",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-18C-H048-0af0b7f00f-EDGE-C020": {
+      "path": "geometry/CT-18C-H048-0af0b7f00f-EDGE-C020.mesh.gz",
+      "bytes": 134476,
+      "sha256": "0d777888ca129d50dca592eff78da19f811e1429449c28b0e03f2b900e0ed8d6",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 11606,
+      "face_count": 23208,
+      "float32_mesh_sha256": "7f400663d82785a844b67286dfdfdb931fe89876373735f9f6c4bcc88d19853b",
+      "maximum_coordinate_rounding_error_mm": 4.992676494453008e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-18C-H048-12353cd64f-EDGE-C020": {
+      "path": "geometry/CT-18C-H048-12353cd64f-EDGE-C020.mesh.gz",
+      "bytes": 130510,
+      "sha256": "1751bb35f7b2a2869ecb8b8181d4b9908f13d2a2457697a7e7766bed4cffadae",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 11099,
+      "face_count": 22194,
+      "float32_mesh_sha256": "abdf970855e431ff36416065a85ac945e6d7d7f23747720115ced50eb17fb216",
+      "maximum_coordinate_rounding_error_mm": 4.992676494453008e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-18C-H048-3f4473ef40-EDGE-C020": {
+      "path": "geometry/CT-18C-H048-3f4473ef40-EDGE-C020.mesh.gz",
+      "bytes": 136088,
+      "sha256": "6f7113855239d16885f957e38592d97577ba3761175ba17b19ca8066a919f25b",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 11608,
+      "face_count": 23212,
+      "float32_mesh_sha256": "4aae3eca1513e0e9b62c8a4acc2891b279952af8d6200a8af6f7234a93a02a3a",
+      "maximum_coordinate_rounding_error_mm": 4.992676494453008e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-18C-H048-687104b0ea-EDGE-C020": {
+      "path": "geometry/CT-18C-H048-687104b0ea-EDGE-C020.mesh.gz",
+      "bytes": 135170,
+      "sha256": "af4e85f32841ffa3e1e13726739737a7ea8d2714d193f35244ea8b4db9de1ede",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 11618,
+      "face_count": 23232,
+      "float32_mesh_sha256": "91b98a84c66a75417e652eb1e49800c3c58da561c4838bdbe9c0cae0b2ee538f",
+      "maximum_coordinate_rounding_error_mm": 4.992676494453008e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-18C-H048-d8eec80ed0-EDGE-C020": {
+      "path": "geometry/CT-18C-H048-d8eec80ed0-EDGE-C020.mesh.gz",
+      "bytes": 127294,
+      "sha256": "981d770d36824de1dc1068e276b3c9396fdf2a7184b284a0d4f343080d997750",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 11096,
+      "face_count": 22188,
+      "float32_mesh_sha256": "e0ac8612ef8ff7df19aee1e8e5ad9318f2ac5f63c889cc6547e63ddca917a06f",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-19C-H048-364daf3303-EDGE-C020": {
+      "path": "geometry/CT-19C-H048-364daf3303-EDGE-C020.mesh.gz",
+      "bytes": 131608,
+      "sha256": "7103d197a7053d48c5611705fa536402965541e8641306086083d137321a8930",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 11483,
+      "face_count": 22962,
+      "float32_mesh_sha256": "6a74e5f83e2f8ff9dad3d8dd0d844cbec577ef77c626bde5190f9322c425c9f7",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-20C-H048-7e749cc1db-EDGE-C020": {
+      "path": "geometry/CT-20C-H048-7e749cc1db-EDGE-C020.mesh.gz",
+      "bytes": 154295,
+      "sha256": "ef48915633b74dfb15ead1f2d1d484bc0bd425d46091fcbe8817626a5d2bf337",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 13416,
+      "face_count": 26828,
+      "float32_mesh_sha256": "fef09214dac48aa26e8221bbc6159841841b4a2bca2ebd4704fae13c65774a94",
+      "maximum_coordinate_rounding_error_mm": 4.992676494453008e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-21C-H048-eac53c3707-EDGE-C020": {
+      "path": "geometry/CT-21C-H048-eac53c3707-EDGE-C020.mesh.gz",
+      "bytes": 162525,
+      "sha256": "e44e433cde7d8ab028365cd7988ec80bdf62c299b7e4480fb9cef7bb37efe023",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 13795,
+      "face_count": 27586,
+      "float32_mesh_sha256": "82148a168aa8d681456ec773e03a900b87408b88442bc959e1469566467b8049",
+      "maximum_coordinate_rounding_error_mm": 4.992676494453008e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-22C-H048-67d6d31713-EDGE-C020": {
+      "path": "geometry/CT-22C-H048-67d6d31713-EDGE-C020.mesh.gz",
+      "bytes": 167435,
+      "sha256": "2c5b001f2f352def4dca6724d305cf262c89e04305ec4f0cd94856b2f4044693",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 14706,
+      "face_count": 29408,
+      "float32_mesh_sha256": "c440c0b93e4fd044fc10540f96fe880a398d3f8b9ecefc3fdfd1dddb8c17b382",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-23C-H048-7d5621eee9-EDGE-C020": {
+      "path": "geometry/CT-23C-H048-7d5621eee9-EDGE-C020.mesh.gz",
+      "bytes": 183839,
+      "sha256": "075a3752e4e67185ac54d698fa61f9a03f20686c1d9d952329cb77273c083686",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 16123,
+      "face_count": 32242,
+      "float32_mesh_sha256": "770c7e3bd5b10325a99a1c8df7294cde3bdd040622075a405385bbde43026964",
+      "maximum_coordinate_rounding_error_mm": 4.992676494453008e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-24C-H048-d30214b8b6-EDGE-C020": {
+      "path": "geometry/CT-24C-H048-d30214b8b6-EDGE-C020.mesh.gz",
+      "bytes": 181444,
+      "sha256": "99674f1f8db7188da30bb37c067a2104e2dc8f85e46f788514866e18e84109da",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 15461,
+      "face_count": 30918,
+      "float32_mesh_sha256": "629c8f1a5aa621247ac465e788eea3bc3499ff501e6255f9be6dd7e38c6e3404",
+      "maximum_coordinate_rounding_error_mm": 4.992676494453008e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-30C-H048-ccb6f66051-EDGE-C020": {
+      "path": "geometry/CT-30C-H048-ccb6f66051-EDGE-C020.mesh.gz",
+      "bytes": 240590,
+      "sha256": "a983a8b46e8573fa0fce8e3c739d8ef6ffcfa28c15e1c390df8efd38b938edd3",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 21419,
+      "face_count": 42834,
+      "float32_mesh_sha256": "0159fb43c36c9d8abb1cf0554837825bc19066c01645e78159f039364d51cce0",
+      "maximum_coordinate_rounding_error_mm": 4.992676494453008e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "CT-31C-H048-1a57593117-EDGE-C020": {
+      "path": "geometry/CT-31C-H048-1a57593117-EDGE-C020.mesh.gz",
+      "bytes": 252448,
+      "sha256": "4575cee78f83ec05a306509c5f175f1829b57aa53d916e972889e6ad646037d7",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 21817,
+      "face_count": 43630,
+      "float32_mesh_sha256": "e5d1da727a221a352c38372e26f6911e4c9fb4efccaadd6ea3cef84b1bbea0a1",
+      "maximum_coordinate_rounding_error_mm": 4.992676494453008e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "PL-01x02-H032": {
+      "path": "geometry/PL-01x02-H032.mesh.gz",
+      "bytes": 14194,
+      "sha256": "8e577eda54e970bdc9f73bdfbd7ee6527b61202585f8024ed937aed5b4e36d4d",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 1139,
+      "face_count": 2274,
+      "float32_mesh_sha256": "7200d1c0cde8bc0a6714b46b757130823ead753eb61ae964f254bd015d0d33c8",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "PL-01x04-H032": {
+      "path": "geometry/PL-01x04-H032.mesh.gz",
+      "bytes": 32735,
+      "sha256": "b0027199c30a896137926b3b2feaaf174f180950679d6d15810b5a9ade6d7ee6",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2641,
+      "face_count": 5278,
+      "float32_mesh_sha256": "da850e22cd47344ccda521affbb1fab357834a8a90d7b732271a2193afe4ac1c",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "PL-01x08-H032": {
+      "path": "geometry/PL-01x08-H032.mesh.gz",
+      "bytes": 65676,
+      "sha256": "740281ba1bd1d210213a4d544fa57ba91d28c71cff6b68047644f98783435519",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 5645,
+      "face_count": 11286,
+      "float32_mesh_sha256": "e47354942dc728b3f69a5f348df7ccd2fdc66cb6b5cf2df4cba4a267063ff04e",
+      "maximum_coordinate_rounding_error_mm": 4.999847424969062e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "PL-02x02-H032": {
+      "path": "geometry/PL-02x02-H032.mesh.gz",
+      "bytes": 24802,
+      "sha256": "1c7a954e2bce1b9b15aa6a8bc313893a25905c92afc2944ecac27bedb5a433e0",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 2045,
+      "face_count": 4086,
+      "float32_mesh_sha256": "5f555cc7795e22dd26ed0f370d008cfa6a9041a3d35444d2bc4e77aa3707c6db",
+      "maximum_coordinate_rounding_error_mm": 4.9462891560381195e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "PL-02x04-H032": {
+      "path": "geometry/PL-02x04-H032.mesh.gz",
+      "bytes": 54744,
+      "sha256": "70f79c58185d0d98c9e32112f52eca2d85d15860b5fa0868fc4bb6e56e275109",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 4607,
+      "face_count": 9210,
+      "float32_mesh_sha256": "9b49496229f12237c1e2fc960cc874b4df9586002db97537f8642aace734ef7c",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    },
+    "PL-02x08-H032": {
+      "path": "geometry/PL-02x08-H032.mesh.gz",
+      "bytes": 111426,
+      "sha256": "fe5e67baa085972113749e8f521bc89cd46fa20f7b26c5b1daf749e39cc33816",
+      "format": "OBM1_GZIP_LE_FLOAT32_XYZ_UINT32_TRIANGLES",
+      "vertex_count": 9731,
+      "face_count": 19458,
+      "float32_mesh_sha256": "3892f0c8f142b2327c873a0f8c492efd9be5a93b60d8e0b830af061c470c193b",
+      "maximum_coordinate_rounding_error_mm": 4.9902340037988324e-09,
+      "origin": "body-bottom-center",
+      "units": "mm",
+      "preview": "ACTUAL_NATIVE_TESSELLATION_NOT_BOX_PROXY"
+    }
+  },
+  "assembly_aid_geometry": {},
+  "animation": {
+    "version": "radial-bottom-up-v1",
+    "fps": 12,
+    "frame_count": 144,
+    "duration_seconds": 12,
+    "width": 640,
+    "height": 640,
+    "chapters": [
+      {
+        "kind": "turntable",
+        "start_frame": 1,
+        "end_frame": 36,
+        "start_seconds": 0,
+        "end_seconds": 3
+      },
+      {
+        "kind": "radial-explosion",
+        "start_frame": 37,
+        "end_frame": 72,
+        "start_seconds": 3,
+        "end_seconds": 6
+      },
+      {
+        "kind": "bottom-up-assembly",
+        "start_frame": 73,
+        "end_frame": 144,
+        "start_seconds": 6,
+        "end_seconds": 12
+      }
+    ],
+    "geometry": "ACTUAL_NATIVE_INSTANCES",
+    "manifest_sha256": "00d945c4bcb66c3f802874535765f29c95ef9e641d13f91aaafdd715a1ae2157",
+    "radial_vectors_sha256": "44bce83e327200cd6c87a4bb06282b6c8ad921e280521f73db53a2179593180c",
+    "physical_disassembly_validation": "NOT_CLAIMED",
+    "assembly_empty_final_coverage": true
+  },
+  "camera_conditions": {
+    "front": {
+      "group_id": "part-count-matrix-20260921-normalized-front",
+      "role": "copilot-p200-support-free-v2",
+      "view": "front",
+      "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+      "projection": "ORTHOGRAPHIC",
+      "position_mm": [
+        0.0,
+        -1875.9999996,
+        234.49999995
+      ],
+      "target_mm": [
+        0.0,
+        0.0,
+        234.49999995
+      ],
+      "ortho_scale_mm": 651.38888875,
+      "image_size_px": [
+        1200,
+        1200
+      ],
+      "pixels_per_mm": 1.8422174844013257,
+      "actual_projected_height_mm": 468.9999999,
+      "rendered_model_height_px": 864.0,
+      "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+      "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+      "direction_world": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "right_world": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "up_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "camera_matrix_world_m": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.6292068494294654e-07,
+          -1.0,
+          -1.8760000467300415
+        ],
+        [
+          0.0,
+          1.0,
+          -1.6292068494294654e-07,
+          0.2345000058412552
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "three_quarter": {
+      "group_id": "part-count-matrix-20260921-normalized-three_quarter",
+      "role": "copilot-p200-support-free-v2",
+      "view": "three_quarter",
+      "mode": "NORMALIZED_SCREEN_HEIGHT_NOT_REAL_SIZE",
+      "projection": "ORTHOGRAPHIC",
+      "position_mm": [
+        785.85605804,
+        -1844.78426299,
+        1099.78754568
+      ],
+      "target_mm": [
+        8.48240971,
+        -13.40671444,
+        213.98904588
+      ],
+      "ortho_scale_mm": 756.1869056466658,
+      "image_size_px": [
+        1200,
+        1200
+      ],
+      "pixels_per_mm": 1.5869092562159617,
+      "actual_projected_height_mm": 544.4545720655993,
+      "rendered_model_height_px": 864.0,
+      "framing_method": "Actual native vertex projection, not empty bounding-box corners; center and screen-height normalization per model.",
+      "normalization_note": "The four shapes occupy equal screen height; this image group is NOT a physical size comparison.",
+      "direction_world": [
+        0.3569506476,
+        -0.8409230276,
+        0.4067366431
+      ],
+      "right_world": [
+        0.9205048535,
+        0.3907311285,
+        -0.0
+      ],
+      "up_world": [
+        -0.1589246675,
+        0.374403054,
+        0.9135454576
+      ],
+      "camera_matrix_world_m": [
+        [
+          0.9205048084259033,
+          -0.1589246243238449,
+          0.3569508194923401,
+          0.7858561277389526
+        ],
+        [
+          0.39073124527931213,
+          0.3744029104709625,
+          -0.840923011302948,
+          -1.8447843790054321
+        ],
+        [
+          -4.669232112064492e-08,
+          0.913545548915863,
+          0.40673649311065674,
+          1.0997875928878784
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  },
+  "downloads": [
+    {
+      "file": "copilot-p200-support-free-v2-cad-scene-animation.zip",
+      "bytes": 162059443,
+      "sha256": "4dfdc7e1d030b118b810b94d033de4783b0028c495af53de2f41a12527add3b5",
+      "kind": "PORTABLE_NATIVE_CAD_BLENDER_ANIMATION_BUNDLE"
+    }
+  ],
+  "provenance": {
+    "source_manifest_sha256": "00d945c4bcb66c3f802874535765f29c95ef9e641d13f91aaafdd715a1ae2157",
+    "bom_sha256": "ebc3b35b5c6f79b379f4a2108bf0958aa3a320f023fd9063eedd58d745724c81",
+    "native_assembly_sha256": "ce2c858d73f00f06407ae192201ef0a97a12e93376e25cb1741c01a5f96853d9",
+    "render_scene_sha256": "ae04ae9b8a58da937c4f20e9a98c6bad668950ad0688606473399bc1d8423ba5"
+  },
+  "status": {
+    "selection": "NOT_SELECTED",
+    "visual_approval": "PENDING",
+    "physical_fit": "UNKNOWN",
+    "retention_strength": "UNKNOWN",
+    "whole_figure_stability": "UNKNOWN",
+    "slicer_status": "NOT_SLICED",
+    "full_print": "ON_HOLD",
+    "printmap": "NOT_GENERATED",
+    "cg": "READY",
+    "native_cad": "READY",
+    "animation": "READY",
+    "assembly": "READY"
+  },
+  "limitations_ja": [
+    "倍率は実部品数で、寸法倍率ではありません。比較1xは本人不在時の暫定前提です。",
+    "完成サイズ増加で元形状の相対格子解像度を上げていますが、色境界は初期C参照で、美観改善の保証ではありません。",
+    "放射状分解は説明図。物理的に衝突せず分解できる保証ではありません。下からの順序は公称支持の検査で、保持力は未確認です。",
+    "元の本体内の実部品を一体の受け・根元へ再構成し、外付け/仮の組立支台を不要とする候補です。実CADの接触・挿入・断面・全荷重prefixを検査済みですが、現物保持力や印刷時サポート不要は未確認です。"
+  ],
+  "limitations_en": [
+    "The multiplier is actual physicalpiececount, not linearsize. The1xbaseline is a provisional creator assumption while the user was unavailable.",
+    "Larger fixed-pitch sampling increases relative contour resolution; colors reference initialC. More parts do not guarantee better appearance.",
+    "Radial explosion is explanatory, not collision-free physical disassembly. Bottom-up order has nominal support checks, not verified retention.",
+    "Existing body material is joined into real seated internal supports, with no external or temporary assembly stands. Native contact/insertion/sections/all nominal load prefixes are checked; physical retention and slicer-support requirements remain unvalidated."
+  ],
+  "logical_case_id": "copilot-p200",
+  "geometry_revision": "body-support-v2",
+  "assembly_support": {
+    "external_aid_count": 0,
+    "assembly_aid_count": 0,
+    "status": "DIGITAL_SELF_SUPPORTING_UNTESTED",
+    "geometry_revision": "body-support-v2",
+    "physical_validation": "UNKNOWN",
+    "slicer_supports": "UNKNOWN_SEPARATE_QUESTION",
+    "support_modules": [
+      {
+        "part_id": "COPILOT-P200-SUPPORT-FREE-V2-ROOT-01",
+        "type_id": "BS-f1562cd26f18d2e0",
+        "consumed_part_ids": [
+          "COPILOT-P200-000383",
+          "COPILOT-P200-000397",
+          "COPILOT-P200-000409",
+          "COPILOT-P200-000410",
+          "COPILOT-P200-000411",
+          "COPILOT-P200-000412",
+          "COPILOT-P200-000413",
+          "COPILOT-P200-000426",
+          "COPILOT-P200-000427",
+          "COPILOT-P200-000431",
+          "COPILOT-P200-000437",
+          "COPILOT-P200-000438",
+          "COPILOT-P200-000439",
+          "COPILOT-P200-000440",
+          "COPILOT-P200-000441",
+          "COPILOT-P200-000442",
+          "COPILOT-P200-000443",
+          "COPILOT-P200-000448",
+          "COPILOT-P200-000464"
+        ],
+        "body_mm": [
+          191.8,
+          231.8,
+          4.8
+        ],
+        "root_contact_sites": [
+          [
+            -13,
+            -3,
+            10
+          ],
+          [
+            -13,
+            -2,
+            10
+          ],
+          [
+            -12,
+            -3,
+            10
+          ],
+          [
+            -12,
+            -2,
+            10
+          ],
+          [
+            -11,
+            -3,
+            10
+          ],
+          [
+            -11,
+            -2,
+            10
+          ],
+          [
+            -10,
+            -3,
+            10
+          ],
+          [
+            -10,
+            -2,
+            10
+          ],
+          [
+            -9,
+            -3,
+            10
+          ],
+          [
+            -9,
+            -2,
+            10
+          ],
+          [
+            -8,
+            -3,
+            10
+          ],
+          [
+            -8,
+            -2,
+            10
+          ],
+          [
+            -7,
+            -3,
+            10
+          ],
+          [
+            -7,
+            -2,
+            10
+          ],
+          [
+            -6,
+            -3,
+            10
+          ],
+          [
+            -6,
+            -2,
+            10
+          ],
+          [
+            -5,
+            -11,
+            10
+          ],
+          [
+            -5,
+            -10,
+            10
+          ],
+          [
+            -5,
+            -9,
+            10
+          ],
+          [
+            -5,
+            -8,
+            10
+          ],
+          [
+            -5,
+            -7,
+            10
+          ],
+          [
+            -5,
+            -6,
+            10
+          ],
+          [
+            -5,
+            -5,
+            10
+          ],
+          [
+            -5,
+            -4,
+            10
+          ],
+          [
+            -5,
+            -3,
+            10
+          ],
+          [
+            -5,
+            -2,
+            10
+          ],
+          [
+            -4,
+            -11,
+            10
+          ],
+          [
+            -4,
+            -10,
+            10
+          ],
+          [
+            -4,
+            -9,
+            10
+          ],
+          [
+            -4,
+            -8,
+            10
+          ],
+          [
+            -4,
+            -7,
+            10
+          ],
+          [
+            -4,
+            -6,
+            10
+          ],
+          [
+            -4,
+            -5,
+            10
+          ],
+          [
+            -4,
+            -4,
+            10
+          ],
+          [
+            -4,
+            -3,
+            10
+          ],
+          [
+            -4,
+            -2,
+            10
+          ],
+          [
+            -3,
+            -11,
+            10
+          ],
+          [
+            -3,
+            -10,
+            10
+          ],
+          [
+            -3,
+            -9,
+            10
+          ],
+          [
+            -3,
+            -8,
+            10
+          ],
+          [
+            -3,
+            -7,
+            10
+          ],
+          [
+            -3,
+            -6,
+            10
+          ],
+          [
+            -3,
+            -5,
+            10
+          ],
+          [
+            -3,
+            -4,
+            10
+          ],
+          [
+            -3,
+            -3,
+            10
+          ],
+          [
+            -3,
+            -2,
+            10
+          ],
+          [
+            -2,
+            -11,
+            10
+          ],
+          [
+            -2,
+            -10,
+            10
+          ],
+          [
+            -2,
+            -9,
+            10
+          ],
+          [
+            -2,
+            -8,
+            10
+          ],
+          [
+            -2,
+            -7,
+            10
+          ],
+          [
+            -2,
+            -6,
+            10
+          ],
+          [
+            -2,
+            -5,
+            10
+          ],
+          [
+            -2,
+            -4,
+            10
+          ],
+          [
+            -2,
+            -3,
+            10
+          ],
+          [
+            -2,
+            -2,
+            10
+          ],
+          [
+            -1,
+            -13,
+            10
+          ],
+          [
+            -1,
+            -12,
+            10
+          ],
+          [
+            -1,
+            -11,
+            10
+          ],
+          [
+            -1,
+            -10,
+            10
+          ],
+          [
+            -1,
+            -3,
+            10
+          ],
+          [
+            -1,
+            -2,
+            10
+          ],
+          [
+            0,
+            -13,
+            10
+          ],
+          [
+            0,
+            -12,
+            10
+          ],
+          [
+            0,
+            -11,
+            10
+          ],
+          [
+            0,
+            -10,
+            10
+          ],
+          [
+            0,
+            -3,
+            10
+          ],
+          [
+            0,
+            -2,
+            10
+          ],
+          [
+            1,
+            -13,
+            10
+          ],
+          [
+            1,
+            -12,
+            10
+          ],
+          [
+            1,
+            -11,
+            10
+          ],
+          [
+            1,
+            -10,
+            10
+          ],
+          [
+            1,
+            -3,
+            10
+          ],
+          [
+            1,
+            -2,
+            10
+          ],
+          [
+            2,
+            -13,
+            10
+          ],
+          [
+            2,
+            -12,
+            10
+          ],
+          [
+            2,
+            -11,
+            10
+          ],
+          [
+            2,
+            -10,
+            10
+          ],
+          [
+            2,
+            -3,
+            10
+          ],
+          [
+            2,
+            -2,
+            10
+          ],
+          [
+            3,
+            -23,
+            10
+          ],
+          [
+            3,
+            -22,
+            10
+          ],
+          [
+            3,
+            -21,
+            10
+          ],
+          [
+            3,
+            -20,
+            10
+          ],
+          [
+            3,
+            -19,
+            10
+          ],
+          [
+            3,
+            -18,
+            10
+          ],
+          [
+            3,
+            -17,
+            10
+          ],
+          [
+            3,
+            -16,
+            10
+          ],
+          [
+            3,
+            -15,
+            10
+          ],
+          [
+            3,
+            -14,
+            10
+          ],
+          [
+            3,
+            -13,
+            10
+          ],
+          [
+            3,
+            -12,
+            10
+          ],
+          [
+            3,
+            -3,
+            10
+          ],
+          [
+            3,
+            -2,
+            10
+          ],
+          [
+            4,
+            -23,
+            10
+          ],
+          [
+            4,
+            -22,
+            10
+          ],
+          [
+            4,
+            -21,
+            10
+          ],
+          [
+            4,
+            -20,
+            10
+          ],
+          [
+            4,
+            -19,
+            10
+          ],
+          [
+            4,
+            -18,
+            10
+          ],
+          [
+            4,
+            -17,
+            10
+          ],
+          [
+            4,
+            -16,
+            10
+          ],
+          [
+            4,
+            -15,
+            10
+          ],
+          [
+            4,
+            -14,
+            10
+          ],
+          [
+            4,
+            -13,
+            10
+          ],
+          [
+            4,
+            -12,
+            10
+          ],
+          [
+            4,
+            -3,
+            10
+          ],
+          [
+            4,
+            -2,
+            10
+          ],
+          [
+            5,
+            -22,
+            10
+          ],
+          [
+            5,
+            -21,
+            10
+          ],
+          [
+            5,
+            -20,
+            10
+          ],
+          [
+            5,
+            -19,
+            10
+          ],
+          [
+            5,
+            -18,
+            10
+          ],
+          [
+            5,
+            -17,
+            10
+          ],
+          [
+            5,
+            -16,
+            10
+          ],
+          [
+            5,
+            -15,
+            10
+          ],
+          [
+            5,
+            -14,
+            10
+          ],
+          [
+            5,
+            -13,
+            10
+          ],
+          [
+            5,
+            -12,
+            10
+          ],
+          [
+            5,
+            -3,
+            10
+          ],
+          [
+            5,
+            -2,
+            10
+          ],
+          [
+            6,
+            -21,
+            10
+          ],
+          [
+            6,
+            -20,
+            10
+          ],
+          [
+            6,
+            -19,
+            10
+          ],
+          [
+            6,
+            -18,
+            10
+          ],
+          [
+            6,
+            -17,
+            10
+          ],
+          [
+            6,
+            -16,
+            10
+          ],
+          [
+            6,
+            -15,
+            10
+          ],
+          [
+            6,
+            -14,
+            10
+          ],
+          [
+            6,
+            -13,
+            10
+          ],
+          [
+            6,
+            -12,
+            10
+          ],
+          [
+            6,
+            -3,
+            10
+          ],
+          [
+            6,
+            -2,
+            10
+          ],
+          [
+            7,
+            -3,
+            10
+          ],
+          [
+            7,
+            -2,
+            10
+          ],
+          [
+            8,
+            -3,
+            10
+          ],
+          [
+            8,
+            -2,
+            10
+          ],
+          [
+            9,
+            -3,
+            10
+          ],
+          [
+            9,
+            -2,
+            10
+          ],
+          [
+            10,
+            -3,
+            10
+          ],
+          [
+            10,
+            -2,
+            10
+          ]
+        ],
+        "source_seed_ids": [
+          "COPILOT-P200-000437"
+        ]
+      }
+    ],
+    "body_backed_detail_ids": [],
+    "method": "Real continuous same-color stepped beam/root modules; unchanged body envelope and 8mm root interfaces, no floor stands.",
+    "assembly_validation_ref": {
+      "path": "validation/copilot-p200-support-free-v2-assembly-support.json",
+      "sha256": "682cba3ad13c2ac71961ed724f24c54dcfafe201cfd17c7c9fb1c21e7a97df19"
+    },
+    "geometry_sequence_identity_sha256": "b0de4de40e7d7ddd1f74a93ea3f64abd6e95ae2c3d7d7aaa0e4289ffdc2b1a8d",
+    "section_applicability_contract": "TOPOLOGY_DERIVED_V1"
+  },
+  "visual_review": {
+    "images_actually_inspected": true,
+    "comparison_ready": true,
+    "user_visual_approval": "PENDING",
+    "observed_images": [
+      "media/assembled-front.png",
+      "media/assembled-three_quarter.png",
+      "media/radial-exploded.png",
+      "media/registered-face.png",
+      "motion-review.jpg",
+      "support-insertion-review.jpg"
+    ],
+    "observations_ja": [
+      "新actualID copilot-p200-support-free-v2は実35,630部品・182型、固定分母17,873/目標35,746との差-116で許容内。旧35,648部品のうち既存19個を実1個の本体受けへ統合した差-18で、床柱や重りの追加ではない。",
+      "完成正面・斜め・放射分解・登録正面の実CG4枚、実144frame/12fps/12秒/3章動画のframe1/18/54/73/108/144と取付周辺74/75/76/77を閲覧した。顔・ゴーグル・輪郭・色を維持し、旧支台は写っていない。元占有セル・全色・非変更部品poseも保持している。",
+      "BS-f1562cd26f18d2e0は191.8x231.8x4.8mm、141実接点の単一course受け。真の底面と受けZは16.0mmで、既存本体course3の後にrootcourse4/newstep382を取り付ける。見えない柱へ改名した構造ではない。",
+      "実native単一solid・接触/bearing・非干渉・挿入・全support/insertion先行関係、元/別展開の全ID/type/color/pose/stepを照合した。根元自身と後続荷重の全63prefixで最小28.935340mmの公称CAD静モーメント余裕を確認し、1mm基準は不変。",
+      "全51XY断面は正面積で最小52.588563mm²、真の下面屋根1.6mm。body_slices1要素の単一courseに実Z段差はなく、public proofのsection_applicabilityで期待Z面空/XYのみ必須/NOT_APPLICABLE_SINGLE_COURSEを明記した。",
+      "適用条件の補足は全出力完成後のmetadata-only再bindとし、nativeFCStd/STEP/STL/mesh・4PNG・MP4の全bytesを保持した。保存sceneは全35,630instance/182実mesh、材質/pose/step、絶対放射復帰、本体0→全数を再照合し、CGや動画を作り直していない。",
+      "実外部/仮支台は0個。広い薄型根元の実印刷変形、PLA/infill、保持力、曲げ、クリープ、転倒や手のアクセスは未検証で、外観採用・印刷は保留。旧case、他11案、基準/4倍、旧型・画像・比較のbytesは変更していない。"
+    ],
+    "observations_en": [
+      "Actual35,630pieces/182types for copilot-p200-support-free-v2. The fixed17,873denominator and35,746target are unchanged; difference-116 is within tolerance. Nineteen existing parts become one real body root, reducing the old35,648count by18 without adding a floor post or ballast.",
+      "All four real CG views, actual144-frame/12fps/12-second/three-chapter movie samples1/18/54/73/108/144 and installation samples74/75/76/77 were inspected. Face, goggles, silhouette and colors remain; the old aid is absent. Source occupied cells, all colors and unaffected poses are preserved.",
+      "BS-f1562cd26f18d2e0 measures191.8x231.8x4.8mm with141actual root contacts in one course. Physical bottom and receiving Z are16.0mm; body receiver course3 precedes rootcourse4/newstep382. It is not a renamed hidden floor pillar.",
+      "Actual native single-solid/contact/bearing/noninterference/insertion and all support/insertion predecessor checks pass. Original and relocated native reopening match every ID/type/color/pose/step. All63module/payload prefixes have minimum nominal CAD static margin28.935340mm, retaining the1mm requirement.",
+      "All51native X/Ysections are positive, minimum52.588563mm2, with1.6mm true cavity roof. The one-element body_slices topology has no internal Z step. Public section_applicability explicitly records no expected Z planes, X/Yrequirements and NOT_APPLICABLE_SINGLE_COURSE.",
+      "Applicability was rebound only after all outputs completed. Every nativeFCStd/STEP/STL/mesh,4PNG and MP4byte remains unchanged. The saved scene re-verifies all35,630instances/182native meshes, materials/poses/steps, absolute radial return and empty-to-full animation without re-rendering CG or video.",
+      "There are zero actual external/temporary assembly aids. Physical warping of the broad thin root, PLA/infill behavior, retention, bending, creep, tipping and hand access are untested; appearance selection and printing remain on hold. Historical cases, other11designs,1x/4x, old types/images/comparisons are unchanged."
+    ],
+    "selection": "NOT_SELECTED",
+    "physical_fit": "UNKNOWN",
+    "retention_strength": "UNKNOWN",
+    "slicer_status": "NOT_SLICED",
+    "full_print": "ON_HOLD"
+  }
+}

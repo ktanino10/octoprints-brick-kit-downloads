@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "study_id": "part-count-matrix-20260921",
+  "case_id": "copilot-p150-support-free-v2",
+  "logical_case_id": "copilot-p150",
+  "geometry_revision": "body-support-v2",
+  "source_commit": "313c7d5bee20dd343b4c01f2000eef94e26d09ed",
+  "tag": "part-count-matrix-20260921-copilot-p150-support-free-v2",
+  "status": "UNSELECTED_DIGITAL_CASE_NOT_SLICED",
+  "assets": [
+    {
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p150-support-free-v2/copilot-p150-support-free-v2-cad-scene-animation-public.zip",
+      "bytes": 145512078,
+      "sha256": "379d194b873615f869d89158fefe70dacda998d6b2b003efffb4baef35e7858a"
+    },
+    {
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p150-support-free-v2/copilot-p150-support-free-v2-assembly-motion.mp4",
+      "bytes": 1854121,
+      "sha256": "c03aac13645aee038f6a00c2e112e89fa37a5d28afceea11311aa53a52f18ebe"
+    }
+  ],
+  "case_categories": [
+    "cg",
+    "animation",
+    "native_cad",
+    "assembly"
+  ],
+  "physical_fit": "UNKNOWN",
+  "full_print": "ON_HOLD"
+}

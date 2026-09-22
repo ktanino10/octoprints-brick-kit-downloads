@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "study_id": "part-count-matrix-20260921",
+  "geometry_revision": "body-support-v2",
+  "state": "PARTIAL_BODY_SUPPORT_REVISION",
+  "ready_case_count": 2,
+  "expected_case_count": 4,
+  "source_only_not_public_QA": true,
+  "cases": [
+    {
+      "logical_case_id": "copilot-p120",
+      "case_id": "copilot-p120-support-free-v2",
+      "geometry_revision": "body-support-v2",
+      "requested_assembly_aid_count": 0,
+      "actual_count": 21382,
+      "actual_assembly_aid_count": 0,
+      "baseline_count": 17873,
+      "target_count": 21448,
+      "state": "READY",
+      "summary_path": "cases/copilot-p120-support-free-v2-summary.json",
+      "historical_case_id": "copilot-p120",
+      "historical_case_bytes_unchanged": true
+    },
+    {
+      "logical_case_id": "copilot-p150",
+      "case_id": "copilot-p150-support-free-v2",
+      "geometry_revision": "body-support-v2",
+      "requested_assembly_aid_count": 0,
+      "actual_count": 26673,
+      "actual_assembly_aid_count": 0,
+      "baseline_count": 17873,
+      "target_count": 26810,
+      "state": "READY",
+      "summary_path": "cases/copilot-p150-support-free-v2-summary.json",
+      "historical_case_id": "copilot-p150",
+      "historical_case_bytes_unchanged": true
+    },
+    {
+      "logical_case_id": "copilot-p200",
+      "case_id": "copilot-p200-support-free-v2",
+      "geometry_revision": "body-support-v2",
+      "requested_assembly_aid_count": 0,
+      "actual_count": null,
+      "actual_assembly_aid_count": null,
+      "baseline_count": 17873,
+      "target_count": 35746,
+      "state": "PENDING_ACTUAL_NATIVE_MEDIA_VERIFICATION",
+      "summary_path": null,
+      "historical_case_id": "copilot-p200",
+      "historical_case_bytes_unchanged": true
+    },
+    {
+      "logical_case_id": "copilot-p300",
+      "case_id": "copilot-p300-support-free-v2",
+      "geometry_revision": "body-support-v2",
+      "requested_assembly_aid_count": 0,
+      "actual_count": null,
+      "actual_assembly_aid_count": null,
+      "baseline_count": 17873,
+      "target_count": 53619,
+      "state": "PENDING_ACTUAL_NATIVE_MEDIA_VERIFICATION",
+      "summary_path": null,
+      "historical_case_id": "copilot-p300",
+      "historical_case_bytes_unchanged": true
+    }
+  ],
+  "unchanged_references_and_cases": "Copilot1x/4x, allMona/Ducky and alloldcase/media/mesh/comparisonbytes",
+  "frozen_prior_catalog_sha256": "86d19f5790f769efcb75435f5ad8d9fec8c79fff8b377a038f6affa9f4b100b2",
+  "status": {
+    "selection": "NOT_SELECTED",
+    "physical_fit": "UNKNOWN",
+    "retention_strength": "UNKNOWN",
+    "slicer_status": "NOT_SLICED",
+    "full_print": "ON_HOLD"
+  }
+}

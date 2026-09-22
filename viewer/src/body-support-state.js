@@ -53,6 +53,19 @@ export function validateBodySupportBinding(manifest, proof) {
   const byId = new Map(manifest.parts.map(part => [part.id, part]));
   const actualModules = manifest.parts.filter(part => manifest.types[part.type_id]?.kind === 'stepped-root-module').map(part => part.id);
   check(equalSet(ids, actualModules), message);
+  const exclusive = new Map(), loadSets = new Map(ids.map(id => [id, []]));
+  for (const part of [...manifest.parts].sort((left, right) => left.step - right.step)) {
+    check(part.support_ids.every(id => exclusive.has(id)), message);
+    const incoming = part.support_ids.map(id => exclusive.get(id));
+    const contributors = new Set(incoming.filter(id => id !== null));
+    if (loadSets.has(part.id)) {
+      check(contributors.size === 0, message);
+      exclusive.set(part.id, part.id);
+    } else {
+      for (const identifier of contributors) loadSets.get(identifier).push(part.id);
+      exclusive.set(part.id, incoming.length && incoming[0] !== null && new Set(incoming).size === 1 ? incoming[0] : null);
+    }
+  }
   for (const part of manifest.parts) check(Array.isArray(part.source_part_ids) && part.source_part_ids.length > 0
     && new Set(part.source_part_ids).size === part.source_part_ids.length
     && part.source_part_ids.every(id => typeof id === 'string' && id.length > 0)
@@ -109,7 +122,8 @@ export function validateBodySupportBinding(manifest, proof) {
       && Array.isArray(balance.downstream_payloads) && Array.isArray(balance.assembly_prefix_checks)
       && balance.assembly_prefix_checks.length === balance.downstream_payloads.length + 1, message);
     const expected = [part.id, ...balance.downstream_payloads.map(item => item.part_id)];
-    check(new Set(expected).size === expected.length, message);
+    check(new Set(expected).size === expected.length
+      && equalSet(expected.slice(1), loadSets.get(part.id)), message);
     for (const [index, identifier] of expected.entries()) {
       const payload = byId.get(identifier), sample = balance.assembly_prefix_checks[index];
       check(payload && sample.after_step === payload.step

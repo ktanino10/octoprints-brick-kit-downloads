@@ -7,7 +7,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import test_density_root_evidence as root_fixtures
 from density_root_evidence import canonical_sha, geometry_sequence_identity as mona_identity, validate_root_evidence
 from density_body_support import (
-    NATIVE_PASS, REVISION, SEQUENCE_MODE, geometry_sequence_identity, validate_body_support_evidence,
+    NATIVE_PASS, REVISION, SEQUENCE_MODE, geometry_sequence_identity, support_load_sets, validate_body_support_evidence,
 )
 
 
@@ -112,6 +112,19 @@ class BodySupportEvidenceTests(unittest.TestCase):
         section["section_count"] = 3
         with self.assertRaises(ValueError):
             validate_body_support_evidence(proof, manifest, native)
+
+    def test_exclusive_loads_stop_after_the_first_shared_receiver_but_never_reset_at_a_new_root(self):
+        def part(identifier, root, supports):
+            return {"id": identifier, "type_id": "BS" if root else "BR", "support_ids": supports}
+        manifest = {"types": {"BS": {"kind": "stepped-root-module"}, "BR": {"kind": "brick"}}, "parts": [
+            part("floor", False, []), part("root-a", True, ["floor"]),
+            part("exclusive", False, ["root-a"]), part("shared", False, ["exclusive", "floor"]),
+            part("root-b", True, ["shared"]), part("payload-b", False, ["root-b"]),
+        ]}
+        self.assertEqual(support_load_sets(manifest), {"root-a": ["exclusive", "shared"], "root-b": ["payload-b"]})
+        manifest["parts"][4]["support_ids"] = ["exclusive"]
+        with self.assertRaisesRegex(ValueError, "exclusive"):
+            support_load_sets(manifest)
 
     def test_status_flags_cannot_replace_native_geometry_receiver_sections_or_all_load_prefixes(self):
         for change in [

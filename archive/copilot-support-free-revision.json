@@ -61,17 +61,21 @@
       },
       "actual_case_id": "copilot-p150-support-free-v2",
       "geometry_revision": "body-support-v2",
-      "source_commit": null,
-      "status": "INPUT_WAIT",
-      "actual_count": null,
-      "external_aid_count": null,
-      "assembly_aid_count": null,
-      "geometry_sequence_evidence": null,
-      "cad_url": null,
-      "cg_url": null,
-      "animation_url": null,
-      "assembly_url": null,
-      "viewer_url": null,
+      "source_commit": "313c7d5bee20dd343b4c01f2000eef94e26d09ed",
+      "status": "PUBLIC_PENDING",
+      "actual_count": 26673,
+      "external_aid_count": 0,
+      "assembly_aid_count": 0,
+      "geometry_sequence_evidence": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/validation/copilot-p150-support-free-v2-assembly-support.json",
+        "bytes": 94784,
+        "sha256": "3769a5c6a6b6649b346d5f2adf82ecb9f2cb56bfd2074064ba8967d77762c00c"
+      },
+      "cad_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p150-support-free-v2/copilot-p150-support-free-v2-cad-scene-animation-public.zip",
+      "cg_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p150-support-free-v2/copilot-p150-support-free-v2-cad-scene-animation-public.zip",
+      "animation_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p150-support-free-v2/copilot-p150-support-free-v2-assembly-motion.mp4",
+      "assembly_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p150-support-free-v2/copilot-p150-support-free-v2-cad-scene-animation-public.zip",
+      "viewer_url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case=copilot-p150-support-free-v2",
       "verification": {
         "public_browser_passed": false,
         "anonymous_downloads_passed": false
@@ -88,17 +92,21 @@
       },
       "actual_case_id": "copilot-p200-support-free-v2",
       "geometry_revision": "body-support-v2",
-      "source_commit": null,
-      "status": "INPUT_WAIT",
-      "actual_count": null,
-      "external_aid_count": null,
-      "assembly_aid_count": null,
-      "geometry_sequence_evidence": null,
-      "cad_url": null,
-      "cg_url": null,
-      "animation_url": null,
-      "assembly_url": null,
-      "viewer_url": null,
+      "source_commit": "f231e36aad95adfdaa03df696816cf86be06f784",
+      "status": "PUBLIC_PENDING",
+      "actual_count": 35630,
+      "external_aid_count": 0,
+      "assembly_aid_count": 0,
+      "geometry_sequence_evidence": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/validation/copilot-p200-support-free-v2-assembly-support.json",
+        "bytes": 94264,
+        "sha256": "682cba3ad13c2ac71961ed724f24c54dcfafe201cfd17c7c9fb1c21e7a97df19"
+      },
+      "cad_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p200-support-free-v2/copilot-p200-support-free-v2-cad-scene-animation-public.zip",
+      "cg_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p200-support-free-v2/copilot-p200-support-free-v2-cad-scene-animation-public.zip",
+      "animation_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p200-support-free-v2/copilot-p200-support-free-v2-assembly-motion.mp4",
+      "assembly_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p200-support-free-v2/copilot-p200-support-free-v2-cad-scene-animation-public.zip",
+      "viewer_url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case=copilot-p200-support-free-v2",
       "verification": {
         "public_browser_passed": false,
         "anonymous_downloads_passed": false
@@ -162,8 +170,8 @@
   },
   "revision_catalog": {
     "path": "/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/catalog.json",
-    "bytes": 10730,
-    "sha256": "0a4ed8e594172844891267fb4648fde6ffbd30ec984c50bb5a33c54b9bd3e718"
+    "bytes": 27507,
+    "sha256": "223ab3eef90fa794104266abd6a5d82811e03297ca7926cd35f224db3ac27d32"
   },
   "base_catalog_sha256": "69b39de67d8d9214b75b631bf1e9f73e09ee16a520314b65a559ad6be2ff864e",
   "budget_baseline": "/archive/body-support-baseline.json"

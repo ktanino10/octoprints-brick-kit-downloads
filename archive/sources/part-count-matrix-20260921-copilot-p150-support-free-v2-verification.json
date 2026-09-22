@@ -1,0 +1,78 @@
+{
+  "case_id": "copilot-p150-support-free-v2",
+  "source_commit": "313c7d5bee20dd343b4c01f2000eef94e26d09ed",
+  "metrics": {
+    "part_count": 26673,
+    "unique_types": 162,
+    "one_by_one_exceptions": 39,
+    "layer_count": 89,
+    "minimum_part_mm": [
+      7.8,
+      7.8,
+      3.2
+    ],
+    "grip_long_ge_15_8_count": 26634
+  },
+  "manifest_sha256": "c47469dd9a706161c52982af0ce3a45424ac418a2cd3c72f0bb4c31d4e446233",
+  "bom_sha256": "57904db83775087dfae85e412ffc835a2690de1f60b7e1bef738fe82e326b088",
+  "counted_instances": 26673,
+  "bom_ids_match": true,
+  "bom_types_colors_poses_steps_match": true,
+  "identity_projection_sha256": "72581c674232ed103049692091b2a27c54021da7add2755febdd3c4ec41fdaf6",
+  "body_height_families": [
+    {
+      "body_height_mm": 3.2,
+      "part_count": 151,
+      "unique_types": 5
+    },
+    {
+      "body_height_mm": 4.8,
+      "part_count": 26522,
+      "unique_types": 157
+    }
+  ],
+  "public_native_assembly": {
+    "path": "artifacts/studies/part-count-matrix-20260921/cases/copilot-p150-support-free-v2/assembly.FCStd",
+    "document_objects": 174,
+    "native_links_resolved": 174,
+    "link_instances": 26673,
+    "valid_single_solid_targets_checked": 162,
+    "proxy_free": true,
+    "opened": true,
+    "recomputed": false,
+    "saved": false,
+    "sha256": "181774c034d9c94028ff7ff93b73a823f48c8d752d584d09651aef4101348c51"
+  },
+  "public_blender_motion_preserved": true,
+  "source_saved_scene_binding": "00ff515c6bb72cec2822bb6675e05cc1ec64cfe7734f074ffb1e2433884c9cb8",
+  "source_native_reopen": {
+    "result": "PASS_REOPENED_RELATIVE_NATIVE_LINK_ARRAYS",
+    "actual_instance_count": 26673,
+    "all_ids_types_colors_poses_steps": true,
+    "all_sources_inside_bundle": true
+  },
+  "private_inputs_copied": 0,
+  "body_support_revision_evidence": {
+    "geometry_sequence_identity_sha256": "8f68e0fade85afa1f02d4efb98e7789300121f02fa7dafd266c17554de30e1a8",
+    "native_support_contact_evidence_sha256": "d099f240bb2ef691151faf1b4662646e396c11cae161992a1074802b96e38187",
+    "checked_support_modules": 1,
+    "checked_actual_brep_sections": 55,
+    "sequence_mode": "BODY_FIRST_INTERNAL_SUPPORT",
+    "native_result": "PASS_ACTUAL_BODY_SUPPORT_BREP_CONTACTS",
+    "root_dependency_result": "PASS_NO_EXCLUSIVE_ROOT_RESET",
+    "gravity_balance_result": "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS",
+    "physical_validation": "UNKNOWN",
+    "physical_mass_measured": false
+  },
+  "public_native_id_pose_check": {
+    "case_id": "copilot-p150-support-free-v2",
+    "assembly_sha256": "181774c034d9c94028ff7ff93b73a823f48c8d752d584d09651aef4101348c51",
+    "actual_instances": 26673,
+    "array_count": 174,
+    "all_ids_types_colors_poses_steps": "MATCH",
+    "relocated_reopen": true,
+    "saved": false,
+    "recomputed": false
+  },
+  "files": []
+}

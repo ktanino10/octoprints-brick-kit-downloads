@@ -18,11 +18,53 @@
       "source_commit": "835e3f483b8bca99fd3023bb0e849ed9dacf2351"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/copilot-p150-support-free-v2-summary.json",
+      "bytes": 129159,
+      "sha256": "e33a7bd3ac2cfd253e76d2307604572152b768056dfd6b1f7b8d9503bcf46c19",
+      "source_relative_path": "cases/copilot-p150-support-free-v2-summary.json",
+      "source_commit": "313c7d5bee20dd343b4c01f2000eef94e26d09ed"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/copilot-p150-support-free-v2.json.gz",
+      "bytes": 1201004,
+      "sha256": "5eee4afca24f9babaae889bd689172ad46eeb44a226622ef171d8792d7d8b2d7",
+      "source_relative_path": "cases/copilot-p150-support-free-v2.json.gz",
+      "source_commit": "313c7d5bee20dd343b4c01f2000eef94e26d09ed"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/copilot-p200-support-free-v2-summary.json",
+      "bytes": 141776,
+      "sha256": "7949d3c60dc3759e2427711497d158d4ea469786798d214c3af1ab54894fc80e",
+      "source_relative_path": "cases/copilot-p200-support-free-v2-summary.json",
+      "source_commit": "f231e36aad95adfdaa03df696816cf86be06f784"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/copilot-p200-support-free-v2.json.gz",
+      "bytes": 1605089,
+      "sha256": "04355f6f15e65f50a99134c638b2cd56c41e58c136f7fb7f9d9cf2fed0b2b511",
+      "source_relative_path": "cases/copilot-p200-support-free-v2.json.gz",
+      "source_commit": "f231e36aad95adfdaa03df696816cf86be06f784"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/geometry/BS-0e9661fb7ce065e5.mesh.gz",
       "bytes": 424785,
       "sha256": "eb560689030f830f79467f4fe33226cfa6dc51043cac023ab3c6a013f6711204",
       "source_relative_path": "geometry/BS-0e9661fb7ce065e5.mesh.gz",
       "source_commit": "835e3f483b8bca99fd3023bb0e849ed9dacf2351"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/BS-389940f5bda66897.mesh.gz",
+      "bytes": 1179190,
+      "sha256": "7c5038e8a1eb88bea142e451584d6d8617d6c21261b737532e00a72c483f03f6",
+      "source_relative_path": "geometry/BS-389940f5bda66897.mesh.gz",
+      "source_commit": "313c7d5bee20dd343b4c01f2000eef94e26d09ed"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/BS-f1562cd26f18d2e0.mesh.gz",
+      "bytes": 1224174,
+      "sha256": "a1e6e149dc120e8de0e3147831c6db70021a2d2df8edf0a0480da5f173d084eb",
+      "source_relative_path": "geometry/BS-f1562cd26f18d2e0.mesh.gz",
+      "source_commit": "f231e36aad95adfdaa03df696816cf86be06f784"
     },
     {
       "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p120-support-free-v2-assembled-front.jpg",
@@ -53,6 +95,69 @@
       "source_commit": "835e3f483b8bca99fd3023bb0e849ed9dacf2351"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p150-support-free-v2-assembled-front.jpg",
+      "bytes": 80298,
+      "sha256": "3e688739ffb396b1afe242d268035185750da453a50c7e61a0965b5ae17d9e5f",
+      "source_relative_path": "images/copilot-p150-support-free-v2-assembled-front.jpg",
+      "source_commit": "313c7d5bee20dd343b4c01f2000eef94e26d09ed"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p150-support-free-v2-assembled-three_quarter.jpg",
+      "bytes": 105008,
+      "sha256": "5a0564ab92f87b7a32662f74e439ee55217664c0c71b5fba45db54b24dd20fc7",
+      "source_relative_path": "images/copilot-p150-support-free-v2-assembled-three_quarter.jpg",
+      "source_commit": "313c7d5bee20dd343b4c01f2000eef94e26d09ed"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p150-support-free-v2-radial-exploded.jpg",
+      "bytes": 162501,
+      "sha256": "512f29cf03665a0d31483668e7d69c0677bb19f48a948279653742fd36435511",
+      "source_relative_path": "images/copilot-p150-support-free-v2-radial-exploded.jpg",
+      "source_commit": "313c7d5bee20dd343b4c01f2000eef94e26d09ed"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p150-support-free-v2-registered-face.jpg",
+      "bytes": 77781,
+      "sha256": "9c0fc2b328c2bd8c8a25644b4d5b52919931862bb48214e3d40513b2494a9168",
+      "source_relative_path": "images/copilot-p150-support-free-v2-registered-face.jpg",
+      "source_commit": "313c7d5bee20dd343b4c01f2000eef94e26d09ed"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p200-support-free-v2-assembled-front.jpg",
+      "bytes": 81977,
+      "sha256": "c6258d1486088f774c639b86d93787dddee8386319bde78991570eef45afccb3",
+      "source_relative_path": "images/copilot-p200-support-free-v2-assembled-front.jpg",
+      "source_commit": "f231e36aad95adfdaa03df696816cf86be06f784"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p200-support-free-v2-assembled-three_quarter.jpg",
+      "bytes": 106470,
+      "sha256": "5ea6bc99aa2b1eccf48acf152d995af518928d8e0430033ee1487cc076b5fe4a",
+      "source_relative_path": "images/copilot-p200-support-free-v2-assembled-three_quarter.jpg",
+      "source_commit": "f231e36aad95adfdaa03df696816cf86be06f784"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p200-support-free-v2-radial-exploded.jpg",
+      "bytes": 163083,
+      "sha256": "64a202b6ea0d7677d4d97c9eb361af8af1c3db248c96fa8c503bc07386cdde58",
+      "source_relative_path": "images/copilot-p200-support-free-v2-radial-exploded.jpg",
+      "source_commit": "f231e36aad95adfdaa03df696816cf86be06f784"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p200-support-free-v2-registered-face.jpg",
+      "bytes": 78020,
+      "sha256": "f73c16c8bae6bbf1ccb4c5924dca871a18db7be1379b17beea5f257cd9fbd04f",
+      "source_relative_path": "images/copilot-p200-support-free-v2-registered-face.jpg",
+      "source_commit": "f231e36aad95adfdaa03df696816cf86be06f784"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/source-records/313c7d5bee20dd343b4c01f2000eef94e26d09ed-body-support-v2-matrix.json",
+      "bytes": 2656,
+      "sha256": "7efcf0e37cf54162f7230372910a8a80d7a3383c151fbbe858d22538fb879f92",
+      "source_relative_path": "revisions/body-support-v2/matrix.json",
+      "source_commit": "313c7d5bee20dd343b4c01f2000eef94e26d09ed"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/source-records/835e3f483b8bca99fd3023bb0e849ed9dacf2351-body-support-v2-matrix.json",
       "bytes": 2648,
       "sha256": "f24f76491cf2e6c2d1ba9f45b75a1747a8dd68415eeccb97ddb6245cb128ed7f",
@@ -60,12 +165,33 @@
       "source_commit": "835e3f483b8bca99fd3023bb0e849ed9dacf2351"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/source-records/f231e36aad95adfdaa03df696816cf86be06f784-body-support-v2-matrix.json",
+      "bytes": 2664,
+      "sha256": "6a6ca62b92ecabdb71b56c662097345f0a16f1e4ddf0bfb6a0384b5ea1c7125b",
+      "source_relative_path": "revisions/body-support-v2/matrix.json",
+      "source_commit": "f231e36aad95adfdaa03df696816cf86be06f784"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/validation/copilot-p120-support-free-v2-assembly-support.json",
       "bytes": 33587,
       "sha256": "6898a037e32f6648261dd2399fedb0fde746d306408db5dce7399cbb9cb4a1a5",
       "source_relative_path": "validation/copilot-p120-support-free-v2-assembly-support.json",
       "source_commit": "835e3f483b8bca99fd3023bb0e849ed9dacf2351"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/validation/copilot-p150-support-free-v2-assembly-support.json",
+      "bytes": 94784,
+      "sha256": "3769a5c6a6b6649b346d5f2adf82ecb9f2cb56bfd2074064ba8967d77762c00c",
+      "source_relative_path": "validation/copilot-p150-support-free-v2-assembly-support.json",
+      "source_commit": "313c7d5bee20dd343b4c01f2000eef94e26d09ed"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/validation/copilot-p200-support-free-v2-assembly-support.json",
+      "bytes": 94264,
+      "sha256": "682cba3ad13c2ac71961ed724f24c54dcfafe201cfd17c7c9fb1c21e7a97df19",
+      "source_relative_path": "validation/copilot-p200-support-free-v2-assembly-support.json",
+      "source_commit": "f231e36aad95adfdaa03df696816cf86be06f784"
     }
   ],
-  "source_revision": "835e3f483b8bca99fd3023bb0e849ed9dacf2351"
+  "source_revision": "f231e36aad95adfdaa03df696816cf86be06f784"
 }
