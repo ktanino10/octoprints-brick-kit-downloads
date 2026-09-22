@@ -1,7 +1,9 @@
 """Check matrix readiness and real radial/bottom-up guide behavior in a fresh browser."""
 
 import argparse
+import csv
 import gzip
+import io
 import json
 from pathlib import Path
 from urllib.parse import parse_qs, urljoin, urlparse
@@ -27,7 +29,8 @@ report = {"base": base, "engine": args.engine, "browser_executable": args.browse
           "geometry_revision": "body-support-v2" if args.body_support else None,
           "input_wait": args.expect_input_wait, "checks": [], "errors": [], "cases": [],
           "media": [], "baseline_media": [], "reference_guides": [], "reference_media": [], "display_modes": [],
-          "comparison_sheets": [], "comparison_csv_rows": None, "aid_evidence": []}
+          "comparison_sheets": [], "comparison_csv_rows": None, "aid_evidence": [],
+          "body_support_comparison_sheets": [], "body_support_csv_rows": None}
 
 
 def checked(message):
@@ -84,6 +87,39 @@ with sync_playwright() as playwright:
                 assert body_catalog["geometry_revision"] == "body-support-v2"
                 assert body_catalog["base_catalog_sha256"] == pointer["catalog"]["sha256"]
                 available = body_catalog["cases"]
+                if body_catalog.get("comparison_sheets"):
+                    new_index = context.request.get(urljoin(base, body_catalog["comparison_sheets"]["path"].lstrip("/"))).json()
+                    expected_ids = [item["id"] for item in available if item["state"] == "READY"] + ["copilot-p400"]
+                    for locale in ["ja", "en"]:
+                        page.goto(urljoin(base, f"{locale}/density-matrix.html?revision=body-support-v2&character=copilot"),
+                                  wait_until="networkidle")
+                        expect(page.locator("#matrix-error")).to_be_hidden()
+                        expect(page.locator("#matrix-table tr")).to_have_count(5)
+                        assert page.locator("#matrix-cards article").evaluate_all(
+                            "(nodes) => nodes.map(node => node.dataset.case)") == expected_ids
+                        expect(page.locator("#matrix-comparison-images img")).to_have_count(3)
+                        for image in page.locator("#matrix-comparison-images img").all():
+                            image.scroll_into_view_if_needed()
+                            expect(image).not_to_have_js_property("naturalWidth", 0)
+                            uncropped_image(image)
+                            if locale == "en":
+                                report["body_support_comparison_sheets"].append({"url": image.get_attribute("src"), "decoded": True})
+                        if locale == "en":
+                            english(page)
+                        page.screenshot(path=str(args.output / f"body-support-comparisons-{locale}.png"), full_page=True)
+                    revised_csv = context.request.get(page.locator("#matrix-comparison-csv").get_attribute("href"))
+                    revised_rows = list(csv.DictReader(io.StringIO(revised_csv.text())))
+                    assert len(revised_rows) == 15
+                    by_id = {row["case_id"]: row for row in revised_rows}
+                    for item in available:
+                        assert int(by_id[item["id"]]["actual_count"]) == item["metrics"]["part_count"]
+                    original_csv = context.request.get(urljoin(base, "artifacts/studies/part-count-matrix-20260921/comparison.csv")).body().splitlines(keepends=True)
+                    new_csv = revised_csv.body().splitlines(keepends=True)
+                    slots = {item["logical_case_id"] for item in available}
+                    keep = lambda rows: [row for index, row in enumerate(rows) if index == 0 or row.decode().split(",")[1] not in slots]
+                    assert keep(original_csv) == keep(new_csv) and len(keep(new_csv)) == 12
+                    report["body_support_csv_rows"] = len(revised_rows)
+                    checked("versioned Copilot six-way images/physical scale and four changed CSV rows preserve the original eleven rows")
             cases = [entry for entry in available if entry["state"] == "READY"
                      and (not args.case or entry["id"] in args.case)]
             assert cases

@@ -13,7 +13,7 @@ import subprocess
 from mona_study_evidence import verify_manifest_bom, body_height_families
 from density_requirements import COPILOT_SUPPORT_REVISION, MONA_ROOT_REFERENCE_ID, artifact_identity
 from density_root_evidence import validate_root_evidence
-from density_body_support import validate_body_support_evidence
+from density_body_support import validate_body_support_evidence, validate_support_ledger
 from validate_archive import privacy
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -179,7 +179,7 @@ def main():
     animation_check = json.loads((stage / "animation-portability.json").read_text())
     if not animation_check["motion_unchanged"] or not animation_check["frame1_roundtrip_no_drift"]:
         raise ValueError("Public saved-scene animation was not preserved")
-    root_record = root_validation = whisker_support = None
+    root_record = root_validation = whisker_support = load_ledger = None
     if revision:
         reference = summary["assembly_support" if body_support else "whisker_support"]["assembly_validation_ref"]
         if reference["path"] != f"validation/{case_id}-{'assembly' if body_support else 'whisker'}-support.json":
@@ -188,6 +188,11 @@ def main():
         if sha(root_bytes) != reference["sha256"]:
             raise ValueError("The exact public root validation bytes changed")
         root_record = (validate_body_support_evidence if body_support else validate_root_evidence)(json.loads(root_bytes), full, native)
+        if body_support and root_record["checked_support_modules"] > 1:
+            ledger_bytes = proof_bytes(f"/cases/{case_id}/support-load-ledger.json")
+            original_bytes = proof_bytes(f"/cases/{revision['logical_case_id']}/manifest.json")
+            load_ledger = validate_support_ledger(json.loads(ledger_bytes), full, json.loads(original_bytes), native, sha(mb))
+            load_ledger["read_only_ledger_sha256"] = sha(ledger_bytes)
         if native.get("temporary_aids") != [] or payload.get("assembly_aids") != []:
             raise ValueError("The root source/native assembly still contains temporary supports")
         if full["motion"]["stages"] != motion["stages"] or full["motion"]["sequence_mode"] != motion.get("sequence_mode"):
@@ -397,7 +402,8 @@ def main():
         **evidence, "body_height_families": body_height_families(full), "public_native_assembly": assembly,
         "public_blender_motion_preserved": True, "source_saved_scene_binding": source_motion["instance_projection_sha256"],
         "source_native_reopen": native["moved_reopen"], "private_inputs_copied": 0,
-        **({("body_support_revision_evidence" if body_support else "root_revision_evidence"): root_record} if root_record else {})}))
+        **({("body_support_revision_evidence" if body_support else "root_revision_evidence"): root_record} if root_record else {}),
+        **({"independent_exclusive_load_ledger": load_ledger} if load_ledger else {})}))
     print(json.dumps({"case_id": case_id, "actual_count": len(parts), "native_types": len(payload["geometry"]),
                       "native_aids": len(aids), "derived_guide_bytes": len(guide_bytes), "catalog_state": "PARTIAL"}, indent=2))
 

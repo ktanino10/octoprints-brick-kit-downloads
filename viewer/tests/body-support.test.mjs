@@ -3,7 +3,8 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { gunzipSync } from 'node:zlib';
 import { validateGuideManifest, guideIndex, radialPosition } from '../src/density-state.js';
-import { validateBodySupportPublication } from '../../assets/body-support-publication.js';
+import { effectiveBodySupportCatalog, validateBodySupportPublication } from '../../assets/body-support-publication.js';
+import { validateDensityComparisons } from '../../assets/density-comparisons.js';
 import { printCatalog, selectedPrintCase } from '../../assets/print-catalog-data.js';
 
 const root = new URL('../../', import.meta.url);
@@ -77,4 +78,23 @@ test('the prior READY remains independent and a pending new case is not silently
   assert.equal(publication.cases.length, 4);
   const fakeComplete = structuredClone(approved); fakeComplete.state = 'READY';
   assert.throws(() => validateBodySupportPublication(fakeComplete, overlay, pointer));
+});
+
+test('versioned Copilot comparisons retain exact prior rows, fixed denominator, actual geometry and physical-size mapping', async () => {
+  const data = await load(overlay.comparison_sheets.path);
+  const previous = await load(base.comparison_sheets.path);
+  const effective = effectiveBodySupportCatalog(base, overlay);
+  assert.equal(validateDensityComparisons(data, effective, { bodySupport: true, previous }), data);
+  assert.equal(data.rows.length, 1);
+  assert.equal(data.rows[0].columns[0].actual_count, 17873);
+  assert.equal(data.rows[0].columns[5].actual_count, 71261);
+  for (const mutate of [
+    item => { item.unchanged_character_rows[0].actual_reference_count++; },
+    item => { item.rows[0].columns[1].case_id = 'copilot-p120'; },
+    item => { item.rows[0].images[2].conditions[0].source_to_sheet_affine[0] += 0.01; },
+    item => { item.comparison_csv.path = 'comparison.csv'; },
+  ]) {
+    const changed = structuredClone(data); mutate(changed);
+    assert.throws(() => validateDensityComparisons(changed, effective, { bodySupport: true, previous }));
+  }
 });

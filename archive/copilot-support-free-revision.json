@@ -127,17 +127,21 @@
       },
       "actual_case_id": "copilot-p300-support-free-v2",
       "geometry_revision": "body-support-v2",
-      "source_commit": null,
-      "status": "INPUT_WAIT",
-      "actual_count": null,
-      "external_aid_count": null,
-      "assembly_aid_count": null,
-      "geometry_sequence_evidence": null,
-      "cad_url": null,
-      "cg_url": null,
-      "animation_url": null,
-      "assembly_url": null,
-      "viewer_url": null,
+      "source_commit": "8c9b01fa32c2495ed0daba231b538619a975bebc",
+      "status": "PUBLIC_PENDING",
+      "actual_count": 53287,
+      "external_aid_count": 0,
+      "assembly_aid_count": 0,
+      "geometry_sequence_evidence": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/validation/copilot-p300-support-free-v2-assembly-support.json",
+        "bytes": 210954,
+        "sha256": "86769736f52ffac2e92c05e0eeae2d878d7feb03a9ea691190237b8ae3d202e3"
+      },
+      "cad_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p300-support-free-v2/copilot-p300-support-free-v2-cad-scene-animation-public.zip",
+      "cg_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p300-support-free-v2/copilot-p300-support-free-v2-cad-scene-animation-public.zip",
+      "animation_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p300-support-free-v2/copilot-p300-support-free-v2-assembly-motion.mp4",
+      "assembly_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p300-support-free-v2/copilot-p300-support-free-v2-cad-scene-animation-public.zip",
+      "viewer_url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case=copilot-p300-support-free-v2",
       "verification": {
         "public_browser_passed": false,
         "anonymous_downloads_passed": false
@@ -162,7 +166,8 @@
     "Verified actual native geometry, contacts, dependencies and nominal CAD load evidence",
     "Zero external and temporary assembly aids in each actual revision",
     "Public complete CAD, CG, animation and assembly data",
-    "Actual public browser and anonymous byte/hash verification for each new revision"
+    "Actual public browser and anonymous byte/hash verification for each new revision",
+    "Three actual versioned six-way comparison images and revised fifteen-row CSV, preserving the other eleven rows, verified in the public browser and by anonymous hashes"
   ],
   "verification": {
     "public_browser_passed": false,
@@ -174,9 +179,48 @@
   },
   "revision_catalog": {
     "path": "/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/catalog.json",
-    "bytes": 27507,
-    "sha256": "223ab3eef90fa794104266abd6a5d82811e03297ca7926cd35f224db3ac27d32"
+    "bytes": 38019,
+    "sha256": "2f299a1552ebb9ece3ed0f82356e8e7098d563c9a7cebcc8b2f9c15c310214f0"
   },
   "base_catalog_sha256": "69b39de67d8d9214b75b631bf1e9f73e09ee16a520314b65a559ad6be2ff864e",
-  "budget_baseline": "/archive/body-support-baseline.json"
+  "budget_baseline": "/archive/body-support-baseline.json",
+  "comparisons": {
+    "state": "PUBLIC_PENDING",
+    "descriptor": {
+      "path": "/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparison-sheets.json",
+      "bytes": 180322,
+      "sha256": "47940be5dfa4748efd8969ffa87a1b67102f18bb98457dc1c14ff847ca651d91"
+    },
+    "assets": [
+      {
+        "path": "/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparison-sheets.json",
+        "bytes": 180322,
+        "sha256": "47940be5dfa4748efd8969ffa87a1b67102f18bb98457dc1c14ff847ca651d91"
+      },
+      {
+        "path": "/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparison.csv",
+        "bytes": 2486,
+        "sha256": "ce6aecb09a0e3e4ff8d52633fb30495fbc4b26be27fb875af8a2ef7ae38c9130"
+      },
+      {
+        "path": "/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparisons/copilot-normalized-front.jpg",
+        "bytes": 504466,
+        "sha256": "aa50b56c38c04a2fa18477a55dfd8bb39934a421c53996049e3583b964c7faef"
+      },
+      {
+        "path": "/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparisons/copilot-normalized-three_quarter.jpg",
+        "bytes": 588177,
+        "sha256": "3e7019042b3a1f88cf0a0b1b13a7527c5611da16d71588b6a0edff37540e9fab"
+      },
+      {
+        "path": "/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparisons/copilot-physical-size.jpg",
+        "bytes": 573780,
+        "sha256": "a83f69f2305efb7463c6ab86380cf5febb7d7c06764d1c36a1288c568c628e0b"
+      }
+    ],
+    "verification": {
+      "public_browser_passed": false,
+      "anonymous_downloads_passed": false
+    }
+  }
 }

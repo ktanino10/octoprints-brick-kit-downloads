@@ -11,8 +11,11 @@
 
 初めての方はトップの**印刷用データカタログ**から、3体それぞれの5案を部品数・完成サイズ・支台の有無で選べます。
 各カードの**「360°回転で見る」**から、選んだ実モデルをドラッグ／スワイプで回転・拡大できます。3Dは開いたときだけ読み込みます。
-Copilotの支台付き1.2・1.5・2・3倍案は、別の[支台なし改訂](archive/copilot-support-free-revision.json)を進めています。
-現在の旧支台付きファイルを「支台なし」とは表示せず、元の15案の公開READYを新4案の完了には使いません。既存の支台0個の4倍案は変更しません。
+Copilotは1.2・1.5・2・3倍の[支台なし実構造へ改訂](archive/copilot-support-free-revision.json)したデータを別版で追加しています。
+実部品数は **21,382 / 26,673 / 35,630 / 53,287**、各案の外部・組立仮支台は0個です。
+[改訂4案・既存4倍・1倍参照の比較](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-matrix.html?revision=body-support-v2&character=copilot) /
+[改訂CSV](artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparison.csv)。
+4倍の71,261個は既存の支台0案をそのまま保持しています。支台付き旧版や元の15案READYは、この追加改訂の完了には使いません。
 Mona 519 / Copilot 695 / Ducky 413個の少部品r3案は通常の候補から外し、過去の試作・失敗・改良は別ページへ分けています。
 「STL公開」は印刷確認済みを意味しません。全案が未スライス・実物未検証で、全数印刷は保留です。以下は版別の保存記録です。
 

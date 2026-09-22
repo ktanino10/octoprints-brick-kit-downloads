@@ -29,6 +29,7 @@ class CopilotSupportReceiptTests(unittest.TestCase):
             case["viewer_url"] = f"https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case={identifier}"
         record.update(state="READY", published_verified_case_count=4,
                       verification={"public_browser_passed": True, "anonymous_downloads_passed": True})
+        record["comparisons"].update(state="READY", verification={"public_browser_passed": True, "anonymous_downloads_passed": True})
         return record
 
     def test_separate_request_does_not_inherit_the_previous_fifteen_ready_state(self):
@@ -55,6 +56,8 @@ class CopilotSupportReceiptTests(unittest.TestCase):
             lambda record: record["cases"][0].update(cad_url="https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/old/data.zip#copilot-p120-support-free-v2"),
             lambda record: record["previous_completed_delivery"].update(satisfies_this_new_request=True),
             lambda record: record["preserved_existing_four_x"].update(counts_toward_the_four_new_revisions=True),
+            lambda record: record["comparisons"].update(state="PUBLIC_PENDING"),
+            lambda record: record.pop("comparisons"),
         ]:
             value = copy.deepcopy(good); mutate(value)
             with self.assertRaises(ValueError):

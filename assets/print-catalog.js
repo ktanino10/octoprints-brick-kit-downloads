@@ -185,9 +185,11 @@ function modelCard(group, initial) {
     download.href = item.download.url;
     packageInfo.textContent = `ZIP ${number(item.download.bytes / 1000000)} MB · STL・STEP・BOM・CAD・動画を同梱`;
     guide.href = localizedURL(`density-guide.html?case=${item.id}`);
-    compare.href = localizedURL(item.supportFreeRevision ? 'history.html#copilot-support-free'
+    compare.href = localizedURL(item.supportFreeRevision
+      ? sourceCatalog.support_revisions.comparison_sheets
+        ? 'density-matrix.html?revision=body-support-v2&character=copilot' : 'history.html#copilot-support-free'
       : `density-matrix.html?character=${group.character}`);
-    compare.textContent = item.supportFreeRevision ? '支台なし改訂の記録を見る →' : '5案を大きな画像で比較する →';
+    compare.textContent = item.supportFreeRevision ? '支台なし改訂の実画像・実寸比を比較 →' : '5案を大きな画像で比較する →';
   }
   choose(initial);
   select.addEventListener('change', () => {

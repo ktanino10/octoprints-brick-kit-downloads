@@ -13,6 +13,13 @@ export async function loadBodySupportPublication(readRecord, readFile, pointer) 
   return validateBodySupportPublication(receipt, overlay, pointer);
 }
 
+export function effectiveBodySupportCatalog(base, overlay) {
+  check(overlay?.geometry_revision === COPILOT_SUPPORT_REVISION && overlay.cases?.length === 4, message);
+  const bySlot = new Map(overlay.cases.map(item => [item.logical_case_id, item]));
+  return { ...base, cases: base.cases.map(item => bySlot.get(item.logical_case_id ?? item.id) ?? item),
+    historical_cases: [...(base.historical_cases ?? []), ...base.cases.filter(item => bySlot.has(item.logical_case_id ?? item.id))] };
+}
+
 export function validateBodySupportPublication(receipt, overlay, pointer) {
   check(isObject(receipt) && receipt.schema_version === 1 && receipt.study_id === DENSITY_ID
     && receipt.request_id === 'copilot-support-free-20260922' && ['PARTIAL', 'READY'].includes(receipt.state)
@@ -31,6 +38,7 @@ export function validateBodySupportPublication(receipt, overlay, pointer) {
       && Array.isArray(overlay.cases) && overlay.cases.length === 4
       && Object.entries(DENSITY_FLAGS).every(([key, value]) => overlay[key] === value), message);
     if (overlay.display_catalog !== undefined) validateDensityFile(overlay.display_catalog);
+    if (overlay.comparison_sheets !== undefined) validateDensityFile(overlay.comparison_sheets);
   } else check(overlay === null && receipt.cases.every(item => item.status === 'INPUT_WAIT'), message);
   const all = [], published = [], seen = new Set();
   for (const record of receipt.cases) {
@@ -86,7 +94,21 @@ export function validateBodySupportPublication(receipt, overlay, pointer) {
       published.push(item);
     } else check(record.verification?.public_browser_passed === false && record.verification.anonymous_downloads_passed === false, message);
   }
-  const complete = published.length === 4;
+  let comparisonsReady = false;
+  if (receipt.comparisons !== undefined) {
+    const comparisons = receipt.comparisons;
+    check(isObject(comparisons) && ['PUBLIC_PENDING', 'READY'].includes(comparisons.state)
+      && Array.isArray(comparisons.assets) && comparisons.assets.length === 5
+      && new Set(comparisons.assets.map(file => file.path)).size === 5, message);
+    comparisons.assets.forEach(file => validateDensityFile(file));
+    check(comparisons.descriptor?.sha256 === overlay?.comparison_sheets?.sha256
+      && comparisons.descriptor.path === overlay.comparison_sheets.path
+      && comparisons.assets.some(file => file.path === comparisons.descriptor.path && file.sha256 === comparisons.descriptor.sha256), message);
+    comparisonsReady = comparisons.state === 'READY';
+    check(comparisons.verification?.public_browser_passed === comparisonsReady
+      && comparisons.verification.anonymous_downloads_passed === comparisonsReady, message);
+  }
+  const complete = published.length === 4 && comparisonsReady;
   check(receipt.published_verified_case_count === published.length && (receipt.state === 'READY') === complete
     && receipt.verification?.public_browser_passed === complete && receipt.verification.anonymous_downloads_passed === complete, message);
   return { receipt, catalog: overlay, cases: all, published };

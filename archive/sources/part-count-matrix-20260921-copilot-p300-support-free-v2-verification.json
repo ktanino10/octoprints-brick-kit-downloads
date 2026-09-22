@@ -1,0 +1,91 @@
+{
+  "case_id": "copilot-p300-support-free-v2",
+  "source_commit": "8c9b01fa32c2495ed0daba231b538619a975bebc",
+  "metrics": {
+    "part_count": 53287,
+    "unique_types": 196,
+    "one_by_one_exceptions": 73,
+    "layer_count": 113,
+    "minimum_part_mm": [
+      7.8,
+      7.8,
+      3.2
+    ],
+    "grip_long_ge_15_8_count": 53214
+  },
+  "manifest_sha256": "62923e2a74b9260586898094ec069a60d30927dd94397f504315a0d6b0c0b02f",
+  "bom_sha256": "607a65f9dfde491e3e12239d2fb7c234a6ff27c7a93cbb1ba7604e6e47614c93",
+  "counted_instances": 53287,
+  "bom_ids_match": true,
+  "bom_types_colors_poses_steps_match": true,
+  "identity_projection_sha256": "3571bb673a29067b18bd1162a359291352b1614b26c8be864148660d25e8f342",
+  "body_height_families": [
+    {
+      "body_height_mm": 3.2,
+      "part_count": 216,
+      "unique_types": 8
+    },
+    {
+      "body_height_mm": 4.8,
+      "part_count": 53069,
+      "unique_types": 186
+    },
+    {
+      "body_height_mm": 9.6,
+      "part_count": 2,
+      "unique_types": 2
+    }
+  ],
+  "public_native_assembly": {
+    "path": "artifacts/studies/part-count-matrix-20260921/cases/copilot-p300-support-free-v2/assembly.FCStd",
+    "document_objects": 207,
+    "native_links_resolved": 207,
+    "link_instances": 53287,
+    "valid_single_solid_targets_checked": 196,
+    "proxy_free": true,
+    "opened": true,
+    "recomputed": false,
+    "saved": false,
+    "sha256": "80848734da8259d5769d535dabec626da928788bfe7cefbc2a27f8a59491e2d6"
+  },
+  "public_blender_motion_preserved": true,
+  "source_saved_scene_binding": "0a6b195c564714f6f4cbf570bf36b1804a311896a3e018a6a9943df79e58fc66",
+  "source_native_reopen": {
+    "result": "PASS_REOPENED_RELATIVE_NATIVE_LINK_ARRAYS",
+    "actual_instance_count": 53287,
+    "all_ids_types_colors_poses_steps": true,
+    "all_sources_inside_bundle": true
+  },
+  "private_inputs_copied": 0,
+  "body_support_revision_evidence": {
+    "geometry_sequence_identity_sha256": "5fe651aef648f12d0db6efaa79f6be1290d729957b5aec128797e01288d93003",
+    "native_support_contact_evidence_sha256": "de63e234573851fb4b65f2840de863bffad52aeefe9034fca3bf8a45323d5387",
+    "checked_support_modules": 2,
+    "checked_actual_brep_sections": 80,
+    "sequence_mode": "BODY_FIRST_INTERNAL_SUPPORT",
+    "native_result": "PASS_ACTUAL_BODY_SUPPORT_BREP_CONTACTS",
+    "root_dependency_result": "PASS_NO_EXCLUSIVE_ROOT_RESET",
+    "gravity_balance_result": "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS",
+    "physical_validation": "UNKNOWN",
+    "physical_mass_measured": false
+  },
+  "independent_exclusive_load_ledger": {
+    "state": "PASS_EXCLUSIVE_ROOT_LOAD_LEDGER_NO_RESET",
+    "original_parts_covered_once": 53350,
+    "physical_root_count": 2,
+    "shared_receivers_are_independent_local_bounds_not_global_mass": true,
+    "physical_validation": "UNKNOWN",
+    "read_only_ledger_sha256": "a5d572dc9255f8f8a096085fb2d10a7f7839e33f8a1bee797905b2928bb74ac2"
+  },
+  "public_native_id_pose_check": {
+    "case_id": "copilot-p300-support-free-v2",
+    "assembly_sha256": "80848734da8259d5769d535dabec626da928788bfe7cefbc2a27f8a59491e2d6",
+    "actual_instances": 53287,
+    "array_count": 207,
+    "all_ids_types_colors_poses_steps": "MATCH",
+    "relocated_reopen": true,
+    "saved": false,
+    "recomputed": false
+  },
+  "files": []
+}

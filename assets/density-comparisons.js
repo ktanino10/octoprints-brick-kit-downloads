@@ -27,17 +27,25 @@ function stable(value) {
   });
 }
 
-export function validateDensityComparisons(data, catalog) {
+export function validateDensityComparisons(data, catalog, { bodySupport = false, previous = null } = {}) {
+  const characters = bodySupport ? ['copilot'] : DENSITY_CHARACTERS;
+  const expectedState = bodySupport ? 'COMPLETE_REAL_COPILOT_SUPPORT_REVISION_COMPARISONS' : 'COMPLETE_REAL_SIX_WAY_COMPARISONS';
   check(isObject(data) && data.schema_version === 1 && data.study_id === DENSITY_ID
-    && data.state === 'COMPLETE_REAL_SIX_WAY_COMPARISONS' && Array.isArray(data.rows) && data.rows.length === 3
+    && data.state === expectedState && Array.isArray(data.rows) && data.rows.length === characters.length
     && catalog.cases.length === 15 && catalog.cases.every(item => densityDeliveryStatus(item) === 'READY'),
   '最終比較には3体×5案すべての実制作物と検査記録が必要です。');
   check(data.status?.selection === 'NOT_SELECTED' && data.status.visual_approval === 'PENDING'
     && data.status.physical_fit === 'UNKNOWN' && data.status.slicer_status === 'NOT_SLICED',
   '最終比較を美観・実物・印刷の合格へ読み替えることはできません。');
-  check(new Set(data.rows.map(row => row.character)).size === 3
-    && DENSITY_CHARACTERS.every(character => data.rows.some(row => row.character === character)),
+  check(new Set(data.rows.map(row => row.character)).size === characters.length
+    && characters.every(character => data.rows.some(row => row.character === character)),
   '最終比較の3キャラクターが不足または重複しています。');
+  if (bodySupport) check(data.geometry_revision === 'body-support-v2' && previous?.state === 'COMPLETE_REAL_SIX_WAY_COMPARISONS'
+    && stable(data.unchanged_character_rows) === stable(previous.rows.filter(row => row.character !== 'copilot'))
+    && data.prior_comparison_descriptor?.path === 'comparison-sheets.json'
+    && data.prior_comparison_descriptor.sha256 === catalog.comparison_sheets.sha256
+    && data.prior_csv?.path === previous.comparison_csv.path && data.prior_csv.sha256 === previous.comparison_csv.sha256,
+  'Copilot新版の比較は、元の比較記録と他11案を変更せずに追加する必要があります。');
   const seenPaths = new Set();
   for (const row of data.rows) {
     const baseline = catalog.baselines[row.character];
@@ -75,6 +83,8 @@ export function validateDensityComparisons(data, catalog) {
     for (const image of row.images) {
       const file = comparisonFile(image);
       densityPath(file.path);
+      if (bodySupport) check(file.path.startsWith(`/artifacts/studies/${DENSITY_ID}/revisions/body-support-v2/comparisons/`),
+        'Copilot新版の比較は、元の比較記録と他11案を変更せずに追加する必要があります。');
       check(!seenPaths.has(file.path) && Array.isArray(image.image_size_px) && image.image_size_px.length === 2
         && image.image_size_px.every(value => Number.isSafeInteger(value) && value > 0)
         && JSON.stringify(image.source_cases) === JSON.stringify(ids),
@@ -137,7 +147,7 @@ export function validateDensityComparisons(data, catalog) {
     '最終比較には同じ画面上高さの正面・斜めと、別の実寸比画像が必要です。');
   }
   comparisonFile(data.comparison_csv);
-  check(data.comparison_csv.path === 'comparison.csv' && data.comparison_csv.row_count === 15
+  check(data.comparison_csv.path === (bodySupport ? 'revisions/body-support-v2/comparison.csv' : 'comparison.csv') && data.comparison_csv.row_count === 15
     && JSON.stringify(data.comparison_csv.columns) === JSON.stringify(DENSITY_COMPARISON_COLUMNS),
   '比較CSVは追加参照を含めず、15個の実倍率案を記録する必要があります。');
   return data;

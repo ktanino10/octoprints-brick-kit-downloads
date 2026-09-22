@@ -67,8 +67,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "MD",
-      "bytes": 30662,
-      "sha256": "2476b71209d7bfbd9881390aa8e8f1cfdea476ec6df343f1036daf9dc16f4a3f",
+      "bytes": 31021,
+      "sha256": "c19873b9836b969e69a2c05de0db6c5117a9ea73f803ea143fb375a506d5c662",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/README.en.md",
       "status": "ARCHIVE_RECORD"
     },
@@ -77,8 +77,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "MD",
-      "bytes": 31161,
-      "sha256": "33dc9219095d25a83fa5bafd7fe070efafdfae7a64eb37841a4964a43e79b4e5",
+      "bytes": 31532,
+      "sha256": "503ad87094f763bc52434db3b5c55c6dfba361949e35d4d33625b04ff41ad012",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/README.md",
       "status": "ARCHIVE_RECORD"
     },
@@ -117,8 +117,8 @@
       "group": "design",
       "revision": "r2-20260919",
       "format": "JSON",
-      "bytes": 9115,
-      "sha256": "f62d5068891dfaf4055a91b508c70a08b776d6f961039923eb3c74d5d72c298d",
+      "bytes": 12117,
+      "sha256": "c27a79a8468d87de2fdbe93fa1748ced2ac4caa000354b03dabfeeb9d006de06",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/copilot-support-free-revision.json",
       "status": "ARCHIVE_RECORD"
     },
@@ -240,6 +240,16 @@
       "bytes": 1013,
       "sha256": "09f376fe885a2fd4a4ae06b067c810bc24b757bc01c42d47261d67576ad6fd44",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/releases/part-count-matrix-20260921-copilot-p200.json",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
+      "path": "archive/releases/part-count-matrix-20260921-copilot-p300-support-free-v2.json",
+      "group": "design",
+      "revision": "r2-20260919",
+      "format": "JSON",
+      "bytes": 1188,
+      "sha256": "11af5b999fc22261c45948fe3e7d4bcfd2cce47baeccff94bc213e16ba1e4ca1",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/releases/part-count-matrix-20260921-copilot-p300-support-free-v2.json",
       "status": "ARCHIVE_RECORD"
     },
     {
@@ -493,12 +503,22 @@
       "status": "ARCHIVE_RECORD"
     },
     {
+      "path": "archive/sources/part-count-matrix-20260921-body-support-v2-comparisons-verification.json",
+      "group": "design",
+      "revision": "r2-20260919",
+      "format": "JSON",
+      "bytes": 9360,
+      "sha256": "86fc65a72556c4f65c905b159dd5cd618c444e8726c379cbd1b736b0fa5ce62e",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/sources/part-count-matrix-20260921-body-support-v2-comparisons-verification.json",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
       "path": "archive/sources/part-count-matrix-20260921-body-support-v2.json",
       "group": "design",
       "revision": "r2-20260919",
       "format": "JSON",
-      "bytes": 10668,
-      "sha256": "e916e685e6c6edc5ddb482970cd5ec496b827f12600855e66425c8ceac5adc0e",
+      "bytes": 14516,
+      "sha256": "48febf1a6043301836176170c246df6108e26b45989800188b50eb194663e1ca",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/sources/part-count-matrix-20260921-body-support-v2.json",
       "status": "ARCHIVE_RECORD"
     },
@@ -580,6 +600,16 @@
       "bytes": 2092,
       "sha256": "cb8f9525a3c8f513e424269b1c9699350ee4da12a8c29a59f230fe7e28bb2e86",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/sources/part-count-matrix-20260921-copilot-p200-verification.json",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
+      "path": "archive/sources/part-count-matrix-20260921-copilot-p300-support-free-v2-verification.json",
+      "group": "design",
+      "revision": "r2-20260919",
+      "format": "JSON",
+      "bytes": 3282,
+      "sha256": "28f8a1b1216e04e76393db949e049d956b50d8b654c5576770703b4c14bf21d1",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/sources/part-count-matrix-20260921-copilot-p300-support-free-v2-verification.json",
       "status": "ARCHIVE_RECORD"
     },
     {
@@ -18918,6 +18948,42 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/copilot-p300-support-free-v2-guide.json.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 2401405,
+      "sha256": "a7bb6a77adffb996f0331553b3a447c561eb36c3465e37c2eea1b15916dc6004",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/cases/copilot-p300-support-free-v2-guide.json.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/copilot-p300-support-free-v2-summary.json",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JSON",
+      "bytes": 169670,
+      "sha256": "95d3dbd8090e7659520b1b0c07916ce25bc121e0a38db2e28fb608b43fe3033b",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/cases/copilot-p300-support-free-v2-summary.json",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "95d3dbd8090e7659520b1b0c07916ce25bc121e0a38db2e28fb608b43fe3033b",
+      "source_bytes": 169670,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/copilot-p300-support-free-v2.json.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 2398391,
+      "sha256": "db5cf40d1b835bd1f297c073895ea2f3bd6dc9f26daa4cae7dfb3e1d61a59607",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/cases/copilot-p300-support-free-v2.json.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "db5cf40d1b835bd1f297c073895ea2f3bd6dc9f26daa4cae7dfb3e1d61a59607",
+      "source_bytes": 2398391,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/cases/copilot-p300.json.gz",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -20703,6 +20769,32 @@
       "status": "UNSELECTED_DIGITAL_STUDY",
       "source_sha256": "7c5038e8a1eb88bea142e451584d6d8617d6c21261b737532e00a72c483f03f6",
       "source_bytes": 1179190,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/BS-5b5d111eea7101ea.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 733826,
+      "sha256": "809da9ef5a822aaf6f799465ec57d8cd3d0a8c5e544848e0c15adf7a925c67f1",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/BS-5b5d111eea7101ea.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "809da9ef5a822aaf6f799465ec57d8cd3d0a8c5e544848e0c15adf7a925c67f1",
+      "source_bytes": 733826,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/geometry/BS-b5c976590eb22e60.mesh.gz",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "GZ",
+      "bytes": 2548834,
+      "sha256": "e19acb681652a4a16688d4893cf2bc6c3be957e3d5ce98b4d654ba0d8652b9b6",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/geometry/BS-b5c976590eb22e60.mesh.gz",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "e19acb681652a4a16688d4893cf2bc6c3be957e3d5ce98b4d654ba0d8652b9b6",
+      "source_bytes": 2548834,
       "relation": "BYTE_IDENTICAL"
     },
     {
@@ -29130,6 +29222,58 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p300-support-free-v2-assembled-front.jpg",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JPG",
+      "bytes": 81210,
+      "sha256": "5698f6b8213156109ba7082aee36653f09448d243d7e7fbb9f5fcce249f563a3",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/images/copilot-p300-support-free-v2-assembled-front.jpg",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "5698f6b8213156109ba7082aee36653f09448d243d7e7fbb9f5fcce249f563a3",
+      "source_bytes": 81210,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p300-support-free-v2-assembled-three_quarter.jpg",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JPG",
+      "bytes": 107025,
+      "sha256": "a3d018696ec17f2e461c3e4062a673f2e83b8f82b271ef0e32cf0ae0427ba7ac",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/images/copilot-p300-support-free-v2-assembled-three_quarter.jpg",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "a3d018696ec17f2e461c3e4062a673f2e83b8f82b271ef0e32cf0ae0427ba7ac",
+      "source_bytes": 107025,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p300-support-free-v2-radial-exploded.jpg",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JPG",
+      "bytes": 162343,
+      "sha256": "da571db75d654b313cd536a32588ab132b327c31eb75cdb1bbb217fcafe3b88e",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/images/copilot-p300-support-free-v2-radial-exploded.jpg",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "da571db75d654b313cd536a32588ab132b327c31eb75cdb1bbb217fcafe3b88e",
+      "source_bytes": 162343,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p300-support-free-v2-registered-face.jpg",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JPG",
+      "bytes": 76899,
+      "sha256": "d834b5a8e8bdeb48fddfb5e4099bae079f4500b97c7e81865cde36c6a421d8c8",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/images/copilot-p300-support-free-v2-registered-face.jpg",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "d834b5a8e8bdeb48fddfb5e4099bae079f4500b97c7e81865cde36c6a421d8c8",
+      "source_bytes": 76899,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p400-assembled-front.jpg",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -30028,19 +30172,94 @@
       "group": "study",
       "revision": "part-count-matrix-20260921",
       "format": "JSON",
-      "bytes": 27507,
-      "sha256": "223ab3eef90fa794104266abd6a5d82811e03297ca7926cd35f224db3ac27d32",
+      "bytes": 38019,
+      "sha256": "2f299a1552ebb9ece3ed0f82356e8e7098d563c9a7cebcc8b2f9c15c310214f0",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/catalog.json",
       "status": "UNSELECTED_DIGITAL_STUDY"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparison-sheets.json",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JSON",
+      "bytes": 180322,
+      "sha256": "47940be5dfa4748efd8969ffa87a1b67102f18bb98457dc1c14ff847ca651d91",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparison-sheets.json",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "47940be5dfa4748efd8969ffa87a1b67102f18bb98457dc1c14ff847ca651d91",
+      "source_bytes": 180322,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparison.csv",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "CSV",
+      "bytes": 2486,
+      "sha256": "ce6aecb09a0e3e4ff8d52633fb30495fbc4b26be27fb875af8a2ef7ae38c9130",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparison.csv",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "ce6aecb09a0e3e4ff8d52633fb30495fbc4b26be27fb875af8a2ef7ae38c9130",
+      "source_bytes": 2486,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparisons/copilot-normalized-front.jpg",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JPG",
+      "bytes": 504466,
+      "sha256": "aa50b56c38c04a2fa18477a55dfd8bb39934a421c53996049e3583b964c7faef",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparisons/copilot-normalized-front.jpg",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "aa50b56c38c04a2fa18477a55dfd8bb39934a421c53996049e3583b964c7faef",
+      "source_bytes": 504466,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparisons/copilot-normalized-three_quarter.jpg",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JPG",
+      "bytes": 588177,
+      "sha256": "3e7019042b3a1f88cf0a0b1b13a7527c5611da16d71588b6a0edff37540e9fab",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparisons/copilot-normalized-three_quarter.jpg",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "3e7019042b3a1f88cf0a0b1b13a7527c5611da16d71588b6a0edff37540e9fab",
+      "source_bytes": 588177,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparisons/copilot-physical-size.jpg",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JPG",
+      "bytes": 573780,
+      "sha256": "a83f69f2305efb7463c6ab86380cf5febb7d7c06764d1c36a1288c568c628e0b",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparisons/copilot-physical-size.jpg",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "a83f69f2305efb7463c6ab86380cf5febb7d7c06764d1c36a1288c568c628e0b",
+      "source_bytes": 573780,
+      "relation": "BYTE_IDENTICAL"
     },
     {
       "path": "artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/display/catalog.json",
       "group": "study",
       "revision": "part-count-matrix-20260921",
       "format": "JSON",
-      "bytes": 473021,
-      "sha256": "77702f68cad93e7eba6d6695602992df454e42df3c6d33dbea7bba753d0ca3b2",
+      "bytes": 625562,
+      "sha256": "2737312b73c0297a655b20f500498e662b895fa65e9301190b8632e5d1b5c839",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/display/catalog.json",
+      "status": "UNSELECTED_DIGITAL_STUDY"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/performance.json",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JSON",
+      "bytes": 7184,
+      "sha256": "4cc5a13ecfe8710c399537b706cdeb9900eb90cbfca4cfcc7e302070050d83f0",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/performance.json",
       "status": "UNSELECTED_DIGITAL_STUDY"
     },
     {
@@ -30330,6 +30549,19 @@
       "relation": "BYTE_IDENTICAL"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/source-records/8c9b01fa32c2495ed0daba231b538619a975bebc-body-support-v2-matrix.json",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JSON",
+      "bytes": 2660,
+      "sha256": "6eec2c1632ba2d90dfb7a925819803d4d3278e6d1c09cf01f3ec8beb244ffbc1",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/source-records/8c9b01fa32c2495ed0daba231b538619a975bebc-body-support-v2-matrix.json",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "6eec2c1632ba2d90dfb7a925819803d4d3278e6d1c09cf01f3ec8beb244ffbc1",
+      "source_bytes": 2660,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/source-records/9f5caa8c5710e1a181b7e85b42c537d69344cd8c-matrix.json",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -30587,6 +30819,19 @@
       "status": "UNSELECTED_DIGITAL_STUDY",
       "source_sha256": "682cba3ad13c2ac71961ed724f24c54dcfafe201cfd17c7c9fb1c21e7a97df19",
       "source_bytes": 94264,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/validation/copilot-p300-support-free-v2-assembly-support.json",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JSON",
+      "bytes": 210954,
+      "sha256": "86769736f52ffac2e92c05e0eeae2d878d7feb03a9ea691190237b8ae3d202e3",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/validation/copilot-p300-support-free-v2-assembly-support.json",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "86769736f52ffac2e92c05e0eeae2d878d7feb03a9ea691190237b8ae3d202e3",
+      "source_bytes": 210954,
       "relation": "BYTE_IDENTICAL"
     },
     {
@@ -31118,8 +31363,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "JS",
-      "bytes": 6974,
-      "sha256": "c35cad1da6bd87d2db3b5b3f60dbf6bda28bc7cec75360ffb8a419f8a659306d",
+      "bytes": 8547,
+      "sha256": "be44ddeec891f64da72fe0746cdc746a46eb27ba88600da9c67034e2b3aeddef",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/body-support-publication.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -31148,8 +31393,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "JS",
-      "bytes": 10148,
-      "sha256": "d5879ee848af248398d2e07ce40bdbae55cf5ef8172c0f782147ba364ef845d4",
+      "bytes": 11349,
+      "sha256": "828d2e4e2e93c1e1f16d4b553f849269075423f8326199b742c932f7d07d4b65",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/density-comparisons.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -31168,8 +31413,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "JS",
-      "bytes": 14282,
-      "sha256": "95021bf398e27f43be71518133f826eaeab85b743b73c102c2a73979cc6c6b41",
+      "bytes": 17475,
+      "sha256": "1c0b8f056f57968187478361e551d3f6409821e55b447578d5205a49e74fd8f8",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/density-matrix.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -31298,8 +31543,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "JS",
-      "bytes": 12135,
-      "sha256": "83748a8cea144d49342eed5ace31caa0579152b4b18b7634bbdb1fcc0c2a189d",
+      "bytes": 12283,
+      "sha256": "21c5443a225b1636f1e48213b20b190abd7abd05c5b2cfbd4c74fc623e13ac4b",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/print-catalog.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -31532,8 +31777,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "JS",
-      "bytes": 717832,
-      "sha256": "03c2d6083699eb2f1dd830a8f8b43267f7520a6371eebde1f9d86d105ba4c740",
+      "bytes": 739492,
+      "sha256": "baccabc97aba50d1915933fe5758470077fe7f4fbdf14289535fae31b9cdb82c",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/translations.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -31721,8 +31966,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "HTML",
-      "bytes": 20636,
-      "sha256": "b78bebf307c80ffef1e2bd6c70bbd4b32423090f6296c09999af4349d2b8afed",
+      "bytes": 21310,
+      "sha256": "c538fc182dd534b1df8c767522292d40e991222ec10715488cd620ea7a8830c5",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/en/history.html",
       "status": "ARCHIVE_RECORD"
     },
@@ -31961,8 +32206,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "HTML",
-      "bytes": 21074,
-      "sha256": "7789989cdcba269bd0c85d1429e36019b05a358c1ec1e769c70141cb9a701009",
+      "bytes": 21753,
+      "sha256": "2bb2dc0e6db566d351a57fb30feb893f8d3ebc740c8928b922abdfb95cbb7640",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/history.html",
       "status": "ARCHIVE_RECORD"
     },
@@ -32051,8 +32296,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "HTML",
-      "bytes": 21075,
-      "sha256": "aa2710ad5b942c4f5fa952f1e2376e5b2d710705db004d6e0fcd9524c6b10628",
+      "bytes": 21754,
+      "sha256": "785ecb18c49969a4f769e91598fff465f108d5b23a2c35a5a0df26c1b4b5a67a",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/history.html",
       "status": "ARCHIVE_RECORD"
     },
@@ -32201,8 +32446,8 @@
       "group": "viewer",
       "revision": "public-viewer-2026-09-19",
       "format": "JS",
-      "bytes": 1737914,
-      "sha256": "60988002350785c8c90a0050ae2240ee59f807f5e6ba3c30e065bb4c59bc96d3",
+      "bytes": 1770883,
+      "sha256": "fbfc0524cd8fa26ced967bfa96b4b971738032732ea8ec4ec61d9d64aa4a742f",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/viewer/assets/density-guide.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -32231,8 +32476,8 @@
       "group": "viewer",
       "revision": "public-viewer-2026-09-19",
       "format": "JS",
-      "bytes": 1781510,
-      "sha256": "ccdf8bb6590cf0cccc7efe1fcb41551d64e1f8e99885317f9d9c21b57fc09cfa",
+      "bytes": 1813895,
+      "sha256": "7eb019d8a84bee914e54222a12d07ea15e5d60a0756fc7363f6242546ab13008",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/viewer/assets/studio.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -32248,17 +32493,17 @@
     }
   ],
   "totals": {
-    "files": 2538,
-    "bytes": 966298426,
+    "files": 2558,
+    "bytes": 977327682,
     "groups": {
       "site": 73,
-      "design": 80,
+      "design": 83,
       "phase1": 149,
       "common": 561,
       "common-trial": 24,
       "selected": 544,
       "trial": 60,
-      "study": 1024,
+      "study": 1041,
       "feedback": 16,
       "viewer": 7
     }

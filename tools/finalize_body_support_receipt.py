@@ -46,9 +46,24 @@ def verified_receipt(receipt, catalog, browser, downloads):
         row["verified_content_commit"] = downloads["deployment"]["commit"]
         row["verified_pages_run"] = downloads["deployment"]["workflow_run"]
     count = sum(item["status"] == "READY" for item in receipt["cases"])
+    comparisons = receipt.get("comparisons")
+    if comparisons and browser.get("body_support_comparison_sheets"):
+        expected_images = {BASE + file["path"].lstrip("/") for file in comparisons["assets"] if file["path"].endswith(".jpg")}
+        observed_images = {item["url"] for item in browser["body_support_comparison_sheets"]}
+        if expected_images != observed_images or len(expected_images) != 3 or browser.get("body_support_csv_rows") != 15:
+            raise ValueError("All three actual versioned comparison images and the fifteen-row CSV must be checked")
+        for file in comparisons["assets"]:
+            actual = asset_map.get(BASE + file["path"].lstrip("/"))
+            if not actual or any(actual[key] != file[key] for key in ["bytes", "sha256"]) or actual.get("authentication") != "none":
+                raise ValueError("An actual versioned comparison artifact lacks anonymous SHA verification")
+        comparisons["state"] = "READY"
+        comparisons["verification"] = {"public_browser_passed": True, "anonymous_downloads_passed": True}
+        comparisons["verified_content_commit"] = downloads["deployment"]["commit"]
+        comparisons["verified_pages_run"] = downloads["deployment"]["workflow_run"]
+    complete = count == 4 and comparisons is not None and comparisons["state"] == "READY"
     receipt["published_verified_case_count"] = count
-    receipt["state"] = "READY" if count == 4 else "PARTIAL"
-    receipt["verification"] = {"public_browser_passed": count == 4, "anonymous_downloads_passed": count == 4}
+    receipt["state"] = "READY" if complete else "PARTIAL"
+    receipt["verification"] = {"public_browser_passed": complete, "anonymous_downloads_passed": complete}
     validate_copilot_support_receipt(receipt)
     return receipt
 

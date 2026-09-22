@@ -93,6 +93,59 @@ def support_load_sets(manifest):
     return payloads
 
 
+def validate_support_ledger(ledger, manifest, original, native_complete, manifest_sha256):
+    modules = native_complete["assembly_support_native_validation"]["modules"]
+    by_id = {part["id"]: part for part in manifest["parts"]}
+    old = {part["id"]: part for part in original["parts"]}
+    require(ledger.get("state") == "PASS_EXCLUSIVE_ROOT_LOAD_LEDGER_NO_RESET"
+            and ledger.get("case_id") == manifest["candidate_id"] and ledger.get("logical_case_id") == manifest["logical_case_id"]
+            and ledger.get("geometry_revision") == REVISION and ledger.get("source_manifest_sha256") == manifest_sha256
+            and ledger.get("geometry_sequence_identity_sha256") == geometry_sequence_identity(manifest)
+            and ledger.get("native_support_contact_evidence_sha256") == canonical_sha(native_complete["assembly_support_native_validation"])
+            and ledger.get("original_source_part_count") == len(old)
+            and ledger.get("actual_physical_part_count") == len(by_id)
+            and ledger.get("physical_root_count") == len(modules)
+            and ledger.get("source_membership_exact_once") is True
+            and ledger.get("root_dependency_result") == "PASS_NO_EXCLUSIVE_ROOT_RESET"
+            and ledger.get("forbidden_root_encounters") == [] and ledger.get("physical_validation") == "UNKNOWN",
+            "The final two-root ledger does not bind the actual revised and original source identities")
+    seen = set()
+    for part in manifest["parts"]:
+        lineage = part.get("source_part_ids", [part["id"]])
+        require(not seen.intersection(lineage) and set(lineage) <= old.keys(),
+                "The body revision duplicates or invents original part membership")
+        seen.update(lineage)
+        require(all(old[identifier]["color_id"] == part["color_id"] for identifier in lineage),
+                "A real integrated support changes an original component's color")
+        if part["id"] in old:
+            require(lineage == [part["id"]] and all(part[key] == old[part["id"]][key]
+                    for key in ["type_id", "color_id", "position_mm", "rotation_z_deg"]),
+                    "A non-integrated part changed its original geometry or actual pose")
+    require(seen == old.keys(), "The body revision omits original physical part membership")
+    roots = ledger.get("roots")
+    require(isinstance(roots, list) and len(roots) == len(modules)
+            and {root["root_part_id"] for root in roots} == {module["part_id"] for module in modules},
+            "The load ledger omits or duplicates a real root")
+    for module in modules:
+        row = next(root for root in roots if root["root_part_id"] == module["part_id"])
+        balance = module["gravity_balance"]
+        require(row.get("native_type_id") == module["native_support_type"]
+                and row.get("source_part_ids_counted_inside_this_one_native_solid") == by_id[module["part_id"]]["source_part_ids"]
+                and row.get("root_and_each_payload_counted_once_in_this_root_check") is True
+                and row.get("root_cad_volume_mm3") == balance["root_cad_volume_mm3"]
+                and row.get("root_cad_centroid_mm") == balance["root_cad_centroid_mm"]
+                and row.get("payload_native_volume_centroid_rows_in_actual_step_order") == balance["downstream_payloads"]
+                and row.get("prefix_checks_in_actual_step_order") == balance["assembly_prefix_checks"]
+                and row.get("minimum_support_margin_mm") == balance["minimum_support_margin_mm"],
+                "The ledger's real root/payload volumes, centroids or all-step bounds differ from native evidence")
+    computed = support_load_sets(manifest)
+    require(all(set(computed[module["part_id"]]) == {row["part_id"] for row in module["gravity_balance"]["downstream_payloads"]}
+                for module in modules), "The native local load bounds differ from the independently propagated actual support graph")
+    return {"state": "PASS_EXCLUSIVE_ROOT_LOAD_LEDGER_NO_RESET", "original_parts_covered_once": len(seen),
+            "physical_root_count": len(modules), "shared_receivers_are_independent_local_bounds_not_global_mass": True,
+            "physical_validation": "UNKNOWN"}
+
+
 def validate_body_support_evidence(proof, manifest, native_complete):
     identifier = manifest["candidate_id"]
     logical = support_identity(identifier)

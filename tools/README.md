@@ -27,6 +27,13 @@ geometry revisionは `body-support-v2` です。INPUT_WAITでは生成後の実�
 `verify_density_publication.py --body-support` で新ケースだけの実public QAを行い、
 `finalize_body_support_receipt.py` が確認済みcaseだけREADYへ進めます。4件未満なら全体はPARTIALです。
 通常のモデル選択は新caseのpublic QA後にだけ切り替え、明示された旧caseIDの画像・guide・Releaseは履歴として保持します。
+全体READYにはさらにversioned比較3画像・CSVの実browser/匿名SHA確認も必要です。4案のcase-readyだけでは総READYになりません。
+`import_density_comparisons.py --body-support` は6実入力/32原本＋bindingを検査し、
+元descriptorと他11CSV行/headerのraw bytesを保護して別ディレクトリーへ追加します。
+比較UIは `density-matrix.html?revision=body-support-v2&character=copilot` で表示し、従来のパラメーターなしURLは元の15案のままです。
+複数BS rootの場合はREAD_ONLY load-ledgerも元sourceの全所属一回、実native体積/重心/全prefixへ結合します。
+exclusiveな支持伝播が次rootに入るresetは拒否し、first shared receiverは各local boundに含めてから伝播を止めます。
+単なる祖先rootを禁止したり、独立local boundのshared receiverを全体質量として合算したりしません。
 
 ## 初めての人向けカタログと制作履歴
 

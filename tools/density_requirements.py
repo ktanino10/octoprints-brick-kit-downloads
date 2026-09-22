@@ -139,9 +139,29 @@ def validate_copilot_support_receipt(record):
             raise ValueError("An unverified source revision cannot claim public QA")
     if record.get("published_verified_case_count") != ready:
         raise ValueError("The new request's published count includes unverified or prior cases")
-    expected_state = "READY" if ready == 4 else "PARTIAL"
+    comparisons = record.get("comparisons")
+    comparisons_ready = False
+    if comparisons is not None:
+        if (not isinstance(comparisons, dict) or comparisons.get("state") not in {"PUBLIC_PENDING", "READY"}
+                or not isinstance(comparisons.get("assets"), list) or len(comparisons["assets"]) != 5):
+            raise ValueError("The support-free comparison needs three images, one exact CSV and its descriptor")
+        paths = set()
+        for file in comparisons["assets"]:
+            path = file.get("path", "")
+            if (not isinstance(path, str) or not path.startswith("/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/")
+                    or path in paths or type(file.get("bytes")) is not int or file["bytes"] <= 0
+                    or not re.fullmatch(r"[0-9a-f]{64}", str(file.get("sha256", "")))):
+                raise ValueError("A versioned comparison file is unbound, duplicated or outside its revision")
+            paths.add(path)
+        if comparisons.get("descriptor") not in comparisons["assets"]:
+            raise ValueError("Comparison descriptor must bind its exact published asset")
+        comparisons_ready = comparisons["state"] == "READY"
+        if comparisons.get("verification") != {"public_browser_passed": comparisons_ready, "anonymous_downloads_passed": comparisons_ready}:
+            raise ValueError("Comparison readiness requires both real browser and anonymous download verification")
+    complete = ready == 4 and comparisons_ready
+    expected_state = "READY" if complete else "PARTIAL"
     if record.get("state") != expected_state or record.get("verification") != {
-            "public_browser_passed": ready == 4, "anonymous_downloads_passed": ready == 4}:
+            "public_browser_passed": complete, "anonymous_downloads_passed": complete}:
         raise ValueError("The earlier fifteen-case READY state cannot complete the new four-case request")
     if record.get("previous_completed_delivery", {}).get("satisfies_this_new_request") is not False:
         raise ValueError("Prior publication and new design completion must remain separate")

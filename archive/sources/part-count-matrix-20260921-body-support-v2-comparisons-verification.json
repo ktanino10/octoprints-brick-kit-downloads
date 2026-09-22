@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "study_id": "part-count-matrix-20260921",
+  "source_commit": "e4bb9af0dac44c0b1d82adb296abec6714c83714",
+  "source_images": [
+    {
+      "case_id": "copilot-fine8-base",
+      "view": "front",
+      "source_image_sha256": "3ef9b1d18673f7741ce25eec16facef617df51238106d9c720c97e54555f98b9",
+      "public_package_image_sha256": "9e4e9184c7ea3f547b136c98974b12e16e224bb44beebc5eff0bdd1f6ae7aaa5",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p120-support-free-v2",
+      "view": "front",
+      "source_image_sha256": "e87aa171c23ac119ecac08e75e50eb71d55d5a6955ff81425709554f2c27e26c",
+      "public_package_image_sha256": "a75127fb28339807bf811c5585082aeb73e0ad965e053f31667bb54a7718fcfa",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p150-support-free-v2",
+      "view": "front",
+      "source_image_sha256": "52930d5a44d20ad133e3339a9e530759db03020fa9c1aa8297ac7e5fce04e4d3",
+      "public_package_image_sha256": "caae8cd9735813ad144c750eae2a4f8d7d832b8a76f9efa51aa320b5f60f933f",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p200-support-free-v2",
+      "view": "front",
+      "source_image_sha256": "8ff40eb691540c998f4efbc056895acfd0619941975cdf5f9081fb08e5a89a76",
+      "public_package_image_sha256": "b78238919c2241bdf3a0a2dea0b225f35d9f23e72cccc5bd16713494dcab7c6b",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p300-support-free-v2",
+      "view": "front",
+      "source_image_sha256": "5af897afddf7a47b6782043c8f89bd6deadf1da3c0f34fd850b5a95c11f311a4",
+      "public_package_image_sha256": "21a93bd5c91ec8cdbd7784efa9d32a6aa979b2ef099aa80ac480564e9dfa5e05",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p400",
+      "view": "front",
+      "source_image_sha256": "328b5c6249d38acd5e65f6a70e49533d1d2d971bbf7251933f4276037265c2a8",
+      "public_package_image_sha256": "6c6fe039f287702f2617fc013168c062c1793581de3d1ed4980ebf5f223c2f19",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-fine8-base",
+      "view": "three_quarter",
+      "source_image_sha256": "a293bb6e9d6c7b615dd3e80870ddfec18f97a2ba778b0cc3600cf9e21d80ab20",
+      "public_package_image_sha256": "b8fa103f674d1706ee9a76dd3d19a3417effe963e6b63eb7d24169e27ef55a6e",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p120-support-free-v2",
+      "view": "three_quarter",
+      "source_image_sha256": "47114c9eda231e361cfd934e837f309b04f25b17a71c83ae31c13afe3ceb4c31",
+      "public_package_image_sha256": "dddc836d85b29c926461afeb8229928b2c6433824654786ef7a515e47ca80c98",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p150-support-free-v2",
+      "view": "three_quarter",
+      "source_image_sha256": "cbfaf5ba3167a982cef35618e4b3a1335fb7fdd1964d4deb6b6329cd25aa50b3",
+      "public_package_image_sha256": "d47ca52c55197807428e0c978a7d196c7fab17ec3679f66957169c54dc74c1c7",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p200-support-free-v2",
+      "view": "three_quarter",
+      "source_image_sha256": "49ac449fe8043469a722d693474c2c209bac8e2e0660dbed94123768e4f79acd",
+      "public_package_image_sha256": "442df93011ebec05c95c2b88591d6f46d90a212cdb0c572c12d6956c794af944",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p300-support-free-v2",
+      "view": "three_quarter",
+      "source_image_sha256": "7d50e7def549cc75640e9a36537bb867aab2ce83cc80b5920dbd80f6b8f66bb7",
+      "public_package_image_sha256": "9d917b17bd7d0468afc654ae4b4f644afd091bad285e4beb6dab4a96967bcb5e",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p400",
+      "view": "three_quarter",
+      "source_image_sha256": "b2c74682a823b21c06218bd29d71fddc6e1eed3601ef4307e02a94bd7c9fb07d",
+      "public_package_image_sha256": "b37973fac2cc2ee233db0afc91188ae1cb5241b58a62656cafdc6a961898083e",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-fine8-base",
+      "view": "front",
+      "source_image_sha256": "3ef9b1d18673f7741ce25eec16facef617df51238106d9c720c97e54555f98b9",
+      "public_package_image_sha256": "9e4e9184c7ea3f547b136c98974b12e16e224bb44beebc5eff0bdd1f6ae7aaa5",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p120-support-free-v2",
+      "view": "front",
+      "source_image_sha256": "e87aa171c23ac119ecac08e75e50eb71d55d5a6955ff81425709554f2c27e26c",
+      "public_package_image_sha256": "a75127fb28339807bf811c5585082aeb73e0ad965e053f31667bb54a7718fcfa",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p150-support-free-v2",
+      "view": "front",
+      "source_image_sha256": "52930d5a44d20ad133e3339a9e530759db03020fa9c1aa8297ac7e5fce04e4d3",
+      "public_package_image_sha256": "caae8cd9735813ad144c750eae2a4f8d7d832b8a76f9efa51aa320b5f60f933f",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p200-support-free-v2",
+      "view": "front",
+      "source_image_sha256": "8ff40eb691540c998f4efbc056895acfd0619941975cdf5f9081fb08e5a89a76",
+      "public_package_image_sha256": "b78238919c2241bdf3a0a2dea0b225f35d9f23e72cccc5bd16713494dcab7c6b",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p300-support-free-v2",
+      "view": "front",
+      "source_image_sha256": "5af897afddf7a47b6782043c8f89bd6deadf1da3c0f34fd850b5a95c11f311a4",
+      "public_package_image_sha256": "21a93bd5c91ec8cdbd7784efa9d32a6aa979b2ef099aa80ac480564e9dfa5e05",
+      "camera_unchanged": true
+    },
+    {
+      "case_id": "copilot-p400",
+      "view": "front",
+      "source_image_sha256": "328b5c6249d38acd5e65f6a70e49533d1d2d971bbf7251933f4276037265c2a8",
+      "public_package_image_sha256": "6c6fe039f287702f2617fc013168c062c1793581de3d1ed4980ebf5f223c2f19",
+      "camera_unchanged": true
+    }
+  ],
+  "csv": {
+    "rows": 15,
+    "fixed_denominators_unchanged": true,
+    "references_counted_as_cases": false,
+    "actual_counts_dimensions_ratios_types_match": true,
+    "other_eleven_rows_and_header_byte_identical": true
+  },
+  "private_source_inputs_copied": 0,
+  "images_and_csv": [
+    {
+      "path": "/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparison-sheets.json",
+      "bytes": 180322,
+      "sha256": "47940be5dfa4748efd8969ffa87a1b67102f18bb98457dc1c14ff847ca651d91"
+    },
+    {
+      "path": "/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparison.csv",
+      "bytes": 2486,
+      "sha256": "ce6aecb09a0e3e4ff8d52633fb30495fbc4b26be27fb875af8a2ef7ae38c9130"
+    },
+    {
+      "path": "/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparisons/copilot-normalized-front.jpg",
+      "bytes": 504466,
+      "sha256": "aa50b56c38c04a2fa18477a55dfd8bb39934a421c53996049e3583b964c7faef"
+    },
+    {
+      "path": "/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparisons/copilot-normalized-three_quarter.jpg",
+      "bytes": 588177,
+      "sha256": "3e7019042b3a1f88cf0a0b1b13a7527c5611da16d71588b6a0edff37540e9fab"
+    },
+    {
+      "path": "/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparisons/copilot-physical-size.jpg",
+      "bytes": 573780,
+      "sha256": "a83f69f2305efb7463c6ab86380cf5febb7d7c06764d1c36a1288c568c628e0b"
+    }
+  ],
+  "files": [
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparison-sheets.json",
+      "bytes": 180322,
+      "sha256": "47940be5dfa4748efd8969ffa87a1b67102f18bb98457dc1c14ff847ca651d91",
+      "source_relative_path": "revisions/body-support-v2/comparison-sheets.json",
+      "source_commit": "e4bb9af0dac44c0b1d82adb296abec6714c83714"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparison.csv",
+      "bytes": 2486,
+      "sha256": "ce6aecb09a0e3e4ff8d52633fb30495fbc4b26be27fb875af8a2ef7ae38c9130",
+      "source_relative_path": "revisions/body-support-v2/comparison.csv",
+      "source_commit": "e4bb9af0dac44c0b1d82adb296abec6714c83714"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparisons/copilot-normalized-front.jpg",
+      "bytes": 504466,
+      "sha256": "aa50b56c38c04a2fa18477a55dfd8bb39934a421c53996049e3583b964c7faef",
+      "source_relative_path": "revisions/body-support-v2/comparisons/copilot-normalized-front.jpg",
+      "source_commit": "e4bb9af0dac44c0b1d82adb296abec6714c83714"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparisons/copilot-normalized-three_quarter.jpg",
+      "bytes": 588177,
+      "sha256": "3e7019042b3a1f88cf0a0b1b13a7527c5611da16d71588b6a0edff37540e9fab",
+      "source_relative_path": "revisions/body-support-v2/comparisons/copilot-normalized-three_quarter.jpg",
+      "source_commit": "e4bb9af0dac44c0b1d82adb296abec6714c83714"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparisons/copilot-physical-size.jpg",
+      "bytes": 573780,
+      "sha256": "a83f69f2305efb7463c6ab86380cf5febb7d7c06764d1c36a1288c568c628e0b",
+      "source_relative_path": "revisions/body-support-v2/comparisons/copilot-physical-size.jpg",
+      "source_commit": "e4bb9af0dac44c0b1d82adb296abec6714c83714"
+    }
+  ]
+}
