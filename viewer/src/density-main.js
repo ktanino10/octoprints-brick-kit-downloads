@@ -4,9 +4,10 @@ import {
   DENSITY_POINTER, validateDensityPointer, validateDensityCatalog, densityAssert as check, densityDeliveryStatus, densityGuideEntries,
 } from '../../assets/density-data.js';
 import { studyElement as element, formatStudyNumber as number, studyVideo } from '../../assets/study-ui.js';
-import { verifiedJSON, loadNativeLibraries } from './density-assets.js';
+import { verifiedJSON } from './density-assets.js';
+import { loadDensityModel } from './density-load.js';
 import {
-  validateGuideManifest, guideIndex, AssemblyPlayback, courseBoundary, stageRange,
+  guideIndex, AssemblyPlayback, courseBoundary, stageRange,
   samePartDestinations, searchGuideParts, sortedBOM,
 } from './density-state.js';
 import { DensityStudio } from './density-studio.js';
@@ -257,32 +258,10 @@ async function selectCandidate(id, params = null) {
     return;
   }
   try {
-    const data = await verifiedJSON(item.manifest, signal);
-    const rootProof = data.root_validation ? await verifiedJSON(data.root_validation, signal) : null;
-    const next = validateGuideManifest(data, id, rootProof);
-    if (rootProof) check(item.whisker_support?.sequence_evidence_sha256 === next.root_validation.sha256
-      && item.whisker_support?.manifest_sha256 === next.source_manifest_sha256,
-    '根元改訂の証拠が実ID・形状・組立順・支台数と一致しません。');
-    check(next.metrics.part_count === item.metrics.part_count && next.metrics.unique_types === item.metrics.unique_types,
-      'カタログと実3Dの部品数・使用型が一致しません。');
-    const available = displayCatalog?.cases[id];
-    detailMode = params?.get('detail') ?? (available ? 'light' : 'native');
-    check(['light', 'native'].includes(detailMode), '表示品質の指定が不正です。');
-    if (available) check(available.source_manifest_sha256 === item.manifest.sha256,
-      '表示用軽量形状の原形指紋・誤差・変更範囲が不正です。');
-    check(detailMode !== 'light' || available, 'この実案の表示用軽量モデルはまだありません。原形表示で開いてください。');
-    const lightweightFiles = detailMode === 'light'
-      ? available.geometry_files.filter((file) => file.mode === 'NATIVE_PREVIEW_TESSELLATION') : [];
-    for (const file of lightweightFiles) check(/^(?:BR|PL)-\d+x\d+-H\d+(?:-EDGE-C020)?$/.test(file.type_id)
-      && next.types[file.type_id]?.geometry_sha256 === file.source_geometry_sha256,
-    '表示用軽量形状の原形指紋・誤差・変更範囲が不正です。');
-    const [nativeLibraries, lightweight] = await Promise.all([
-      loadNativeLibraries(next.geometry_files, signal),
-      lightweightFiles.length ? loadNativeLibraries(lightweightFiles, signal) : null,
-    ]);
-    const libraries = lightweight ? { mode: 'NATIVE_PREVIEW_TESSELLATION',
-      types: { ...nativeLibraries.types, ...lightweight.types } } : nativeLibraries;
+    const { manifest: next, rootProof, available, detailMode: loadedDetail, libraries, nativeLibraries } =
+      await loadDensityModel(item, displayCatalog, { signal, detail: params?.get('detail') });
     if (current !== generation) return;
+    detailMode = loadedDetail;
     manifest = next; index = guideIndex(next);
     if (manifest.aids.length) {
       const note = $('#guide-aid-status');

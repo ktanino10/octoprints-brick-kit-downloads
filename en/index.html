@@ -36,5 +36,18 @@
 </main>
 <footer class="footer wrap"><div><a class="brand" href="index.html">octoprints<span>MODELS / PRINT DATA / ASSEMBLY</span></a><p><a href="../ATTRIBUTION.en.md"><!--l10n:c8dccbf5dcbd66e6-->Sources, modifications and rights</a> / <a href="../LICENSE">CC BY-NC 4.0</a><!--l10n:20a7b2b5941e4ac3-->. No GitHub or LEGO endorsement, certification or compatibility guarantee is implied.</p></div><div><a href="history.html"><!--l10n:3e777ebb2067822b-->Design journey</a><a href="https://github.com/ktanino10/octoprints-brick-kit-downloads"><!--l10n:21d646ac786cbcb0-->Public repository ↗</a><a href="../archive/block-budget-matrix.json"><!--l10n:880a8827f44df754-->Publication verification and downloads ↗</a></div></footer>
 <dialog id="image-dialog" data-l10n-aria-label="eef0d61348c8a708" aria-label="Actual image of the selected model"><button class="dialog-close" type="button" data-l10n-aria-label="7f4748c904e22899" aria-label="Close enlarged image"><!--l10n:c92ed5faff8ebdaa-->Close ×</button><img alt=""><p></p><a class="text-link" download><!--l10n:7817795770707f17-->Download actual image ↓</a></dialog>
+<dialog id="catalog-preview-dialog" aria-labelledby="catalog-preview-title">
+  <div class="catalog-preview-header"><h2 id="catalog-preview-title"><!--l10n:563236fec3876f5f-->Rotate the model in 360°</h2><button id="catalog-preview-close" type="button" data-l10n-aria-label="c0b884510933e07c" aria-label="Close the 360-degree view"><!--l10n:c92ed5faff8ebdaa-->Close ×</button></div>
+  <p class="catalog-preview-help"><!--l10n:8572f09661a400ce-->Drag or swipe to rotate through 360°. Scroll or pinch to zoom.</p>
+  <p id="catalog-preview-aids" class="quiet"></p>
+  <div class="catalog-preview-stage"><div id="catalog-preview-canvas" data-model-ready="false"></div><p id="catalog-preview-loading" role="status"><!--l10n:2e995c88d8e688bf-->Checking the selected model&#x27;s actual 3D data.</p></div>
+  <p id="catalog-preview-error" class="error" role="alert" hidden></p>
+  <div class="catalog-preview-controls" role="group" data-l10n-aria-label="b8875efcd24cc347" aria-label="Rotate and zoom the model">
+    <button type="button" data-preview-action="left" disabled><!--l10n:bfc0099b944f2bf3-->Left 30°</button><button type="button" data-preview-action="right" disabled><!--l10n:f5043fe8d80454a4-->Right 30°</button>
+    <button type="button" data-preview-action="front" disabled><!--l10n:740f5e8102e08ac4-->Front</button><button type="button" data-preview-action="back" disabled><!--l10n:2d270b6ce44abc13-->Back</button>
+    <button type="button" data-preview-action="zoom-in" disabled><!--l10n:45e715780f7cd960-->Zoom in ＋</button><button type="button" data-preview-action="zoom-out" disabled><!--l10n:870984f58de4e3d9-->Zoom out −</button>
+  </div>
+  <p id="catalog-preview-mode" class="quiet"></p><p class="quiet"><!--l10n:70c641d00c4698e0-->This display does not approve physical assembly or printing.<a id="catalog-preview-guide" class="text-link"><!--l10n:48d239e1dbfadbae-->Open the detailed assembly guide →</a></p>
+</dialog>
 
 </body></html>

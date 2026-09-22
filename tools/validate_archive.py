@@ -184,9 +184,14 @@ def validate(full):
             namespace = {"m": "http://schemas.microsoft.com/3dmanufacturing/core/2015/02"}
             ensure(len(model.findall("m:build/m:item", namespace)) == 11, f"3MF build is not eleven instances: {pitch}")
     audit_links(paths)
-    ensure(sum(entry["bytes"] for entry in files if entry["group"] == "viewer") < 4_000_000, "Two independent viewer bundles unexpectedly large")
+    preview_bundle = "viewer/assets/catalog-preview.js"
+    ensure(preview_bundle in names, "Missing lazy catalogue rotation bundle")
+    ensure(sum(entry["bytes"] for entry in files if entry["group"] == "viewer" and entry["path"] != preview_bundle) < 4_000_000,
+           "Existing viewer bundles unexpectedly large")
+    ensure(all(entry["bytes"] < 750_000 for entry in files if entry["path"] == preview_bundle),
+           "The lazy rotation preview exceeds its separate bundle budget")
     ensure(all(entry["bytes"] < 2_000_000 for entry in files if entry["path"] in
-               {"viewer/assets/studio.js", "viewer/assets/density-guide.js"}), "A viewer entry bundle exceeds its individual budget")
+               {"viewer/assets/studio.js", "viewer/assets/density-guide.js", "viewer/assets/catalog-preview.js"}), "A viewer entry bundle exceeds its individual budget")
     if full:
         for path in [p for p in paths if p.suffix == ".mp4"]:
             probe = json.loads(subprocess.check_output(["ffprobe", "-v", "error", "-show_format", "-show_streams", "-of", "json", str(path)]))

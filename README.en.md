@@ -10,6 +10,7 @@
 **[Choose a model](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/models.html)**
 
 Start with the homepage **print-data catalogue**: choose one of five variants for each character by part count, assembled size and assembly aids.
+Use **“Rotate in 360°”** on a card to drag/swipe and zoom the selected actual model. Its 3D data loads only when opened.
 The low-part r3 designs (Mona 519 / Copilot 695 / Ducky 413) are excluded from normal choices; trials, failures and refinements have a separate history page.
 “STL available” does not mean physically validated printing. All cases remain unsliced and untested, with full-kit printing on hold. The sections below preserve revision-specific records.
 

@@ -42,5 +42,19 @@
 .history-index span{display:block;color:var(--muted)}
 .history-image-disclosure{margin-top:30px;border-block:1px solid var(--line);padding:16px 0}
 .history-image-disclosure>summary{font-weight:700;font-size:15px}
+#catalog-preview-dialog{width:min(1000px,calc(100% - 24px));max-height:94vh;padding:22px}
+.catalog-preview-header{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.catalog-preview-header h2{font-size:22px;margin:0}
+.catalog-preview-header button,.catalog-preview-controls button{min-height:44px;border:1px solid var(--line);border-radius:5px;padding:8px 15px;background:white;color:var(--ink);font-size:13px}
+.catalog-preview-header button{white-space:nowrap}
+.catalog-preview-help{font-size:13px;margin:12px 0;color:var(--muted)}
+.catalog-preview-stage{position:relative;background:#f5f6f8;border:1px solid var(--line);border-radius:7px;overflow:hidden}
+#catalog-preview-canvas{height:clamp(280px,54vh,540px);width:100%}
+#catalog-preview-canvas canvas{display:block;width:100%;height:100%;touch-action:none}
+#catalog-preview-loading{position:absolute;inset:42% 18px auto;margin:0;text-align:center;font-size:13px;pointer-events:none}
+.catalog-preview-controls{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0 12px}
+#catalog-preview-dialog .quiet{font-size:12px;margin:10px 0 0}
+#catalog-preview-dialog #catalog-preview-aids{margin:0 0 10px}
+@media(max-width:600px){#catalog-preview-dialog{padding:14px}.catalog-preview-header{gap:12px}.catalog-preview-header h2{font-size:17px}.catalog-preview-help{font-size:12px}#catalog-preview-canvas{height:min(48vh,360px)}.catalog-preview-controls button{flex:1 0 26%;padding-inline:8px}}
 @media(max-width:1000px){.print-models{gap:14px}.print-model-heading,.print-model-body{padding:16px}.print-model-body select{font-size:12px}}
 @media(max-width:760px){.print-intro{padding-top:32px}.print-intro>p:last-child{font-size:14px}.print-models,.print-steps,.history-index{grid-template-columns:1fr}.print-model{max-width:540px;width:100%;margin-inline:auto}.print-model-heading,.print-model-body{padding:20px}.print-model-body select{font-size:14px}.print-catalog-heading,.print-history-link{display:block}.print-catalog-heading p{margin-top:8px}.print-status{padding:17px}.print-status strong{font-size:14px}.print-status p{font-size:12px}.print-history-link .text-link{display:inline-block;margin-top:15px}.print-start{padding-block:38px 26px}.print-model-image .zoom-hint{display:block}}

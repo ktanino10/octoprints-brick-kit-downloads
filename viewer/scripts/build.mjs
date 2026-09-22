@@ -22,6 +22,11 @@ await build({
   bundle: true, minify: true, sourcemap: false, format: 'esm', target: ['es2022'],
   legalComments: 'eof', logLevel: 'info',
 });
+await build({
+  absWorkingDir: root, entryPoints: ['src/catalog-preview.js'], outfile: 'assets/catalog-preview.js',
+  bundle: true, minify: true, sourcemap: false, format: 'esm', target: ['es2022'],
+  external: ['../../assets/i18n.js'], legalComments: 'eof', logLevel: 'info',
+});
 
 const dependencies = ['three', 'esbuild', 'playwright', 'playwright-core', '@babel/parser'];
 const licenses = await Promise.all(dependencies.map(async (name) => {
@@ -46,4 +51,4 @@ const notices = `Octoprints Phase 1 viewer — third-party notices\n\n`
 await Promise.all(['THIRD_PARTY_LICENSES.txt', 'assets/THIRD_PARTY_LICENSES.txt'].map(
   (filename) => writeFile(path.join(root, filename), notices),
 ));
-console.log('Offline bundle retained: viewer/assets/studio.js + studio.css');
+console.log('Offline bundles retained: studio, density guide and lazy catalogue preview.');

@@ -6,6 +6,16 @@ import { printCatalog, selectedPrintCase } from './print-catalog-data.js';
 const names = { mona: 'Mona', copilot: 'Copilot', ducky: 'Ducky' };
 const number = (value, digits = 1) => new Intl.NumberFormat(numberLocale(), { maximumFractionDigits: digits }).format(value);
 const selected = new Map();
+let sourceCatalog = null, preview = null, previewRequest = null, previewGeneration = 0;
+const previewDialog = document.querySelector('#catalog-preview-dialog');
+const previewHost = document.querySelector('#catalog-preview-canvas');
+const previewLoading = document.querySelector('#catalog-preview-loading');
+const previewError = document.querySelector('#catalog-preview-error');
+const previewMode = document.querySelector('#catalog-preview-mode');
+const previewControls = [...document.querySelectorAll('[data-preview-action]')];
+Object.defineProperty(window, '__catalogPreview', {
+  value: Object.freeze({ diagnostics: () => preview?.diagnostics() ?? { ready: false } }),
+});
 const element = (tag, text, className) => {
   const node = document.createElement(tag);
   if (text !== undefined) node.textContent = text;
@@ -21,7 +31,79 @@ function shareURL(url) {
   for (const [character, id] of selected) url.searchParams.set(character, id);
   return url;
 }
+function clearPreview() {
+  previewGeneration++;
+  previewRequest?.abort();
+  previewRequest = null;
+  preview?.dispose();
+  preview = null;
+  previewHost.replaceChildren();
+  previewHost.dataset.modelReady = 'false';
+  previewControls.forEach(button => { button.disabled = true; });
+}
+async function openPreview(item) {
+  clearPreview();
+  const generation = previewGeneration;
+  const request = new AbortController();
+  previewRequest = request;
+  previewError.hidden = true;
+  previewLoading.hidden = false;
+  previewMode.textContent = '';
+  document.querySelector('#catalog-preview-title').textContent =
+    `${names[item.character]} · ${number(item.partCount, 0)}部品を360°回転`;
+  document.querySelector('#catalog-preview-aids').textContent =
+    `組立用の仮支台：${number(item.aids, 0)}個（本体部品数とは別）`;
+  document.querySelector('#catalog-preview-guide').href = localizedURL(`density-guide.html?case=${item.id}`);
+  if (!previewDialog.open) previewDialog.showModal();
+  const fail = error => {
+    if (generation !== previewGeneration || request.signal.aborted) return;
+    previewLoading.hidden = true;
+    previewError.hidden = false;
+    previewError.textContent = `3D回転表示を読み込めません。${error.message}`;
+    previewControls.forEach(button => { button.disabled = true; });
+    preview?.dispose();
+    preview = null;
+    previewHost.replaceChildren();
+    previewHost.dataset.modelReady = 'false';
+    request.abort();
+  };
+  try {
+    const module = await import(assetURL('viewer/assets/catalog-preview.js'));
+    request.signal.throwIfAborted();
+    const entry = sourceCatalog.cases.find(row => row.id === item.id);
+    const instance = await module.loadCataloguePreview(previewHost, entry, sourceCatalog.display_catalog,
+      { signal: request.signal, onError: fail });
+    if (request.signal.aborted || generation !== previewGeneration || !previewDialog.open) {
+      instance.dispose();
+      return;
+    }
+    preview = instance;
+    previewLoading.hidden = true;
+    previewMode.textContent = instance.mode === 'NATIVE_PREVIEW_TESSELLATION'
+      ? '表示用軽量3Dです。根元・特殊形状は原形を保持し、CADや部品数は変更していません。原形表示は組立ガイドから確認できます。'
+      : '実ネイティブ形状の3D表示です。';
+    previewControls.forEach(button => { button.disabled = false; });
+    instance.focus();
+  } catch (error) {
+    if (!request.signal.aborted && generation === previewGeneration) fail(error);
+  }
+}
+previewDialog.addEventListener('close', () => { if (!previewDialog.open) clearPreview(); });
+previewDialog.addEventListener('click', event => { if (event.target === previewDialog) previewDialog.close(); });
+document.querySelector('#catalog-preview-close').addEventListener('click', () => previewDialog.close());
+for (const button of previewControls) button.addEventListener('click', () => {
+  if (!preview) return;
+  const action = button.dataset.previewAction;
+  if (action === 'left') preview.turn(Math.PI / 6);
+  else if (action === 'right') preview.turn(-Math.PI / 6);
+  else if (action === 'zoom-in') preview.zoom(1);
+  else if (action === 'zoom-out') preview.zoom(-1);
+  else preview.view(action);
+});
+window.addEventListener('pagehide', clearPreview);
+
 function modelCard(group, initial) {
+  let choice = initial;
   const card = element('article', undefined, 'print-model');
   card.dataset.character = group.character;
   const heading = element('div', undefined, 'print-model-heading');
@@ -63,9 +145,15 @@ function modelCard(group, initial) {
   guide.dataset.printGuide = '';
   const compare = element('a', '5案を大きな画像で比較する →', 'text-link');
   compare.href = localizedURL(`density-matrix.html?character=${group.character}`);
-  body.append(label, select, size, aids, download, packageInfo, guide, compare);
+  const rotate = element('button', '360°回転で見る', 'button secondary');
+  rotate.type = 'button';
+  rotate.dataset.openRotation = group.character;
+  rotate.setAttribute('aria-label', `${names[group.character]}を360度回転して見る`);
+  rotate.addEventListener('click', () => openPreview(choice));
+  body.append(label, select, rotate, size, aids, download, packageInfo, guide, compare);
   card.append(heading, imageLink, body);
   function choose(item) {
+    choice = item;
     select.value = item.id;
     selected.set(group.character, item.id);
     card.dataset.case = item.id;
@@ -105,6 +193,7 @@ try {
     readJSON(receipt.verification_record.path, receipt.verification_record.sha256),
   ]);
   const groups = printCatalog(catalog, pointer, receipt, evidence);
+  sourceCatalog = catalog;
   const params = new URL(location.href).searchParams;
   const cards = groups.map(group => modelCard(group, selectedPrintCase(group, params.get(group.character))));
   document.querySelector('#model-cards').replaceChildren(...cards);

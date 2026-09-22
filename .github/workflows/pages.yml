@@ -38,6 +38,8 @@ jobs:
           node --check assets/mona-refinement.js
           node --check assets/density-data.js
           node --check assets/density-matrix.js
+          node --check assets/print-catalog-data.js
+          node --check assets/print-catalog.js
       - name: Build both languages from shared templates
         run: |
           node viewer/scripts/extract-i18n.mjs
