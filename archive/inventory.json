@@ -67,8 +67,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "MD",
-      "bytes": 31021,
-      "sha256": "c19873b9836b969e69a2c05de0db6c5117a9ea73f803ea143fb375a506d5c662",
+      "bytes": 31302,
+      "sha256": "cdc660682eb263d26fda1a5d6ea8b636eaf0787ce045e7af05d2229ab42d9407",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/README.en.md",
       "status": "ARCHIVE_RECORD"
     },
@@ -77,8 +77,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "MD",
-      "bytes": 31532,
-      "sha256": "503ad87094f763bc52434db3b5c55c6dfba361949e35d4d33625b04ff41ad012",
+      "bytes": 31827,
+      "sha256": "585d2fe3aa4de5cfe95424f94ed000c239de36900cf0ac23c816812991395d5b",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/README.md",
       "status": "ARCHIVE_RECORD"
     },
@@ -117,8 +117,8 @@
       "group": "design",
       "revision": "r2-20260919",
       "format": "JSON",
-      "bytes": 12117,
-      "sha256": "c27a79a8468d87de2fdbe93fa1748ced2ac4caa000354b03dabfeeb9d006de06",
+      "bytes": 12576,
+      "sha256": "b1fe18861b59df1bf33e834ae970c6117c79074a566704d907020242f7a2661a",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/copilot-support-free-revision.json",
       "status": "ARCHIVE_RECORD"
     },
@@ -30263,6 +30263,16 @@
       "status": "UNSELECTED_DIGITAL_STUDY"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/publication-verification.json",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JSON",
+      "bytes": 8484,
+      "sha256": "2f3d06f2bf078a31f21ef5f8f11a91bc9ca29ccb11cac64ef6919681466fa93e",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/publication-verification.json",
+      "status": "UNSELECTED_DIGITAL_STUDY"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/source-records/0943f2af21a2c380e47fac21150347f6d8dc6dc5-matrix.json",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -32493,8 +32503,8 @@
     }
   ],
   "totals": {
-    "files": 2558,
-    "bytes": 977327682,
+    "files": 2559,
+    "bytes": 977337201,
     "groups": {
       "site": 73,
       "design": 83,
@@ -32503,7 +32513,7 @@
       "common-trial": 24,
       "selected": 544,
       "trial": 60,
-      "study": 1041,
+      "study": 1042,
       "feedback": 16,
       "viewer": 7
     }

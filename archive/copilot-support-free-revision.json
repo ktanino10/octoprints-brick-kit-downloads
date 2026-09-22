@@ -2,11 +2,11 @@
   "schema_version": 1,
   "request_id": "copilot-support-free-20260922",
   "study_id": "part-count-matrix-20260921",
-  "state": "PARTIAL",
+  "state": "READY",
   "scope": "FOUR_NEW_ACTUAL_SUPPORT_FREE_COPILOT_REVISIONS_NOT_THE_PREVIOUS_FIFTEEN_CASE_DELIVERY",
   "baseline_count": 17873,
   "expected_case_count": 4,
-  "published_verified_case_count": 3,
+  "published_verified_case_count": 4,
   "requirements": {
     "external_aid_count": 0,
     "assembly_aid_count": 0,
@@ -47,8 +47,8 @@
         "public_browser_passed": true,
         "anonymous_downloads_passed": true
       },
-      "verified_content_commit": "1e46bdc2b4d1d9db949ce34d0d909845bf109dca",
-      "verified_pages_run": "35688995113"
+      "verified_content_commit": "1651bef019498a7625e47af0d267ed98a03d93f6",
+      "verified_pages_run": "35715465962"
     },
     {
       "logical_case_id": "copilot-p150",
@@ -80,8 +80,8 @@
         "public_browser_passed": true,
         "anonymous_downloads_passed": true
       },
-      "verified_content_commit": "4ef08d5ba797e8dd752fbac35e3a76636e5dc5b7",
-      "verified_pages_run": "35697058877"
+      "verified_content_commit": "1651bef019498a7625e47af0d267ed98a03d93f6",
+      "verified_pages_run": "35715465962"
     },
     {
       "logical_case_id": "copilot-p200",
@@ -113,8 +113,8 @@
         "public_browser_passed": true,
         "anonymous_downloads_passed": true
       },
-      "verified_content_commit": "4ef08d5ba797e8dd752fbac35e3a76636e5dc5b7",
-      "verified_pages_run": "35697058877"
+      "verified_content_commit": "1651bef019498a7625e47af0d267ed98a03d93f6",
+      "verified_pages_run": "35715465962"
     },
     {
       "logical_case_id": "copilot-p300",
@@ -128,7 +128,7 @@
       "actual_case_id": "copilot-p300-support-free-v2",
       "geometry_revision": "body-support-v2",
       "source_commit": "8c9b01fa32c2495ed0daba231b538619a975bebc",
-      "status": "PUBLIC_PENDING",
+      "status": "READY",
       "actual_count": 53287,
       "external_aid_count": 0,
       "assembly_aid_count": 0,
@@ -143,9 +143,11 @@
       "assembly_url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p300-support-free-v2/copilot-p300-support-free-v2-cad-scene-animation-public.zip",
       "viewer_url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case=copilot-p300-support-free-v2",
       "verification": {
-        "public_browser_passed": false,
-        "anonymous_downloads_passed": false
-      }
+        "public_browser_passed": true,
+        "anonymous_downloads_passed": true
+      },
+      "verified_content_commit": "1651bef019498a7625e47af0d267ed98a03d93f6",
+      "verified_pages_run": "35715465962"
     }
   ],
   "preserved_existing_four_x": {
@@ -170,8 +172,8 @@
     "Three actual versioned six-way comparison images and revised fifteen-row CSV, preserving the other eleven rows, verified in the public browser and by anonymous hashes"
   ],
   "verification": {
-    "public_browser_passed": false,
-    "anonymous_downloads_passed": false
+    "public_browser_passed": true,
+    "anonymous_downloads_passed": true
   },
   "public_commit": {
     "record": "archive/deployment.json",
@@ -185,7 +187,7 @@
   "base_catalog_sha256": "69b39de67d8d9214b75b631bf1e9f73e09ee16a520314b65a559ad6be2ff864e",
   "budget_baseline": "/archive/body-support-baseline.json",
   "comparisons": {
-    "state": "PUBLIC_PENDING",
+    "state": "READY",
     "descriptor": {
       "path": "/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparison-sheets.json",
       "bytes": 180322,
@@ -219,8 +221,15 @@
       }
     ],
     "verification": {
-      "public_browser_passed": false,
-      "anonymous_downloads_passed": false
-    }
+      "public_browser_passed": true,
+      "anonymous_downloads_passed": true
+    },
+    "verified_content_commit": "1651bef019498a7625e47af0d267ed98a03d93f6",
+    "verified_pages_run": "35715465962"
+  },
+  "verification_record": {
+    "path": "/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/publication-verification.json",
+    "bytes": 8484,
+    "sha256": "2f3d06f2bf078a31f21ef5f8f11a91bc9ca29ccb11cac64ef6919681466fa93e"
   }
 }

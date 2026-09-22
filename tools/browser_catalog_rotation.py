@@ -137,6 +137,7 @@ with sync_playwright() as playwright:
             pending.route(manifest_url, lambda route: held.append(route))
             waiting = pending.new_page()
             waiting.goto(urljoin(base, "en/"), wait_until="networkidle")
+            waiting.locator(f'#model-{first["character"]}').select_option(first["id"])
             with waiting.expect_request(manifest_url):
                 waiting.locator(f'[data-open-rotation="{first["character"]}"]').click()
             expect(waiting.locator("#catalog-preview-loading")).to_be_visible()
@@ -161,6 +162,7 @@ with sync_playwright() as playwright:
             failed.route(broken_url, lambda route: route.fulfill(status=404, body=""))
             broken = failed.new_page()
             broken.goto(urljoin(base, "en/"), wait_until="networkidle")
+            broken.locator(f'#model-{first["character"]}').select_option(first["id"])
             broken.locator(f'[data-open-rotation="{first["character"]}"]').click()
             expect(broken.locator("#catalog-preview-error")).to_be_visible(timeout=180000)
             expect(broken.locator("#catalog-preview-canvas")).to_have_attribute("data-model-ready", "false")

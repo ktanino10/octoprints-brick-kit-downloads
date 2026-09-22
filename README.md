@@ -16,6 +16,8 @@ Copilotは1.2・1.5・2・3倍の[支台なし実構造へ改訂](archive/copilo
 [改訂4案・既存4倍・1倍参照の比較](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-matrix.html?revision=body-support-v2&character=copilot) /
 [改訂CSV](artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparison.csv)。
 4倍の71,261個は既存の支台0案をそのまま保持しています。支台付き旧版や元の15案READYは、この追加改訂の完了には使いません。
+[改訂4案の公開検証記録](artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/publication-verification.json)に、
+実CAD・全組立ID・公称荷重・実ブラウザー・動画・匿名取得・旧データ保持・容量の確認範囲を記録しています。
 Mona 519 / Copilot 695 / Ducky 413個の少部品r3案は通常の候補から外し、過去の試作・失敗・改良は別ページへ分けています。
 「STL公開」は印刷確認済みを意味しません。全案が未スライス・実物未検証で、全数印刷は保留です。以下は版別の保存記録です。
 

@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "request_id": "copilot-support-free-20260922",
+  "study_id": "part-count-matrix-20260921",
+  "geometry_revision": "body-support-v2",
+  "state": "READY",
+  "scope": "COMPLETE_PUBLIC_DIGITAL_DELIVERY_NOT_PHYSICAL_APPROVAL",
+  "verified_at_utc": "2026-09-22T10:29:25.335917+00:00",
+  "verified_content_commit": "1651bef019498a7625e47af0d267ed98a03d93f6",
+  "verified_content_pages_run": "35715465962",
+  "final_public_commit": {
+    "record": "/archive/deployment.json",
+    "field": "commit"
+  },
+  "catalog_sha256": "2f299a1552ebb9ece3ed0f82356e8e7098d563c9a7cebcc8b2f9c15c310214f0",
+  "base_catalog_sha256": "69b39de67d8d9214b75b631bf1e9f73e09ee16a520314b65a559ad6be2ff864e",
+  "fixed_count_denominator": 17873,
+  "actual_revised_figure_parts_total": 136972,
+  "actual_cases": [
+    {
+      "case_id": "copilot-p120-support-free-v2",
+      "logical_case_id": "copilot-p120",
+      "source_commit": "835e3f483b8bca99fd3023bb0e849ed9dacf2351",
+      "target_count": 21448,
+      "actual_count": 21382,
+      "actual_ratio": 1.1963296592625747,
+      "difference": -66,
+      "actual_types": 156,
+      "dimensions_mm": [
+        519.8,
+        439.8,
+        397
+      ],
+      "external_aid_count": 0,
+      "assembly_aid_count": 0,
+      "native_documents_reopened_after_relocation": 160,
+      "native_all_ids_types_colors_poses_steps": "MATCH",
+      "blender_geometry_materials_and_actual_motion_preserved": true,
+      "geometry_sequence_identity_sha256": "87f4f8c36d56db6b5729996076668e7343648df763b8ce0a456dc11c64597a94",
+      "native_support_contact_evidence_sha256": "f44e599d613cd541b0d1839c2ae64382e72c1302c390cda1437127f94c9d367a",
+      "actual_native_modules": 1,
+      "actual_brep_sections": 18,
+      "nominal_cad_load_prefix_counts": [
+        20
+      ],
+      "nominal_cad_minimum_margins_mm": [
+        18.18269414336094
+      ],
+      "required_nominal_cad_margin_mm": 1,
+      "root_dependency_check": "PASS_NO_EXCLUSIVE_ROOT_RESET"
+    },
+    {
+      "case_id": "copilot-p150-support-free-v2",
+      "logical_case_id": "copilot-p150",
+      "source_commit": "313c7d5bee20dd343b4c01f2000eef94e26d09ed",
+      "target_count": 26810,
+      "actual_count": 26673,
+      "actual_ratio": 1.4923627818497174,
+      "difference": -137,
+      "actual_types": 162,
+      "dimensions_mm": [
+        567.8,
+        487.8,
+        425.8
+      ],
+      "external_aid_count": 0,
+      "assembly_aid_count": 0,
+      "native_documents_reopened_after_relocation": 166,
+      "native_all_ids_types_colors_poses_steps": "MATCH",
+      "blender_geometry_materials_and_actual_motion_preserved": true,
+      "geometry_sequence_identity_sha256": "8f68e0fade85afa1f02d4efb98e7789300121f02fa7dafd266c17554de30e1a8",
+      "native_support_contact_evidence_sha256": "d099f240bb2ef691151faf1b4662646e396c11cae161992a1074802b96e38187",
+      "actual_native_modules": 1,
+      "actual_brep_sections": 55,
+      "nominal_cad_load_prefix_counts": [
+        59
+      ],
+      "nominal_cad_minimum_margins_mm": [
+        35.66923115856175
+      ],
+      "required_nominal_cad_margin_mm": 1,
+      "root_dependency_check": "PASS_NO_EXCLUSIVE_ROOT_RESET"
+    },
+    {
+      "case_id": "copilot-p200-support-free-v2",
+      "logical_case_id": "copilot-p200",
+      "source_commit": "f231e36aad95adfdaa03df696816cf86be06f784",
+      "target_count": 35746,
+      "actual_count": 35630,
+      "actual_ratio": 1.9935097633301628,
+      "difference": -116,
+      "actual_types": 182,
+      "dimensions_mm": [
+        631.8,
+        535.8,
+        469
+      ],
+      "external_aid_count": 0,
+      "assembly_aid_count": 0,
+      "native_documents_reopened_after_relocation": 186,
+      "native_all_ids_types_colors_poses_steps": "MATCH",
+      "blender_geometry_materials_and_actual_motion_preserved": true,
+      "geometry_sequence_identity_sha256": "b0de4de40e7d7ddd1f74a93ea3f64abd6e95ae2c3d7d7aaa0e4289ffdc2b1a8d",
+      "native_support_contact_evidence_sha256": "9067da923f8d3c2c8309c7433be7539e2d8accf7dfb021cc535349075f0062fc",
+      "actual_native_modules": 1,
+      "actual_brep_sections": 51,
+      "nominal_cad_load_prefix_counts": [
+        63
+      ],
+      "nominal_cad_minimum_margins_mm": [
+        28.935340445359316
+      ],
+      "required_nominal_cad_margin_mm": 1,
+      "root_dependency_check": "PASS_NO_EXCLUSIVE_ROOT_RESET"
+    },
+    {
+      "case_id": "copilot-p300-support-free-v2",
+      "logical_case_id": "copilot-p300",
+      "source_commit": "8c9b01fa32c2495ed0daba231b538619a975bebc",
+      "target_count": 53619,
+      "actual_count": 53287,
+      "actual_ratio": 2.981424495048397,
+      "difference": -332,
+      "actual_types": 196,
+      "dimensions_mm": [
+        727.8,
+        615.8,
+        540.9999999999999
+      ],
+      "external_aid_count": 0,
+      "assembly_aid_count": 0,
+      "native_documents_reopened_after_relocation": 200,
+      "native_all_ids_types_colors_poses_steps": "MATCH",
+      "blender_geometry_materials_and_actual_motion_preserved": true,
+      "geometry_sequence_identity_sha256": "5fe651aef648f12d0db6efaa79f6be1290d729957b5aec128797e01288d93003",
+      "native_support_contact_evidence_sha256": "de63e234573851fb4b65f2840de863bffad52aeefe9034fca3bf8a45323d5387",
+      "actual_native_modules": 2,
+      "actual_brep_sections": 80,
+      "nominal_cad_load_prefix_counts": [
+        131,
+        25
+      ],
+      "nominal_cad_minimum_margins_mm": [
+        37.06384124387729,
+        16.116247611316204
+      ],
+      "required_nominal_cad_margin_mm": 1,
+      "root_dependency_check": "PASS_NO_EXCLUSIVE_ROOT_RESET",
+      "original_memberships_covered_once": 53350
+    }
+  ],
+  "preserved_existing_four_x": {
+    "case_id": "copilot-p400",
+    "actual_count": 71261,
+    "assembly_aid_count": 0,
+    "source_commit": "df5691fcb57f938c788dfcd9f19fc6df257a1b6b",
+    "regeneration_requested": false,
+    "counts_toward_the_four_new_revisions": false
+  },
+  "previous_fifteen_delivery_and_old_urls": "UNCHANGED_SEPARATE_COMPLETED_SCOPE",
+  "browser": {
+    "engine": "WebKit",
+    "pinned_browser_revision": 2203,
+    "actual_cases": [
+      "copilot-p120-support-free-v2",
+      "copilot-p150-support-free-v2",
+      "copilot-p200-support-free-v2",
+      "copilot-p300-support-free-v2"
+    ],
+    "all_native_gpu_pose_roundtrips": "PASS",
+    "body_first_receiver_order_and_empty_to_final": "PASS",
+    "original_and_display_lod_modes": "PASS",
+    "actual_movie_chapters_played": 12,
+    "ja_en_share_selection_bom_native_underside": "PASS",
+    "largest_new_case_390px": "copilot-p300-support-free-v2",
+    "scope_limit": "macOS desktop viewport emulation, not physical phone testing",
+    "missing_data_image_native_and_support_evidence_fail_closed": true
+  },
+  "comparisons": {
+    "actual_models": 6,
+    "actual_images": 3,
+    "csv_rows": 15,
+    "csv_columns": 17,
+    "changed_logical_rows": [
+      "copilot-p120",
+      "copilot-p150",
+      "copilot-p200",
+      "copilot-p300"
+    ],
+    "other_eleven_rows_and_header": "RAW_BYTE_IDENTICAL",
+    "prior_matrix_descriptor_and_csv": "UNCHANGED",
+    "same_projected_panel_model_height_px": 417.6,
+    "physical_pixels_per_mm": 0.9,
+    "uniform_affine_shared_ground_y_px": 750,
+    "original_source_files_bound": 32,
+    "private_binding_checked_not_published": true,
+    "all_three_actual_images_visually_reviewed": true
+  },
+  "anonymous_delivery": {
+    "authentication": "none",
+    "actual_release_and_comparison_assets": 13,
+    "changed_site_files": 36,
+    "new_or_changed_assets_full_sha256": 7,
+    "unchanged_assets_prior_full_sha256_plus_fresh_head": 6,
+    "actual_mp4_range_and_ftyp_checks": 4
+  },
+  "storage": {
+    "baseline_public_commit": "ea1c123cbc171035bcbf95a947f8defaa50b905f",
+    "base_immutable_matrix_bytes": 128716851,
+    "new_body_revision_served_bytes": 23961739,
+    "projected_whole_site_bytes": 977327682,
+    "new_scope_served_paths": 61,
+    "counting": "EACH_ACTUAL_SERVED_PATH_ONCE_NOT_HASH_DEDUPLICATION"
+  },
+  "performance_record": "/artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/performance.json",
+  "physical_limits": {
+    "selection": "NOT_SELECTED",
+    "visual_approval": "PENDING",
+    "physical_validation": "UNKNOWN",
+    "material_mass_infill_strength_retention": "UNMEASURED",
+    "slicer_status": "NOT_SLICED",
+    "slicer_supports": "UNKNOWN_SEPARATE_FROM_ASSEMBLY_AIDS",
+    "full_print": "ON_HOLD",
+    "local_root_bounds_are_not_summed_global_mass": true
+  }
+}

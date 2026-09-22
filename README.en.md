@@ -16,6 +16,8 @@ Copilot's 1.2×/1.5×/2×/3× cases have separate [actual support-free structura
 [Revised comparison with the actual 1× reference](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-matrix.html?revision=body-support-v2&character=copilot) /
 [revised CSV](artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparison.csv).
 The existing zero-aid 4× case with 71,261 parts stays unchanged. Historical supported files and the earlier fifteen-case READY receipt do not complete this additional request.
+The [four-revision publication verification record](artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/publication-verification.json)
+records actual CAD/IDs, nominal loads, public browser/video checks, anonymous downloads, immutable history and storage limits.
 The low-part r3 designs (Mona 519 / Copilot 695 / Ducky 413) are excluded from normal choices; trials, failures and refinements have a separate history page.
 “STL available” does not mean physically validated printing. All cases remain unsliced and untested, with full-kit printing on hold. The sections below preserve revision-specific records.
 
