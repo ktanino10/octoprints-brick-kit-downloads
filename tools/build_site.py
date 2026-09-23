@@ -10,6 +10,8 @@ ROOT = Path(__file__).resolve().parents[1]
 output = ROOT / "_site"
 inventory = json.loads((ROOT / "archive/inventory.json").read_text())
 names = {entry["path"] for entry in inventory["files"]}
+if any(name.startswith("viewer-data/") for name in names):
+    raise ValueError("Commit-pinned repository native meshes must not be duplicated into the Pages payload")
 names.update({"archive/inventory.json", "archive/SHA256SUMS.txt"})
 if output.exists():
     unexpected = {path.relative_to(output).as_posix() for path in output.rglob("*") if path.is_file()} - names - {".nojekyll", "archive/deployment.json"}

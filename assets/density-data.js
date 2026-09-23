@@ -13,6 +13,7 @@ export const MONA_WHISKER_REQUIREMENT = 'NO_EXTERNAL_OR_ASSEMBLY_AIDS';
 export const MONA_GEOMETRY_REVISION = 'whisker-root-v2';
 export const MONA_ROOT_REFERENCE_ID = 'mona-fine8-base-root-v2';
 export const COPILOT_SUPPORT_REVISION = 'body-support-v2';
+export const SYMMETRY_MESH_PREFIX = 'viewer-data/copilot-symmetry-20260923/geometry/';
 export const isObject = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
 export const isHash = (value) => typeof value === 'string' && /^[0-9a-f]{64}$/.test(value);
 export const isCount = (value) => Number.isSafeInteger(value) && value >= 0;
@@ -59,6 +60,11 @@ export function densityPath(value) {
 export function validateDensityFile(file, { download = false } = {}) {
   densityAssert(isObject(file) && isHash(file.sha256) && isCount(file.bytes) && file.bytes > 0,
     '公開ファイルのサイズ・SHA-256がありません。');
+  if (file.encoding !== undefined || file.decoded_bytes !== undefined || file.decoded_sha256 !== undefined) {
+    densityAssert(file.encoding === 'gzip' && isCount(file.decoded_bytes) && file.decoded_bytes > 0
+      && file.decoded_bytes < 90_000_000 && isHash(file.decoded_sha256),
+    '圧縮した検査記録には、輸送形式と展開後の正確なバイト数・SHA-256が必要です。');
+  }
   if (download && typeof file.url === 'string' && file.url.startsWith('https://')) {
     const url = new URL(file.url);
     const prefix = `/ktanino10/octoprints-brick-kit-downloads/releases/download/${DENSITY_ID}`;
@@ -66,6 +72,20 @@ export function validateDensityFile(file, { download = false } = {}) {
       && (url.pathname.startsWith(prefix + '/') || url.pathname.startsWith(prefix + '-')),
     '大容量ファイルの配布先が公開プロジェクトの版別Releaseと一致しません。');
   } else densityPath(file.path ?? file.url);
+  return file;
+}
+
+export function validateNativeGeometryFile(file) {
+  if (file?.storage === undefined) return validateDensityFile(file);
+  densityAssert(file.storage === 'PUBLIC_REPO_COMMIT' && isHash(file.sha256)
+    && isHash(file.geometry_sha256) && isCount(file.bytes) && file.bytes > 0 && file.bytes < 90_000_000
+    && file.format === 'OBM1_GZIP' && (file.mode === undefined || file.mode === 'NATIVE_FLOAT32')
+    && typeof file.type_id === 'string' && /^[A-Za-z0-9][A-Za-z0-9_-]{0,159}$/.test(file.type_id)
+    && typeof file.public_commit === 'string' && /^[0-9a-f]{40}$/.test(file.public_commit)
+    && file.repository_path === `${SYMMETRY_MESH_PREFIX}${file.type_id}.mesh.gz`
+    && file.url === `https://raw.githubusercontent.com/ktanino10/octoprints-brick-kit-downloads/${file.public_commit}/${file.repository_path}`
+    && file.path === undefined,
+  '実ネイティブメッシュの配信先は、この公開リポジトリの固定コミット・許可パス・型IDへ結合する必要があります。');
   return file;
 }
 

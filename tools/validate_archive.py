@@ -108,6 +108,7 @@ def validate(full):
     inventory = json.loads((ROOT / "archive/inventory.json").read_text())
     files = inventory["files"]
     names = [entry["path"] for entry in files]
+    ensure(not any(name.startswith("viewer-data/") for name in names), "Repository-only native geometry was duplicated into Pages")
     ensure(len(names) == len(set(names)), "Duplicate inventory paths")
     ensure(len(files) == inventory["totals"]["files"], "Inventory total mismatch")
     ensure(sum(entry["bytes"] for entry in files) == inventory["totals"]["bytes"], "Inventory size mismatch")

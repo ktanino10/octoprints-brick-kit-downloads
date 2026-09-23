@@ -18,6 +18,24 @@ mirror mapの全ID bijection/involution・色・2e-5 mmの原点対応と、実v
 別実装でX反射して両向きcut体積を測ります。元assembly/mastersを保存・再計算せず、前後のSHAを確認します。
 計測器のsynthetic fixture結果は `PASS_SYNTHETIC_NATIVE_DRIVER_TEST` と明示し、修正済みモデルの合格記録へ転用しません。
 
+新しい無変換native meshがPages予算へ収まらない場合は、同じPUBLICリポジトリの
+`viewer-data/copilot-symmetry-20260923/geometry/<type_id>.mesh.gz` へ保存し、Pages対象から除外します。
+固定READY receiptの `geometry_mesh_files` は `PUBLIC_REPO_NATIVE_MESH_NOT_PAGES` 権限と
+source-relative path/type/bytes/SHAを持ち、既存same-origin型の同bytes再用とは別に扱います。
+`repository_meshes.py` はOBM1・Float32/index指紋・固定Gitblobを検算し、
+`PUBLIC_REPO_COMMIT` descriptorのURLをこの公開repo・40桁PUBLICSHA・許可prefix/typeだけへ結合します。
+新meshの公開commitを先に確定し、次のguide公開commitがそのSHAを参照します。moving branchやprivate/source SHAを代入しません。
+ブラウザーはnative geometryにだけこの配信を許可し、cookieなし/redirect拒否、圧縮bytesのSHA確認後に展開・配列指紋を再確認します。
+JSON・画像・任意ホスト・別repo・旧形状fallbackは許可しません。CSPは実3Dを開くindex/models/guideのconnect-srcだけを追加します。
+既存geometry/URLを移動・削除せず、新compact sourceとfull CAD/scene/mediaは新Releaseへ保持し、Pagesのguideを二重保存しません。
+`validate_archive.py` / `build_site.py` はrepository-only geometryがPages inventoryへ混入した場合に停止します。
+これはlossless配信の区分追加で、形状・個数・対称性・native支持の合格条件を緩めるものではありません。
+大きいsupport proofはsame-originのgzip輸送を使用します。
+`assembly_validation_transport_ref` はpath/encoding=gzip/bytes/sha256/decoded_bytes/decoded_sha256を持ち、
+元の `assembly_validation_ref` のraw SHAとsource/native identityは変更しません。
+Pagesにはgzipだけ、元の完全JSONはpublic Releaseとread-only検証入力へ保持します。
+`verifiedJSON` は圧縮SHA、gzip形式、展開後bytes/SHAを確認してからparseし、raw URLへのfallbackは行いません。
+
 ## Copilot支台なし追加改訂の受領記録
 
 `archive/copilot-support-free-revision.json` は、既存15案の完了記録とは別の4案だけを追跡します。

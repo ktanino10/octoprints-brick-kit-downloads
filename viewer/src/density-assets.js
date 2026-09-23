@@ -1,9 +1,13 @@
 import { assetURL } from '../../assets/i18n.js';
-import { densityAssert as check, densityPath, validateDensityFile, isObject, isHash, isCount } from '../../assets/density-data.js';
+import { densityAssert as check, densityPath, validateDensityFile, validateNativeGeometryFile,
+  isObject, isHash, isCount } from '../../assets/density-data.js';
 
-export async function verifiedBytes(file, signal) {
-  validateDensityFile(file);
-  const response = await fetch(assetURL(densityPath(file.path ?? file.url)), {
+export async function verifiedBytes(file, signal, { nativeGeometry = false } = {}) {
+  if (nativeGeometry) validateNativeGeometryFile(file);
+  else validateDensityFile(file);
+  const url = nativeGeometry && file.storage === 'PUBLIC_REPO_COMMIT'
+    ? file.url : assetURL(densityPath(file.path ?? file.url));
+  const response = await fetch(url, {
     credentials: 'omit', redirect: 'error',
     signal: signal ? AbortSignal.any([signal, AbortSignal.timeout(120000)]) : AbortSignal.timeout(120000),
   });
@@ -23,7 +27,16 @@ export async function inflateIfNeeded(bytes) {
 }
 
 export async function verifiedJSON(file, signal) {
-  const bytes = await inflateIfNeeded(await verifiedBytes(file, signal));
+  const packed = await verifiedBytes(file, signal);
+  if (file.encoding === 'gzip') check(packed[0] === 0x1f && packed[1] === 0x8b,
+    '検査記録の輸送形式が、宣言されたgzipと一致しません。');
+  const bytes = await inflateIfNeeded(packed);
+  if (file.encoding === 'gzip') {
+    const digest = [...new Uint8Array(await crypto.subtle.digest('SHA-256', bytes))]
+      .map(byte => byte.toString(16).padStart(2, '0')).join('');
+    check(bytes.length === file.decoded_bytes && digest === file.decoded_sha256,
+      '展開した検査記録が元の実データのバイト数・SHA-256と一致しません。');
+  }
   return JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(bytes));
 }
 
@@ -116,7 +129,7 @@ export async function loadNativeLibraries(files, signal) {
   async function loadNext() {
     while (cursor < files.length) {
       const file = files[cursor++];
-      const bytes = await inflateIfNeeded(await verifiedBytes(file, combined));
+      const bytes = await inflateIfNeeded(await verifiedBytes(file, combined, { nativeGeometry: true }));
       const library = file.format === 'OBM1_GZIP' ? await decodeNativeType(bytes, file) : await decodeMeshPack(bytes);
       for (const [id, type] of Object.entries(library.types)) {
         check(!Object.hasOwn(result.types, id), '共有型IDが複数の形状ライブラリーで重複しています。');

@@ -1,4 +1,8 @@
 {
+  "圧縮した検査記録には、輸送形式と展開後の正確なバイト数・SHA-256が必要です。": "Compressed verification records require the declared transport encoding and exact decoded byte count and SHA-256.",
+  "検査記録の輸送形式が、宣言されたgzipと一致しません。": "The verification-record transport does not match its declared gzip encoding.",
+  "展開した検査記録が元の実データのバイト数・SHA-256と一致しません。": "The decoded verification record does not match the original actual data's byte count and SHA-256.",
+  "実ネイティブメッシュの配信先は、この公開リポジトリの固定コミット・許可パス・型IDへ結合する必要があります。": "Actual native mesh delivery must bind the approved path and type ID to an immutable commit in this public repository.",
   "左右対称の修正状況 →": "Bilateral symmetry revision status →",
   "このCopilotの5案には目などの左右差があり、修正中です。現在の配布データは対称化前の版です。": "These five Copilot variants have left/right differences in the eyes and other features. Corrections are in progress; the current downloads are the earlier asymmetric versions.",
   "Copilotの左右対称性を確認・修正する": "Checking and correcting Copilot's bilateral symmetry",

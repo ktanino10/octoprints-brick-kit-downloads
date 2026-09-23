@@ -1,6 +1,6 @@
 import {
   DENSITY_ID, densityArtifactIdentity, densityAssert as check,
-  isObject, isVector, isHash, isCount, validateDensityFile,
+  isObject, isVector, isHash, isCount, validateDensityFile, validateNativeGeometryFile,
 } from '../../assets/density-data.js';
 import { validateBodySupportBinding } from './body-support-state.js';
 
@@ -209,7 +209,7 @@ export function validateGuideManifest(manifest, candidateId, rootEvidence = null
     '実部品と使用型・組立順の合計が一致しません。');
   check(Array.isArray(manifest.geometry_files) && manifest.geometry_files.length > 0,
     '実ネイティブ形状の共有データがありません。箱や円柱で代用しません。');
-  manifest.geometry_files.forEach((file) => validateDensityFile(file));
+  manifest.geometry_files.forEach((file) => validateNativeGeometryFile(file));
   const contract = manifest.animation_contract;
   check(isObject(contract) && contract.explosion === 'ABSOLUTE_RADIAL_OFFSETS'
     && contract.assembly === 'BOTTOM_UP_SOURCE_ORDER'
