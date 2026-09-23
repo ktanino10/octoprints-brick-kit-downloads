@@ -1,4 +1,13 @@
 {
+  "左右対称の修正状況 →": "Bilateral symmetry revision status →",
+  "このCopilotの5案には目などの左右差があり、修正中です。現在の配布データは対称化前の版です。": "These five Copilot variants have left/right differences in the eyes and other features. Corrections are in progress; the current downloads are the earlier asymmetric versions.",
+  "Copilotの左右対称性を確認・修正する": "Checking and correcting Copilot's bilateral symmetry",
+  "2026-09-23、黄色い目が左右で異なるという指摘を受け、現行5案の原形データを確認しました。目の幅・高さ・位置だけでなく、ゴーグルや顔境界にも左右差があり、軽量表示や照明だけの問題ではありません。": "Following the September 23 report of mismatched yellow eyes, the original geometry of all five current variants was checked. Eye size and placement, goggles and face boundaries have left/right differences; this is not just a display-LOD or lighting issue.",
+  "実際の形状・部品の色・配置を修正し、同じ原形に基づくCAD・画像・動画・組立表示へそろえます。画像だけの左右反転や着色では対応しません。対称化で変わる形状・色は新しい改訂として記録し、支台なしの構造と実支持検査を維持します。": "The actual geometry, whole-part colors and placements are being corrected so CAD, images, animation and assembly views use the same revised model. Mirroring or recoloring an image is not a fix. Intentional geometry/color changes belong to a new revision while zero-aid structures and actual support checks are preserved.",
+  "現在の配布データは、まだ対称化前の版です。": "The current downloads have not yet received the symmetry correction.",
+  "新しい実CAD・対称性・支持・動画・公開確認がそろうまでは修正済みと表示しません。前回の支台なし改訂の完了記録とは別に、": "The correction is not marked complete until actual CAD, symmetry, support, animation and public-delivery checks are complete. The previous support-free delivery remains a separate completed scope; ",
+  "左右対称改訂の公開状況": "the symmetry-revision publication status",
+  "を記録します。": "is tracked separately.",
   "新4案の実数は21,382・26,673・35,630・53,287部品です。3倍案の初期構造は根元間の荷重伝播で不適合となり、同色の既存本体部品を実一体構造へ統合して再検査しました。判定値を緩めたり、荷重を消したりしたものではありません。": "The four actual revisions contain 21,382, 26,673, 35,630 and 53,287 parts. The first 3× structure failed a load-propagation check between roots; existing same-color body pieces were integrated into real continuous structures and checked again. No threshold was relaxed and no load was erased.",
   "改訂CSVを取得 ↓": "Download the revised CSV ↓",
   "Copilot新版の比較は、元の比較記録と他11案を変更せずに追加する必要があります。": "The Copilot revision comparison must be added without changing the previous comparison or the other eleven cases.",

@@ -2,6 +2,11 @@
 
 [日本語](README.md) / [English](README.en.md)
 
+**Copilot's bilateral symmetry is being corrected.** The five current variants have geometric/color differences
+between the eyes and other paired features; current downloads are not symmetry-corrected.
+The [new correction status](archive/copilot-symmetry-revision.json) is separate from the completed four-case
+support-free delivery. Corrected native CAD, colors, assembly data and animation are required, not image-only edits.
+
 **[Public site / English](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/)** ·
 **[Actual 3D assembly guide](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-guide.html)** ·
 **[All downloads](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/downloads.html)** ·

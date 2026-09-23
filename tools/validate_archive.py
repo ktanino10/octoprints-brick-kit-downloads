@@ -15,6 +15,7 @@ from urllib.parse import unquote, urlsplit
 import xml.etree.ElementTree as ET
 import zipfile
 from density_requirements import validate_copilot_support_receipt
+from symmetry_requirements import validate_symmetry_receipt
 
 ROOT = Path(__file__).resolve().parents[1]
 PRIVATE = re.compile(rb"/Users/|/home/[^/ ]+/|/private/var/|/var/folders/|file:///|127\.0\.0\.1|localhost:\d|"
@@ -103,6 +104,7 @@ def inspect_zip(path, full):
 
 def validate(full):
     validate_copilot_support_receipt(json.loads((ROOT / "archive/copilot-support-free-revision.json").read_text()))
+    validate_symmetry_receipt(json.loads((ROOT / "archive/copilot-symmetry-revision.json").read_text()))
     inventory = json.loads((ROOT / "archive/inventory.json").read_text())
     files = inventory["files"]
     names = [entry["path"] for entry in files]

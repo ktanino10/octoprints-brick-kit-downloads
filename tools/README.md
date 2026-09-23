@@ -2,6 +2,17 @@
 
 通常のPages更新は、保存済みの成果物とビューアだけで行えます。制作元やCADソフトウェアは不要です。
 
+## Copilot左右対称性の追加修正
+
+`archive/copilot-symmetry-revision.json` は、支台なし改訂の完了と分けて現行5案の対称性修正を追跡します。
+未受領時はPARTIAL/0件とし、原形・色・支持・動画の証拠や実数を仮値で埋めません。
+`symmetry_bounds.py` は実OBM1頂点を用いた左右眼の必要条件だけを調べ、AABB一致を完全対称の合格にしません。
+`symmetry_loads.py` は新revision専用のset-valued台帳を独立検算する部品です。
+新しい支持部品に達しても既存tokenの荷重を消さず、各tokenが全direct supportsに共通するときだけ伝播します。
+first shared receiver自身は寄与する各rootのlocal boundに一度加え、そのtokenの伝播を止めます。
+局所boundを全体の質量として合算しません。旧body/Monaのroot-reset禁止検査は変更しません。
+これらの補助検査だけでは新native/物理合格を主張できません。固定READY成果物と実nativeの反射・色・全prefix検査の受入が別途必要です。
+
 ## Copilot支台なし追加改訂の受領記録
 
 `archive/copilot-support-free-revision.json` は、既存15案の完了記録とは別の4案だけを追跡します。

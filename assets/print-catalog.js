@@ -147,6 +147,15 @@ function modelCard(group, initial) {
   const revisionNote = element('p', undefined, 'quiet');
   const revisionLink = element('a', '支台なし改訂の公開状況 →', 'text-link');
   revisionLink.href = localizedURL('history.html#copilot-support-free');
+  const symmetryNote = element('p', undefined, 'quiet');
+  symmetryNote.dataset.symmetryReview = group.character;
+  symmetryNote.hidden = group.character !== 'copilot';
+  if (!symmetryNote.hidden) {
+    const link = element('a', '左右対称の修正状況 →', 'text-link');
+    link.href = localizedURL('history.html#copilot-symmetry');
+    symmetryNote.append(element('span', 'このCopilotの5案には目などの左右差があり、修正中です。現在の配布データは対称化前の版です。'),
+      document.createTextNode(' '), link);
+  }
   const download = element('a', 'STL入りモデル一式を取得 ↓', 'button primary');
   download.dataset.printDownload = '';
   const packageInfo = element('p', undefined, 'quiet');
@@ -159,7 +168,7 @@ function modelCard(group, initial) {
   rotate.dataset.openRotation = group.character;
   rotate.setAttribute('aria-label', `${names[group.character]}を360度回転して見る`);
   rotate.addEventListener('click', () => openPreview(choice));
-  body.append(label, select, rotate, size, aids, revisionNote, download, packageInfo, guide, compare);
+  body.append(label, select, rotate, size, aids, revisionNote, symmetryNote, download, packageInfo, guide, compare);
   card.append(heading, imageLink, body);
   function choose(item) {
     choice = item;

@@ -2,6 +2,10 @@
 
 [日本語](README.md) / [English](README.en.md)
 
+**Copilotの左右対称性は修正中です。** 現在の5案には目などの原形・配色の左右差があり、
+現行ダウンロードを対称化済みとは扱いません。[新しい修正依頼の状況](archive/copilot-symmetry-revision.json)は、
+以前の支台なし4案の公開完了とは別です。画像加工だけでなく、実CAD・配色・組立・動画がそろった新版を受け入れます。
+
 **[公開サイト / 日本語](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/)** ·
 **[実3D組立ガイド](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html)** ·
 **[全ダウンロード](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/downloads.html)** ·

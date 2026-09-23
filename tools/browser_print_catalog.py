@@ -112,6 +112,20 @@ with sync_playwright() as playwright:
         if separate["published_verified_case_count"] < 4:
             assert separate["state"] == "PARTIAL" and not any(separate["verification"].values())
         assert separate["previous_completed_delivery"]["satisfies_this_new_request"] is False
+        symmetry = context.request.get(urljoin(base, "archive/copilot-symmetry-revision.json")).json()
+        assert symmetry["request_id"] == "copilot-symmetry-20260923"
+        assert symmetry["previous_completed_delivery"]["satisfies_this_new_request"] is False
+        if symmetry["published_verified_case_count"] == 0:
+            assert symmetry["state"] == "PARTIAL" and not any(symmetry["verification"].values())
+            page.goto(urljoin(base, "en/"), wait_until="networkidle")
+            expect(page.locator('[data-symmetry-review="copilot"]')).to_be_visible()
+            expect(page.locator('[data-symmetry-review="copilot"]')).to_contain_text("current downloads are the earlier asymmetric versions")
+            expect(page.locator('[data-symmetry-review="mona"]')).to_be_hidden()
+            expect(page.locator('[data-symmetry-review="ducky"]')).to_be_hidden()
+            english(page)
+            page.goto(urljoin(base, "en/history.html#copilot-symmetry"), wait_until="networkidle")
+            expect(page.locator("#copilot-symmetry")).to_be_visible()
+            english(page)
         licenses = context.request.get(urljoin(base, "viewer/assets/THIRD_PARTY_LICENSES.txt"))
         assert licenses.status == 200 and "meshoptimizer 1.2.0 (MIT)" in licenses.text()
         assert "three 0.180.0 (MIT)" in licenses.text()
