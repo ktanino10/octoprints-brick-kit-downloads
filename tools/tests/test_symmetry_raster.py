@@ -1,28 +1,27 @@
 from pathlib import Path
 import sys
-import tempfile
 import unittest
 
-from PIL import Image, ImageDraw
-
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from audit_symmetry_source import raster
+from audit_symmetry_source import raster_rgba
 
 
 class NativeRasterTests(unittest.TestCase):
     def image(self):
-        image = Image.new("RGBA", (20, 14), (0, 0, 0, 0))
-        draw = ImageDraw.Draw(image)
-        draw.rectangle([2, 1, 17, 12], fill=(255, 0, 0, 255))
-        draw.rectangle([5, 5, 6, 8], fill=(0, 0, 255, 255))
-        draw.rectangle([13, 5, 14, 8], fill=(0, 0, 255, 255))
+        image = bytearray(20 * 14 * 4)
+        self.rectangle(image, [2, 1, 17, 12], (255, 0, 0, 255))
+        self.rectangle(image, [5, 5, 6, 8], (0, 0, 255, 255))
+        self.rectangle(image, [13, 5, 14, 8], (0, 0, 255, 255))
         return image
 
+    def rectangle(self, image, box, color):
+        for y in range(box[1], box[3] + 1):
+            for x in range(box[0], box[2] + 1):
+                index = (y * 20 + x) * 4
+                image[index:index + 4] = bytes(color)
+
     def measure(self, image):
-        with tempfile.TemporaryDirectory() as folder:
-            path = Path(folder) / "unit-only.png"
-            image.save(path)
-            return raster(path)
+        return raster_rgba(20, 14, image)
 
     def test_exact_native_material_labels_have_equal_eyes_and_zero_boundary_difference(self):
         result = self.measure(self.image())
@@ -34,7 +33,7 @@ class NativeRasterTests(unittest.TestCase):
 
     def test_a_single_raster_edge_pixel_is_reported_as_two_mirrored_disagreements_not_zero(self):
         image = self.image()
-        image.putpixel((2, 1), (0, 0, 0, 0))
+        self.rectangle(image, [2, 1, 2, 1], (0, 0, 0, 0))
         result = self.measure(image)
         self.assertEqual(result["silhouette_xor"], 2)
         self.assertEqual(result["all_label_xor_including_silhouette"], 2)
@@ -44,7 +43,7 @@ class NativeRasterTests(unittest.TestCase):
 
     def test_a_real_large_missing_region_cannot_be_hidden_as_raster_tolerance(self):
         image = self.image()
-        ImageDraw.Draw(image).rectangle([2, 2, 7, 10], fill=(0, 0, 0, 0))
+        self.rectangle(image, [2, 2, 7, 10], (0, 0, 0, 0))
         with self.assertRaisesRegex(ValueError, "boundary tolerance"):
             self.measure(image)
 

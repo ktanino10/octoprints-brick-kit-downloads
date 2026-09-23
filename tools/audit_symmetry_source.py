@@ -6,8 +6,6 @@ import hashlib
 import json
 from pathlib import Path
 
-from PIL import Image
-
 from stage_density_case import committed_bytes
 from symmetry_cells import nominal_material_cells, nominal_reflection_metrics
 from symmetry_evidence import geometry_sequence_identity, validate_part_pairs, validate_native_pair_volumes
@@ -30,9 +28,17 @@ def grid(manifest):
 
 
 def raster(path):
+    from PIL import Image
+
     with Image.open(path) as image:
         width, height = image.size
         rgba = image.convert("RGBA").tobytes()
+    return raster_rgba(width, height, rgba)
+
+
+def raster_rgba(width, height, rgba):
+    if type(width) is not int or type(height) is not int or width <= 0 or height <= 0 or len(rgba) != width * height * 4:
+        raise ValueError("Invalid actual RGBA raster size")
     labels = bytearray(width * height)
     for index in range(width * height):
         red, green, blue, alpha = rgba[index * 4:index * 4 + 4]
