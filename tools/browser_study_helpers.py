@@ -5,19 +5,20 @@ from urllib.parse import urljoin
 
 
 def published_print_cases(request, base, catalog):
-    receipt = request.get(urljoin(base, "archive/copilot-support-free-revision.json")).json()
-    if "revision_catalog" not in receipt:
-        return catalog["cases"]
-    overlay = request.get(urljoin(base, receipt["revision_catalog"]["path"].lstrip("/"))).json()
-    by_id = {item["id"]: item for item in overlay["cases"]}
     replacements = {}
-    for row in receipt["cases"]:
-        if row["status"] == "READY":
-            assert all(row["verification"].values())
-            item = by_id[row["actual_case_id"]]
-            assert item["state"] == "READY" and item["source_commit"] == row["source_commit"]
-            assert item["metrics"]["part_count"] == row["actual_count"] and row["assembly_aid_count"] == 0
-            replacements[row["logical_case_id"]] = item
+    for path in ["archive/copilot-support-free-revision.json", "archive/copilot-symmetry-revision.json"]:
+        receipt = request.get(urljoin(base, path)).json()
+        if "revision_catalog" not in receipt:
+            continue
+        overlay = request.get(urljoin(base, receipt["revision_catalog"]["path"].lstrip("/"))).json()
+        by_id = {item["id"]: item for item in overlay["cases"]}
+        for row in receipt["cases"]:
+            if row["status"] == "READY":
+                assert all(row["verification"].values())
+                item = by_id[row["actual_case_id"]]
+                assert item["state"] == "READY" and item["source_commit"] == row["source_commit"]
+                assert item["metrics"]["part_count"] == row["actual_count"] and row["assembly_aid_count"] == 0
+                replacements[row["logical_case_id"]] = item
     return [replacements.get(item.get("logical_case_id", item["id"]), item) for item in catalog["cases"]]
 
 

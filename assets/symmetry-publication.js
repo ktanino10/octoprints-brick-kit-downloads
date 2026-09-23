@@ -61,6 +61,18 @@ export function validateSymmetryPublication(receipt, catalog, pointer) {
     for (const view of ['front', 'three_quarter']) validateDensityFile(item.images[view]);
     validateDensityFile(row.symmetry_evidence);
     validateDensityFile(row.mechanical_evidence);
+    if (item.symmetry_raster_verification) {
+      const raster = item.symmetry_raster_verification;
+      check(raster.source_visual_sha256 === row.symmetry_evidence.sha256
+        && raster.native_geometry_mirror_pairs_verified === true
+        && raster.eye_mask_xor === 0 && raster.whole_material_xor === 0
+        && raster.left_eye_pixels === raster.right_eye_pixels && raster.left_eye_pixels > 0
+        && Number.isSafeInteger(raster.silhouette_xor) && raster.silhouette_xor >= 0
+        && Number.isSafeInteger(raster.maximum_silhouette_boundary_distance_pixels)
+        && raster.maximum_silhouette_boundary_distance_pixels >= 0
+        && raster.maximum_silhouette_boundary_distance_pixels <= 1
+        && raster.boundary_distance_tolerance_pixels === 1, message);
+    }
     const support = item.assembly_support;
     check(support?.geometry_revision === COPILOT_SYMMETRY_REVISION
       && support.status === 'DIGITAL_SELF_SUPPORTING_UNTESTED' && support.physical_validation === 'UNKNOWN'

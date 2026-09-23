@@ -62,7 +62,7 @@ with sync_playwright() as playwright:
         counts = {item["case_id"]: item["temporary_aids_excluded_from_figure_count"]
                   for item in evidence["actual_multiplier_cases"]}
         for case in actual_cases:
-            case["expected_aids"] = 0 if case.get("geometry_revision") == "body-support-v2" else counts[case["id"]]
+            case["expected_aids"] = 0 if case.get("geometry_revision") in {"body-support-v2", "bilateral-symmetry-v3"} else counts[case["id"]]
         page.goto(urljoin(base, "en/"), wait_until="networkidle")
         expect(page.locator(".print-model")).to_have_count(3)
         assert not any("catalog-preview.js" in url or url.endswith(".mesh.gz") or "-guide.json.gz" in url for url in requested)

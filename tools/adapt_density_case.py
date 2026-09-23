@@ -380,6 +380,12 @@ def main():
         entry["symmetry_visual"] = checked_image(visual)
         entry["previous_case_id"] = full["symmetry_context"]["source_current_case_id"]
         entry["symmetry_context"] = full["symmetry_context"]
+        raster = root_record["independent_change_and_visual"]["actual_native_png"]
+        if "maximum_silhouette_boundary_distance_pixels" in raster:
+            entry["symmetry_raster_verification"] = {
+                **raster, "source_visual_sha256": visual["sha256"],
+                "native_geometry_mirror_pairs_verified": True, "boundary_distance_tolerance_pixels": 1,
+            }
     if is_reference:
         entry.pop("count_percentage")
         entry.update(kind="BASELINE_REFERENCE_NOT_MULTIPLIER_CASE", counts_toward_multiplier_cases=False,

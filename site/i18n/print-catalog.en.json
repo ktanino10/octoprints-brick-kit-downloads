@@ -1,4 +1,5 @@
 {
+  "実CADの鏡像差と目・色の差は0ですが、描画した外周には{0}ピクセルの境界差があります。最大境界距離{1}ピクセルとして記録し、0とは表示しません。": "Native CAD mirror differences and eye/material differences are zero, but the rendered silhouette differs at {0} boundary pixels. The measured maximum boundary distance is {1} pixel; the discrepancy is not reported as zero.",
   "修正版は、検証を終えた案から順次追加します。": "Corrected variants are added as their verification is completed.",
   "対称化3倍案：実3Dと左右の目の比較 →": "Corrected 3× variant: actual 3D and paired-eye comparison →",
   "3倍案は実53,575部品・306型、組立仮支台0個です。全実部品の鏡像対応、272組の実CAD形状比較、43支持・413荷重段階、実描画の左右眼を照合しました。全5案の完了や現物の強度保証ではありません。": "The 3× variant contains 53,575 actual parts, 306 types and zero assembly aids. All physical part pairings, 272 native CAD shape comparisons, 43 supports and 413 load prefixes, and the actual rendered eyes have been checked. This is neither completion of all five variants nor a guarantee of physical strength.",

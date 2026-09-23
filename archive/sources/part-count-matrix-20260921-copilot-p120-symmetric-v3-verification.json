@@ -1,0 +1,129 @@
+{
+  "case_id": "copilot-p120-symmetric-v3",
+  "source_commit": "87f892dd7c03954d7083ac09fac746c84a5ed885",
+  "metrics": {
+    "part_count": 21435,
+    "unique_types": 204,
+    "one_by_one_exceptions": 151,
+    "layer_count": 83,
+    "minimum_part_mm": [
+      7.8,
+      7.8,
+      3.2
+    ],
+    "grip_long_ge_15_8_count": 21284
+  },
+  "manifest_sha256": "8210b1154b40c0d812af76bb0de9be4067644774276713aed484966e1fa89c9a",
+  "bom_sha256": "0bc7a6a74fa655a00e5e49354a557f0328aa5f5eb6d9b8dc4010b867da242e88",
+  "counted_instances": 21435,
+  "bom_ids_match": true,
+  "bom_types_colors_poses_steps_match": true,
+  "identity_projection_sha256": "1af1eb0e422a4b3c8605f0f59d09181e7fe96ba6491b0fec7963be5cb5f142e5",
+  "body_height_families": [
+    {
+      "body_height_mm": 3.2,
+      "part_count": 123,
+      "unique_types": 5
+    },
+    {
+      "body_height_mm": 4.8,
+      "part_count": 21304,
+      "unique_types": 191
+    },
+    {
+      "body_height_mm": 9.6,
+      "part_count": 5,
+      "unique_types": 5
+    },
+    {
+      "body_height_mm": 14.4,
+      "part_count": 2,
+      "unique_types": 2
+    },
+    {
+      "body_height_mm": 28.8,
+      "part_count": 1,
+      "unique_types": 1
+    }
+  ],
+  "public_native_assembly": {
+    "path": "artifacts/studies/part-count-matrix-20260921/cases/copilot-p120-symmetric-v3/assembly.FCStd",
+    "document_objects": 224,
+    "native_links_resolved": 224,
+    "link_instances": 21435,
+    "valid_single_solid_targets_checked": 204,
+    "proxy_free": true,
+    "opened": true,
+    "recomputed": false,
+    "saved": false,
+    "sha256": "580d4118b533ec8dfe9340d118b1d2c1709c7bf94bd958d6aa60a747adb0da46"
+  },
+  "public_blender_motion_preserved": true,
+  "source_saved_scene_binding": "6f183f0b6d644a6d4fd19f0814cfcccb4c792a536e33651a76d351a68a38cb7e",
+  "source_native_reopen": {
+    "result": "PASS_REOPENED_RELATIVE_NATIVE_LINK_ARRAYS",
+    "actual_instance_count": 21435,
+    "all_ids_types_colors_poses_steps": true,
+    "all_sources_inside_bundle": true
+  },
+  "private_inputs_copied": 0,
+  "symmetry_revision_evidence": {
+    "geometry_sequence_identity_sha256": "950ff3c78f40f4f0e96f3a004265c75412d258ece836303b52aec15e83dd4080",
+    "native_support_contact_evidence_sha256": "51457d7ad965f6bddf2326e32f3e1abb725675a988aff31b4fdc47aea9f042eb",
+    "checked_material_supports": 17,
+    "actual_native_load_prefixes": 243,
+    "actual_native_material_sections": 221,
+    "minimum_nominal_support_margin_mm": 1.5568343721557432,
+    "required_nominal_support_margin_mm": 1,
+    "required_baseline_targets_covered": 25,
+    "nonreset_token_loads_match_actual_support_graph": true,
+    "external_aid_count": 0,
+    "assembly_aid_count": 0,
+    "physical_validation": "UNKNOWN",
+    "native_pair_evidence": {
+      "actual_native_type_rotation_pairs": 184,
+      "maximum_symmetric_difference_volume_mm3": 0.0,
+      "tolerance": "max(1e-5 mm^3, max(actual volumes)*1e-7)",
+      "all_actual_pairs_covered": true,
+      "physical_validation": "UNKNOWN"
+    },
+    "independent_native_pairs": 184,
+    "independent_change_and_visual": {
+      "case_id": "copilot-p120-symmetric-v3",
+      "intentional_change_from_previous_published_case": {
+        "added_1_6mm_cells": 1758,
+        "removed_1_6mm_cells": 1881,
+        "recolored_1_6mm_cells": 1683,
+        "full_diff_matches_sealed_readonly_record": true
+      },
+      "new_mechanical_baseline_cells_and_colors_exact": true,
+      "actual_native_png": {
+        "image_size_px": [
+          1200,
+          1200
+        ],
+        "left_eye_pixels": 10652,
+        "right_eye_pixels": 10652,
+        "all_label_xor_including_silhouette": 2,
+        "whole_material_xor": 0,
+        "silhouette_xor": 2,
+        "maximum_silhouette_boundary_distance_pixels": 1,
+        "eye_mask_xor": 0,
+        "classification": "Unlit native R/G/B labels with alpha>127; paired foreground materials exclude separately reported silhouette-edge disagreements."
+      },
+      "physical_validation": "UNKNOWN"
+    },
+    "gravity_balance_result": "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS"
+  },
+  "public_native_id_pose_check": {
+    "case_id": "copilot-p120-symmetric-v3",
+    "assembly_sha256": "580d4118b533ec8dfe9340d118b1d2c1709c7bf94bd958d6aa60a747adb0da46",
+    "actual_instances": 21435,
+    "array_count": 224,
+    "all_ids_types_colors_poses_steps": "MATCH",
+    "relocated_reopen": true,
+    "saved": false,
+    "recomputed": false
+  },
+  "files": []
+}
