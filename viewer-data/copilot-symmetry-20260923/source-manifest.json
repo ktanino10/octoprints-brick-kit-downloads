@@ -48,6 +48,16 @@
       "first_case_id": "copilot-p300-symmetric-v3"
     },
     {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BR-02x11-H048.mesh.gz",
+      "type_id": "BR-02x11-H048",
+      "bytes": 154570,
+      "sha256": "4f6052bb1dd97a08fb5071955a0b30ddf23eff4bfaba9b796ea75f7a55f20896",
+      "geometry_sha256": "dfd67cd17f9a2b60366ac162a982fe2f3127bd59390c94776181c5ac745c20ee",
+      "source_relative_path": "geometry/BR-02x11-H048.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/BR-02x12-H048.mesh.gz",
       "type_id": "BR-02x12-H048",
       "bytes": 167877,
@@ -258,6 +268,16 @@
       "first_case_id": "copilot-p300-symmetric-v3"
     },
     {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-1b259a17832cdf6b.mesh.gz",
+      "type_id": "BS-1b259a17832cdf6b",
+      "bytes": 871521,
+      "sha256": "4494c09d7ebc27f2406da3cd50dc9244e371705551d08fe64039a183e80032bb",
+      "geometry_sha256": "18b0be33469ff37ec8108fbbbc84649739dd9f9c8e854ad569fd95f9ee099ce1",
+      "source_relative_path": "geometry/BS-1b259a17832cdf6b.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-26da4bf7a5e0da04.mesh.gz",
       "type_id": "BS-26da4bf7a5e0da04",
       "bytes": 116449,
@@ -288,6 +308,46 @@
       "first_case_id": "copilot-p300-symmetric-v3"
     },
     {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-34acfdb4b15fdbfc.mesh.gz",
+      "type_id": "BS-34acfdb4b15fdbfc",
+      "bytes": 555133,
+      "sha256": "14c87b34f1cec82ccb61390d1dc052db6a0afa9224384a90ff67182d5875dd92",
+      "geometry_sha256": "cce17a77cfe82f1af9a6e7f4b4f2e0dbc2a14eeb5bb6e43b8f2dcf0bcfd441f8",
+      "source_relative_path": "geometry/BS-34acfdb4b15fdbfc.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-358afaa329b55892.mesh.gz",
+      "type_id": "BS-358afaa329b55892",
+      "bytes": 111463,
+      "sha256": "5e6bf69cdcc2c4ee8f7db93e3fd382a06b4695fc163b1337ed0d1b16b649f751",
+      "geometry_sha256": "05801ea2fbbe11b1f23dea9207cdeee0d2e81d69a06508a3c5837979564ca5f4",
+      "source_relative_path": "geometry/BS-358afaa329b55892.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-37fc0d0bb554e86c.mesh.gz",
+      "type_id": "BS-37fc0d0bb554e86c",
+      "bytes": 55103,
+      "sha256": "65393dcdade2ce97ecea27d5ac952eab5e56fe76bc8370cc59073125b1e2068c",
+      "geometry_sha256": "3d42b97cf8455dda1f77fc07a8117d5da50b7ca296931863a920167771c2f802",
+      "source_relative_path": "geometry/BS-37fc0d0bb554e86c.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-380911139d36d3ce.mesh.gz",
+      "type_id": "BS-380911139d36d3ce",
+      "bytes": 261529,
+      "sha256": "470ee7820d1fec0efde946b09575544c0e864c630a3e257968def00e01027738",
+      "geometry_sha256": "12d718aab412d959c729180b084c5bffe4cc377e7dcdd5a64ba25185b2049f5f",
+      "source_relative_path": "geometry/BS-380911139d36d3ce.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-39311bce849fc253.mesh.gz",
       "type_id": "BS-39311bce849fc253",
       "bytes": 64004,
@@ -298,6 +358,26 @@
       "first_case_id": "copilot-p120-symmetric-v3"
     },
     {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-3a56697003799433.mesh.gz",
+      "type_id": "BS-3a56697003799433",
+      "bytes": 166004,
+      "sha256": "3825efcfa41519c7d1afae5344f1bf296c2f9c63c9f45a6f3b9b6b0ff3be6215",
+      "geometry_sha256": "4946508c7c98f1e392ca8e48728b58bcf7fb6235786850d88c648ead99882ef5",
+      "source_relative_path": "geometry/BS-3a56697003799433.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-3e6e4dd622913c77.mesh.gz",
+      "type_id": "BS-3e6e4dd622913c77",
+      "bytes": 118543,
+      "sha256": "d112aaf125336eb14e0edecaa2a02e0aa9c28b440951128c3cb72414de66299d",
+      "geometry_sha256": "bcf7840d1483912bcf035b89cfe8acefc838b63ac6c3b8e5b1b4a4f1dc3302fb",
+      "source_relative_path": "geometry/BS-3e6e4dd622913c77.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-404c7e103c8a06da.mesh.gz",
       "type_id": "BS-404c7e103c8a06da",
       "bytes": 112055,
@@ -306,6 +386,16 @@
       "source_relative_path": "geometry/BS-404c7e103c8a06da.mesh.gz",
       "source_commit": "87f892dd7c03954d7083ac09fac746c84a5ed885",
       "first_case_id": "copilot-p120-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-41ffa9a3512d0e18.mesh.gz",
+      "type_id": "BS-41ffa9a3512d0e18",
+      "bytes": 237141,
+      "sha256": "331db7ef0f9083f5d57a89c793bc39316254d8fb0ef2f71d3316cbec0946a11e",
+      "geometry_sha256": "24441762ba361754cb79dd3b36eccc46604d1ceab07b3a8c99b85df82d4f08bf",
+      "source_relative_path": "geometry/BS-41ffa9a3512d0e18.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
     },
     {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-43076b3c16bc6d4e.mesh.gz",
@@ -328,6 +418,16 @@
       "first_case_id": "copilot-p300-symmetric-v3"
     },
     {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-51faac902d028459.mesh.gz",
+      "type_id": "BS-51faac902d028459",
+      "bytes": 55634,
+      "sha256": "1dac78c3204a4cde5851052a25f58df74c1222e6bbbc3e380054faea3ec60da9",
+      "geometry_sha256": "d6ae4ba471a3b58b0d9cec0051ffe517ff544c12712aaf6d1d3a6f5a35156dfe",
+      "source_relative_path": "geometry/BS-51faac902d028459.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-53eccfdc7f2de799.mesh.gz",
       "type_id": "BS-53eccfdc7f2de799",
       "bytes": 2590662,
@@ -348,6 +448,26 @@
       "first_case_id": "copilot-p300-symmetric-v3"
     },
     {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-584e0582c577144d.mesh.gz",
+      "type_id": "BS-584e0582c577144d",
+      "bytes": 121763,
+      "sha256": "5e943108ec5fc0593220987d3f3949cae60b8bd04538e285fc13b2ff04531370",
+      "geometry_sha256": "13d38e2f14bd294921d7eccd07485144168f8c52ac24ea3af926b842df958656",
+      "source_relative_path": "geometry/BS-584e0582c577144d.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-5bae59cd11f3d987.mesh.gz",
+      "type_id": "BS-5bae59cd11f3d987",
+      "bytes": 254082,
+      "sha256": "f18ce50e9e62b50c3f643ae222a59b5ee4a0f29aaed2c937590aa63e6be87be6",
+      "geometry_sha256": "3139731a6c518a26b39404f4705f03ee91c7210e5dfe3b1ca8c5d2f731465468",
+      "source_relative_path": "geometry/BS-5bae59cd11f3d987.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-613ddee2ecef7d6c.mesh.gz",
       "type_id": "BS-613ddee2ecef7d6c",
       "bytes": 108556,
@@ -356,6 +476,16 @@
       "source_relative_path": "geometry/BS-613ddee2ecef7d6c.mesh.gz",
       "source_commit": "87f892dd7c03954d7083ac09fac746c84a5ed885",
       "first_case_id": "copilot-p120-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-6681b0bb86bd6090.mesh.gz",
+      "type_id": "BS-6681b0bb86bd6090",
+      "bytes": 879677,
+      "sha256": "a4e2d1a8dac90db031d1a57d3054356634dac3d934917a9c4fad8d081c2e9e3f",
+      "geometry_sha256": "2a10a3557eb3d98f902e80ecb881ca5faa2cf4058401a407e49b743d00a4e9b3",
+      "source_relative_path": "geometry/BS-6681b0bb86bd6090.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
     },
     {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-6aba0c01f84451f1.mesh.gz",
@@ -408,6 +538,26 @@
       "first_case_id": "copilot-p300-symmetric-v3"
     },
     {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-724afa371a5ef788.mesh.gz",
+      "type_id": "BS-724afa371a5ef788",
+      "bytes": 241512,
+      "sha256": "afe684fa016c6e905d68848634282ca07942db72e736ac5d5010e905cfbb35e2",
+      "geometry_sha256": "ef9743a372487520201bc33688aeb98860d69803ed23e8f67494326c00f3b349",
+      "source_relative_path": "geometry/BS-724afa371a5ef788.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-75c73344a0c14299.mesh.gz",
+      "type_id": "BS-75c73344a0c14299",
+      "bytes": 258411,
+      "sha256": "fcec6d2caa786c0efdfa586d7e5c607859d2f29433c67ebcce78e061836bb897",
+      "geometry_sha256": "022060567e7920ac91625d4329963732f8d0439248e4f2e03285b7ba7cadc8de",
+      "source_relative_path": "geometry/BS-75c73344a0c14299.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-78f13363fa1b5a96.mesh.gz",
       "type_id": "BS-78f13363fa1b5a96",
       "bytes": 148346,
@@ -426,6 +576,16 @@
       "source_relative_path": "geometry/BS-79784e950596fcad.mesh.gz",
       "source_commit": "87f892dd7c03954d7083ac09fac746c84a5ed885",
       "first_case_id": "copilot-p120-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-7b459feb1d60aee6.mesh.gz",
+      "type_id": "BS-7b459feb1d60aee6",
+      "bytes": 418179,
+      "sha256": "23282c4471e549ee2f22cc53fc333d79646728ffefed82205c050e18e5babf0a",
+      "geometry_sha256": "d88fdd3a9038851ed6d62cbf5d6ca70149487ae3dea067dc8dd2f03e593a06ad",
+      "source_relative_path": "geometry/BS-7b459feb1d60aee6.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
     },
     {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-9131667d6883d7ad.mesh.gz",
@@ -458,6 +618,16 @@
       "first_case_id": "copilot-p120-symmetric-v3"
     },
     {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-a5573ed5c5d8dd26.mesh.gz",
+      "type_id": "BS-a5573ed5c5d8dd26",
+      "bytes": 90980,
+      "sha256": "0604de2a3e6b38fb23674fbd74385de68bd66233dbd91ebf969b0ec1c3f73897",
+      "geometry_sha256": "88a11d17c0eaaa01311ee2f4032b124891cbac3fd887e6deac18825eacfe38fc",
+      "source_relative_path": "geometry/BS-a5573ed5c5d8dd26.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-a71a5a06eeac921d.mesh.gz",
       "type_id": "BS-a71a5a06eeac921d",
       "bytes": 76176,
@@ -476,6 +646,36 @@
       "source_relative_path": "geometry/BS-aa24fe8e46765e3a.mesh.gz",
       "source_commit": "87f892dd7c03954d7083ac09fac746c84a5ed885",
       "first_case_id": "copilot-p120-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-ab268e029f0acbbf.mesh.gz",
+      "type_id": "BS-ab268e029f0acbbf",
+      "bytes": 161159,
+      "sha256": "7ce36c4bf1ba33b242ad37ae8ab4845a58f292ea9a0d3feb5b0eb8493c163f3e",
+      "geometry_sha256": "eb886f2eab1d484bf898800ffdc8ac1296dbecb60faa66ce7e25eaf6fe35916c",
+      "source_relative_path": "geometry/BS-ab268e029f0acbbf.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-b610f32780c51fd0.mesh.gz",
+      "type_id": "BS-b610f32780c51fd0",
+      "bytes": 237581,
+      "sha256": "267614d9a619860270fc347932926a103f4679726205351fe750d8a2697e6b69",
+      "geometry_sha256": "1b3f29e48d23399cd88ac4e3dc30e85393bd947386be003904800980a7e4847a",
+      "source_relative_path": "geometry/BS-b610f32780c51fd0.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-b705ad738ed56269.mesh.gz",
+      "type_id": "BS-b705ad738ed56269",
+      "bytes": 207208,
+      "sha256": "067b202582df54f013458bd25f30434ab8e69f5d1b03d0ac908593881676262f",
+      "geometry_sha256": "70fa9ae8ceab6ac64ce8a62a43ff5a190c0d8756547f55f2f2ee1493a7f48759",
+      "source_relative_path": "geometry/BS-b705ad738ed56269.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
     },
     {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-c09e9019cad89bd1.mesh.gz",
@@ -508,6 +708,26 @@
       "first_case_id": "copilot-p300-symmetric-v3"
     },
     {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-cc0b0be02ca02f78.mesh.gz",
+      "type_id": "BS-cc0b0be02ca02f78",
+      "bytes": 205985,
+      "sha256": "23f44fe6210792500d551dccf67aa8c710ab68365f563610e6afbdb3c57a9650",
+      "geometry_sha256": "11981925675195dce80ac596889f478ae9f9778270d0564406773b02f91e0421",
+      "source_relative_path": "geometry/BS-cc0b0be02ca02f78.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-cc12314e7db7fe7d.mesh.gz",
+      "type_id": "BS-cc12314e7db7fe7d",
+      "bytes": 213500,
+      "sha256": "b127b79392101c99fd314f15f93bd9602e58beb54a58058d62556ffbaedc8e80",
+      "geometry_sha256": "2a42fdfe18619b51073799c4220218999959b1f21be2e475cee419c7d2932f38",
+      "source_relative_path": "geometry/BS-cc12314e7db7fe7d.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-cc972cc072910cc5.mesh.gz",
       "type_id": "BS-cc972cc072910cc5",
       "bytes": 148656,
@@ -528,6 +748,16 @@
       "first_case_id": "copilot-p300-symmetric-v3"
     },
     {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-d4270f517ff16d4d.mesh.gz",
+      "type_id": "BS-d4270f517ff16d4d",
+      "bytes": 122678,
+      "sha256": "e3c71e30e5148c437e55b5f5145c82424219f92114c405af97c7cf67e761e6e8",
+      "geometry_sha256": "94b115266293a5b0efb8b4ea3eb4c3109e2559712bb0b277c095dc9e1dff1533",
+      "source_relative_path": "geometry/BS-d4270f517ff16d4d.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-d99e81814799e1ad.mesh.gz",
       "type_id": "BS-d99e81814799e1ad",
       "bytes": 688093,
@@ -536,6 +766,26 @@
       "source_relative_path": "geometry/BS-d99e81814799e1ad.mesh.gz",
       "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f",
       "first_case_id": "copilot-p300-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-db0c755482822cd8.mesh.gz",
+      "type_id": "BS-db0c755482822cd8",
+      "bytes": 188882,
+      "sha256": "36e4c8f4833c4ba6a0f3be68adb4271bd42b17c0ea58644041060abe9c47ff5c",
+      "geometry_sha256": "f5111ce764422c462179be00e36abcecf96115dbc20c49b33d6c612d438a3599",
+      "source_relative_path": "geometry/BS-db0c755482822cd8.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-dcadfdc362f8623e.mesh.gz",
+      "type_id": "BS-dcadfdc362f8623e",
+      "bytes": 244859,
+      "sha256": "255b778fc52c10e57e38b76074df2ecb7ff52a2791c4a613bc2914284e870e42",
+      "geometry_sha256": "7ffd8e9803d56ad390db723a45e86c8995be520f65991a9fe28966dd0b54afd7",
+      "source_relative_path": "geometry/BS-dcadfdc362f8623e.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
     },
     {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-de6393ef59a48ed8.mesh.gz",
@@ -548,6 +798,36 @@
       "first_case_id": "copilot-p120-symmetric-v3"
     },
     {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-dfebe52c634f4b99.mesh.gz",
+      "type_id": "BS-dfebe52c634f4b99",
+      "bytes": 108865,
+      "sha256": "179a55314b4d010ab7e93a15289685df7191d643cb5b7c6f1baac625e9d83ffb",
+      "geometry_sha256": "8c29afdcaca3ef82cdfc723dbe66038ca2c859a866559fe10a5175b9807d7422",
+      "source_relative_path": "geometry/BS-dfebe52c634f4b99.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-e473a134113c1ad5.mesh.gz",
+      "type_id": "BS-e473a134113c1ad5",
+      "bytes": 120587,
+      "sha256": "acf9e6bd7139a5b64331412d10beaf965bae1c52adda09fc38f7be4d733f264e",
+      "geometry_sha256": "9e4f351e1daee73f716478b5a517db8f2a143695b3b83ac4ce2571299ae4206c",
+      "source_relative_path": "geometry/BS-e473a134113c1ad5.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-e5630fe7864cc1b7.mesh.gz",
+      "type_id": "BS-e5630fe7864cc1b7",
+      "bytes": 161401,
+      "sha256": "1ed0e931489e6348d333d6c07985191b51f48e22e91af25e1762c9ec93095096",
+      "geometry_sha256": "393ab7f1244f677dd3cda21cb7ece7130c2e3989ff7594cf4f9a95520ab81e91",
+      "source_relative_path": "geometry/BS-e5630fe7864cc1b7.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-eaffc886bdbec752.mesh.gz",
       "type_id": "BS-eaffc886bdbec752",
       "bytes": 115925,
@@ -558,6 +838,16 @@
       "first_case_id": "copilot-p300-symmetric-v3"
     },
     {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-ec5b028432d72c74.mesh.gz",
+      "type_id": "BS-ec5b028432d72c74",
+      "bytes": 168416,
+      "sha256": "dc663c5d077465c34b3e73476b64b88eb918e28577868b3ac31755c94bc95310",
+      "geometry_sha256": "cde94f59535cc558b0da922b22e7e388572bd0b92512f53446237d7b44f02aac",
+      "source_relative_path": "geometry/BS-ec5b028432d72c74.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-eed414e079a34c7a.mesh.gz",
       "type_id": "BS-eed414e079a34c7a",
       "bytes": 106850,
@@ -566,6 +856,16 @@
       "source_relative_path": "geometry/BS-eed414e079a34c7a.mesh.gz",
       "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f",
       "first_case_id": "copilot-p300-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-f09eb76daa06160c.mesh.gz",
+      "type_id": "BS-f09eb76daa06160c",
+      "bytes": 128354,
+      "sha256": "80f71fdeba75592ddaf98612bde8fcd8f8efa846625d0e3e17380a7c5c8808b8",
+      "geometry_sha256": "88f2f1dfe818399572e94d8950bd226821389831814d1dc55c948ecff9e44d3d",
+      "source_relative_path": "geometry/BS-f09eb76daa06160c.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
     },
     {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-f6dc883c4cf165ec.mesh.gz",
@@ -588,6 +888,16 @@
       "first_case_id": "copilot-p300-symmetric-v3"
     },
     {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/BS-fd49b33723f76b4c.mesh.gz",
+      "type_id": "BS-fd49b33723f76b4c",
+      "bytes": 214709,
+      "sha256": "7971473452668c33c427ec5f93ba8d6f58dec7383ecf5defcfe10c888e5f5ce2",
+      "geometry_sha256": "78d4cc0dd3bfa10ea388f52f0f3e3b225d921a822436b0adddd3a8d19b32e0d8",
+      "source_relative_path": "geometry/BS-fd49b33723f76b4c.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-06C-H048-040004cf27.mesh.gz",
       "type_id": "CT-06C-H048-040004cf27",
       "bytes": 28484,
@@ -606,6 +916,26 @@
       "source_relative_path": "geometry/CT-06C-H048-12d71c2fe8-EDGE-C020.mesh.gz",
       "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f",
       "first_case_id": "copilot-p300-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-06C-H048-3560bfce2f.mesh.gz",
+      "type_id": "CT-06C-H048-3560bfce2f",
+      "bytes": 28368,
+      "sha256": "0150511d4821542a294e71d6aa05662a2de54178026facd1ba6ac10345276b21",
+      "geometry_sha256": "cff98739072eaf03288e07519f60a25f2c8943e73df1c2ce41be8b8fb2f7552d",
+      "source_relative_path": "geometry/CT-06C-H048-3560bfce2f.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-06C-H048-fbb3a17667.mesh.gz",
+      "type_id": "CT-06C-H048-fbb3a17667",
+      "bytes": 28505,
+      "sha256": "3b5611a3366397713a9f55071df954bc34d01c370ebb388d8a75aaa120d58683",
+      "geometry_sha256": "f02df7ac8717d527dc192a21c03914cd8a19048d455106ec57260466437981fc",
+      "source_relative_path": "geometry/CT-06C-H048-fbb3a17667.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
     },
     {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-07C-H048-3f66e8daf9-EDGE-C020.mesh.gz",
@@ -758,6 +1088,26 @@
       "first_case_id": "copilot-p300-symmetric-v3"
     },
     {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-08C-H048-97dee3518d-EDGE-C020.mesh.gz",
+      "type_id": "CT-08C-H048-97dee3518d-EDGE-C020",
+      "bytes": 37360,
+      "sha256": "eac8ba8cf6fcf1a18298dece40a490404824ff502a6f612ce68d555d5ead4b2b",
+      "geometry_sha256": "598b68a329c1def29e09eb5a8ed4fa077921dd83a3328f6f6ddce38cda4a75de",
+      "source_relative_path": "geometry/CT-08C-H048-97dee3518d-EDGE-C020.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-08C-H048-a8a0427d8b-EDGE-C020.mesh.gz",
+      "type_id": "CT-08C-H048-a8a0427d8b-EDGE-C020",
+      "bytes": 37400,
+      "sha256": "edbbdca2e5282c471e067b3a2e7b9aa72e96bc52461350b99db6a3840931ce59",
+      "geometry_sha256": "d9b3f376dea3a80c8c04363f1327fc577b279e667f5e8f7cb1cdac3ed79875cb",
+      "source_relative_path": "geometry/CT-08C-H048-a8a0427d8b-EDGE-C020.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-08C-H048-fc8ddc0361-EDGE-C020.mesh.gz",
       "type_id": "CT-08C-H048-fc8ddc0361-EDGE-C020",
       "bytes": 38859,
@@ -798,6 +1148,26 @@
       "first_case_id": "copilot-p120-symmetric-v3"
     },
     {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-09C-H048-5718516d05-EDGE-C020.mesh.gz",
+      "type_id": "CT-09C-H048-5718516d05-EDGE-C020",
+      "bytes": 49078,
+      "sha256": "9fb8af2185928c5f712fa78695299eedce7fed613c9b838da5be76b2daa63d86",
+      "geometry_sha256": "6af6ad221312ace3260090d9b7661c9a48d456033a8b09bb21cfe7938201f00d",
+      "source_relative_path": "geometry/CT-09C-H048-5718516d05-EDGE-C020.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-09C-H048-58426e763b-EDGE-C020.mesh.gz",
+      "type_id": "CT-09C-H048-58426e763b-EDGE-C020",
+      "bytes": 48390,
+      "sha256": "8c96a1cc74cb29a63d055a5547673f55a9e369927f854991828e6322711ed1ee",
+      "geometry_sha256": "dd7be2d92f17a9d5b3332ffa7c45ffda73ab4e1bbe51046aa353e1c795e6e673",
+      "source_relative_path": "geometry/CT-09C-H048-58426e763b-EDGE-C020.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-09C-H048-5eb32c5359.mesh.gz",
       "type_id": "CT-09C-H048-5eb32c5359",
       "bytes": 60060,
@@ -826,6 +1196,26 @@
       "source_relative_path": "geometry/CT-09C-H048-aaaaa2b37e-EDGE-C020.mesh.gz",
       "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f",
       "first_case_id": "copilot-p300-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-09C-H048-bf5ad96cd0-EDGE-C020.mesh.gz",
+      "type_id": "CT-09C-H048-bf5ad96cd0-EDGE-C020",
+      "bytes": 41582,
+      "sha256": "1b778ee58c0eb69fd8e2c34f9f9c8e35deed6c83ca5eaf1a99635a53ccafff4f",
+      "geometry_sha256": "0ae1cdb818d1e34c1e9626da11cea6805a412cd1dde6300ed8b48b80d6afee62",
+      "source_relative_path": "geometry/CT-09C-H048-bf5ad96cd0-EDGE-C020.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-09C-H048-ffd79d13b5-EDGE-C020.mesh.gz",
+      "type_id": "CT-09C-H048-ffd79d13b5-EDGE-C020",
+      "bytes": 54402,
+      "sha256": "ebd034e93a3475079c00ddc397ad12be67152a1de57bbaca0eb61954839fd94e",
+      "geometry_sha256": "34419d58685edbd064402e8dc2aab839b13c9fd652d6fa5c982bce8f730b1f02",
+      "source_relative_path": "geometry/CT-09C-H048-ffd79d13b5-EDGE-C020.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
     },
     {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-10C-H048-02a554d051-EDGE-C020.mesh.gz",
@@ -888,6 +1278,16 @@
       "first_case_id": "copilot-p300-symmetric-v3"
     },
     {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-10C-H048-b0781c31bf-EDGE-C020.mesh.gz",
+      "type_id": "CT-10C-H048-b0781c31bf-EDGE-C020",
+      "bytes": 52034,
+      "sha256": "506ffced2f4121e0948f037ca9fdf020ac39648979a79d84a7f47c2b3a0ccbfa",
+      "geometry_sha256": "40a2935d506eb2fb54c0ebb8a7a2b17b714c284a00e3242b88fedc7f8d9b3d58",
+      "source_relative_path": "geometry/CT-10C-H048-b0781c31bf-EDGE-C020.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-10C-H048-c8d15dc7e0-EDGE-C020.mesh.gz",
       "type_id": "CT-10C-H048-c8d15dc7e0-EDGE-C020",
       "bytes": 60309,
@@ -906,6 +1306,16 @@
       "source_relative_path": "geometry/CT-10C-H048-d581339da2-EDGE-C020.mesh.gz",
       "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f",
       "first_case_id": "copilot-p300-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-10C-H048-db896e17e0-EDGE-C020.mesh.gz",
+      "type_id": "CT-10C-H048-db896e17e0-EDGE-C020",
+      "bytes": 51914,
+      "sha256": "5e50423007f8f1adf10af848b0db5644746dd35f8beb69fa62af85f14da37ce2",
+      "geometry_sha256": "cf86f87c8af37d856eae3692fb8d826af4a991caf26dd6b267137e95b0bc3114",
+      "source_relative_path": "geometry/CT-10C-H048-db896e17e0-EDGE-C020.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
     },
     {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-10C-H048-fda167859c-EDGE-C020.mesh.gz",
@@ -978,6 +1388,16 @@
       "first_case_id": "copilot-p120-symmetric-v3"
     },
     {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-11C-H048-a10bf4d71a-EDGE-C020.mesh.gz",
+      "type_id": "CT-11C-H048-a10bf4d71a-EDGE-C020",
+      "bytes": 57608,
+      "sha256": "0075a152c3340619902a9dc8acae6b837d6c17aab95a8ee661c85c19e546099f",
+      "geometry_sha256": "b15acae9791647d70a54169327226093a85c84a35a693aee4f89c25e4e0b666c",
+      "source_relative_path": "geometry/CT-11C-H048-a10bf4d71a-EDGE-C020.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-11C-H048-a6224b158f-EDGE-C020.mesh.gz",
       "type_id": "CT-11C-H048-a6224b158f-EDGE-C020",
       "bytes": 69882,
@@ -986,6 +1406,16 @@
       "source_relative_path": "geometry/CT-11C-H048-a6224b158f-EDGE-C020.mesh.gz",
       "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f",
       "first_case_id": "copilot-p300-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-11C-H048-ae3f5ca819-EDGE-C020.mesh.gz",
+      "type_id": "CT-11C-H048-ae3f5ca819-EDGE-C020",
+      "bytes": 49120,
+      "sha256": "327c1a4060428f5017bf7ebd303e448f797448ddbf9c7240a9d36776a6848581",
+      "geometry_sha256": "b5e5987ae3d7c35adf1e98d84a4eddd98e2c04dec3233a65ef21a76fe8f44b27",
+      "source_relative_path": "geometry/CT-11C-H048-ae3f5ca819-EDGE-C020.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
     },
     {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-11C-H048-b4d076c046-EDGE-C020.mesh.gz",
@@ -1016,6 +1446,16 @@
       "source_relative_path": "geometry/CT-11C-H048-c79a19e447-EDGE-C020.mesh.gz",
       "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f",
       "first_case_id": "copilot-p300-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-11C-H048-d4ba23110c-EDGE-C020.mesh.gz",
+      "type_id": "CT-11C-H048-d4ba23110c-EDGE-C020",
+      "bytes": 58739,
+      "sha256": "8592f0ba42ae0fabdb50981485f846cec88b7a109c562f4c8b7a2b970749691a",
+      "geometry_sha256": "1c7ec82b19dd3b4de32bc6ac993be48c8a3ec9177819fb33de2e070dbcd50e05",
+      "source_relative_path": "geometry/CT-11C-H048-d4ba23110c-EDGE-C020.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
     },
     {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-11C-H048-ebd08b73dc-EDGE-C020.mesh.gz",
@@ -1108,6 +1548,16 @@
       "first_case_id": "copilot-p300-symmetric-v3"
     },
     {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-12C-H048-e8eab71fac-EDGE-C020.mesh.gz",
+      "type_id": "CT-12C-H048-e8eab71fac-EDGE-C020",
+      "bytes": 75373,
+      "sha256": "c7147805e5691a770bab0911f99ad16d4f11a62814d1807c774c93b4827c13c5",
+      "geometry_sha256": "be17697bcdb6a4c7c8d98858920b2da8670613809d74aa082b1fd23e6ef7afda",
+      "source_relative_path": "geometry/CT-12C-H048-e8eab71fac-EDGE-C020.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-12C-H048-f3a2af7416-EDGE-C020.mesh.gz",
       "type_id": "CT-12C-H048-f3a2af7416-EDGE-C020",
       "bytes": 79505,
@@ -1146,6 +1596,26 @@
       "source_relative_path": "geometry/CT-13C-H048-2f55cbe2b5-EDGE-C020.mesh.gz",
       "source_commit": "87f892dd7c03954d7083ac09fac746c84a5ed885",
       "first_case_id": "copilot-p120-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-13C-H048-71880bfa00-EDGE-C020.mesh.gz",
+      "type_id": "CT-13C-H048-71880bfa00-EDGE-C020",
+      "bytes": 78256,
+      "sha256": "954ae53400b7d9923a61f1cfcc616db52853cacc0d220590dc65e556943144c3",
+      "geometry_sha256": "48b6fe147b9760f54ee9036b3f80a59402dfa43f6cebd6c05b9a1b2718e75376",
+      "source_relative_path": "geometry/CT-13C-H048-71880bfa00-EDGE-C020.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-13C-H048-7884d49579-EDGE-C020.mesh.gz",
+      "type_id": "CT-13C-H048-7884d49579-EDGE-C020",
+      "bytes": 78954,
+      "sha256": "cca8d5a058612d6c06490c21cf8671f8644409efdf24c8dd8ea0c10c3d528023",
+      "geometry_sha256": "9361f0dc96e973e24a707aa6fd15f54ed9e153e91da374abbb9b9fc32209f2e1",
+      "source_relative_path": "geometry/CT-13C-H048-7884d49579-EDGE-C020.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
     },
     {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-13C-H048-a796482c89-EDGE-C020.mesh.gz",
@@ -1238,6 +1708,16 @@
       "first_case_id": "copilot-p120-symmetric-v3"
     },
     {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-14C-H048-155b954a79-EDGE-C020.mesh.gz",
+      "type_id": "CT-14C-H048-155b954a79-EDGE-C020",
+      "bytes": 91106,
+      "sha256": "f34d1cc4bfff0eadcde911f601ea2200b0fc6ce22e18ddf523b6d60b97af7a54",
+      "geometry_sha256": "ef3f8a0882e8a0f83021c849d67f4167b1c65a22d3c548186c599647eb934408",
+      "source_relative_path": "geometry/CT-14C-H048-155b954a79-EDGE-C020.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-14C-H048-3c4b2b79da-EDGE-C020.mesh.gz",
       "type_id": "CT-14C-H048-3c4b2b79da-EDGE-C020",
       "bytes": 89176,
@@ -1246,6 +1726,16 @@
       "source_relative_path": "geometry/CT-14C-H048-3c4b2b79da-EDGE-C020.mesh.gz",
       "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f",
       "first_case_id": "copilot-p300-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-14C-H048-3ea0231c3a-EDGE-C020.mesh.gz",
+      "type_id": "CT-14C-H048-3ea0231c3a-EDGE-C020",
+      "bytes": 94647,
+      "sha256": "6f901ef386a7a6207c6d719a7e90801937eed73a6894193e4e27d435a5c4c226",
+      "geometry_sha256": "19ce291eb561709515b64058910103b727a9827109212d2c63362d9b04925dd5",
+      "source_relative_path": "geometry/CT-14C-H048-3ea0231c3a-EDGE-C020.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
     },
     {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-14C-H048-584130de39-EDGE-C020.mesh.gz",
@@ -1298,6 +1788,16 @@
       "first_case_id": "copilot-p300-symmetric-v3"
     },
     {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-14C-H048-cd2ff2805d-EDGE-C020.mesh.gz",
+      "type_id": "CT-14C-H048-cd2ff2805d-EDGE-C020",
+      "bytes": 90370,
+      "sha256": "c17414e2af542725fbe7d6323a03676665195554baea78effaf38309f7e39790",
+      "geometry_sha256": "72bfe93079b02fc33d50c493a7f89e2bb1ea2d208b87288da658c66f21b7de9e",
+      "source_relative_path": "geometry/CT-14C-H048-cd2ff2805d-EDGE-C020.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-14C-H048-e0eb02ba3c-EDGE-C020.mesh.gz",
       "type_id": "CT-14C-H048-e0eb02ba3c-EDGE-C020",
       "bytes": 84298,
@@ -1306,6 +1806,16 @@
       "source_relative_path": "geometry/CT-14C-H048-e0eb02ba3c-EDGE-C020.mesh.gz",
       "source_commit": "87f892dd7c03954d7083ac09fac746c84a5ed885",
       "first_case_id": "copilot-p120-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-15C-H048-197a6a88cc-EDGE-C020.mesh.gz",
+      "type_id": "CT-15C-H048-197a6a88cc-EDGE-C020",
+      "bytes": 98147,
+      "sha256": "6b803c51b542463aed61617119fd8cd2f3f66002ee1254fdb6aca6fe82791e94",
+      "geometry_sha256": "0f65957fb66c81e366a70c41bcc9c88c950bdee713b456c8df73800b3a148ed4",
+      "source_relative_path": "geometry/CT-15C-H048-197a6a88cc-EDGE-C020.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
     },
     {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-15C-H048-6f448c1b9b-EDGE-C020.mesh.gz",
@@ -1356,6 +1866,16 @@
       "source_relative_path": "geometry/CT-15C-H048-a9daf10220-EDGE-C020.mesh.gz",
       "source_commit": "87f892dd7c03954d7083ac09fac746c84a5ed885",
       "first_case_id": "copilot-p120-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-15C-H048-acf2263607-EDGE-C020.mesh.gz",
+      "type_id": "CT-15C-H048-acf2263607-EDGE-C020",
+      "bytes": 98180,
+      "sha256": "0ad8d180725fa632450ddbe1f67b0dd646b535aafc9b5149f43ab12cb1ede46c",
+      "geometry_sha256": "87243d2534fc8925c027b328ee2a34cdba137ee18064fe221b78627da276c9b4",
+      "source_relative_path": "geometry/CT-15C-H048-acf2263607-EDGE-C020.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
     },
     {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-15C-H048-c31f2bd321-EDGE-C020.mesh.gz",
@@ -1426,6 +1946,26 @@
       "source_relative_path": "geometry/CT-17C-H048-9b7af214e9-EDGE-C020.mesh.gz",
       "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f",
       "first_case_id": "copilot-p300-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-18C-H048-4e11b7ce43-EDGE-C020.mesh.gz",
+      "type_id": "CT-18C-H048-4e11b7ce43-EDGE-C020",
+      "bytes": 123443,
+      "sha256": "1d68aa5f7a5b901e6d1195abd722f64535c6ed8b0fb1cdb9a1918d2486b6d2d9",
+      "geometry_sha256": "36da6b6202e2fb4b167fb4af05eb0ecc87f1849bdaf17b0dbb7bf1e066ade993",
+      "source_relative_path": "geometry/CT-18C-H048-4e11b7ce43-EDGE-C020.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-18C-H048-e162cf41f9-EDGE-C020.mesh.gz",
+      "type_id": "CT-18C-H048-e162cf41f9-EDGE-C020",
+      "bytes": 122712,
+      "sha256": "b4c6f24a035ea5c77fed3b94fcac7f3a663f49edd99a69b30c25ba6c79ec0eda",
+      "geometry_sha256": "9bfeb4238a4f7d3891fc7df42a9a99a40871dd620267781b6d1da02d9ad21c2e",
+      "source_relative_path": "geometry/CT-18C-H048-e162cf41f9-EDGE-C020.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
     },
     {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-19C-H048-08d887a1e7-EDGE-C020.mesh.gz",
@@ -1528,6 +2068,16 @@
       "first_case_id": "copilot-p120-symmetric-v3"
     },
     {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-28C-H048-141ffc6551-EDGE-C020.mesh.gz",
+      "type_id": "CT-28C-H048-141ffc6551-EDGE-C020",
+      "bytes": 211320,
+      "sha256": "a9ff4f354c653b27a934cd7a9dba268a4a1f21b6f38dd4cfce363410f64415bc",
+      "geometry_sha256": "e042a4a59208a42091728dc40c4d9e7726375387e42586de40d31a278514cddc",
+      "source_relative_path": "geometry/CT-28C-H048-141ffc6551-EDGE-C020.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-28C-H048-15c7ef529e-EDGE-C020.mesh.gz",
       "type_id": "CT-28C-H048-15c7ef529e-EDGE-C020",
       "bytes": 216921,
@@ -1568,6 +2118,26 @@
       "first_case_id": "copilot-p300-symmetric-v3"
     },
     {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-29C-H048-b107b4e209-EDGE-C020.mesh.gz",
+      "type_id": "CT-29C-H048-b107b4e209-EDGE-C020",
+      "bytes": 203790,
+      "sha256": "28d7f8bad7a05169ae4268a8cf78f0b82ecbfb6752e2e515bc4c4652f5705c90",
+      "geometry_sha256": "e1405e8b3aaf93fe02ed89b9d20f7659f7d3cd42e21e5af238f5d435e21702a4",
+      "source_relative_path": "geometry/CT-29C-H048-b107b4e209-EDGE-C020.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-29C-H048-d7fa02cf91-EDGE-C020.mesh.gz",
+      "type_id": "CT-29C-H048-d7fa02cf91-EDGE-C020",
+      "bytes": 202594,
+      "sha256": "af1823750c8a7e6e414908e4f8c350a2152ceec859d7e38d8229357167c0b949",
+      "geometry_sha256": "ba5109ec9f488273fb21c4e6fb09d0121c027f99cd335006cf3600cb0420b584",
+      "source_relative_path": "geometry/CT-29C-H048-d7fa02cf91-EDGE-C020.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
+    },
+    {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/CT-31C-H048-09e626b20b-EDGE-C020.mesh.gz",
       "type_id": "CT-31C-H048-09e626b20b-EDGE-C020",
       "bytes": 220407,
@@ -1606,6 +2176,16 @@
       "source_relative_path": "geometry/CT-32C-H048-41626e9ba7-EDGE-C020.mesh.gz",
       "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f",
       "first_case_id": "copilot-p300-symmetric-v3"
+    },
+    {
+      "path": "viewer-data/copilot-symmetry-20260923/geometry/PL-02x03-H032.mesh.gz",
+      "type_id": "PL-02x03-H032",
+      "bytes": 40258,
+      "sha256": "eabe3cf2b7720f545ff5bcc670fda230efa572a90a989b8e777d20761f49d347",
+      "geometry_sha256": "5c7e50fffe11e00a8a87787423fe5a86da851626a47f3c11cbc7b07889a74e28",
+      "source_relative_path": "geometry/PL-02x03-H032.mesh.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "first_case_id": "copilot-p150-symmetric-v3"
     },
     {
       "path": "viewer-data/copilot-symmetry-20260923/geometry/PL-03x06-H032.mesh.gz",
