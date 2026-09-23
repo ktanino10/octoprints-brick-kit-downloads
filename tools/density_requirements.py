@@ -17,6 +17,9 @@ def case_identity(identifier):
 
 
 def artifact_identity(identifier):
+    symmetric = re.fullmatch(r"(copilot-p(?:120|150|200|300|400))-symmetric-v3", str(identifier))
+    if symmetric:
+        return symmetric[1], "bilateral-symmetry-v3"
     support = re.fullmatch(r"(copilot-p(?:120|150|200|300))-support-free-v2", str(identifier))
     if support:
         return support[1], COPILOT_SUPPORT_REVISION

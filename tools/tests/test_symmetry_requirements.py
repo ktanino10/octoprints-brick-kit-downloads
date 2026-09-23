@@ -7,6 +7,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "tools"))
 from symmetry_requirements import symmetry_identity, validate_symmetry_receipt
+from density_requirements import artifact_identity, case_identity
 
 
 class SymmetryReceiptTests(unittest.TestCase):
@@ -18,6 +19,11 @@ class SymmetryReceiptTests(unittest.TestCase):
         self.assertEqual(validate_symmetry_receipt(record), record)
         self.assertEqual(len(record["cases"]), 5)
         self.assertEqual(symmetry_identity("copilot-p400-symmetric-v3"), ("copilot-p400", 400))
+        self.assertEqual(artifact_identity("copilot-p400-symmetric-v3"), ("copilot-p400", "bilateral-symmetry-v3"))
+        with self.assertRaises(ValueError):
+            case_identity("copilot-p400-symmetric-v3")
+        with self.assertRaises(ValueError):
+            artifact_identity("mona-p400-symmetric-v3")
         for identifier in ["copilot-p400", "copilot-p300-support-free-v2", "mona-p300-symmetric-v3"]:
             with self.assertRaises(ValueError):
                 symmetry_identity(identifier)

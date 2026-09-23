@@ -12,6 +12,11 @@
 first shared receiver自身は寄与する各rootのlocal boundに一度加え、そのtokenの伝播を止めます。
 局所boundを全体の質量として合算しません。旧body/Monaのroot-reset禁止検査は変更しません。
 これらの補助検査だけでは新native/物理合格を主張できません。固定READY成果物と実nativeの反射・色・全prefix検査の受入が別途必要です。
+`symmetry_evidence.py` はsourceの14要素part identityと新contextを数値型・配列順のままcanonical化し、
+mirror mapの全ID bijection/involution・色・2e-5 mmの原点対応と、実volumeから計算したBRep差分上限を検算します。
+`verify_symmetry_native.py` は先に照合済みの移動native ID/pose reportを要求し、owned copyの実linked masterを
+別実装でX反射して両向きcut体積を測ります。元assembly/mastersを保存・再計算せず、前後のSHAを確認します。
+計測器のsynthetic fixture結果は `PASS_SYNTHETIC_NATIVE_DRIVER_TEST` と明示し、修正済みモデルの合格記録へ転用しません。
 
 ## Copilot支台なし追加改訂の受領記録
 
