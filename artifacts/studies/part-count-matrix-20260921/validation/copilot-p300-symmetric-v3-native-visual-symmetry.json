@@ -1,0 +1,58 @@
+{
+  "state": "PASS_ACTUAL_NATIVE_MASKS_WITH_DECLARED_RASTER_TOLERANCE",
+  "case_id": "copilot-p300-symmetric-v3",
+  "native_scene_sha256": "d96905692012adbf450f7b820a502d8a82f5959d70d3e5b3dfba9a87a8aa7dd0",
+  "mask_sha256": "f36511696f4b0e4e271b71b0e34633b17e5efcde0031d7dd3b0c363deceffc8b",
+  "eyes": {
+    "left": {
+      "pixels": 10426,
+      "bounds_xy_px": [
+        453,
+        613,
+        530,
+        761
+      ],
+      "centroid_xy_px": [
+        491.3528678304239,
+        691.9345866103971
+      ]
+    },
+    "right": {
+      "pixels": 10426,
+      "bounds_xy_px": [
+        670,
+        613,
+        747,
+        761
+      ],
+      "centroid_xy_px": [
+        707.647132169576,
+        691.9345866103971
+      ]
+    }
+  },
+  "left_vs_reflected_right_eye_xor_pixels": 0,
+  "maximum_eye_boundary_distance_pixels": 0.0,
+  "whole_silhouette_xor_pixels": 0,
+  "whole_material_xor_pixels": 0,
+  "raster_boundary_tolerance_pixels": 1,
+  "not_a_percentage_pass": "Paired actual native solids/colors already require exact BRep reflection within kernel tolerance; raster measurements report finite pixel-edge errors explicitly.",
+  "physical_validation": "UNKNOWN",
+  "schema_version": 1,
+  "geometry_revision": "bilateral-symmetry-v3",
+  "source_manifest_sha256": "65be136e2c360b0cad5f2fbf93c41d25fb3decb9a4a4543673e7f6c2e7b07b27",
+  "images": [
+    {
+      "view": "native-mirror-overlay",
+      "path": "images/copilot-p300-symmetric-v3-native-mirror-overlay.jpg",
+      "bytes": 34381,
+      "sha256": "55a319d9d05194e7e4c2942d32dd3041191ba7a6f6d0e911f685be6b93422a8d"
+    },
+    {
+      "view": "paired-eye-zoom",
+      "path": "images/copilot-p300-symmetric-v3-paired-eye-zoom.jpg",
+      "bytes": 52393,
+      "sha256": "a16ae519b0527ac5adeeefb353826f4da8e4136207f56cf772fad59e7713f2b5"
+    }
+  ]
+}

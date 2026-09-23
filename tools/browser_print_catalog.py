@@ -119,7 +119,7 @@ with sync_playwright() as playwright:
             assert symmetry["state"] == "PARTIAL" and not any(symmetry["verification"].values())
             page.goto(urljoin(base, "en/"), wait_until="networkidle")
             expect(page.locator('[data-symmetry-review="copilot"]')).to_be_visible()
-            expect(page.locator('[data-symmetry-review="copilot"]')).to_contain_text("current downloads are the earlier asymmetric versions")
+            expect(page.locator('[data-symmetry-review="copilot"]')).to_contain_text("selected download is the earlier asymmetric version")
             expect(page.locator('[data-symmetry-review="mona"]')).to_be_hidden()
             expect(page.locator('[data-symmetry-review="ducky"]')).to_be_hidden()
             english(page)

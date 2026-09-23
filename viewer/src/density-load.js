@@ -8,7 +8,7 @@ export async function loadDensityModel(entry, displayCatalog, { signal, detail }
   const rootProof = proofFile ? await verifiedJSON(proofFile, signal) : null;
   const manifest = validateGuideManifest(data, entry.id, rootProof);
   const support = data.support_validation ? entry.assembly_support : entry.whisker_support;
-  if (rootProof) check(support?.sequence_evidence_sha256 === proofFile.sha256
+  if (rootProof) check(support?.sequence_evidence_sha256 === (proofFile.decoded_sha256 ?? proofFile.sha256)
     && support?.manifest_sha256 === manifest.source_manifest_sha256,
   '根元改訂の証拠が実ID・形状・組立順・支台数と一致しません。');
   check(manifest.metrics.part_count === entry.metrics.part_count && manifest.metrics.unique_types === entry.metrics.unique_types,

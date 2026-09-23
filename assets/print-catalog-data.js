@@ -1,7 +1,7 @@
 import { DENSITY_ID, DENSITY_CHARACTERS, COUNT_PERCENTAGES, densityAssert as check,
   densityDeliveryStatus, validateDensityCatalog } from './density-data.js';
 
-export function printCatalog(catalog, pointer, receipt, evidence, bodyPublication = null) {
+export function printCatalog(catalog, pointer, receipt, evidence, bodyPublication = null, symmetryPublication = null) {
   validateDensityCatalog(catalog, pointer);
   check(receipt.study_id === DENSITY_ID && receipt.state === 'READY'
     && receipt.catalog_sha256 === pointer.catalog.sha256
@@ -51,6 +51,21 @@ export function printCatalog(catalog, pointer, receipt, evidence, bodyPublicatio
         image: entry.images.three_quarter, download: entry.assets.native_cad[0],
         physicalStatus: 'UNTESTED', slicerStatus: 'NOT_SLICED', supportFreeRevision: true,
       };
+    }
+    if (symmetryPublication?.published.length) {
+      const copilot = groups.find(group => group.character === 'copilot');
+      copilot.historicalCases ??= [];
+      for (const entry of symmetryPublication.published) {
+        const position = copilot.cases.findIndex(item => item.percentage === entry.count_percentage);
+        check(position >= 0, '対称化改訂の公開記録が、実モデル・固定分母・検査記録と一致しません。');
+        copilot.historicalCases.push({ ...copilot.cases[position], historical: true, beforeSymmetry: true });
+        copilot.cases[position] = {
+          id: entry.id, character: 'copilot', percentage: entry.count_percentage, partCount: entry.metrics.part_count,
+          typeCount: entry.metrics.unique_types, dimensions: entry.metrics.dimensions_mm, aids: 0,
+          image: entry.images.three_quarter, download: entry.assets.native_cad[0],
+          physicalStatus: 'UNTESTED', slicerStatus: 'NOT_SLICED', symmetryRevision: true,
+        };
+      }
     }
   }
   return groups;

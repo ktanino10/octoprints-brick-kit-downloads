@@ -3,6 +3,7 @@ import { readJSON } from './site.js';
 import { DENSITY_POINTER, densityGuideEntries, validateDensityPointer } from './density-data.js';
 import { printCatalog, selectedPrintCase } from './print-catalog-data.js';
 import { loadBodySupportPublication } from './body-support-publication.js';
+import { loadSymmetryPublication } from './symmetry-publication.js';
 
 const names = { mona: 'Mona', copilot: 'Copilot', ducky: 'Ducky' };
 const number = (value, digits = 1) => new Intl.NumberFormat(numberLocale(), { maximumFractionDigits: digits }).format(value);
@@ -72,7 +73,8 @@ async function openPreview(item) {
     const module = await import(assetURL('viewer/assets/catalog-preview.js'));
     request.signal.throwIfAborted();
     const entry = densityGuideEntries(sourceCatalog).find(row => row.id === item.id);
-    const display = entry.geometry_revision === 'body-support-v2' ? sourceCatalog.support_revisions.display_catalog : sourceCatalog.display_catalog;
+    const display = entry.geometry_revision === 'bilateral-symmetry-v3' ? sourceCatalog.symmetry_revisions.display_catalog
+      : entry.geometry_revision === 'body-support-v2' ? sourceCatalog.support_revisions.display_catalog : sourceCatalog.display_catalog;
     const instance = await module.loadCataloguePreview(previewHost, entry, display,
       { signal: request.signal, onError: fail });
     if (request.signal.aborted || generation !== previewGeneration || !previewDialog.open) {
@@ -139,7 +141,8 @@ function modelCard(group, initial) {
     option.value = item.id; select.append(option);
   }
   if (initial.historical) {
-    const old = element('option', `履歴・支台付き：${number(initial.partCount, 0)}部品`);
+    const old = element('option', initial.beforeSymmetry
+      ? `履歴・対称化前：${number(initial.partCount, 0)}部品` : `履歴・支台付き：${number(initial.partCount, 0)}部品`);
     old.value = initial.id; select.append(old);
   }
   const size = element('p', undefined, 'print-model-size');
@@ -150,12 +153,8 @@ function modelCard(group, initial) {
   const symmetryNote = element('p', undefined, 'quiet');
   symmetryNote.dataset.symmetryReview = group.character;
   symmetryNote.hidden = group.character !== 'copilot';
-  if (!symmetryNote.hidden) {
-    const link = element('a', '左右対称の修正状況 →', 'text-link');
-    link.href = localizedURL('history.html#copilot-symmetry');
-    symmetryNote.append(element('span', 'このCopilotの5案には目などの左右差があり、修正中です。現在の配布データは対称化前の版です。'),
-      document.createTextNode(' '), link);
-  }
+  const symmetryLink = element('a', '左右対称の修正状況 →', 'text-link');
+  symmetryLink.href = localizedURL('history.html#copilot-symmetry');
   const download = element('a', 'STL入りモデル一式を取得 ↓', 'button primary');
   download.dataset.printDownload = '';
   const packageInfo = element('p', undefined, 'quiet');
@@ -191,14 +190,21 @@ function modelCard(group, initial) {
         ? '本体内部の支持構造へ改訂した支台なしの実データです。現物の保持力・強度は未検証です。'
         : '現在の配布物は支台付きの案です。支台なしへの設計改訂は別に進めています。'), document.createTextNode(' '), revisionLink);
     }
+    if (!symmetryNote.hidden) {
+      symmetryNote.replaceChildren(element('span', item.symmetryRevision
+        ? '実CAD・目・輪郭・色の左右対称性を確認した改訂版です。組立用の仮支台は0個ですが、実物の強度は未検証です。'
+        : '選択中のCopilotには目などの左右差が残っています。この配布データは対称化前の版です。'),
+      document.createTextNode(' '), symmetryLink);
+    }
     download.href = item.download.url;
     packageInfo.textContent = `ZIP ${number(item.download.bytes / 1000000)} MB · STL・STEP・BOM・CAD・動画を同梱`;
     guide.href = localizedURL(`density-guide.html?case=${item.id}`);
-    compare.href = localizedURL(item.supportFreeRevision
+    compare.href = localizedURL(item.symmetryRevision ? 'history.html#copilot-symmetry' : item.supportFreeRevision
       ? sourceCatalog.support_revisions.comparison_sheets
         ? 'density-matrix.html?revision=body-support-v2&character=copilot' : 'history.html#copilot-support-free'
       : `density-matrix.html?character=${group.character}`);
-    compare.textContent = item.supportFreeRevision ? '支台なし改訂の実画像・実寸比を比較 →' : '5案を大きな画像で比較する →';
+    compare.textContent = item.symmetryRevision ? '左右対称の修正状況 →'
+      : item.supportFreeRevision ? '支台なし改訂の実画像・実寸比を比較 →' : '5案を大きな画像で比較する →';
   }
   choose(initial);
   select.addEventListener('change', () => {
@@ -222,8 +228,12 @@ try {
     readJSON(receipt.verification_record.path, receipt.verification_record.sha256),
   ]);
   const bodyPublication = await loadBodySupportPublication(readJSON, file => readJSON(file.path, file.sha256), pointer);
-  const groups = printCatalog(catalog, pointer, receipt, evidence, bodyPublication);
-  sourceCatalog = bodyPublication.catalog ? { ...catalog, support_revisions: bodyPublication.catalog } : catalog;
+  const symmetryPublication = await loadSymmetryPublication(readJSON, file => readJSON(file.path, file.sha256), pointer);
+  const groups = printCatalog(catalog, pointer, receipt, evidence, bodyPublication, symmetryPublication);
+  sourceCatalog = { ...catalog,
+    ...(bodyPublication.catalog ? { support_revisions: bodyPublication.catalog } : {}),
+    ...(symmetryPublication.catalog ? { symmetry_revisions: symmetryPublication.catalog } : {}),
+  };
   const params = new URL(location.href).searchParams;
   const cards = groups.map(group => modelCard(group, selectedPrintCase(group, params.get(group.character))));
   document.querySelector('#model-cards').replaceChildren(...cards);

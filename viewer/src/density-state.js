@@ -3,6 +3,7 @@ import {
   isObject, isVector, isHash, isCount, validateDensityFile, validateNativeGeometryFile,
 } from '../../assets/density-data.js';
 import { validateBodySupportBinding } from './body-support-state.js';
+import { validateSymmetryBinding } from './symmetry-state.js';
 
 const partCollator = new Intl.Collator('en', { numeric: true });
 const finite = (value) => typeof value === 'number' && Number.isFinite(value);
@@ -218,7 +219,11 @@ export function validateGuideManifest(manifest, candidateId, rootEvidence = null
   '放射分解・底からの組立の表示契約がありません。');
   const rootAnchored = contract.sequence_mode === 'BODY_FIRST_ROOT_ANCHORED';
   const bodySupported = contract.sequence_mode === 'BODY_FIRST_INTERNAL_SUPPORT';
-  if (identity.supportFree || bodySupported) {
+  const symmetric = contract.sequence_mode === 'BILATERAL_BODY_FIRST_SUPPORT';
+  if (identity.symmetry || symmetric) {
+    validateSymmetryBinding(manifest, rootEvidence);
+    validateStageOrderedStructure(manifest);
+  } else if (identity.supportFree || bodySupported) {
     validateBodySupportBinding(manifest, rootEvidence);
     validateStageOrderedStructure(manifest);
   } else if (identity.revision || rootAnchored) {
@@ -230,7 +235,7 @@ export function validateGuideManifest(manifest, candidateId, rootEvidence = null
   const ordered = [...manifest.parts].sort((a, b) => a.step - b.step);
   for (let index = 0; index < ordered.length; index++) {
     const part = ordered[index], before = ordered[index - 1];
-    check(part.step === index + 1 && (rootAnchored || bodySupported || !before || (part.position_mm[2] >= before.position_mm[2] - 1e-7
+    check(part.step === index + 1 && (rootAnchored || bodySupported || symmetric || !before || (part.position_mm[2] >= before.position_mm[2] - 1e-7
       && part.assembly_course >= before.assembly_course)), '組立順が底から順に並んでいません。');
     for (const support of part.support_ids) {
       check(ids.has(support) && ids.get(support).step < part.step, '必要な支持部品より先に組み立てる順序になっています。');

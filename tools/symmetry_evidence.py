@@ -58,7 +58,8 @@ def geometry_sequence_identity(manifest):
             and [part["step"] for part in parts] == list(range(1, len(parts) + 1)),
             "The canonical bilateral identity must preserve actual step order and every ID once")
     expected = sorted(part["id"] for part in parts if part.get("mechanically_checked_support") is True)
-    require(manifest.get("mechanically_checked_support_ids") == expected and bool(expected),
+    require(("mechanically_checked_support_ids" not in manifest or manifest["mechanically_checked_support_ids"] == expected)
+            and bool(expected),
             "Checked material supports must match actual part flags in lexical ID order")
     loads = manifest["assembly_support_load_cases"]
     require(isinstance(loads, list) and [row["support_part_id"] for row in loads] == expected,

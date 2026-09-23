@@ -42,7 +42,10 @@
       "symmetry_evidence": null,
       "mechanical_evidence": null,
       "downloads": null,
-      "verification": {"public_browser_passed": false, "anonymous_downloads_passed": false}
+      "verification": {
+        "public_browser_passed": false,
+        "anonymous_downloads_passed": false
+      }
     },
     {
       "logical_case_id": "copilot-p150",
@@ -58,7 +61,10 @@
       "symmetry_evidence": null,
       "mechanical_evidence": null,
       "downloads": null,
-      "verification": {"public_browser_passed": false, "anonymous_downloads_passed": false}
+      "verification": {
+        "public_browser_passed": false,
+        "anonymous_downloads_passed": false
+      }
     },
     {
       "logical_case_id": "copilot-p200",
@@ -74,7 +80,10 @@
       "symmetry_evidence": null,
       "mechanical_evidence": null,
       "downloads": null,
-      "verification": {"public_browser_passed": false, "anonymous_downloads_passed": false}
+      "verification": {
+        "public_browser_passed": false,
+        "anonymous_downloads_passed": false
+      }
     },
     {
       "logical_case_id": "copilot-p300",
@@ -83,14 +92,36 @@
       "previous_actual_count": 53287,
       "multiplier": 3,
       "target_count": 53619,
-      "status": "INPUT_WAIT",
-      "actual_case_id": null,
-      "source_commit": null,
-      "actual_count": null,
-      "symmetry_evidence": null,
-      "mechanical_evidence": null,
-      "downloads": null,
-      "verification": {"public_browser_passed": false, "anonymous_downloads_passed": false}
+      "status": "PUBLIC_PENDING",
+      "actual_case_id": "copilot-p300-symmetric-v3",
+      "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f",
+      "actual_count": 53575,
+      "symmetry_evidence": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/validation/copilot-p300-symmetric-v3-native-visual-symmetry.json",
+        "bytes": 1811,
+        "sha256": "eb8d478b1e75de9712f5d41c0194ca55f7dfa24e1666ac3e2f307c48791dd10c"
+      },
+      "mechanical_evidence": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/validation/copilot-p300-symmetric-v3-symmetry-support.json.gz",
+        "encoding": "gzip",
+        "bytes": 218366,
+        "sha256": "02edf5b8c868efd0d1b051d97c3b40585c4eea2a006dbd89a204a81454da0bbe",
+        "decoded_bytes": 3254752,
+        "decoded_sha256": "f91a7ddb2f086d4e19f253d768d4a0dd872e11c2961580a217b2f3049964ddfb"
+      },
+      "downloads": {
+        "cad": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p300-symmetric-v3/copilot-p300-symmetric-v3-cad-scene-animation-public.zip",
+        "cg": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p300-symmetric-v3/copilot-p300-symmetric-v3-cad-scene-animation-public.zip",
+        "animation": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p300-symmetric-v3/copilot-p300-symmetric-v3-assembly-motion.mp4",
+        "assembly": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p300-symmetric-v3/copilot-p300-symmetric-v3-cad-scene-animation-public.zip",
+        "viewer": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case=copilot-p300-symmetric-v3"
+      },
+      "verification": {
+        "public_browser_passed": false,
+        "anonymous_downloads_passed": false
+      },
+      "external_aid_count": 0,
+      "assembly_aid_count": 0
     },
     {
       "logical_case_id": "copilot-p400",
@@ -106,7 +137,10 @@
       "symmetry_evidence": null,
       "mechanical_evidence": null,
       "downloads": null,
-      "verification": {"public_browser_passed": false, "anonymous_downloads_passed": false}
+      "verification": {
+        "public_browser_passed": false,
+        "anonymous_downloads_passed": false
+      }
     }
   ],
   "previous_completed_delivery": {
@@ -126,6 +160,19 @@
     "Revised comparison images and CSV are bound to the real cases",
     "Actual public browser and anonymous download/hash verification are complete"
   ],
-  "verification": {"public_browser_passed": false, "anonymous_downloads_passed": false},
-  "public_commit": {"record": "archive/deployment.json", "field": "commit"}
+  "verification": {
+    "public_browser_passed": false,
+    "anonymous_downloads_passed": false
+  },
+  "public_commit": {
+    "record": "archive/deployment.json",
+    "field": "commit"
+  },
+  "revision_catalog": {
+    "path": "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/catalog.json",
+    "bytes": 13716,
+    "sha256": "33c3afca97e4a4792e76c78a79899e528f98f4d2b8674de71355cf146442e6f0"
+  },
+  "base_catalog_sha256": "69b39de67d8d9214b75b631bf1e9f73e09ee16a520314b65a559ad6be2ff864e",
+  "budget_baseline": "/archive/body-support-baseline.json"
 }

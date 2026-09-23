@@ -13,6 +13,7 @@ export const MONA_WHISKER_REQUIREMENT = 'NO_EXTERNAL_OR_ASSEMBLY_AIDS';
 export const MONA_GEOMETRY_REVISION = 'whisker-root-v2';
 export const MONA_ROOT_REFERENCE_ID = 'mona-fine8-base-root-v2';
 export const COPILOT_SUPPORT_REVISION = 'body-support-v2';
+export const COPILOT_SYMMETRY_REVISION = 'bilateral-symmetry-v3';
 export const SYMMETRY_MESH_PREFIX = 'viewer-data/copilot-symmetry-20260923/geometry/';
 export const isObject = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
 export const isHash = (value) => typeof value === 'string' && /^[0-9a-f]{64}$/.test(value);
@@ -33,6 +34,9 @@ export function allDensityCases(catalog) {
 }
 
 export function densityArtifactIdentity(id) {
+  const symmetric = /^(copilot-p(120|150|200|300|400))-symmetric-v3$/.exec(String(id));
+  if (symmetric) return { logicalId: symmetric[1], character: 'copilot', percentage: Number(symmetric[2]),
+    revision: COPILOT_SYMMETRY_REVISION, symmetry: true };
   const support = /^(copilot-p(120|150|200|300))-support-free-v2$/.exec(String(id));
   if (support) return { logicalId: support[1], character: 'copilot', percentage: Number(support[2]),
     revision: COPILOT_SUPPORT_REVISION, supportFree: true };
@@ -42,7 +46,8 @@ export function densityArtifactIdentity(id) {
 }
 
 export function densityGuideEntries(catalog) {
-  return [...allDensityCases(catalog), ...Object.values(catalog.reference_revisions ?? {}), ...(catalog.support_revisions?.cases ?? [])];
+  return [...allDensityCases(catalog), ...Object.values(catalog.reference_revisions ?? {}),
+    ...(catalog.support_revisions?.cases ?? []), ...(catalog.symmetry_revisions?.cases ?? [])];
 }
 
 export function densityPath(value) {

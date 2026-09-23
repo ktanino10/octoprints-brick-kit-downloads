@@ -107,6 +107,9 @@ class SymmetryEvidenceTests(unittest.TestCase):
             "symmetry_context": {"unit_only": True, "intentional_changes_from_published_case": True},
         }
         before = geometry_sequence_identity(manifest)
+        inferred = copy.deepcopy(manifest)
+        del inferred["mechanically_checked_support_ids"]
+        self.assertEqual(geometry_sequence_identity(inferred), before)
         changed = copy.deepcopy(manifest)
         changed["symmetry_context"]["intentional_changes_from_published_case"] = False
         self.assertNotEqual(geometry_sequence_identity(changed), before)

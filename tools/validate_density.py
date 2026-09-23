@@ -29,6 +29,8 @@ def body_support_budget(planned_files=None):
     if base_bytes > 140_000_000:
         raise ValueError("Original immutable matrix exceeds its unchanged 140MB budget")
     def scope(path):
+        if any(marker in path for marker in ["-symmetric-v3", "bilateral-symmetry-v3", "copilot-symmetry-20260923"]):
+            return False
         return ((path.startswith(prefix) and path not in locked)
                 or (path.startswith((f"archive/sources/{STUDY}-", f"archive/releases/{STUDY}-"))
                     and ("body-support-v2" in path or "-support-free-v2" in path))

@@ -40,7 +40,7 @@ with sync_playwright() as playwright:
               const gl = canvas.getContext('webgl2');
               const frames = [], handlers = [], eventLoops = [], gpuWaits = [];
               for (let index = 0; index < 5; index++) {
-                const before = new URL(location.href).searchParams.get('camera');
+                const before = JSON.stringify(window.__densityGuide.diagnostics().camera);
                 const start = performance.now();
                 canvas.dispatchEvent(new KeyboardEvent('keydown', {key:'ArrowLeft', bubbles:true}));
                 handlers.push(performance.now() - start);
@@ -50,7 +50,7 @@ with sync_playwright() as playwright:
                 const gpuStart = performance.now();
                 gl.finish();
                 gpuWaits.push(performance.now() - gpuStart);
-                if (new URL(location.href).searchParams.get('camera') === before) {
+                if (JSON.stringify(window.__densityGuide.diagnostics().camera) === before) {
                   throw new Error('The measured rotation input did not actually change the camera');
                 }
                 frames.push(performance.now() - start);

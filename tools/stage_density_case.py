@@ -9,6 +9,9 @@ import re
 import subprocess
 import zipfile
 from density_requirements import COPILOT_SUPPORT_REVISION, MONA_ROOT_REFERENCE_ID, artifact_identity, case_identity
+from symmetry_requirements import SYMMETRY_REVISION, symmetry_identity
+from symmetry_evidence import decode_support_transport
+from repository_meshes import PERMISSION as MESH_PERMISSION, validate_native_payload
 
 from validate_archive import privacy
 
@@ -133,6 +136,7 @@ def main():
     parser.add_argument("--case", help="Select one exact case from a multi-case READY packet")
     parser.add_argument("--reference", action="store_true", help="Accept only the explicitly separate support-free 1x reference")
     parser.add_argument("--body-support", action="store_true", help="Accept only the separate four-case Copilot body-support revision")
+    parser.add_argument("--symmetry", action="store_true", help="Accept only a sealed bilateral revision with separately permitted native repository meshes")
     args = parser.parse_args()
     receipt_bytes = args.receipt.read_bytes()
     if sha(receipt_bytes) != args.receipt_sha256:
@@ -142,13 +146,23 @@ def main():
         "READY_SINGLE_REPRESENTATIVE_CASE_NOT_ALL15", "READY_SINGLE_CASE_NOT_ALL15",
         "READY_FIXED_INCREMENTAL_CASES_NOT_AUTOMATIC_ALL15",
         "READY_FIXED_BODY_SUPPORT_REVISION_CASES",
+        "READY_FIXED_BILATERAL_SYMMETRY_CASES",
     }:
         raise ValueError("Only an explicitly finalized individual case may be staged")
     case_ids = receipt.get("case_ids", [receipt.get("case_id")])
     case = args.case or (case_ids[0] if len(case_ids) == 1 else None)
     if case is None or case not in case_ids:
         raise ValueError("Select an explicitly authorized case from this READY packet")
-    if args.body_support:
+    if args.symmetry:
+        symmetry_identity(case)
+        if (args.body_support or args.reference or receipt["state"] != "READY_FIXED_BILATERAL_SYMMETRY_CASES"
+                or receipt.get("geometry_revision") != SYMMETRY_REVISION
+                or receipt.get("catalog_path") != "revisions/bilateral-symmetry-v3/matrix.json"
+                or receipt.get("expected_revision_case_count") != 5):
+            raise ValueError("The symmetry packet must match its distinct sealed five-case scope")
+    elif receipt["state"] == "READY_FIXED_BILATERAL_SYMMETRY_CASES":
+        raise ValueError("Symmetry input requires explicit separated publication-permission handling")
+    elif args.body_support:
         if (args.reference or artifact_identity(case)[1] != COPILOT_SUPPORT_REVISION
                 or receipt["state"] != "READY_FIXED_BODY_SUPPORT_REVISION_CASES"
                 or receipt.get("geometry_revision") != COPILOT_SUPPORT_REVISION
@@ -173,6 +187,8 @@ def main():
     if stage.exists():
         raise ValueError("Refusing to overwrite a reviewed case staging directory")
     files = receipt["files"]
+    input_files = receipt.get("normalization_input_files", []) if args.symmetry else []
+    mesh_files = receipt.get("geometry_mesh_files", []) if args.symmetry else []
     if len({entry["path"] for entry in files}) != len(files):
         raise ValueError("Duplicate publication allowlist entries")
     payload = {}
@@ -182,6 +198,22 @@ def main():
         data = committed_bytes(repo, public / name, commit, entry)
         privacy(data, name)
         payload[name] = data
+    for entry in input_files:
+        name = entry["path"]
+        safe_relative(name)
+        if (entry.get("permission") != "NORMALIZATION_INPUT_NOT_PAGES" or entry.get("case_id") != case
+                or name != f"cases/{case}.json.gz" or name in payload
+                or entry.get("archive_member") != f"cases/{case}/viewer-source/{case}.json.gz"):
+            raise ValueError("Unexpected normalized-only source input or duplicate Pages publication")
+        data = committed_bytes(repo, public / name, commit, entry)
+        privacy(gzip.decompress(data), "normalization-only actual model")
+        payload[name] = data
+    for entry in mesh_files:
+        name = entry["path"]
+        safe_relative(name)
+        if entry.get("permission") != MESH_PERMISSION or name in payload:
+            raise ValueError("Native repository geometry was not explicitly separated from Pages/input files")
+        payload[name] = committed_bytes(repo, public / name, commit, entry)
     summary_name = receipt.get("case_summary_path", f"cases/{case}-summary.json")
     summary = json.loads(payload[summary_name])
     model_name = summary["manifest"]["path"]
@@ -192,10 +224,34 @@ def main():
     selected_names = {summary_name, model_name, catalog_name, "LICENSE", "ATTRIBUTION.md", "README.txt"}
     selected_names.update(image["path"] for image in summary["images"])
     selected_names.update(item["path"] for item in {**model["geometry"], **model["assembly_aid_geometry"]}.values())
-    if not args.body_support:
+    if args.symmetry:
+        if set(entry["type_id"] for entry in mesh_files) - model["geometry"].keys():
+            raise ValueError("The geometry permission list includes a type outside this actual model")
+        for entry in mesh_files:
+            geometry = model["geometry"][entry["type_id"]]
+            if geometry["path"] != entry["path"] or any(geometry[key] != entry[key] for key in ["bytes", "sha256"]):
+                raise ValueError("Repository-only permission differs from the actual source geometry descriptor")
+            validate_native_payload(entry, payload[entry["path"]], geometry["float32_mesh_sha256"])
+        transport = summary.get("assembly_validation_transport_ref")
+        if transport != model.get("assembly_validation_transport_ref"):
+            raise ValueError("Summary and compact proof transports differ")
+        path = transport["path"]
+        if path not in payload or path not in {entry["path"] for entry in files}:
+            raise ValueError("The symmetry proof's exact gzip transport is not allowlisted for Pages")
+        decode_support_transport(case, transport, summary["assembly_support"]["assembly_validation_ref"], payload[path])
+        selected_names.add(path)
+        visual_ref = summary.get("symmetry_visual_ref", {})
+        visual_path = f"validation/{case}-native-visual-symmetry.json"
+        if (visual_ref.get("path") != visual_path or visual_path not in payload
+                or len(payload[visual_path]) != visual_ref.get("bytes")
+                or sha(payload[visual_path]) != visual_ref.get("sha256")):
+            raise ValueError("The actual native visual-symmetry evidence is missing from the sealed Pages allowlist")
+        selected_names.add(visual_path)
+        selected_names.update({f"images/{case}-native-mirror-overlay.jpg", f"images/{case}-paired-eye-zoom.jpg"})
+    elif not args.body_support:
         selected_names.add("references.json")
         selected_names.update(image["path"] for row in json.loads(payload["references.json"])["rows"] for image in row["images"])
-    root_proof = root_validation_path(case, summary, model, payload)
+    root_proof = None if args.symmetry else root_validation_path(case, summary, model, payload)
     if root_proof is not None:
         selected_names.add(root_proof)
     if not selected_names <= set(payload):
@@ -234,13 +290,18 @@ def main():
     stage.mkdir(parents=True)
     light = stage / "light"
     for name, data in payload.items():
-        path = light / name
+        destination = (stage / "repository-native" if name in {entry["path"] for entry in mesh_files}
+                       else stage / "normalization-input" if name in {entry["path"] for entry in input_files} else light)
+        path = destination / name
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(data)
     native_root = stage / "native/artifacts/studies" / STUDY
     native_root.mkdir(parents=True)
     for entry in releases:
         with zipfile.ZipFile(entry["path"]) as package:
+            for normalization in input_files:
+                if package.read(normalization["archive_member"]) != payload[normalization["path"]]:
+                    raise ValueError("The exact normalization input is missing from the complete public Release package")
             package.extractall(native_root)
     portable_prefix = f"artifacts/studies/{STUDY}/portable/"
     for entry in persisted_artifacts:
@@ -256,6 +317,11 @@ def main():
         **({"kind": "COPILOT_BODY_SUPPORT_REVISION", "geometry_revision": COPILOT_SUPPORT_REVISION,
             "source_catalog_path": catalog_name, "public_storage_delta": receipt["public_storage_delta"]}
            if args.body_support else {}),
+        **({"kind": "COPILOT_SYMMETRY_REVISION", "geometry_revision": SYMMETRY_REVISION,
+            "source_catalog_path": catalog_name, "public_storage_delta": receipt["public_storage_delta"],
+            "source_repository_mesh_files": mesh_files,
+            "source_normalization_files": [{key: value for key, value in item.items() if key != "source_path"} for item in input_files],
+            "proof_transport": transport} if args.symmetry else {}),
         "private_verification_inputs_read": len(proof), "private_inputs_copied": 0,
         "private_raw_artifact_persistence_verified": len(persisted_artifacts),
         "source_release_files": [{key: item[key] for key in ["bytes", "sha256"]} | {"filename": Path(item["path"]).name}

@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "study_id": "part-count-matrix-20260921",
+  "geometry_revision": "bilateral-symmetry-v3",
+  "files": [
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/copilot-p300-symmetric-v3-summary.json",
+      "bytes": 287180,
+      "sha256": "a23bcfc1d5e7e765244d59271db70755d163aa1f647ca2fc5b48bbe3f57d84b3",
+      "source_relative_path": "cases/copilot-p300-symmetric-v3-summary.json",
+      "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p300-symmetric-v3-assembled-front.jpg",
+      "bytes": 80114,
+      "sha256": "f1d7e8cdc70d7cbf74acc8ffc96f6d2265bced6b04d060d665c0533256ff5385",
+      "source_relative_path": "images/copilot-p300-symmetric-v3-assembled-front.jpg",
+      "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p300-symmetric-v3-assembled-three_quarter.jpg",
+      "bytes": 107339,
+      "sha256": "ec69a3c67780d8334b62b70b7c68e06906409231e89a4f24a455c87ce73a058c",
+      "source_relative_path": "images/copilot-p300-symmetric-v3-assembled-three_quarter.jpg",
+      "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p300-symmetric-v3-native-mirror-overlay.jpg",
+      "bytes": 34381,
+      "sha256": "55a319d9d05194e7e4c2942d32dd3041191ba7a6f6d0e911f685be6b93422a8d",
+      "source_relative_path": "images/copilot-p300-symmetric-v3-native-mirror-overlay.jpg",
+      "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p300-symmetric-v3-paired-eye-zoom.jpg",
+      "bytes": 52393,
+      "sha256": "a16ae519b0527ac5adeeefb353826f4da8e4136207f56cf772fad59e7713f2b5",
+      "source_relative_path": "images/copilot-p300-symmetric-v3-paired-eye-zoom.jpg",
+      "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p300-symmetric-v3-radial-exploded.jpg",
+      "bytes": 162838,
+      "sha256": "7c0e239eb19f2a8b28819dbd9ce8e697038cf46b0d4e53c64f7327420af5f3a3",
+      "source_relative_path": "images/copilot-p300-symmetric-v3-radial-exploded.jpg",
+      "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p300-symmetric-v3-registered-face.jpg",
+      "bytes": 75795,
+      "sha256": "209a58b71c3fda0a32fc6cb6da9aeebb945bc32c95f4f9649b8065a2cd8da64a",
+      "source_relative_path": "images/copilot-p300-symmetric-v3-registered-face.jpg",
+      "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/source-records/a196f2b2b130fed5606ab32617c4aa377db1bb8f-bilateral-symmetry-v3-matrix.json",
+      "bytes": 3028,
+      "sha256": "203a708371d2a2e5e8db62fede8390c1f21a155258a2383e5e65960f2d8227a4",
+      "source_relative_path": "revisions/bilateral-symmetry-v3/matrix.json",
+      "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/validation/copilot-p300-symmetric-v3-native-visual-symmetry.json",
+      "bytes": 1811,
+      "sha256": "eb8d478b1e75de9712f5d41c0194ca55f7dfa24e1666ac3e2f307c48791dd10c",
+      "source_relative_path": "validation/copilot-p300-symmetric-v3-native-visual-symmetry.json",
+      "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/validation/copilot-p300-symmetric-v3-symmetry-support.json.gz",
+      "bytes": 218366,
+      "sha256": "02edf5b8c868efd0d1b051d97c3b40585c4eea2a006dbd89a204a81454da0bbe",
+      "source_relative_path": "validation/copilot-p300-symmetric-v3-symmetry-support.json.gz",
+      "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f"
+    }
+  ],
+  "source_revision": "a196f2b2b130fed5606ab32617c4aa377db1bb8f"
+}

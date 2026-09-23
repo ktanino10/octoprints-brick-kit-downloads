@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "study_id": "copilot-symmetry-20260923",
+  "geometry_revision": "bilateral-symmetry-v3",
+  "state": "PARTIAL_SYMMETRY_SOURCE",
+  "ready_case_count": 1,
+  "expected_case_count": 5,
+  "cases": [
+    {
+      "logical_case_id": "copilot-p120",
+      "case_id": "copilot-p120-symmetric-v3",
+      "geometry_revision": "bilateral-symmetry-v3",
+      "previous_current_case_id": "copilot-p120-support-free-v2",
+      "state": "PENDING",
+      "actual_count": null,
+      "baseline_count": 17873,
+      "target_count": 21448,
+      "summary_path": null,
+      "compact_distribution": "RELEASE_ONLY_NORMALIZATION_INPUT",
+      "new_native_mesh_distribution": "PUBLIC_REPO_NATIVE_MESH_NOT_PAGES"
+    },
+    {
+      "logical_case_id": "copilot-p150",
+      "case_id": "copilot-p150-symmetric-v3",
+      "geometry_revision": "bilateral-symmetry-v3",
+      "previous_current_case_id": "copilot-p150-support-free-v2",
+      "state": "PENDING",
+      "actual_count": null,
+      "baseline_count": 17873,
+      "target_count": 26810,
+      "summary_path": null,
+      "compact_distribution": "RELEASE_ONLY_NORMALIZATION_INPUT",
+      "new_native_mesh_distribution": "PUBLIC_REPO_NATIVE_MESH_NOT_PAGES"
+    },
+    {
+      "logical_case_id": "copilot-p200",
+      "case_id": "copilot-p200-symmetric-v3",
+      "geometry_revision": "bilateral-symmetry-v3",
+      "previous_current_case_id": "copilot-p200-support-free-v2",
+      "state": "PENDING",
+      "actual_count": null,
+      "baseline_count": 17873,
+      "target_count": 35746,
+      "summary_path": null,
+      "compact_distribution": "RELEASE_ONLY_NORMALIZATION_INPUT",
+      "new_native_mesh_distribution": "PUBLIC_REPO_NATIVE_MESH_NOT_PAGES"
+    },
+    {
+      "logical_case_id": "copilot-p300",
+      "case_id": "copilot-p300-symmetric-v3",
+      "geometry_revision": "bilateral-symmetry-v3",
+      "previous_current_case_id": "copilot-p300-support-free-v2",
+      "state": "READY",
+      "actual_count": 53575,
+      "baseline_count": 17873,
+      "target_count": 53619,
+      "summary_path": "cases/copilot-p300-symmetric-v3-summary.json",
+      "compact_distribution": "RELEASE_ONLY_NORMALIZATION_INPUT",
+      "new_native_mesh_distribution": "PUBLIC_REPO_NATIVE_MESH_NOT_PAGES"
+    },
+    {
+      "logical_case_id": "copilot-p400",
+      "case_id": "copilot-p400-symmetric-v3",
+      "geometry_revision": "bilateral-symmetry-v3",
+      "previous_current_case_id": "copilot-p400",
+      "state": "PENDING",
+      "actual_count": null,
+      "baseline_count": 17873,
+      "target_count": 71492,
+      "summary_path": null,
+      "compact_distribution": "RELEASE_ONLY_NORMALIZATION_INPUT",
+      "new_native_mesh_distribution": "PUBLIC_REPO_NATIVE_MESH_NOT_PAGES"
+    }
+  ],
+  "source_only_not_public_QA": true,
+  "frozen_reference_count": 17873,
+  "one_x_symmetry": "KNOWN_ORIGINAL_ASYMMETRY_NOT_REVISED",
+  "status": {
+    "selection": "NOT_SELECTED",
+    "physical_fit": "UNKNOWN",
+    "slicer_status": "NOT_SLICED",
+    "full_print": "ON_HOLD"
+  }
+}

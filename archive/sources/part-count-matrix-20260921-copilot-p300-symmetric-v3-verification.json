@@ -1,0 +1,127 @@
+{
+  "case_id": "copilot-p300-symmetric-v3",
+  "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f",
+  "metrics": {
+    "part_count": 53575,
+    "unique_types": 306,
+    "one_by_one_exceptions": 184,
+    "layer_count": 113,
+    "minimum_part_mm": [
+      7.8,
+      7.8,
+      3.2
+    ],
+    "grip_long_ge_15_8_count": 53391
+  },
+  "manifest_sha256": "65be136e2c360b0cad5f2fbf93c41d25fb3decb9a4a4543673e7f6c2e7b07b27",
+  "bom_sha256": "112a44f948e80460d4aabf643a4f0ec07e77c4f6b07c543abf6eea90ca9d4892",
+  "counted_instances": 53575,
+  "bom_ids_match": true,
+  "bom_types_colors_poses_steps_match": true,
+  "identity_projection_sha256": "7fd0a47f72028a794d95ae05de37d3fe6d5a14f6ff6ad70b3e1ea4f986d67ba4",
+  "body_height_families": [
+    {
+      "body_height_mm": 3.2,
+      "part_count": 203,
+      "unique_types": 8
+    },
+    {
+      "body_height_mm": 4.8,
+      "part_count": 53354,
+      "unique_types": 280
+    },
+    {
+      "body_height_mm": 9.6,
+      "part_count": 15,
+      "unique_types": 15
+    },
+    {
+      "body_height_mm": 14.4,
+      "part_count": 2,
+      "unique_types": 2
+    },
+    {
+      "body_height_mm": 57.6,
+      "part_count": 1,
+      "unique_types": 1
+    }
+  ],
+  "public_native_assembly": {
+    "path": "artifacts/studies/part-count-matrix-20260921/cases/copilot-p300-symmetric-v3/assembly.FCStd",
+    "document_objects": 326,
+    "native_links_resolved": 326,
+    "link_instances": 53575,
+    "valid_single_solid_targets_checked": 306,
+    "proxy_free": true,
+    "opened": true,
+    "recomputed": false,
+    "saved": false,
+    "sha256": "c2c10e103f73c84b8981b6fe03e75b75ef111d3839568f0199478e05f13f458a"
+  },
+  "public_blender_motion_preserved": true,
+  "source_saved_scene_binding": "e74ba70a0b5fc5a06ae55ba2d2ebb0bcb2f6bdfe155b82cb4a441f10ce3034af",
+  "source_native_reopen": {
+    "result": "PASS_REOPENED_RELATIVE_NATIVE_LINK_ARRAYS",
+    "actual_instance_count": 53575,
+    "all_ids_types_colors_poses_steps": true,
+    "all_sources_inside_bundle": true
+  },
+  "private_inputs_copied": 0,
+  "symmetry_revision_evidence": {
+    "geometry_sequence_identity_sha256": "600e236bcc0e52aaf7f1671a04b2dca4ebb7eee0350810032c83d7cf87153ec4",
+    "native_support_contact_evidence_sha256": "6e7f9b40e1b8fbb88cb0392f2d252ec6a772ae92f92cc2b322a5f86f52b4c82d",
+    "checked_material_supports": 43,
+    "actual_native_load_prefixes": 413,
+    "actual_native_material_sections": 476,
+    "minimum_nominal_support_margin_mm": 1.009384090433274,
+    "required_nominal_support_margin_mm": 1,
+    "required_baseline_targets_covered": 73,
+    "nonreset_token_loads_match_actual_support_graph": true,
+    "external_aid_count": 0,
+    "assembly_aid_count": 0,
+    "physical_validation": "UNKNOWN",
+    "native_pair_evidence": {
+      "actual_native_type_rotation_pairs": 272,
+      "maximum_symmetric_difference_volume_mm3": 0.0,
+      "tolerance": "max(1e-5 mm^3, max(actual volumes)*1e-7)",
+      "all_actual_pairs_covered": true,
+      "physical_validation": "UNKNOWN"
+    },
+    "independent_native_pairs": 272,
+    "independent_change_and_visual": {
+      "case_id": "copilot-p300-symmetric-v3",
+      "intentional_change_from_previous_published_case": {
+        "added_1_6mm_cells": 4719,
+        "removed_1_6mm_cells": 4782,
+        "recolored_1_6mm_cells": 3654,
+        "full_diff_matches_sealed_readonly_record": true
+      },
+      "new_mechanical_baseline_cells_and_colors_exact": true,
+      "actual_native_png": {
+        "image_size_px": [
+          1200,
+          1200
+        ],
+        "left_eye_pixels": 10426,
+        "right_eye_pixels": 10426,
+        "whole_material_xor": 0,
+        "silhouette_xor": 0,
+        "eye_mask_xor": 0,
+        "classification": "unlit native material R/G/B channels; alpha>127; dominant channel label"
+      },
+      "physical_validation": "UNKNOWN"
+    },
+    "gravity_balance_result": "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS"
+  },
+  "public_native_id_pose_check": {
+    "case_id": "copilot-p300-symmetric-v3",
+    "assembly_sha256": "c2c10e103f73c84b8981b6fe03e75b75ef111d3839568f0199478e05f13f458a",
+    "actual_instances": 53575,
+    "array_count": 326,
+    "all_ids_types_colors_poses_steps": "MATCH",
+    "relocated_reopen": true,
+    "saved": false,
+    "recomputed": false
+  },
+  "files": []
+}

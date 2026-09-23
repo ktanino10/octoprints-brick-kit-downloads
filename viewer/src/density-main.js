@@ -1,7 +1,8 @@
 import { assetURL, setLanguageContext } from '../../assets/i18n.js';
 import { getJSON as readJSON } from './network.js';
 import {
-  DENSITY_POINTER, validateDensityPointer, validateDensityCatalog, densityAssert as check, densityDeliveryStatus, densityGuideEntries,
+  DENSITY_POINTER, validateDensityPointer, validateDensityCatalog, validateDensityFile,
+  densityAssert as check, densityDeliveryStatus, densityGuideEntries,
 } from '../../assets/density-data.js';
 import { studyElement as element, formatStudyNumber as number, studyVideo } from '../../assets/study-ui.js';
 import { verifiedJSON } from './density-assets.js';
@@ -14,6 +15,8 @@ import { DensityStudio } from './density-studio.js';
 import { DensityPartPreview } from './density-part-preview.js';
 import { readDensityView, writeDensityView } from './density-view-state.js';
 import { loadBodySupportPublication } from '../../assets/body-support-publication.js';
+import { loadSymmetryPublication } from '../../assets/symmetry-publication.js';
+import { createViewPersistence } from './view-persistence.js';
 
 const $ = (selector) => document.querySelector(selector);
 let catalog = null, displayCatalog = null, candidate = null, manifest = null, index = null, studio = null, preview = null;
@@ -21,7 +24,15 @@ let detailMode = 'native';
 let progress = { mode: 'assembled', steps: 0, explosion: 0 };
 let selected = null, playback = null, request = null, generation = 0, animationFrame = null, page = 0;
 let pendingExplosionFrame = null, pendingExplosion = 0;
-let lastSaved = 0;
+const viewPersistence = createViewPersistence({
+  readURL: () => manifest ? writeURL() : null,
+  currentURL: () => location.href,
+  replace: url => history.replaceState(history.state, '', url),
+  onError: error => {
+    console.error('Assembly view URL could not be saved.', error);
+    showError('共有URLを更新できませんでした。組立操作は続けられます。');
+  },
+});
 const originalParams = new URLSearchParams(location.search);
 Object.defineProperty(window, '__densityGuide', { value: Object.freeze({
   diagnostics: () => studio?.diagnostics() ?? { ready: false },
@@ -61,11 +72,7 @@ function writeURL(url = new URL(location.href)) {
 }
 setLanguageContext(writeURL);
 function saveView() {
-  if (!manifest) return;
-  const now = performance.now();
-  if (playback?.playing && now - lastSaved < 250) return;
-  lastSaved = now;
-  history.replaceState(history.state, '', writeURL());
+  if (manifest) viewPersistence.request();
 }
 function stopPlayback() {
   playback?.pause();
@@ -92,7 +99,7 @@ function updateProgress() {
   const active = progress.mode === 'assembly' ? index.ordered[progress.steps] ?? null : null;
   $('#guide-active').textContent = active ? `${active.id} · ${active.type_id} · ${manifest.palette[active.color_id].name}`
     : count === manifest.parts.length ? '全IDを表示中（実物組立の承認ではありません）' : '次に配置する部品を確認してください。';
-  $('#guide-current-course').textContent = !active ? '' : ['BODY_FIRST_ROOT_ANCHORED', 'BODY_FIRST_INTERNAL_SUPPORT'].includes(manifest.animation_contract.sequence_mode)
+  $('#guide-current-course').textContent = !active ? '' : ['BODY_FIRST_ROOT_ANCHORED', 'BODY_FIRST_INTERNAL_SUPPORT', 'BILATERAL_BODY_FIRST_SUPPORT'].includes(manifest.animation_contract.sequence_mode)
     ? `次：支持段 ${active.assembly_course} / 支持高さZ ${number(active.assembly_stage_z_mm)} mm / 実部品底面Z ${number(active.position_mm[2])} mm`
     : `次：配置層 ${active.assembly_course} / 底面Z ${number(active.position_mm[2])} mm`;
   $('#guide-required-aids').textContent = active?.required_aids.length
@@ -229,6 +236,7 @@ async function selectCandidate(id, params = null) {
   const item = densityGuideEntries(catalog).find((entry) => entry.id === id);
   check(item, '指定した倍率案がカタログにありません。');
   request?.abort(); request = new AbortController();
+  viewPersistence.cancel();
   const current = ++generation, signal = request.signal;
   stopPlayback();
   manifest = null; index = null; selected = null; page = 0;
@@ -282,11 +290,39 @@ async function selectCandidate(id, params = null) {
       '表示中は外付け・組立仮支台が必要な旧Mona設計です。支台を非表示にして新要件達成とは扱いません。ヒゲ支台なしの新版とは別の履歴で、今回の完了件数から除外しています。';
     if (rootProof) {
       $('#guide-whisker-status').hidden = false;
-      const body = next.geometry_revision === 'body-support-v2';
-      $('#guide-whisker-status').replaceChildren(element('p', body
+      const symmetric = next.geometry_revision === 'bilateral-symmetry-v3';
+      const body = next.geometry_revision === 'body-support-v2' || symmetric;
+      $('#guide-whisker-status').replaceChildren(element('p', symmetric
+        ? 'この改訂は、目・ゴーグル・顔・側面・土台を含む実部品と色の左右対称性を確認しています。外付け・組立仮支台は0個です。元の版から意図的に形・色を修正しており、画像だけの反転ではありません。現物の保持力・強度は未検証です。'
+        : body
         ? 'このCopilot改訂は本体内部の実一体支持構造を使い、外付け支え・組立仮支台は0個です。実CADの接触・断面・全組立途中の公称重心を検査済みですが、現物の保持力・強度は未検証です。実部品の底面Zと受け側の支持高さは区別します。'
         : 'この改訂は実一体ヒゲ部品と支持段の順序を使い、外付け支え・組立仮支台は0個です。CAD接触・断面・公称重心を検査済みですが、実物の質量・保持力・強度は未検証です。実部品の底面Zと支持高さは区別して表示します。'),
       link(body ? next.support_validation : next.root_validation, '根元・順序・公称CAD重心の検査記録 ↗'));
+      if (symmetric) {
+        const visual = await verifiedJSON(item.symmetry_visual, signal);
+        if (current !== generation) return;
+        check(visual.case_id === item.id && visual.source_manifest_sha256 === next.source_manifest_sha256
+          && visual.geometry_revision === 'bilateral-symmetry-v3'
+          && visual.state === 'PASS_ACTUAL_NATIVE_MASKS_WITH_DECLARED_RASTER_TOLERANCE'
+          && visual.left_vs_reflected_right_eye_xor_pixels === 0 && visual.whole_material_xor_pixels === 0
+          && visual.whole_silhouette_xor_pixels === 0, '対称化改訂の公開記録が、実モデル・固定分母・検査記録と一致しません。');
+        const details = element('details');
+        details.append(element('summary', '左右の目と実形状の比較記録を見る'));
+        for (const image of visual.images) {
+          check(['paired-eye-zoom', 'native-mirror-overlay'].includes(image.view)
+            && image.path === `images/${item.id}-${image.view}.jpg`,
+          '対称化改訂の公開記録が、実モデル・固定分母・検査記録と一致しません。');
+          const file = validateDensityFile({ ...image, path: `/artifacts/studies/part-count-matrix-20260921/${image.path}` });
+          const img = document.createElement('img');
+          img.src = assetURL(file.path);
+          img.alt = image.view === 'paired-eye-zoom' ? '実CGの左右の目を同じ縮尺で比較' : '実ネイティブ形状の左右鏡像マスク';
+          img.loading = 'lazy'; img.className = 'native-symmetry-image';
+          img.addEventListener('error', () => showError(new Error('実比較画像を読み込めません。旧画像や仮のモデルで代用していません。')));
+          details.append(img);
+        }
+        details.append(link(item.symmetry_visual, '実ネイティブ描画の対称性記録 ↗'));
+        $('#guide-whisker-status').append(details);
+      }
     }
     $('#guide-target-status').textContent = item.kind === 'BASELINE_REFERENCE_NOT_MULTIPLIER_CASE'
       ? `倍率計算の固定基準 ${number(item.fixed_count_baseline, 0)}部品 / 支台なし参照の実構成 ${number(item.metrics.part_count, 0)}部品（差 ${number(item.actual_count_difference_from_fixed, 0)}）。15案の完成件数には含めません。`
@@ -351,7 +387,10 @@ $('#guide-explode').addEventListener('input', () => {
     pendingExplosionFrame = null; progress.explosion = pendingExplosion; updateProgress();
   });
 });
-$('#guide-step').addEventListener('input', () => { stopPlayback(); playback.seek(Number($('#guide-step').value)); });
+$('#guide-step').addEventListener('input', () => {
+  const requestedStep = Number($('#guide-step').value);
+  stopPlayback(); playback.seek(requestedStep);
+});
 $('#guide-search').addEventListener('input', () => { page = 0; renderParts(); saveView(); });
 $('#guide-same').addEventListener('change', () => { page = 0; renderParts(); saveView(); });
 $('#guide-prev').addEventListener('click', () => { page--; renderParts(); });
@@ -374,8 +413,10 @@ document.querySelectorAll('[data-guide-action]').forEach((button) => button.addE
   if (action === 'course-next') playback.seek(courseBoundary(index, progress.steps, 1));
   if (action === 'course-prev') playback.seek(courseBoundary(index, progress.steps, -1));
 }));
-document.addEventListener('visibilitychange', () => { if (document.hidden) stopPlayback(); });
-window.addEventListener('pagehide', stopPlayback);
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) { stopPlayback(); viewPersistence.flush(); }
+});
+window.addEventListener('pagehide', () => { stopPlayback(); viewPersistence.flush(); });
 window.addEventListener('popstate', () => {
   if (!catalog) return;
   const params = new URLSearchParams(location.search);
@@ -405,6 +446,8 @@ try {
     catalog = validateDensityCatalog(await verifiedJSON(pointer.catalog), pointer);
     const bodyPublication = await loadBodySupportPublication(readJSON, file => verifiedJSON(file), pointer);
     if (bodyPublication.catalog) catalog = { ...catalog, support_revisions: bodyPublication.catalog };
+    const symmetryPublication = await loadSymmetryPublication(readJSON, file => verifiedJSON(file), pointer);
+    if (symmetryPublication.catalog) catalog = { ...catalog, symmetry_revisions: symmetryPublication.catalog };
     if (catalog.display_catalog) {
       displayCatalog = await verifiedJSON(catalog.display_catalog);
       check(displayCatalog.schema_version === 1 && displayCatalog.study_id === catalog.study_id
@@ -415,6 +458,14 @@ try {
     }
     if (bodyPublication.catalog?.display_catalog) {
       const addition = await verifiedJSON(bodyPublication.catalog.display_catalog);
+      check(addition.schema_version === 1 && addition.study_id === catalog.study_id
+        && addition.mode === 'DISPLAY_ONLY_LIGHTWEIGHT' && addition.roots_and_non_rectangular_types === 'UNCHANGED_NATIVE'
+        && addition.selected_part_preview === 'UNCHANGED_NATIVE',
+      '表示用軽量形状の原形指紋・誤差・変更範囲が不正です。');
+      displayCatalog = { ...addition, cases: { ...displayCatalog?.cases, ...addition.cases } };
+    }
+    if (symmetryPublication.catalog?.display_catalog) {
+      const addition = await verifiedJSON(symmetryPublication.catalog.display_catalog);
       check(addition.schema_version === 1 && addition.study_id === catalog.study_id
         && addition.mode === 'DISPLAY_ONLY_LIGHTWEIGHT' && addition.roots_and_non_rectangular_types === 'UNCHANGED_NATIVE'
         && addition.selected_part_preview === 'UNCHANGED_NATIVE',

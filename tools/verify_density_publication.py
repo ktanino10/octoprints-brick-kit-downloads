@@ -11,6 +11,7 @@ from urllib.request import Request, urlopen
 
 from make_density_receipt import public_asset_records
 from density_requirements import validate_copilot_support_receipt
+from symmetry_requirements import validate_symmetry_receipt
 from verify_publication import BASE, HEADERS, get_json, verify_bytes
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -74,11 +75,16 @@ def main():
     parser.add_argument("--expected-commit", required=True)
     parser.add_argument("--before", required=True)
     parser.add_argument("--body-support", action="store_true", help="Verify only the separate new Copilot support-free publication")
+    parser.add_argument("--symmetry", action="store_true", help="Verify the separate bilateral-symmetry publication")
+    parser.add_argument("--repository-mesh-report", type=Path, help="Actual anonymous CORS/native-byte report for the symmetry meshes")
     parser.add_argument("--report", type=Path, required=True)
     parser.add_argument("--browser-report", type=Path, help="Actual public browser/media acceptance report")
     parser.add_argument("--previous-report", type=Path, action="append", default=[],
                         help="Reuse exact already-verified immutable asset digests after a fresh anonymous availability check")
     args = parser.parse_args()
+    if args.body_support and args.symmetry:
+        raise ValueError("Select one new-revision public verification scope")
+    revision_mode = args.body_support or args.symmetry
     if not all(re.fullmatch(r"[0-9a-f]{40}", value) for value in [args.expected_commit, args.before]):
         raise ValueError("Exact public commits are required")
     if not args.report.resolve().is_relative_to(ROOT / ".archive-work"):
@@ -90,13 +96,15 @@ def main():
     if pointer != json.loads((ROOT / "archive/density-study.json").read_text()) or pointer["state"] == "INPUT_WAIT":
         raise ValueError("Actual matrix pointer is missing or stale")
     body_receipt = None
-    if args.body_support:
-        body_receipt = validate_copilot_support_receipt(get_json(BASE + "archive/copilot-support-free-revision.json"))
-        if body_receipt != json.loads((ROOT / "archive/copilot-support-free-revision.json").read_text()):
+    if revision_mode:
+        record_path = "archive/copilot-symmetry-revision.json" if args.symmetry else "archive/copilot-support-free-revision.json"
+        validator = validate_symmetry_receipt if args.symmetry else validate_copilot_support_receipt
+        body_receipt = validator(get_json(BASE + record_path))
+        if body_receipt != json.loads((ROOT / record_path).read_text()):
             raise ValueError("The separate Copilot revision receipt is stale")
         if body_receipt.get("base_catalog_sha256") != pointer["catalog"]["sha256"]:
             raise ValueError("The new revision is not bound to the unchanged original matrix")
-    catalog_file = body_receipt["revision_catalog"] if args.body_support else pointer["catalog"]
+    catalog_file = body_receipt["revision_catalog"] if revision_mode else pointer["catalog"]
     catalog_path = catalog_file["path"].lstrip("/")
     data = (ROOT / catalog_path).read_bytes()
     if hashlib.sha256(data).hexdigest() != catalog_file["sha256"]:
@@ -104,7 +112,7 @@ def main():
     catalog = json.loads(data)
     if get_json(BASE + catalog_path) != catalog:
         raise ValueError("Actual public catalog differs from the checked local one")
-    delivery_catalog = {**catalog, "baselines": {}} if args.body_support else catalog
+    delivery_catalog = {**catalog, "baselines": {}} if revision_mode else catalog
     inventory = get_json(BASE + "archive/inventory.json")
     if inventory != json.loads((ROOT / "archive/inventory.json").read_text()):
         raise ValueError("Actual public inventory is stale")
@@ -147,17 +155,28 @@ def main():
     report = {"study_id": STUDY, "deployment": deployment, "catalog_sha256": catalog_file["sha256"],
               "changed_site_files": site, "assets": assets, "animation_range_checks": video_ranges,
               "old_history_not_redownloaded": True, "physical_fit": "UNKNOWN", "slicer_status": "NOT_SLICED", "full_print": "ON_HOLD"}
-    if args.body_support:
-        report.update(geometry_revision="body-support-v2", request_id=body_receipt["request_id"],
+    if revision_mode:
+        report.update(geometry_revision="bilateral-symmetry-v3" if args.symmetry else "body-support-v2",
+                      request_id=body_receipt["request_id"],
                       base_catalog_sha256=pointer["catalog"]["sha256"])
+    if args.symmetry:
+        if args.repository_mesh_report is None or not args.repository_mesh_report.resolve().is_relative_to(ROOT / ".archive-work"):
+            raise ValueError("Symmetry publication requires its actual pinned native-geometry verification")
+        mesh_report = json.loads(args.repository_mesh_report.read_text())
+        if (mesh_report.get("state") != "PUBLIC_NATIVE_MESHES_VERIFIED_NOT_CASE_READY"
+                or mesh_report.get("all_anonymous_cors_sha_native_geometry") is not True
+                or not mesh_report.get("files")):
+            raise ValueError("No complete anonymous native repository-geometry verification was supplied")
+        report["repository_native_geometry"] = mesh_report
     if args.browser_report:
         if not args.browser_report.resolve().is_relative_to(ROOT / ".archive-work"):
             raise ValueError("Use the current owned public browser report")
         browser = json.loads(args.browser_report.read_text())
         exists = subprocess.run(["git", "-C", str(ROOT), "cat-file", "-e", args.before + ":" + catalog_path],
                                 stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL).returncode == 0
-        if args.body_support:
-            if browser.get("geometry_revision") != "body-support-v2":
+        if revision_mode:
+            expected_revision = "bilateral-symmetry-v3" if args.symmetry else "body-support-v2"
+            if browser.get("geometry_revision") != expected_revision:
                 raise ValueError("Old public browser checks cannot complete the new support-free request")
             previous_catalog = json.loads(subprocess.check_output([
                 "git", "-C", str(ROOT), "show", args.before + ":" + catalog_path])) if exists else {"cases": []}

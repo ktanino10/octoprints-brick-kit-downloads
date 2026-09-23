@@ -2,10 +2,12 @@
 
 [日本語](README.md) / [English](README.en.md)
 
-**Copilot's bilateral symmetry is being corrected.** The five current variants have geometric/color differences
-between the eyes and other paired features; current downloads are not symmetry-corrected.
+**Copilot's bilateral symmetry is being corrected.** Verified new versions are added case by case,
+while variants still awaiting correction are explicitly marked. Historical versions are not relabeled symmetric.
 The [new correction status](archive/copilot-symmetry-revision.json) is separate from the completed four-case
 support-free delivery. Corrected native CAD, colors, assembly data and animation are required, not image-only edits.
+[View the corrected 3× model and actual eye comparison](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-guide.html?case=copilot-p300-symmetric-v3):
+53,575 actual parts, 306 types and zero assembly aids. This does not complete all five variants; the receipt records each case's public-verification state.
 
 **[Public site / English](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/)** ·
 **[Actual 3D assembly guide](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-guide.html)** ·

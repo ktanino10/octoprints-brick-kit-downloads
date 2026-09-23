@@ -14,6 +14,10 @@ from mona_study_evidence import verify_manifest_bom, body_height_families
 from density_requirements import COPILOT_SUPPORT_REVISION, MONA_ROOT_REFERENCE_ID, artifact_identity
 from density_root_evidence import validate_root_evidence
 from density_body_support import validate_body_support_evidence, validate_support_ledger
+from symmetry_evidence import decode_support_transport, validate_part_pairs, validate_native_pair_volumes
+from symmetry_requirements import SYMMETRY_REVISION
+from symmetry_support_evidence import verify_bilateral_supports
+from repository_meshes import pinned_mesh_descriptor
 from validate_archive import privacy
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -98,6 +102,7 @@ def main():
     parser.add_argument("--receipt", type=Path, required=True)
     parser.add_argument("--receipt-sha256", required=True)
     parser.add_argument("--stage", type=Path, required=True)
+    parser.add_argument("--mesh-public-commit", help="Fixed public repository commit for the explicitly separated native meshes")
     args = parser.parse_args()
     receipt_bytes = args.receipt.read_bytes()
     if sha(receipt_bytes) != args.receipt_sha256:
@@ -112,13 +117,17 @@ def main():
     stage_review = json.loads((stage / "source-review.json").read_text())
     case_id = stage_review["case_id"]
     is_reference = stage_review.get("kind") == "BASELINE_REFERENCE_NOT_MULTIPLIER_CASE"
+    is_symmetry = stage_review.get("kind") == "COPILOT_SYMMETRY_REVISION"
+    if is_symmetry and not args.mesh_public_commit:
+        raise ValueError("The corrected case needs a fixed PUBLIC native-mesh commit before guide normalization")
     if is_reference and (case_id != MONA_ROOT_REFERENCE_ID or receipt.get("multiplier_cases_newly_ready") != 0):
         raise ValueError("A reference cannot be accepted as a multiplier case")
     if case_id not in receipt.get("case_ids", [receipt.get("case_id")]) or stage_review["source_commit"] != receipt["source_commit"]:
         raise ValueError("Staged case is not authorized by this fixed READY receipt")
     summary = json.loads((light / receipt.get("case_summary_path", f"cases/{case_id}-summary.json")).read_text())
     compressed_file = summary["manifest"]["path"]
-    payload = json.loads(gzip.decompress((light / compressed_file).read_bytes()))
+    input_folder = stage / "normalization-input" if is_symmetry else light
+    payload = json.loads(gzip.decompress((input_folder / compressed_file).read_bytes()))
     private_files = receipt["read_only_verification_files"]
 
     def proof_bytes(ending):
@@ -145,7 +154,8 @@ def main():
     audit = json.loads(proof_bytes(f"/cases/{case_id}/saved-scene-audit.json"))
     native = json.loads(proof_bytes(f"/portable/cases/{case_id}/native-complete.json"))
     sequence_valid = (
-        validation.get("result") == ("PASS_LIMITED_NATIVE_SUPPORT_AND_BODY_FIRST_SEQUENCE" if body_support
+        validation.get("result") == ("PASS_LIMITED_NATIVE_SYMMETRY_AND_NONRESET_SUPPORT" if is_symmetry
+                                    else "PASS_LIMITED_NATIVE_SUPPORT_AND_BODY_FIRST_SEQUENCE" if body_support
                                     else "PASS_LIMITED_NATIVE_ROOT_AND_BODY_FIRST_SEQUENCE")
         and validation.get("manifest_sha256") == sha(mb)
         and validation.get("case_id") == case_id
@@ -165,7 +175,20 @@ def main():
             or not sequence_valid):
         raise ValueError("Actual case count, BOM, motion or native evidence mismatch")
     parts = {part["id"]: part for part in full["parts"]}
-    verify_light_parts(parts, payload["parts"])
+    mirror_record = None
+    if is_symmetry:
+        mirror_record = json.loads(proof_bytes(f"/cases/{case_id}/nominal-symmetry-pairs.json"))
+        mirror_map = mirror_record["physical_part_mirror_map"]
+        validate_part_pairs(full["parts"], mirror_map)
+        if any(part.get("mirror_part_id") != mirror_map.get(part["id"]) for part in payload["parts"]):
+            raise ValueError("Approved public mirror IDs differ from the exact source pairing map")
+        if any(part.get("mechanically_checked_support") is not (parts[part["id"]].get("mechanically_checked_support") is True)
+               for part in payload["parts"]):
+            raise ValueError("Compact mechanical-support flags differ from the actual source support set")
+        verify_light_parts(parts, [{key: value for key, value in part.items() if key not in {"mirror_part_id", "mechanically_checked_support"}}
+                                  for part in payload["parts"]])
+    else:
+        verify_light_parts(parts, payload["parts"])
     source_motion = audit["saved_scene_binding"]
     if (source_motion["actual_instance_count"] != len(parts)
             or source_motion["used_native_types"] != evidence["metrics"]["unique_types"]
@@ -181,13 +204,36 @@ def main():
         raise ValueError("Public saved-scene animation was not preserved")
     root_record = root_validation = whisker_support = load_ledger = None
     if revision:
-        reference = summary["assembly_support" if body_support else "whisker_support"]["assembly_validation_ref"]
-        if reference["path"] != f"validation/{case_id}-{'assembly' if body_support else 'whisker'}-support.json":
+        reference = summary["assembly_support" if body_support or is_symmetry else "whisker_support"]["assembly_validation_ref"]
+        suffix = "symmetry" if is_symmetry else "assembly" if body_support else "whisker"
+        if reference["path"] != f"validation/{case_id}-{suffix}-support.json":
             raise ValueError("The actual root revision references a different validation record")
-        root_bytes = (light / reference["path"]).read_bytes()
+        if is_symmetry:
+            transport = summary["assembly_validation_transport_ref"]
+            if transport != payload.get("assembly_validation_transport_ref"):
+                raise ValueError("The actual symmetry proof transport differs across approved inputs")
+            decoded_proof, root_bytes = decode_support_transport(case_id, transport, reference, (light / transport["path"]).read_bytes())
+        else:
+            root_bytes = (light / reference["path"]).read_bytes()
         if sha(root_bytes) != reference["sha256"]:
             raise ValueError("The exact public root validation bytes changed")
-        root_record = (validate_body_support_evidence if body_support else validate_root_evidence)(json.loads(root_bytes), full, native)
+        if is_symmetry:
+            root_record = verify_bilateral_supports(decoded_proof, full, native)
+            pairs = validate_part_pairs(full["parts"], mirror_record["physical_part_mirror_map"])
+            root_record["native_pair_evidence"] = validate_native_pair_volumes(decoded_proof["native_symmetry"], pairs)
+            independent = json.loads((stage / "independent-native-symmetry.json").read_text())
+            if (independent.get("state") != "PASS_ACTUAL_PORTABLE_BREP_REFLECTION"
+                    or independent.get("synthetic_test_only_not_customer_geometry") is not False
+                    or independent["case_id"] != case_id or independent["pairing"]["actual_part_count"] != len(parts)):
+                raise ValueError("The corrected case has no independent actual portable native reflection audit")
+            change_visual = json.loads((stage / "independent-change-and-visual.json").read_text())
+            if change_visual.get("case_id") != case_id or not change_visual.get("new_mechanical_baseline_cells_and_colors_exact"):
+                raise ValueError("The intended change and real native raster evidence are missing")
+            root_record["independent_native_pairs"] = len(independent["type_rotation_pair_comparisons"])
+            root_record["independent_change_and_visual"] = change_visual
+            root_record["gravity_balance_result"] = "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS"
+        else:
+            root_record = (validate_body_support_evidence if body_support else validate_root_evidence)(json.loads(root_bytes), full, native)
         if body_support and root_record["checked_support_modules"] > 1:
             ledger_bytes = proof_bytes(f"/cases/{case_id}/support-load-ledger.json")
             original_bytes = proof_bytes(f"/cases/{revision['logical_case_id']}/manifest.json")
@@ -203,17 +249,21 @@ def main():
                 or original_assembly[0]["source_sha256"] != summary["provenance"]["native_assembly_sha256"]
                 or sha((stage / "original-scene.blend").read_bytes()) != summary["provenance"]["render_scene_sha256"]):
             raise ValueError("Root native/render provenance does not bind the original metadata-only copies")
-        root_validation = {"path": PREFIX + reference["path"], "bytes": len(root_bytes), "sha256": sha(root_bytes)}
+        root_validation = ({**transport, "path": PREFIX + transport["path"]} if is_symmetry
+                           else {"path": PREFIX + reference["path"], "bytes": len(root_bytes), "sha256": sha(root_bytes)})
         whisker_support = {
             "external_aid_count": 0, "assembly_aid_count": 0,
             "status": "DIGITAL_SELF_SUPPORTING_UNTESTED", "physical_validation": "UNKNOWN",
             "geometry_revision": revision["geometry_revision"], "manifest_sha256": sha(mb),
-            "attachment_evidence_sha256": root_record["native_support_contact_evidence_sha256" if body_support else "native_root_contact_evidence_sha256"],
+            "attachment_evidence_sha256": root_record["native_support_contact_evidence_sha256" if body_support or is_symmetry else "native_root_contact_evidence_sha256"],
             "sequence_evidence_sha256": sha(root_bytes), "motion_sha256": sha(motion_bytes),
             "geometry_sequence_identity_sha256": root_record["geometry_sequence_identity_sha256"],
             "all_categories_geometry_match": True, "assembly_validation_ref": root_validation,
             "gravity_balance_result": root_record["gravity_balance_result"], "physical_mass_measured": False,
         }
+        if is_symmetry:
+            whisker_support["assembly_validation_ref"] = {**reference, "path": PREFIX + reference["path"], "bytes": len(root_bytes)}
+            whisker_support["assembly_validation_transport_ref"] = root_validation
 
     def checked_image(item, **extra):
         path = light / item["path"]
@@ -223,8 +273,10 @@ def main():
 
     geometry_files = []
     geometry_types = {}
+    repository_types = {row["type_id"] for row in stage_review.get("source_repository_mesh_files", [])}
     for identifier, descriptor in {**payload["geometry"], **payload["assembly_aid_geometry"]}.items():
-        data = (light / descriptor["path"]).read_bytes()
+        geometry_folder = stage / "repository-native" if identifier in repository_types else light
+        data = (geometry_folder / descriptor["path"]).read_bytes()
         raw = gzip.decompress(data)
         if sha(data) != descriptor["sha256"] or len(data) != descriptor["bytes"] or raw[:4] != b"OBM1":
             raise ValueError("Approved native geometry gzip differs")
@@ -233,8 +285,11 @@ def main():
             raise ValueError("Native geometry array lengths differ")
         if sha(raw[12:]) != descriptor["float32_mesh_sha256"]:
             raise ValueError("Native Float32 geometry fingerprint mismatch")
-        geometry_files.append({"path": PREFIX + descriptor["path"], "bytes": len(data), "sha256": sha(data),
-                               "format": "OBM1_GZIP", "type_id": identifier, "geometry_sha256": sha(raw[12:])})
+        file = {"path": PREFIX + descriptor["path"], "bytes": len(data), "sha256": sha(data),
+                "format": "OBM1_GZIP", "type_id": identifier, "geometry_sha256": sha(raw[12:])}
+        if identifier in repository_types:
+            file = pinned_mesh_descriptor(ROOT, identifier, args.mesh_public_commit, file)
+        geometry_files.append(file)
         geometry_types[identifier] = sha(raw[12:])
     types = {identifier: {**spec, "geometry_sha256": geometry_types[identifier]} for identifier, spec in payload["types"].items()}
     aid_shapes = {item["id"]: item["shape"] for item in native["temporary_aids"]}
@@ -251,7 +306,7 @@ def main():
              "position_origin": payload["origin"], "frame": full["frame"], "status": payload["status"],
              "types": types, "palette": payload["palette"],
              "parts": [{**part, "source_part_ids": part.get("source_part_ids", [part["id"]])} for part in payload["parts"]]
-                      if body_support else payload["parts"], "aids": aids,
+                      if body_support or is_symmetry else payload["parts"], "aids": aids,
              "geometry_files": geometry_files, "metrics": {"part_count": len(parts), "unique_types": evidence["metrics"]["unique_types"]},
              "animation_contract": {"explosion": "ABSOLUTE_RADIAL_OFFSETS", "assembly": "BOTTOM_UP_SOURCE_ORDER",
                 "disassembly_validation": "NOT_SIMULATED", "physical_assembly": "UNKNOWN", "radial_center_mm": motion["center_mm"],
@@ -262,10 +317,14 @@ def main():
              "source_manifest_sha256": sha(mb), "source_bom_sha256": sha(bb)}
     if "sequence_mode" in motion:
         guide["animation_contract"]["sequence_mode"] = motion["sequence_mode"]
-    if body_support:
+    if body_support or is_symmetry:
         guide.update(support_validation=root_validation, assembly_support=whisker_support,
                      geometry_sequence_identity_sha256=root_record["geometry_sequence_identity_sha256"],
                      native_support_contact_evidence_sha256=root_record["native_support_contact_evidence_sha256"])
+        if is_symmetry:
+            guide["symmetry_context"] = payload["symmetry_context"]
+            guide["support_load_mode"] = payload["support_load_mode"]
+            guide["mechanically_checked_support_ids"] = sorted(part["id"] for part in full["parts"] if part.get("mechanically_checked_support") is True)
     elif root_record:
         guide.update(root_validation=root_validation, whisker_support=whisker_support,
                      geometry_sequence_identity_sha256=root_record["geometry_sequence_identity_sha256"],
@@ -315,23 +374,31 @@ def main():
                         "assembly": [{**bundle, "contents": ["bom", "ordered_ids", "instructions"]}],
                         "animations": animations}}
     if whisker_support:
-        entry["assembly_support" if body_support else "whisker_support"] = whisker_support
+        entry["assembly_support" if body_support or is_symmetry else "whisker_support"] = whisker_support
+    if is_symmetry:
+        visual = summary["symmetry_visual_ref"]
+        entry["symmetry_visual"] = checked_image(visual)
+        entry["previous_case_id"] = full["symmetry_context"]["source_current_case_id"]
+        entry["symmetry_context"] = full["symmetry_context"]
     if is_reference:
         entry.pop("count_percentage")
         entry.update(kind="BASELINE_REFERENCE_NOT_MULTIPLIER_CASE", counts_toward_multiplier_cases=False,
                      fixed_count_baseline=summary["metrics"]["baseline_count"],
                      actual_count_difference_from_fixed=summary["metrics"]["count_difference"])
     raw_matrix = json.loads((light / stage_review.get("source_catalog_path", "matrix.json")).read_text())
-    if body_support:
-        if (raw_matrix.get("geometry_revision") != COPILOT_SUPPORT_REVISION or raw_matrix.get("expected_case_count") != 4
-                or len(raw_matrix["cases"]) != 4 or summary["metrics"]["baseline_count"] != 17873):
+    if body_support or is_symmetry:
+        overlay_revision = SYMMETRY_REVISION if is_symmetry else COPILOT_SUPPORT_REVISION
+        expected_count = 5 if is_symmetry else 4
+        if (raw_matrix.get("geometry_revision") != overlay_revision or raw_matrix.get("expected_case_count") != expected_count
+                or len(raw_matrix["cases"]) != expected_count or summary["metrics"]["baseline_count"] != 17873):
             raise ValueError("New Copilot revision changed its separate scope or fixed denominator")
         base_path = ROOT / PREFIX.lstrip("/") / "catalog.json"
         base_bytes = base_path.read_bytes()
         catalog = {
-            "schema_version": 1, "study_id": STUDY, "kind": "COPILOT_BODY_SUPPORT_REVISION",
-            "geometry_revision": COPILOT_SUPPORT_REVISION, **FLAGS,
-            "base_catalog_sha256": sha(base_bytes), "baseline_count": 17873, "expected_case_count": 4,
+            "schema_version": 1, "study_id": STUDY,
+            "kind": "COPILOT_BILATERAL_SYMMETRY_REVISION" if is_symmetry else "COPILOT_BODY_SUPPORT_REVISION",
+            "geometry_revision": overlay_revision, **FLAGS,
+            "base_catalog_sha256": sha(base_bytes), "baseline_count": 17873, "expected_case_count": expected_count,
             "cases": [],
         }
         for row in raw_matrix["cases"]:
@@ -371,12 +438,12 @@ def main():
         baselines[row["character"]] = {"state": "COUNTED", "native_media_status": "PENDING",
             "candidate_id": row["candidate_id"], "pitch_mm": 8, "basis": "INITIAL_FINE_C_ADAPTED_8MM",
             "manifest_sha256": sha(baseline_bytes), "metrics": {**baseline_proof["metrics"], "dimensions_mm": dims}}
-    if not body_support:
+    if not body_support and not is_symmetry:
         references = json.loads((light / "references.json").read_text())
     reference_rows = [{"character": row["character"], "candidate_id": row["candidate_id"], "note": row["note_ja"],
                        "images": [checked_image(item, view=item["view"], condition_id=item["condition_id"]) for item in row["images"]]}
                       for row in references["rows"]]
-    if not body_support:
+    if not body_support and not is_symmetry:
         catalog = {"schema_version": 1, "study_id": STUDY, "kind": "ACTUAL_PART_COUNT_MATRIX", **FLAGS,
                "baselines": baselines, "appearance_references": reference_rows,
                "cases": [entry if row["case_id"] == case_id else {
@@ -388,7 +455,7 @@ def main():
             raise ValueError("The revised reference cannot change the frozen multiplier denominator")
         catalog = copy.deepcopy(existing_catalog)
         catalog.setdefault("reference_revisions", {})["mona"] = entry
-    elif not body_support and existing_catalog and "reference_revisions" in existing_catalog:
+    elif not body_support and not is_symmetry and existing_catalog and "reference_revisions" in existing_catalog:
         catalog["reference_revisions"] = copy.deepcopy(existing_catalog["reference_revisions"])
     (output / "catalog.json").write_bytes(encoded(catalog))
     translations = {row["note_ja"]: row["note_en"] for row in references["rows"]}
@@ -402,7 +469,7 @@ def main():
         **evidence, "body_height_families": body_height_families(full), "public_native_assembly": assembly,
         "public_blender_motion_preserved": True, "source_saved_scene_binding": source_motion["instance_projection_sha256"],
         "source_native_reopen": native["moved_reopen"], "private_inputs_copied": 0,
-        **({("body_support_revision_evidence" if body_support else "root_revision_evidence"): root_record} if root_record else {}),
+        **({("symmetry_revision_evidence" if is_symmetry else "body_support_revision_evidence" if body_support else "root_revision_evidence"): root_record} if root_record else {}),
         **({"independent_exclusive_load_ledger": load_ledger} if load_ledger else {})}))
     print(json.dumps({"case_id": case_id, "actual_count": len(parts), "native_types": len(payload["geometry"]),
                       "native_aids": len(aids), "derived_guide_bytes": len(guide_bytes), "catalog_state": "PARTIAL"}, indent=2))

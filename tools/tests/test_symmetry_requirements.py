@@ -12,11 +12,20 @@ from density_requirements import artifact_identity, case_identity
 
 class SymmetryReceiptTests(unittest.TestCase):
     def fixture(self):
-        return json.loads((ROOT / "archive/copilot-symmetry-revision.json").read_text())
+        record = json.loads((ROOT / "archive/copilot-symmetry-revision.json").read_text())
+        record.update(state="PARTIAL", published_verified_case_count=0,
+                      verification={"public_browser_passed": False, "anonymous_downloads_passed": False})
+        for row in record["cases"]:
+            row["status"] = "INPUT_WAIT"
+            for key in ["actual_case_id", "source_commit", "actual_count", "symmetry_evidence", "mechanical_evidence", "downloads"]:
+                row[key] = None
+            row["verification"] = {"public_browser_passed": False, "anonymous_downloads_passed": False}
+        return record
 
     def test_unreceived_corrections_remain_separate_from_prior_complete_work(self):
         record = self.fixture()
         self.assertEqual(validate_symmetry_receipt(record), record)
+        validate_symmetry_receipt(json.loads((ROOT / "archive/copilot-symmetry-revision.json").read_text()))
         self.assertEqual(len(record["cases"]), 5)
         self.assertEqual(symmetry_identity("copilot-p400-symmetric-v3"), ("copilot-p400", 400))
         self.assertEqual(artifact_identity("copilot-p400-symmetric-v3"), ("copilot-p400", "bilateral-symmetry-v3"))

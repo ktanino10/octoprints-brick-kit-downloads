@@ -9,6 +9,7 @@ from density_requirements import COPILOT_SUPPORT_REVISION, artifact_identity, va
 from install_density_case import encoded, immutable_write, sha
 from validate_archive import privacy
 from validate_density import body_support_budget
+from symmetry_requirements import SYMMETRY_REVISION, validate_symmetry_receipt
 
 ROOT = Path(__file__).resolve().parents[1]
 STUDY = "part-count-matrix-20260921"
@@ -42,6 +43,7 @@ def merge_overlay(previous, incoming, identifier):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--stage", type=Path, required=True)
+    parser.add_argument("--symmetry", action="store_true", help="Install the separate five-case bilateral revision")
     args = parser.parse_args()
     stage = args.stage.resolve()
     if not stage.is_relative_to(ROOT / ".archive-work"):
@@ -49,23 +51,26 @@ def main():
     review = json.loads((stage / "source-review.json").read_text())
     identifier = review["case_id"]
     logical, revision = artifact_identity(identifier)
-    if review.get("kind") != "COPILOT_BODY_SUPPORT_REVISION" or revision != COPILOT_SUPPORT_REVISION:
+    expected_kind = "COPILOT_SYMMETRY_REVISION" if args.symmetry else "COPILOT_BODY_SUPPORT_REVISION"
+    expected_revision = SYMMETRY_REVISION if args.symmetry else COPILOT_SUPPORT_REVISION
+    revision_path = PREFIX + f"revisions/{expected_revision}/"
+    if review.get("kind") != expected_kind or revision != expected_revision:
         raise ValueError("This installer is restricted to the four separately requested Copilot revisions")
     native = json.loads((stage / "native-pose-verification.json").read_text())
     evidence = json.loads((stage / "derived/evidence.json").read_text())
     if (native.get("case_id") != identifier or native.get("all_ids_types_colors_poses_steps") != "MATCH"
-            or not native.get("relocated_reopen") or not evidence.get("body_support_revision_evidence")
-            or evidence["body_support_revision_evidence"].get("physical_validation") != "UNKNOWN"):
+            or not native.get("relocated_reopen") or not evidence.get("symmetry_revision_evidence" if args.symmetry else "body_support_revision_evidence")
+            or evidence["symmetry_revision_evidence" if args.symmetry else "body_support_revision_evidence"].get("physical_validation") != "UNKNOWN"):
         raise ValueError("Actual relocated CAD and generic body-support evidence are required")
     incoming = json.loads((stage / "derived/catalog.json").read_text())
     if incoming["base_catalog_sha256"] != sha((ROOT / PREFIX / "catalog.json").read_bytes()):
         raise ValueError("The original public catalog changed before installing its separate revision")
-    catalog_path = ROOT / REVISION_PATH / "catalog.json"
+    catalog_path = ROOT / revision_path / "catalog.json"
     catalog = merge_overlay(json.loads(catalog_path.read_text()), incoming, identifier) if catalog_path.exists() else incoming
     entry = next(case for case in catalog["cases"] if case["id"] == identifier)
     if entry["metrics"]["part_count"] != native["actual_instances"] or entry["assembly_support"]["assembly_aid_count"] != 0:
         raise ValueError("Actual new figure counts/aids differ from the independent native check")
-    source_path = ROOT / "archive/sources" / f"{STUDY}-{COPILOT_SUPPORT_REVISION}.json"
+    source_path = ROOT / "archive/sources" / f"{STUDY}-{expected_revision}.json"
     source_index = json.loads(source_path.read_text()) if source_path.exists() else {
         "schema_version": 1, "study_id": STUDY, "geometry_revision": revision, "files": [],
     }
@@ -112,22 +117,29 @@ def main():
     planned[source_path.relative_to(ROOT).as_posix()] = encoded(source_index)
     catalog_bytes = encoded(catalog)
     planned[catalog_path.relative_to(ROOT).as_posix()] = catalog_bytes
-    receipt_path = ROOT / "archive/copilot-support-free-revision.json"
+    receipt_path = ROOT / ("archive/copilot-symmetry-revision.json" if args.symmetry else "archive/copilot-support-free-revision.json")
     receipt = json.loads(receipt_path.read_text())
     receipt["revision_catalog"] = {"path": "/" + catalog_path.relative_to(ROOT).as_posix(),
                                    "bytes": len(catalog_bytes), "sha256": sha(catalog_bytes)}
     receipt["base_catalog_sha256"] = catalog["base_catalog_sha256"]
     receipt["budget_baseline"] = "/archive/body-support-baseline.json"
-    record = next(item for item in receipt["cases"] if item["actual_case_id"] == identifier)
+    record = next(item for item in receipt["cases"] if item.get("requested_case_id", item.get("actual_case_id")) == identifier)
     if record["status"] == "READY":
         raise ValueError("Do not reinstall or downgrade a publicly verified revision")
     record.update(status="PUBLIC_PENDING", source_commit=entry["source_commit"], actual_count=entry["metrics"]["part_count"],
-                  external_aid_count=0, assembly_aid_count=0,
-                  geometry_sequence_evidence=entry["assembly_support"]["assembly_validation_ref"],
-                  cad_url=bundle["url"], cg_url=entry["assets"]["cg"][0]["url"], animation_url=movie["url"],
-                  assembly_url=entry["assets"]["assembly"][0]["url"],
-                  viewer_url=f"https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case={identifier}")
-    validate_copilot_support_receipt(receipt)
+                  external_aid_count=0, assembly_aid_count=0)
+    viewer_url = f"https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case={identifier}"
+    if args.symmetry:
+        record.update(actual_case_id=identifier, symmetry_evidence=entry["symmetry_visual"],
+                      mechanical_evidence=entry["assembly_support"]["assembly_validation_transport_ref"],
+                      downloads={"cad": bundle["url"], "cg": entry["assets"]["cg"][0]["url"],
+                                 "animation": movie["url"], "assembly": entry["assets"]["assembly"][0]["url"], "viewer": viewer_url})
+        validate_symmetry_receipt(receipt)
+    else:
+        record.update(geometry_sequence_evidence=entry["assembly_support"]["assembly_validation_ref"],
+                      cad_url=bundle["url"], cg_url=entry["assets"]["cg"][0]["url"], animation_url=movie["url"],
+                      assembly_url=entry["assets"]["assembly"][0]["url"], viewer_url=viewer_url)
+        validate_copilot_support_receipt(receipt)
     planned[receipt_path.relative_to(ROOT).as_posix()] = encoded(receipt)
     mutable = {source_path.relative_to(ROOT).as_posix(), catalog_path.relative_to(ROOT).as_posix(),
                receipt_path.relative_to(ROOT).as_posix()}
