@@ -127,8 +127,8 @@
       "group": "design",
       "revision": "r2-20260919",
       "format": "JSON",
-      "bytes": 9791,
-      "sha256": "c0acad0b025a0ea66b29c4822fe23d7fe6e2fcc7f763068c124f8b95cd19725c",
+      "bytes": 10194,
+      "sha256": "edb09c3b1c44f526687f7be350bf1f623a126fc78220d9f93383c8d59ac74220",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/copilot-symmetry-revision.json",
       "status": "ARCHIVE_RECORD"
     },
@@ -30450,6 +30450,16 @@
       "status": "UNSELECTED_DIGITAL_STUDY"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/copilot-p120-symmetric-v3-public-verification.json",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JSON",
+      "bytes": 4099,
+      "sha256": "09df657af6b6e263476a2ec3bf718a43710ace62b6a79433291ea5aab336e83d",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/copilot-p120-symmetric-v3-public-verification.json",
+      "status": "UNSELECTED_DIGITAL_STUDY"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/copilot-p300-performance.json",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -32903,8 +32913,8 @@
     }
   ],
   "totals": {
-    "files": 2593,
-    "bytes": 983069215,
+    "files": 2594,
+    "bytes": 983073717,
     "groups": {
       "site": 74,
       "design": 89,
@@ -32913,7 +32923,7 @@
       "common-trial": 24,
       "selected": 544,
       "trial": 60,
-      "study": 1069,
+      "study": 1070,
       "feedback": 16,
       "viewer": 7
     }

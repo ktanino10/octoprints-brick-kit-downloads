@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "case_id": "copilot-p120-symmetric-v3",
+  "geometry_revision": "bilateral-symmetry-v3",
+  "state": "READY",
+  "scope": "ONE_ACTUAL_CORRECTED_CASE_NOT_ALL_FIVE_OR_PHYSICAL_APPROVAL",
+  "source_commit": "87f892dd7c03954d7083ac09fac746c84a5ed885",
+  "verified_content_commit": "0ab2d6646b62be876ccb026ac8289ddd8206c043",
+  "verified_pages_run": "35927224739",
+  "actual_count": 21435,
+  "target_count": 21448,
+  "actual_types": 204,
+  "geometry_sequence_identity_sha256": "950ff3c78f40f4f0e96f3a004265c75412d258ece836303b52aec15e83dd4080",
+  "nominal_symmetry": {
+    "metric": "NOMINAL_8MM_XY_1_6MM_Z_MATERIAL_CELLS_NOT_NATIVE_TESSELLATION",
+    "actual_material_samples": 445647,
+    "mirror_x_mm": 0,
+    "material_occupancy_xor": 0,
+    "paired_material_color_differences": 0,
+    "front_shape_xor": 0,
+    "paired_front_color_differences": 0,
+    "paired_front_depth_differences": 0,
+    "feature": {
+      "color_id": "c2",
+      "visible_samples": 354,
+      "front_mask_xor": 0
+    },
+    "native_geometry_or_physical_validation": false,
+    "excluded": [
+      "studs",
+      "cavities",
+      "gaps",
+      "chamfers",
+      "lighting",
+      "native CAD reflection",
+      "physical supports"
+    ]
+  },
+  "native_reflection": {
+    "actual_parts": 21435,
+    "type_rotation_pairs": 184,
+    "maximum_bidirectional_cut_volume_mm3": 0.0,
+    "pair_bijection_involution_and_origin_color": true,
+    "source_files_unchanged": true
+  },
+  "actual_supports": {
+    "geometry_sequence_identity_sha256": "950ff3c78f40f4f0e96f3a004265c75412d258ece836303b52aec15e83dd4080",
+    "native_support_contact_evidence_sha256": "51457d7ad965f6bddf2326e32f3e1abb725675a988aff31b4fdc47aea9f042eb",
+    "checked_material_supports": 17,
+    "actual_native_load_prefixes": 243,
+    "actual_native_material_sections": 221,
+    "minimum_nominal_support_margin_mm": 1.5568343721557432,
+    "required_nominal_support_margin_mm": 1,
+    "required_baseline_targets_covered": 25,
+    "nonreset_token_loads_match_actual_support_graph": true,
+    "external_aid_count": 0,
+    "assembly_aid_count": 0,
+    "physical_validation": "UNKNOWN"
+  },
+  "actual_intentional_changes_and_native_raster": {
+    "case_id": "copilot-p120-symmetric-v3",
+    "intentional_change_from_previous_published_case": {
+      "added_1_6mm_cells": 1758,
+      "removed_1_6mm_cells": 1881,
+      "recolored_1_6mm_cells": 1683,
+      "full_diff_matches_sealed_readonly_record": true
+    },
+    "new_mechanical_baseline_cells_and_colors_exact": true,
+    "actual_native_png": {
+      "image_size_px": [
+        1200,
+        1200
+      ],
+      "left_eye_pixels": 10652,
+      "right_eye_pixels": 10652,
+      "all_label_xor_including_silhouette": 2,
+      "whole_material_xor": 0,
+      "silhouette_xor": 2,
+      "maximum_silhouette_boundary_distance_pixels": 1,
+      "eye_mask_xor": 0,
+      "classification": "Unlit native R/G/B labels with alpha>127; paired foreground materials exclude separately reported silhouette-edge disagreements."
+    },
+    "physical_validation": "UNKNOWN"
+  },
+  "raster_note": "Eye pixels and paired foreground material differences are zero. The full silhouette differs at2 boundary pixels, maximum boundary distance1px. This discrepancy is not reported as zero.",
+  "public_browser": {
+    "engine": "pinned WebKit2203",
+    "all17support_insertion_steps_and_native_undersides": true,
+    "allGPU_absolute_radial_roundtrips": true,
+    "original_and_labeled_display_modes": true,
+    "actual_three_movie_chapters": true,
+    "JA_EN_deep_links_state_reload_390px": true,
+    "missing_data_native_geometry_proof_images_fail_closed": true,
+    "errors": []
+  },
+  "anonymous_downloads": {
+    "changed_site_files": 22,
+    "complete_release_assets_verified_or_previous_sha_rechecked": 4,
+    "required_repository_native_types": 62,
+    "native_commit": "bbbe484f8eb7858fe57b9c15e4db5b76baac57c5",
+    "compressed_and_decoded_native_SHA_CORS_MIME": true
+  },
+  "physical_validation": "UNKNOWN",
+  "slicer_status": "NOT_SLICED",
+  "full_print": "ON_HOLD",
+  "appearance_adoption": "PENDING"
+}
