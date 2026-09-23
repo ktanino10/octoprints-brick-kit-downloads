@@ -1,6 +1,10 @@
 """Canonical identity and complete part-pair checks for bilateral-symmetry-v3."""
 
 import math
+import gzip
+import hashlib
+import io
+import json
 
 from density_root_evidence import canonical_sha
 from symmetry_requirements import SYMMETRY_REVISION, symmetry_identity
@@ -18,6 +22,28 @@ PART_FIELDS = (
 def require(condition, message):
     if not condition:
         raise ValueError(message)
+
+
+def decode_support_transport(case_id, transport, raw_reference, data):
+    symmetry_identity(case_id)
+    raw_path = f"validation/{case_id}-symmetry-support.json"
+    require(isinstance(transport, dict) and isinstance(raw_reference, dict)
+            and raw_reference.get("path") == raw_path
+            and transport.get("path") == raw_path + ".gz" and transport.get("encoding") == "gzip"
+            and type(transport.get("bytes")) is int and transport["bytes"] == len(data)
+            and hashlib.sha256(data).hexdigest() == transport.get("sha256")
+            and type(transport.get("decoded_bytes")) is int and 0 < transport["decoded_bytes"] < 90_000_000
+            and transport.get("decoded_sha256") == raw_reference.get("sha256") and data[:2] == b"\x1f\x8b",
+            "The gzip support-proof transport is not bound to its exact raw identity and case")
+    with gzip.GzipFile(fileobj=io.BytesIO(data)) as stream:
+        raw = stream.read(transport["decoded_bytes"] + 1)
+    require(len(raw) == transport["decoded_bytes"]
+            and hashlib.sha256(raw).hexdigest() == transport["decoded_sha256"],
+            "Decoded support evidence does not match the original source proof bytes")
+    proof = json.loads(raw)
+    require(proof.get("case_id") == case_id and proof.get("geometry_revision") == SYMMETRY_REVISION,
+            "Decoded support proof describes a different actual symmetry revision")
+    return proof, raw
 
 
 def geometry_sequence_identity(manifest):

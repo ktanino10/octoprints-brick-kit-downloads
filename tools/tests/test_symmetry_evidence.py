@@ -1,4 +1,7 @@
 import copy
+import gzip
+import hashlib
+import json
 from pathlib import Path
 import sys
 import unittest
@@ -6,11 +9,31 @@ import unittest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from symmetry_evidence import (
     LOAD_MODE, NATIVE_SYMMETRY_PASS, SEQUENCE_MODE,
-    geometry_sequence_identity, validate_native_pair_volumes, validate_part_pairs,
+    decode_support_transport, geometry_sequence_identity, validate_native_pair_volumes, validate_part_pairs,
 )
 
 
 class SymmetryEvidenceTests(unittest.TestCase):
+    def test_compressed_support_proof_preserves_exact_raw_identity_and_rejects_wrong_case_or_bytes(self):
+        case = "copilot-p300-symmetric-v3"
+        proof = {"case_id": case, "geometry_revision": "bilateral-symmetry-v3", "unit_only": True}
+        raw = (json.dumps(proof) + "\n").encode()
+        data = gzip.compress(raw, mtime=0)
+        reference = {"path": f"validation/{case}-symmetry-support.json", "sha256": hashlib.sha256(raw).hexdigest()}
+        transport = {"path": reference["path"] + ".gz", "encoding": "gzip", "bytes": len(data),
+                     "sha256": hashlib.sha256(data).hexdigest(), "decoded_bytes": len(raw),
+                     "decoded_sha256": reference["sha256"]}
+        self.assertEqual(decode_support_transport(case, transport, reference, data), (proof, raw))
+        for changes in [
+            {"decoded_bytes": len(raw) - 1}, {"decoded_bytes": len(raw) + 1},
+            {"decoded_sha256": "a" * 64}, {"path": reference["path"]},
+            {"encoding": "identity"}, {"sha256": "b" * 64},
+        ]:
+            with self.assertRaises(ValueError):
+                decode_support_transport(case, {**transport, **changes}, reference, data)
+        with self.assertRaises(ValueError):
+            decode_support_transport("copilot-p200-symmetric-v3", transport, reference, data)
+
     def parts(self):
         return [
             {"id": "L", "type_id": "LEFT", "color_id": "eye", "position_mm": [-8, -24, 16.0], "rotation_z_deg": 0},
