@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "case_id": "copilot-p300-symmetric-v3",
+  "geometry_revision": "bilateral-symmetry-v3",
+  "state": "READY",
+  "scope": "ONE_PUBLIC_CORRECTED_CASE_NOT_ALL_FIVE_OR_PHYSICAL_APPROVAL",
+  "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f",
+  "verified_content_commit": "cad64081a83208a0d6bece203be4c257b089c81b",
+  "verified_pages_run": "35909519807",
+  "actual_count": 53575,
+  "target_count": 53619,
+  "actual_types": 306,
+  "geometry_sequence_identity_sha256": "600e236bcc0e52aaf7f1671a04b2dca4ebb7eee0350810032c83d7cf87153ec4",
+  "nominal_material_symmetry": {
+    "metric": "NOMINAL_8MM_XY_1_6MM_Z_MATERIAL_CELLS_NOT_NATIVE_TESSELLATION",
+    "actual_material_samples": 1150104,
+    "mirror_x_mm": 0,
+    "material_occupancy_xor": 0,
+    "paired_material_color_differences": 0,
+    "front_shape_xor": 0,
+    "paired_front_color_differences": 0,
+    "paired_front_depth_differences": 0,
+    "feature": {
+      "color_id": "c2",
+      "visible_samples": 642,
+      "front_mask_xor": 0
+    },
+    "native_geometry_or_physical_validation": false,
+    "excluded": [
+      "studs",
+      "cavities",
+      "gaps",
+      "chamfers",
+      "lighting",
+      "native CAD reflection",
+      "physical supports"
+    ]
+  },
+  "actual_native_symmetry": {
+    "physical_parts": 53575,
+    "type_rotation_pairs": 272,
+    "maximum_bidirectional_cut_volume_mm3": 0.0,
+    "pairing_bijection_and_involution": true,
+    "actual_origin_and_color_match": true,
+    "files_unchanged": true
+  },
+  "actual_support_evidence": {
+    "geometry_sequence_identity_sha256": "600e236bcc0e52aaf7f1671a04b2dca4ebb7eee0350810032c83d7cf87153ec4",
+    "native_support_contact_evidence_sha256": "6e7f9b40e1b8fbb88cb0392f2d252ec6a772ae92f92cc2b322a5f86f52b4c82d",
+    "checked_material_supports": 43,
+    "actual_native_load_prefixes": 413,
+    "actual_native_material_sections": 476,
+    "minimum_nominal_support_margin_mm": 1.009384090433274,
+    "required_nominal_support_margin_mm": 1,
+    "required_baseline_targets_covered": 73,
+    "nonreset_token_loads_match_actual_support_graph": true,
+    "external_aid_count": 0,
+    "assembly_aid_count": 0,
+    "physical_validation": "UNKNOWN"
+  },
+  "intentional_changes_and_actual_native_pixels": {
+    "case_id": "copilot-p300-symmetric-v3",
+    "intentional_change_from_previous_published_case": {
+      "added_1_6mm_cells": 4719,
+      "removed_1_6mm_cells": 4782,
+      "recolored_1_6mm_cells": 3654,
+      "full_diff_matches_sealed_readonly_record": true
+    },
+    "new_mechanical_baseline_cells_and_colors_exact": true,
+    "actual_native_png": {
+      "image_size_px": [
+        1200,
+        1200
+      ],
+      "left_eye_pixels": 10426,
+      "right_eye_pixels": 10426,
+      "whole_material_xor": 0,
+      "silhouette_xor": 0,
+      "eye_mask_xor": 0,
+      "classification": "unlit native material R/G/B channels; alpha>127; dominant channel label"
+    },
+    "physical_validation": "UNKNOWN"
+  },
+  "public_browser": {
+    "engine": "pinned WebKit2203",
+    "actual_native_and_labeled_display_mode": true,
+    "all_43_support_insertion_steps_and_native_undersides": true,
+    "all_GPU_pose_radial_roundtrips": true,
+    "actual_movie_chapters": 3,
+    "JA_EN_share_reload_390px": true,
+    "missing_data_native_proof_images_fail_closed": true,
+    "history_quota_fix": "All URL state writes coalesced at250ms and decoupled from assembly input handlers; exact43step regression passed",
+    "errors": []
+  },
+  "anonymous_public_files": {
+    "changed_pages_files": 32,
+    "complete_release_assets": 2,
+    "pinned_repository_native_meshes": 115,
+    "pinned_native_commit": "ce891b5a6a0afa1a148edc8d3127777d95784588",
+    "native_geometry_sha_and_compressed_sha_verified": true,
+    "credentials_used": false
+  },
+  "physical_validation": "UNKNOWN",
+  "slicer_status": "NOT_SLICED",
+  "full_print": "ON_HOLD",
+  "appearance_adoption": "PENDING"
+}
