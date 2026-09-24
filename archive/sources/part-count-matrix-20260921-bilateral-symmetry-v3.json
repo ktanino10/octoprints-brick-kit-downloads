@@ -11,6 +11,13 @@
       "source_commit": "87f892dd7c03954d7083ac09fac746c84a5ed885"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/copilot-p150-symmetric-v3-summary.json",
+      "bytes": 256634,
+      "sha256": "2a30ebb7dc2fc0c0b9daf2b2ffcd88e5cc091593abd82a47809489b944666849",
+      "source_relative_path": "cases/copilot-p150-symmetric-v3-summary.json",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/cases/copilot-p300-symmetric-v3-summary.json",
       "bytes": 287180,
       "sha256": "a23bcfc1d5e7e765244d59271db70755d163aa1f647ca2fc5b48bbe3f57d84b3",
@@ -60,6 +67,48 @@
       "source_commit": "87f892dd7c03954d7083ac09fac746c84a5ed885"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p150-symmetric-v3-assembled-front.jpg",
+      "bytes": 78662,
+      "sha256": "8dc4f6dca3f3f0474c492994b9341a5a6d8c8d19ba8e159d4f178d59c44a3479",
+      "source_relative_path": "images/copilot-p150-symmetric-v3-assembled-front.jpg",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p150-symmetric-v3-assembled-three_quarter.jpg",
+      "bytes": 104846,
+      "sha256": "9f021181f08cbabcbb4cc77e30d2321e9107fe4fbbef7371b1dd25cad6120bd6",
+      "source_relative_path": "images/copilot-p150-symmetric-v3-assembled-three_quarter.jpg",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p150-symmetric-v3-native-mirror-overlay.jpg",
+      "bytes": 16770,
+      "sha256": "1e3dea9fb697a07b57461c211cc237076c204c78149a77b00d3d3050fc27a1a4",
+      "source_relative_path": "images/copilot-p150-symmetric-v3-native-mirror-overlay.jpg",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p150-symmetric-v3-paired-eye-zoom.jpg",
+      "bytes": 49111,
+      "sha256": "cf30c8982a532c33b42717fcfae392f7b9f02a5ab528e01dff607b00011c7409",
+      "source_relative_path": "images/copilot-p150-symmetric-v3-paired-eye-zoom.jpg",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p150-symmetric-v3-radial-exploded.jpg",
+      "bytes": 163505,
+      "sha256": "1eeadb42490d2e53ac50be666458318e7de0a17b6b0ca332001468a4ad79565c",
+      "source_relative_path": "images/copilot-p150-symmetric-v3-radial-exploded.jpg",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p150-symmetric-v3-registered-face.jpg",
+      "bytes": 75934,
+      "sha256": "ed3c0d2060a1996851037f8f619cf8e1006de5ef28aa6d650cebbd4aec2d80a1",
+      "source_relative_path": "images/copilot-p150-symmetric-v3-registered-face.jpg",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p300-symmetric-v3-assembled-front.jpg",
       "bytes": 80114,
       "sha256": "f1d7e8cdc70d7cbf74acc8ffc96f6d2265bced6b04d060d665c0533256ff5385",
@@ -102,6 +151,13 @@
       "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/source-records/57ff72c61834e5c7d9180dffd9df810fc9450309-bilateral-symmetry-v3-matrix.json",
+      "bytes": 3110,
+      "sha256": "e8c78828d314ee412244530ad20033256086789063ce59beacf25b24e7328d3a",
+      "source_relative_path": "revisions/bilateral-symmetry-v3/matrix.json",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/source-records/87f892dd7c03954d7083ac09fac746c84a5ed885-bilateral-symmetry-v3-matrix.json",
       "bytes": 3069,
       "sha256": "b1981f4de3f4b7e76b6589f3ac715798eba7699357905dff466994260cef5713",
@@ -130,6 +186,20 @@
       "source_commit": "87f892dd7c03954d7083ac09fac746c84a5ed885"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/validation/copilot-p150-symmetric-v3-native-visual-symmetry.json",
+      "bytes": 2306,
+      "sha256": "b0f9b12d027b1dd43b75944d9182df8f1f68fd3d8e36d6bd014fa374a7f2e948",
+      "source_relative_path": "validation/copilot-p150-symmetric-v3-native-visual-symmetry.json",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/validation/copilot-p150-symmetric-v3-symmetry-support.json.gz",
+      "bytes": 239601,
+      "sha256": "4a0b48a1062cc7c7a73bc980ed22b011ef84597452ea0ae3f5de71bea0d44f93",
+      "source_relative_path": "validation/copilot-p150-symmetric-v3-symmetry-support.json.gz",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/validation/copilot-p300-symmetric-v3-native-visual-symmetry.json",
       "bytes": 1811,
       "sha256": "eb8d478b1e75de9712f5d41c0194ca55f7dfa24e1666ac3e2f307c48791dd10c",
@@ -144,5 +214,5 @@
       "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f"
     }
   ],
-  "source_revision": "87f892dd7c03954d7083ac09fac746c84a5ed885"
+  "source_revision": "57ff72c61834e5c7d9180dffd9df810fc9450309"
 }

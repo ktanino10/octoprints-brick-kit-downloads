@@ -1,4 +1,7 @@
 {
+  "— 表示用LODの事前処理と、元の全頂点・面順を完全復元する可逆転送の復号に使います。可逆転送は形状の簡略化ではなく、元のCADも変更しません。MITライセンス。": "— Used for offline display LOD and lossless transport decoding that exactly restores all original vertex bytes and triangle order. Lossless transport is not mesh simplification and does not alter native CAD. MIT licensed.",
+  "可逆圧縮した原形は、元の全頂点・面順・バイト列と固定ネイティブ指紋を保持する必要があります。": "Lossless native transport must restore every original vertex byte, triangle index and ordering, bound to the original immutable native fingerprints.",
+  "実CADの鏡像差と目の差は0です。描画した外周の差は{0}ピクセル、色境界の差は{1}ピクセルです。各境界距離は最大1ピクセル以内と検算し、差を0とは表示しません。": "Native CAD mirror differences and eye differences are zero. The rendered silhouette differs at {0} pixels and material boundaries at {1} pixels. Each boundary distance is independently checked within one pixel; these discrepancies are not reported as zero.",
   "実CADの鏡像差と目・色の差は0ですが、描画した外周には{0}ピクセルの境界差があります。最大境界距離{1}ピクセルとして記録し、0とは表示しません。": "Native CAD mirror differences and eye/material differences are zero, but the rendered silhouette differs at {0} boundary pixels. The measured maximum boundary distance is {1} pixel; the discrepancy is not reported as zero.",
   "修正版は、検証を終えた案から順次追加します。": "Corrected variants are added as their verification is completed.",
   "対称化3倍案：実3Dと左右の目の比較 →": "Corrected 3× variant: actual 3D and paired-eye comparison →",

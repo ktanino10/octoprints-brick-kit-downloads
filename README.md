@@ -32,7 +32,7 @@ Mona 519 / Copilot 695 / Ducky 413個の少部品r3案は通常の候補から�
 原型は **[martinwoodward/octoprints](https://github.com/martinwoodward/octoprints)**。GitHubに関連するマスコットの3Dプリントモデルを公開するプロジェクトで、
 固定リビジョン `981a85f0bec9d1a9c280fd5719d0d797852229c4` を参照しています。
 本アーカイブではブロックへの分割・統合、ネイティブCAD、BOM、組立順・比較・360度表示を追加しました。
-モデル派生物は **CC BY-NC 4.0**。表示には [Three.js](https://github.com/mrdoob/three.js)、表示用LODの事前処理には
+モデル派生物は **CC BY-NC 4.0**。表示には [Three.js](https://github.com/mrdoob/three.js)、表示用LODの事前処理と原形を完全復元する可逆転送には
 [meshoptimizer](https://github.com/zeux/meshoptimizer) を使用しています。
 [参照元の紹介・改変・UI参考・権利区分](ATTRIBUTION.md) と [第三者ソフトウェアのライセンス](viewer/assets/THIRD_PARTY_LICENSES.txt) を参照してください。
 

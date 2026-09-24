@@ -121,6 +121,35 @@ export async function decodeNativeType(input, file) {
       ...(lightweight ? { source_geometry_sha256: file.source_geometry_sha256 } : {}) } } };
 }
 
+let losslessDecoder;
+export async function decodeLosslessNativeType(input, file) {
+  validateNativeGeometryFile(file);
+  const bytes = input.byteOffset === 0 && input.byteLength === input.buffer.byteLength ? input : input.slice();
+  check(file.format === 'OBM1_MESHOPT_GZIP' && bytes.length >= 24
+    && new TextDecoder().decode(bytes.subarray(0, 8)) === 'OBMLZ001',
+  '可逆圧縮した原形は、元の全頂点・面順・バイト列と固定ネイティブ指紋を保持する必要があります。');
+  const header = new DataView(bytes.buffer);
+  const vertices = header.getUint32(8, true), faces = header.getUint32(12, true);
+  const vertexBytes = header.getUint32(16, true), indexBytes = header.getUint32(20, true);
+  check(vertices >= 3 && faces > 0 && vertexBytes > 0 && indexBytes > 0
+    && bytes.length === 24 + vertexBytes + indexBytes
+    && file.decoded_bytes === 12 + vertices * 12 + faces * 12,
+  '型別の実メッシュの頂点・面のバイト数が不正です。');
+  losslessDecoder ??= import('meshoptimizer/decoder').then(async module => {
+    await module.MeshoptDecoder.ready;
+    return module.MeshoptDecoder;
+  });
+  const decoder = await losslessDecoder;
+  const restored = new Uint8Array(file.decoded_bytes), view = new DataView(restored.buffer);
+  restored.set(new TextEncoder().encode('OBM1')); view.setUint32(4, vertices, true); view.setUint32(8, faces, true);
+  decoder.decodeVertexBuffer(restored.subarray(12, 12 + vertices * 12), vertices, 12, bytes.subarray(24, 24 + vertexBytes));
+  decoder.decodeIndexSequence(restored.subarray(12 + vertices * 12), faces * 3, 4, bytes.subarray(24 + vertexBytes));
+  const digest = [...new Uint8Array(await crypto.subtle.digest('SHA-256', restored))]
+    .map(value => value.toString(16).padStart(2, '0')).join('');
+  check(digest === file.decoded_sha256, '可逆圧縮した原形は、元の全頂点・面順・バイト列と固定ネイティブ指紋を保持する必要があります。');
+  return decodeNativeType(restored, file);
+}
+
 export async function loadNativeLibraries(files, signal) {
   const result = { mode: 'NATIVE_FLOAT32', types: Object.create(null), precision_notes: [] };
   const controller = new AbortController();
@@ -130,7 +159,8 @@ export async function loadNativeLibraries(files, signal) {
     while (cursor < files.length) {
       const file = files[cursor++];
       const bytes = await inflateIfNeeded(await verifiedBytes(file, combined, { nativeGeometry: true }));
-      const library = file.format === 'OBM1_GZIP' ? await decodeNativeType(bytes, file) : await decodeMeshPack(bytes);
+      const library = file.format === 'OBM1_MESHOPT_GZIP' ? await decodeLosslessNativeType(bytes, file)
+        : file.format === 'OBM1_GZIP' ? await decodeNativeType(bytes, file) : await decodeMeshPack(bytes);
       for (const [id, type] of Object.entries(library.types)) {
         check(!Object.hasOwn(result.types, id), '共有型IDが複数の形状ライブラリーで重複しています。');
         result.types[id] = type;

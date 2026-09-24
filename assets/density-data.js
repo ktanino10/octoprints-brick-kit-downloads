@@ -15,6 +15,7 @@ export const MONA_ROOT_REFERENCE_ID = 'mona-fine8-base-root-v2';
 export const COPILOT_SUPPORT_REVISION = 'body-support-v2';
 export const COPILOT_SYMMETRY_REVISION = 'bilateral-symmetry-v3';
 export const SYMMETRY_MESH_PREFIX = 'viewer-data/copilot-symmetry-20260923/geometry/';
+export const SYMMETRY_LOSSLESS_PREFIX = 'viewer-data/copilot-symmetry-20260923/lossless/';
 export const isObject = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
 export const isHash = (value) => typeof value === 'string' && /^[0-9a-f]{64}$/.test(value);
 export const isCount = (value) => Number.isSafeInteger(value) && value >= 0;
@@ -81,16 +82,30 @@ export function validateDensityFile(file, { download = false } = {}) {
 }
 
 export function validateNativeGeometryFile(file) {
-  if (file?.storage === undefined) return validateDensityFile(file);
+  if (file?.storage === undefined) {
+    densityAssert(file?.format !== 'OBM1_MESHOPT_GZIP',
+      '可逆圧縮した原形は、元の全頂点・面順・バイト列と固定ネイティブ指紋を保持する必要があります。');
+    return validateDensityFile(file);
+  }
+  const lossless = file.format === 'OBM1_MESHOPT_GZIP';
   densityAssert(file.storage === 'PUBLIC_REPO_COMMIT' && isHash(file.sha256)
     && isHash(file.geometry_sha256) && isCount(file.bytes) && file.bytes > 0 && file.bytes < 90_000_000
-    && file.format === 'OBM1_GZIP' && (file.mode === undefined || file.mode === 'NATIVE_FLOAT32')
+    && (file.format === 'OBM1_GZIP' || lossless) && (file.mode === undefined || file.mode === 'NATIVE_FLOAT32')
     && typeof file.type_id === 'string' && /^[A-Za-z0-9][A-Za-z0-9_-]{0,159}$/.test(file.type_id)
     && typeof file.public_commit === 'string' && /^[0-9a-f]{40}$/.test(file.public_commit)
-    && file.repository_path === `${SYMMETRY_MESH_PREFIX}${file.type_id}.mesh.gz`
+    && file.repository_path === `${lossless ? SYMMETRY_LOSSLESS_PREFIX : SYMMETRY_MESH_PREFIX}${file.type_id}.mesh.gz`
     && file.url === `https://raw.githubusercontent.com/ktanino10/octoprints-brick-kit-downloads/${file.public_commit}/${file.repository_path}`
     && file.path === undefined,
   '実ネイティブメッシュの配信先は、この公開リポジトリの固定コミット・許可パス・型IDへ結合する必要があります。');
+  if (lossless) densityAssert(file.codec === 'MESHOPT_VERTEX_BUFFER_AND_INDEX_SEQUENCE' && file.codec_version === '1.2.0'
+    && file.original_float32_and_uint32_bytes_recovered === true
+    && file.native_geometry_modified === false && file.indices_reordered === false
+    && isCount(file.decoded_bytes) && file.decoded_bytes >= 60 && file.decoded_bytes < 90_000_000
+    && isHash(file.decoded_sha256) && isHash(file.native_sha256)
+    && isCount(file.native_bytes) && file.native_bytes > 0
+    && typeof file.native_public_commit === 'string' && /^[0-9a-f]{40}$/.test(file.native_public_commit)
+    && file.native_repository_path === `${SYMMETRY_MESH_PREFIX}${file.type_id}.mesh.gz`,
+  '可逆圧縮した原形は、元の全頂点・面順・バイト列と固定ネイティブ指紋を保持する必要があります。');
   return file;
 }
 

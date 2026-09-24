@@ -69,7 +69,7 @@ Three.js等の第三者ソフトウェアは
 | プロジェクト | 紹介と使用範囲 | ライセンス |
 |---|---|---|
 | [mrdoob/three.js](https://github.com/mrdoob/three.js) | ブラウザー向け3Dライブラリー。実メッシュの表示、回転・ズーム、共有形状のインスタンス描画に使用しています。 | MIT |
-| [zeux/meshoptimizer](https://github.com/zeux/meshoptimizer) | メッシュの最適化ライブラリー。通常ブロックの表示用LODを事前生成する用途だけに使用し、元のCAD・STL・Blenderを置き換えません。 | MIT |
+| [zeux/meshoptimizer](https://github.com/zeux/meshoptimizer) | 通常ブロックの表示用LODの事前処理と、元の全頂点・面順を完全復元する可逆転送の符号化・復号に使用します。可逆転送は形状の簡略化ではなく、元のCAD・STL・Blenderを置き換えません。 | MIT |
 
 これらはモデル原型の配布元ではなく、表示・処理に使うソフトウェアです。
 モデル派生物のCC BY-NC 4.0と、ソフトウェアのMIT等のライセンスを混同しないでください。

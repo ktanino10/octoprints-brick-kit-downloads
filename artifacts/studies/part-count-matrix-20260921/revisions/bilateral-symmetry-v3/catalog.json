@@ -212,8 +212,208 @@
       "geometry_revision": "bilateral-symmetry-v3",
       "character": "copilot",
       "count_percentage": 150,
-      "state": "INPUT_WAIT",
-      "target_count": 26810
+      "state": "READY",
+      "metrics": {
+        "part_count": 26734,
+        "unique_types": 231,
+        "one_by_one_exceptions": 144,
+        "layer_count": 89,
+        "minimum_part_mm": [
+          7.8,
+          7.8,
+          3.2
+        ],
+        "grip_long_ge_15_8_count": 26590,
+        "dimensions_mm": [
+          567.8,
+          479.8,
+          425.8
+        ]
+      },
+      "target_count": 26810,
+      "target_difference": -76,
+      "actual_ratio": 1.4957757511329939,
+      "manifest": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/cases/copilot-p150-symmetric-v3-guide.json.gz",
+        "bytes": 1144662,
+        "sha256": "6e9819484c3b8fc229dc79a441f1ace39229bcb660034b679ecbb8a561a0c23d"
+      },
+      "source_manifest_sha256": "66ca1dd00ff0a54f9c19fcf3b401c4096f57128e08c162138f9982754357bd44",
+      "source_bom_sha256": "59decf6f12a41fa65f536d177566296f389ca29448b45008c28e693c47a753cc",
+      "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+      "images": {
+        "front": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/copilot-p150-symmetric-v3-assembled-front.jpg",
+          "bytes": 78662,
+          "sha256": "8dc4f6dca3f3f0474c492994b9341a5a6d8c8d19ba8e159d4f178d59c44a3479",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_front"
+        },
+        "three_quarter": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/images/copilot-p150-symmetric-v3-assembled-three_quarter.jpg",
+          "bytes": 104846,
+          "sha256": "9f021181f08cbabcbb4cc77e30d2321e9107fe4fbbef7371b1dd25cad6120bd6",
+          "framing_rule": "MATCHED_SCREEN_HEIGHT",
+          "condition_id": "ACTUAL_PROJECTED_HEIGHT864_three_quarter"
+        }
+      },
+      "tradeoff": "実26,734部品/231型、固定分母17,873・目標26,810との差-76。既存の1.2倍/3倍固定案や旧原本を変更しない新しい対称revisionとして確認した。 正面/斜め/登録正面/放射分解の実CG4枚と等倍率の左右眼拡大を閲覧した。黄色い眼は鏡対応する同一形状/寸法/位置、青い顔・ゴーグル・紫枠・側部も対称な実形状である。格子の段差、角度・照明の差、美的採用の判断は別問題として保留している。 元/別展開FreeCADの全26,734ID/type/color/pose/stepが一致し、実213型/回転ペアのBRep両向きcut体積差は全て0。全partの鏡対応bijective/involutive・色・実poseを検査した。セル図や割合だけを根拠にしていない。 最初のnative支持不足を、同色の実荷重部品の一体化と実際の受け面/接点拡張で修正した。全34支持・510荷重prefixは実CAD体積/重心と非reset token台帳で合格、最小公称margin2.380178317mm。単一solid、屋根、実断面、非干渉、挿入と全先行関係も確認し、元71必須対象→34実検査部品のlineageを維持した。 実の外部/仮組立支台は0。単独で同色経路を持たない孤立した青1cellの左右3対は実周囲の紫へ明示統合し、黄色眼/占有形は維持した。内部受けの色変更も意図差分と新mechanical baselineに結合し、旧版の全色変更0という主張は転用していない。 単一サンプルの診断ラスタでは継ぎ目付近の1画素に材質aliasが生じたため、その失敗画像/記録を保存し、元sceneを変更せず診断だけ32サンプルで再描画した。判定の1pixel境界距離は緩めていない。CAD/通常CG4/動画を再生成・左右反転していない。 最終の実無照明材質マスクは左右眼各8,855pixels、bounds65x146px、眼mirror XOR0/境界差0。全silhouette XOR200・共通占有部のmaterial XOR30は全て宣言済み1pixel境界距離内であり、全画像差0とは報告していない。全nativeBRep/pose/colorの実対称性は別途差0で確認した。 実144frame/12fps/12秒/3章動画の1/18/54/73/108/144と、実courseから選んだ76/77/78、112/113/114、134/135/136をデコード閲覧した。最初のrootは真底面11.2mm、受け20.8mm、step382であり、表示順のために実Zを偽装していない。 保存sceneの全26,734instance/材質/pose/stepとframe1/54/72/73/144/1の評価位置が一致し、空→全数と絶対放射往復も確認した。Mona/Ducky・1x・既固定案・元geometry/scene/通常PNG/MP4は保持。現物PLA/infill質量、保持力、強度、動的荷重、スライサー支持材は未確認で、印刷承認は保留。",
+      "assets": {
+        "cg": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p150-symmetric-v3/copilot-p150-symmetric-v3-cad-scene-animation-public.zip",
+            "filename": "copilot-p150-symmetric-v3-cad-scene-animation-public.zip",
+            "bytes": 251575294,
+            "sha256": "28e1ca7aa0fc710e062d9c54f98e73757e9bea6cb994e57eb104d146503b6738",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "still",
+              "blender"
+            ]
+          }
+        ],
+        "native_cad": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p150-symmetric-v3/copilot-p150-symmetric-v3-cad-scene-animation-public.zip",
+            "filename": "copilot-p150-symmetric-v3-cad-scene-animation-public.zip",
+            "bytes": 251575294,
+            "sha256": "28e1ca7aa0fc710e062d9c54f98e73757e9bea6cb994e57eb104d146503b6738",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "freecad_assembly",
+              "linked_libraries",
+              "stl",
+              "step"
+            ]
+          }
+        ],
+        "assembly": [
+          {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p150-symmetric-v3/copilot-p150-symmetric-v3-cad-scene-animation-public.zip",
+            "filename": "copilot-p150-symmetric-v3-cad-scene-animation-public.zip",
+            "bytes": 251575294,
+            "sha256": "28e1ca7aa0fc710e062d9c54f98e73757e9bea6cb994e57eb104d146503b6738",
+            "label": "実CG・動画・Blender・CAD・BOM・組立データ一式",
+            "contents": [
+              "bom",
+              "ordered_ids",
+              "instructions"
+            ]
+          }
+        ],
+        "animations": {
+          "turntable": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p150-symmetric-v3/copilot-p150-symmetric-v3-assembly-motion.mp4",
+            "bytes": 1835756,
+            "sha256": "a1c8810842635af3c3c97c014d8a8fde22dcc9b9279ddd9dd3cd190d5492ca60",
+            "start_seconds": 0,
+            "end_seconds": 3
+          },
+          "radial_explode": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p150-symmetric-v3/copilot-p150-symmetric-v3-assembly-motion.mp4",
+            "bytes": 1835756,
+            "sha256": "a1c8810842635af3c3c97c014d8a8fde22dcc9b9279ddd9dd3cd190d5492ca60",
+            "start_seconds": 3,
+            "end_seconds": 6
+          },
+          "bottom_up": {
+            "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p150-symmetric-v3/copilot-p150-symmetric-v3-assembly-motion.mp4",
+            "bytes": 1835756,
+            "sha256": "a1c8810842635af3c3c97c014d8a8fde22dcc9b9279ddd9dd3cd190d5492ca60",
+            "start_seconds": 6,
+            "end_seconds": 12
+          }
+        }
+      },
+      "assembly_support": {
+        "external_aid_count": 0,
+        "assembly_aid_count": 0,
+        "status": "DIGITAL_SELF_SUPPORTING_UNTESTED",
+        "physical_validation": "UNKNOWN",
+        "geometry_revision": "bilateral-symmetry-v3",
+        "manifest_sha256": "66ca1dd00ff0a54f9c19fcf3b401c4096f57128e08c162138f9982754357bd44",
+        "attachment_evidence_sha256": "983ce1139e3404c331462a2f526d3bbba79c5b0efb4561a6cb40097143680ac3",
+        "sequence_evidence_sha256": "ea4d3ff117b71232caffe12f2c440a1b0172d649e75397351472c471e982021d",
+        "motion_sha256": "bdf639b721943726e03c114a24ba7658a53166390535d61a1039e87357c7ce22",
+        "geometry_sequence_identity_sha256": "a212043f338be168eef907979f9669d2aa43cc9a46467b70b69134d5c997be01",
+        "all_categories_geometry_match": true,
+        "assembly_validation_ref": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/validation/copilot-p150-symmetric-v3-symmetry-support.json",
+          "sha256": "ea4d3ff117b71232caffe12f2c440a1b0172d649e75397351472c471e982021d",
+          "bytes": 4114645
+        },
+        "gravity_balance_result": "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS",
+        "physical_mass_measured": false,
+        "assembly_validation_transport_ref": {
+          "path": "/artifacts/studies/part-count-matrix-20260921/validation/copilot-p150-symmetric-v3-symmetry-support.json.gz",
+          "encoding": "gzip",
+          "bytes": 239601,
+          "sha256": "4a0b48a1062cc7c7a73bc980ed22b011ef84597452ea0ae3f5de71bea0d44f93",
+          "decoded_bytes": 4114645,
+          "decoded_sha256": "ea4d3ff117b71232caffe12f2c440a1b0172d649e75397351472c471e982021d"
+        }
+      },
+      "symmetry_visual": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/validation/copilot-p150-symmetric-v3-native-visual-symmetry.json",
+        "bytes": 2306,
+        "sha256": "b0f9b12d027b1dd43b75944d9182df8f1f68fd3d8e36d6bd014fa374a7f2e948"
+      },
+      "previous_case_id": "copilot-p150-support-free-v2",
+      "symmetry_context": {
+        "schema_version": 1,
+        "symmetry_plane_x_mm": 0,
+        "source_current_case_id": "copilot-p150-support-free-v2",
+        "source_current_manifest_sha256": "c47469dd9a706161c52982af0ce3a45424ac418a2cd3c72f0bb4c31d4e446233",
+        "source_original_3mf_sha256": "15aefe74f5f38892e7b6227f062f349fb256a222aec9207f7a09f6e31e388ab0",
+        "source_original_stl_sha256": "26dad79fa9c74ff682e72f46619460d75f6d73d51c71677723a629dd9c3c6dde",
+        "paired_target_cells_and_colors_sha256": "5152ab5423e07bc8bb0f03c3dcf6ee464d020a3b8e4a0ca0a49a0fc1d4497387",
+        "intentional_changes_from_published_case": true,
+        "old_occupied_and_color_unchanged_assertion": false,
+        "new_cell_geometry_and_color_mirror_xor_required": 0,
+        "native_surface_symmetry_tolerance_mm": 0.01,
+        "native_part_pose_pair_tolerance_mm": 0.00002,
+        "support_load_mode": "PER_ROOT_EXCLUSIVE_TOKEN_INTERSECTION_TO_FIRST_SHARED_RECEIVER",
+        "nominal_part_mirror_map_ref": {
+          "path": "artifacts/studies/part-count-matrix-20260921/cases/copilot-p150-symmetric-v3/nominal-symmetry-pairs.json",
+          "sha256": "049978bacf7b3fa618b29df9dc981b9059d2720ae660f28b853942e1587341b4"
+        }
+      },
+      "symmetry_raster_verification": {
+        "image_size_px": [
+          1200,
+          1200
+        ],
+        "left_eye_pixels": 8855,
+        "right_eye_pixels": 8855,
+        "all_label_xor_including_silhouette": 230,
+        "whole_material_xor": 30,
+        "silhouette_xor": 200,
+        "maximum_silhouette_boundary_distance_pixels": 1,
+        "per_material_boundary_measurements": {
+          "geometry": {
+            "mirror_xor_pixels": 200,
+            "maximum_mirrored_boundary_distance_pixels": 1
+          },
+          "c0": {
+            "mirror_xor_pixels": 230,
+            "maximum_mirrored_boundary_distance_pixels": 1
+          },
+          "c1": {
+            "mirror_xor_pixels": 30,
+            "maximum_mirrored_boundary_distance_pixels": 1
+          },
+          "c2": {
+            "mirror_xor_pixels": 0,
+            "maximum_mirrored_boundary_distance_pixels": 0
+          }
+        },
+        "eye_mask_xor": 0,
+        "classification": "Unlit native R/G/B labels with alpha>127; paired foreground materials exclude separately reported silhouette-edge disagreements.",
+        "render_samples": 32,
+        "source_visual_sha256": "b0f9b12d027b1dd43b75944d9182df8f1f68fd3d8e36d6bd014fa374a7f2e948",
+        "native_geometry_mirror_pairs_verified": true,
+        "boundary_distance_tolerance_pixels": 1
+      }
     },
     {
       "id": "copilot-p200-symmetric-v3",
@@ -409,7 +609,7 @@
   ],
   "display_catalog": {
     "path": "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/display/catalog.json",
-    "bytes": 398965,
-    "sha256": "1af9a6fd37db9295d77db81f68a3bd61b21132e35930e620e25b70be850cd7a3"
+    "bytes": 645130,
+    "sha256": "abed3426d6bcc67d774e8c031eaf8013c6dd6152396e095a70208a0edd5b9108"
   }
 }

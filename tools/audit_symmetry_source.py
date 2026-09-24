@@ -45,23 +45,30 @@ def raster_rgba(width, height, rgba):
         if alpha > 127:
             labels[index] = 1 + [red, green, blue].index(max(red, green, blue))
     reflected = bytearray().join(labels[y * width:(y + 1) * width][::-1] for y in range(height))
-    mismatches = [index for index, (a, b) in enumerate(zip(labels, reflected, strict=True)) if bool(a) != bool(b)]
-    maximum_distance = 0
-    for index in mismatches:
-        x, y = index % width, index // width
-        destination = reflected if labels[index] else labels
-        if not any(destination[yy * width + xx] for yy in range(max(0, y - 1), min(height, y + 2))
-                   for xx in range(max(0, x - 1), min(width, x + 2))):
-            raise ValueError("Actual native silhouette disagreement exceeds the declared one-pixel boundary tolerance")
-        maximum_distance = 1
+    boundaries = {}
+    for name, value in [("geometry", None), ("c0", 1), ("c1", 2), ("c2", 3)]:
+        predicate = bool if value is None else lambda label: label == value
+        mismatches = [index for index, (a, b) in enumerate(zip(labels, reflected, strict=True)) if predicate(a) != predicate(b)]
+        distance = 0.0
+        for index in mismatches:
+            x, y = index % width, index // width
+            destination = reflected if predicate(labels[index]) else labels
+            if not any(predicate(destination[yy * width + xx])
+                       for yy in range(max(0, y - 1), min(height, y + 2))
+                       for xx in range(max(0, x - 1), min(width, x + 2))
+                       if (xx - x) ** 2 + (yy - y) ** 2 <= 1):
+                raise ValueError("Actual native material disagreement exceeds the declared one-pixel boundary tolerance")
+            distance = 1.0
+        boundaries[name] = {"mirror_xor_pixels": len(mismatches), "maximum_mirrored_boundary_distance_pixels": distance}
     return {
         "image_size_px": [width, height],
         "left_eye_pixels": sum(labels[y * width + x] == 3 for y in range(height) for x in range(width // 2)),
         "right_eye_pixels": sum(labels[y * width + x] == 3 for y in range(height) for x in range(width // 2, width)),
         "all_label_xor_including_silhouette": sum(a != b for a, b in zip(labels, reflected, strict=True)),
         "whole_material_xor": sum(a != b for a, b in zip(labels, reflected, strict=True) if a and b),
-        "silhouette_xor": len(mismatches),
-        "maximum_silhouette_boundary_distance_pixels": maximum_distance,
+        "silhouette_xor": boundaries["geometry"]["mirror_xor_pixels"],
+        "maximum_silhouette_boundary_distance_pixels": boundaries["geometry"]["maximum_mirrored_boundary_distance_pixels"],
+        "per_material_boundary_measurements": boundaries,
         "eye_mask_xor": sum((a == 3) != (b == 3) for a, b in zip(labels, reflected, strict=True)),
         "classification": "Unlit native R/G/B labels with alpha>127; paired foreground materials exclude separately reported silhouette-edge disagreements.",
     }
@@ -140,13 +147,20 @@ def main():
             or native_render["palette_label_channels"] != {"c0": "R", "c1": "G", "c2": "B"}):
         raise ValueError("The actual unlit native pixels are not bound to the original complete native scene")
     pixels = raster(stage / "native" / mask_record["path"])
+    if "per_material_boundary_measurements" in native_visual:
+        if (pixels["per_material_boundary_measurements"] != native_visual["per_material_boundary_measurements"]
+                or native_render["samples"] != native_visual.get("render_samples")):
+            raise ValueError("Independent per-material pixel distances or actual render samples differ from sealed evidence")
+    elif pixels["whole_material_xor"] != 0:
+        raise ValueError("A material mismatch has no explicit bound per-material raster proof")
+    pixels["render_samples"] = native_render["samples"]
     if (pixels["eye_mask_xor"] != native_visual["left_vs_reflected_right_eye_xor_pixels"]
             or pixels["whole_material_xor"] != native_visual["whole_material_xor_pixels"]
             or pixels["silhouette_xor"] != native_visual["whole_silhouette_xor_pixels"]
             or pixels["left_eye_pixels"] != native_visual["eyes"]["left"]["pixels"]
             or pixels["right_eye_pixels"] != native_visual["eyes"]["right"]["pixels"]
             or pixels["left_eye_pixels"] != pixels["right_eye_pixels"]
-            or pixels["eye_mask_xor"] != 0 or pixels["whole_material_xor"] != 0
+            or pixels["eye_mask_xor"] != 0
             or pixels["maximum_silhouette_boundary_distance_pixels"] > native_visual["raster_boundary_tolerance_pixels"]):
         raise ValueError("Recomputed actual native raster measurements differ from the sealed source report")
     visual = {"case_id": case, "intentional_change_from_previous_published_case": {

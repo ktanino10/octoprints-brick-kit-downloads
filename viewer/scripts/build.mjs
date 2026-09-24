@@ -45,8 +45,8 @@ const licenses = await Promise.all(dependencies.map(async (name) => {
   return `${'='.repeat(72)}\n${name} ${pkg.version} (${pkg.license})\n${'='.repeat(72)}\n\n${license.trim()}\n`;
 }));
 const notices = `Octoprints Phase 1 viewer — third-party notices\n\n`
-  + `The served JavaScript includes Three.js. meshoptimizer is used for offline display-mesh processing; esbuild, Babel and Playwright are build/test tools only.\n`
-  + `No external fonts, CDNs, telemetry, or remote runtime dependencies are used.\n\n`
+  + `The served JavaScript includes Three.js and the meshoptimizer lossless native-buffer decoder. meshoptimizer also performs offline display-mesh processing; esbuild, Babel and Playwright are build/test tools only.\n`
+  + `No external executable runtime dependencies, fonts, or telemetry are loaded. Immutable model data may be fetched from fixed commits in this same public repository; decoded native geometry is SHA-256 verified.\n\n`
   + licenses.join('\n');
 await Promise.all(['THIRD_PARTY_LICENSES.txt', 'assets/THIRD_PARTY_LICENSES.txt'].map(
   (filename) => writeFile(path.join(root, filename), notices),

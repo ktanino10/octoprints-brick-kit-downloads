@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "case_id": "copilot-p150-symmetric-v3",
+  "geometry_revision": "bilateral-symmetry-v3",
+  "environment": "macOS desktop / pinned WebKit2203 / Playwright;390px viewport emulation is not a physical-phone test",
+  "transport": "BIT_EXACT_NATIVE_VERTEX_AND_INDEX_SEQUENCE_COMPRESSION_NO_GEOMETRY_CHANGE",
+  "display_mode": "LABELED_DISPLAY_LOD_EXISTING_STOCK_REUSE_WITH_NEW_NATIVE_TYPES_UNCHANGED",
+  "native_originals_changed": false,
+  "universal_smoothness_guarantee": false,
+  "measurements": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "load_ms": 9201.915167000152,
+      "frames_ms": [
+        111,
+        145.99999999999818,
+        51.00000000000182,
+        54,
+        46
+      ],
+      "input_handler_ms": [
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      "event_loop_yield_ms": [
+        3,
+        0,
+        0,
+        0,
+        1
+      ],
+      "gpu_finish_wait_ms": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "diagnostics": {
+        "ready": true,
+        "candidate": "copilot-p150-symmetric-v3",
+        "actual_instances": 26734,
+        "matrix_elements_mismatched": 0,
+        "visible_instances": 26734,
+        "explosion": 0,
+        "draw_calls": 254,
+        "triangles": 63981402,
+        "shared_geometries": 231,
+        "instance_batches": 254,
+        "actual_aids": 0,
+        "visible_aids": 0,
+        "display_mode": "NATIVE_PREVIEW_TESSELLATION",
+        "selected_part_native_geometry": true,
+        "camera": [
+          89.9655693000934,
+          -1476.631840913275,
+          943.2749375381296,
+          0,
+          4,
+          212.89999995231628
+        ]
+      },
+      "renderer": "WebKit WebGL",
+      "vendor": "WebKit",
+      "radial": {
+        "input_to_finished_frame_ms": 136,
+        "diagnostics": {
+          "ready": true,
+          "candidate": "copilot-p150-symmetric-v3",
+          "actual_instances": 26734,
+          "matrix_elements_mismatched": 0,
+          "visible_instances": 26734,
+          "explosion": 1,
+          "draw_calls": 254,
+          "triangles": 63981402,
+          "shared_geometries": 231,
+          "instance_batches": 254,
+          "actual_aids": 0,
+          "visible_aids": 0,
+          "display_mode": "NATIVE_PREVIEW_TESSELLATION",
+          "selected_part_native_geometry": true,
+          "camera": [
+            1679.3541975315156,
+            -2667.3562793279652,
+            1767.6315662592715,
+            0,
+            7.170776000000018,
+            212.67397595231625
+          ]
+        }
+      },
+      "actual_drag_input_delivery_ms": 23.26779200029705,
+      "actual_drag_to_finished_frame_ms": 77.5735840006746,
+      "pause_ui_response_ms": 114.48174999986804
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "load_ms": 2691.871292000542,
+      "frames_ms": [
+        63,
+        45,
+        43,
+        57.999999999999545,
+        44.000000000000455
+      ],
+      "input_handler_ms": [
+        0,
+        0,
+        0,
+        0.9999999999995453,
+        0
+      ],
+      "event_loop_yield_ms": [
+        1,
+        1,
+        1,
+        0.9999999999995453,
+        0
+      ],
+      "gpu_finish_wait_ms": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "diagnostics": {
+        "ready": true,
+        "candidate": "copilot-p150-symmetric-v3",
+        "actual_instances": 26734,
+        "matrix_elements_mismatched": 0,
+        "visible_instances": 26734,
+        "explosion": 0,
+        "draw_calls": 254,
+        "triangles": 63981402,
+        "shared_geometries": 231,
+        "instance_batches": 254,
+        "actual_aids": 0,
+        "visible_aids": 0,
+        "display_mode": "NATIVE_PREVIEW_TESSELLATION",
+        "selected_part_native_geometry": true,
+        "camera": [
+          98.49300633941857,
+          -1616.9743619469887,
+          1012.5039364075648,
+          0,
+          4,
+          212.89999995231628
+        ]
+      },
+      "renderer": "WebKit WebGL",
+      "vendor": "WebKit",
+      "radial": {
+        "input_to_finished_frame_ms": 111,
+        "diagnostics": {
+          "ready": true,
+          "candidate": "copilot-p150-symmetric-v3",
+          "actual_instances": 26734,
+          "matrix_elements_mismatched": 0,
+          "visible_instances": 26734,
+          "explosion": 1,
+          "draw_calls": 254,
+          "triangles": 63981402,
+          "shared_geometries": 231,
+          "instance_batches": 254,
+          "actual_aids": 0,
+          "visible_aids": 0,
+          "display_mode": "NATIVE_PREVIEW_TESSELLATION",
+          "selected_part_native_geometry": true,
+          "camera": [
+            1790.6619885794992,
+            -2844.6242428488285,
+            1870.6943357481468,
+            0,
+            7.170776000000018,
+            212.67397595231625
+          ]
+        }
+      },
+      "actual_drag_input_delivery_ms": 21.291582999765524,
+      "actual_drag_to_finished_frame_ms": 69.52587500018126,
+      "pause_ui_response_ms": 157.19295800045074
+    }
+  ]
+}

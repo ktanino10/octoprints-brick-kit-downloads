@@ -1,7 +1,7 @@
 Octoprints Phase 1 viewer — third-party notices
 
-The served JavaScript includes Three.js. meshoptimizer is used for offline display-mesh processing; esbuild, Babel and Playwright are build/test tools only.
-No external fonts, CDNs, telemetry, or remote runtime dependencies are used.
+The served JavaScript includes Three.js and the meshoptimizer lossless native-buffer decoder. meshoptimizer also performs offline display-mesh processing; esbuild, Babel and Playwright are build/test tools only.
+No external executable runtime dependencies, fonts, or telemetry are loaded. Immutable model data may be fetched from fixed commits in this same public repository; decoded native geometry is SHA-256 verified.
 
 ========================================================================
 three 0.180.0 (MIT)

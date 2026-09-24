@@ -2,8 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { gzipSync } from 'node:zlib';
-import { DENSITY_ID, SYMMETRY_MESH_PREFIX, validateDensityFile, validateNativeGeometryFile } from '../../assets/density-data.js';
-import { loadNativeLibraries, verifiedJSON } from '../src/density-assets.js';
+import { DENSITY_ID, SYMMETRY_MESH_PREFIX, SYMMETRY_LOSSLESS_PREFIX, validateDensityFile, validateNativeGeometryFile } from '../../assets/density-data.js';
+import { loadNativeLibraries, verifiedJSON, decodeLosslessNativeType } from '../src/density-assets.js';
+import { MeshoptEncoder } from '../node_modules/meshoptimizer/index.js';
 
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 function fixture() {
@@ -103,4 +104,43 @@ test('same-origin gzip proof verifies both transport and raw bytes, without raw-
   await assert.rejects(verifiedJSON({ ...file, bytes: raw.length, sha256: hash(raw) }));
   mock.mock.mockImplementation(async () => new Response('missing compressed evidence', { status: 404 }));
   await assert.rejects(verifiedJSON(file), /404/);
+});
+
+test('lossless native transport restores original Float32 bytes and exact index ordering, not a simplified mesh', async t => {
+    await MeshoptEncoder.ready;
+    const { file: original } = fixture();
+    const vertices = new Float32Array([-0, 1.25, -2.5, 9.125, 0, 0, 0, -7.25, 0]);
+    const indices = new Uint32Array([2, 0, 1]);
+    const positions = new Uint8Array(vertices.buffer), faces = new Uint8Array(indices.buffer);
+    const encodedVertices = MeshoptEncoder.encodeVertexBuffer(positions, 3, 12);
+    const encodedIndices = MeshoptEncoder.encodeIndexSequence(faces, 3, 4);
+    const header = Buffer.alloc(24); header.write('OBMLZ001');
+    header.writeUInt32LE(3, 8); header.writeUInt32LE(1, 12);
+    header.writeUInt32LE(encodedVertices.length, 16); header.writeUInt32LE(encodedIndices.length, 20);
+    const body = Buffer.concat([header, encodedVertices, encodedIndices]), packed = gzipSync(body);
+    const nativeHeader = Buffer.alloc(12); nativeHeader.write('OBM1');
+    nativeHeader.writeUInt32LE(3, 4); nativeHeader.writeUInt32LE(1, 8);
+    const raw = Buffer.concat([nativeHeader, positions, faces]);
+    const file = {
+      ...original, format: 'OBM1_MESHOPT_GZIP', repository_path: `${SYMMETRY_LOSSLESS_PREFIX}UNIT-ONLY.mesh.gz`,
+      codec: 'MESHOPT_VERTEX_BUFFER_AND_INDEX_SEQUENCE', codec_version: '1.2.0',
+      native_repository_path: original.repository_path, native_public_commit: original.public_commit,
+      native_sha256: hash(gzipSync(raw)), native_bytes: gzipSync(raw).length,
+      decoded_bytes: raw.length, decoded_sha256: hash(raw),
+      bytes: packed.length, sha256: hash(packed), geometry_sha256: hash(raw.subarray(12)),
+      original_float32_and_uint32_bytes_recovered: true, indices_reordered: false, native_geometry_modified: false,
+    };
+    file.url = `https://raw.githubusercontent.com/ktanino10/octoprints-brick-kit-downloads/${file.public_commit}/${file.repository_path}`;
+    t.mock.method(globalThis, 'fetch', async () => new Response(packed, { status: 200 }));
+    const result = await loadNativeLibraries([file]);
+    assert.equal(result.mode, 'NATIVE_FLOAT32');
+    const restored = result.types['UNIT-ONLY'].positions;
+    assert.deepEqual(Buffer.from(restored.buffer, restored.byteOffset, restored.byteLength), Buffer.from(positions));
+    assert.deepEqual([...result.types['UNIT-ONLY'].indices], [2, 0, 1]);
+    await assert.rejects(decodeLosslessNativeType(body, { ...file, decoded_sha256: 'c'.repeat(64) }));
+    for (const changed of [
+      { ...file, indices_reordered: true }, { ...file, native_geometry_modified: true },
+      { ...file, codec_version: 'unknown' }, { ...file, decoded_bytes: 100_000_000 },
+      { ...file, native_repository_path: '../private/scene.blend' }, { ...file, storage: undefined },
+    ]) assert.throws(() => validateNativeGeometryFile(changed));
 });

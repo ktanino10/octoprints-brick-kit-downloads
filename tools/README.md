@@ -36,6 +36,16 @@ JSON・画像・任意ホスト・別repo・旧形状fallbackは許可しませ�
 Pagesにはgzipだけ、元の完全JSONはpublic Releaseとread-only検証入力へ保持します。
 `verifiedJSON` は圧縮SHA、gzip形式、展開後bytes/SHAを確認してからparseし、raw URLへのfallbackは行いません。
 
+raw配信の実転送が遅い型には、`encode_native_transport.mjs` でlosslessな
+meshoptimizer vertex-buffer/index-sequence符号化＋gzipを追加できます。
+`OBMLZ001` は原Float32の全byte・Uint32の元の面順を復元し、元OBM1全SHAと配列SHAを確認します。
+三角形の回転・並替えを行うindex-buffer codecではなくindex-sequenceを使い、simplify/quantizeは呼びません。
+元の`geometry/`ファイルは不変、輸送derivativeだけを同repo `lossless/<type>.mesh.gz` に固定commit保存します。
+`apply_native_transport.mjs` はまだ公開されていないPUBLIC_PENDING guideにのみ適用し、
+既存公開guideへ上書きしません。`verify_lossless_transport.mjs` は匿名CORS/MIME/圧縮SHA/完全復号SHAを検算します。
+WASM復号はローカルbundle内の既存固定ライブラリーです。実3Dページだけに `wasm-unsafe-eval` を限定し、
+通常の `unsafe-eval` や外部コード実行先は許可しません。復号失敗時に原形を箱・旧版・別geometryへ代用しません。
+
 ## Copilot支台なし追加改訂の受領記録
 
 `archive/copilot-support-free-revision.json` は、既存15案の完了記録とは別の4案だけを追跡します。

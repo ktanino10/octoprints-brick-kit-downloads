@@ -21,9 +21,11 @@ for (const entry of catalog.cases.filter(row => row.state === 'READY')) {
   let before = 0, after = 0;
   const files = [];
   for (const file of manifest.geometry_files) {
-    const nativePath = file.storage === 'PUBLIC_REPO_COMMIT' ? file.repository_path : file.path.slice(1);
+    const lossless = file.format === 'OBM1_MESHOPT_GZIP';
+    const nativePath = lossless ? file.native_repository_path
+      : file.storage === 'PUBLIC_REPO_COMMIT' ? file.repository_path : file.path.slice(1);
     const compressed = await readFile(new URL(nativePath, root));
-    if (sha(compressed) !== file.sha256) throw new Error('Exact native geometry changed');
+    if (sha(compressed) !== (lossless ? file.native_sha256 : file.sha256)) throw new Error('Exact native geometry changed');
     const raw = gunzipSync(compressed), faces = raw.readUInt32LE(8), instances = count.get(file.type_id) ?? 1;
     before += instances * faces;
     const old = /^(?:BR|PL)-\d+x\d+-H\d+(?:-EDGE-C020)?$/.test(file.type_id) ? base.geometry[file.geometry_sha256] : null;

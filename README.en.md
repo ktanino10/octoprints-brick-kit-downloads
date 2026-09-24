@@ -34,7 +34,7 @@ The original models come from **[martinwoodward/octoprints](https://github.com/m
 a project publishing GitHub-themed 3D-printable mascots. We reference pinned revision `981a85f0bec9d1a9c280fd5719d0d797852229c4`.
 This archive adds brick decomposition/grouping, native CAD, BOMs, assembly sequences, comparisons and 360-degree viewing.
 Model derivatives follow **CC BY-NC 4.0**. [Three.js](https://github.com/mrdoob/three.js) supplies browser rendering,
-and [meshoptimizer](https://github.com/zeux/meshoptimizer) is used for offline display LOD.
+and [meshoptimizer](https://github.com/zeux/meshoptimizer) is used for offline display LOD and bit-exact native-buffer transport.
 See [project introductions, modifications, interface references and rights](ATTRIBUTION.en.md)
 and [third-party software licenses](viewer/assets/THIRD_PARTY_LICENSES.txt).
 

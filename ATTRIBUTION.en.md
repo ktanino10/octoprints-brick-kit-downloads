@@ -82,7 +82,7 @@ The original copyright notices and license text are retained.
 | Project | Introduction and role here | License |
 |---|---|---|
 | [mrdoob/three.js](https://github.com/mrdoob/three.js) | A browser 3D library, used for actual-mesh rendering, rotation/zoom and instanced shared geometry. | MIT |
-| [zeux/meshoptimizer](https://github.com/zeux/meshoptimizer) | A mesh-optimization library, used only to precompute display LOD for ordinary bricks. It does not replace the original CAD, STL or Blender files. | MIT |
+| [zeux/meshoptimizer](https://github.com/zeux/meshoptimizer) | Used for offline display LOD and lossless native-buffer encoding/decoding that restores every original vertex byte and triangle index in its original order. Lossless transport is not mesh simplification and does not replace original CAD, STL or Blender files. | MIT |
 
 These are software tools, not the source of the character designs. Their MIT or other software licenses are
 distinct from CC BY-NC 4.0 on model-derived artifacts. Pinned-version notices, including build/test tools,
