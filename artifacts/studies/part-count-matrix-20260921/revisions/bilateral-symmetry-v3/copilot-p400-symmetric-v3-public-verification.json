@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "case_id": "copilot-p400-symmetric-v3",
+  "geometry_revision": "bilateral-symmetry-v3",
+  "state": "READY",
+  "scope": "ONE_ACTUAL_CORRECTED_CASE_NOT_FINAL_COMPARISON_OR_PHYSICAL_APPROVAL",
+  "source_commit": "ab4b21541ff4141af227d3927b1b4aca6b9c9308",
+  "verified_content_commit": "a8a65060339653f3008d4ba471fca2757fdbe80b",
+  "verified_pages_run": "35975434746",
+  "actual_count": 71049,
+  "target_count": 71492,
+  "actual_types": 276,
+  "geometry_sequence_identity_sha256": "cf882392304fc626749374387f83638769b85559cb311ad36a09c15c6a5c284b",
+  "nominal_symmetry": {
+    "metric": "NOMINAL_8MM_XY_1_6MM_Z_MATERIAL_CELLS_NOT_NATIVE_TESSELLATION",
+    "actual_material_samples": 1549664,
+    "mirror_x_mm": 0,
+    "material_occupancy_xor": 0,
+    "paired_material_color_differences": 0,
+    "front_shape_xor": 0,
+    "paired_front_color_differences": 0,
+    "paired_front_depth_differences": 0,
+    "feature": {
+      "color_id": "c2",
+      "visible_samples": 720,
+      "front_mask_xor": 0
+    },
+    "native_geometry_or_physical_validation": false,
+    "excluded": [
+      "studs",
+      "cavities",
+      "gaps",
+      "chamfers",
+      "lighting",
+      "native CAD reflection",
+      "physical supports"
+    ]
+  },
+  "actual_native_reflection": {
+    "parts": 71049,
+    "type_rotation_pairs": 265,
+    "maximum_bidirectional_cut_volume_mm3": 0.0,
+    "complete_pairing_and_source_files_unchanged": true
+  },
+  "actual_supports": {
+    "geometry_sequence_identity_sha256": "cf882392304fc626749374387f83638769b85559cb311ad36a09c15c6a5c284b",
+    "native_support_contact_evidence_sha256": "47143a084a579bcdc9415b0fecf258d7f1a34cc566fb66b948ea8f3d87cbed6d",
+    "checked_material_supports": 35,
+    "actual_native_load_prefixes": 624,
+    "actual_native_material_sections": 733,
+    "minimum_nominal_support_margin_mm": 1.4887367955628061,
+    "required_nominal_support_margin_mm": 1,
+    "required_baseline_targets_covered": 99,
+    "nonreset_token_loads_match_actual_support_graph": true,
+    "external_aid_count": 0,
+    "assembly_aid_count": 0,
+    "physical_validation": "UNKNOWN"
+  },
+  "actual_intentional_changes_and_native_pixels": {
+    "case_id": "copilot-p400-symmetric-v3",
+    "intentional_change_from_previous_published_case": {
+      "added_1_6mm_cells": 6132,
+      "removed_1_6mm_cells": 5941,
+      "recolored_1_6mm_cells": 4497,
+      "full_diff_matches_sealed_readonly_record": true
+    },
+    "new_mechanical_baseline_cells_and_colors_exact": true,
+    "actual_native_png": {
+      "image_size_px": [
+        1200,
+        1200
+      ],
+      "left_eye_pixels": 9635,
+      "right_eye_pixels": 9635,
+      "all_label_xor_including_silhouette": 98,
+      "whole_material_xor": 64,
+      "silhouette_xor": 34,
+      "maximum_silhouette_boundary_distance_pixels": 1.0,
+      "per_material_boundary_measurements": {
+        "geometry": {
+          "mirror_xor_pixels": 34,
+          "maximum_mirrored_boundary_distance_pixels": 1.0
+        },
+        "c0": {
+          "mirror_xor_pixels": 98,
+          "maximum_mirrored_boundary_distance_pixels": 1.0
+        },
+        "c1": {
+          "mirror_xor_pixels": 64,
+          "maximum_mirrored_boundary_distance_pixels": 1.0
+        },
+        "c2": {
+          "mirror_xor_pixels": 0,
+          "maximum_mirrored_boundary_distance_pixels": 0.0
+        }
+      },
+      "eye_mask_xor": 0,
+      "left_vs_reflected_right_eye_xor_pixels": 0,
+      "maximum_eye_boundary_distance_pixels": 0.0,
+      "classification": "Unlit native R/G/B labels with alpha>127; paired foreground materials exclude separately reported silhouette-edge disagreements.",
+      "render_samples": 32
+    },
+    "physical_validation": "UNKNOWN"
+  },
+  "raster_note": "32-sample diagnostic render: eyes9635 pixels each with zero mirrored-eye difference. Silhouette34 and common-foreground material64 pixel differences remain explicit, with maximum Euclidean boundary distance1px. Native CAD and whole-part colors remain exactly paired.",
+  "public_browser": {
+    "engine": "pinned WebKit2203",
+    "actual_support_steps_and_native_undersides": 35,
+    "allGPU_absolute_radial_roundtrips": true,
+    "original_and_labeled_display_modes": true,
+    "actual_movie_chapters": 3,
+    "JA_EN_share_reload_390px": true,
+    "failed_data_native_proof_images_show_error": true,
+    "errors": []
+  },
+  "anonymous_delivery": {
+    "changed_site_files": 25,
+    "complete_release_assets_verified_or_previous_hash_rechecked": 10,
+    "repository_native_types": 103,
+    "transport_public_commit": "5481d39e26c8c26db5b96a5632590f846363127f",
+    "lossless_bytes": 7374710,
+    "original_native_gzip_bytes": 19663232,
+    "all_original_float32_bytes_and_uint32_index_order_restored": true,
+    "geometry_simplified_for_transport": false,
+    "authentication": "none"
+  },
+  "physical_validation": "UNKNOWN",
+  "slicer_status": "NOT_SLICED",
+  "full_print": "ON_HOLD",
+  "appearance_adoption": "PENDING"
+}

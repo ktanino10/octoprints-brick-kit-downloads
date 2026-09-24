@@ -4,11 +4,15 @@
 
 キャラクターの正式名称は **Rubber Ducky（ラバーダッキー）** です。表示名を統一し、既存の `ducky` URL・部品ID・配布ファイルは変更せず保持しています。
 
-**Copilotの左右対称性は修正中です。** 検証済みの新版を案ごとに追加し、未修正版には注意を表示します。
-旧版を対称化済みとは扱いません。[新しい修正依頼の状況](archive/copilot-symmetry-revision.json)は、
-以前の支台なし4案の公開完了とは別です。画像加工だけでなく、実CAD・配色・組立・動画がそろった新版を受け入れます。
-[対称化3倍案の実3Dと左右の目の比較](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case=copilot-p300-symmetric-v3)を個別に確認できます。
-実53,575部品・306型・組立仮支台0。全5案の完了ではなく、案ごとの公開確認状態は上の受領記録を参照してください。
+**Copilotの1.2・1.5・2・3・4倍案を、実形状から左右対称へ改訂しました。**
+実部品数は **21,435 / 26,734 / 35,692 / 53,575 / 71,049**、外部・組立仮支台は全案0個です。
+目・ゴーグル・顔・側面・土台の形状、whole-part色、全IDの配置を同じCAD・CG・動画・ガイドへ結び付けています。
+[5案の実画像・実寸比を比較](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-matrix.html?revision=bilateral-symmetry-v3&character=copilot) /
+[15行CSV](artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparison.csv) /
+[公開検証の記録](archive/copilot-symmetry-revision.json)。
+比較の1倍17,873部品は、既知の非対称を残す未改訂原本です。新5案へ加算せず、旧画像・モデル・URLも保持しています。
+実CADの鏡像差と描画境界の有限pixel差は区別します。2倍案の片側眼は1pixel差（全眼maskでは2pixels）で、
+外周・色境界を含め最大1pixelの境界距離として記録し、0へ丸めません。物理的な保持力・強度は未検証です。
 
 **[公開サイト / 日本語](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/)** ·
 **[実3D組立ガイド](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html)** ·
@@ -19,11 +23,11 @@
 
 初めての方はトップの**印刷用データカタログ**から、3体それぞれの5案を部品数・完成サイズ・支台の有無で選べます。
 各カードの**「360°回転で見る」**から、選んだ実モデルをドラッグ／スワイプで回転・拡大できます。3Dは開いたときだけ読み込みます。
-Copilotは1.2・1.5・2・3倍の[支台なし実構造へ改訂](archive/copilot-support-free-revision.json)したデータを別版で追加しています。
+以前のCopilot1.2・1.5・2・3倍の[支台なし実構造への改訂](archive/copilot-support-free-revision.json)も履歴として保持しています。
 実部品数は **21,382 / 26,673 / 35,630 / 53,287**、各案の外部・組立仮支台は0個です。
 [改訂4案・既存4倍・1倍参照の比較](https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-matrix.html?revision=body-support-v2&character=copilot) /
 [改訂CSV](artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparison.csv)。
-4倍の71,261個は既存の支台0案をそのまま保持しています。支台付き旧版や元の15案READYは、この追加改訂の完了には使いません。
+旧4倍の71,261個は既存の支台0案として保持しています。これらは上の対称化5案とは別の版です。
 [改訂4案の公開検証記録](artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/publication-verification.json)に、
 実CAD・全組立ID・公称荷重・実ブラウザー・動画・匿名取得・旧データ保持・容量の確認範囲を記録しています。
 Mona 519 / Copilot 695 / Rubber Ducky 413個の少部品r3案は通常の候補から外し、過去の試作・失敗・改良は別ページへ分けています。

@@ -11,7 +11,13 @@
 </div>
 <div class="note"><strong><!--l10n:7ad86b21a30f269e-->このページは制作履歴です。</strong><!--l10n:82f45a97bb65bb82-->以前の画像や試験データを、現在のモデルの印刷合格と読み替えないでください。実物未検証・全数印刷保留の条件は変わりません。</div>
 <div class="prose">
-  <section id="copilot-symmetry"><h2><!--l10n:b6779e8cf24ff8b0-->Copilotの左右対称性を確認・修正する</h2><p><!--l10n:ebb1ffffb7a407fd-->2026-09-23、黄色い目が左右で異なるという指摘を受け、現行5案の原形データを確認しました。目の幅・高さ・位置だけでなく、ゴーグルや顔境界にも左右差があり、軽量表示や照明だけの問題ではありません。</p><p><!--l10n:9e1265cd297edbb9-->実際の形状・部品の色・配置を修正し、同じ原形に基づくCAD・画像・動画・組立表示へそろえます。画像だけの左右反転や着色では対応しません。対称化で変わる形状・色は新しい改訂として記録し、支台なしの構造と実支持検査を維持します。</p><p><strong><!--l10n:85f8afd30aba7723-->修正版は、検証を終えた案から順次追加します。</strong><!--l10n:1da0efea683962ae-->新しい実CAD・対称性・支持・動画・公開確認がそろうまでは修正済みと表示しません。前回の支台なし改訂の完了記録とは別に、<a href="../archive/copilot-symmetry-revision.json"><!--l10n:538daa9fef35aa43-->左右対称改訂の公開状況</a><!--l10n:5ab0751542bbf2c2-->を記録します。</p><p><a href="density-guide.html?case=copilot-p300-symmetric-v3"><!--l10n:d0000154363d0ebf-->対称化3倍案：実3Dと左右の目の比較 →</a></p><p><!--l10n:526e97f00bf20776-->3倍案は実53,575部品・306型、組立仮支台0個です。全実部品の鏡像対応、272組の実CAD形状比較、43支持・413荷重段階、実描画の左右眼を照合しました。全5案の完了や現物の強度保証ではありません。</p></section>
+  <section id="copilot-symmetry"><h2><!--l10n:b6779e8cf24ff8b0-->Copilotの左右対称性を確認・修正する</h2>
+  <p><!--l10n:ebb1ffffb7a407fd-->2026-09-23、黄色い目が左右で異なるという指摘を受け、現行5案の原形データを確認しました。目の幅・高さ・位置だけでなく、ゴーグルや顔境界にも左右差があり、軽量表示や照明だけの問題ではありません。</p>
+  <p><!--l10n:2c8ef5c7297e25a7-->実形状・部品色・配置を改訂し、1.2・1.5・2・3・4倍の5案を同じCAD・CG・動画・組立ガイドへそろえました。実数は21,435・26,734・35,692・53,575・71,049部品で、全案の外部・組立仮支台は0個です。</p>
+  <p><!--l10n:7913735a9a6176bc-->全個体の鏡像ID・色・位置と、案ごとに合計1,166組の実CAD形状比較を検査しました。165実支持・2,256荷重段階で、1mm以上の公称CAD余裕と非reset荷重を維持しています。実際のPLA保持力・強度・安定性は未検証です。</p>
+  <p><!--l10n:13d6b670e6c7b538-->描画した外周・色境界には有限pixel差が残ります。2倍案の片側眼は1pixel差、全眼maskは2pixelsです。各境界の距離は最大1pixel以内と記録し、実CADの厳密な鏡対応とは区別します。</p>
+  <p><a href="density-matrix.html?revision=bilateral-symmetry-v3&amp;character=copilot"><!--l10n:70f9db30f2912429-->対称化5案の実画像・実寸比を比較 →</a> / <a href="../artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparison.csv" download><!--l10n:54ccd280128ae310-->対称化改訂CSVを取得 ↓</a> / <a href="../archive/copilot-symmetry-revision.json"><!--l10n:538daa9fef35aa43-->左右対称改訂の公開状況</a></p>
+  <p><!--l10n:628e4bd40cf69b5a-->1倍17,873部品は既知の左右差を残す未改訂原本です。Mona・Rubber Duckyの10行とCSV header、旧案の画像・動画・CAD・URLはそのまま保存しています。未スライス・実物未検証・全数印刷保留は変わりません。</p></section>
   <section id="references"><h2><!--l10n:9476971f8f41a49a-->原型・参考プロジェクト</h2>
     <p><a href="https://github.com/martinwoodward/octoprints"><strong>martinwoodward/octoprints</strong></a><!--l10n:ca73ff8605adee0a--> — GitHubに関連するマスコットの3Dプリントモデルを公開するプロジェクトです。キャラクターの原型・配色の出発点として、固定リビジョンを参照しています。</p>
     <p><!--l10n:8557f7a49ec069cf-->本アーカイブで追加したのは、独立ブロックへの分割・統合、ネイティブCAD、BOM、組立順、比較画像、表示用LODと360度表示です。原型を独自作品としたり、これらの変更を参照元の実装として紹介したりしません。</p>

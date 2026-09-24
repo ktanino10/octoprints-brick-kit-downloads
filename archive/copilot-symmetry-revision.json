@@ -8,7 +8,7 @@
   "baseline_public_commit": "22d7d56308668fe7c366c48ac7af26e77ac4558c",
   "baseline_count": 17873,
   "expected_case_count": 5,
-  "published_verified_case_count": 4,
+  "published_verified_case_count": 5,
   "reported_issue": "The actual yellow eye shapes, height/depth positions and other bilateral boundaries differ in all five current Copilot models. The existing downloadable versions are not yet symmetry-corrected.",
   "requirements": {
     "correct_actual_geometry_and_whole_part_colors": true,
@@ -16,7 +16,7 @@
     "paired_eye_shape_color_position_and_depth": "MIRROR_MATCH",
     "check_goggles_face_boundary_sides_and_outer_shape": true,
     "native_part_pairing": "BIJECTIVE_INVOLUTION_INCLUDING_CENTER_SELF_PAIRS",
-    "maximum_native_pair_pose_error_mm": 0.00002,
+    "maximum_native_pair_pose_error_mm": 2e-05,
     "native_mirror_volume_error_limit": "max(0.00001 mm^3, actual part volume * 0.0000001)",
     "external_aid_count": 0,
     "assembly_aid_count": 0,
@@ -215,7 +215,7 @@
       "previous_actual_count": 71261,
       "multiplier": 4,
       "target_count": 71492,
-      "status": "PUBLIC_PENDING",
+      "status": "READY",
       "actual_case_id": "copilot-p400-symmetric-v3",
       "source_commit": "ab4b21541ff4141af227d3927b1b4aca6b9c9308",
       "actual_count": 71049,
@@ -240,11 +240,18 @@
         "viewer": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case=copilot-p400-symmetric-v3"
       },
       "verification": {
-        "public_browser_passed": false,
-        "anonymous_downloads_passed": false
+        "public_browser_passed": true,
+        "anonymous_downloads_passed": true
       },
       "external_aid_count": 0,
-      "assembly_aid_count": 0
+      "assembly_aid_count": 0,
+      "verified_content_commit": "a8a65060339653f3008d4ba471fca2757fdbe80b",
+      "verified_pages_run": "35975434746",
+      "verification_record": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/copilot-p400-symmetric-v3-public-verification.json",
+        "bytes": 4961,
+        "sha256": "66753695cd249720892b05875a3177d651ff6a71a7f5fb212b97d519b2e3ed40"
+      }
     }
   ],
   "previous_completed_delivery": {
@@ -274,9 +281,54 @@
   },
   "revision_catalog": {
     "path": "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/catalog.json",
-    "bytes": 63056,
-    "sha256": "6021071a32335e5f19523dc477227123fedc84d2f98e63b1a9465e81c392dfbd"
+    "bytes": 64781,
+    "sha256": "da21d8b7fe5215aac7e1dc5665df8d20bc4327e077ab3ec6c1da81681de41223"
   },
   "base_catalog_sha256": "69b39de67d8d9214b75b631bf1e9f73e09ee16a520314b65a559ad6be2ff864e",
-  "budget_baseline": "/archive/body-support-baseline.json"
+  "budget_baseline": "/archive/body-support-baseline.json",
+  "comparisons": {
+    "state": "PUBLIC_PENDING",
+    "descriptor": {
+      "path": "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparison-sheets.json",
+      "bytes": 180493,
+      "sha256": "cf4107c5be11e6ba37a676e86dec880478ebaa03272236b3c91cf852ffde6aa0"
+    },
+    "assets": [
+      {
+        "path": "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparison-sheets.json",
+        "bytes": 180493,
+        "sha256": "cf4107c5be11e6ba37a676e86dec880478ebaa03272236b3c91cf852ffde6aa0"
+      },
+      {
+        "path": "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparison.csv",
+        "bytes": 2518,
+        "sha256": "57f1af3c305fea504e49c87ce764ab505da61ab1f6764af6c10d2e7b0f490e8f"
+      },
+      {
+        "path": "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparisons/copilot-normalized-front.jpg",
+        "bytes": 504874,
+        "sha256": "1fc9902b2ba96a2ca34181aa1ac28ca5718819d279114427d5faac6431c88f96"
+      },
+      {
+        "path": "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparisons/copilot-normalized-three_quarter.jpg",
+        "bytes": 593726,
+        "sha256": "b3f920d9fc5ef63bd524d233a5854f01f011f4aaa0c47694361e3973b60ace1e"
+      },
+      {
+        "path": "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparisons/copilot-physical-size.jpg",
+        "bytes": 572922,
+        "sha256": "e74a72c59c512f1b90da10c641a18d4382e9cf452323630c0bd4551c4294d343"
+      },
+      {
+        "path": "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/matrix.json",
+        "bytes": 3186,
+        "sha256": "6ea6559cbb5b6d28f83f3860f6dc6383051c3bbdfe969189c2f88f9bde491b63"
+      }
+    ],
+    "verification": {
+      "public_browser_passed": false,
+      "anonymous_downloads_passed": false
+    },
+    "one_x_reference_symmetry": "KNOWN_ASYMMETRY_READ_ONLY_NOT_REVISED"
+  }
 }

@@ -67,8 +67,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "MD",
-      "bytes": 32336,
-      "sha256": "4f991571773519b8ce7f997870f6c880776462996fe0704cde29a9b1a4faa5ae",
+      "bytes": 32733,
+      "sha256": "614d5e20b477921de68268119c32a6a821219e66009913efc03513ddd0830144",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/README.en.md",
       "status": "ARCHIVE_RECORD"
     },
@@ -77,8 +77,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "MD",
-      "bytes": 32957,
-      "sha256": "633f7a76794260c0f9be6045a4ccb9e9622dd37433e9d73567d6b3bd3604509b",
+      "bytes": 33280,
+      "sha256": "0ea4d1efa57ca09a0176b8d326f216c80990a1632447a852400b064a97349345",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/README.md",
       "status": "ARCHIVE_RECORD"
     },
@@ -127,8 +127,8 @@
       "group": "design",
       "revision": "r2-20260919",
       "format": "JSON",
-      "bytes": 16193,
-      "sha256": "6854d0bfb3579837ab30302588df1ed29914ceb3bcba4380907a67e7fc5ddae1",
+      "bytes": 18623,
+      "sha256": "0a584b89f32a7054234033bce40a967a69f39074d0cd37911e58968042a01a44",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/copilot-symmetry-revision.json",
       "status": "ARCHIVE_RECORD"
     },
@@ -560,6 +560,16 @@
       "bytes": 5054,
       "sha256": "3d629d97369c7ed421ca9e75c358cac373dd8befaa68b8d82c4e9d083c3166bb",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/sources/mona-likeness-360-20260921.json",
+      "status": "ARCHIVE_RECORD"
+    },
+    {
+      "path": "archive/sources/part-count-matrix-20260921-bilateral-symmetry-v3-comparisons-verification.json",
+      "group": "design",
+      "revision": "r2-20260919",
+      "format": "JSON",
+      "bytes": 10041,
+      "sha256": "c1938832a5d8964d895c1fdd87b3d61e3e4fa55b2d42cf4fd35c870670899645",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/archive/sources/part-count-matrix-20260921-bilateral-symmetry-v3-comparisons-verification.json",
       "status": "ARCHIVE_RECORD"
     },
     {
@@ -30797,10 +30807,75 @@
       "group": "study",
       "revision": "part-count-matrix-20260921",
       "format": "JSON",
-      "bytes": 63056,
-      "sha256": "6021071a32335e5f19523dc477227123fedc84d2f98e63b1a9465e81c392dfbd",
+      "bytes": 64781,
+      "sha256": "da21d8b7fe5215aac7e1dc5665df8d20bc4327e077ab3ec6c1da81681de41223",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/catalog.json",
       "status": "UNSELECTED_DIGITAL_STUDY"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparison-sheets.json",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JSON",
+      "bytes": 180493,
+      "sha256": "cf4107c5be11e6ba37a676e86dec880478ebaa03272236b3c91cf852ffde6aa0",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparison-sheets.json",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "cf4107c5be11e6ba37a676e86dec880478ebaa03272236b3c91cf852ffde6aa0",
+      "source_bytes": 180493,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparison.csv",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "CSV",
+      "bytes": 2518,
+      "sha256": "57f1af3c305fea504e49c87ce764ab505da61ab1f6764af6c10d2e7b0f490e8f",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparison.csv",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "57f1af3c305fea504e49c87ce764ab505da61ab1f6764af6c10d2e7b0f490e8f",
+      "source_bytes": 2518,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparisons/copilot-normalized-front.jpg",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JPG",
+      "bytes": 504874,
+      "sha256": "1fc9902b2ba96a2ca34181aa1ac28ca5718819d279114427d5faac6431c88f96",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparisons/copilot-normalized-front.jpg",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "1fc9902b2ba96a2ca34181aa1ac28ca5718819d279114427d5faac6431c88f96",
+      "source_bytes": 504874,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparisons/copilot-normalized-three_quarter.jpg",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JPG",
+      "bytes": 593726,
+      "sha256": "b3f920d9fc5ef63bd524d233a5854f01f011f4aaa0c47694361e3973b60ace1e",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparisons/copilot-normalized-three_quarter.jpg",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "b3f920d9fc5ef63bd524d233a5854f01f011f4aaa0c47694361e3973b60ace1e",
+      "source_bytes": 593726,
+      "relation": "BYTE_IDENTICAL"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparisons/copilot-physical-size.jpg",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JPG",
+      "bytes": 572922,
+      "sha256": "e74a72c59c512f1b90da10c641a18d4382e9cf452323630c0bd4551c4294d343",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparisons/copilot-physical-size.jpg",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "e74a72c59c512f1b90da10c641a18d4382e9cf452323630c0bd4551c4294d343",
+      "source_bytes": 572922,
+      "relation": "BYTE_IDENTICAL"
     },
     {
       "path": "artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/copilot-p120-performance.json",
@@ -30893,6 +30968,16 @@
       "status": "UNSELECTED_DIGITAL_STUDY"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/copilot-p400-symmetric-v3-public-verification.json",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JSON",
+      "bytes": 4961,
+      "sha256": "66753695cd249720892b05875a3177d651ff6a71a7f5fb212b97d519b2e3ed40",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/copilot-p400-symmetric-v3-public-verification.json",
+      "status": "UNSELECTED_DIGITAL_STUDY"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/display/catalog.json",
       "group": "study",
       "revision": "part-count-matrix-20260921",
@@ -30901,6 +30986,19 @@
       "sha256": "b79e3ed65f637fa0675c1f04910a480aea80f541b39b2a8e4321520d3c2f2f7a",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/display/catalog.json",
       "status": "UNSELECTED_DIGITAL_STUDY"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/matrix.json",
+      "group": "study",
+      "revision": "part-count-matrix-20260921",
+      "format": "JSON",
+      "bytes": 3186,
+      "sha256": "6ea6559cbb5b6d28f83f3860f6dc6383051c3bbdfe969189c2f88f9bde491b63",
+      "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/matrix.json",
+      "status": "UNSELECTED_DIGITAL_STUDY",
+      "source_sha256": "6ea6559cbb5b6d28f83f3860f6dc6383051c3bbdfe969189c2f88f9bde491b63",
+      "source_bytes": 3186,
+      "relation": "BYTE_IDENTICAL"
     },
     {
       "path": "artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/catalog.json",
@@ -32737,8 +32835,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "JS",
-      "bytes": 576128,
-      "sha256": "0dc9e3b672a838742c36897c03fe7df4c05594e60b6e00bcae536e54c8b23e9f",
+      "bytes": 578445,
+      "sha256": "d81e2c54d4c56e7dbcb08bbf58f146c0ad3c5855a7ea68f8fe508d2b5dfebb8a",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/assets/translations.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -32926,8 +33024,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "HTML",
-      "bytes": 23281,
-      "sha256": "45150b678e6e9c0fefe168eaeec598180672dba3d637eb91d091cad898eeb296",
+      "bytes": 23661,
+      "sha256": "daeb88eec36086c8b07f54262b8612646d97f5401883ae2d541a7391c167bd88",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/en/history.html",
       "status": "ARCHIVE_RECORD"
     },
@@ -33166,8 +33264,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "HTML",
-      "bytes": 23632,
-      "sha256": "fc0e76e3565239179d83cd1c358d0b3736919f493f2d363beae9563ef0b51b55",
+      "bytes": 24001,
+      "sha256": "aa47fadac3e0e2481fa3b872d92bcb488e8a84ae336cf3283b54fb19694b004c",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/history.html",
       "status": "ARCHIVE_RECORD"
     },
@@ -33256,8 +33354,8 @@
       "group": "site",
       "revision": "public-archive-2026-09-19",
       "format": "HTML",
-      "bytes": 23633,
-      "sha256": "70da01aeef338bee312ee4c0b359d75f30469fff0ccf4ec7ab084a6b879836d4",
+      "bytes": 24005,
+      "sha256": "e6cb2f1291bc94d98410a72ce7f6ace00c4b7162da0ffb6af7af7b0bd2393acb",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/history.html",
       "status": "ARCHIVE_RECORD"
     },
@@ -33406,8 +33504,8 @@
       "group": "viewer",
       "revision": "public-viewer-2026-09-19",
       "format": "JS",
-      "bytes": 1488169,
-      "sha256": "233d1f3ce9c5f7c4aa66950ccec5876200e24a52a32be5ad30419bdd683caf54",
+      "bytes": 1491407,
+      "sha256": "1ab894b7d54755061096385dfb0c1d4dfc35f5922e2a9460bb07fb41ba96b3ab",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/viewer/assets/density-guide.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -33436,8 +33534,8 @@
       "group": "viewer",
       "revision": "public-viewer-2026-09-19",
       "format": "JS",
-      "bytes": 1479485,
-      "sha256": "7d9c8cf452de27cbb910f3c8007a2acb9fd07e1f2e27ea2adcf5adfd9bbadcb0",
+      "bytes": 1482723,
+      "sha256": "bc16414293c8520abe0e16feee78a57c2ff9cbdfb081f450ad6cf63d0194187d",
       "url": "https://ktanino10.github.io/octoprints-brick-kit-downloads/viewer/assets/studio.js",
       "status": "ARCHIVE_RECORD"
     },
@@ -33453,17 +33551,17 @@
     }
   ],
   "totals": {
-    "files": 2639,
-    "bytes": 991733237,
+    "files": 2647,
+    "bytes": 993620747,
     "groups": {
       "site": 75,
-      "design": 95,
+      "design": 96,
       "phase1": 149,
       "common": 561,
       "common-trial": 24,
       "selected": 544,
       "trial": 60,
-      "study": 1108,
+      "study": 1115,
       "feedback": 16,
       "viewer": 7
     }

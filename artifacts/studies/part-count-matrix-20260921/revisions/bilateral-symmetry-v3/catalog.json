@@ -181,7 +181,7 @@
         "old_occupied_and_color_unchanged_assertion": false,
         "new_cell_geometry_and_color_mirror_xor_required": 0,
         "native_surface_symmetry_tolerance_mm": 0.01,
-        "native_part_pose_pair_tolerance_mm": 0.00002,
+        "native_part_pose_pair_tolerance_mm": 2e-05,
         "support_load_mode": "PER_ROOT_EXCLUSIVE_TOKEN_INTERSECTION_TO_FIRST_SHARED_RECEIVER",
         "nominal_part_mirror_map_ref": {
           "path": "artifacts/studies/part-count-matrix-20260921/cases/copilot-p120-symmetric-v3/nominal-symmetry-pairs.json",
@@ -371,7 +371,7 @@
         "old_occupied_and_color_unchanged_assertion": false,
         "new_cell_geometry_and_color_mirror_xor_required": 0,
         "native_surface_symmetry_tolerance_mm": 0.01,
-        "native_part_pose_pair_tolerance_mm": 0.00002,
+        "native_part_pose_pair_tolerance_mm": 2e-05,
         "support_load_mode": "PER_ROOT_EXCLUSIVE_TOKEN_INTERSECTION_TO_FIRST_SHARED_RECEIVER",
         "nominal_part_mirror_map_ref": {
           "path": "artifacts/studies/part-count-matrix-20260921/cases/copilot-p150-symmetric-v3/nominal-symmetry-pairs.json",
@@ -580,7 +580,7 @@
         "old_occupied_and_color_unchanged_assertion": false,
         "new_cell_geometry_and_color_mirror_xor_required": 0,
         "native_surface_symmetry_tolerance_mm": 0.01,
-        "native_part_pose_pair_tolerance_mm": 0.00002,
+        "native_part_pose_pair_tolerance_mm": 2e-05,
         "support_load_mode": "PER_ROOT_EXCLUSIVE_TOKEN_INTERSECTION_TO_FIRST_SHARED_RECEIVER",
         "nominal_part_mirror_map_ref": {
           "path": "artifacts/studies/part-count-matrix-20260921/cases/copilot-p200-symmetric-v3/nominal-symmetry-pairs.json",
@@ -791,7 +791,7 @@
         "old_occupied_and_color_unchanged_assertion": false,
         "new_cell_geometry_and_color_mirror_xor_required": 0,
         "native_surface_symmetry_tolerance_mm": 0.01,
-        "native_part_pose_pair_tolerance_mm": 0.00002,
+        "native_part_pose_pair_tolerance_mm": 2e-05,
         "support_load_mode": "PER_ROOT_EXCLUSIVE_TOKEN_INTERSECTION_TO_FIRST_SHARED_RECEIVER",
         "nominal_part_mirror_map_ref": {
           "path": "artifacts/studies/part-count-matrix-20260921/cases/copilot-p300-symmetric-v3/nominal-symmetry-pairs.json",
@@ -964,7 +964,7 @@
         "old_occupied_and_color_unchanged_assertion": false,
         "new_cell_geometry_and_color_mirror_xor_required": 0,
         "native_surface_symmetry_tolerance_mm": 0.01,
-        "native_part_pose_pair_tolerance_mm": 0.00002,
+        "native_part_pose_pair_tolerance_mm": 2e-05,
         "support_load_mode": "PER_ROOT_EXCLUSIVE_TOKEN_INTERSECTION_TO_FIRST_SHARED_RECEIVER",
         "nominal_part_mirror_map_ref": {
           "path": "artifacts/studies/part-count-matrix-20260921/cases/copilot-p400-symmetric-v3/nominal-symmetry-pairs.json",
@@ -1015,5 +1015,42 @@
     "path": "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/display/catalog.json",
     "bytes": 1184912,
     "sha256": "b79e3ed65f637fa0675c1f04910a480aea80f541b39b2a8e4321520d3c2f2f7a"
-  }
+  },
+  "comparison_sheets": {
+    "path": "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparison-sheets.json",
+    "bytes": 180493,
+    "sha256": "cf4107c5be11e6ba37a676e86dec880478ebaa03272236b3c91cf852ffde6aa0"
+  },
+  "comparison_assets": [
+    {
+      "path": "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparison-sheets.json",
+      "bytes": 180493,
+      "sha256": "cf4107c5be11e6ba37a676e86dec880478ebaa03272236b3c91cf852ffde6aa0"
+    },
+    {
+      "path": "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparison.csv",
+      "bytes": 2518,
+      "sha256": "57f1af3c305fea504e49c87ce764ab505da61ab1f6764af6c10d2e7b0f490e8f"
+    },
+    {
+      "path": "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparisons/copilot-normalized-front.jpg",
+      "bytes": 504874,
+      "sha256": "1fc9902b2ba96a2ca34181aa1ac28ca5718819d279114427d5faac6431c88f96"
+    },
+    {
+      "path": "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparisons/copilot-normalized-three_quarter.jpg",
+      "bytes": 593726,
+      "sha256": "b3f920d9fc5ef63bd524d233a5854f01f011f4aaa0c47694361e3973b60ace1e"
+    },
+    {
+      "path": "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparisons/copilot-physical-size.jpg",
+      "bytes": 572922,
+      "sha256": "e74a72c59c512f1b90da10c641a18d4382e9cf452323630c0bd4551c4294d343"
+    },
+    {
+      "path": "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/matrix.json",
+      "bytes": 3186,
+      "sha256": "6ea6559cbb5b6d28f83f3860f6dc6383051c3bbdfe969189c2f88f9bde491b63"
+    }
+  ]
 }

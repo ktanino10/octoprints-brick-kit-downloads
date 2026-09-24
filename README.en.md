@@ -4,12 +4,15 @@
 
 The character's correct name is **Rubber Ducky**. Display labels use that name; existing `ducky` URLs, part IDs and distributed files remain unchanged.
 
-**Copilot's bilateral symmetry is being corrected.** Verified new versions are added case by case,
-while variants still awaiting correction are explicitly marked. Historical versions are not relabeled symmetric.
-The [new correction status](archive/copilot-symmetry-revision.json) is separate from the completed four-case
-support-free delivery. Corrected native CAD, colors, assembly data and animation are required, not image-only edits.
-[View the corrected 3× model and actual eye comparison](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-guide.html?case=copilot-p300-symmetric-v3):
-53,575 actual parts, 306 types and zero assembly aids. This does not complete all five variants; the receipt records each case's public-verification state.
+**All five Copilot variants have been corrected in actual bilateral geometry:1.2x,1.5x,2x,3x and4x.**
+Actual counts are **21,435 / 26,734 / 35,692 / 53,575 / 71,049**, with zero external or temporary assembly aids.
+Eyes, goggles, face, sides and base share the same native geometry, whole-part colors and placements across CAD, CG, movie and guide.
+[Compare actual images and physical sizes](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-matrix.html?revision=bilateral-symmetry-v3&character=copilot) /
+[15-row CSV](artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparison.csv) /
+[Public verification record](archive/copilot-symmetry-revision.json).
+The17,873-part1x reference remains the original with known asymmetry and is not counted among the five corrections. Earlier images, models and URLs remain available.
+Actual CAD symmetry and finite raster-boundary differences are reported separately. The2x one-sided eye comparison differs by1pixel (2pixels in the full eye mask);
+all measured silhouette/material boundary distances remain within1pixel, rather than being rounded to zero. Physical retention and strength remain untested.
 
 **[Public site / English](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/)** ·
 **[Actual 3D assembly guide](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-guide.html)** ·
@@ -20,11 +23,11 @@ support-free delivery. Corrected native CAD, colors, assembly data and animation
 
 Start with the homepage **print-data catalogue**: choose one of five variants for each character by part count, assembled size and assembly aids.
 Use **“Rotate in 360°”** on a card to drag/swipe and zoom the selected actual model. Its 3D data loads only when opened.
-Copilot's 1.2×/1.5×/2×/3× cases have separate [actual support-free structural revisions](archive/copilot-support-free-revision.json):
+Copilot's earlier1.2x/1.5x/2x/3x [support-free structural revisions](archive/copilot-support-free-revision.json) remain as historical versions:
 **21,382 / 26,673 / 35,630 / 53,287 parts**, each with zero external or temporary assembly aids.
 [Revised comparison with the actual 1× reference](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-matrix.html?revision=body-support-v2&character=copilot) /
 [revised CSV](artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/comparison.csv).
-The existing zero-aid 4× case with 71,261 parts stays unchanged. Historical supported files and the earlier fifteen-case READY receipt do not complete this additional request.
+The earlier zero-aid4x case with71,261 parts stays unchanged. These are separate historical versions, not the five bilateral revisions above.
 The [four-revision publication verification record](artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/publication-verification.json)
 records actual CAD/IDs, nominal loads, public browser/video checks, anonymous downloads, immutable history and storage limits.
 The low-part r3 designs (Mona 519 / Copilot 695 / Rubber Ducky 413) are excluded from normal choices; trials, failures and refinements have a separate history page.
