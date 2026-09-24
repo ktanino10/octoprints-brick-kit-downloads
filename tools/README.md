@@ -55,6 +55,19 @@ meshoptimizer vertex-buffer/index-sequence符号化＋gzipを追加できます�
 WASM復号はローカルbundle内の既存固定ライブラリーです。実3Dページだけに `wasm-unsafe-eval` を限定し、
 通常の `unsafe-eval` や外部コード実行先は許可しません。復号失敗時に原形を箱・旧版・別geometryへ代用しません。
 
+最終比較は `import_density_comparisons.py --symmetry` で別途受け入れます。
+合意した `READY_FIXED_BILATERAL_COMPARISON_SUPPLEMENT_NOT_PUBLIC_QA` は新caseを加算せず、
+実5案が公開QA済みであること、元6入力×5ファイル＋旧global descriptor/CSV＋bindingの33読み取り専用証拠を要求します。
+`COMPLETE_REAL_COPILOT_BILATERAL_COMPARISONS` の3実画像・CSV・descriptorと同prefixのmatrix snapshot、
+合計6ファイルだけを `revisions/bilateral-symmetry-v3/` に追加し、元比較は上書きしません。
+CSVはCopilot5行だけを更新し、Mona/Rubber Ducky10行とheaderのraw bytesを保持します。
+1倍参照は `KNOWN_ASYMMETRY_READ_ONLY_NOT_REVISED` と明示し、対称化5案へ加算しません。
+`density-matrix.html?revision=bilateral-symmetry-v3&character=copilot` は新5案だけを比較し、
+日英caption、実寸比0.9px/mm、元CGとcamera、390px、実15行CSV、匿名6ファイルSHAを確認してから全体READYにします。
+比較ファイルがない間は旧画像へfallbackせず明示エラーとし、ホームのリンクも修正状況の履歴を指し続けます。
+`matrix.json` は固定source snapshotであり、新caseを昇格させる入力ではありません。
+公開前の `PUBLIC_PENDING` と実HTTPS検査後の `READY` はcase・比較双方で分離します。
+
 ## Copilot支台なし追加改訂の受領記録
 
 `archive/copilot-support-free-revision.json` は、既存15案の完了記録とは別の4案だけを追跡します。
@@ -95,6 +108,8 @@ exclusiveな支持伝播が次rootに入るresetは拒否し、first shared rece
 人向けテキスト・caption・alt・aria・descriptionだけを修正します。
 `ducky` slug、`DUCKY-`個体ID、case ID、URL・ファイル名、元マニフェストや焼き込み画像は変更しません。
 元の文字列カタログは保存し、表示後の日本語／英語切替でも元の翻訳キーを保持します。
+生成JSではsource IDを元文字列の配列indexへ結び、同じ長い元文を二重に保存しません。
+runtimeの `sourceIds` は従来と同一のID→全文対応へ復元し、自己完結したviewer bundleと既存容量制限を維持します。
 `browser_character_names.py` は日英の5案選択、実ID/個数/配布リンク、実3D部品名、390pxでの長い表示名を確認します。
 
 トップと既存の `models.html` は同じ `site/templates/index.html` を使います。

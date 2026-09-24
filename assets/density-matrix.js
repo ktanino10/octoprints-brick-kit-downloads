@@ -7,15 +7,19 @@ import {
 } from './density-data.js';
 import { comparisonFile, validateDensityComparisons } from './density-comparisons.js';
 import { effectiveBodySupportCatalog, loadBodySupportPublication } from './body-support-publication.js';
+import { effectiveSymmetryCatalog, loadSymmetryPublication } from './symmetry-publication.js';
 import { CHARACTER_NAMES as names } from './character-names.js';
 
 const $ = (selector) => document.querySelector(selector);
 let catalog = null, comparisons = null, character = 'mona', view = 'front';
 const params = new URLSearchParams(location.search);
 const bodyMode = params.get('revision') === 'body-support-v2';
+const symmetryMode = params.get('revision') === 'bilateral-symmetry-v3';
+const revisionMode = bodyMode || symmetryMode;
+const revision = symmetryMode ? 'bilateral-symmetry-v3' : 'body-support-v2';
 if (DENSITY_CHARACTERS.includes(params.get('character'))) character = params.get('character');
 if (['front', 'three_quarter'].includes(params.get('view'))) view = params.get('view');
-if (bodyMode) character = 'copilot';
+if (revisionMode) character = 'copilot';
 function showError(message) {
   $('#matrix-error').hidden = false; $('#matrix-error').textContent = message;
 }
@@ -59,6 +63,8 @@ function render() {
     native.href = downloadURL(displayedReference.assets.native_cad[0]);
     native.dataset.baselineDownload = character;
     reference.append(native, element('p', 'この1倍基準は比較参照です。15倍率案の完了件数には含めません。', 'quiet'));
+    if (symmetryMode) reference.append(element('p',
+      '1倍参照は既知の左右非対称を含む旧原本です。今回の対称化では変更しておらず、新5案の完了件数には含めません。', 'note'));
     if (character === 'mona' && !revisedReference) reference.append(element('p',
       'このMona 1倍画像・CADは外付け支台が必要な旧参照です。個数基準12,435は固定しますが、ヒゲ支台なしの新版ではありません。', 'note'));
     const videos = element('details', undefined, 'media-disclosure');
@@ -122,6 +128,8 @@ function render() {
       if (bodyMode) card.append(element('p', item.geometry_revision === 'body-support-v2'
         ? '本体一体支持の新改訂・組立仮支台0個。現物保持力は未検証です。'
         : '既存の4倍案・組立仮支台0個。今回の追加4案には数えません。', 'note'));
+      if (symmetryMode) card.append(element('p',
+        '実形状・部品色・配置を左右対応させた新改訂・組立仮支台0個。実物の強度と保持力は未検証です。', 'note'));
       const guide = element('a', '実3D・放射分解・底から組立 ↗', 'button secondary');
       guide.href = localizedURL(`density-guide.html?case=${item.id}`);
       card.append(guide);
@@ -145,10 +153,11 @@ function renderComparisonSheets() {
   const row = comparisons.rows.find(item => item.character === character);
   const host = $('#matrix-comparison-images'); host.replaceChildren();
   for (const image of row.images) {
-    const caption = image.mode === 'ACTUAL_CG_FIXED_PHYSICAL_PX_PER_MM'
+    let caption = image.mode === 'ACTUAL_CG_FIXED_PHYSICAL_PX_PER_MM'
       ? '実寸比・正面：原画像上0.9 px/mm。画面表示は縮小されても6モデルの相対比を保ちます。'
       : image.view === 'front' ? '正面：6モデルを同じ投影高さで比較。実寸比ではありません。'
         : '斜め：6モデルを同じ投影高さで比較。実寸比ではありません。';
+    if (symmetryMode) caption += ' 1倍参照は既知の非対称を残す未改訂原本です。';
     const figure = element('figure', undefined, 'mona-scale-sheet');
     figure.append(actualImage(comparisonFile(image), caption), element('figcaption', caption));
     host.append(figure);
@@ -158,7 +167,7 @@ function renderComparisonSheets() {
 function renderTable() {
   const host = $('#matrix-table'); host.replaceChildren();
   for (const item of catalog.cases) {
-    if (bodyMode && item.character !== 'copilot') continue;
+    if (revisionMode && item.character !== 'copilot') continue;
     const tr = element('tr');
     tr.dataset.case = item.id;
     const label = element('th', `${names[item.character]} / ${number(item.count_percentage / 100)}×`); label.scope = 'row';
@@ -176,7 +185,7 @@ function renderTable() {
   }
 }
 function renderHistory() {
-  const cases = (catalog.historical_cases ?? []).filter(item => !bodyMode || item.character === 'copilot');
+  const cases = (catalog.historical_cases ?? []).filter(item => !revisionMode || item.character === 'copilot');
   $('#matrix-history').hidden = cases.length === 0;
   const host = $('#matrix-history-links'); host.replaceChildren();
   for (const item of cases) {
@@ -188,7 +197,7 @@ function renderHistory() {
 }
 setLanguageContext((url) => {
   url.searchParams.set('character', character); url.searchParams.set('view', view);
-  if (bodyMode) url.searchParams.set('revision', 'body-support-v2');
+  if (revisionMode) url.searchParams.set('revision', revision);
   return url;
 });
 document.querySelectorAll('[data-density-character]').forEach((button) => button.addEventListener('click', () => { character = button.dataset.densityCharacter; render(); }));
@@ -204,32 +213,42 @@ try {
     if (catalog.comparison_sheets) {
       comparisons = validateDensityComparisons(await readJSON(catalog.comparison_sheets.path, catalog.comparison_sheets.sha256), catalog);
     }
-    let bodyPublication = null;
-    if (bodyMode) {
-      bodyPublication = await loadBodySupportPublication(readJSON, file => readJSON(file.path, file.sha256), pointer);
-      if (!bodyPublication.catalog?.comparison_sheets) throw new Error('支台なし改訂の実比較画像は、まだ公開していません。旧画像で代用しません。');
-      catalog = effectiveBodySupportCatalog(catalog, bodyPublication.catalog);
-      const file = bodyPublication.catalog.comparison_sheets;
+    let publication = null;
+    if (revisionMode) {
+      publication = await (symmetryMode ? loadSymmetryPublication : loadBodySupportPublication)(
+        readJSON, file => readJSON(file.path, file.sha256), pointer);
+      if (!publication.catalog?.comparison_sheets) throw new Error(symmetryMode
+        ? '対称化改訂の実比較画像は、まだ公開していません。旧画像で代用しません。'
+        : '支台なし改訂の実比較画像は、まだ公開していません。旧画像で代用しません。');
+      catalog = (symmetryMode ? effectiveSymmetryCatalog : effectiveBodySupportCatalog)(catalog, publication.catalog);
+      const file = publication.catalog.comparison_sheets;
       comparisons = validateDensityComparisons(await readJSON(file.path, file.sha256), catalog,
-        { bodySupport: true, previous: comparisons });
-      document.querySelector('.page-heading h1').textContent = 'Copilotを、支台なしの実構造へ。';
-      document.querySelector('.page-heading > p:last-child').textContent =
-        '新しい1.2・1.5・2・3倍案と、変更していない1倍参照・既存4倍案を比べます。元の15案の比較は上書きせず、別の改訂記録として表示しています。';
+        { bodySupport: bodyMode, symmetry: symmetryMode, previous: comparisons });
+      document.querySelector('.page-heading h1').textContent = symmetryMode
+        ? 'Copilotの5案を、実形状から左右対称へ。' : 'Copilotを、支台なしの実構造へ。';
+      document.querySelector('.page-heading > p:last-child').textContent = symmetryMode
+        ? '新しい1.2・1.5・2・3・4倍案と、変更していない1倍参照を比べます。1倍には既知の左右差が残ります。以前の比較は別の履歴として保存しています。'
+        : '新しい1.2・1.5・2・3倍案と、変更していない1倍参照・既存4倍案を比べます。元の15案の比較は上書きせず、別の改訂記録として表示しています。';
       document.querySelector('#main > aside.note').hidden = true;
       document.querySelector('.mona-priority > p').textContent =
         '倍率計算の固定基準は17,873部品です。外付け・組立仮支台を隠すのではなく、本体の実構造と組立順を改訂しています。CADの公称検査は現物の強度や保持力の保証ではありません。';
       document.querySelectorAll('[data-density-character]').forEach(button => { button.hidden = button.dataset.densityCharacter !== 'copilot'; });
-      document.querySelector('#matrix-results > .table-scroll').setAttribute('aria-label', 'Copilot新版と既存4倍の実数');
-      document.querySelector('#matrix-results > h2:nth-of-type(2)').textContent = 'Copilot新版と既存4倍の目標・実数。';
-      document.querySelector('#matrix-history > p').textContent = '支台付き旧版は履歴として残します。新しい支台なし改訂の完了件数には含めません。';
+      document.querySelector('#matrix-results > .table-scroll').setAttribute('aria-label', symmetryMode
+        ? 'Copilot対称化5案の実数' : 'Copilot新版と既存4倍の実数');
+      document.querySelector('#matrix-results > h2:nth-of-type(2)').textContent = symmetryMode
+        ? 'Copilot対称化5案の目標・実数。' : 'Copilot新版と既存4倍の目標・実数。';
+      document.querySelector('#matrix-history > p').textContent = symmetryMode
+        ? '左右差を残す旧版は履歴として保存します。対称化した新5案の完了件数には含めません。'
+        : '支台付き旧版は履歴として残します。新しい支台なし改訂の完了件数には含めません。';
       const previous = element('a', '以前の3体・15案の比較を履歴として開く →', 'text-link');
       previous.href = localizedURL('density-matrix.html?character=copilot');
       document.querySelector('.page-heading').append(previous);
     }
     const ready = catalog.cases.filter((item) => item.state === 'READY').length;
     const eligible = catalog.cases.filter((item) => densityDeliveryStatus(item) === 'READY').length;
-    $('#matrix-status').textContent = bodyMode
-      ? `支台なし追加改訂の公開確認：${number(bodyPublication.published.length, 0)} / 4案。比較参照と既存4倍は加算しません。実物合格ではありません。`
+    $('#matrix-status').textContent = symmetryMode
+      ? `左右対称改訂の公開確認：${number(publication.published.length, 0)} / 5案。未改訂の1倍参照は加算しません。実物合格ではありません。`
+      : bodyMode ? `支台なし追加改訂の公開確認：${number(publication.published.length, 0)} / 4案。比較参照と既存4倍は加算しません。実物合格ではありません。`
       : `追加要件適合 ${number(eligible, 0)} / 15案。比較対象の実データ公開 ${number(ready, 0)} / 15案。旧版は別の履歴です。実物合格ではありません。`;
     $('#matrix-results').hidden = false; render(); renderTable(); renderHistory();
   }

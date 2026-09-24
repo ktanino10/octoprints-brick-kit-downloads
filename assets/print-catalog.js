@@ -199,11 +199,13 @@ function modelCard(group, initial) {
     download.href = item.download.url;
     packageInfo.textContent = `ZIP ${number(item.download.bytes / 1000000)} MB · STL・STEP・BOM・CAD・動画を同梱`;
     guide.href = localizedURL(`density-guide.html?case=${item.id}`);
-    compare.href = localizedURL(item.symmetryRevision ? 'history.html#copilot-symmetry' : item.supportFreeRevision
+    const symmetryComparisons = item.symmetryRevision && sourceCatalog.symmetry_revisions?.comparison_sheets;
+    compare.href = localizedURL(item.symmetryRevision ? symmetryComparisons
+      ? 'density-matrix.html?revision=bilateral-symmetry-v3&character=copilot' : 'history.html#copilot-symmetry' : item.supportFreeRevision
       ? sourceCatalog.support_revisions.comparison_sheets
         ? 'density-matrix.html?revision=body-support-v2&character=copilot' : 'history.html#copilot-support-free'
       : `density-matrix.html?character=${group.character}`);
-    compare.textContent = item.symmetryRevision ? '左右対称の修正状況 →'
+    compare.textContent = item.symmetryRevision ? symmetryComparisons ? '対称化5案の実画像・実寸比を比較 →' : '左右対称の修正状況 →'
       : item.supportFreeRevision ? '支台なし改訂の実画像・実寸比を比較 →' : '5案を大きな画像で比較する →';
   }
   choose(initial);

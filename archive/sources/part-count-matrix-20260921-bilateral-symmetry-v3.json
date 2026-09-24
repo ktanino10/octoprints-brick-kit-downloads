@@ -32,6 +32,13 @@
       "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/cases/copilot-p400-symmetric-v3-summary.json",
+      "bytes": 330000,
+      "sha256": "be23f62da22fa08b86fb53307fcd410abbc6a4ece75a7e4a919ab1d479081200",
+      "source_relative_path": "cases/copilot-p400-symmetric-v3-summary.json",
+      "source_commit": "ab4b21541ff4141af227d3927b1b4aca6b9c9308"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p120-symmetric-v3-assembled-front.jpg",
       "bytes": 78387,
       "sha256": "7360db60e44bca0af7fcc65771b00a4b0fb0a9419df77a5f696244c1251f04e1",
@@ -200,6 +207,48 @@
       "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f"
     },
     {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p400-symmetric-v3-assembled-front.jpg",
+      "bytes": 78500,
+      "sha256": "da617928784f2304f8671423c82a7d3be9ee5ccfd93094ce0af3fdb1ea0297d3",
+      "source_relative_path": "images/copilot-p400-symmetric-v3-assembled-front.jpg",
+      "source_commit": "ab4b21541ff4141af227d3927b1b4aca6b9c9308"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p400-symmetric-v3-assembled-three_quarter.jpg",
+      "bytes": 107818,
+      "sha256": "8b58ac7a14b5f698c52e0067aa12432ae6b834b84303a7d97156b76fbb42d14a",
+      "source_relative_path": "images/copilot-p400-symmetric-v3-assembled-three_quarter.jpg",
+      "source_commit": "ab4b21541ff4141af227d3927b1b4aca6b9c9308"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p400-symmetric-v3-native-mirror-overlay.jpg",
+      "bytes": 16897,
+      "sha256": "17e075e2d177d8fe5a043717f0a56c2b681faa62416d2c31c9c69f5d680e8217",
+      "source_relative_path": "images/copilot-p400-symmetric-v3-native-mirror-overlay.jpg",
+      "source_commit": "ab4b21541ff4141af227d3927b1b4aca6b9c9308"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p400-symmetric-v3-paired-eye-zoom.jpg",
+      "bytes": 50401,
+      "sha256": "0836de8942fabf51bfce6df1f6943edcdcc4b55a5a5f1c709d8ac8b3e4a792f6",
+      "source_relative_path": "images/copilot-p400-symmetric-v3-paired-eye-zoom.jpg",
+      "source_commit": "ab4b21541ff4141af227d3927b1b4aca6b9c9308"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p400-symmetric-v3-radial-exploded.jpg",
+      "bytes": 164230,
+      "sha256": "3a9ec4b317a1bea8138a76604bd5e62224639aaf47d6ae06d1841f26d5445e12",
+      "source_relative_path": "images/copilot-p400-symmetric-v3-radial-exploded.jpg",
+      "source_commit": "ab4b21541ff4141af227d3927b1b4aca6b9c9308"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/images/copilot-p400-symmetric-v3-registered-face.jpg",
+      "bytes": 74672,
+      "sha256": "c4a6d89b267049a5a0b7997c871e272e4102613c923c6f61038a437392636c6c",
+      "source_relative_path": "images/copilot-p400-symmetric-v3-registered-face.jpg",
+      "source_commit": "ab4b21541ff4141af227d3927b1b4aca6b9c9308"
+    },
+    {
       "path": "artifacts/studies/part-count-matrix-20260921/source-records/52b19c1d612d00da7fcfb56bd08f788c62dcd7c8-bilateral-symmetry-v3-matrix.json",
       "bytes": 3151,
       "sha256": "d7477b5b349bf02076bd52925790a6e86ad8d8aec99045ac963f80a3e441553d",
@@ -226,6 +275,13 @@
       "sha256": "203a708371d2a2e5e8db62fede8390c1f21a155258a2383e5e65960f2d8227a4",
       "source_relative_path": "revisions/bilateral-symmetry-v3/matrix.json",
       "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/source-records/ab4b21541ff4141af227d3927b1b4aca6b9c9308-bilateral-symmetry-v3-matrix.json",
+      "bytes": 3186,
+      "sha256": "6ea6559cbb5b6d28f83f3860f6dc6383051c3bbdfe969189c2f88f9bde491b63",
+      "source_relative_path": "revisions/bilateral-symmetry-v3/matrix.json",
+      "source_commit": "ab4b21541ff4141af227d3927b1b4aca6b9c9308"
     },
     {
       "path": "artifacts/studies/part-count-matrix-20260921/validation/copilot-p120-symmetric-v3-native-visual-symmetry.json",
@@ -282,7 +338,21 @@
       "sha256": "02edf5b8c868efd0d1b051d97c3b40585c4eea2a006dbd89a204a81454da0bbe",
       "source_relative_path": "validation/copilot-p300-symmetric-v3-symmetry-support.json.gz",
       "source_commit": "a196f2b2b130fed5606ab32617c4aa377db1bb8f"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/validation/copilot-p400-symmetric-v3-native-visual-symmetry.json",
+      "bytes": 2308,
+      "sha256": "042f2fe7b5f1fdbf510552cb458e9b560fb4641d6251e0d517ce56f494a8f563",
+      "source_relative_path": "validation/copilot-p400-symmetric-v3-native-visual-symmetry.json",
+      "source_commit": "ab4b21541ff4141af227d3927b1b4aca6b9c9308"
+    },
+    {
+      "path": "artifacts/studies/part-count-matrix-20260921/validation/copilot-p400-symmetric-v3-symmetry-support.json.gz",
+      "bytes": 300003,
+      "sha256": "85feaa5735f071e8147a903850de870687512f3541630daf69d518080e64078e",
+      "source_relative_path": "validation/copilot-p400-symmetric-v3-symmetry-support.json.gz",
+      "source_commit": "ab4b21541ff4141af227d3927b1b4aca6b9c9308"
     }
   ],
-  "source_revision": "52b19c1d612d00da7fcfb56bd08f788c62dcd7c8"
+  "source_revision": "ab4b21541ff4141af227d3927b1b4aca6b9c9308"
 }

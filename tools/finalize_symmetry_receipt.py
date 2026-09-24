@@ -61,7 +61,22 @@ def promote(receipt, catalog, browser, downloads):
         row["verified_content_commit"] = downloads["deployment"]["commit"]
         row["verified_pages_run"] = downloads["deployment"]["workflow_run"]
     count = sum(item["status"] == "READY" for item in receipt["cases"])
-    complete = count == 5 and receipt.get("comparisons", {}).get("state") == "READY"
+    comparisons = receipt.get("comparisons")
+    if comparisons and browser.get("symmetry_comparison_sheets"):
+        expected_images = {BASE + file["path"].lstrip("/") for file in comparisons["assets"] if file["path"].endswith(".jpg")}
+        actual_images = {item["url"] for item in browser["symmetry_comparison_sheets"] if item.get("decoded") is True}
+        if (count != 5 or len(expected_images) != 3 or expected_images != actual_images
+                or browser.get("symmetry_csv_rows") != 15 or browser.get("symmetry_one_x_unrevised_asymmetry_visible") is not True):
+            raise ValueError("All five corrected cases and three real comparisons/CSV/known-asymmetric1x labels must be publicly checked")
+        for file in comparisons["assets"]:
+            actual = assets.get(BASE + file["path"].lstrip("/"))
+            if (not actual or actual.get("authentication") != "none"
+                    or any(actual[key] != file[key] for key in ["bytes", "sha256"])):
+                raise ValueError("A final bilateral comparison or source snapshot lacks anonymous exact-byte verification")
+        comparisons.update(state="READY", verification={"public_browser_passed": True, "anonymous_downloads_passed": True},
+                           verified_content_commit=downloads["deployment"]["commit"],
+                           verified_pages_run=downloads["deployment"]["workflow_run"])
+    complete = count == 5 and comparisons is not None and comparisons.get("state") == "READY"
     receipt["published_verified_case_count"] = count
     receipt["state"] = "READY" if complete else "PARTIAL"
     receipt["verification"] = {"public_browser_passed": complete, "anonymous_downloads_passed": complete}

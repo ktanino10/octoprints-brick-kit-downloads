@@ -1,0 +1,170 @@
+{
+  "case_id": "copilot-p400-symmetric-v3",
+  "source_commit": "ab4b21541ff4141af227d3927b1b4aca6b9c9308",
+  "metrics": {
+    "part_count": 71049,
+    "unique_types": 276,
+    "one_by_one_exceptions": 245,
+    "layer_count": 125,
+    "minimum_part_mm": [
+      7.8,
+      7.8,
+      3.2
+    ],
+    "grip_long_ge_15_8_count": 70804
+  },
+  "manifest_sha256": "1f9d6e410589875e4f16e3e057b30ef5472659bbdeca9bef3dc074b6270f5443",
+  "bom_sha256": "66ac8610ea086d4f3764190bbb5834d0a445d282a8fcc23d5f1ba48ef6eaa8cf",
+  "counted_instances": 71049,
+  "bom_ids_match": true,
+  "bom_types_colors_poses_steps_match": true,
+  "identity_projection_sha256": "be49e3c25729fd447e3599fc88af5e676ca95996395872d3113af8d54a432a61",
+  "body_height_families": [
+    {
+      "body_height_mm": 3.2,
+      "part_count": 272,
+      "unique_types": 6
+    },
+    {
+      "body_height_mm": 4.8,
+      "part_count": 70749,
+      "unique_types": 242
+    },
+    {
+      "body_height_mm": 9.6,
+      "part_count": 11,
+      "unique_types": 11
+    },
+    {
+      "body_height_mm": 14.4,
+      "part_count": 7,
+      "unique_types": 7
+    },
+    {
+      "body_height_mm": 19.2,
+      "part_count": 1,
+      "unique_types": 1
+    },
+    {
+      "body_height_mm": 24.0,
+      "part_count": 2,
+      "unique_types": 2
+    },
+    {
+      "body_height_mm": 33.6,
+      "part_count": 4,
+      "unique_types": 4
+    },
+    {
+      "body_height_mm": 52.8,
+      "part_count": 1,
+      "unique_types": 1
+    },
+    {
+      "body_height_mm": 72.0,
+      "part_count": 2,
+      "unique_types": 2
+    }
+  ],
+  "public_native_assembly": {
+    "path": "artifacts/studies/part-count-matrix-20260921/cases/copilot-p400-symmetric-v3/assembly.FCStd",
+    "document_objects": 296,
+    "native_links_resolved": 296,
+    "link_instances": 71049,
+    "valid_single_solid_targets_checked": 276,
+    "proxy_free": true,
+    "opened": true,
+    "recomputed": false,
+    "saved": false,
+    "sha256": "012285403519489e420444a290e28daf312713d67a31089c28f1911498f892f0"
+  },
+  "public_blender_motion_preserved": true,
+  "source_saved_scene_binding": "4ce731a900a54bdad92b8e8adf31447589f4ba99d8573d21161c6a803013b4ae",
+  "source_native_reopen": {
+    "result": "PASS_REOPENED_RELATIVE_NATIVE_LINK_ARRAYS",
+    "actual_instance_count": 71049,
+    "all_ids_types_colors_poses_steps": true,
+    "all_sources_inside_bundle": true
+  },
+  "private_inputs_copied": 0,
+  "symmetry_revision_evidence": {
+    "geometry_sequence_identity_sha256": "cf882392304fc626749374387f83638769b85559cb311ad36a09c15c6a5c284b",
+    "native_support_contact_evidence_sha256": "47143a084a579bcdc9415b0fecf258d7f1a34cc566fb66b948ea8f3d87cbed6d",
+    "checked_material_supports": 35,
+    "actual_native_load_prefixes": 624,
+    "actual_native_material_sections": 733,
+    "minimum_nominal_support_margin_mm": 1.4887367955628061,
+    "required_nominal_support_margin_mm": 1,
+    "required_baseline_targets_covered": 99,
+    "nonreset_token_loads_match_actual_support_graph": true,
+    "external_aid_count": 0,
+    "assembly_aid_count": 0,
+    "physical_validation": "UNKNOWN",
+    "native_pair_evidence": {
+      "actual_native_type_rotation_pairs": 265,
+      "maximum_symmetric_difference_volume_mm3": 0.0,
+      "tolerance": "max(1e-5 mm^3, max(actual volumes)*1e-7)",
+      "all_actual_pairs_covered": true,
+      "physical_validation": "UNKNOWN"
+    },
+    "independent_native_pairs": 265,
+    "independent_change_and_visual": {
+      "case_id": "copilot-p400-symmetric-v3",
+      "intentional_change_from_previous_published_case": {
+        "added_1_6mm_cells": 6132,
+        "removed_1_6mm_cells": 5941,
+        "recolored_1_6mm_cells": 4497,
+        "full_diff_matches_sealed_readonly_record": true
+      },
+      "new_mechanical_baseline_cells_and_colors_exact": true,
+      "actual_native_png": {
+        "image_size_px": [
+          1200,
+          1200
+        ],
+        "left_eye_pixels": 9635,
+        "right_eye_pixels": 9635,
+        "all_label_xor_including_silhouette": 98,
+        "whole_material_xor": 64,
+        "silhouette_xor": 34,
+        "maximum_silhouette_boundary_distance_pixels": 1.0,
+        "per_material_boundary_measurements": {
+          "geometry": {
+            "mirror_xor_pixels": 34,
+            "maximum_mirrored_boundary_distance_pixels": 1.0
+          },
+          "c0": {
+            "mirror_xor_pixels": 98,
+            "maximum_mirrored_boundary_distance_pixels": 1.0
+          },
+          "c1": {
+            "mirror_xor_pixels": 64,
+            "maximum_mirrored_boundary_distance_pixels": 1.0
+          },
+          "c2": {
+            "mirror_xor_pixels": 0,
+            "maximum_mirrored_boundary_distance_pixels": 0.0
+          }
+        },
+        "eye_mask_xor": 0,
+        "left_vs_reflected_right_eye_xor_pixels": 0,
+        "maximum_eye_boundary_distance_pixels": 0.0,
+        "classification": "Unlit native R/G/B labels with alpha>127; paired foreground materials exclude separately reported silhouette-edge disagreements.",
+        "render_samples": 32
+      },
+      "physical_validation": "UNKNOWN"
+    },
+    "gravity_balance_result": "PASS_ALL_NOMINAL_CAD_STATIC_MOMENT_BOUNDS"
+  },
+  "public_native_id_pose_check": {
+    "case_id": "copilot-p400-symmetric-v3",
+    "assembly_sha256": "012285403519489e420444a290e28daf312713d67a31089c28f1911498f892f0",
+    "actual_instances": 71049,
+    "array_count": 296,
+    "all_ids_types_colors_poses_steps": "MATCH",
+    "relocated_reopen": true,
+    "saved": false,
+    "recomputed": false
+  },
+  "files": []
+}

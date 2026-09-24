@@ -75,7 +75,30 @@ def validate_symmetry_receipt(record):
         if row.get("verification") != {"public_browser_passed": complete_case, "anonymous_downloads_passed": complete_case}:
             raise ValueError("Case readiness must match completed actual public browser and download checks")
         ready += complete_case
-    comparisons_ready = record.get("comparisons", {}).get("state") == "READY"
+    comparisons = record.get("comparisons")
+    comparisons_ready = False
+    if comparisons is not None:
+        prefix = "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/"
+        if (not isinstance(comparisons, dict) or comparisons.get("state") not in {"PUBLIC_PENDING", "READY"}
+                or comparisons.get("one_x_reference_symmetry") != "KNOWN_ASYMMETRY_READ_ONLY_NOT_REVISED"
+                or not isinstance(comparisons.get("assets"), list) or len(comparisons["assets"]) != 6):
+            raise ValueError("Final symmetry comparisons require their six exact files and unchanged asymmetric1x label")
+        assets = comparisons["assets"]
+        for file in assets:
+            if (not isinstance(file, dict) or not isinstance(file.get("path"), str) or not file["path"].startswith(prefix)
+                    or ".." in file["path"].split("/") or type(file.get("bytes")) is not int or file["bytes"] <= 0
+                    or not re.fullmatch(r"[0-9a-f]{64}", str(file.get("sha256", "")))):
+                raise ValueError("A final comparison artifact lacks its exact versioned path/bytes/SHA")
+        paths = {file["path"] for file in assets}
+        if (len(paths) != 6 or not {prefix + name for name in ["comparison-sheets.json", "comparison.csv", "matrix.json"]} <= paths
+                or sum(path.startswith(prefix + "comparisons/") and path.endswith(".jpg") for path in paths) != 3
+                or comparisons.get("descriptor") != next(file for file in assets if file["path"] == prefix + "comparison-sheets.json")):
+            raise ValueError("Final comparison file closure is incomplete or changes the original comparison paths")
+        comparisons_ready = comparisons["state"] == "READY"
+        if (comparisons.get("verification") != {"public_browser_passed": comparisons_ready,
+                                                "anonymous_downloads_passed": comparisons_ready}
+                or (comparisons_ready and ready != 5)):
+            raise ValueError("Final comparisons require all five corrected cases and real public checks")
     complete = ready == 5 and comparisons_ready
     if (record.get("state") != ("READY" if complete else "PARTIAL") or record.get("published_verified_case_count") != ready
             or record.get("verification") != {"public_browser_passed": complete, "anonymous_downloads_passed": complete}):

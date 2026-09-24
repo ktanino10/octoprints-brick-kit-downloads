@@ -16,7 +16,7 @@
     "paired_eye_shape_color_position_and_depth": "MIRROR_MATCH",
     "check_goggles_face_boundary_sides_and_outer_shape": true,
     "native_part_pairing": "BIJECTIVE_INVOLUTION_INCLUDING_CENTER_SELF_PAIRS",
-    "maximum_native_pair_pose_error_mm": 2e-05,
+    "maximum_native_pair_pose_error_mm": 0.00002,
     "native_mirror_volume_error_limit": "max(0.00001 mm^3, actual part volume * 0.0000001)",
     "external_aid_count": 0,
     "assembly_aid_count": 0,
@@ -215,17 +215,36 @@
       "previous_actual_count": 71261,
       "multiplier": 4,
       "target_count": 71492,
-      "status": "INPUT_WAIT",
-      "actual_case_id": null,
-      "source_commit": null,
-      "actual_count": null,
-      "symmetry_evidence": null,
-      "mechanical_evidence": null,
-      "downloads": null,
+      "status": "PUBLIC_PENDING",
+      "actual_case_id": "copilot-p400-symmetric-v3",
+      "source_commit": "ab4b21541ff4141af227d3927b1b4aca6b9c9308",
+      "actual_count": 71049,
+      "symmetry_evidence": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/validation/copilot-p400-symmetric-v3-native-visual-symmetry.json",
+        "bytes": 2308,
+        "sha256": "042f2fe7b5f1fdbf510552cb458e9b560fb4641d6251e0d517ce56f494a8f563"
+      },
+      "mechanical_evidence": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/validation/copilot-p400-symmetric-v3-symmetry-support.json.gz",
+        "encoding": "gzip",
+        "bytes": 300003,
+        "sha256": "85feaa5735f071e8147a903850de870687512f3541630daf69d518080e64078e",
+        "decoded_bytes": 5861588,
+        "decoded_sha256": "3ff2e34ed3e871f324c90e044f4d465a3af3974ea3a9d189c7d95f9247e4729d"
+      },
+      "downloads": {
+        "cad": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p400-symmetric-v3/copilot-p400-symmetric-v3-cad-scene-animation-public.zip",
+        "cg": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p400-symmetric-v3/copilot-p400-symmetric-v3-cad-scene-animation-public.zip",
+        "animation": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p400-symmetric-v3/copilot-p400-symmetric-v3-assembly-motion.mp4",
+        "assembly": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p400-symmetric-v3/copilot-p400-symmetric-v3-cad-scene-animation-public.zip",
+        "viewer": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case=copilot-p400-symmetric-v3"
+      },
       "verification": {
         "public_browser_passed": false,
         "anonymous_downloads_passed": false
-      }
+      },
+      "external_aid_count": 0,
+      "assembly_aid_count": 0
     }
   ],
   "previous_completed_delivery": {
@@ -255,8 +274,8 @@
   },
   "revision_catalog": {
     "path": "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/catalog.json",
-    "bytes": 50166,
-    "sha256": "5fb8670510b0b7c897e7794a24e4b4ca19ef5efb175ba56bb65762d4b871b549"
+    "bytes": 63056,
+    "sha256": "6021071a32335e5f19523dc477227123fedc84d2f98e63b1a9465e81c392dfbd"
   },
   "base_catalog_sha256": "69b39de67d8d9214b75b631bf1e9f73e09ee16a520314b65a559ad6be2ff864e",
   "budget_baseline": "/archive/body-support-baseline.json"

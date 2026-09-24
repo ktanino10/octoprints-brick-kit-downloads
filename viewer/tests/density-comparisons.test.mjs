@@ -1,7 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
 import { DENSITY_ID, COUNT_PERCENTAGES } from '../../assets/density-data.js';
 import { DENSITY_COMPARISON_COLUMNS, comparisonEntries, comparisonFile, validateDensityComparisons } from '../../assets/density-comparisons.js';
+import { effectiveSymmetryCatalog } from '../../assets/symmetry-publication.js';
 
 const hash = 'a'.repeat(64);
 const file = path => ({ path, bytes: 10, sha256: hash });
@@ -111,4 +113,74 @@ test('final sheets reject missing real cases, old-reference substitutions, incon
     const value = fixture(); mutate(value);
     assert.throws(() => validateDensityComparisons(value.data, value.catalog));
   }
+});
+
+function bilateralFixture() {
+  const { catalog, data: previous } = fixture();
+  const prefix = 'revisions/bilateral-symmetry-v3/';
+  catalog.comparison_sheets = file(`/artifacts/studies/${DENSITY_ID}/comparison-sheets.json`);
+  for (const item of catalog.cases.filter(item => item.character === 'copilot')) {
+    item.id += '-symmetric-v3';
+    item.geometry_revision = 'bilateral-symmetry-v3';
+  }
+  const row = structuredClone(previous.rows.find(item => item.character === 'copilot'));
+  const ids = comparisonEntries(catalog, 'copilot').map(item => item.id ?? item.candidate_id);
+  row.complete_case_ids = ids;
+  for (const [index, column] of row.columns.entries()) {
+    column.case_id = ids[index];
+    if (index) column.geometry_revision = 'bilateral-symmetry-v3';
+  }
+  for (const image of row.images) {
+    image.path = prefix + image.path;
+    image.source_cases = ids;
+    for (const [index, condition] of image.conditions.entries()) condition.case_id = ids[index];
+  }
+  return { catalog, previous, data: {
+    ...structuredClone(previous), state: 'COMPLETE_REAL_COPILOT_BILATERAL_COMPARISONS',
+    geometry_revision: 'bilateral-symmetry-v3', one_x_reference_symmetry: 'KNOWN_ASYMMETRY_READ_ONLY_NOT_REVISED',
+    prior_comparison_descriptor: file('comparison-sheets.json'),
+    prior_csv: structuredClone(previous.comparison_csv),
+    comparison_csv: { ...previous.comparison_csv, path: prefix + 'comparison.csv' },
+    unchanged_character_rows: structuredClone(previous.rows.filter(item => item.character !== 'copilot')),
+    rows: [row],
+  } };
+}
+
+test('bilateral comparison unit fixture needs five new actual IDs and preserves the known-asymmetric1x', () => {
+  const { catalog, data, previous } = bilateralFixture();
+  assert.equal(validateDensityComparisons(data, catalog, { symmetry: true, previous }), data);
+  assert.equal(data.rows[0].columns[0].case_id, 'copilot-fine8-base');
+  assert.deepEqual(data.unchanged_character_rows, previous.rows.filter(item => item.character !== 'copilot'));
+});
+
+test('bilateral comparison cannot reuse the four-case revision, alter other characters, or certify the1x reference', () => {
+  for (const mutate of [
+    ({ data }) => { delete data.one_x_reference_symmetry; },
+    ({ data }) => { data.one_x_reference_symmetry = 'PASS'; },
+    ({ data }) => { data.state = 'COMPLETE_REAL_COPILOT_SUPPORT_REVISION_COMPARISONS'; },
+    ({ data }) => { data.geometry_revision = 'body-support-v2'; },
+    ({ data }) => { data.unchanged_character_rows[1].columns[1].actual_count += 1; },
+    ({ data }) => { data.prior_csv.sha256 = 'b'.repeat(64); },
+    ({ data }) => { data.rows[0].images[0].path = 'comparisons/copilot-normalized-front.jpg'; },
+    ({ data }) => { data.comparison_csv.path = 'comparison.csv'; },
+    ({ data }) => { data.rows[0].columns[0].manifest_sha256 = '2'.repeat(64); },
+    ({ catalog }) => { catalog.cases.find(item => item.id === 'copilot-p400-symmetric-v3').id = 'copilot-p400'; },
+    ({ catalog }) => { catalog.cases.find(item => item.id === 'copilot-p400-symmetric-v3').state = 'INPUT_WAIT'; },
+  ]) {
+    const value = bilateralFixture(); mutate(value);
+    assert.throws(() => validateDensityComparisons(value.data, value.catalog, { symmetry: true, previous: value.previous }));
+  }
+});
+
+test('an installed actual bilateral supplement remains validated against the immutable original comparison', async () => {
+  const json = async path => JSON.parse(await readFile(new URL('../../' + path.replace(/^\//, ''), import.meta.url)));
+  const receipt = await json('archive/copilot-symmetry-revision.json');
+  const overlay = await json(receipt.revision_catalog.path);
+  if (!overlay.comparison_sheets) {
+    assert.notEqual(receipt.comparisons?.state, 'READY');
+    return;
+  }
+  const pointer = await json('archive/density-study.json'), base = await json(pointer.catalog.path);
+  const previous = await json(base.comparison_sheets.path), data = await json(overlay.comparison_sheets.path);
+  assert.equal(validateDensityComparisons(data, effectiveSymmetryCatalog(base, overlay), { symmetry: true, previous }), data);
 });

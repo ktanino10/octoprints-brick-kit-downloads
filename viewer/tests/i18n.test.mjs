@@ -1,6 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import catalog from '../../assets/translations.js';
 import { interpolate, translate, MissingTranslationError, validateLocale, setLocale, getLocale, localizedURL } from '../../assets/i18n.js';
 import { readViewState, writeViewState } from '../src/view-state.js';
 import { makeIndex } from '../src/data.js';
@@ -16,6 +18,16 @@ const state = {
   camera: [300, -400, 250, 0, 0, 90], query: 'MON-F-00001',
   visibleOnly: false, undersideOnly: false, support: '', bom: 'types', page: 0,
 };
+
+test('compact translation bindings restore every exact source string without repeating the source catalog', () => {
+  const entries = Object.keys(catalog.messages);
+  assert.equal(Object.keys(catalog.sourceIds).length, entries.length);
+  for (const source of entries) {
+    const normalized = source.replace(/\s+/g, ' ').trim();
+    const id = createHash('sha256').update(normalized).digest('hex').slice(0, 16);
+    assert.equal(catalog.sourceIds[id], source);
+  }
+});
 
 test('every reviewed English message keeps its interpolation variables', async () => {
   for (const file of (await readdir(new URL('site/i18n/', root))).filter((name) => name.endsWith('.en.json'))) {

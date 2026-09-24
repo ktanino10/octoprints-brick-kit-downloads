@@ -64,6 +64,15 @@ export async function loadSymmetryPublication(readRecord, readFile, pointer) {
   return validateSymmetryPublication(receipt, catalog, pointer);
 }
 
+export function effectiveSymmetryCatalog(base, overlay) {
+  check(overlay?.geometry_revision === COPILOT_SYMMETRY_REVISION && overlay.cases?.length === 5
+    && COUNT_PERCENTAGES.every(percentage => overlay.cases.some(item => item.state === 'READY'
+      && item.logical_case_id === `copilot-p${percentage}` && item.id === `copilot-p${percentage}-symmetric-v3`)), message);
+  const bySlot = new Map(overlay.cases.map(item => [item.logical_case_id, item]));
+  return { ...base, cases: base.cases.map(item => bySlot.get(item.logical_case_id ?? item.id) ?? item),
+    historical_cases: [...(base.historical_cases ?? []), ...base.cases.filter(item => bySlot.has(item.logical_case_id ?? item.id))] };
+}
+
 export function validateSymmetryPublication(receipt, catalog, pointer) {
   check(isObject(receipt) && receipt.schema_version === 1 && receipt.request_id === 'copilot-symmetry-20260923'
     && receipt.geometry_revision === COPILOT_SYMMETRY_REVISION && receipt.baseline_count === 17873
@@ -80,6 +89,7 @@ export function validateSymmetryPublication(receipt, catalog, pointer) {
       && Object.entries(DENSITY_FLAGS).every(([key, value]) => catalog[key] === value)
       && Array.isArray(catalog.cases) && catalog.cases.length === 5, message);
     if (catalog.display_catalog) validateDensityFile(catalog.display_catalog);
+    if (catalog.comparison_sheets) validateDensityFile(catalog.comparison_sheets);
   } else check(catalog === null && receipt.cases.every(row => row.status === 'INPUT_WAIT'), message);
   const cases = [], published = [], slots = new Set();
   for (const row of receipt.cases) {
@@ -142,7 +152,28 @@ export function validateSymmetryPublication(receipt, catalog, pointer) {
     cases.push(item);
     if (completeCase) published.push(item);
   }
-  const complete = published.length === 5 && receipt.comparisons?.state === 'READY';
+  let comparisonsReady = false;
+  if (receipt.comparisons !== undefined && receipt.comparisons !== null) {
+    const comparisons = receipt.comparisons;
+    const prefix = `/artifacts/studies/${DENSITY_ID}/revisions/${COPILOT_SYMMETRY_REVISION}/`;
+    check(isObject(comparisons) && ['PUBLIC_PENDING', 'READY'].includes(comparisons.state)
+      && comparisons.one_x_reference_symmetry === 'KNOWN_ASYMMETRY_READ_ONLY_NOT_REVISED'
+      && Array.isArray(comparisons.assets) && comparisons.assets.length === 6
+      && new Set(comparisons.assets.map(file => file.path)).size === 6, message);
+    comparisons.assets.forEach(file => validateDensityFile(file));
+    check(comparisons.assets.every(file => file.path.startsWith(prefix))
+      && ['comparison-sheets.json', 'comparison.csv', 'matrix.json'].every(name =>
+        comparisons.assets.some(file => file.path === prefix + name))
+      && comparisons.assets.filter(file => file.path.startsWith(prefix + 'comparisons/') && file.path.endsWith('.jpg')).length === 3
+      && comparisons.descriptor?.sha256 === catalog?.comparison_sheets?.sha256
+      && comparisons.descriptor.path === catalog.comparison_sheets.path
+      && comparisons.assets.some(file => file.path === comparisons.descriptor.path && file.sha256 === comparisons.descriptor.sha256), message);
+    comparisonsReady = comparisons.state === 'READY';
+    check(comparisons.verification?.public_browser_passed === comparisonsReady
+      && comparisons.verification.anonymous_downloads_passed === comparisonsReady
+      && (!comparisonsReady || published.length === 5), message);
+  }
+  const complete = published.length === 5 && comparisonsReady;
   check(receipt.published_verified_case_count === published.length && (receipt.state === 'READY') === complete
     && receipt.verification?.public_browser_passed === complete && receipt.verification.anonymous_downloads_passed === complete, message);
   return { receipt, catalog, cases, published };

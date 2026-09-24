@@ -131,6 +131,10 @@ test('prior complete scopes and explicit old URLs stay intact while only actual 
   }
   input.state = 'PARTIAL'; input.published_verified_case_count = 0;
   input.verification = { public_browser_passed: false, anonymous_downloads_passed: false };
+  if (input.comparisons) {
+    input.comparisons.state = 'PUBLIC_PENDING';
+    input.comparisons.verification = { public_browser_passed: false, anonymous_downloads_passed: false };
+  }
   const waiting = validateSymmetryPublication(input, symmetry, pointer);
   const original = printCatalog(catalog, pointer, oldReceipt, oldEvidence, body, waiting);
   const first = ready[0];

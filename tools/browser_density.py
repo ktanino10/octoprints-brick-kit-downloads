@@ -36,7 +36,9 @@ report = {"base": base, "engine": args.engine, "browser_executable": args.browse
           "input_wait": args.expect_input_wait, "checks": [], "errors": [], "cases": [],
           "media": [], "baseline_media": [], "reference_guides": [], "reference_media": [], "display_modes": [],
           "comparison_sheets": [], "comparison_csv_rows": None, "aid_evidence": [],
-          "body_support_comparison_sheets": [], "body_support_csv_rows": None}
+          "body_support_comparison_sheets": [], "body_support_csv_rows": None,
+          "symmetry_comparison_sheets": [], "symmetry_csv_rows": None,
+          "symmetry_one_x_unrevised_asymmetry_visible": False}
 
 
 def checked(message):
@@ -94,11 +96,13 @@ with sync_playwright() as playwright:
                 assert body_catalog["geometry_revision"] == ("bilateral-symmetry-v3" if args.symmetry else "body-support-v2")
                 assert body_catalog["base_catalog_sha256"] == pointer["catalog"]["sha256"]
                 available = body_catalog["cases"]
-                if args.body_support and body_catalog.get("comparison_sheets"):
+                if body_catalog.get("comparison_sheets"):
                     new_index = context.request.get(urljoin(base, body_catalog["comparison_sheets"]["path"].lstrip("/"))).json()
-                    expected_ids = [item["id"] for item in available if item["state"] == "READY"] + ["copilot-p400"]
+                    expected_ids = [item["id"] for item in available if item["state"] == "READY"] + ([] if args.symmetry else ["copilot-p400"])
+                    revision = "bilateral-symmetry-v3" if args.symmetry else "body-support-v2"
+                    report_prefix = "symmetry" if args.symmetry else "body_support"
                     for locale in ["ja", "en"]:
-                        page.goto(urljoin(base, f"{locale}/density-matrix.html?revision=body-support-v2&character=copilot"),
+                        page.goto(urljoin(base, f"{locale}/density-matrix.html?revision={revision}&character=copilot"),
                                   wait_until="networkidle")
                         expect(page.locator("#matrix-error")).to_be_hidden()
                         expect(page.locator("#matrix-table tr")).to_have_count(5)
@@ -110,10 +114,15 @@ with sync_playwright() as playwright:
                             expect(image).not_to_have_js_property("naturalWidth", 0)
                             uncropped_image(image)
                             if locale == "en":
-                                report["body_support_comparison_sheets"].append({"url": image.get_attribute("src"), "decoded": True})
+                                report[report_prefix + "_comparison_sheets"].append({"url": image.get_attribute("src"), "decoded": True})
                         if locale == "en":
                             english(page)
-                        page.screenshot(path=str(args.output / f"body-support-comparisons-{locale}.png"), full_page=True)
+                            if args.symmetry:
+                                expect(page.locator("#matrix-reference")).to_contain_text("known bilateral asymmetry")
+                                for caption in page.locator("#matrix-comparison-images figcaption").all():
+                                    expect(caption).to_contain_text("unrevised original with known asymmetry")
+                                report["symmetry_one_x_unrevised_asymmetry_visible"] = True
+                        page.screenshot(path=str(args.output / f"{revision}-comparisons-{locale}.png"), full_page=True)
                     revised_csv = context.request.get(page.locator("#matrix-comparison-csv").get_attribute("href"))
                     revised_rows = list(csv.DictReader(io.StringIO(revised_csv.text())))
                     assert len(revised_rows) == 15
@@ -124,9 +133,20 @@ with sync_playwright() as playwright:
                     new_csv = revised_csv.body().splitlines(keepends=True)
                     slots = {item["logical_case_id"] for item in available}
                     keep = lambda rows: [row for index, row in enumerate(rows) if index == 0 or row.decode().split(",")[1] not in slots]
-                    assert keep(original_csv) == keep(new_csv) and len(keep(new_csv)) == 12
-                    report["body_support_csv_rows"] = len(revised_rows)
-                    checked("versioned Copilot six-way images/physical scale and four changed CSV rows preserve the original eleven rows")
+                    assert keep(original_csv) == keep(new_csv) and len(keep(new_csv)) == (11 if args.symmetry else 12)
+                    effective = {**catalog, "cases": [next((new for new in available if new["logical_case_id"] == item.get("logical_case_id", item["id"])), item)
+                                                     for item in catalog["cases"]]}
+                    verify_comparison_csv(revised_csv.body(), effective)
+                    report[report_prefix + "_csv_rows"] = len(revised_rows)
+                    if args.symmetry:
+                        page.set_viewport_size({"width": 390, "height": 844})
+                        assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1")
+                        expect(page.locator("#matrix-comparison-images figcaption").first).to_contain_text(
+                            "unrevised original with known asymmetry")
+                        page.screenshot(path=str(args.output / "bilateral-comparisons-mobile.png"), full_page=True)
+                        page.set_viewport_size({"width": 1440, "height": 1050})
+                    checked("versioned Copilot six-way images/physical scale and five changed CSV rows preserve the other ten rows and unrevised1x"
+                            if args.symmetry else "versioned Copilot six-way images/physical scale and four changed CSV rows preserve the original eleven rows")
             cases = [entry for entry in available if entry["state"] == "READY"
                      and (not args.case or entry["id"] in args.case)]
             assert cases

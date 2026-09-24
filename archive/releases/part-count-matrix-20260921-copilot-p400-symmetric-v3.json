@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "study_id": "part-count-matrix-20260921",
+  "case_id": "copilot-p400-symmetric-v3",
+  "logical_case_id": "copilot-p400",
+  "geometry_revision": "bilateral-symmetry-v3",
+  "source_commit": "ab4b21541ff4141af227d3927b1b4aca6b9c9308",
+  "tag": "part-count-matrix-20260921-copilot-p400-symmetric-v3",
+  "status": "UNSELECTED_DIGITAL_CASE_NOT_SLICED",
+  "assets": [
+    {
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p400-symmetric-v3/copilot-p400-symmetric-v3-cad-scene-animation-public.zip",
+      "bytes": 380668129,
+      "sha256": "c70149331e38cf9d8d12bae163e77098db1b1dabe709a9bfe70563ba89946d74"
+    },
+    {
+      "url": "https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/part-count-matrix-20260921-copilot-p400-symmetric-v3/copilot-p400-symmetric-v3-assembly-motion.mp4",
+      "bytes": 1915166,
+      "sha256": "35effcb466202da0c5049e9b19d2b3204d3521dbe7eae2bdeaeb527f5770fb82"
+    }
+  ],
+  "case_categories": [
+    "cg",
+    "animation",
+    "native_cad",
+    "assembly"
+  ],
+  "physical_fit": "UNKNOWN",
+  "full_print": "ON_HOLD"
+}
