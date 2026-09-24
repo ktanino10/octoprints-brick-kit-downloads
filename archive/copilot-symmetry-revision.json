@@ -3,7 +3,7 @@
   "request_id": "copilot-symmetry-20260923",
   "base_study_id": "part-count-matrix-20260921",
   "geometry_revision": "bilateral-symmetry-v3",
-  "state": "PARTIAL",
+  "state": "READY",
   "scope": "FIVE_ACTUAL_COPILOT_SYMMETRY_REVISIONS_NOT_THE_PREVIOUS_SUPPORT_FREE_DELIVERY",
   "baseline_public_commit": "22d7d56308668fe7c366c48ac7af26e77ac4558c",
   "baseline_count": 17873,
@@ -245,8 +245,8 @@
       },
       "external_aid_count": 0,
       "assembly_aid_count": 0,
-      "verified_content_commit": "a8a65060339653f3008d4ba471fca2757fdbe80b",
-      "verified_pages_run": "35975434746",
+      "verified_content_commit": "1395d6f8f9d9532f9bda7530963c3611013f5dfd",
+      "verified_pages_run": "35976708286",
       "verification_record": {
         "path": "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/copilot-p400-symmetric-v3-public-verification.json",
         "bytes": 4961,
@@ -272,8 +272,8 @@
     "Actual public browser and anonymous download/hash verification are complete"
   ],
   "verification": {
-    "public_browser_passed": false,
-    "anonymous_downloads_passed": false
+    "public_browser_passed": true,
+    "anonymous_downloads_passed": true
   },
   "public_commit": {
     "record": "archive/deployment.json",
@@ -287,7 +287,7 @@
   "base_catalog_sha256": "69b39de67d8d9214b75b631bf1e9f73e09ee16a520314b65a559ad6be2ff864e",
   "budget_baseline": "/archive/body-support-baseline.json",
   "comparisons": {
-    "state": "PUBLIC_PENDING",
+    "state": "READY",
     "descriptor": {
       "path": "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/comparison-sheets.json",
       "bytes": 180493,
@@ -326,9 +326,16 @@
       }
     ],
     "verification": {
-      "public_browser_passed": false,
-      "anonymous_downloads_passed": false
+      "public_browser_passed": true,
+      "anonymous_downloads_passed": true
     },
-    "one_x_reference_symmetry": "KNOWN_ASYMMETRY_READ_ONLY_NOT_REVISED"
+    "one_x_reference_symmetry": "KNOWN_ASYMMETRY_READ_ONLY_NOT_REVISED",
+    "verified_content_commit": "1395d6f8f9d9532f9bda7530963c3611013f5dfd",
+    "verified_pages_run": "35976708286"
+  },
+  "verification_record": {
+    "path": "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/publication-verification.json",
+    "bytes": 15109,
+    "sha256": "ca8944f606b0108c638bfd3fb023f7556bc9ca8c0595b30ab29d38afd40a11b3"
   }
 }
