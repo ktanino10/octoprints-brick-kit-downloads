@@ -2,7 +2,7 @@
 
 [日本語](ATTRIBUTION.md) / [English](ATTRIBUTION.en.md) · [Archive overview](README.en.md)
 
-This public archive grew out of a noncommercial exploration of assembling Mona, Copilot, and Ducky from independent bricks.
+This public archive grew out of a noncommercial exploration of assembling Mona, Copilot, and Rubber Ducky from independent bricks.
 It separates the fifteen higher-part design comparisons from the Phase1, r2 and r3 trial history.
 Actual published models, images/videos, native CAD, placements, BOMs, joints and trials are identified in the
 [revision registry](archive/revisions.json) and [complete inventory](archive/inventory.json).

@@ -21,7 +21,7 @@ The existing release tag is **[archive-2026-09-19-r2](https://github.com/ktanino
 |---|---|
 | [phase1-candidates.zip](https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/archive-2026-09-19-r2/phase1-candidates.zip) | **9 candidates**: 3 characters × 3 detail levels, **9 Blender scenes**, 9 images, **3 Balanced videos**, placements, and individual/aggregate BOMs. Preserves the appearance-exploration stage. |
 | [phase1-cad.zip](https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/archive-2026-09-19-r2/phase1-cad.zip) | Legacy FreeCAD documents and STEP/STL for **21 basic types** and **5 historical 6 mm fit coupons**. These are earlier design records, not substitutes for the selected r2 4 mm/8 mm trials. |
-| [selected-r2-scenes.zip](https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/archive-2026-09-19-r2/selected-r2-scenes.zip) | The selected **Mona Fine 4 mm, Copilot Chunky 8 mm, and Ducky Fine 4 mm**: 3 Blender scenes, 3 images, 3 videos, individual/aggregate BOMs, placements, part IDs, and proposed assembly sequences. |
+| [selected-r2-scenes.zip](https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/archive-2026-09-19-r2/selected-r2-scenes.zip) | The selected **Mona Fine 4 mm, Copilot Chunky 8 mm, and Rubber Ducky Fine 4 mm**: 3 Blender scenes, 3 images, 3 videos, individual/aggregate BOMs, placements, part IDs, and proposed assembly sequences. |
 | [selected-r2-cad.zip](https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/download/archive-2026-09-19-r2/selected-r2-cad.zip) | **236 native types**, 2 shared FreeCAD libraries, 3 assemblies with relative links, type-specific STEP/STL, separate **4 mm and 8 mm trials with 11 parts each**, and Mona's left/right temporary whisker supports. |
 
 **These four ZIP packages are immutable.** They retain the original documents, LICENSE, attribution, and status information shipped with the release.
@@ -50,7 +50,7 @@ The archived [portability record](../archive/portability.json) records reopening
 It also records reopening **all 12 Blender scenes** after public-path cleanup with geometry and placements preserved.
 These are data-integrity checks, not physical fit or manufacturing approval.
 
-The selected r2 assemblies contain **13,434 Mona + 3,021 Copilot + 10,311 Ducky = 26,766 individual instances** sharing **236 types**.
+The selected r2 assemblies contain **13,434 Mona + 3,021 Copilot + 10,311 Rubber Ducky = 26,766 individual instances** sharing **236 types**.
 They are not 26,766 separate STL downloads. Grouping changed the seams; pixel-for-pixel identity between Phase1 and r2 is not claimed.
 
 ## Check public hashes, not historical input hashes

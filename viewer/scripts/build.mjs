@@ -25,7 +25,7 @@ await build({
 await build({
   absWorkingDir: root, entryPoints: ['src/catalog-preview.js'], outfile: 'assets/catalog-preview.js',
   bundle: true, minify: true, sourcemap: false, format: 'esm', target: ['es2022'],
-  external: ['../../assets/i18n.js'], legalComments: 'eof', logLevel: 'info',
+  external: ['../../assets/i18n.js', '../../assets/character-names.js'], legalComments: 'eof', logLevel: 'info',
 });
 
 const dependencies = ['three', 'meshoptimizer', 'esbuild', 'playwright', 'playwright-core', '@babel/parser'];

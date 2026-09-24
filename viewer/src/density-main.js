@@ -17,6 +17,7 @@ import { readDensityView, writeDensityView } from './density-view-state.js';
 import { loadBodySupportPublication } from '../../assets/body-support-publication.js';
 import { loadSymmetryPublication } from '../../assets/symmetry-publication.js';
 import { createViewPersistence } from './view-persistence.js';
+import { CHARACTER_NAMES } from '../../assets/character-names.js';
 
 const $ = (selector) => document.querySelector(selector);
 let catalog = null, displayCatalog = null, candidate = null, manifest = null, index = null, studio = null, preview = null;
@@ -496,7 +497,7 @@ try {
         ? `${item.id} · 参照 · ${number(item.metrics.part_count, 0)}部品`
         : historical ? `${item.id} · 履歴 · ${number(item.metrics.part_count, 0)}部品`
         : `${item.id} · ${item.state === 'INPUT_WAIT' ? '入力待ち' : `${number(item.metrics.part_count, 0)}部品`}`;
-      const option = element('option', label);
+      const option = element('option', `${CHARACTER_NAMES[item.character]} · ${label}`);
       option.value = item.id; return option;
     }));
     const id = originalParams.get('case') ?? catalog.cases.find((item) => item.state === 'READY')?.id;

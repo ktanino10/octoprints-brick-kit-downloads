@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "case_id": "copilot-p150-symmetric-v3",
+  "geometry_revision": "bilateral-symmetry-v3",
+  "state": "READY",
+  "scope": "ONE_ACTUAL_CORRECTED_CASE_NOT_ALL_FIVE_OR_PHYSICAL_APPROVAL",
+  "source_commit": "57ff72c61834e5c7d9180dffd9df810fc9450309",
+  "verified_content_commit": "6010cd5c0238dfde7034b5ac3df9fad2951515b1",
+  "verified_pages_run": "35951367731",
+  "actual_count": 26734,
+  "target_count": 26810,
+  "actual_types": 231,
+  "geometry_sequence_identity_sha256": "a212043f338be168eef907979f9669d2aa43cc9a46467b70b69134d5c997be01",
+  "nominal_symmetry": {
+    "metric": "NOMINAL_8MM_XY_1_6MM_Z_MATERIAL_CELLS_NOT_NATIVE_TESSELLATION",
+    "actual_material_samples": 561021,
+    "mirror_x_mm": 0,
+    "material_occupancy_xor": 0,
+    "paired_material_color_differences": 0,
+    "front_shape_xor": 0,
+    "paired_front_color_differences": 0,
+    "paired_front_depth_differences": 0,
+    "feature": {
+      "color_id": "c2",
+      "visible_samples": 336,
+      "front_mask_xor": 0
+    },
+    "native_geometry_or_physical_validation": false,
+    "excluded": [
+      "studs",
+      "cavities",
+      "gaps",
+      "chamfers",
+      "lighting",
+      "native CAD reflection",
+      "physical supports"
+    ]
+  },
+  "actual_native_reflection": {
+    "parts": 26734,
+    "type_rotation_pairs": 213,
+    "maximum_bidirectional_cut_volume_mm3": 0.0,
+    "complete_pairing_and_source_files_unchanged": true
+  },
+  "actual_supports": {
+    "geometry_sequence_identity_sha256": "a212043f338be168eef907979f9669d2aa43cc9a46467b70b69134d5c997be01",
+    "native_support_contact_evidence_sha256": "983ce1139e3404c331462a2f526d3bbba79c5b0efb4561a6cb40097143680ac3",
+    "checked_material_supports": 34,
+    "actual_native_load_prefixes": 510,
+    "actual_native_material_sections": 528,
+    "minimum_nominal_support_margin_mm": 2.380178317102003,
+    "required_nominal_support_margin_mm": 1,
+    "required_baseline_targets_covered": 71,
+    "nonreset_token_loads_match_actual_support_graph": true,
+    "external_aid_count": 0,
+    "assembly_aid_count": 0,
+    "physical_validation": "UNKNOWN"
+  },
+  "actual_intentional_changes_and_native_pixels": {
+    "case_id": "copilot-p150-symmetric-v3",
+    "intentional_change_from_previous_published_case": {
+      "added_1_6mm_cells": 2223,
+      "removed_1_6mm_cells": 2156,
+      "recolored_1_6mm_cells": 2505,
+      "full_diff_matches_sealed_readonly_record": true
+    },
+    "new_mechanical_baseline_cells_and_colors_exact": true,
+    "actual_native_png": {
+      "image_size_px": [
+        1200,
+        1200
+      ],
+      "left_eye_pixels": 8855,
+      "right_eye_pixels": 8855,
+      "all_label_xor_including_silhouette": 230,
+      "whole_material_xor": 30,
+      "silhouette_xor": 200,
+      "maximum_silhouette_boundary_distance_pixels": 1.0,
+      "per_material_boundary_measurements": {
+        "geometry": {
+          "mirror_xor_pixels": 200,
+          "maximum_mirrored_boundary_distance_pixels": 1.0
+        },
+        "c0": {
+          "mirror_xor_pixels": 230,
+          "maximum_mirrored_boundary_distance_pixels": 1.0
+        },
+        "c1": {
+          "mirror_xor_pixels": 30,
+          "maximum_mirrored_boundary_distance_pixels": 1.0
+        },
+        "c2": {
+          "mirror_xor_pixels": 0,
+          "maximum_mirrored_boundary_distance_pixels": 0.0
+        }
+      },
+      "eye_mask_xor": 0,
+      "classification": "Unlit native R/G/B labels with alpha>127; paired foreground materials exclude separately reported silhouette-edge disagreements.",
+      "render_samples": 32
+    },
+    "physical_validation": "UNKNOWN"
+  },
+  "raster_note": "32-sample diagnostic render; eyes8855 each with zero mirrored-eye difference. Silhouette200 and foreground material30 different pixels are explicitly retained within maximum Euclidean boundary distance1px. Actual native CAD and whole-part colors remain exactly paired.",
+  "public_browser": {
+    "engine": "pinned WebKit2203",
+    "all34actual_support_steps_and_native_undersides": true,
+    "allGPU_absolute_radial_roundtrips": true,
+    "original_and_labeled_display_modes": true,
+    "actual_movie_chapters": 3,
+    "JA_EN_share_reload_390px": true,
+    "failed_data_native_proof_images_show_error": true,
+    "errors": []
+  },
+  "anonymous_delivery": {
+    "changed_site_files": 41,
+    "complete_release_assets_verified_or_previous_hash_rechecked": 6,
+    "repository_native_types": 82,
+    "transport_public_commit": "80316828df368b1b61d564667382d00fc70989b6",
+    "lossless_bytes": 4749009,
+    "original_native_gzip_bytes": 12263984,
+    "all_original_float32_bytes_and_uint32_index_order_restored": true,
+    "geometry_simplified_for_transport": false,
+    "authentication": "none"
+  },
+  "physical_validation": "UNKNOWN",
+  "slicer_status": "NOT_SLICED",
+  "full_print": "ON_HOLD",
+  "appearance_adoption": "PENDING"
+}

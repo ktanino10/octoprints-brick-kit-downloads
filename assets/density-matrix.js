@@ -7,9 +7,9 @@ import {
 } from './density-data.js';
 import { comparisonFile, validateDensityComparisons } from './density-comparisons.js';
 import { effectiveBodySupportCatalog, loadBodySupportPublication } from './body-support-publication.js';
+import { CHARACTER_NAMES as names } from './character-names.js';
 
 const $ = (selector) => document.querySelector(selector);
-const names = { mona: 'Mona', copilot: 'Copilot', ducky: 'Ducky' };
 let catalog = null, comparisons = null, character = 'mona', view = 'front';
 const params = new URLSearchParams(location.search);
 const bodyMode = params.get('revision') === 'body-support-v2';

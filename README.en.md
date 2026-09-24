@@ -2,6 +2,8 @@
 
 [日本語](README.md) / [English](README.en.md)
 
+The character's correct name is **Rubber Ducky**. Display labels use that name; existing `ducky` URLs, part IDs and distributed files remain unchanged.
+
 **Copilot's bilateral symmetry is being corrected.** Verified new versions are added case by case,
 while variants still awaiting correction are explicitly marked. Historical versions are not relabeled symmetric.
 The [new correction status](archive/copilot-symmetry-revision.json) is separate from the completed four-case
@@ -25,7 +27,7 @@ Copilot's 1.2×/1.5×/2×/3× cases have separate [actual support-free structura
 The existing zero-aid 4× case with 71,261 parts stays unchanged. Historical supported files and the earlier fifteen-case READY receipt do not complete this additional request.
 The [four-revision publication verification record](artifacts/studies/part-count-matrix-20260921/revisions/body-support-v2/publication-verification.json)
 records actual CAD/IDs, nominal loads, public browser/video checks, anonymous downloads, immutable history and storage limits.
-The low-part r3 designs (Mona 519 / Copilot 695 / Ducky 413) are excluded from normal choices; trials, failures and refinements have a separate history page.
+The low-part r3 designs (Mona 519 / Copilot 695 / Rubber Ducky 413) are excluded from normal choices; trials, failures and refinements have a separate history page.
 “STL available” does not mean physically validated printing. All cases remain unsliced and untested, with full-kit printing on hold. The sections below preserve revision-specific records.
 
 ### Upstream and reference projects
@@ -50,7 +52,7 @@ The legacy root URLs remain available:
 [feedback](https://ktanino10.github.io/octoprints-brick-kit-downloads/feedback.html), and
 [history](https://ktanino10.github.io/octoprints-brick-kit-downloads/history.html).
 
-This is a noncommercial prototype record for approximately 180 mm-tall Mona, Copilot, and Ducky models assembled from independent bricks.
+This is a noncommercial prototype record for approximately 180 mm-tall Mona, Copilot, and Rubber Ducky models assembled from independent bricks.
 **On 2026-09-20, implementation of an 8 mm common-block redesign was authorized.**
 The revised approach prioritizes parts such as 2×2 and 2×4 blocks, 9.6 mm brick bodies and 3.2 mm plates,
 with open undersides and wall/tube/rib retention. Earlier 4 mm Fine and 1.10 mm pin constraints are superseded where they conflict with this direction.
@@ -64,7 +66,7 @@ See the [common-block design/publication guide](docs/COMMON-BLOCKS.en.md) / [日
 |---|---:|---:|---|---:|
 | Mona | 519 | 68 | 199.8 × 167.8 × 181.0 | 5 |
 | Copilot | 695 | 86 | 247.8 × 199.8 × 181.0 | 10 |
-| Ducky | 413 | 56 | 151.8 × 215.8 × 181.0 | 0 |
+| Rubber Ducky | 413 | 56 | 151.8 × 215.8 × 181.0 | 0 |
 
 There are **1,627 instances sharing 133 master types**. Seven new FreeCAD documents cover two shared libraries,
 three assemblies, the trial and native section checks. The release includes complete/exploded PNGs, three Blender scenes,
@@ -96,14 +98,14 @@ Geometry-only 3MF files remain **NOT_SLICED**, not configured Bambu Studio proje
 **[Copilot 1.2× actual 3D guide](https://ktanino10.github.io/octoprints-brick-kit-downloads/en/density-guide.html?case=copilot-p120)** /
 **[Copilot CG, Blender, animation and native CAD package](https://github.com/ktanino10/octoprints-brick-kit-downloads/releases/tag/part-count-matrix-20260921-copilot-p120)**.
 
-CG, animation, Blender, native CAD, BOM and actual 3D guides are distributed for **all fifteen cases: five support-free Mona revisions, five Copilot cases and five Ducky cases**.
+CG, animation, Blender, native CAD, BOM and actual 3D guides are distributed for **all fifteen cases: five support-free Mona revisions, five Copilot cases and five Rubber Ducky cases**.
 These are actual figure-part counts. The [fifteen-row comparison CSV](artifacts/studies/part-count-matrix-20260921/comparison.csv) records fixed targets, actual ratios, differences, dimensions and types.
 
 | Actual pieces | 1.2× | 1.5× | 2× | 3× | 4× |
 |---|---:|---:|---:|---:|---:|
 | Mona, support-free revision | 14,913 | 18,649 | 24,811 | 37,255 | 49,483 |
 | Copilot | 21,388 | 26,690 | 35,648 | 53,350 | 71,261 |
-| Ducky | 11,586 | 14,460 | 19,309 | 28,932 | 38,473 |
+| Rubber Ducky | 11,586 | 14,460 | 19,309 | 28,932 | 38,473 |
 
 Copilot's 1.2× case contains **21,388 parts versus target 21,448 (−60; actual ratio 1.196665×), 155 types,
 519.8 × 439.8 × 397.0 mm**. The 1.5× case contains **26,690 parts versus target 26,810 (−120; actual ratio 1.493314×),
@@ -132,9 +134,9 @@ Mona's new 2× case has **24,811 parts (target 24,870; −59), 135 types, 535.8 
 All five native contact/insertion/balance targets are checked: four WR roots and one actual internal CT cheek backing.
 The new 4× case has **49,483 parts (target 49,740; −257), 172 types, 679.8 × 551.8 × 598.6 mm and zero aids**.
 
-The first Ducky multiplier is **1.2×: 11,586 parts (target 11,603; −17), 93 types,
+The first Rubber Ducky multiplier is **1.2×: 11,586 parts (target 11,603; −17), 93 types,
 311.8 × 455.8 × 397.0 mm and zero temporary aids**. It uses the frozen 9,669-piece baseline, not the old 413-piece r3.
-Ducky's actual temporary-aid counts across its five cases are **0 / 0 / 3 / 0 / 1**.
+Rubber Ducky's actual temporary-aid counts across its five cases are **0 / 0 / 3 / 0 / 1**.
 The 2× case keeps three separate aids outside its 19,309-piece figure count; the 4× case keeps one outside its 38,473-piece count.
 Adjacent aids are separate IDs even when they look like one object. Guides show actual supported IDs, assembly steps and heights;
 do not remove aids before physical retention/stability checks.
@@ -144,7 +146,7 @@ All three 1× baselines now have separate public CG, native CAD, Blender and thr
 Mona's additional support-free reference is explicitly shown as **12,411 actual parts (−24 after root integration)**.
 The **frozen multiplier denominator remains 12,435**, and all five targets are unchanged. Historical supported 1× assets remain downloadable.
 The additional reference is not counted among the fifteen multiplier cases.
-Baseline counts are Mona 12,435 / Copilot 17,873 / Ducky 9,669, using a consistent initial-Fine-C-adapted 8 mm approach.
+Baseline counts are Mona 12,435 / Copilot 17,873 / Rubber Ducky 9,669, using a consistent initial-Fine-C-adapted 8 mm approach.
 This is a **comparison assumption, not user adoption**; earlier r3 counts of 695/413 are not mixed in.
 Multipliers refer to individual physical parts, not linear dimensions.
 
@@ -240,7 +242,7 @@ Counts were checked against actual manifest and BOM part IDs; they are individua
 |---|---:|---:|---:|
 | Mona | 519 | 670 (+151) | 519 (no change) |
 | Copilot | 695 | 916 (+221) | 695 (no change) |
-| Ducky | 413 | 522 (+109) | 413 (no change) |
+| Rubber Ducky | 413 | 522 (+109) | 413 (no change) |
 
 A refines surface height steps with 3.2 mm plates, at the cost of more seams, exposed studs and assembly work.
 B replaces 36 blocks per character with slopes one-for-one, keeping the part count unchanged but adding specialized types,
@@ -256,12 +258,12 @@ The quantities below describe Phase1/r2 history. They are not the new revision's
 | Category | Preserved work |
 |---|---|
 | Phase1 candidates | Three characters at three detail levels: **9 candidates**, 9 images, **9 Blender scenes**, **3 Balanced videos**, individual/aggregate bills of materials (BOMs), and placements. |
-| Selected r2 | Mona Fine 4 mm / Copilot Chunky 8 mm / Ducky Fine 4 mm: 3 images, 3 Blender scenes, 3 videos, BOMs, proposed assembly sequences, and part IDs. |
+| Selected r2 | Mona Fine 4 mm / Copilot Chunky 8 mm / Rubber Ducky Fine 4 mm: 3 images, 3 Blender scenes, 3 videos, BOMs, proposed assembly sequences, and part IDs. |
 | Native CAD | The r2 assemblies have **26,766 individual instances sharing 236 native types**: 2 shared FreeCAD libraries, 3 assemblies, and STEP/STL files by type. The legacy version preserves **21 basic types** and **5 historical 6 mm coupons**. |
 | Trials and aids | Separate 4 mm and 8 mm trial sets, **11 parts each**, with 3MF/STL/STEP, FreeCAD, layouts, and a results CSV; left/right temporary supports for Mona's whiskers. The two legacy root-level 4 mm downloads are unchanged. |
 | Physical feedback | 10 metadata-sanitized JPEGs, 2 silent MP4s plus 1 combined MP4 in the corrected order, and records of the issues and redesign discussion. |
 
-The selected r2 part counts are **Mona Fine 4 mm: 13,434 / Copilot Chunky 8 mm: 3,021 / Ducky Fine 4 mm: 10,311**.
+The selected r2 part counts are **Mona Fine 4 mm: 13,434 / Copilot Chunky 8 mm: 3,021 / Rubber Ducky Fine 4 mm: 10,311**.
 Selection for appearance is separate from manufacturing approval. Changes to grouping changed the seams; pixel-for-pixel identity with Phase1 is not claimed.
 
 - [Static gallery of all 9 candidates](artifacts/phase1/gallery.html) / [Selected r2 images and videos](artifacts/selected/r2-20260919/gallery.html).

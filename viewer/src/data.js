@@ -1,7 +1,7 @@
 export const CHARACTERS = Object.freeze({
-  mona: { name: 'Mona', subtitle: 'Curious by nature', accent: '#6441ac', short: 'MON' },
-  copilot: { name: 'Copilot', subtitle: 'Ready to explore', accent: '#28797e', short: 'COP' },
-  ducky: { name: 'Ducky', subtitle: 'A little sunshine', accent: '#a47a13', short: 'DUC' },
+  mona: { name: CHARACTER_NAMES.mona, subtitle: 'Curious by nature', accent: '#6441ac', short: 'MON' },
+  copilot: { name: CHARACTER_NAMES.copilot, subtitle: 'Ready to explore', accent: '#28797e', short: 'COP' },
+  ducky: { name: CHARACTER_NAMES.ducky, subtitle: 'A little sunshine', accent: '#a47a13', short: 'DUC' },
 });
 export const STYLES = Object.freeze({
   chunky: { name: 'ざっくり', english: 'Chunky' },
@@ -463,3 +463,4 @@ import {
 } from '../../assets/data-contracts.js';
 import { commonFile, validateCommonCatalog, validateCommonManifest, validateCommonPrototypes, validateCommonMatch } from '../../assets/common-blocks.js';
 export { DataError, validateFootprint, validateMetrics } from '../../assets/data-contracts.js';
+import { CHARACTER_NAMES } from '../../assets/character-names.js';

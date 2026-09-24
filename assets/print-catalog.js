@@ -4,8 +4,8 @@ import { DENSITY_POINTER, densityGuideEntries, validateDensityPointer } from './
 import { printCatalog, selectedPrintCase } from './print-catalog-data.js';
 import { loadBodySupportPublication } from './body-support-publication.js';
 import { loadSymmetryPublication } from './symmetry-publication.js';
+import { CHARACTER_NAMES as names } from './character-names.js';
 
-const names = { mona: 'Mona', copilot: 'Copilot', ducky: 'Ducky' };
 const number = (value, digits = 1) => new Intl.NumberFormat(numberLocale(), { maximumFractionDigits: digits }).format(value);
 const selected = new Map();
 let sourceCatalog = null, preview = null, previewRequest = null, previewGeneration = 0;

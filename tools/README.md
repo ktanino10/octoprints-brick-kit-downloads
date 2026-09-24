@@ -81,6 +81,13 @@ exclusiveな支持伝播が次rootに入るresetは拒否し、first shared rece
 
 ## 初めての人向けカタログと制作履歴
 
+キャラクターの正式表示名は `site/character-names.json` を一元管理し、ビルドした共通カタログと
+`assets/character-names.js` から静的HTML・runtimeの双方へ適用します。`Rubber Ducky` を二重化せず、
+人向けテキスト・caption・alt・aria・descriptionだけを修正します。
+`ducky` slug、`DUCKY-`個体ID、case ID、URL・ファイル名、元マニフェストや焼き込み画像は変更しません。
+元の文字列カタログは保存し、表示後の日本語／英語切替でも元の翻訳キーを保持します。
+`browser_character_names.py` は日英の5案選択、実ID/個数/配布リンク、実3D部品名、390pxでの長い表示名を確認します。
+
 トップと既存の `models.html` は同じ `site/templates/index.html` を使います。
 `assets/print-catalog-data.js` はREADY受領記録・ハッシュ付き公開検証に結び付いた15案だけを扱い、
 Mona 519 / Copilot 695 / Ducky 413個の少部品r3や基準参照を通常候補へ混ぜません。

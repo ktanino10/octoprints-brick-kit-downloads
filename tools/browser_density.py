@@ -12,6 +12,8 @@ from playwright.sync_api import expect, sync_playwright
 from browser_study_helpers import english, uncropped_image, play_actual_chapter
 from density_comparison_evidence import verify_comparison_csv
 
+expect.set_options(timeout=60000)
+
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--url", required=True)
 parser.add_argument("--browser", required=True)

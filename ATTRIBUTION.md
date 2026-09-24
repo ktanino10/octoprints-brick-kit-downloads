@@ -2,7 +2,7 @@
 
 [日本語](ATTRIBUTION.md) / [English](ATTRIBUTION.en.md) · [アーカイブの案内](README.md)
 
-この公開アーカイブは、Mona・Copilot・Duckyを独立したブロックで組み立てる非商用の検討から作成した
+この公開アーカイブは、Mona・Copilot・Rubber Duckyを独立したブロックで組み立てる非商用の検討から作成した
 多部品15案の比較と、Phase1・r2・r3の試行錯誤の履歴を区別して管理します。
 モデル、画像・動画、ネイティブCAD、配置・部品表、独自接合部・試験片の実際の公開範囲は、
 [版別公開記録](archive/revisions.json) と [全ファイル目録](archive/inventory.json) に示します。

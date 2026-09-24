@@ -3,7 +3,7 @@ import { readJSON } from './site.js';
 import { SHAPE_STUDY_URL, SHAPE_VARIANTS, SHAPE_CHARACTERS, BASELINE_COUNTS, validateStudyPointer, validateShapeStudy, countDelta } from './shape-options-data.js';
 
 const $ = (selector) => document.querySelector(selector);
-const names = { mona: 'Mona', copilot: 'Copilot', ducky: 'Ducky' };
+import { CHARACTER_NAMES as names } from './character-names.js';
 const variants = { 'baseline-r3': '現行r3', 'plate-refined': 'プレート細分化案', 'contour-refined': '輪郭・斜面案' };
 const format = (value, digits = 1) => new Intl.NumberFormat(numberLocale(), { maximumFractionDigits: digits }).format(value);
 const element = (tag, text, className) => {

@@ -4,7 +4,7 @@ import { COMMON_REVISION, PUBLICATION_URL, chooseRevision, validatePublication }
 import { validateCommonCatalog, validateCommonManifest } from './common-blocks.js';
 
 const $ = (selector) => document.querySelector(selector);
-const names = { mona: 'Mona', copilot: 'Copilot', ducky: 'Ducky' };
+import { CHARACTER_NAMES as names } from './character-names.js';
 const number = (value) => new Intl.NumberFormat(numberLocale(), { maximumFractionDigits: 3 }).format(value);
 const pageSize = 30;
 let catalog = null;

@@ -12,7 +12,7 @@ Consult `availability` in the [revision registry](../archive/revisions.json).
 
 ## Why the design is changing
 
-The goal remains approximately 180 mm Mona, Copilot and Ducky models, with larger parts that can be held by hand.
+The goal remains approximately 180 mm Mona, Copilot and Rubber Ducky models, with larger parts that can be held by hand.
 This is not a simple enlargement of the old 4 mm/1.10 mm pin system.
 The revised design uses common parts such as 2×2 and 2×4 blocks, necessary 1×2 parts and thin plates,
 with open undersides and wall/tube/rib retention.

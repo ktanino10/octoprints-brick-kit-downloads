@@ -5,7 +5,7 @@ import { validateCommonCatalog } from './common-blocks.js';
 const $ = (selector) => document.querySelector(selector);
 const selected = new Set(['mona-fine', 'copilot-chunky', 'ducky-fine']);
 const styles = { chunky: 'A / Chunky', balanced: 'B / Balanced', fine: 'C / Fine' };
-const names = { mona: 'Mona', copilot: 'Copilot', ducky: 'Ducky' };
+import { CHARACTER_NAMES as names } from './character-names.js';
 const root = new URL('../', import.meta.url);
 const publicURL = (path) => {
   const url = new URL(path.replace(/^\/+/, ''), root);

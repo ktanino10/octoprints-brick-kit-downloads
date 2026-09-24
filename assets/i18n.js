@@ -1,4 +1,5 @@
 import catalog from './translations.js';
+import { characterDisplayText } from './character-names.js';
 
 const japanese = /[\u3040-\u30ff\u3400-\u9fff]/;
 const normalize = (value) => String(value).replace(/\s+/g, ' ').trim();
@@ -83,11 +84,11 @@ function translateFragment(value, depth = 0) {
 
 export function translate(source, locale = getLocale()) {
   validateLocale(locale);
-  if (locale === 'ja') return String(source);
+  if (locale === 'ja') return characterDisplayText(source);
   const key = normalize(source);
-  if (!japanese.test(source) && !Object.hasOwn(catalog.messages, key)) return String(source);
+  if (!japanese.test(source) && !Object.hasOwn(catalog.messages, key)) return characterDisplayText(source);
   if (cache.has(key)) return cache.get(key);
-  const result = Object.hasOwn(catalog.messages, key) ? catalog.messages[key] : translateFragment(key);
+  const result = characterDisplayText(Object.hasOwn(catalog.messages, key) ? catalog.messages[key] : translateFragment(key));
   if (japanese.test(result)) throw new MissingTranslationError(key);
   if (cache.size >= 4096) cache.delete(cache.keys().next().value);
   cache.set(key, result);
@@ -173,7 +174,8 @@ function originalForText(node) {
   const marker = previous?.nodeType === Node.COMMENT_NODE && previous.data.startsWith('l10n:')
     ? previous.data.slice(5) : node.parentElement?.getAttribute('data-l10n-text');
   const source = catalog.sourceIds[marker];
-  if (source && [normalize(source), normalize(catalog.messages[source])].includes(normalize(node.nodeValue))) {
+  if (source && [source, catalog.messages[source]].flatMap(value => [normalize(value), normalize(characterDisplayText(value))])
+    .includes(normalize(node.nodeValue))) {
     return node.nodeValue.match(/^\s*/)[0] + source + node.nodeValue.match(/\s*$/)[0];
   }
   return node.nodeValue;
@@ -188,7 +190,7 @@ function localizeText(node) {
   }
   const leading = binding.source.match(/^\s*/)[0];
   const trailing = binding.source.match(/\s*$/)[0];
-  const value = currentLocale === 'ja' ? binding.source : leading + output(binding) + trailing;
+  const value = currentLocale === 'ja' ? characterDisplayText(binding.source) : leading + output(binding) + trailing;
   binding.last = value;
   if (node.nodeValue !== value) node.nodeValue = value;
 }
@@ -204,7 +206,8 @@ function localizeAttributes(element) {
     if (!binding || value !== binding.last) {
       const marker = element.getAttribute(`data-l10n-${attribute}`);
       const original = catalog.sourceIds[marker];
-      const source = original && [normalize(original), normalize(catalog.messages[original])].includes(normalize(value)) ? original : value;
+      const source = original && [original, catalog.messages[original]].flatMap(text =>
+        [normalize(text), normalize(characterDisplayText(text))]).includes(normalize(value)) ? original : value;
       binding = { source, last: value };
       bindings.set(attribute, binding);
     }
