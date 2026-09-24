@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "case_id": "copilot-p200-symmetric-v3",
+  "geometry_revision": "bilateral-symmetry-v3",
+  "state": "READY",
+  "scope": "ONE_ACTUAL_CORRECTED_CASE_NOT_ALL_FIVE_OR_PHYSICAL_APPROVAL",
+  "source_commit": "52b19c1d612d00da7fcfb56bd08f788c62dcd7c8",
+  "verified_content_commit": "c2f3aaa735746078f0cef8698135b6dcce88f968",
+  "verified_pages_run": "35956407075",
+  "actual_count": 35692,
+  "target_count": 35746,
+  "actual_types": 240,
+  "geometry_sequence_identity_sha256": "f4ec71205c2cde20684815f4a3b54332857b3863c715e758a866b29d5c8ec775",
+  "nominal_symmetry": {
+    "metric": "NOMINAL_8MM_XY_1_6MM_Z_MATERIAL_CELLS_NOT_NATIVE_TESSELLATION",
+    "actual_material_samples": 757001,
+    "mirror_x_mm": 0,
+    "material_occupancy_xor": 0,
+    "paired_material_color_differences": 0,
+    "front_shape_xor": 0,
+    "paired_front_color_differences": 0,
+    "paired_front_depth_differences": 0,
+    "feature": {
+      "color_id": "c2",
+      "visible_samples": 462,
+      "front_mask_xor": 0
+    },
+    "native_geometry_or_physical_validation": false,
+    "excluded": [
+      "studs",
+      "cavities",
+      "gaps",
+      "chamfers",
+      "lighting",
+      "native CAD reflection",
+      "physical supports"
+    ]
+  },
+  "actual_native_reflection": {
+    "parts": 35692,
+    "type_rotation_pairs": 232,
+    "maximum_bidirectional_cut_volume_mm3": 0.0,
+    "complete_pairing_and_source_files_unchanged": true
+  },
+  "actual_supports": {
+    "geometry_sequence_identity_sha256": "f4ec71205c2cde20684815f4a3b54332857b3863c715e758a866b29d5c8ec775",
+    "native_support_contact_evidence_sha256": "276810d2cde737300515f615d692f356c03f9f18940de867f49a2fc22580cb0e",
+    "checked_material_supports": 36,
+    "actual_native_load_prefixes": 466,
+    "actual_native_material_sections": 434,
+    "minimum_nominal_support_margin_mm": 1.9310942192680656,
+    "required_nominal_support_margin_mm": 1,
+    "required_baseline_targets_covered": 60,
+    "nonreset_token_loads_match_actual_support_graph": true,
+    "external_aid_count": 0,
+    "assembly_aid_count": 0,
+    "physical_validation": "UNKNOWN"
+  },
+  "actual_intentional_changes_and_native_pixels": {
+    "case_id": "copilot-p200-symmetric-v3",
+    "intentional_change_from_previous_published_case": {
+      "added_1_6mm_cells": 3138,
+      "removed_1_6mm_cells": 3184,
+      "recolored_1_6mm_cells": 2712,
+      "full_diff_matches_sealed_readonly_record": true
+    },
+    "new_mechanical_baseline_cells_and_colors_exact": true,
+    "actual_native_png": {
+      "image_size_px": [
+        1200,
+        1200
+      ],
+      "left_eye_pixels": 10181,
+      "right_eye_pixels": 10180,
+      "all_label_xor_including_silhouette": 278,
+      "whole_material_xor": 214,
+      "silhouette_xor": 64,
+      "maximum_silhouette_boundary_distance_pixels": 1.0,
+      "per_material_boundary_measurements": {
+        "geometry": {
+          "mirror_xor_pixels": 64,
+          "maximum_mirrored_boundary_distance_pixels": 1.0
+        },
+        "c0": {
+          "mirror_xor_pixels": 276,
+          "maximum_mirrored_boundary_distance_pixels": 1.0
+        },
+        "c1": {
+          "mirror_xor_pixels": 214,
+          "maximum_mirrored_boundary_distance_pixels": 1.0
+        },
+        "c2": {
+          "mirror_xor_pixels": 2,
+          "maximum_mirrored_boundary_distance_pixels": 1.0
+        }
+      },
+      "eye_mask_xor": 2,
+      "left_vs_reflected_right_eye_xor_pixels": 1,
+      "maximum_eye_boundary_distance_pixels": 1.0,
+      "classification": "Unlit native R/G/B labels with alpha>127; paired foreground materials exclude separately reported silhouette-edge disagreements.",
+      "render_samples": 32
+    },
+    "physical_validation": "UNKNOWN"
+  },
+  "raster_note": "32-sample diagnostic render: left/right eyes10181/10180 pixels; one-sided mirrored-eye XOR1, full yellow-mask XOR2. Silhouette64 and common-foreground material214 pixel differences are retained, all within maximum Euclidean boundary distance1px. Native CAD and whole-part colors remain exactly paired.",
+  "public_browser": {
+    "engine": "pinned WebKit2203",
+    "actual_support_steps_and_native_undersides": 36,
+    "allGPU_absolute_radial_roundtrips": true,
+    "original_and_labeled_display_modes": true,
+    "actual_movie_chapters": 3,
+    "JA_EN_share_reload_390px": true,
+    "one_sided_eye_and_full_image_differences_shown_without_rounding": true,
+    "long_character_case_selector_within390px": true,
+    "failed_data_native_proof_images_show_error": true,
+    "errors": []
+  },
+  "anonymous_delivery": {
+    "changed_site_files": 23,
+    "complete_release_assets_verified_or_previous_hash_rechecked": 8,
+    "repository_native_types": 83,
+    "transport_public_commit": "28d2c79245d3c2091f8ff42f1d55e8131228c4aa",
+    "lossless_bytes": 4568365,
+    "original_native_gzip_bytes": 11532294,
+    "all_original_float32_bytes_and_uint32_index_order_restored": true,
+    "geometry_simplified_for_transport": false,
+    "authentication": "none"
+  },
+  "physical_validation": "UNKNOWN",
+  "slicer_status": "NOT_SLICED",
+  "full_print": "ON_HOLD",
+  "appearance_adoption": "PENDING"
+}

@@ -8,7 +8,7 @@
   "baseline_public_commit": "22d7d56308668fe7c366c48ac7af26e77ac4558c",
   "baseline_count": 17873,
   "expected_case_count": 5,
-  "published_verified_case_count": 3,
+  "published_verified_case_count": 4,
   "reported_issue": "The actual yellow eye shapes, height/depth positions and other bilateral boundaries differ in all five current Copilot models. The existing downloadable versions are not yet symmetry-corrected.",
   "requirements": {
     "correct_actual_geometry_and_whole_part_colors": true,
@@ -16,7 +16,7 @@
     "paired_eye_shape_color_position_and_depth": "MIRROR_MATCH",
     "check_goggles_face_boundary_sides_and_outer_shape": true,
     "native_part_pairing": "BIJECTIVE_INVOLUTION_INCLUDING_CENTER_SELF_PAIRS",
-    "maximum_native_pair_pose_error_mm": 0.00002,
+    "maximum_native_pair_pose_error_mm": 2e-05,
     "native_mirror_volume_error_limit": "max(0.00001 mm^3, actual part volume * 0.0000001)",
     "external_aid_count": 0,
     "assembly_aid_count": 0,
@@ -125,7 +125,7 @@
       "previous_actual_count": 35630,
       "multiplier": 2,
       "target_count": 35746,
-      "status": "PUBLIC_PENDING",
+      "status": "READY",
       "actual_case_id": "copilot-p200-symmetric-v3",
       "source_commit": "52b19c1d612d00da7fcfb56bd08f788c62dcd7c8",
       "actual_count": 35692,
@@ -150,11 +150,18 @@
         "viewer": "https://ktanino10.github.io/octoprints-brick-kit-downloads/ja/density-guide.html?case=copilot-p200-symmetric-v3"
       },
       "verification": {
-        "public_browser_passed": false,
-        "anonymous_downloads_passed": false
+        "public_browser_passed": true,
+        "anonymous_downloads_passed": true
       },
       "external_aid_count": 0,
-      "assembly_aid_count": 0
+      "assembly_aid_count": 0,
+      "verified_content_commit": "c2f3aaa735746078f0cef8698135b6dcce88f968",
+      "verified_pages_run": "35956407075",
+      "verification_record": {
+        "path": "/artifacts/studies/part-count-matrix-20260921/revisions/bilateral-symmetry-v3/copilot-p200-symmetric-v3-public-verification.json",
+        "bytes": 5122,
+        "sha256": "b4a2e4b2872725de24e19b05e8d19aa01a7bc8ed462f66ee9937f0e27a0aa5cf"
+      }
     },
     {
       "logical_case_id": "copilot-p300",
