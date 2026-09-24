@@ -80,14 +80,23 @@ with sync_playwright() as p:
             no_overflow(page)
             checked(f"{locale}: five Rubber Ducky variants retain exact case IDs, counts, images and download/guide URLs")
         page.set_viewport_size({"width": 390, "height": 844})
-        for route in ["en/?ducky=ducky-p400", "ja/density-matrix.html?character=ducky"]:
+        for route in ["en/?ducky=ducky-p400", "ja/density-matrix.html?character=ducky",
+                      "en/density-guide.html?case=ducky-p120"]:
             page.goto(urljoin(base, route), wait_until="networkidle")
-            no_overflow(page)
             if "density-matrix" in route:
                 expect(page.locator('[data-density-character="ducky"]')).to_have_text("Rubber Ducky")
+                screenshot = "mobile-matrix.png"
+            elif "density-guide" in route:
+                expect(page.locator("#density-canvas")).to_have_attribute("data-ready", "true", timeout=180000)
+                expect(page.locator('#guide-case option:checked')).to_contain_text("Rubber Ducky")
+                selector = page.locator("#guide-case").bounding_box()
+                assert selector["x"] >= 0 and selector["x"] + selector["width"] <= 390
+                screenshot = "mobile-guide.png"
             else:
                 expect(page.locator('[data-character="ducky"] h2')).to_have_text("Rubber Ducky")
-            page.screenshot(path=str(args.output / ("mobile-matrix.png" if "density-matrix" in route else "mobile-catalogue.png")), full_page=True)
+                screenshot = "mobile-catalogue.png"
+            no_overflow(page)
+            page.screenshot(path=str(args.output / screenshot), full_page=True)
         checked("390px long display name stays readable without horizontal overflow or double prefixes")
         assert not report["errors"]
     except Exception as error:

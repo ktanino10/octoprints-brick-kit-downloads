@@ -15,7 +15,7 @@ import { DensityStudio } from './density-studio.js';
 import { DensityPartPreview } from './density-part-preview.js';
 import { readDensityView, writeDensityView } from './density-view-state.js';
 import { loadBodySupportPublication } from '../../assets/body-support-publication.js';
-import { loadSymmetryPublication } from '../../assets/symmetry-publication.js';
+import { loadSymmetryPublication, validateSymmetryRaster } from '../../assets/symmetry-publication.js';
 import { createViewPersistence } from './view-persistence.js';
 import { CHARACTER_NAMES } from '../../assets/character-names.js';
 
@@ -303,30 +303,18 @@ async function selectCandidate(id, params = null) {
         const visual = await verifiedJSON(item.symmetry_visual, signal);
         if (current !== generation) return;
         const raster = item.symmetry_raster_verification;
-        const boundedRaster = raster?.source_visual_sha256 === item.symmetry_visual.sha256
-          && raster.native_geometry_mirror_pairs_verified === true
-          && raster.silhouette_xor === visual.whole_silhouette_xor_pixels
-          && raster.whole_material_xor === visual.whole_material_xor_pixels && raster.eye_mask_xor === 0
-          && raster.maximum_silhouette_boundary_distance_pixels <= 1 && raster.boundary_distance_tolerance_pixels === 1
-          && (visual.whole_material_xor_pixels === 0 || (raster.render_samples === visual.render_samples
-            && raster.render_samples >= 32 && ['geometry', 'c0', 'c1', 'c2'].every(name => {
-              const actual = raster.per_material_boundary_measurements?.[name];
-              const source = visual.per_material_boundary_measurements?.[name];
-              return actual && source && actual.mirror_xor_pixels === source.mirror_xor_pixels
-                && actual.maximum_mirrored_boundary_distance_pixels === source.maximum_mirrored_boundary_distance_pixels
-                && actual.maximum_mirrored_boundary_distance_pixels >= 0
-                && actual.maximum_mirrored_boundary_distance_pixels <= 1;
-            })));
+        if (raster) validateSymmetryRaster(raster, item.symmetry_visual.sha256, visual);
         check(visual.case_id === item.id && visual.source_manifest_sha256 === next.source_manifest_sha256
           && visual.geometry_revision === 'bilateral-symmetry-v3'
           && visual.state === 'PASS_ACTUAL_NATIVE_MASKS_WITH_DECLARED_RASTER_TOLERANCE'
-          && visual.left_vs_reflected_right_eye_xor_pixels === 0
-          && ((visual.whole_silhouette_xor_pixels === 0 && visual.whole_material_xor_pixels === 0) || boundedRaster),
+          && (raster || (visual.left_vs_reflected_right_eye_xor_pixels === 0
+            && visual.whole_silhouette_xor_pixels === 0 && visual.whole_material_xor_pixels === 0)),
         '対称化改訂の公開記録が、実モデル・固定分母・検査記録と一致しません。');
         const details = element('details');
         details.append(element('summary', '左右の目と実形状の比較記録を見る'));
-        if (visual.whole_silhouette_xor_pixels > 0 || visual.whole_material_xor_pixels > 0) details.append(element('p',
-          `実CADの鏡像差と目の差は0です。描画した外周の差は${visual.whole_silhouette_xor_pixels}ピクセル、色境界の差は${visual.whole_material_xor_pixels}ピクセルです。各境界距離は最大1ピクセル以内と検算し、差を0とは表示しません。`));
+        if (visual.left_vs_reflected_right_eye_xor_pixels > 0 || visual.whole_silhouette_xor_pixels > 0
+          || visual.whole_material_xor_pixels > 0) details.append(element('p',
+          `実CADの鏡像差は0です。描画した片側の目の差は${visual.left_vs_reflected_right_eye_xor_pixels}ピクセル、全画像の外周の差は${visual.whole_silhouette_xor_pixels}ピクセル、色境界の差は${visual.whole_material_xor_pixels}ピクセルです。各境界距離は最大1ピクセル以内と検算し、描画差を0に丸めません。`));
         for (const image of visual.images) {
           check(['paired-eye-zoom', 'native-mirror-overlay'].includes(image.view)
             && image.path === `images/${item.id}-${image.view}.jpg`,

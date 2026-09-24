@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { gunzipSync } from 'node:zlib';
 import { validateGuideManifest, radialPosition } from '../src/density-state.js';
-import { validateSymmetryPublication } from '../../assets/symmetry-publication.js';
+import { validateSymmetryPublication, validateSymmetryRaster } from '../../assets/symmetry-publication.js';
 import { validateBodySupportPublication } from '../../assets/body-support-publication.js';
 import { printCatalog, selectedPrintCase } from '../../assets/print-catalog-data.js';
 
@@ -14,6 +14,83 @@ const catalog = await json(pointer.catalog.path);
 const receipt = await json('archive/copilot-symmetry-revision.json');
 const symmetry = await json(receipt.revision_catalog.path);
 const ready = symmetry.cases.filter(item => item.state === 'READY');
+
+test('all existing actual raster receipts remain bound to their unchanged source measurements', async () => {
+  for (const item of ready) {
+    const visual = await json(item.symmetry_visual.path);
+    if (!item.symmetry_raster_verification) {
+      assert.deepEqual([visual.left_vs_reflected_right_eye_xor_pixels,
+        visual.whole_silhouette_xor_pixels, visual.whole_material_xor_pixels], [0, 0, 0]);
+      continue;
+    }
+    assert.equal(validateSymmetryRaster(item.symmetry_raster_verification, item.symmetry_visual.sha256, visual),
+      item.symmetry_raster_verification);
+  }
+});
+
+function boundedEyeFixture() {
+  const raster = {
+    source_visual_sha256: 'a'.repeat(64), native_geometry_mirror_pairs_verified: true,
+    boundary_distance_tolerance_pixels: 1, render_samples: 32,
+    left_eye_pixels: 10181, right_eye_pixels: 10180, eye_mask_xor: 2,
+    left_vs_reflected_right_eye_xor_pixels: 1, maximum_eye_boundary_distance_pixels: 1,
+    silhouette_xor: 64, maximum_silhouette_boundary_distance_pixels: 1, whole_material_xor: 214,
+    per_material_boundary_measurements: Object.fromEntries(
+      [['geometry', 64], ['c0', 276], ['c1', 214], ['c2', 2]].map(([name, count]) =>
+        [name, { mirror_xor_pixels: count, maximum_mirrored_boundary_distance_pixels: 1 }])),
+  };
+  const visual = {
+    raster_boundary_tolerance_pixels: 1, render_samples: 32,
+    eyes: { left: { pixels: 10181 }, right: { pixels: 10180 } },
+    left_vs_reflected_right_eye_xor_pixels: 1, maximum_eye_boundary_distance_pixels: 1,
+    whole_silhouette_xor_pixels: 64, whole_material_xor_pixels: 214,
+    per_material_boundary_measurements: structuredClone(raster.per_material_boundary_measurements),
+  };
+  return { raster, visual };
+}
+
+test('bounded raster unit fixture distinguishes one-sided eye XOR from full-image yellow XOR', () => {
+  const { raster, visual } = boundedEyeFixture();
+  assert.equal(validateSymmetryRaster(raster, raster.source_visual_sha256, visual), raster);
+  assert.notEqual(raster.left_eye_pixels, raster.right_eye_pixels);
+  assert.equal(raster.eye_mask_xor, 2 * visual.left_vs_reflected_right_eye_xor_pixels);
+});
+
+test('bounded eye pixels cannot replace exact native evidence, hide missing fields or relax boundary distance', () => {
+  for (const mutate of [
+    r => { r.native_geometry_mirror_pairs_verified = false; },
+    r => { r.source_visual_sha256 = 'b'.repeat(64); },
+    r => { r.eye_mask_xor = 1; },
+    r => { r.eye_mask_xor = 0; },
+    r => { delete r.left_vs_reflected_right_eye_xor_pixels; },
+    r => { delete r.maximum_eye_boundary_distance_pixels; },
+    r => { r.maximum_eye_boundary_distance_pixels = 1.01; },
+    r => { r.right_eye_pixels = r.left_eye_pixels; },
+    r => { r.right_eye_pixels = 0; },
+    r => { r.render_samples = 1; },
+    r => { delete r.per_material_boundary_measurements; },
+    r => { r.per_material_boundary_measurements.c0.mirror_xor_pixels += 1; },
+    r => { r.per_material_boundary_measurements.c2.mirror_xor_pixels = 0; },
+    r => { r.per_material_boundary_measurements.c1.maximum_mirrored_boundary_distance_pixels = Math.SQRT2; },
+    r => { r.per_material_boundary_measurements.geometry.maximum_mirrored_boundary_distance_pixels = Infinity; },
+  ]) {
+    const { raster, visual } = boundedEyeFixture();
+    mutate(raster);
+    assert.throws(() => validateSymmetryRaster(raster, 'a'.repeat(64), visual));
+  }
+  for (const mutate of [
+    v => { v.left_vs_reflected_right_eye_xor_pixels = 0; },
+    v => { v.maximum_eye_boundary_distance_pixels = 0; },
+    v => { v.eyes.right.pixels += 1; },
+    v => { v.render_samples = 1; },
+    v => { delete v.per_material_boundary_measurements; },
+    v => { v.per_material_boundary_measurements.c2.mirror_xor_pixels = 1; },
+  ]) {
+    const { raster, visual } = boundedEyeFixture();
+    mutate(visual);
+    assert.throws(() => validateSymmetryRaster(raster, raster.source_visual_sha256, visual));
+  }
+});
 
 test('all accepted corrected guides bind exact physical pairs, colors, zero-aid loads and immutable native delivery', async () => {
   for (const item of ready) {

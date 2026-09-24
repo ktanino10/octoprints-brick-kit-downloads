@@ -66,6 +66,17 @@ class NativeRasterTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "boundary tolerance"):
             self.measure(image)
 
+    def test_single_eye_edge_difference_keeps_half_mask_and_full_mask_counts_distinct(self):
+        image = self.image()
+        self.rectangle(image, [14, 5, 14, 5], (255, 0, 0, 255))
+        result = self.measure(image)
+        self.assertEqual(result["left_eye_pixels"], 8)
+        self.assertEqual(result["right_eye_pixels"], 7)
+        self.assertEqual(result["eye_mask_xor"], 2)
+        self.assertEqual(result["left_vs_reflected_right_eye_xor_pixels"], 1)
+        self.assertEqual(result["maximum_eye_boundary_distance_pixels"], 1)
+        self.assertEqual(result["per_material_boundary_measurements"]["c2"]["mirror_xor_pixels"], 2)
+
 
 if __name__ == "__main__":
     unittest.main()

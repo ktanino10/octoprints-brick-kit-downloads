@@ -329,6 +329,17 @@ with sync_playwright() as playwright:
             phone.goto(urljoin(base, f"en/{route}{suffix}"), wait_until="domcontentloaded")
             if not args.expect_input_wait and route == "density-guide.html":
                 expect(phone.locator("#density-canvas")).to_have_attribute("data-ready", "true", timeout=180000)
+                selector = phone.locator("#guide-case").bounding_box()
+                assert selector["x"] >= 0 and selector["x"] + selector["width"] <= 390
+                current_case = next(entry for entry in cases if entry["id"] == mobile_case)
+                raster = current_case.get("symmetry_raster_verification")
+                if raster and raster["eye_mask_xor"] > 0:
+                    comparison = phone.locator("#guide-whisker-status details")
+                    comparison.locator("summary").click()
+                    expect(comparison).to_contain_text(
+                        f'The rendered one-sided eye comparison differs at {raster["left_vs_reflected_right_eye_xor_pixels"]} pixels')
+                    expect(comparison).to_contain_text(f'silhouette differs at {raster["silhouette_xor"]} pixels')
+                    expect(comparison).to_contain_text(f'material boundaries at {raster["whole_material_xor"]} pixels')
             english(phone)
             assert phone.evaluate("document.documentElement.scrollWidth <= innerWidth + 1")
             phone.screenshot(path=str(args.output / f'mobile-{route}.png'), full_page=True)

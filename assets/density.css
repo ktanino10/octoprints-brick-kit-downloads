@@ -12,6 +12,7 @@
 .density-table th{background:#eaf0f7}
 .density-guide-layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:20px;align-items:start}
 .density-guide-main,.density-guide-inspector{min-width:0}
+#guide-case{max-width:100%}
 .density-viewport{height:600px;min-height:340px;border:1px solid var(--line);border-radius:8px;position:relative;background:#f5f6f8;overflow:hidden}
 #density-canvas{width:100%;height:100%;touch-action:none}
 #density-canvas canvas,#guide-part-preview canvas{display:block;width:100%;height:100%}

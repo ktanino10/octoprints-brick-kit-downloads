@@ -5,6 +5,59 @@ import { DENSITY_ID, DENSITY_FLAGS, COPILOT_SYMMETRY_REVISION, COUNT_PERCENTAGES
 export const SYMMETRY_RECEIPT = '/archive/copilot-symmetry-revision.json';
 const message = '対称化改訂の公開記録が、実モデル・固定分母・検査記録と一致しません。';
 
+export function validateSymmetryRaster(raster, visualSHA, visual = null) {
+  const count = value => Number.isSafeInteger(value) && value >= 0;
+  const distance = value => Number.isFinite(value) && value >= 0 && value <= 1;
+  check(isObject(raster) && isHash(visualSHA) && raster.source_visual_sha256 === visualSHA
+    && raster.native_geometry_mirror_pairs_verified === true && raster.boundary_distance_tolerance_pixels === 1
+    && count(raster.eye_mask_xor) && raster.eye_mask_xor % 2 === 0
+    && count(raster.left_eye_pixels) && raster.left_eye_pixels > 0
+    && count(raster.right_eye_pixels) && raster.right_eye_pixels > 0
+    && count(raster.whole_material_xor) && count(raster.silhouette_xor)
+    && distance(raster.maximum_silhouette_boundary_distance_pixels)
+    && (raster.silhouette_xor === 0) === (raster.maximum_silhouette_boundary_distance_pixels === 0), message);
+  // Earlier zero-eye-error receipts predate explicit half-mask measurements.
+  const halfEyeXor = raster.left_vs_reflected_right_eye_xor_pixels ?? (raster.eye_mask_xor === 0 ? 0 : undefined);
+  const eyeDistance = raster.maximum_eye_boundary_distance_pixels ?? (raster.eye_mask_xor === 0 ? 0 : undefined);
+  check(count(halfEyeXor) && raster.eye_mask_xor === 2 * halfEyeXor && distance(eyeDistance)
+    && (halfEyeXor === 0) === (eyeDistance === 0)
+    && Math.abs(raster.left_eye_pixels - raster.right_eye_pixels) <= halfEyeXor
+    && halfEyeXor <= raster.left_eye_pixels + raster.right_eye_pixels
+    && (raster.left_eye_pixels + raster.right_eye_pixels - halfEyeXor) % 2 === 0, message);
+  const boundaries = raster.per_material_boundary_measurements;
+  if (raster.whole_material_xor > 0 || halfEyeXor > 0) {
+    check(Number.isSafeInteger(raster.render_samples) && raster.render_samples >= 32 && isObject(boundaries), message);
+  }
+  if (boundaries !== undefined) {
+    check(isObject(boundaries) && ['geometry', 'c0', 'c1', 'c2'].every(name => {
+      const row = boundaries[name];
+      return row && count(row.mirror_xor_pixels) && distance(row.maximum_mirrored_boundary_distance_pixels)
+        && (row.mirror_xor_pixels === 0) === (row.maximum_mirrored_boundary_distance_pixels === 0);
+    }) && boundaries.geometry.mirror_xor_pixels === raster.silhouette_xor
+      && boundaries.geometry.maximum_mirrored_boundary_distance_pixels === raster.maximum_silhouette_boundary_distance_pixels
+      && boundaries.c2.mirror_xor_pixels === raster.eye_mask_xor
+      && boundaries.c2.maximum_mirrored_boundary_distance_pixels === eyeDistance
+      && ['c0', 'c1', 'c2'].reduce((sum, name) => sum + boundaries[name].mirror_xor_pixels, 0)
+        === raster.silhouette_xor + 2 * raster.whole_material_xor, message);
+  }
+  if (visual !== null) {
+    check(isObject(visual) && visual.raster_boundary_tolerance_pixels === 1
+      && visual.left_vs_reflected_right_eye_xor_pixels === halfEyeXor
+      && visual.maximum_eye_boundary_distance_pixels === eyeDistance
+      && visual.eyes?.left?.pixels === raster.left_eye_pixels && visual.eyes?.right?.pixels === raster.right_eye_pixels
+      && visual.whole_silhouette_xor_pixels === raster.silhouette_xor
+      && visual.whole_material_xor_pixels === raster.whole_material_xor, message);
+    if (boundaries !== undefined) {
+      check(raster.render_samples === visual.render_samples && ['geometry', 'c0', 'c1', 'c2'].every(name => {
+        const source = visual.per_material_boundary_measurements?.[name];
+        return source && boundaries[name].mirror_xor_pixels === source.mirror_xor_pixels
+          && boundaries[name].maximum_mirrored_boundary_distance_pixels === source.maximum_mirrored_boundary_distance_pixels;
+      }), message);
+    }
+  }
+  return raster;
+}
+
 export async function loadSymmetryPublication(readRecord, readFile, pointer) {
   const receipt = await readRecord(SYMMETRY_RECEIPT);
   const catalog = receipt.revision_catalog ? await readFile(receipt.revision_catalog) : null;
@@ -62,23 +115,7 @@ export function validateSymmetryPublication(receipt, catalog, pointer) {
     validateDensityFile(row.symmetry_evidence);
     validateDensityFile(row.mechanical_evidence);
     if (item.symmetry_raster_verification) {
-      const raster = item.symmetry_raster_verification;
-      check(raster.source_visual_sha256 === row.symmetry_evidence.sha256
-        && raster.native_geometry_mirror_pairs_verified === true
-        && raster.eye_mask_xor === 0 && Number.isSafeInteger(raster.whole_material_xor) && raster.whole_material_xor >= 0
-        && raster.left_eye_pixels === raster.right_eye_pixels && raster.left_eye_pixels > 0
-        && Number.isSafeInteger(raster.silhouette_xor) && raster.silhouette_xor >= 0
-        && Number.isSafeInteger(raster.maximum_silhouette_boundary_distance_pixels)
-        && raster.maximum_silhouette_boundary_distance_pixels >= 0
-        && raster.maximum_silhouette_boundary_distance_pixels <= 1
-        && raster.boundary_distance_tolerance_pixels === 1, message);
-      if (raster.whole_material_xor > 0) check(Number.isSafeInteger(raster.render_samples) && raster.render_samples >= 32
-        && ['geometry', 'c0', 'c1', 'c2'].every(name => {
-          const row = raster.per_material_boundary_measurements?.[name];
-          return row && Number.isSafeInteger(row.mirror_xor_pixels) && row.mirror_xor_pixels >= 0
-            && Number.isFinite(row.maximum_mirrored_boundary_distance_pixels)
-            && row.maximum_mirrored_boundary_distance_pixels >= 0 && row.maximum_mirrored_boundary_distance_pixels <= 1;
-        }) && raster.per_material_boundary_measurements.c2.mirror_xor_pixels === 0, message);
+      validateSymmetryRaster(item.symmetry_raster_verification, row.symmetry_evidence.sha256);
     }
     const support = item.assembly_support;
     check(support?.geometry_revision === COPILOT_SYMMETRY_REVISION

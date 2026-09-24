@@ -1,0 +1,77 @@
+{
+  "state": "PASS_ACTUAL_NATIVE_MASKS_WITH_DECLARED_RASTER_TOLERANCE",
+  "case_id": "copilot-p200-symmetric-v3",
+  "native_scene_sha256": "86905d410beead25a140fe853b9e6eecb3f394cdd86a399f221996f9b5a5fb12",
+  "mask_sha256": "abfbe2df93ee3c89a85838d6c2c03d8dc235eec28d9e0d73f14c769187424d9c",
+  "eyes": {
+    "left": {
+      "pixels": 10181,
+      "bounds_xy_px": [
+        460,
+        610,
+        534,
+        764
+      ],
+      "centroid_xy_px": [
+        495.5674295255869,
+        687.4012375994499
+      ]
+    },
+    "right": {
+      "pixels": 10180,
+      "bounds_xy_px": [
+        666,
+        610,
+        740,
+        764
+      ],
+      "centroid_xy_px": [
+        703.4362475442043,
+        687.4067779960707
+      ]
+    }
+  },
+  "left_vs_reflected_right_eye_xor_pixels": 1,
+  "maximum_eye_boundary_distance_pixels": 1.0,
+  "whole_silhouette_xor_pixels": 64,
+  "whole_material_xor_pixels": 214,
+  "raster_boundary_tolerance_pixels": 1,
+  "render_samples": 32,
+  "per_material_boundary_measurements": {
+    "geometry": {
+      "mirror_xor_pixels": 64,
+      "maximum_mirrored_boundary_distance_pixels": 1.0
+    },
+    "c0": {
+      "mirror_xor_pixels": 276,
+      "maximum_mirrored_boundary_distance_pixels": 1.0
+    },
+    "c1": {
+      "mirror_xor_pixels": 214,
+      "maximum_mirrored_boundary_distance_pixels": 1.0
+    },
+    "c2": {
+      "mirror_xor_pixels": 2,
+      "maximum_mirrored_boundary_distance_pixels": 1.0
+    }
+  },
+  "not_a_percentage_pass": "Paired actual native solids/colors already require exact BRep reflection within kernel tolerance; raster measurements report finite pixel-edge errors explicitly.",
+  "physical_validation": "UNKNOWN",
+  "schema_version": 1,
+  "geometry_revision": "bilateral-symmetry-v3",
+  "source_manifest_sha256": "96c69921df8fae009f9d07acf7a1324c2089efbba03aee70689ba32465a79de2",
+  "images": [
+    {
+      "view": "native-mirror-overlay",
+      "path": "images/copilot-p200-symmetric-v3-native-mirror-overlay.jpg",
+      "bytes": 17138,
+      "sha256": "519fcd2a46ded02cb976d31c95fee4218ff7199f0873c14513ec73dcd837af72"
+    },
+    {
+      "view": "paired-eye-zoom",
+      "path": "images/copilot-p200-symmetric-v3-paired-eye-zoom.jpg",
+      "bytes": 51295,
+      "sha256": "462993de88b9c9b9425058da3bc6e79f54cf8c0f583e168518378ebdb962b560"
+    }
+  ]
+}

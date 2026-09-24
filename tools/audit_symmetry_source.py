@@ -37,7 +37,7 @@ def raster(path):
 
 
 def raster_rgba(width, height, rgba):
-    if type(width) is not int or type(height) is not int or width <= 0 or height <= 0 or len(rgba) != width * height * 4:
+    if type(width) is not int or type(height) is not int or width <= 0 or width % 2 or height <= 0 or len(rgba) != width * height * 4:
         raise ValueError("Invalid actual RGBA raster size")
     labels = bytearray(width * height)
     for index in range(width * height):
@@ -70,6 +70,10 @@ def raster_rgba(width, height, rgba):
         "maximum_silhouette_boundary_distance_pixels": boundaries["geometry"]["maximum_mirrored_boundary_distance_pixels"],
         "per_material_boundary_measurements": boundaries,
         "eye_mask_xor": sum((a == 3) != (b == 3) for a, b in zip(labels, reflected, strict=True)),
+        "left_vs_reflected_right_eye_xor_pixels": sum(
+            (labels[y * width + x] == 3) != (reflected[y * width + x] == 3)
+            for y in range(height) for x in range(width // 2)),
+        "maximum_eye_boundary_distance_pixels": boundaries["c2"]["maximum_mirrored_boundary_distance_pixels"],
         "classification": "Unlit native R/G/B labels with alpha>127; paired foreground materials exclude separately reported silhouette-edge disagreements.",
     }
 
@@ -151,16 +155,18 @@ def main():
         if (pixels["per_material_boundary_measurements"] != native_visual["per_material_boundary_measurements"]
                 or native_render["samples"] != native_visual.get("render_samples")):
             raise ValueError("Independent per-material pixel distances or actual render samples differ from sealed evidence")
-    elif pixels["whole_material_xor"] != 0:
+    elif pixels["whole_material_xor"] != 0 or pixels["eye_mask_xor"] != 0:
         raise ValueError("A material mismatch has no explicit bound per-material raster proof")
     pixels["render_samples"] = native_render["samples"]
-    if (pixels["eye_mask_xor"] != native_visual["left_vs_reflected_right_eye_xor_pixels"]
+    if (pixels["left_vs_reflected_right_eye_xor_pixels"] != native_visual["left_vs_reflected_right_eye_xor_pixels"]
+            or pixels["maximum_eye_boundary_distance_pixels"] != native_visual["maximum_eye_boundary_distance_pixels"]
+            or pixels["eye_mask_xor"] != 2 * pixels["left_vs_reflected_right_eye_xor_pixels"]
             or pixels["whole_material_xor"] != native_visual["whole_material_xor_pixels"]
             or pixels["silhouette_xor"] != native_visual["whole_silhouette_xor_pixels"]
             or pixels["left_eye_pixels"] != native_visual["eyes"]["left"]["pixels"]
             or pixels["right_eye_pixels"] != native_visual["eyes"]["right"]["pixels"]
-            or pixels["left_eye_pixels"] != pixels["right_eye_pixels"]
-            or pixels["eye_mask_xor"] != 0
+            or min(pixels["left_eye_pixels"], pixels["right_eye_pixels"]) <= 0
+            or pixels["maximum_eye_boundary_distance_pixels"] > native_visual["raster_boundary_tolerance_pixels"]
             or pixels["maximum_silhouette_boundary_distance_pixels"] > native_visual["raster_boundary_tolerance_pixels"]):
         raise ValueError("Recomputed actual native raster measurements differ from the sealed source report")
     visual = {"case_id": case, "intentional_change_from_previous_published_case": {

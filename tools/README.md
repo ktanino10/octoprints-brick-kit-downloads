@@ -18,6 +18,15 @@ mirror mapの全ID bijection/involution・色・2e-5 mmの原点対応と、実v
 別実装でX反射して両向きcut体積を測ります。元assembly/mastersを保存・再計算せず、前後のSHAを確認します。
 計測器のsynthetic fixture結果は `PASS_SYNTHETIC_NATIVE_DRIVER_TEST` と明示し、修正済みモデルの合格記録へ転用しません。
 
+実native材質PNGのラスタ差はCADの鏡像差と分けて記録します。
+片側眼の `left_vs_reflected_right_eye_xor_pixels` と全画像の `eye_mask_xor` は別の値で、
+後者は前者の2倍です。例えば1px/2px、左右10,181/10,180画素を0や同数へ丸めません。
+`audit_symmetry_source.py` は元PNGから各色・外周のEuclidean境界距離を独立に計算し、上限1pxを維持します。
+`validateSymmetryRaster()` は元証拠SHA、両眼画素数、各色の全差分、32sample診断条件を共通検証し、
+カタログとguideの判定を一致させます。非ゼロの眼差に半面測定・境界証拠がない場合は拒否します。
+このラスタ許容差を、実BRep・全part pose/colorの厳密な鏡対応の代替には使いません。
+既存の差0の公開記録は変更せず、その元の証拠形式で検証します。
+
 新しい無変換native meshがPages予算へ収まらない場合は、同じPUBLICリポジトリの
 `viewer-data/copilot-symmetry-20260923/geometry/<type_id>.mesh.gz` へ保存し、Pages対象から除外します。
 固定READY receiptの `geometry_mesh_files` は `PUBLIC_REPO_NATIVE_MESH_NOT_PAGES` 権限と
