@@ -7,6 +7,12 @@ SHA-256, decoded vertices/indices and the native geometry fingerprint.
 
 This is lossless storage, not display LOD, not a replacement box model, and not proof that
 a complete corrected case has passed publication or physical checks.
+The optional `lossless/` transport encodes vertex buffers and **index sequences**
+with the already pinned meshoptimizer codec, then gzip. Decoding restores the
+original Float32 bytes and exact Uint32 triangle order, including their SHA-256;
+it performs no simplification, quantization or index reordering. The original
+OBM1 gzip files remain unchanged in `geometry/`. Both forms are bound to immutable
+public commits. This reduces transfer bytes, not physical or visual detail.
 Existing Pages-native meshes stay at their original paths. Complete CAD, authoring files,
 Blender scenes and media are distributed through versioned public Releases.
 
